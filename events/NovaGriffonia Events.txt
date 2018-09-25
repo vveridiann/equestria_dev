@@ -835,15 +835,19 @@ country_event = { #Equestrian Civil War Intervention
 		ai_chance = {
 			factor = 40
 		}
-		send_equipment = {
-			target = event_target:equestria
-			type = infantry_equipment
-			amount = 1000
-		}
-		add_ai_strategy = {
-			type = support
-			id = event_target:equestria
-			value = 50
+		event_target:equestria = {
+			ROOT = {
+				send_equipment = {
+					target = PREV
+					type = infantry_equipment
+					amount = 1000
+				}
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 50
+				}
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:equestria modifier = sent_equipment }
 	}
@@ -853,17 +857,21 @@ country_event = { #Equestrian Civil War Intervention
 		ai_chance = {
 			factor = 40
 		}
-		add_ai_strategy = {
-			type = support
-			id = event_target:equestria
-			value = 75
+		event_target:equestria = {
+			ROOT = {
+				send_equipment = {
+					target = PREV
+					type = infantry_equipment
+					amount = 1000
+				}
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 75
+				}
+			}
 		}
 		add_manpower = -10000
-		send_equipment = {
-			target = event_target:equestria
-			type = infantry_equipment
-			amount = 1000
-		}
 		hidden_effect = { event_target:equestria = { country_event = { id = griffons.33 days = 30 }}}
 	}
 	option = {
@@ -910,15 +918,19 @@ country_event = { #Changeling War Intervention
 		ai_chance = {
 			factor = 20
 		}
-		send_equipment = {
-			target = event_target:equestria
-			type = infantry_equipment
-			amount = 1000
-		}
-		add_ai_strategy = {
-			type = support
-			id = event_target:equestria
-			value = 75
+		event_target:equestria = {
+			ROOT = {
+				send_equipment = {
+					target = PREV
+					type = infantry_equipment
+					amount = 1000
+				}
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 75
+				}
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:equestria modifier = sent_equipment }
 	}
@@ -929,15 +941,19 @@ country_event = { #Changeling War Intervention
 			factor = 60
 		}
 		add_manpower = -10000
-		send_equipment = {
-			target = event_target:equestria
-			type = infantry_equipment
-			amount = 1000
-		}
-		add_ai_strategy = {
-			type = support
-			id = event_target:equestria
-			value = 100
+		event_target:equestria = {
+			ROOT = {
+				send_equipment = {
+					target = PREV
+					type = infantry_equipment
+					amount = 1000
+				}
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 100
+				}
+			}
 		}
 		hidden_effect = { event_target:equestria = { country_event = { id = griffons.35 days = 30 }}}
 	}
