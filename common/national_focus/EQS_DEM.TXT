@@ -72,7 +72,7 @@ shared_focus = {
 		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
 		is_subject = no
 	}
-	x = -3
+	x = -2
 	y = 2
 	completion_reward = {
 		add_ideas = EQS_BB_military_industrial_complex_idea
@@ -88,7 +88,7 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_BB_active_harmonism
 	}
-	x = 3
+	x = 2
 	y = 2
 	available = {
 		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
@@ -166,7 +166,7 @@ shared_focus = {
 			limit = { is_core_of = STG }
 			add_claim_by = ROOT
 		}
-		hidden_effect = { news_event = newseqsdem.14 }
+		hidden_effect = { news_event = newseqsdem.11 }
 	}
 }
 
@@ -585,24 +585,54 @@ shared_focus = {
 				has_government = democratic 
 				is_in_faction_with = ROOT
 			}
+			OR = {
+				has_war = no
+				any_enemy_country = {
+					has_government = democratic
+				}
+			}
 		}
 	}
+	bypass = {
+		event_target:griffonian_empire = {
+			OR = {
+				exists = no
+				has_war_with = ROOT
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+	will_lead_to_war_with = GRI
 	x = 0
 	y = 5
 	completion_reward = {
 		event_target:griffonian_empire = { 
-			effect_tooltip = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = warned_us
+			if = {
+				limit = { has_war = no }
+				effect_tooltip = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = warned_us
+					}
+				}
+				country_event = equestriadem.13 
+			}
+			else = {
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
 				}
 			}
-			country_event = equestriadem.13 
-		}
-		add_ai_strategy = {
-			id = event_target:griffonian_empire
-			type = contain
-			value = 150
+			ROOT = {
+				add_ai_strategy = {
+					id = PREV
+					type = contain
+					value = 150
+				}
+			}
 		}
 	}
 }

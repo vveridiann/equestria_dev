@@ -3089,6 +3089,9 @@ leader_traits = {
 	}
 	war_hero_general = { ##Blueblood
 		random = no
+		ai_focus_aggressive_factor = 0.2
+		ai_focus_peaceful_factor = -0.1
+		fascism_acceptance = 10
 		ai_will_do = {
 			factor = 1
 		}
