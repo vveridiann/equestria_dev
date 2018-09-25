@@ -705,3 +705,104 @@ equestria_less_likely_to_guarantee = {
 		value = -100
 	}
 }
+
+EQS_BB_strengthen_the_alliance_strat = {
+	enable = {
+		NOT = { tag = EQS }
+		EQS = { 
+			has_completed_focus = EQS_BB_strengthen_the_alliance
+			is_faction_leader = yes
+		}
+		is_in_faction_with = EQS
+	}
+	abort = {
+		OR = {
+			NOT = { is_in_faction_with = EQS }
+			EQS = {
+				is_faction_leader = no
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = support
+		id = EQS
+		value = 100
+	}
+}
+
+EQS_BB_safeguard_the_continent_strat = {
+	enable = {
+		NOT = { tag = EQS }
+		EQS = { 
+			has_completed_focus = EQS_BB_safeguard_the_continent
+			has_government = democratic
+			is_subject = no
+		}
+		is_on_equestrian_continent = yes
+		NOT = {
+			has_government = democratic
+			is_in_faction_with = EQS
+			is_subject_of = EQS
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			is_in_faction_with = EQS
+			is_subject_of = EQS
+			EQS = {
+				is_subject = yes
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = influence
+		id = EQS
+		value = 150
+	}
+	ai_strategy = {
+		type = contain
+		id = EQS
+		value = 150
+	}
+}
+
+EQS_BB_look_to_griffonia_strat = {
+	enable = {
+		NOT = { tag = EQS }
+		EQS = { 
+			has_completed_focus = EQS_BB_look_to_griffonia
+			has_government = democratic
+			is_subject = no
+		}
+		is_on_griffonian_continent = yes
+		NOT = { 
+			has_government = fascism
+			has_government = communism
+		}
+		OR = {
+			has_government = democratic
+			has_war_with = event_target:griffonian_empire
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { 
+				has_government = democratic
+				has_war_with = event_target:griffonian_empire
+			}
+			EQS = {
+				is_subject = yes
+				has_war = yes
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = support
+		id = EQS
+		value = 100
+	}
+}

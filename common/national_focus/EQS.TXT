@@ -598,7 +598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = eqs_support_harmony
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_generic_harmony
 		cost = 7
 		prerequisite = {
 			focus = eqs_support_status_quo
@@ -1911,7 +1911,7 @@ focus_tree = {
 
 		id = eqs_reaffirming_princessdom
 
-		icon = GFX_focus_rom_abdicate
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 
 		cost = 10.00
 
@@ -2659,9 +2659,11 @@ focus_tree = {
 
 		}
 
-		x = 38
+		relative_position_id = eqs_harmony_not_what_it_used_to_be
 
-		y = 13
+		x = 0
+
+		y = 1
 
 		completion_reward = {
 
@@ -2673,31 +2675,5 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-
-		id = eqs_arsenal_of_harmony
-
-		icon = GFX_goal_national_arsenal
-
-		cost = 10.00
-
-		prerequisite = {
-
-			focus = eqs_bastion_of_harmony
-
-		}
-
-		x = 38
-
-		y = 14
-
-		completion_reward = {
-
-			add_ideas = arsenal_harmony
-
-		}
-		ai_will_do = {
-			factor = 150
-		}
-	}
+	shared_focus = EQS_BB_for_princess_and_country
 }

@@ -1,0 +1,53 @@
+ideas = {
+
+	country = {
+		EQS_BB_for_princess_and_country_idea = {
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				offensive_war_stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		EQS_BB_active_harmonism_idea = {
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 0.15
+				generate_wargoal_tension = -0.1
+				production_speed_radar_station_factor = 0.05
+				production_speed_air_base_factor = 0.05
+			}
+		}
+
+		EQS_BB_military_industrial_complex_idea = {
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.15
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+	}
+
+}

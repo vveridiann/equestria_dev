@@ -1486,11 +1486,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.2
-				has_opinion = { target = FAT value > 50 }
+				has_opinion = { target = FROM value > 50 }
 			}
 			modifier = {
 				factor = 1.2
-				has_opinion = { target = FAT value > 75 }
+				has_opinion = { target = FROM value > 75 }
 			}
 		}
 		add_to_war = {
@@ -1505,11 +1505,11 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				has_opinion = { target = FAT value < -25 }
+				has_opinion = { target = FROM value < -25 }
 			}
 			modifier = {
 				factor = 2.5
-				has_opinion = { target = FAT value < -50 }
+				has_opinion = { target = FROM value < -50 }
 			}
 		}
 		remove_ideas = FAT_republican_pact

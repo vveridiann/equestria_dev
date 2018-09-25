@@ -366,3 +366,81 @@ country_event = { #Prevent the vote
 		add_popularity = { ideology = democratic popularity = -0.1 }
 	}
 }
+
+country_event = { #GRI gets warned
+	id = equestriadem.13
+	immediate = {log = "[Root.GetName]: event equestriadem.13"}#Auto-logging
+	title = equestriadem.13.t
+	desc = equestriadem.13.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##placeholder
+		name = equestriadem.13.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = warned_us
+		}
+		set_global_flag = EQS_warned_GRI
+		hidden_effect = { news_event = { id = newseqsdem.15 days = 2 } }
+	}
+}
+
+country_event = { #EQS gets called
+	id = equestriadem.14
+	immediate = {log = "[Root.GetName]: event equestriadem.14"}#Auto-logging
+	title = equestriadem.14.t
+	desc = equestriadem.14.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		#has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+		NOT = {
+			has_country_flag = considering_dem14
+			has_war_with = event_target:griffonian_empire
+			is_in_faction_with = event_target:griffonian_empire
+		}
+	}
+
+	option = {
+		name = equestriadem.14.a
+		ai_chance = {
+			factor = 12
+		}
+		event_target:gri_enemy = {
+			ROOT = {
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = FROM
+				}
+			}
+		}
+	}
+
+	option = {
+		name = equestriadem.14.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 6
+				has_war = yes
+			}
+			modifier = {
+				add = 6
+				strength_ratio = { tag = event_target:griffonian_empire ratio < 0.7 }
+			}
+			modifier = {
+				add = 10
+				strength_ratio = { tag = event_target:griffonian_empire ratio < 0.4 }
+			}
+		}
+		clr_global_flag = EQS_warned_GRI
+		add_political_power = -300
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}

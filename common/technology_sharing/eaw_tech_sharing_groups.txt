@@ -113,8 +113,13 @@ technology_sharing_group = {
 
 	available = {
 		OR = {
-			is_in_faction_with = EQS
 			original_tag = EQS
+			AND = {
+				any_allied_country = {
+					original_tag = EQS
+					is_faction_leader = yes
+				}
+			}
 		}			
 	}
 }

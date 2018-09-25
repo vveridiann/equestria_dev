@@ -1,0 +1,608 @@
+shared_focus = {
+	id = EQS_BB_for_princess_and_country
+	relative_position_id = eqs_bastion_of_harmony
+	icon = GFX_goal_generic_harmony
+	cost = 10
+	dynamic = yes
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = eqs_bastion_of_harmony
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		add_ideas = EQS_BB_for_princess_and_country_idea
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_equestrian_patriotism
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_BB_for_princess_and_country
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = -1
+	y = 1
+	completion_reward = {
+		add_war_support = 0.1
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_active_harmonism
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_support_equestria
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_BB_for_princess_and_country
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = 1
+	y = 1
+	completion_reward = {
+		add_ideas = EQS_BB_active_harmonism_idea
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_military_industrial_complex
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_the_giant_wakes
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_BB_equestrian_patriotism
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = -3
+	y = 2
+	completion_reward = {
+		add_ideas = EQS_BB_military_industrial_complex_idea
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_strengthen_the_alliance
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_alliance
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_BB_active_harmonism
+	}
+	x = 3
+	y = 2
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+		is_faction_leader = yes
+	}
+	completion_reward = {
+		if = {
+			limit = { is_faction_leader = yes }
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_in_faction_with = ROOT is_subject = no } 
+					set_country_flag = former_UPA_member #haha ukraine
+				}
+				dismantle_faction = yes
+				create_faction = "United Nations"
+				every_other_country = {
+					limit = { has_country_flag = former_UPA_member } 
+					ROOT = { add_to_faction = PREV } 
+				}
+			}
+		}
+		else = {
+			create_faction = "United Nations"
+		}
+		every_other_country = {
+			limit = { is_in_faction_with = ROOT }
+			add_opinion_modifier = { target = ROOT modifier = promote_equality }
+			reverse_add_opinion_modifier = { target = ROOT modifier = promote_equality }
+			add_political_power = 50
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_safeguard_the_continent
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_political_pressure
+	cost = 5
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_BB_active_harmonism
+	}
+	prerequisite = {
+		focus = EQS_BB_equestrian_patriotism
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = {
+				AND = {
+					any_other_country = {
+						is_on_equestrian_continent = yes
+						NOT = {
+							has_government = democratic
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	x = 0
+	y = 2
+	completion_reward = {
+		add_political_power = 50
+		every_state = {
+			limit = { is_core_of = STG }
+			add_claim_by = ROOT
+		}
+		hidden_effect = { news_event = newseqsdem.14 }
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_the_west
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_changeling
+	cost = 10
+	ai_will_do = { 
+		factor = 80
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+	prerequisite = {
+		focus = EQS_BB_safeguard_the_continent
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = -3
+	y = 3
+	will_lead_to_war_with = OLE
+	will_lead_to_war_with = CCN
+	will_lead_to_war_with = CHN
+	bypass = {
+		hidden_trigger = {
+			NOT = {
+				AND = {
+					any_other_country = {
+						OR = {
+							tag = CHN
+							tag = CCN
+							original_tag = OLE
+						}
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+							has_government = democratic
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				any_other_country = {
+					original_tag = OLE
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					original_tag = OLE
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				CHN = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN
+			}
+		}
+		if = {
+			limit = {
+				CCN = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CCN
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_stalliongrad
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_war_with_comintern
+	cost = 10
+	ai_will_do = { 
+		factor = 80
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+	prerequisite = {
+		focus = EQS_BB_safeguard_the_continent
+	}
+	x = -1
+	y = 3
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	will_lead_to_war_with = STG
+	bypass = {
+		STG = {
+			OR = {
+				exists = no
+				has_war_with = ROOT
+				has_government = democratic
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = STG
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_the_north
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_more_territorial_claims
+	cost = 10
+	ai_will_do = { 
+		factor = 80
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+	prerequisite = {
+		focus = EQS_BB_safeguard_the_continent
+	}
+	x = 1
+	y = 3
+	will_lead_to_war_with = YAK
+	will_lead_to_war_with = JAK
+	will_lead_to_war_with = PLB
+	will_lead_to_war_with = PNG
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	bypass = {
+		hidden_trigger = {
+			NOT = {
+				AND = {
+					any_other_country = {
+						OR = {
+							tag = YAK
+							tag = JAK
+							tag = PLB
+							tag = PNG
+						}
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+							has_government = democratic
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				YAK = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YAK
+			}
+		}
+		if = {
+			limit = {
+				JAK = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAK
+			}
+		}
+		if = {
+			limit = {
+				PLB = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PLB
+			}
+		}
+		if = {
+			limit = {
+				PNG = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PNG
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_nova_griffonia
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_anti_fascist_diplomacy
+	cost = 10
+	ai_will_do = { 
+		factor = 80
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+	prerequisite = {
+		focus = EQS_BB_safeguard_the_continent
+	}
+	will_lead_to_war_with = GRF
+	will_lead_to_war_with = GFF
+	x = 3
+	y = 3
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	bypass = {
+		GRF = {
+			OR = {
+				exists = no
+				has_war_with = ROOT
+				has_government = democratic
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+		GFF = {
+			OR = {
+				exists = no
+				has_war_with = ROOT
+				has_government = democratic
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				GRF = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRF
+			}
+		}
+		if = {
+			limit = {
+				GFF = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+						has_government = democratic
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GFF
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_look_to_griffonia
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_goal_generic_military_sphere
+	cost = 5
+	ai_will_do = { 
+		factor = 80
+	}
+	prerequisite = {
+		focus = EQS_BB_nova_griffonia
+	}
+	prerequisite = {
+		focus = EQS_BB_the_north
+	}
+	prerequisite = {
+		focus = EQS_BB_stalliongrad
+	}
+	prerequisite = {
+		focus = EQS_BB_the_west
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+	}
+	x = 0
+	y = 4
+	completion_reward = {
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = EQS_BB_warn_the_empire
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_home_defense
+	cost = 10
+	dynamic = yes
+	ai_will_do = { 
+		factor = 80
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+	prerequisite = {
+		focus = EQS_BB_look_to_griffonia
+	}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
+		is_subject = no
+		event_target:griffonian_empire = {
+			exists = yes
+			is_subject = no
+			NOT = { 
+				has_government = democratic 
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	x = 0
+	y = 5
+	completion_reward = {
+		event_target:griffonian_empire = { 
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = warned_us
+				}
+			}
+			country_event = equestriadem.13 
+		}
+		add_ai_strategy = {
+			id = event_target:griffonian_empire
+			type = contain
+			value = 150
+		}
+	}
+}
