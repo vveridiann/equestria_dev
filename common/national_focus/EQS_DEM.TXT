@@ -1,3 +1,4 @@
+# BLUEBLOOD
 shared_focus = {
 	id = EQS_BB_for_princess_and_country
 	relative_position_id = eqs_bastion_of_harmony
@@ -7,6 +8,9 @@ shared_focus = {
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = eqs_bastion_of_harmony
+	}
+	allow_branch = {
+		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
 	}
 	available = {
 		has_country_leader = { ruling_only = yes name = "Prince Blueblood" }
@@ -633,6 +637,447 @@ shared_focus = {
 					value = 150
 				}
 			}
+		}
+	}
+}
+# BLUEBLOOD END
+
+# PRINCESS
+shared_focus = {
+	id = EQS_PR_old_wisdom_new_age
+	relative_position_id = eqs_bastion_of_harmony
+	icon = GFX_goal_generic_harmony
+	cost = 10
+	dynamic = yes
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = eqs_bastion_of_harmony
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_crown_corporations
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_old_wisdom_new_age
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = -1
+	y = 1
+	completion_reward = {
+		add_ideas = EQS_PR_crown_corporations_idea
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_charity
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_old_wisdom_new_age
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = 1
+	y = 1
+	completion_reward = {
+		add_ideas = EQS_PR_charity_idea
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_convention_of_nations
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_old_wisdom_new_age
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = 0
+	y = 2
+	completion_reward = {
+		add_ideas = EQS_PR_convention_of_nations_leader
+		every_other_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = ROOT 
+					is_subject_of = ROOT
+				}
+			}
+			add_ideas = EQS_PR_convention_of_nations_member
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						has_idea = EQS_PR_convention_of_nations_member
+						has_idea = EQS_PR_convention_of_nations_leader
+					}
+				}
+				every_other_country = {
+					limit = {
+						OR = {
+							has_idea = EQS_PR_convention_of_nations_member
+							has_idea = EQS_PR_convention_of_nations_leader
+						}
+					}
+					add_opinion_modifier = { target = PREV modifier = con_bonus }
+					reverse_add_opinion_modifier = { target = PREV modifier = con_bonus }
+					if = {
+						limit = {
+							is_subject = no
+							NOT = { is_in_faction_with = PREV }
+						}
+						diplomatic_relation = {
+							country = PREV
+							relation = non_aggression_pact
+							active = yes
+						}
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = alliance
+						value = 25
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = befriend
+						value = 75
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = antagonize
+						value = -75
+					}
+				}
+			}
+		}
+		unlock_decision_category_tooltip = EQS_PR_convention_of_nations_dec_cat
+		hidden_effect = { news_event = newseqsdem.12 }
+		add_named_threat = { 
+			threat = -10
+			name = EQS_PR_convention_of_nations
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_red_cross
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_convention_of_nations
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+		has_war = no
+	}
+	x = 2
+	y = 3
+	completion_reward = {
+		add_ideas = EQS_PR_red_cross_idea
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+			}
+			add_ideas = EQS_PR_red_cross_idea
+		}
+		hidden_effect = { 
+			set_global_flag = EQS_red_cross_formed
+			news_event = newseqsdem.13
+		}
+		add_named_threat = { 
+			threat = -3 
+			name = EQS_PR_red_cross
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_laws_of_war
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_convention_of_nations
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+		has_war = no
+	}
+	x = 0
+	y = 3
+	completion_reward = {
+		add_ideas = EQS_PR_laws_of_war_idea
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+			}
+			add_ideas = EQS_PR_laws_of_war_idea
+		}
+		hidden_effect = { 
+			set_global_flag = EQS_PR_laws_of_war_formed
+			news_event = newseqsdem.14
+		}
+		add_named_threat = { 
+			threat = -5
+			name = EQS_PR_laws_of_war
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_nuke_treaty
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_convention_of_nations
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+		has_war = no
+	}
+	x = -2
+	y = 3
+	completion_reward = {
+		add_political_power = 200
+		if = {
+			limit = { has_tech = nukes }
+			add_ideas = EQS_PR_nuke_treaty_idea
+		}
+		else = {
+			add_ideas = EQS_PR_nuke_treaty_idea2
+		}
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+			}
+			add_political_power = 200
+			if = {
+				limit = { has_tech = nukes }
+				add_ideas = EQS_PR_nuke_treaty_idea
+			}
+			else = {
+				add_ideas = EQS_PR_nuke_treaty_idea2
+			}
+		}
+		hidden_effect = { 
+			set_global_flag = EQS_PR_nuke_treaty_formed
+			news_event = newseqsdem.15
+		}
+		add_named_threat = { 
+			threat = -7
+			name = EQS_PR_nuke_treaty
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_sanctions
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_laws_of_war
+	}
+	prerequisite = {
+		focus = EQS_PR_nuke_treaty
+	}
+	mutually_exclusive = {
+		focus = EQS_PR_integration
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = -1
+	y = 4
+	completion_reward = {
+		unlock_decision_category_tooltip = EQS_PR_sanctions_dec_cat
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_integration
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_laws_of_war
+	}
+	prerequisite = {
+		focus = EQS_PR_red_cross
+	}
+	mutually_exclusive = {
+		focus = EQS_PR_sanctions
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+	}
+	x = 1
+	y = 4
+	completion_reward = {
+		set_global_flag = EQS_PR_integration_formed
+		if = {
+			limit = { has_dlc = "Together for Victory" }
+			add_to_tech_sharing_group = EQS_PR_integration_tech_share
+			every_other_country = {
+				limit = {
+					OR = {
+						has_idea = EQS_PR_convention_of_nations_member
+						has_idea = EQS_PR_convention_of_nations_leader
+					}
+				}
+				add_to_tech_sharing_group = EQS_PR_integration_tech_share
+			}
+		}
+		add_ideas = EQS_PR_integration_idea
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						has_idea = EQS_PR_convention_of_nations_member
+						has_idea = EQS_PR_convention_of_nations_leader
+					}
+				}
+				add_opinion_modifier = { target = PREV modifier = con_trading }
+				reverse_add_opinion_modifier = { target = PREV modifier = con_trading }
+				add_ai_strategy = {
+					id = PREV
+					type = alliance
+					value = 50
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = support
+					value = 50
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = protect
+					value = 50
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_PR_peace_in_our_time
+	relative_position_id = EQS_BB_for_princess_and_country
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 20
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_PR_integration
+		focus = EQS_PR_sanctions
+	}
+	available = {
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+		}
+		is_subject = no
+		has_war = no
+	}
+	x = 0
+	y = 6
+	completion_reward = {
+		add_ideas = EQS_PR_peace_in_our_time
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+				NOT = { 
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			custom_effect_tooltip = EQS_PR_peace_in_our_time_tt
+			hidden_effect = { ROOT = { give_guarantee = PREV } }
+		}
+		add_named_threat = { 
+			threat = -15
+			name = EQS_PR_peace_in_our_time
 		}
 	}
 }

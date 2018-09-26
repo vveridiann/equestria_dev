@@ -811,6 +811,12 @@ on_actions = {
 					}
 				}
 				if = {
+					limit = {
+						FROM = { has_idea = EQS_PR_convention_of_nations_leader }
+					}
+					country_event = { id = equestriadem.21 hours = 1 }
+				}
+				if = {
 					limit = { original_tag = NLR }
 					FROM = { annex_country = { target = ROOT } }
 				}
@@ -1648,6 +1654,12 @@ on_actions = {
 					FROM = {
 						original_tag = EQS
 					}
+				}
+				if = {
+					limit = {
+						FROM = { has_idea = EQS_PR_convention_of_nations_leader }
+					}
+					country_event = { id = equestriadem.21 hours = 1 }
 				}
 				if = {
 					limit = { original_tag = NLR }
@@ -2496,7 +2508,6 @@ on_actions = {
 					original_tag = EQS
 					FROM = { original_tag = EQS has_government = communism }
 				}
-				country_event = { id = equestriadem.8 days = 60 }
 				country_event = { id = equestria.44 days = 1 }
 			}
 			if = {
@@ -3120,7 +3131,6 @@ on_actions = {
 							FROM = { is_major = yes NOT = { tag = CHN } }
 						}
 						set_country_flag = EQS_had_big_war
-						country_event = { id = equestriadem.8 days = 60 }
 					}
 					if = {
 						limit = {
@@ -3153,7 +3163,6 @@ on_actions = {
 							FROM = { tag = CHN }
 						}
 						country_event = { id = news.2101 days = 1 }
-						country_event = { id = equestriadem.8 days = 60 }
 					}
 					if = {
 						limit = {
@@ -3161,7 +3170,6 @@ on_actions = {
 							FROM = { tag = NLR }
 						}
 						country_event = { id = news.2031 days = 1 }
-						country_event = { id = equestriadem.8 days = 60 }
 						if = {
 							limit = { country_exists = FROM }
 							annex_country = { target = FROM }
@@ -3325,14 +3333,16 @@ on_actions = {
 	#}
 
 	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
-	#on_join_faction = {
-	#	effect = {
-	#		if = {
-	#			limit = { FROM = { original_tag = EQS } }
-	#			country_event = equestria.170
-	#		}
-	#	}
-	#}
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { has_idea = EQS_PR_convention_of_nations_leader }
+				}
+				country_event = { id = equestriadem.21 hours = 1 }
+			}
+		}
+	}
 
 	# ROOT is country, this is ran for every country
 	on_daily = {

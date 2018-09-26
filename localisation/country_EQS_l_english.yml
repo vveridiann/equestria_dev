@@ -1029,7 +1029,7 @@ equestria.178.d:0 "[STG.GetLeader] expressed their condolences for the nation in
 equestria.178.a:0 "What a dissapointment!"
 
 ponies_front:0 "All Ponies Front"
-warned_us:0 "Warned Us"
+warned_us:0 "Warned us"
 
  #TODO
  EQS_BB_for_princess_and_country:0 "[Root.GetEQS_BB_for_princess_and_country]"
@@ -1072,6 +1072,26 @@ warned_us:0 "Warned Us"
  EQS_BB_active_harmonism_idea_desc:0 ""
  EQS_BB_military_industrial_complex_idea:0 "Harmonic-Military-Industrial Complex"
  EQS_BB_military_industrial_complex_idea_desc:0 ""
+
+ EQS_PR_crown_corporations_idea:0 "Crown Corporations"
+ EQS_PR_charity_idea:0 "Charity"
+ EQS_PR_convention_of_nations_member:0 "Convention of Nations Member"
+ EQS_PR_convention_of_nations_leader:0 "Convention of Nations Leader"
+ EQS_PR_red_cross_idea:0 "Resolution on Wartime Lifesaving"
+ EQS_PR_laws_of_war_idea:0 "Resolution on Laws of War"
+ EQS_PR_nuke_treaty_idea:0 "Resolution on Reduction of Magi-Nuclear Weapons"
+ EQS_PR_nuke_treaty_idea2:0 "Resolution on Reduction of Magi-Nuclear Weapons"
+ EQS_PR_integration_idea:0 "Convention of Nations Integration"
+ EQS_PR_peace_in_our_time:0 "Harmony in Our Time"
+
+ EQS_PR_peace_in_our_time_tt:0 "Recieve an §YEquestrian§! Guarantee.\n"
+
+ sanction_cooldown:0 "Has enacted a sanction in last 60 days"
+ con_bonus:0 "Convention of Nations member"
+ con_trading:0 "Convention of Nations integration"
+ con_sanctions:0 "Convention of Nations sanctions"
+ left_con:0 "Left the Convention of Nations"
+ sanctioned_us:0 "Sanctioned us"
 
  newseqsdem.10.t:0 "Blueblood Warns [griffonian_empire.GetNameDef]"
  newseqsdem.10.d:0 "Blueblood says: Griffonia should stay put and not war anyone or they will get spanked"

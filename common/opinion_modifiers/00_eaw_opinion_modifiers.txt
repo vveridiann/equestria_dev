@@ -16,10 +16,29 @@ opinion_modifiers = {
 		value = 30
 	}
 
+	con_trading = {
+		trade = yes
+		value = 25
+	}
+
+	con_sanctions = {
+		trade = yes
+		value = -75
+		months = 12
+	}
+
 	trading = {
 		trade = yes
 		value = 20
 	}
+
+	FAL_wingbardy_trade = { trade = yes value = 50 }
+
+	WNG_equestrian_trade = { trade = yes value = 50 }
+
+	EQC_trade_with_new_mareland = { trade = yes value = 50 }
+
+	CHN_Embargo = { trade = yes value = -300 }
 
 	########################
 	####### MODDED###########
@@ -121,8 +140,6 @@ opinion_modifiers = {
 
 	WNG_equestria_refulsed_to_hoof_over_their_colonies = { value = -40 }
 
-	WNG_equestrian_trade = { trade = yes value = 50 }
-
 	WNG_keep_our_friends_close = { value = 75 }
 
 	WNG_school_for_gifted_griffons = {
@@ -135,7 +152,6 @@ opinion_modifiers = {
 	EQC_strengthen_equestrian_ties = { value = 50 }
 	EQC_patriation = { value = -40 }
 	EQC_strengthen_eastern_ties = { value = 50 }
-	EQC_trade_with_new_mareland = { trade = yes value = 50 }
 
 	JER_supporting_family = { value = 80 months = 120 }
 
@@ -169,7 +185,7 @@ opinion_modifiers = {
 
 	peaceful_neighbors = { value = 50 months = 100 }
 
-	sworn_enemies = { value = -200 }
+	sworn_enemies = { value = -100 }
 
 	PNG_anti_griff_law = { value = -50 }
 
@@ -197,8 +213,6 @@ opinion_modifiers = {
 
 	STG_EQS_accepted_core_transfer = { value = 100 }
 
-	CHN_Embargo = { trade = yes value = -300 }
-
 	ROU_leftist_unity = { value = 25 }
 
 	ROU_republican_values = { value = 25 }
@@ -219,8 +233,6 @@ opinion_modifiers = {
 
 	initiated_border_conflict = { value = -40 months = 6 }
 	
-	FAL_wingbardy_trade = { trade = yes value = 50 }
-
 	made_friends = { value = 50 }
 
 	refused_friends = { value = -25 }
@@ -248,4 +260,10 @@ opinion_modifiers = {
 	GRF_refused_payment = { value = -40 months = 18 }
 
 	warned_us = { value = -50 }
+
+	con_bonus = { value = 30 }
+
+	left_con = { value = -40 months = 36 }
+
+	sanctioned_us = { value = -40 months = 18 }
 }

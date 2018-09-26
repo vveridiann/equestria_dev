@@ -244,7 +244,7 @@ news_event = { #Blueblood
 		name = newseqsdem.10.c
 		trigger = {
 			has_government = democratic
-			is_on_griffonian_continent = yes
+			is_on_griffon_continent = yes
 			NOT = {
 				is_subject_of = event_target:griffonian_empire
 				is_in_faction_with = event_target:griffonian_empire
@@ -259,7 +259,7 @@ news_event = { #Blueblood
 				tag = event_target:equestria
 				AND = {
 					has_government = democratic
-					is_on_griffonian_continent = yes
+					is_on_griffon_continent = yes
 					NOT = {
 						is_subject_of = event_target:griffonian_empire
 						is_in_faction_with = event_target:griffonian_empire
@@ -285,7 +285,7 @@ news_event = { #Blueblood
 		trigger = {
 			OR = {
 				tag = event_target:equestria
-				is_in_faction_with = tag = event_target:equestria
+				is_in_faction_with  = event_target:equestria
 				AND = {
 					has_government = democratic
 					is_on_equestrian_continent = yes
@@ -305,8 +305,139 @@ news_event = { #Blueblood
 		trigger = {
 			NOT = {
 				tag = event_target:equestria
-				is_in_faction_with = tag = event_target:equestria
+				is_in_faction_with  = event_target:equestria
 				is_on_equestrian_continent = yes
+			}
+		}
+	}
+}
+
+news_event = { #Princess
+	id = newseqsdem.12
+	immediate = {log = "[Root.GetName]: event newseqsdem.12"}#Auto-logging
+	title = newseqsdem.12.t
+	desc = newseqsdem.12.d
+	picture = GFX_news_equestria_field
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = newseqsdem.12.a
+		trigger = {
+			OR = {
+				tag = event_target:equestria
+				is_in_faction_with  = event_target:equestria
+			}
+		}
+	}
+	option = {
+		name = newseqsdem.12.b
+		trigger = {
+			NOT = { has_government = democratic }
+		}
+	}
+	option = {
+		name = newseqsdem.12.c
+		trigger = {
+			NOT = {
+				tag = event_target:equestria
+				is_in_faction_with = event_target:equestria
+				has_government = democratic
+			}
+		}
+	}
+}
+
+news_event = { #Princess
+	id = newseqsdem.13
+	immediate = {log = "[Root.GetName]: event newseqsdem.13"}#Auto-logging
+	title = newseqsdem.13.t
+	desc = newseqsdem.13.d
+	picture = GFX_news_equestria_field
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = newseqsdem.13.a
+		trigger = {
+			OR = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+	}
+	option = {
+		name = newseqsdem.13.b
+		trigger = {
+			NOT = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+	}
+}
+
+news_event = { #Princess
+	id = newseqsdem.14
+	immediate = {log = "[Root.GetName]: event newseqsdem.14"}#Auto-logging
+	title = newseqsdem.14.t
+	desc = newseqsdem.14.d
+	picture = GFX_news_equestria_field
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = newseqsdem.14.a
+		trigger = {
+			OR = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+	}
+	option = {
+		name = newseqsdem.14.b
+		trigger = {
+			NOT = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+	}
+}
+
+news_event = { #Princess
+	id = newseqsdem.15
+	immediate = {log = "[Root.GetName]: event newseqsdem.15"}#Auto-logging
+	title = newseqsdem.15.t
+	desc = newseqsdem.15.d
+	picture = GFX_news_equestria_field
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = newseqsdem.15.a
+		trigger = {
+			OR = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+	}
+	option = {
+		name = newseqsdem.15.b
+		trigger = {
+			NOT = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
 			}
 		}
 	}

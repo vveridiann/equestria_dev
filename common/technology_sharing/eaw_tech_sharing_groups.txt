@@ -126,6 +126,23 @@ technology_sharing_group = {
 
 technology_sharing_group = {
 
+	id = EQS_PR_integration_tech_share
+	name = EQS_PR_integration_tech_share_name
+	desc = EQS_PR_integration_tech_share_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.07
+
+	available = {
+		OR = {
+			has_idea = EQS_PR_convention_of_nations_member
+			has_idea = EQS_PR_convention_of_nations_leader
+		}
+	}
+}
+
+technology_sharing_group = {
+
 	id = school_for_gifted_griffons
 	name = school_for_gifted_griffons_name
 	desc = WNG_school_for_gifted_griffons_desc

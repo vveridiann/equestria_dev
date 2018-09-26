@@ -133,6 +133,13 @@ country_event = { #Moderates' Discontent
 	option = {
 		name = equestriadem.8.a
 		add_ideas = popular_discontent
+		if = {
+			limit = { 
+				has_country_leader = { ruling_only = yes name = "Princess Celestia" } 
+				has_country_flag = { flag = celestia_evil_meter value > 32 }
+			}
+			load_focus_tree = equestria_focus_prevent
+		}
 		hidden_effect = { country_event = { days = 30 id = equestriadem.2 } }
 	}
 }
@@ -442,5 +449,272 @@ country_event = { #EQS gets called
 		add_political_power = -300
 		add_stability = -0.1
 		add_war_support = -0.1
+	}
+}
+
+country_event = { #CON invite
+	id = equestriadem.15
+	immediate = {log = "[Root.GetName]: event equestriadem.15"}#Auto-logging
+	title = equestriadem.15.t
+	desc = equestriadem.15.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##ok
+		name = equestriadem.15.a
+		join_CON_effect = yes
+		FROM = { country_event = { id = equestriadem.16 days = 1 } } 
+		ai_chance = {
+			base = opinion@FROM
+			modifier = {
+				factor = 2.5
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0.66
+				NOT = { has_government = democratic }
+			}
+			modifier = {
+				factor = 0.66
+				OR = {
+					has_government = fascism
+					AND = {
+						has_government = communism
+						OR = {
+							has_country_flag = JER_AWPR_wins
+							has_completed_focus = FEA_rozenkamp_strasserists
+							has_country_leader = { ruling_only = yes name = "Sinister Serov" }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				factor = 0.66
+				strength_ratio = {
+					tag = FROM
+					ratio > 0.9
+				}
+			}
+			modifier = {
+				factor = 1.2
+				is_guaranteed_by = FROM
+			}
+		}
+	}
+	option = { ##noh
+		name = equestriadem.15.a
+		add_political_power = 35
+		hidden_effect = { 
+			FROM = { country_event = { id = equestriadem.17 days = 1 } } 
+		}
+		ai_chance = {
+			base = opinion@FROM
+		}
+	}
+}
+
+country_event = { #CON invite accepted
+	id = equestriadem.16
+	immediate = {log = "[Root.GetName]: event equestriadem.16"}#Auto-logging
+	title = equestriadem.16.t
+	desc = equestriadem.16.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##yay!
+		name = equestriadem.16.a
+	}
+}
+
+country_event = { #CON invite declined
+	id = equestriadem.17
+	immediate = {log = "[Root.GetName]: event equestriadem.17"}#Auto-logging
+	title = equestriadem.17.t
+	desc = equestriadem.17.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##noh!
+		name = equestriadem.17.a
+	}
+}
+
+country_event = { #FROM leaves con
+	id = equestriadem.18
+	immediate = {log = "[Root.GetName]: event equestriadem.18"}#Auto-logging
+	title = equestriadem.18.t
+	desc = equestriadem.18.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##noh!
+		name = equestriadem.18.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = left_con
+			}
+		}
+		add_ai_strategy = {
+			id = FROM
+			type = contain
+			value = 100
+		}
+	}
+}
+
+country_event = { #Maintenance
+	id = equestriadem.19
+	immediate = {log = "[Root.GetName]: event equestriadem.19"}#Auto-logging
+	hidden = yes
+
+	trigger = {
+		NOT = { has_idea = EQS_PR_convention_of_nations_member }
+		has_opinion_modifier = con_bonus
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	option = { ##noh!
+		every_other_country = {
+			limit = {
+				has_opinion_modifier = con_bonus
+			}
+			remove_opinion_modifier = { target = ROOT modifier = con_bonus }
+			remove_opinion_modifier = { target = PREV modifier = con_trading }
+			ROOT = {
+				remove_opinion_modifier = { target = PREV modifier = con_bonus }
+				remove_opinion_modifier = { target = PREV modifier = con_trading }
+				if = {
+					limit = { has_global_flag = EQS_PR_integration_formed }
+					add_ai_strategy = {
+						id = PREV
+						type = alliance
+						value = -50
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = support
+						value = -50
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = protect
+						value = -50
+					}
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = alliance
+					value = -25
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = befriend
+					value = -75
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = antagonize
+					value = 75
+				}
+			}
+			if = {
+				limit = { has_global_flag = EQS_PR_integration_formed }
+				add_ai_strategy = {
+					id = ROOT
+					type = alliance
+					value = -50
+				}
+				add_ai_strategy = {
+					id = ROOT
+					type = support
+					value = -50
+				}
+				add_ai_strategy = {
+					id = ROOT
+					type = protect
+					value = -50
+				}
+			}
+			add_ai_strategy = {
+				id = ROOT
+				type = alliance
+				value = -25
+			}
+			add_ai_strategy = {
+				id = ROOT
+				type = befriend
+				value = -75
+			}
+			add_ai_strategy = {
+				id = ROOT
+				type = antagonize
+				value = 75
+			}
+		}
+		every_other_country = {
+			ROOT = { remove_opinion_modifier = { target = PREV modifier = con_sanctions } }
+		}
+	}
+}
+
+country_event = { #Sanctions
+	id = equestriadem.20
+	immediate = {log = "[Root.GetName]: event equestriadem.20"}#Auto-logging
+	title = equestriadem.20.t
+	desc = equestriadem.20.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+	option = { ##noh!
+		name = equestriadem.20.a
+		add_opinion_modifier = { target = FROM modifier = sanctioned_us }
+		every_other_country = {
+			limit = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_member
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = con_sanctions }
+		}
+	}
+}
+
+country_event = { #Maintenance
+	id = equestriadem.21
+	immediate = {log = "[Root.GetName]: event equestriadem.21"}#Auto-logging
+	hidden = yes
+
+	trigger = {
+		event_target:equestria = { has_idea = EQS_PR_convention_of_nations_leader }
+		NOT = { has_idea = EQS_PR_convention_of_nations_leader has_idea = EQS_PR_convention_of_nations_member }
+		OR = {
+			is_in_faction_with = event_target:equestria
+			is_subject_of = event_target:equestria
+		}
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		join_CON_effect = yes
 	}
 }

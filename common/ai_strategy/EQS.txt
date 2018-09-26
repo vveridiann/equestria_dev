@@ -777,7 +777,7 @@ EQS_BB_look_to_griffonia_strat = {
 			has_government = democratic
 			is_subject = no
 		}
-		is_on_griffonian_continent = yes
+		is_on_griffon_continent = yes
 		NOT = { 
 			has_government = fascism
 			has_government = communism
@@ -800,6 +800,72 @@ EQS_BB_look_to_griffonia_strat = {
 		}
 	}
 	reversed = yes
+	ai_strategy = {
+		type = support
+		id = EQS
+		value = 100
+	}
+}
+
+EQS_CON_sanctions = {
+	enable = {
+		NOT = { tag = EQS }
+		EQS = { 
+			has_government = democratic
+			is_subject = no
+		}
+		has_country_flag = con_sanctions
+	}
+	abort = {
+		OR = {
+			NOT = { 
+				has_country_flag = con_sanctions
+			}
+			EQS = {
+				is_subject = yes
+				NOT = { has_government = democratic }
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = contain
+		id = EQS
+		value = 100
+	}
+}
+
+EQS_PR_peace_in_our_time_strat = {
+	enable = {
+		NOT = { tag = EQS }
+		EQS = { 
+			has_government = democratic
+			is_subject = no
+		}
+		has_idea = EQS_PR_convention_of_nations_member
+	}
+	abort = {
+		OR = {
+			NOT = { 
+				has_idea = EQS_PR_convention_of_nations_member
+			}
+			EQS = {
+				is_subject = yes
+				NOT = { has_government = democratic }
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = protect
+		id = EQS
+		value = 400
+	}
+	ai_strategy = {
+		type = alliance
+		id = EQS
+		value = 100
+	}
 	ai_strategy = {
 		type = support
 		id = EQS
