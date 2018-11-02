@@ -2655,7 +2655,7 @@ shared_focus = {
 					}
 				}
 			 }
-			add_opinion_modifier = { target = ROOT modifier = sworn_enemies }
+			add_opinion_modifier = { target = ROOT modifier = mortal_enemies }
 			add_opinion_modifier = { target = ROOT modifier = CHN_Embargo }
 		}
 		every_other_country = {

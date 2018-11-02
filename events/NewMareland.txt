@@ -1442,10 +1442,14 @@ country_event = {
 			add_to_war_candy_against_EQC = yes
 		}
 		hidden_effect = {
-			add_ai_strategy = {
-				type = alliance
-				id = event_target:candy_gardens_eqc
-				value = 200
+			event_target:candy_gardens_eqc = {
+				ROOT = {
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = 200
+					}
+				}
 			}
 		}
 	}

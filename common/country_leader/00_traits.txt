@@ -1,4 +1,4 @@
-leader_traits = {
+﻿leader_traits = {
 
 	dictator = {
 		random = no
@@ -57,6 +57,7 @@ leader_traits = {
 		political_power_factor = -0.3
 		stability_factor = 0.05
 		justify_war_goal_time = -0.25
+		ai_focus_peaceful_factor = -0.15
 
 		ai_will_do = {
 			factor = 1
@@ -3101,14 +3102,9 @@ leader_traits = {
 	}
 	war_hero_general = { ##Blueblood
 		random = no
-		production_speed_bunker_factor = 0.1
-		production_speed_coastal_bunker_factor = 0.1
-		production_speed_anti_air_building_factor = 0.1
-		production_speed_radar_station_factor = 0.05
-		production_speed_air_base_factor = 0.05
-		political_power_factor = 0.05
-		production_speed_dockyard_factor = 0.05
-		production_speed_arms_factory_factor = 0.05
+		ai_focus_aggressive_factor = 0.2
+		ai_focus_military_advancements_factor = 0.05
+		fascism_acceptance = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -3120,6 +3116,7 @@ leader_traits = {
 		opinion_gain_monthly_factor = 0.10
 		opinion_gain_monthly_same_ideology_factor = 0.20
 		subversive_activites_upkeep = -0.1
+		ai_focus_peaceful_factor = 0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -3157,6 +3154,7 @@ leader_traits = {
 		min_export = -0.05
 		trade_opinion_factor = 0.15
 		local_resources_factor = 0.10
+		ai_focus_production_factor = 0.15
 		ai_will_do = {
 			factor = 1
 		}
@@ -3189,8 +3187,8 @@ leader_traits = {
 	}
 	serene_monarch = {
 		random = no
-		economy_cost_factor = 0.2
-		political_advisor_cost_factor = 0.2
+		economy_cost_factor = -0.2
+		political_advisor_cost_factor = -0.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3329,7 +3327,7 @@ leader_traits = {
 		war_support_factor = 0.4
 		conscription = 0.15
 		industrial_capacity_factory = 0.5
-		ai_focus_aggressive_factor = 10
+		ai_focus_aggressive_factor = 1
 
 		ai_will_do = {
 			factor = 1

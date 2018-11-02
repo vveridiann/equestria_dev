@@ -113,9 +113,31 @@ technology_sharing_group = {
 
 	available = {
 		OR = {
-			is_in_faction_with = EQS
 			original_tag = EQS
+			AND = {
+				any_allied_country = {
+					original_tag = EQS
+					is_faction_leader = yes
+				}
+			}
 		}			
+	}
+}
+
+technology_sharing_group = {
+
+	id = EQS_PR_integration_tech_share
+	name = EQS_PR_integration_tech_share_name
+	desc = EQS_PR_integration_tech_share_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.07
+
+	available = {
+		OR = {
+			has_idea = EQS_PR_convention_of_nations_member
+			has_idea = EQS_PR_convention_of_nations_leader
+		}
 	}
 }
 

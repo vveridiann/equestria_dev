@@ -1,5 +1,7 @@
 ﻿capital = 3
 
+save_global_event_target_as = equestria
+
 oob = "EQS_1007"
 
 set_research_slots = 3
