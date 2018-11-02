@@ -1183,6 +1183,7 @@ news_event = { # Luna-Chrys Marriage
 	desc = lunas.39.d
 	picture = GFX_news_luna_chrysalis
 	is_triggered_only = yes
+	major = yes
 	option = {
 		name = lunas.39.a
 	}
@@ -1412,7 +1413,7 @@ country_event = { #Nightmare Night Becomes Mardi Gras
 	}
 }
 
-country_event = { #Bat Appreciation Day Repeating
+country_event = { #Bat Appreciation Day
 	id = lunas.52
 	immediate = {log = "[Root.GetName]: event lunas.52"}#Auto-logging
 	title = lunas.52.t
@@ -1422,15 +1423,26 @@ country_event = { #Bat Appreciation Day Repeating
 
 	option = {
 		name = lunas.52.a
-		add_political_power = 30
+		add_political_power = 15
 		add_popularity = { ideology = fascism popularity = 0.01 }
 		hidden_effect = {
-		country_event = { id = lunas.52 days = 365 }
+			country_event = { id = lunas.521 days = 365 }
 		}
 	}
 }
 
-country_event = { #Nightmare Gras Repeating
+country_event = { #Bat Appreciation Day Repeating
+	id = lunas.521
+	immediate = {log = "[Root.GetName]: event lunas.521"}#Auto-logging
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = lunas.52
+	}
+}
+
+country_event = { #Nightmare Gras
 	id = lunas.53
 	immediate = {log = "[Root.GetName]: event lunas.53"}#Auto-logging
 	title = lunas.53.t
@@ -1439,17 +1451,28 @@ country_event = { #Nightmare Gras Repeating
 	is_triggered_only = yes
 
 	option = {
-		add_political_power = 20
+		add_political_power = 10
 		add_stability = 0.01
 		add_popularity = { ideology = fascism popularity = 0.01 }
 		add_popularity = { ideology = democratic popularity = 0.01 }
 		hidden_effect = {
-		country_event = { id = lunas.53 days = 365 }
-		    }
+			country_event = { id = lunas.531 days = 365 }
 		}
 	}
+}
 
-country_event = { #Hug a Bat Day Repeating
+country_event = { #Nightmare Gras Repeating
+	id = lunas.531
+	immediate = {log = "[Root.GetName]: event lunas.531"}#Auto-logging
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = lunas.53
+	}
+}
+
+country_event = { #Hug a Bat Day
 	id = lunas.54
 	immediate = {log = "[Root.GetName]: event lunas.54"}#Auto-logging
 	title = lunas.54.t
@@ -1463,11 +1486,21 @@ country_event = { #Hug a Bat Day Repeating
 		add_popularity = { ideology = fascism popularity = 0.01 }
 		add_popularity = { ideology = democratic popularity = 0.01 }
 		hidden_effect = {
-		country_event = { id = lunas.54 days = 365 }
+			country_event = { id = lunas.541 days = 365 }
 		}
 	}
 }
 
+country_event = { #Hug a Bat Day Repeating
+	id = lunas.541
+	immediate = {log = "[Root.GetName]: event lunas.541"}#Auto-logging
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = lunas.54
+	}
+}
 
 ##################
 ###################
@@ -1477,6 +1510,7 @@ country_event = { # Luna Puppet
 	title = lunas.900.t
 	desc = lunas.900.d
 	picture = GFX_event_luna_poster
+	hidden = yes
 
 	trigger = {
 		original_tag = PLB
@@ -1498,6 +1532,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+
 
 	trigger = {
 		original_tag = GRF
@@ -1520,6 +1556,7 @@ country_event = { # Luna Puppet
 	title = lunas.901.t
 	desc = lunas.901.d
 	picture = GFX_event_luna_poster
+	hidden = yes	
 
 	trigger = {
 		original_tag = PNG
@@ -1541,6 +1578,8 @@ country_event = { # Luna Puppet
 	title = lunas.903.t
 	desc = lunas.903.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = STL
@@ -1562,6 +1601,8 @@ country_event = { # Luna Puppet
 	title = lunas.904.t
 	desc = lunas.904.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = BUF
@@ -1583,6 +1624,8 @@ country_event = { # Luna Puppet
 	title = lunas.905.t
 	desc = lunas.905.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = DRG
@@ -1604,6 +1647,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = GFF
@@ -1625,6 +1670,8 @@ country_event = { # Removal of cosmetic
 	title = lunas.910.t
 	desc = lunas.910.d
 	picture = GFX_event_canterlot
+	hidden = yes
+	
 
 	trigger = {
 		has_country_flag = is_luna_puppet
@@ -1648,6 +1695,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = OLE
@@ -1670,6 +1719,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = BAL
@@ -1691,6 +1742,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = CES
@@ -1713,6 +1766,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = JUN
@@ -1734,6 +1789,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = SCS
@@ -1756,6 +1813,8 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
+	
 
 	trigger = {
 		original_tag = STG
@@ -1777,6 +1836,7 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
 
 	trigger = {
 		original_tag = CRY
@@ -1798,6 +1858,7 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
 
 	trigger = {
 		original_tag = JAK
@@ -1819,6 +1880,7 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
 
 	trigger = {
 		original_tag = CHN
@@ -1840,6 +1902,7 @@ country_event = { # Luna Puppet
 	title = lunas.902.t
 	desc = lunas.902.d
 	picture = GFX_event_luna_poster
+	hidden = yes
 
 	trigger = {
 		original_tag = YAK
