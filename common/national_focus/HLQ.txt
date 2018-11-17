@@ -1360,6 +1360,9 @@ focus_tree = {
 		prerequisite = { focus = HLQ_the_ostwall }
 		prerequisite = { focus = HLQ_industrial_revolution }
 		prerequisite = { focus = HLQ_limited_pony_rights }
+		bypass = {
+			tag = event_target:griffonian_empire
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -3361,7 +3364,7 @@ focus_tree = {
 
 	focus = {
 		id = HLQ_industry_3
-		icon = GFX_focus_generic_tungsten
+		icon = GFX_goal_generic_construction2
 		x = 1
 		y = 1
 		relative_position_id = HLQ_industry_1
