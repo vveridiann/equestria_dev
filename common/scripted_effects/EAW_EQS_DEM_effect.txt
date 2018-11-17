@@ -1,0 +1,207 @@
+add_CON_stuff = {
+	if = {
+		limit = { has_global_flag = EQS_red_cross_formed }
+		add_ideas = EQS_PR_red_cross_idea
+	}
+	if = {
+		limit = { has_global_flag = EQS_PR_laws_of_war_formed }
+		add_ideas = EQS_PR_laws_of_war_idea
+	}
+	if = {
+		limit = { has_global_flag = EQS_PR_nuke_treaty_formed }
+		if = {
+			limit = { has_tech = nukes }
+			add_ideas = EQS_PR_nuke_treaty_idea
+			else = {
+				add_ideas = EQS_PR_nuke_treaty_idea2
+			}
+		}
+	}
+	if = {
+		limit = { 
+			has_global_flag = EQS_PR_integration_formed
+		}
+		add_ideas = EQS_PR_integration_idea
+		if = {
+			limit = { has_dlc = "Together for Victory" }
+			add_to_tech_sharing_group = EQS_PR_integration_tech_share
+		}
+	}
+}
+
+join_CON_effect = {
+	add_ideas = EQS_PR_convention_of_nations_member
+	add_CON_stuff = yes
+	every_other_country = {
+		limit = {
+			OR = {
+				has_idea = EQS_PR_convention_of_nations_member
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+		}
+		add_opinion_modifier = { target = PREV modifier = con_bonus }
+		reverse_add_opinion_modifier = { target = PREV modifier = con_bonus }
+		if = {
+			limit = {
+				is_subject = no
+				NOT = { is_in_faction_with = PREV }
+			}
+			diplomatic_relation = {
+				country = PREV
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_ai_strategy = {
+			id = ROOT
+			type = alliance
+			value = 25
+		}
+		add_ai_strategy = {
+			id = ROOT
+			type = befriend
+			value = 75
+		}
+		add_ai_strategy = {
+			id = ROOT
+			type = antagonize
+			value = -75
+		}
+		ROOT = {
+			add_ai_strategy = {
+				id = PREV
+				type = alliance
+				value = 25
+			}
+			add_ai_strategy = {
+				id = PREV
+				type = befriend
+				value = 75
+			}
+			add_ai_strategy = {
+				id = PREV
+				type = antagonize
+				value = -75
+			}
+		}
+		if = {
+			limit = { has_global_flag = EQS_PR_integration_formed }
+			add_ai_strategy = {
+				id = ROOT
+				type = alliance
+				value = 50
+			}
+			add_ai_strategy = {
+				id = ROOT
+				type = support
+				value = 50
+			}
+			add_ai_strategy = {
+				id = ROOT
+				type = protect
+				value = 50
+			}
+			ROOT = {
+				add_ai_strategy = {
+					id = PREV
+					type = alliance
+					value = 50
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = support
+					value = 50
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = protect
+					value = 50
+				}
+			}
+		}
+	}
+	hidden_effect = { 
+		every_other_country = {
+			limit = { is_subject_of = ROOT }
+			add_ideas = EQS_PR_convention_of_nations_member
+			add_CON_stuff = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						has_idea = EQS_PR_convention_of_nations_member
+						has_idea = EQS_PR_convention_of_nations_leader
+					}
+				}
+				add_opinion_modifier = { target = PREV modifier = con_bonus }
+				reverse_add_opinion_modifier = { target = PREV modifier = con_bonus }
+				add_ai_strategy = {
+					id = PREV
+					type = alliance
+					value = 25
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = befriend
+					value = 75
+				}
+				add_ai_strategy = {
+					id = PREV
+					type = antagonize
+					value = -75
+				}
+				PREV = {
+					add_ai_strategy = {
+						id = PREV
+						type = alliance
+						value = 25
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = befriend
+						value = 75
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = antagonize
+						value = -75
+					}
+				}
+				if = {
+					limit = { has_global_flag = EQS_PR_integration_formed }
+					add_ai_strategy = {
+						id = PREV
+						type = alliance
+						value = 50
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = support
+						value = 50
+					}
+					add_ai_strategy = {
+						id = PREV
+						type = protect
+						value = 50
+					}
+					PREV = {
+						add_ai_strategy = {
+							id = PREV
+							type = alliance
+							value = 50
+						}
+						add_ai_strategy = {
+							id = PREV
+							type = support
+							value = 50
+						}
+						add_ai_strategy = {
+							id = PREV
+							type = protect
+							value = 50
+						}
+					}
+				}
+			}
+		}
+	}
+}

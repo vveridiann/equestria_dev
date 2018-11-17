@@ -65,6 +65,31 @@ EQS_foreign_affairs = {
 		base = 70
 	}
 }
+EQS_PR_convention_of_nations_dec_cat = {
+	icon = harmony_cat
+	allowed = {
+		original_tag = EQS
+	}
+	visible = {
+		has_idea = EQS_PR_convention_of_nations_leader
+	}
+	priority = {
+		base = 91
+	}
+}
+EQS_PR_sanctions_dec_cat = {
+	icon = harmony_cat
+	allowed = {
+		original_tag = EQS
+	}
+	visible = {
+		has_idea = EQS_PR_convention_of_nations_leader
+		has_completed_focus = EQS_PR_sanctions
+	}
+	priority = {
+		base = 90
+	}
+}
 EQS_civil_war = {
 	allowed = {
 		is_eqs_civil_war_tag = yes

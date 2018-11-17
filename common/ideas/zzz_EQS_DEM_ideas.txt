@@ -1,0 +1,259 @@
+ideas = {
+
+	country = {
+		EQS_BB_for_princess_and_country_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				offensive_war_stability_factor = 0.1
+				mobilization_speed = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		EQS_BB_active_harmonism_idea = {
+			picture = equestrian_advisors
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			rule = {
+				can_only_justify_war_on_threat_country = no
+			}
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 0.15
+				generate_wargoal_tension = -0.15
+				justify_war_goal_time = -0.15
+			}
+		}
+
+		EQS_BB_military_industrial_complex_idea = {
+			picture = generic_central_management
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_radar_station_factor = 0.05
+				production_speed_air_base_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				political_power_factor = -0.05
+			}
+		}
+
+		EQS_PR_crown_corporations_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		EQS_PR_charity_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			modifier = {
+				consumer_goods_factor = 0.03
+				monthly_population = 0.1
+				democratic_drift = 0.05
+				stability_factor = 0.05
+				industry_free_repair_factor = 0.1
+			}
+		}
+
+		EQS_PR_convention_of_nations_member = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				NOT = { has_idea = EQS_PR_convention_of_nations_leader }
+				event_target:equestria = {
+					exists = yes
+					has_government = democratic
+					is_subject = no
+					NOT = { has_war_with = ROOT }
+					has_idea = EQS_PR_convention_of_nations_leader
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = { 
+						OR = {
+							has_idea = EQS_PR_convention_of_nations_member 
+							has_idea = EQS_PR_convention_of_nations_leader
+						}
+					}
+				}
+			}
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.1
+				justify_war_goal_time = 0.33
+				enemy_justify_war_goal_time = 0.25
+				democratic_drift = 0.02
+				ai_focus_peaceful_factor = 0.15
+			}
+		}
+
+		EQS_PR_convention_of_nations_leader = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_government = democratic
+				is_subject = no
+			}
+			modifier = {
+				guarantee_cost = -0.25
+				political_power_factor = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.2
+				improve_relations_maintain_cost_factor = -0.1
+				democratic_drift = 0.02
+			}
+		}
+
+		EQS_PR_red_cross_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_leader
+					has_idea = EQS_PR_convention_of_nations_member
+				}
+			}
+			modifier = {
+				experience_loss_factor = -0.05
+				army_morale_factor = 0.03
+			}
+			research_bonus = {
+				hospital_tech = 0.1
+			}
+		}
+
+		EQS_PR_laws_of_war_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_leader
+					has_idea = EQS_PR_convention_of_nations_member
+				}
+			}
+			modifier = {
+				offensive_war_stability_factor = 0.2
+				war_support_factor = 0.1
+				army_attack_factor = -0.07
+				enemy_partisan_effect = 0.1
+				generate_wargoal_tension = 0.15
+			}
+		}
+
+		EQS_PR_nuke_treaty_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_leader
+					has_idea = EQS_PR_convention_of_nations_member
+				}
+			}
+			modifier = {
+				production_speed_nuclear_reactor_factor = -0.25
+				stability_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+
+		EQS_PR_nuke_treaty_idea2 = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_leader
+					has_idea = EQS_PR_convention_of_nations_member
+				}
+			}
+			modifier = {
+				production_speed_nuclear_reactor_factor = -0.25
+				stability_factor = 0.1
+				political_power_gain = 0.05
+			}
+			research_bonus = {
+				nuclear = -0.25
+			}
+		}
+
+		EQS_PR_integration_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = EQS_PR_convention_of_nations_leader
+					has_idea = EQS_PR_convention_of_nations_member
+				}
+			}
+			modifier = {
+				local_resources_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.05
+				electronics = 0.05
+			}
+		}
+
+		EQS_PR_peace_in_our_time = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+
+			removal_cost = -1
+			available = {
+				has_idea = EQS_PR_convention_of_nations_leader
+			}
+			modifier = {
+				guarantee_tension = -1
+				guarantee_cost = -0.9
+			}
+		}
+	}
+
+}
