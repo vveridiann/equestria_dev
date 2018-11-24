@@ -49,14 +49,18 @@ EQS_celestia_evil_meter_category = {
 				has_completed_focus = Extreme_war_comittee
 				AND = {
 					OR = {
-						threat > 0.35
-						has_war_support > 0.3
+						threat > 0.15
+						has_war_support > 0.15
 						AND = {
 							any_country = {
 								is_major = yes
 								OR = {
 									has_wargoal_against = ROOT
 									is_justifying_wargoal_against = ROOT
+									AND = {
+										is_neighbor_of = ROOT
+										has_added_tension_amount > 0
+									}
 								}
 							}
 						}
@@ -81,14 +85,18 @@ EQS_celestia_evil_meter_category = {
 				has_completed_focus = Extreme_war_comittee
 				AND = {
 					OR = {
-						threat > 0.35
-						has_war_support > 0.3
+						threat > 0.15
+						has_war_support > 0.15
 						AND = {
 							any_country = {
 								is_major = yes
 								OR = {
 									has_wargoal_against = ROOT
 									is_justifying_wargoal_against = ROOT
+									AND = {
+										is_neighbor_of = ROOT
+										has_added_tension_amount > 0
+									}
 								}
 							}
 						}
@@ -279,10 +287,12 @@ SOL_dealing_with_resistance = {
 			has_war = no
 		}
 		available = {
-			has_war = no
 			NOT = {
 				has_idea = SOL_harmonic_resistance_idea3
 			}
+		}
+		cancel_trigger = {
+			hidden_trigger = { has_war = yes }
 		}
 		is_good = no
 		days_mission_timeout = 240

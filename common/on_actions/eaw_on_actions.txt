@@ -372,6 +372,9 @@ on_actions = {
 			PLB = {
 				add_ideas = better_science_base
 			}
+			GFF = {
+				add_ideas = big_science_base
+			}
 		}
 	}
 
@@ -1118,6 +1121,14 @@ on_actions = {
 
 			if = {
 				limit = {
+					tag = NLR
+					FROM = { NOT = { has_government = fascism } }
+				}
+				country_event = lunas.940
+			}
+
+			if = {
+				limit = {
 					FROM = {
 						original_tag = EQS
 						has_government = democratic
@@ -1279,6 +1290,14 @@ on_actions = {
 
 			if = {
 				limit = {
+					tag = NLR
+					FROM = { NOT = { has_government = fascism } }
+				}
+				country_event = lunas.940
+			}
+
+			if = {
+				limit = {
 					ROOT = {
 						original_tag = GRY
 						has_focus_tree = GRY_focus_neutral_rebellion
@@ -1408,12 +1427,6 @@ on_actions = {
 							FROM = { original_tag = FAW }
 							original_tag = FAT
 						}
-						AND = {
-							FROM = { 
-								OR = { tag = LNS tag = LSM tag = LSC } 
-							}
-							OR = { tag = LNS tag = LSM tag = LSC } 
-						}
 					}
 				}
 				add_timed_idea = {
@@ -1433,7 +1446,13 @@ on_actions = {
 
 			if = {
 				limit = {
-					FROM = { tag = event_target:longsword }
+					FROM = { 
+						OR = {
+							tag = LNS
+							tag = LSM
+							tag = LSC
+						}
+					}
 					OR = {
 						tag = LNS
 						tag = LSM
@@ -1762,12 +1781,12 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					FROM = {
-						tag = DED
+					FROM = { 
+						tag = DED 
 						NOT = { has_country_flag = DED_capitulated@ROOT}
 					}
 				}
-				set_country_flag = DED_capitulated@ROOT
+				FROM = { set_country_flag = DED_capitulated@ROOT }
 				if = {
 					limit = { is_major = yes }
 					FROM = { modify_country_flag = { flag = DED_killed_nations value = 5 } }
@@ -1816,6 +1835,14 @@ on_actions = {
 					NOT = { has_government = communism }
 				}
 				country_event = prywhen.34
+			}
+
+			if = {
+				limit = {
+					tag = NLR
+					NOT = { has_government = fascism }
+				}
+				country_event = lunas.940
 			}
 
 			if = {
@@ -2118,6 +2145,43 @@ on_actions = {
 
 				if = {
 					limit = {
+						is_ai = yes
+						original_tag = HLQ
+						FROM = { 
+							OR = {
+								original_tag = LNS
+								original_tag = LSC
+								original_tag = LSM
+							}
+							is_subject_of = ROOT
+						}
+					}
+					annex_country = { target = FROM }
+				}
+
+				if = {
+					limit = {
+						is_ai = yes
+						OR = {
+							original_tag = LNS
+							original_tag = LSC
+							original_tag = LSM
+						}
+						FROM = { 
+							OR = {
+								original_tag = LNS
+								original_tag = LSC
+								original_tag = LSM
+								original_tag = HLQ
+							}
+							is_subject_of = ROOT
+						}
+					}
+					annex_country = { target = FROM }
+				}
+
+				if = {
+					limit = {
 						OR = {
 							is_river_fed_member = yes
 							FROM = { is_river_fed_member = yes }
@@ -2252,6 +2316,9 @@ on_actions = {
 						FROM = { original_tag = EQS }
 						tag = NLR
 					}
+					FROM = {
+						kill_country_leader = yes
+					}
 					if = {
 						limit = { country_exists = FROM }
 						annex_country = { target = FROM }
@@ -2291,19 +2358,12 @@ on_actions = {
 
 				if = {
 					limit = {
-						FROM = {
-							tag = DED
-							NOT = { has_country_flag = DED_capitulated@ROOT}
+						tag = DED
+						all_other_country = {
+							OR = { exists = no is_subject_of = ROOT }
 						}
 					}
-					set_country_flag = DED_capitulated@ROOT
-					if = {
-						limit = { is_major = yes }
-						FROM = { modify_country_flag = { flag = DED_killed_nations value = 5 } }
-						else = {
-							FROM = { modify_country_flag = { flag = DED_killed_nations value = 1 } }
-						}
-					}
+					country_event = { id = deadempire.54 days = 7 }
 				}
 
 				if = {

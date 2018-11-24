@@ -1771,13 +1771,20 @@ ideas = {
 	}
 	country = {
 		sombra_defenses = {
-
+			picture = war_plan_equestria
 
 			allowed = {
 				always = no
 			}
 			available = {
-				CRY = { has_government = fascism }
+				any_other_country = {
+					original_tag = CRY
+					has_government = fascism
+					NOT = {
+						is_in_faction_with = ROOT
+						ROOT = { is_subject_of = PREV }
+					}
+				}
 			}
 			allowed_civil_war = {
 				has_government = democratic
@@ -1929,8 +1936,9 @@ ideas = {
 			modifier = {
 				training_time_army_factor = -0.2
 				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.15
-				industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.15
 			}
 		}
 	}
@@ -1950,8 +1958,9 @@ ideas = {
 			modifier = {
 				training_time_army_factor = -0.3
 				army_morale_factor = 0.15
+				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.25
-				industrial_capacity_factory = 0.3
+				industrial_capacity_factory = 0.35
 			}
 		}
 	}
