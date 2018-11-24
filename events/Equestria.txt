@@ -3657,7 +3657,7 @@ country_event = { ## Conscription
 		hidden_effect = {
 			clr_country_flag = manpower_laws_blocked
 			modify_country_flag = { flag = celestia_evil_meter value = 4 }
-			add_timed_idea = { idea = EQS_block_manpower_demob days = 360 }
+			set_country_flag = { flag = EQS_block_manpower_demob value = 1 days = 360 }
 		}
 		add_ideas = limited_conscription
 		ai_chance = {
@@ -3670,7 +3670,7 @@ country_event = { ## Conscription
 		hidden_effect = {
 			clr_country_flag = manpower_laws_blocked
 			modify_country_flag = { flag = celestia_evil_meter value = 8 }
-			add_timed_idea = { idea = EQS_block_manpower_demob days = 360 }
+			set_country_flag = { flag = EQS_block_manpower_demob value = 1 days = 360 }
 		}
 		add_ideas = extensive_conscription
 		add_war_support = 0.1
@@ -3717,7 +3717,7 @@ country_event = { ## Economy
 		hidden_effect = {
 			clr_country_flag = economic_laws_blocked
 			modify_country_flag = { flag = celestia_evil_meter value = 4 }
-			add_timed_idea = { idea = EQS_block_econ_demob days = 360 }
+			set_country_flag = { flag = EQS_block_econ_demob value = 1 days = 360 }
 		}
 		ai_chance = {
 			factor = 70
@@ -5052,6 +5052,7 @@ country_event ={
 		add_to_tech_sharing_group = equestrian_research
 	}
 }
+
 country_event = {
 	id = equestria.178
 	immediate = {log = "[Root.GetName]: event equestria.178"}#Auto-logging

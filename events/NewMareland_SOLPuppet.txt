@@ -185,15 +185,19 @@ country_event = { #Solar coup
 					reverse_add_opinion_modifier = { target = PREV modifier = friendly_government }
 					add_opinion_modifier = { target = PREV modifier = friendly_government }
 				}
-				add_ai_strategy = {
-					type = alliance
-					id = event_target:solar_empire
-					value = 500
-				}
-				add_ai_strategy = {
-					type = befriend
-					id = event_target:solar_empire
-					value = 500
+				event_target:solar_empire = {
+					ROOT = {
+						add_ai_strategy = {
+							type = alliance
+							id = PREV
+							value = 500
+						}
+						add_ai_strategy = {
+							type = befriend
+							id = PREV
+							value = 500
+						}
+					}
 				}
 				event_target:solar_empire = {
 					add_ai_strategy = {
@@ -276,15 +280,19 @@ country_event = { #Solar coup
 					reverse_add_opinion_modifier = { target = PREV modifier = friendly_government }
 					add_opinion_modifier = { target = PREV modifier = friendly_government }
 				}
-				add_ai_strategy = {
-					type = alliance
-					id = event_target:solar_empire
-					value = 500
-				}
-				add_ai_strategy = {
-					type = befriend
-					id = event_target:solar_empire
-					value = 500
+				event_target:solar_empire = {
+					ROOT = {
+						add_ai_strategy = {
+							type = alliance
+							id = PREV
+							value = 500
+						}
+						add_ai_strategy = {
+							type = befriend
+							id = PREV
+							value = 500
+						}
+					}
 				}
 				event_target:solar_empire = {
 					add_ai_strategy = {
