@@ -104,14 +104,14 @@ shared_focus = {
 			limit = { is_faction_leader = yes }
 			hidden_effect = {
 				every_other_country = {
-					limit = { is_in_faction_with = ROOT is_subject = no } 
+					limit = { is_in_faction_with = ROOT is_subject = no }
 					set_country_flag = former_UPA_member #haha ukraine
 				}
 				dismantle_faction = yes
 				create_faction = "United Nations"
 				every_other_country = {
-					limit = { has_country_flag = former_UPA_member } 
-					ROOT = { add_to_faction = PREV } 
+					limit = { has_country_flag = former_UPA_member }
+					ROOT = { add_to_faction = PREV }
 				}
 			}
 		}
@@ -179,7 +179,7 @@ shared_focus = {
 	relative_position_id = EQS_BB_for_princess_and_country
 	icon = GFX_goal_generic_changeling
 	cost = 10
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 		modifier = {
 			factor = 0
@@ -295,7 +295,7 @@ shared_focus = {
 	relative_position_id = EQS_BB_for_princess_and_country
 	icon = GFX_goal_generic_war_with_comintern
 	cost = 10
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 		modifier = {
 			factor = 0
@@ -336,7 +336,7 @@ shared_focus = {
 	relative_position_id = EQS_BB_for_princess_and_country
 	icon = GFX_goal_generic_more_territorial_claims
 	cost = 10
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 		modifier = {
 			factor = 0
@@ -456,7 +456,7 @@ shared_focus = {
 	relative_position_id = EQS_BB_for_princess_and_country
 	icon = GFX_focus_generic_anti_fascist_diplomacy
 	cost = 10
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 		modifier = {
 			factor = 0
@@ -537,7 +537,7 @@ shared_focus = {
 	relative_position_id = EQS_BB_for_princess_and_country
 	icon = GFX_goal_generic_military_sphere
 	cost = 5
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 	}
 	prerequisite = {
@@ -569,7 +569,7 @@ shared_focus = {
 	icon = GFX_focus_generic_home_defense
 	cost = 10
 	dynamic = yes
-	ai_will_do = { 
+	ai_will_do = {
 		factor = 80
 		modifier = {
 			factor = 0
@@ -585,8 +585,8 @@ shared_focus = {
 		event_target:griffonian_empire = {
 			exists = yes
 			is_subject = no
-			NOT = { 
-				has_government = democratic 
+			NOT = {
+				has_government = democratic
 				is_in_faction_with = ROOT
 			}
 			OR = {
@@ -611,7 +611,7 @@ shared_focus = {
 	x = 0
 	y = 5
 	completion_reward = {
-		event_target:griffonian_empire = { 
+		event_target:griffonian_empire = {
 			if = {
 				limit = { has_war = no }
 				effect_tooltip = {
@@ -620,7 +620,7 @@ shared_focus = {
 						modifier = warned_us
 					}
 				}
-				country_event = equestriadem.13 
+				country_event = equestriadem.13
 			}
 			else = {
 				ROOT = {
@@ -653,10 +653,19 @@ shared_focus = {
 	prerequisite = {
 		focus = eqs_bastion_of_harmony
 	}
+	allow_branch = {
+		always = no
+		OR = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+			has_country_leader = { ruling_only = yes name = "Princesses Celestia and Luna" }
+		}
+	}
 	available = {
 		OR = {
 			has_country_leader = { ruling_only = yes name = "Princess Celestia" }
 			has_country_leader = { ruling_only = yes name = "Princess Luna" }
+			has_country_leader = { ruling_only = yes name = "Princesses Celestia and Luna" }
 		}
 		is_subject = no
 	}
@@ -736,7 +745,7 @@ shared_focus = {
 		every_other_country = {
 			limit = {
 				OR = {
-					is_in_faction_with = ROOT 
+					is_in_faction_with = ROOT
 					is_subject_of = ROOT
 				}
 			}
@@ -790,7 +799,7 @@ shared_focus = {
 		}
 		unlock_decision_category_tooltip = EQS_PR_convention_of_nations_dec_cat
 		hidden_effect = { news_event = newseqsdem.12 }
-		add_named_threat = { 
+		add_named_threat = {
 			threat = -10
 			name = EQS_PR_convention_of_nations
 		}
@@ -827,12 +836,12 @@ shared_focus = {
 			}
 			add_ideas = EQS_PR_red_cross_idea
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			set_global_flag = EQS_red_cross_formed
 			news_event = newseqsdem.13
 		}
-		add_named_threat = { 
-			threat = -3 
+		add_named_threat = {
+			threat = -3
 			name = EQS_PR_red_cross
 		}
 	}
@@ -868,11 +877,11 @@ shared_focus = {
 			}
 			add_ideas = EQS_PR_laws_of_war_idea
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			set_global_flag = EQS_PR_laws_of_war_formed
 			news_event = newseqsdem.14
 		}
-		add_named_threat = { 
+		add_named_threat = {
 			threat = -5
 			name = EQS_PR_laws_of_war
 		}
@@ -923,11 +932,11 @@ shared_focus = {
 				add_ideas = EQS_PR_nuke_treaty_idea2
 			}
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			set_global_flag = EQS_PR_nuke_treaty_formed
 			news_event = newseqsdem.15
 		}
-		add_named_threat = { 
+		add_named_threat = {
 			threat = -7
 			name = EQS_PR_nuke_treaty
 		}
@@ -1067,7 +1076,7 @@ shared_focus = {
 					has_idea = EQS_PR_convention_of_nations_member
 					has_idea = EQS_PR_convention_of_nations_leader
 				}
-				NOT = { 
+				NOT = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
 				}
@@ -1075,9 +1084,334 @@ shared_focus = {
 			custom_effect_tooltip = EQS_PR_peace_in_our_time_tt
 			hidden_effect = { ROOT = { give_guarantee = PREV } }
 		}
-		add_named_threat = { 
+		add_named_threat = {
 			threat = -15
 			name = EQS_PR_peace_in_our_time
 		}
 	}
+}
+# PRINCESS END
+
+# GLIMMER
+shared_focus = {
+	id = EQS_SG_harmony_for_everypony
+	icon = GFX_goal_news
+	x = 0
+	y = 1
+	relative_position_id = eqs_bastion_of_harmony
+	cost = 10
+	#allow_branch = {
+		#has_country_leader = { ruling_only = yes name = "Starlight Glimmer" }
+	#}
+	available = {
+		has_country_leader = { ruling_only = yes name = "Starlight Glimmer" }
+		is_subject = no
+	}
+	ai_will_do = {
+	}
+
+	prerequisite = {
+	}
+
+	completion_reward = {
+		add_ideas = EQS_SG_left_harmony
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_trade_unions
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_harmony_for_everypony
+	x = 2
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_harmony_for_everypony
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = EQS_SG_left_harmony2
+			remove_idea = EQS_SG_left_harmony
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_welfare
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_harmony_for_everypony
+	x = -2
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_harmony_for_everypony
+	}
+
+	completion_reward = {
+		add_ideas = EQS_SG_welfare_idea
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_healthcare
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_harmony_for_everypony
+	x = 0
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_harmony_for_everypony
+	}
+
+	completion_reward = {
+		add_ideas = EQS_SG_healthcare_idea
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_reduce_power_of_nobility
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_healthcare
+	x = 1
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_healthcare
+	}
+	prerequisite = {
+		focus = EQS_SG_trade_unions
+	}
+
+	completion_reward = {
+		add_political_power = 100
+		swap_ideas = {
+			add_idea = EQS_SG_left_harmony3
+			remove_idea = EQS_SG_left_harmony2
+		}
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_nationalisation
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_healthcare
+	x = -1
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_healthcare
+	}
+	prerequisite = {
+		focus = EQS_SG_welfare
+	}
+
+	completion_reward = {
+		add_ideas = EQS_SG_nationalisation_idea
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_left_wing_friendship
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_nationalisation
+	x = 1
+	y = 1
+
+	cost = 4
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_nationalisation
+	}
+
+	prerequisite = {
+		focus = EQS_SG_reduce_power_of_nobility
+	}
+
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				has_government = communism
+				NOT = { has_war_with = ROOT }
+				is_bad_commie = no
+			}
+			add_opinion_modifier = { target = ROOT modifier = SG_overtures }
+			add_ai_strategy = {
+				type = befriend
+				id = ROOT
+				value = 30
+			}
+			ROOT = {
+				add_ai_strategy = {
+					type = befriend
+					id = PREV
+					value = 30
+				}
+			}
+		}
+		add_named_threat = {
+			threat = -5
+			name = EQS_SG_left_wing_friendship
+		}
+	}
+
+}
+
+#STG stuff
+
+shared_focus = {
+	id = EQS_SG_left_wing_harmony
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_left_wing_friendship
+	x = 0
+	y = 1
+
+	cost = 7
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_left_wing_friendship
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = EQS_SG_left_harmony4
+			remove_idea = EQS_SG_left_harmony3
+		}
+		every_other_country = {
+			limit = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+				NOT = { has_war_with = ROOT }
+				is_bad_commie = no
+			}
+			add_opinion_modifier = { target = ROOT modifier = investment }
+			reverse_add_opinion_modifier = { target = ROOT modifier = investment }
+		}
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_left_wing_faction
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_left_wing_harmony
+	x = 0
+	y = 1
+
+	cost = 9
+
+	ai_will_do = {
+	}
+
+	prerequisite = {
+		focus = EQS_SG_left_wing_harmony
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = EQS_SG_left_wing_faction_tt
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_left_wing_fight_fascism
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_left_wing_faction
+	x = 1
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+	}
+
+	mutually_exclusive = {
+		focus = EQS_SG_left_wing_fight_extremism
+	}
+
+	prerequisite = {
+		focus = EQS_SG_left_wing_faction
+	}
+
+	completion_reward = {
+	}
+
+}
+
+shared_focus = {
+	id = EQS_SG_left_wing_fight_extremism
+	icon = GFX_goal_news
+
+	relative_position_id = EQS_SG_left_wing_faction
+	x = -1
+	y = 1
+
+	cost = 15
+
+	ai_will_do = {
+	}
+
+	mutually_exclusive = {
+		focus = EQS_SG_left_wing_fight_fascism
+	}
+
+	prerequisite = {
+		focus = EQS_SG_left_wing_faction
+	}
+
+	completion_reward = {
+	}
+
 }

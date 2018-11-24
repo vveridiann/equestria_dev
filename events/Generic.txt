@@ -204,6 +204,35 @@ country_event = {
 		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0.5
+				has_war = no
+				is_major = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < 20
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < -50
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < -100
+				}
+			}
 		}
 		add_to_faction = FROM
 		FROM = { country_event = { id = generic.3 hours = 6 } }
@@ -223,7 +252,7 @@ country_event = {
 
 	option = { #Reject
 		name = generic.2.f
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 1 }
 		FROM = {
 			country_event = { id = generic.4 hours = 6 }
 		}
@@ -567,9 +596,42 @@ country_event = {
 		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0.5
+				has_war = no
+				is_major = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < 20
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < -50
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+				has_opinion = {
+					target = FROM
+					value < -100
+				}
+			}
 		}
 		FROM = {
 			add_to_faction = ROOT
+			if = {
+				limit = { is_in_tech_sharing_group = equestrian_research }
+				ROOT = { add_to_tech_sharing_group = equestrian_research }
+			}
 			country_event = { id = generic.6 hours = 6 }
 		}
 		hidden_effect = {
@@ -584,7 +646,7 @@ country_event = {
 		trigger = {
 			is_in_faction = no
 		}
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 1 }
 		FROM = {
 			country_event = { id = generic.7 hours = 6 }
 		}

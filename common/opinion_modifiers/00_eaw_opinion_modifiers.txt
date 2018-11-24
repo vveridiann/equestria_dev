@@ -367,4 +367,5 @@ opinion_modifiers = {
 	con_bonus = { value = 30 }
 	left_con = { value = -40 months = 36 }
 	sanctioned_us = { value = -40 months = 18 }
+	SG_overtures = { value = 40 }
 }

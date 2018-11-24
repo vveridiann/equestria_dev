@@ -254,6 +254,130 @@ ideas = {
 				guarantee_cost = -0.9
 			}
 		}
+
+		EQS_SG_left_harmony = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				democratic_drift = 0.06
+				communism_drift = 0.02
+			}
+		}
+
+		EQS_SG_left_harmony2 = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				democratic_drift = 0.06
+				communism_drift = 0.03
+			}
+		}
+
+		EQS_SG_welfare_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		EQS_SG_healthcare_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.02
+				monthly_population = 0.12
+				attrition = -0.04
+			}
+		}
+
+		EQS_SG_nationalisation_idea = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.05
+				min_export = -0.05
+				local_resources_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.15
+				conversion_cost_mil_to_civ_factor = -0.15
+			}
+		}
+
+		EQS_SG_left_harmony3 = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				political_advisor_cost_factor = -0.1
+				trade_laws_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.1
+				democratic_drift = 0.06
+				communism_drift = 0.03
+			}
+		}
+
+		EQS_SG_left_harmony3 = {
+			picture = CES_uphold_harmony
+			allowed = { always = no }
+			available = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				political_advisor_cost_factor = -0.1
+				trade_laws_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.1
+				guarantee_tension = -0.25
+				guarantee_cost = -0.25
+				democratic_drift = 0.06
+				communism_drift = 0.03
+			}
+		}
 	}
 
 }

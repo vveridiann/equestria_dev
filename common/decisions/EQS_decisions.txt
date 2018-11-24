@@ -1115,12 +1115,19 @@ EQS_foreign_affairs = {
 		}
 		fire_only_once = yes
 
+		target_trigger = {
+			FROM = { original_tag = CRY }
+		}
+
 		visible = {
-			CRY = { has_civil_war = yes
-				has_global_flag = sombra_returned }
+			FROM = {
+				has_government = democratic
+				has_civil_war = yes
+			}
+			has_global_flag = sombra_returned
 		}
 		cancel_trigger = {
-			CRY = {
+			FROM = {
 				has_civil_war = no
 			}
 		}
@@ -1129,8 +1136,7 @@ EQS_foreign_affairs = {
 			country_event = {
 				id = equestria.53 days = 1
 			}
-			random_other_country = {
-				limit = { original_tag = CRY has_government = democratic}
+			FROM = {
 				add_political_power = 150
 				add_manpower = 50000
 				custom_effect_tooltip = sombra_civil_war_tt
@@ -1161,10 +1167,14 @@ EQS_foreign_affairs = {
 		}
 		fire_only_once = yes
 
-		war_with_on_remove = CRY
+		war_with_target_on_remove = yes
+
+		target_trigger = {
+			FROM = { original_tag = CRY }
+		}
 
 		visible = {
-			any_other_country = {
+			FROM = {
 				original_tag = CRY
 				has_government = fascism
 				has_country_leader = { ruling_only = yes name = "King Sombra" }
@@ -1174,10 +1184,7 @@ EQS_foreign_affairs = {
 			has_global_flag = return_of_sombra
 		}
 		cancel_trigger = {
-			any_other_country = {
-				original_tag = CRY
-				has_government = fascism
-				has_country_leader = { ruling_only = yes name = "King Sombra" }
+			FROM = {
 				has_war_with = ROOT
 			}
 		}
@@ -1248,6 +1255,84 @@ EQS_foreign_affairs = {
 		modifier = {
 			war_support_weekly = 0.025
 			political_power_gain = -0.05
+		}
+	}
+	EQS_SG_invite_to_faction = {
+		icon = scroll
+		visible = {
+			is_faction_leader = yes
+			has_completed_focus = EQS_SG_left_wing_faction
+			has_government = democratic
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				NOT = { is_on_equestrian_continent = yes }
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = FROM
+					value > 100
+				}
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = FROM
+					value < 10
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { original_tag = STG }
+				has_war = no
+				is_subject = no
+				is_in_faction = no
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+				is_bad_commie = no
+			}
+		}
+
+		visible = {
+			FROM = {
+				has_war = no
+				is_subject = no
+				is_in_faction = no
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+				is_bad_commie = no
+			}
+			has_opinion = {
+				target = FROM
+				value > 50
+			}
+		}
+		available = {
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 50
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				country_event = generic.5
+			}
 		}
 	}
 }

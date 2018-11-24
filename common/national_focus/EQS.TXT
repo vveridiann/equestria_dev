@@ -27,7 +27,7 @@ focus_tree = {
 
 	shared_focus = Crystal_Fair
 
-	shared_focus = EQS_PR_old_wisdom_new_age
+	shared_focus = EQS_starlight_focus_1
 }
 
 focus_tree = {

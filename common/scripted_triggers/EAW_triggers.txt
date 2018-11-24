@@ -1067,3 +1067,15 @@ is_available_tac_ROOT = {
 		has_war_with = ROOT
 	}
 }
+
+is_bad_commie = {
+	OR = {
+		has_completed_focus = EQC_total_equality
+		has_country_flag = is_maresoc
+		has_country_leader = { ruling_only = yes name = "Sinister Serov" }
+		has_country_leader = { ruling_only = yes name = "Caramel Haze" }
+		has_country_leader = { ruling_only = yes name = "Gerben Kogchel" }
+		has_country_leader = { ruling_only = yes name = "Herman Rozenkamp" }
+		has_country_leader = { ruling_only = yes name = "Victor Allard" }
+	}
+}
