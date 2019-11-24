@@ -83,4 +83,116 @@ units = {
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0 
 	}
+	division = {
+		name = "Republican Militia"
+		location = 12038
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5 
+	}
+	division = {
+		name = "Republican Militia"
+		location = 12038
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 10063
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 10063
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 6832
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 6832
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 4065
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 4065
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 1192
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 1192
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 6896
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 6896
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 1178
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 1178
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 9891
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
+	division = {
+		name = "Republican Militia"
+		location = 9891
+		division_template = "Republican Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5  
+	}
 }

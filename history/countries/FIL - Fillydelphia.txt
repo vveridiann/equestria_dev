@@ -78,10 +78,10 @@ if = {
 }
 
 set_popularities = {
-	democratic = 79
-	fascism = 1
-	communism = 20
-	neutrality = 0
+	democratic = 47
+	fascism = 0
+	communism = 23
+	neutrality = 30
 }
 set_politics = {
 	ruling_party = democratic
