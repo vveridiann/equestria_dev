@@ -12,8 +12,25 @@ country_event = {
 	option = {
 	    name = fillydelphia.1.a
 		hidden_effect = {
+		    every_state = { 
+				limit = { 
+				    is_core_of = EQS 
+				}
+				add_core_of = FIL
+			}
+			every_state = { 
+				limit = { 
+				    is_core_of = NLR 
+				}
+				add_core_of = FIL
+			}
+			every_state = { 
+				limit = { 
+				    is_core_of = SOL 
+				}
+				add_core_of = FIL
+			}
 			FIL = {
-			    add_state_core = 12
 				transfer_state = 12
 				inherit_technology = EQS
 				load_oob = "FIL_1007"
@@ -108,8 +125,25 @@ country_event = {
 		}
 	    name = fillydelphia.1.b
 		hidden_effect = {
+		    every_state = { 
+				limit = { 
+				    is_core_of = EQS 
+				}
+				add_core_of = FIL
+			}
+			every_state = { 
+				limit = { 
+				    is_core_of = NLR 
+				}
+				add_core_of = FIL
+			}
+			every_state = { 
+				limit = { 
+				    is_core_of = SOL 
+				}
+				add_core_of = FIL
+			}
 			FIL = {
-			    add_state_core = 12
 				transfer_state = 12
 				inherit_technology = EQS
 				load_oob = "FIL_1007"
