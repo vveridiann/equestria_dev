@@ -1,0 +1,200 @@
+add_namespace = fillydelphia
+
+country_event = {
+	id = fillydelphia.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event fillydelphia.1"}
+	title = fillydelphia.1.t
+	desc = fillydelphia.1.d
+	picture = GFX_event_democratic_protest
+
+	is_triggered_only = yes
+
+	option = {
+	    name = fillydelphia.1.a
+		hidden_effect = {
+			FIL = {
+			    add_state_core = 12
+				transfer_state = 12
+				inherit_technology = EQS
+				load_oob = "FIL_1007"
+			    if = {
+				    limit = {
+				        country_exists = EQS 
+                    }
+					add_opinion_modifier = { 
+				        target = EQS 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = EQS 
+					    modifier = enemies 
+				    } 
+				}
+				if = {
+				    limit = {
+				        country_exists = NLR 
+				    }
+					add_opinion_modifier = { 
+				        target = NLR 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = NLR 
+					    modifier = enemies 
+				    } 
+				}
+			    if = {
+				    limit = {
+				        country_exists = SOL 
+					}
+					add_opinion_modifier = { 
+				        target = SOL 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = SOL 
+					    modifier = enemies 
+				    } 
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = EQS 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				EQS = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = NLR 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				NLR = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = SOL 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				SOL = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+		}
+	}
+	
+	option = {
+	    trigger = {
+		    is_ai = no
+		}
+	    name = fillydelphia.1.b
+		hidden_effect = {
+			FIL = {
+			    add_state_core = 12
+				transfer_state = 12
+				inherit_technology = EQS
+				load_oob = "FIL_1007"
+			    if = {
+				    limit = {
+				        country_exists = EQS 
+                    }
+					add_opinion_modifier = { 
+				        target = EQS 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = EQS 
+					    modifier = enemies 
+				    } 
+				}
+				if = {
+				    limit = {
+				        country_exists = NLR 
+				    }
+					add_opinion_modifier = { 
+				        target = NLR 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = NLR 
+					    modifier = enemies 
+				    } 
+				}
+			    if = {
+				    limit = {
+				        country_exists = SOL 
+					}
+					add_opinion_modifier = { 
+				        target = SOL 
+					    modifier = enemies 
+				    } 
+				    reverse_add_opinion_modifier = { 
+				        target = SOL 
+					    modifier = enemies 
+				    } 
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = EQS 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				EQS = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = NLR 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				NLR = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+			if = {
+			    limit = {
+				    country_exists = SOL 
+					NOT = { 
+					    has_war_with = FIL 
+				    } 
+				}
+				SOL = {
+				    declare_war_on = {
+					    target = FIL 
+						type = annex_everything
+				    }
+				}
+			}
+		}
+	}
+}

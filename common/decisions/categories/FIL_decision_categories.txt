@@ -1,0 +1,10 @@
+FIL_rise_up_category = {
+	icon = generic_crisis
+	allowed = {
+	    OR = {
+		    original_tag = NLR
+			original_tag = EQS
+			original_tag = SOL
+		}
+	}
+}

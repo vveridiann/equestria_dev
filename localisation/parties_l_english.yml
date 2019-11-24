@@ -551,3 +551,12 @@
  BAN_democratic_party:0 "HMP"
  BAN_democratic_party_long:0 "Harmonic Mountain Party"
  BAN_fascism_party:0 "Blackrock Bandits"
+ 
+ FIL_neutrality_party:0 "ERF - R"
+ FIL_neutrality_party_long:0 "Equestrian Republican Federation - Right"
+ FIL_communism_party:0  "ERF - L"
+ FIL_communism_party_long:0 "Equestrian Republican Federation - Left"
+ FIL_democratic_party:0 "ERF"
+ FIL_democratic_party_long:0 "Equestrian Republican Federation"
+ FIL_fascism_party:0 "Lunar Loyalists"
+ FIL_fascism_party_long:0 "Her Majesty Nightmare Moon's Most Loyal Resistance"
