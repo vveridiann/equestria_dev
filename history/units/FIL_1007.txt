@@ -1,0 +1,86 @@
+division_template = {
+	name = "Republican Guard"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Republican Militia"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Thestral Revolutionary Division"
+	regiments = {
+		pegasi = { x = 0 y = 0 }
+		pegasi = { x = 0 y = 1 }
+		pegasi = { x = 0 y = 2 }
+		pegasi = { x = 1 y = 0 }
+		pegasi = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Republican Armour"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Republican Guard Divsion"
+		location = 950
+		division_template = "Republican Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "2nd Republican Guard Divsion"
+		location = 950
+		division_template = "Republican Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "3rd Republican Guard Divsion"
+		location = 950
+		division_template = "Republican Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "Batton's Own"
+		location = 950
+		division_template = "Thestral Revolutionary Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "1st Republican Armour Division"
+		location = 950
+		division_template = "Republican Armour"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+	}
+}

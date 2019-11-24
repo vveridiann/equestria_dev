@@ -419,3 +419,7 @@ LSM = {
 	color = rgb { 160 160 160 }
 	color_ui = rgb { 160 160 160 }
 }
+FIL = {
+	color = rgb { 120 175 160 }
+	color_ui = rgb { 120 175 160 }
+}
