@@ -1,5 +1,25 @@
 ﻿l_english:
 ### Ideas ###
+FIL_disorganized_military_1:0 "§YState Of The Army§! - §RDisorganised§!"
+FIL_disorganized_military_1_desc:0 ""
+FIL_disorganized_military_2:0 "§YState Of The Army§! - §MBattle-Ready§!"
+FIL_disorganized_military_2_desc:0 ""
+FIL_disorganized_military_3:0 "§YState Of The Army§! - §GProfessional§!"
+FIL_disorganized_military_3_desc:0 ""
+
+FIL_popular_support_1:0 "§YPopular Support§! - §RMinimal§!"
+FIL_popular_support_1_desc:0 ""
+FIL_popular_support_2:0 "§YPopular Support§! - §MRising§!"
+FIL_popular_support_2_desc:0 ""
+FIL_popular_support_3:0 "§YPopular Support§! - §GOverwhelming§!"
+FIL_popular_support_3_desc:0 ""
+
+FIL_participation_1:0 "§YPublic Opinion§! - §RCold§!"
+FIL_participation_1_desc:0 ""
+FIL_participation_2:0 "§YPublic Opinion§! - §MAmbivalent§!"
+FIL_participation_2_desc:0 ""
+FIL_participation_3:0 "§YPublic Opinion§! - §GBeloved§!"
+FIL_participation_3_desc:0 ""
 
 ### National Focuses ###
 
@@ -24,3 +44,12 @@ FIL_republican_revolution_desc:0 ""
 ### Cosmetic Tags ###
 
 ### Party Names ###
+
+### Traits ###
+FIL_regular_unit_1:0 "At this §Mlevel§! of §YPopular Support§! we shall receive the §Gstandard§! amount of §Yponypower§! from the §MRecruit Volunteers§! §Ydecisions§!\n\n"
+FIL_regular_unit_2:0 "At this §Mlevel§! of §YPopular Support§! we shall receive §Gtwo§! times as many §Yponypower§! from the §MRecruit Volunteers§! §Ydecisions§!\n\n"
+FIL_regular_unit_3:0 "At this §Mlevel§! of §YPopular Support§! we shall receive §Gthree§! times as many §Yponypower§! from the §MRecruit Volunteers§! §Ydecisions§!\n\n"
+
+FIL_regular_guns_1:0 "At this §Mlevel§! of §YPublic Opinion§! we shall receive the §Gstandard§! amount of §Yequipment§! from the §MGather Supplies§! §Ydecisions§!\n\n"
+FIL_regular_guns_2:0 "At this §Mlevel§! of §YPublic Opinion§! we shall receive the §Gtwo§! times as much §Yequipment§! from the §MGather Supplies§! §Ydecisions§!\n\n"
+FIL_regular_guns_3:0 "At this §Mlevel§! of §YPublic Opinion§! we shall receive the §Gthree§! times as much §Yequipment§! from the §MGather Supplies§! §Ydecisions§!\n\n"

@@ -92,6 +92,11 @@ set_politics = {
 
 
 add_ideas = {
+    proper_science_base
+	modern_society
+    FIL_disorganized_military_1
+	FIL_popular_support_1
+	FIL_participation_1
 }
 
 

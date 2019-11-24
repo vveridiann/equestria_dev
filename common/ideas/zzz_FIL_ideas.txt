@@ -1,0 +1,154 @@
+ideas = {
+    country = {
+		FIL_disorganized_military_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_army_corruption
+			removal_cost = -1
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_disorganized_military_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_army_corruption2
+			removal_cost = -1
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_disorganized_military_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_army_corruption3
+			removal_cost = -1
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_popular_support_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_unit_1
+			}
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_popular_support_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance2
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_unit_2
+			}
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_popular_support_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance3
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_unit_3
+			}
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_participation_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_warlord_integration3
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_guns_1
+			}
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_participation_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_warlord_integration4
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_guns_2
+			}
+			modifier = {
+			}
+		}
+	}
+	
+	country = {
+		FIL_participation_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_warlord_integration5
+			removal_cost = -1
+			traits = { 
+			    FIL_regular_guns_3
+			}
+			modifier = {
+			}
+		}
+	}
+}

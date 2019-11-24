@@ -5381,4 +5381,22 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	FIL_regular_unit_1  = {
+		random = no		
+	}
+	FIL_regular_unit_2  = {
+		random = no		
+	}
+	FIL_regular_unit_3  = {
+		random = no		
+	}
+	FIL_regular_guns_1  = {
+		random = no		
+	}
+	FIL_regular_guns_2  = {
+		random = no		
+	}
+	FIL_regular_guns_3  = {
+		random = no		
+	}
 }
