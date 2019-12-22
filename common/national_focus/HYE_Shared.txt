@@ -1,0 +1,182 @@
+###Hyenia, by Sweet Chrysalis & Knifepony###
+#Startup, first focuses#
+shared_focus = {
+	id = HYE_startup
+	icon = GFX_goal_revolution
+	x = 10
+	y = 0
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		add_political_power = 10 #Placeholder
+	}
+}
+shared_focus = {
+	id = HYE_rally_the_clans
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_startup
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_rally_the_clans"
+		add_manpower = 10000 
+	}
+}
+shared_focus = {
+	id = HYE_sneaky_plan
+	icon = GFX_goal_revolution
+	x = -4
+	y = 2
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_startup
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_force_plan
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_saboteurs
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_sneaky_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_infiltrators
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_sneaky_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_force_plan
+	icon = GFX_goal_revolution
+	x = 4
+	y = 2
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_startup
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_sneaky_plan
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_scavenge_equipment
+	icon = GFX_goal_revolution
+	x = 0
+	y = 2
+	relative_position_id = HYE_rally_the_clans
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_rally_the_clans
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_scavenge_equipment"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_fervor
+	icon = GFX_goal_revolution
+	x = 
+	y = 1
+	relative_position_id = HYE_scavenge_equipment
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_scavenge_equipment
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_fervor"
+		add_political_power = 10 #placeholder
+	}
+}
