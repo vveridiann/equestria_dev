@@ -1,5 +1,4 @@
-name="Equestria at War [Dev]"
-path="mod/equestria_dev/"
+version="1.8.*"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -33,6 +32,6 @@ tags={
 	"Events"
 	"Map"
 }
-picture="equestria.jpg"
-remote_file_id="1826643372"
-supported_version="1.8.*"
+name="Equestria at War Dev"
+path="C:/Users/andyw/Documents/Paradox Interactive/Hearts of Iron IV/mod/equestria_dev"
+supported_version="1.8.1"
