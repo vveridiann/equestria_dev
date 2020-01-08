@@ -1,9 +1,31 @@
 ###Hyenia, by Sweet Chrysalis & Knifepony###
 #Startup, first focuses#
+#shared_focus = {
+#	id = HYE_
+#	icon = GFX_goal_revolution
+#	x = 0
+#	y = 1
+#	relative_position_id = HYE_
+#	cost = 1
+#	available = {
+#	}
+#	prerequisite = {
+#		focus = HYE_
+#	}
+#	bypass = {
+#	}
+#	ai_will_do = {
+#		factor = 10
+#	}
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus HYE_"
+#		add_political_power = 10 #placeholder
+#	}
+#}
 shared_focus = {
 	id = HYE_startup
-	icon = GFX_goal_revolution
-	x = 10
+	icon = GFX_goal_bombs_away
+	x = 9
 	y = 0
 	cost = 1
 	available = {
@@ -17,12 +39,110 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
-		add_political_power = 10 #Placeholder
+		country_event = { id = hyenia.1 }
+	}
+}
+
+shared_focus = { #Take them by stealth!
+	id = HYE_sneaky_plan
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = -3
+	y = 2
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+		has_country_flag = masaska_sneaky_plan
+	}
+	prerequisite = {
+		focus = HYE_startup
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_sneaky_plan_plan"
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = HYE_saboteurs
+	icon = GFX_focus_indy_swing_the_sword
+	x = 1
+	y = 1
+	relative_position_id = HYE_sneaky_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
+		set_country_flag = HYE_saboteurs_ready #I'm thinking that this should be a national spirit affecting SCT that can be activated via decision.
+		custom_effect_tooltip = HYE_saboteurs_tt
+	}
+}
+shared_focus = {
+	id = HYE_infiltrators
+	icon = GFX_goal_skull_cannon
+	x = -1
+	y = 1
+	relative_position_id = HYE_sneaky_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
+		set_country_flag = HYE_infiltrators
+		custom_effect_tooltip = HYE_infiltrators_tt
+	}
+}
+shared_focus = {
+	id = HYE_finalize_sneaky
+	icon = GFX_focus_generic_air_defense2
+	x = 1
+	y = 1
+	relative_position_id = HYE_infiltrators
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_infiltrators
+	}
+	prerequisite = {
+		focus = HYE_saboteurs
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_finalize_sneaky"
+		add_ideas = { HYE_movespeed } 
 	}
 }
 shared_focus = {
 	id = HYE_rally_the_clans
-	icon = GFX_goal_revolution
+	icon = GFX_goal_national_arsenal
 	x = 0
 	y = 1
 	relative_position_id = HYE_startup
@@ -42,103 +162,10 @@ shared_focus = {
 		add_manpower = 10000 
 	}
 }
-shared_focus = {
-	id = HYE_sneaky_plan
-	icon = GFX_goal_revolution
-	x = -4
-	y = 2
-	relative_position_id = HYE_startup
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_startup
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_force_plan
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
-		add_political_power = 10 #placeholder
-	}
-}
-shared_focus = {
-	id = HYE_saboteurs
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_sneaky_plan
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_sneaky_plan
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 9999
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
-		add_political_power = 10 #placeholder
-	}
-}
-shared_focus = {
-	id = HYE_infiltrators
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_sneaky_plan
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_sneaky_plan
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 9999
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
-		add_political_power = 10 #placeholder
-	}
-}
-shared_focus = {
-	id = HYE_force_plan
-	icon = GFX_goal_revolution
-	x = 4
-	y = 2
-	relative_position_id = HYE_startup
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_startup
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_sneaky_plan
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
-		add_political_power = 10 #placeholder
-	}
-}
+
 shared_focus = {
 	id = HYE_scavenge_equipment
-	icon = GFX_goal_revolution
+	icon = GFX_HOL_papua_camps
 	x = 0
 	y = 2
 	relative_position_id = HYE_rally_the_clans
@@ -155,13 +182,28 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_scavenge_equipment"
-		add_political_power = 10 #placeholder
+		add_equipment_to_stockpile = {
+			type = melee_equipment_1
+			amount = 1500
+			producer = HYE
+		}
+		add_equipment_to_stockpile = {
+			type = melee_equipment_1
+			amount = 1000
+			producer = SCT
+		}
+		add_equipment_to_stockpile = {
+			type = melee_equipment_1
+			amount = 500
+			producer = CST
+		}
 	}
 }
+
 shared_focus = {
 	id = HYE_fervor
-	icon = GFX_goal_revolution
-	x = 
+	icon = GFX_goal_generic_position_armies
+	x = 0
 	y = 1
 	relative_position_id = HYE_scavenge_equipment
 	cost = 1
@@ -177,6 +219,135 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_fervor"
-		add_political_power = 10 #placeholder
+		add_ideas = {HYE_command} 
 	}
 }
+
+shared_focus = { #Take them by Force!
+	id = HYE_force_plan
+	icon = GFX_goal_generic_major_war
+	x = 3
+	y = 2
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+		has_country_flag = furasho_force_plan
+	}
+	prerequisite = {
+		focus = HYE_startup
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
+		add_war_support = 0.05
+	}
+}
+
+shared_focus = {
+	id = HYE_manpower
+	icon = GFX_goal_forced_con
+	x = -1
+	y = 1
+	relative_position_id = HYE_force_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_force_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_manpower"
+		add_manpower = 10000 
+	}
+}
+shared_focus = {
+	id = HYE_property_industry
+	icon = GFX_goal_construction_engineering
+	x = 1
+	y = 1
+	relative_position_id = HYE_force_plan
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_force_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_property_industry"
+		one_random_arms_factory = yes
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_finalize_force
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	relative_position_id = HYE_manpower
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_manpower
+	}
+	prerequisite = {
+		focus = HYE_property_industry
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_finalize_force"
+		add_ideas = {HYE_attack} 
+	}
+}
+
+shared_focus = {
+	id = HYE_end_the_yeti
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_fervor
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_fervor
+	}
+	prerequisite = {
+		focus = HYE_finalize_force
+		focus =  HYE_finalize_sneaky
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_the_yeti"
+		add_timed_idea = { idea = HYE_yetided days = 150 }
+		will_lead_to_war_with = SCT
+		declare_war_on = { target = SCT type = annex_everything }
+	}
+}
+ 
+

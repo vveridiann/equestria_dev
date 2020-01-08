@@ -17,6 +17,9 @@ state={
 			19482 5
 		}
 	}
+	resources={
+		steel=3
+	}	
 	manpower=1154260
 	buildings_max_level_factor=1.000
 }
