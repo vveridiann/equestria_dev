@@ -48,5 +48,18 @@ ideas = {
 				attack_bonus_against = 0.15
 			}
 		}
+		HYE_sabotaged_SCT = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			targeted_modifier = {
+				tag = HYE
+				defense_bonus_against = -0.1
+			}
+			modifier = {
+				army_speed_factor = -0.03
+			}
+		}
 	}
 }

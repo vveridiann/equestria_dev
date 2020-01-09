@@ -14,7 +14,7 @@ country_event = { #War council, triggered via event on focus tree.
 			factor = 50
 		}
 		hidden_effect = {
-			country_event = { hyenia.2 days = 30 random = 5}
+			country_event = { id = hyenia.2 days = 30 random = 5}
 		}		
 	}
 	option = {
@@ -24,12 +24,12 @@ country_event = { #War council, triggered via event on focus tree.
 			factor = 50
 		}
 		hidden_effect = {
-			country_event = { hyenia.2 days = 30 random = 5}
+			country_event = { id = hyenia.2 days = 30 random = 5}
 		}
 	}
 }
 
-country_event = {
+country_event = { #Flavor, foreshadows Fahamka's death
 	id = hyenia.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
 	title = hyenia.2.t
@@ -38,5 +38,23 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = hyenia.2.a
+	}
+}
+
+country_event = { #Hyenias Sabotage Thundarians/SCT
+	id = hyenia.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
+	title = hyenia.3.t
+	desc = hyenia.3.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = hyenia.3.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = HYE_sabotaged_SCT
+				days = 150
+			}
+		}
 	}
 }

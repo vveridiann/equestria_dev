@@ -28,6 +28,14 @@ HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
 HYE_end_the_yeti:0 "The Final Push"
 HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
 
+##Decisions##
+HYE_sneaky_plan_decisions:0 "Against the Thundarians"
+HYE_sneaky_plan_decisions_desc:0 "Not exactly the most honorable way to win a war, is it?" #placeholder
+infiltrate_SCT:0 "Give The Signal To The Infiltrators"
+infiltrate_SCT_desc:0 "Stuff" #placeholder
+sabotage_SCT:0 "Sabotage the [SCT.GetAdjective]'s efforts"
+infiltrate_SCT_desc:0 "More stuff" #placeholder
+
 ##Ideas##
 HYE_movespeed:0 "Like The Wind"
 HYE_movespeed_desc:0 "We move fast and look at the enemy fast." #placeholder
@@ -37,6 +45,8 @@ HYE_attack:0 "Unrelenting Push"
 HYE_attack_desc:0 "URAAAAAAAAAAAAAAAAAAAAAA" #placeholder
 HYE_yetided:0 "The Last Offensive"
 HYE_yetided_desc:0 "Hyenian Artillery is led by God. Wait what is Artillery again?" #placeholder
+HYE_sabotaged_SCT:0 "Hyenian Saboteurs"
+HYE_sabotaged_SCT_desc:0 "Sabotage! Oh no!" #placeholder
 
 ##Advisors##
 
@@ -50,6 +60,10 @@ hyenia.1.b:0 "Furasho's Force Plan"
 hyenia.2.t:0 "Time is Inexorable and Pitiless"
 hyenia.2.d:0 "" 
 hyenia.2.a:0 ""
+
+hyenia.3.t:0 "Dervishes Sabotage Us!"
+hyenia.3.d:0 ""
+hyenia.3.a:0 "Oh no!"
 
 ##Equipment##
 

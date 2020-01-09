@@ -1,0 +1,23 @@
+﻿division_template = {
+	name = "Stealth Hounds"		
+	#division_names_group =  #not yet set up!
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = { 
+		location = 16768
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		location = 16815
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+}

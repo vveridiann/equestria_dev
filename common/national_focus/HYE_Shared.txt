@@ -47,7 +47,7 @@ shared_focus = { #Take them by stealth!
 	id = HYE_sneaky_plan
 	icon = GFX_focus_generic_provoke_border_clashes
 	x = -3
-	y = 2
+	y = 1
 	relative_position_id = HYE_startup
 	cost = 1
 	available = {
@@ -88,7 +88,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
-		set_country_flag = HYE_saboteurs_ready #I'm thinking that this should be a national spirit affecting SCT that can be activated via decision.
 		custom_effect_tooltip = HYE_saboteurs_tt
 	}
 }
@@ -111,7 +110,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
-		set_country_flag = HYE_infiltrators
 		custom_effect_tooltip = HYE_infiltrators_tt
 	}
 }
@@ -159,7 +157,13 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_rally_the_clans"
-		add_manpower = 10000 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_manpower = 2000
+		add_war_support = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -167,7 +171,7 @@ shared_focus = {
 	id = HYE_scavenge_equipment
 	icon = GFX_HOL_papua_camps
 	x = 0
-	y = 2
+	y = 1
 	relative_position_id = HYE_rally_the_clans
 	cost = 1
 	available = {
@@ -227,7 +231,7 @@ shared_focus = { #Take them by Force!
 	id = HYE_force_plan
 	icon = GFX_goal_generic_major_war
 	x = 3
-	y = 2
+	y = 1
 	relative_position_id = HYE_startup
 	cost = 1
 	available = {
@@ -252,7 +256,7 @@ shared_focus = { #Take them by Force!
 
 shared_focus = {
 	id = HYE_manpower
-	icon = GFX_goal_forced_con
+	icon = GFX_goal_generic_military_sphere
 	x = -1
 	y = 1
 	relative_position_id = HYE_force_plan
