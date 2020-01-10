@@ -1,31 +1,31 @@
 ﻿l_english:
 
 ##Focuses##
-HYE_startup:0 "The War Council"
+HYE_startup:0 "The Last Fight Approaches"
 HYE_startup_desc:0 "WAAAR" #placeholder
-HYE_rally_the_clans:0 "Rally The Clans"
+HYE_rally_the_clans:0 "Rise, Oh Hyenas..."
 HYE_rally_the_clans_desc:0 "Good bois eat dog bone yes" #placeholder
-HYE_scavenge_equipment:0 "Scavenge Equipment"
+HYE_scavenge_equipment:0 "...Be it with Guns or Swords..."
 HYE_scavenge_equipment_desc:0 "Take gun yes good" #placeholder
-HYE_fervor:0 "Fervor Against The Storm"
+HYE_fervor:0 "...For Zeal is our Greatest Weapon."
 HYE_fervor_desc:0 "Remove Yeti" #placeholder
-HYE_force_plan:0 "Furasho's Force"
+HYE_force_plan:0 "Breaking the Storm"
 HYE_force_plan_desc:0 "grug smash" #placeholder
-HYE_manpower:0 "Conscript From The Clans"
+HYE_manpower:0 "One People at War"
 HYE_manpower_desc:0 "Manpower good yes" #placeholder
-HYE_property_industry:0 "Appropriate Vacant Properties"
+HYE_property_industry:0 "Using All we Have"
 HYE_property_industry_desc:0 "Storm King Smash so much stuff we have some empty places. Let's use those." #placeholder
-HYE_finalize_force:0 "To Arms!"
+HYE_finalize_force:0 "Together, like an Avalanche"
 HYE_finalize_force_desc:0 "Smash The Yetis!" #placeholder
-HYE_sneaky_plan:0 "Masaka's Stealth"
+HYE_sneaky_plan:0 "Staying in the Shadows"
 HYE_sneaky_plan_desc:0 "grug hide" #placeholder
-HYE_infiltrators:0 "Infiltrators"
+HYE_infiltrators:0 "A Blade in Their Backs"
 HYE_infiltrators_desc:0 "We hide" #placeholder
-HYE_saboteurs:0 "Saboteurs"
+HYE_saboteurs:0 "Cut their Tendons"
 HYE_saboteurs_desc:0 "We decieve" #placeholder
 HYE_finalize_sneaky:0 "Coup De Grace"
 HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
-HYE_end_the_yeti:0 "The Final Push"
+HYE_end_the_yeti:0 "On the Eve of Battle"
 HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
 
 ##Decisions##
