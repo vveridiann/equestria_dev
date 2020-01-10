@@ -18,21 +18,21 @@ units = {
 		location = 19482
 		division_template = "Warhounds"
 		start_equipment_factor = 0.8
-		start_experience_factor = 0.1
+		start_experience_factor = 0.2
 	}
 	division = {
 		name = "Heralds of Sand"
 		location = 19379
 		division_template = "Warhounds"
 		start_equipment_factor = 0.8
-		start_experience_factor = 0.1
+		start_experience_factor = 0.2
 	}
 	division = {
 		name = "Yellow Arrows"
 		location = 19569
 		division_template = "Warhounds"
 		start_equipment_factor = 0.8
-		start_experience_factor = 0.1
+		start_experience_factor = 0.2
 	}
 }
 

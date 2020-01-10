@@ -273,7 +273,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_manpower"
-		add_manpower = 10000 
+		add_manpower = 5000
+		load_oob = HYE_levies
 	}
 }
 shared_focus = {
@@ -351,6 +352,12 @@ shared_focus = {
 		add_timed_idea = { idea = HYE_yetided days = 150 }
 		will_lead_to_war_with = SCT
 		declare_war_on = { target = SCT type = annex_everything }
+		hidden_effect = {
+			create_wargoal = {
+				type =  annex_everything
+				target = SCT
+			}
+		}
 	}
 }
  

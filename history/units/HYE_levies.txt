@@ -1,0 +1,47 @@
+﻿division_template = {
+	name = "Levied Hounds"		
+	#division_names_group =  #not yet set up!
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = { 
+		name = "Heavy Hounds"
+		location = 19518
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Light Hounds"
+		location = 19562
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Medium Hounds"
+		location = 19432
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}	
+	division = {
+		name = "Drake Hounds" #help
+		location = 19379
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6		
+	}
+	division = {
+		name = "Josh Hounds" #help I can't do creative names
+		location = 19482
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6		
+	}
+}

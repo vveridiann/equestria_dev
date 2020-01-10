@@ -1,5 +1,5 @@
 HYE_sneaky_plan_decisions = {
-	icon = form_griffon_empire
+	icon = generic_decision
 
 	allowed = {
 		original_tag = HYE
@@ -12,3 +12,18 @@ HYE_sneaky_plan_decisions = {
 	}
 	
 }
+
+HYE_thunder_war_decisions = {
+	icon = crossed_swords
+	
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 110
+	}
+	visible = {
+		has_completed_focus = HYE_end_the_yeti
+	}
+}
+	
