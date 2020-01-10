@@ -62,17 +62,17 @@ HYE_sabotaged_SCT_desc:0 "Sabotage! Oh no!" #placeholder
 ##Events##
 
 hyenia.1.t:0 "The War To Come"
-hyenia.1.d:0 ""
-hyenia.1.a:0 "Masaka's Sneaky Plan"
-hyenia.1.b:0 "Furasho's Force Plan"
+hyenia.1.d:0 "The Storm King lies dead in the north and Yeti authority has collapsed. The Dervishes, last and most driven in the battle to liberate the Hyenian homelands, have seized upon this opportunity and are readying themselves for the greatest offensive they ever have committed. The inner circle of Fahamka’s trusted advisors and generals has convened to debate how to carry this out. Until now, the Dervishes focused on guerilla warfare and subterfuge, making the most of their limited resources. Now, with the end of the war in sight, their ranks swell by the thousands, and they may well be able to break the Yetis in open battle.\n\n"The subterfuge we have employed until this moment has served us well," silent Masaska said calmly."However numerous we are, the challenge before us is monumental. We must play to our strengths instead of being seduced by fantasies of grand battles." \n\n"And so we shall!" Furasho, warmaster and son of warmasters, boomed. "Yet beyond the war lies peace, and in that peace we will be the sole uniting force in Hyenia. Shall we cast aside this unity, so hard won in blood? No, we must not, and our unity was built on the battlefield. Hyenia must be baptized in fire, as we were."\n\n"There will be time to build unity without the death of countless." Masaska retorted. "The hyenas you speak of are not dervishes, and their lives are not for us to throw away in order to trick them into obedience."\n\n"Yet Dervishes they must become! Ours is the new order of the land, and we must seize it to recast this nation so that we can stand firmly at its helm."\n\n"That sounds like the words of a would-be king," Masaska remarked sweetly, leaving Furasho to growl and Fahamka to rise from her seat.\n\n"Enough,” she said, both falling silent at the first syllable. “I have heard enough...""
+hyenia.1.a:0 ""Masaska is right, we are warriors of shadow, not pretender kings.""
+hyenia.1.b:0 ""Furasho is right, let our unconvinced kin see the truth in battle.""
 
 hyenia.2.t:0 "Time is Inexorable and Pitiless"
-hyenia.2.d:0 "" 
-hyenia.2.a:0 ""
+hyenia.2.d:0 "As the Dervishes stand at the brink of their greatest trial, another, more insidious, enemy has advanced upon them: time.\n\nEven before the Storm King's invasion, Fahamka - the Great Teacher - lived a hard life. First she was an exile deep in the deserts before she found enlightenment. Then she was the wandering teacher of a marginalized and ridiculed philosophy. In a way, the trials of war are merely the peak of the trials and tribulations she has known for decades at this point.\n\nMore and more however, she has been feeling her strength slipping away from her. Pure determination - some might even call it spite - has kept her going for years at this point, but no dog is eternal. Fahamka has been forced to retreat more and more from the duties of leadership. Ever the stoic, she has refused to let this show, but Furasho and Masaska both know their teacher too well to avoid it, and both are starting to worry." 
+hyenia.2.a:0 "Soon she will no longer be with us..."
 
-hyenia.3.t:0 "Dervishes Sabotage Us!"
-hyenia.3.d:0 ""
-hyenia.3.a:0 "Oh no!"
+hyenia.3.t:0 "Dervish Sabotage!"
+hyenia.3.d:0 "The Hyenian resistance has struck again. Their "dervishes" have snuck past the borders and struck across the nation, causing widespread damage and chaos. Little seems sacred to these desert savages, and the damage they have caused will take a lot of time to restore."
+hyenia.3.a:0 "Damn them all!"
 
 hyenia.4.t:0 "" #Angry Hyenias Demand Land
 hyenia.4.d:0 ""
