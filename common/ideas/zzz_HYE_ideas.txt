@@ -67,7 +67,7 @@ ideas = {
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }	
 			modifier = { 
-				political_power_gain = 0.25
+				political_power_gain = 0.1
 				war_support_factor = 0.1
 				conscription_factor = 0.15
 			}
@@ -103,9 +103,9 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				heat_attrition_factor = -0.5
-				attrition = -0.2
-				acclimatization_hot_climate_gain_factor = 0.2
+				heat_attrition_factor = -0.2
+				attrition = -0.05
+				acclimatization_hot_climate_gain_factor = 0.1
 				out_of_supply_factor = -0.1
 				no_supply_grace = 36
 			}

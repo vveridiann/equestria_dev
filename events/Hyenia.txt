@@ -43,7 +43,7 @@ country_event = { #Flavor, foreshadows Fahamka's death
 
 country_event = { #Hyenias Sabotage Thundarians/SCT
 	id = hyenia.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.3"}
 	title = hyenia.3.t
 	desc = hyenia.3.d
 	#picture = 
@@ -56,5 +56,165 @@ country_event = { #Hyenias Sabotage Thundarians/SCT
 				days = 150
 			}
 		}
+	}
+}
+country_event = { #Peace with Angry Hyenas?
+	id = hyenia.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.4"}
+	title = hyenia.4.t
+	desc = hyenia.4.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = hyenia.4.a
+		ai_chance = {
+			factor = 100
+		}
+		effect_tooltip = {
+			HYE = {
+				transfer_state = 1036 #Thunderbowl
+				transfer_state = 1052 #Gajar
+				transfer_state = 1050 #Thunder Bay
+			}
+		}
+		set_capital = 1030 #rainguard	
+		hidden_effect = { HYE = { country_event = { id = hyenia.5 days = 1 } } }
+	}
+	option = {
+		name = hyenia.4.b
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.05
+		add_political_power = -50
+		hidden_effect = { HYE = { country_event = { id = hyenia.6 days = 1 } } }
+	}
+}
+
+country_event = { #Reclamation of our lands!
+	id = hyenia.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.5"}
+	title = hyenia.5.t
+	desc = hyenia.5.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Yay, land!
+		name = hyenia.5.a
+		HYE = {
+			transfer_state = 1036 #Thunderbowl
+			transfer_state = 1052 #Gajar
+			transfer_state = 1050 #Thunder Bay
+		}
+		1036 = { set_state_name = "Buur Dhurwaa" }
+		set_province_name = {
+			id = 15255
+			name = "Qalbi Weyn"
+		}
+		every_other_country = { #SCT/CST/CAM/STM
+			limit = { 
+				has_war_with = ROOT 
+				NOT = { 
+					has_wargoal_against = ROOT
+					has_offensive_war_with = ROOT
+				}
+			}
+			set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+			white_peace = ROOT
+		}
+		set_capital = 1036
+	}
+}
+
+country_event = { #They Have Chosen to Fight on!
+	id = hyenia.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.6"}
+	title = hyenia.6.t
+	desc = hyenia.6.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Then Fight on we Shall!
+		name = hyenia.6.a
+		add_war_support = 0.1
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+country_event = { #Hyenas demand the return of their ancestral lands!
+	id = hyenia.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.7"}
+	title = hyenia.7.t
+	desc = hyenia.7.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Alright, Alright, we'll hand it over.
+		name = hyenia.7.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = HYE
+					ratio = 0.5
+				}
+			}
+		}
+		HYE = {
+			transfer_state = 1036
+			if = {
+				limit = {
+					ROOT = { owns_state = 1052 }
+				}
+				transfer_state = 1052
+			}
+			if = {
+				limit = {
+					ROOT = { owns_state = 1050 }
+				}
+				transfer_state = 1050
+			}
+		}
+		add_political_power = -50
+	}
+	option = { #Nope
+		name = hyenia.7.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = HYE
+					ratio = 2
+				}
+			}
+		}
+		country_event = { id = hyenia.8 days = 1 }
+		add_political_power = -100
+		save_global_event_target_as = thunderbowl_owner
+		effect_tooltip = {
+			HYE = { 
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+country_event = { #They will not return our lands.
+	id = hyenia.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.8"}
+	title = hyenia.8.t
+	desc = hyenia.8.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #war it is
+		name = hyenia.8.a
+		HYE = { 
+			declare_war_on = {
+				target = event_target:thunderbowl_owner
+				type = annex_everything
+			}
+		}	
 	}
 }

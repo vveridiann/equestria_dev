@@ -273,7 +273,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_manpower"
-		add_manpower = 10000 
+		add_manpower = 5000
+		load_oob = HYE_levies
 	}
 }
 shared_focus = {

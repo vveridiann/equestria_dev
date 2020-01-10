@@ -12,21 +12,28 @@ units = {
 		name = "Black Hounds"
 		location = 16768
 		division_template = "Stealth Hounds"
-		start_experience_factor = 0.4
+		start_experience_factor = 0.7
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "White Winds"
 		location = 16815
 		division_template = "Stealth Hounds"
-		start_experience_factor = 0.4
+		start_experience_factor = 0.7
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "Brown Mound"
 		location = 15332
 		division_template = "Stealth Hounds"
-		start_experience_factor = 0.4
+		start_experience_factor = 0.7
 		start_equipment_factor = 0.6
 	}	
+	division = {
+		name = "Brown Mound"
+		location = 7409
+		division_template = "Stealth Hounds"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.6
+	}		
 }
