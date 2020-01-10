@@ -74,6 +74,28 @@ hyenia.3.t:0 "Dervishes Sabotage Us!"
 hyenia.3.d:0 ""
 hyenia.3.a:0 "Oh no!"
 
+hyenia.4.t:0 "" #Angry Hyenias Demand Land
+hyenia.4.d:0 ""
+hyenia.4.a:0 ""
+hyenia.4.b:0 ""
+
+hyenia.5.t:0 "" #Yetis Surrender!
+hyenia.5.d:0 ""
+hyenia.5.a:0 ""
+
+hyenia.6.t:0 "" #The Yetis fight on!
+hyenia.6.d:0 ""
+hyenia.6.a:0 ""
+
+hyenia.7.t:0 "" #Hyenian Ultimatum to [INSERT COUNTRY HERE] for Thunderbowl
+hyenia.7.d:0 ""
+hyenia.7.a:0 ""
+hyenia.7.b:0 ""
+
+hyenia.8.t:0 "" #Not Returning our lands? War.
+hyenia.8.d:0 ""
+hyenia.8.a:0 ""
+
 ##Equipment##
 
 ##Tooltips##
