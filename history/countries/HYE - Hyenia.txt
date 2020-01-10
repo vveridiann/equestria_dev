@@ -1,4 +1,4 @@
-﻿capital = 1039
+﻿capital = 1040
 
 oob = "HYE_1007"
 
@@ -26,13 +26,13 @@ set_country_flag = better_science_base_unlocked
 
 set_popularities = {
 
-	democratic = 70
+	democratic = 45
 
-	fascism = 15
+	fascism = 12
 
 	communism = 0
 
-	neutrality = 15
+	neutrality = 43
 
 }
 	
