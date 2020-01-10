@@ -61,5 +61,54 @@ ideas = {
 				army_speed_factor = -0.03
 			}
 		}
+		HYE_qaylid_dervish = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_gain = 0.25
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		HYE_regency = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				fascism_drift = 0.02
+				army_morale_factor = 0.01
+				army_org_factor = -0.01
+				MONTHLY_POPULATION = -0.01
+			}
+		}
+		HYE_to_recovery = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = -0.25
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_desert_devils = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				heat_attrition_factor = -0.5
+				attrition = -0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				out_of_supply_factor = -0.1
+				no_supply_grace = 36
+			}
+		}
 	}
 }

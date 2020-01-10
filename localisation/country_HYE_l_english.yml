@@ -27,6 +27,15 @@ HYE_finalize_sneaky:0 "Coup De Grace"
 HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
 HYE_end_the_yeti:0 "The Final Push"
 HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
+HYE_qaylid_dervish:0 "The Qaylid Dervish"
+HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, The Matriarch Fahamka ‘The Boss’ led the dogs of the Dervish in their ways, the ways of Qaylid (The Bark or the Shout). This has come to define the society of the post war Hyenia, as the Dervish now rules over the vast lands left to them after the Storm Empire’s collapse"
+HYE_regency:0 "Furasho's Regency"
+HYE_regency_desc:0 "With the advanced age of Fahamka ‘The Bark’ her student and longtime friend Furasho has taken over most of the facets of governance while keeping her mostly in the dark of his own actions"
+HYE_to_recovery:0 "Road To Recovery"
+HYE_to_recovery_desc:0 "Though the war against the Storm Empire is over, recovery from it has been slow at best. Though Matriarch Fahamka has guided us well, there is still more to be done."
+HYE_desert_devils:0 "Desert Devils"
+HYE_desert_devils_desc:0 "From the desert, the Hyenas carried out their war of resistance with relentless fervor. Fighting like demons under hot desert sun and moving like shadows under the desert moon, they are the masters of warfare in this type of terrain"
+
 
 ##Decisions##
 HYE_sneaky_plan_decisions:0 "Against the Thundarians"
