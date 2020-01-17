@@ -1,0 +1,82 @@
+ideas = {
+	country = {
+		STM_memories_grand_fleet = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = storm_king_symbol
+			modifier = {
+				experience_gain_air	= 0.02
+				air_ace_generation_chance_factor = 0.1
+				war_support_factor	= 0.05
+			}
+		}
+	}
+	
+	country = {
+		STM_mini_airforce_budget = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = generic_air_payment
+			equipment_bonus = {
+					fighter_equipment = {
+						build_cost_ic = 0.7 
+						instant = yes
+					}
+					cv_fighter_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					CAS_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					cv_CAS_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					tac_bomber_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					nav_bomber_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					cv_nav_bomber_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					heavy_fighter_equipment = {
+						build_cost_ic = 0.7 
+						instant = yes
+					}
+					strat_bomber_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+					transport_plane_equipment = {
+						build_cost_ic = 0.7
+						instant = yes
+					}
+			}
+			research_bonus = {
+				air_equipment = -0.25	
+				air_doctrine = -0.25
+			}
+			modifier = {
+				air_chief_cost_factor = 0.50
+				air_accidents = 0.3
+			}
+		}
+	}
+}

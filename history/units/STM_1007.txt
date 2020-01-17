@@ -105,17 +105,13 @@ air_wings = {
 	1025 = {
 		fighter_equipment_0 =  {
 			owner = "STM" 
-			amount = 18
-		}
-		nav_bomber_equipment_1 =  {
-			owner = "STM" 
-			amount = 12
+			amount = 20
 		}
 	}
 	982 = {
 		fighter_equipment_0 =  {
 			owner = "STM" 
-			amount = 35
+			amount = 40
 		}
 		tac_bomber_equipment_0 =  {
 			owner = "STM" 
@@ -150,7 +146,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = support_equipment_1
 			creator = "STM"
 		}
 		requested_factories = 1

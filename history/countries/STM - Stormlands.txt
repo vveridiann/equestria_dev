@@ -12,8 +12,6 @@ set_technology = {
 	infantry_weapons = 1
 	early_fighter = 1
 	cv_early_fighter = 1
-	naval_bomber1 = 1
-	cv_naval_bomber1 = 1
 	early_bomber = 1
 	gwtank = 1
 	tech_support = 1
@@ -46,6 +44,8 @@ add_ideas = {
 	better_science_base
 	lack_of_scientists2
 	poverty3
+	STM_memories_grand_fleet
+	STM_mini_airforce_budget
 }
 
 set_convoys = 20
