@@ -1,0 +1,20 @@
+focus_tree = {
+	id = STM_airforce_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			original_tag = STM
+		}
+	}
+
+shared_focus = STM_begin_refunding
+shared_focus = STM_fleet_future
+shared_focus = STM_grand_fleet_legacy
+shared_focus = STM_revolutionize_the_fleet
+shared_focus = STM_airships_of_new_age
+shared_focus = STM_heavy_fighter_escorts
+shared_focus = STM_armed_transport_planes
+shared_focus = STM_Sky_marines

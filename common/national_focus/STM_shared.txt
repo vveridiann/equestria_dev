@@ -1,0 +1,175 @@
+shared_focus = {
+    id = STM_begin_refunding
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 10
+    y = 0
+    
+    cost = 5
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_fleet_future
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 10
+    y = 1
+	
+	cost = 5
+	
+    prerequisite = {
+			focus = STM_begin_refunding
+		}
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_grand_fleet_legacy
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 15
+    y = 2
+	
+	cost = 5
+	
+    prerequisite = {
+		focus = STM_fleet_future
+	}
+	
+	mutually_exclusive = { focus = STM_revolutionize_the_fleet }
+	
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_revolutionize_the_fleet
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 5
+    y = 2
+	
+	cost = 5
+	
+    prerequisite = {
+		focus = STM_fleet_future
+	}
+
+	mutually_exclusive = { focus = STM_grand_fleet_legacy }
+	
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_airships_of_new_age
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 13
+    y = 3
+	
+	cost = 5
+	
+    prerequisite = {
+			focus = STM_grand_fleet_legacy
+		}
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_heavy_fighter_escorts
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 14
+    y = 4
+	
+	cost = 5
+	
+    prerequisite = {
+			focus = STM_airships_of_new_age
+		}
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_armed_transport_planes
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 17
+    y = 3
+	
+	cost = 5
+	
+    prerequisite = {
+			focus = STM_grand_fleet_legacy
+		}
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
+
+shared_focus = {
+    id = STM_Sky_marines
+    icon = GFX_focus_generic_paratrooper
+    
+    x = 16
+    y = 4
+	
+	cost = 5
+	
+    prerequisite = {
+			focus = STM_armed_transport_planes
+		}
+
+    ai_will_do = {
+        factor = 1000
+    }
+
+    available = {
+        always = yes
+    }
+}
