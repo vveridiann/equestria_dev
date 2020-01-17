@@ -70,8 +70,8 @@ ideas = {
 					}
 			}
 			research_bonus = {
-				air_equipment = -0.25	
-				air_doctrine = -0.25
+				air_equipment = -0.30
+				air_doctrine = -0.30
 			}
 			modifier = {
 				air_chief_cost_factor = 0.50
