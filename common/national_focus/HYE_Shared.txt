@@ -67,6 +67,7 @@ shared_focus = { #Take them by stealth!
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_sneaky_plan_plan"
 		add_stability = 0.05
+		hidden_effect = { country_event = { id = hyenia.9 days = 20 random = 7 } } #His Only Mother 
 	}
 }
 shared_focus = {
@@ -93,7 +94,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = HYE_infiltrators
-	icon = GFX_goal_skull_cannon
+	icon = GFX_goal_dagger
 	x = -1
 	y = 1
 	relative_position_id = HYE_sneaky_plan
@@ -111,11 +112,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
 		custom_effect_tooltip = HYE_infiltrators_tt
+		hidden_effect = { country_event = { id = hyenia.12 } } #shadowdancers
 	}
 }
 shared_focus = {
 	id = HYE_finalize_sneaky
-	icon = GFX_focus_generic_air_defense2
+	icon = GFX_goal_skull_cannon
 	x = 1
 	y = 1
 	relative_position_id = HYE_infiltrators
@@ -251,6 +253,7 @@ shared_focus = { #Take them by Force!
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_force_plan"
 		add_war_support = 0.05
+		hidden_effect = { country_event = { id = hyenia.10 days = 20 random = 7 } } #The Fading Queen of War
 	}
 }
 
@@ -275,6 +278,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_manpower"
 		add_manpower = 5000
 		load_oob = HYE_levies
+		hidden_effect = { country_event = { id = hyenia.11 } } #stormbreakers
 	}
 }
 shared_focus = {

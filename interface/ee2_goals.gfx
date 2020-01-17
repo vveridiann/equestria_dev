@@ -230,4 +230,8 @@ spriteTypes = {
 		name = "GFX_goal_BRZ_spoticus_league"
 		texturefile = "gfx/interface/goals/BRZ/BRZ_spoticus_league.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_dagger"
+		texturefile = "gfx/interface/goals/goal_dagger.tga"
+	}	
 }

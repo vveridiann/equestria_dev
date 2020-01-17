@@ -74,27 +74,43 @@ hyenia.3.t:0 "Dervish Sabotage!"
 hyenia.3.d:0 "The Hyenian resistance has struck again. Their "dervishes" have snuck past the borders and struck across the nation, causing widespread damage and chaos. Little seems sacred to these desert savages, and the damage they have caused will take a lot of time to restore."
 hyenia.3.a:0 "Damn them all!"
 
-hyenia.4.t:0 "" #Angry Hyenias Demand Land
-hyenia.4.d:0 ""
-hyenia.4.a:0 ""
-hyenia.4.b:0 ""
+hyenia.4.t:0 "Peace with the Hyenas?" #Peace with the Hyenas?
+hyenia.4.d:0 "Two front war, one front ended at a steep price and the cessetion of Hyenian lands."
+hyenia.4.a:0 "Cede Lands to Hyenas"
+hyenia.4.b:0 "Do not Cede lands"
 
-hyenia.5.t:0 "" #Yetis Surrender!
-hyenia.5.d:0 ""
-hyenia.5.a:0 ""
+hyenia.5.t:0 "Yeti Surrender" #Yetis Surrender!
+hyenia.5.d:0 "Haha they fight like French"
+hyenia.5.a:0 "Haw"
 
-hyenia.6.t:0 "" #The Yetis fight on!
-hyenia.6.d:0 ""
-hyenia.6.a:0 ""
+hyenia.6.t:0 "Yetis Refuse Surrender." #The Yetis fight on!
+hyenia.6.d:0 "Wait, what?"
+hyenia.6.a:0 "Fight on I guess"
 
-hyenia.7.t:0 "" #Hyenian Ultimatum to [INSERT COUNTRY HERE] for Thunderbowl
-hyenia.7.d:0 ""
-hyenia.7.a:0 ""
-hyenia.7.b:0 ""
+hyenia.7.t:0 "Hyenian Ultimatum" #Hyenian Ultimatum to [INSERT COUNTRY HERE] for Thunderbowl
+hyenia.7.d:0 "Note: This event exists if the Thundarians die early. The Hyenas can demand their lands."
+hyenia.7.a:0 "Relent"
+hyenia.7.b:0 "Ohi. (No)"
 
-hyenia.8.t:0 "" #Not Returning our lands? War.
-hyenia.8.d:0 ""
-hyenia.8.a:0 ""
+hyenia.8.t:0 "[thunderbowl_owner.GetName] Refuses to Comply" #Not Returning our lands? War.
+hyenia.8.d:0 "The Yetis have Refused our Ultimatum."
+hyenia.8.a:0 "War it is."
+
+hyenia.9.t:0 "His Only Mother" #His Only Mother
+hyenia.9.d:0 ""
+hyenia.9.a:0 ""
+
+hyenia.10.t:0 "The Fading Queen of War" #Fading Queen of War
+hyenia.10.d:0 ""
+hyenia.10.a:0 ""
+
+hyenia.11.t:0 "Stormbreakers" #Stormbreakers
+hyenia.11.d:0 ""
+hyenia.11.a:0 ""
+
+hyenia.12.t:0 "Shadowdancers" #Shadowdancers
+hyenia.12.d:0 ""
+hyenia.12.a:0 ""
 
 ##Equipment##
 

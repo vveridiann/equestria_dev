@@ -1,6 +1,6 @@
 add_namespace = hyenia
 
-country_event = { #War council, triggered via event on focus tree.
+country_event = { #War council, triggered via event on focus tree. The War to Come
 	id = hyenia.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.1"}
 	title = hyenia.1.t
@@ -14,7 +14,7 @@ country_event = { #War council, triggered via event on focus tree.
 			factor = 50
 		}
 		hidden_effect = {
-			country_event = { id = hyenia.2 days = 30 random = 5}
+			country_event = { id = hyenia.2 days = 15 random = 5 } #Time is inexorable and pitiless
 		}		
 	}
 	option = {
@@ -24,12 +24,12 @@ country_event = { #War council, triggered via event on focus tree.
 			factor = 50
 		}
 		hidden_effect = {
-			country_event = { id = hyenia.2 days = 30 random = 5}
+			country_event = { id = hyenia.2 days = 15 random = 5 } #See above.
 		}
 	}
 }
 
-country_event = { #Flavor, foreshadows Fahamka's death
+country_event = { #Flavor, foreshadows Fahamka's death, Time is inexorable and pitiless
 	id = hyenia.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
 	title = hyenia.2.t
@@ -216,5 +216,53 @@ country_event = { #They will not return our lands.
 				type = annex_everything
 			}
 		}	
+	}
+}
+
+country_event = { #His Only Mother, triggered by Focus HYE_sneaky_plan
+	id = hyenia.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.9"}
+	title = hyenia.9.t
+	desc = hyenia.9.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.9.a	
+	}
+}
+
+country_event = { #The Fading Queen of War, triggered by Focus HYE_force_plan
+	id = hyenia.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.10"}
+	title = hyenia.10.t
+	desc = hyenia.10.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.10.a	
+	}
+}
+
+country_event = { #Stormbreakers, triggered in HYE_manpower
+	id = hyenia.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.11"}
+	title = hyenia.11.t
+	desc = hyenia.11.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.11.a	
+	}
+}
+
+country_event = { #HShadowdancers. triggered in HYE_infiltrators
+	id = hyenia.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.12"}
+	title = hyenia.12.t
+	desc = hyenia.12.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.12.a	
 	}
 }
