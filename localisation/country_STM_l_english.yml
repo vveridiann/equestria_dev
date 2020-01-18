@@ -8,8 +8,16 @@ STM_mini_airforce_budget:0 "Miniscule Airforce Budget"
 STM_mini_airforce_budget_desc:0 ""
 
 STM_mini_airforce_budget_1:0 "Small Airforce Budget"
-STM_mini_airforce_budget_desc_1:0 ""
+STM_mini_airforce_budget_1_desc:0 ""
 
+STM_mini_airforce_budget_1_OI:0 "Small Light Aircraft-focused Airforce Budget"
+STM_mini_airforce_budget_1_OI_desc:0 ""
 
+STM_mini_airforce_budget_2_OI:0 "Substantial Light Aircraft-focused Airforce Budget"
+STM_mini_airforce_budget_2_OI_desc:0 ""
 
+STM_mini_airforce_budget_1_SD:0 "Small Heavy Aircraft-focused Airforce Budget"
+STM_mini_airforce_budget_1_SD_desc:0 ""
 
+STM_mini_airforce_budget_2_SD:0 "Substantial Heavy Aircraft-focused Airforce Budget"
+STM_mini_airforce_budget_2_SD_desc:0 ""
