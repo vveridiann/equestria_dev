@@ -30,4 +30,9 @@ shared_focus = STM_lightning_and_thunder
 shared_focus = STM_new_bases
 shared_focus = STM_island_of_aa
 shared_focus = STM_continue_increasing_budget
-
+shared_focus = STM_naval_aviation
+shared_focus = STM_aircraft_concerns
+shared_focus = STM_taming_storms
+shared_focus = STM_arisen_from_ashes
+shared_focus = STM_nuke_project
+shared_focus = STM_rocket_project
