@@ -111,4 +111,219 @@ ideas = {
 			}
 		}
 	}
+#Political Advisors
+	political_advisor = {
+		HYE_nafaqo = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }		
+		}
+		HYE_dawacada = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }	
+		}
+		HYE_waalan = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }			
+		}
+		HYE_xasillon = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }			
+		}
+		HYE_dhagax = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }			
+		}
+		HYE_sunta = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_gaadiidka = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_hadalka = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		
+		#Masaska's advisors begin here
+		
+		HYE_kelidii = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_maraq = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_longrains = {
+			picture = idea_unknown_advisor #is a pegasus
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		
+		#Furasho's Advisors Begin here
+		
+		HYE_bogsiiye = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_seenyaale = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_xaawa = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+	}
+	army_chief = {
+		HYE_tuke = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_furasho_chief = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }		
+		}
+		HYE_masaska_chief = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+	}
+	#Theorists todo
+	high_command = {
+		HYE_yeyda = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		#Masaska's
+		HYE_iftiin = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_dhalaalaya = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		#Furasho's
+		HYE_eberweyn = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+		HYE_dareere = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { }
+		}
+	}
+	#Industry todo
 }
