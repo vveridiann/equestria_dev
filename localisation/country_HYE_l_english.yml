@@ -172,6 +172,9 @@ hyenia.22.a:0 ""
 
 ##Equipment##
 
+##Tech##
+HYE_hyenia_ironpaws:0 "Hyenian Ironpaws"
+
 ##Tooltips##
 HYE_saboteurs_tt:0 "Allows Saboteurs to Cause Problems with the Thundarian Armies via Decision."
 HYE_infiltrators_tt:0 "Spawns Several Units Behind the Thundarian Border via Decision."
