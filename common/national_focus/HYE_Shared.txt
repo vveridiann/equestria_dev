@@ -375,10 +375,11 @@ shared_focus = {
 	available = {
 		SCT = {
 			NOT = { has_war_with = HYE }
-			OR = {
-				exists = no
-				is_puppet_of = HYE
-			}
+		}
+		HYE = {
+			has_full_control_of_state = 1036
+			has_full_control_of_state = 1050
+			has_full_control_of_state = 1052
 		}
 	}
 	prerequisite = {

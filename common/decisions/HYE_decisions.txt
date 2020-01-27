@@ -72,13 +72,8 @@ HYE_thunder_war_decisions = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			if = {
-				limit = {
-					any_country = {
-						owns_state = 1036
-					}
-				}
-				country_event = { id = hyenia.7 }
+			1036 = {
+				owner = { country_event = { id = hyenia.7 } }
 			}
 		}
 	}

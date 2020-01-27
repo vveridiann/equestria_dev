@@ -1,6 +1,16 @@
 ﻿l_english:
 
-##Focuses##
+##Parties##
+HYE_communism_party:0 "Communist Rebels"
+HYE_communism_party_long:0 "Communist Rebels"
+HYE_fascism_party:0 "The Harsh Rule"
+HYE_fascism_party_long:0 "School of Xukun Adag"
+HYE_democratic_party:0 "Gentle Path"
+HYE_democratic_party_long:0 "School of Wadada Jilicsan"
+HYE_neutrality_party:0 "Unmoving Orthodoxy"
+HYE_neutrality_party_long:0 "School of Caado Dhaqaajin"
+
+##Foci##
 HYE_startup:0 "The Last Fight Approaches"
 HYE_startup_desc:0 "WAAAR" #placeholder
 HYE_rally_the_clans:0 "Rise, Oh Hyenas..."
@@ -155,6 +165,10 @@ hyenia.20.a:0 ""
 hyenia.21.t:0 "Masaska Wins the Duel"
 hyenia.21.d:0 ""
 hyenia.21.a:0 ""
+
+hyenia.22.t:0 "The Death of Fahamka"
+hyenia.22.d:0 ""
+hyenia.22.a:0 ""
 
 ##Equipment##
 

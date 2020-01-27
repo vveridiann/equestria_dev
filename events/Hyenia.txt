@@ -278,7 +278,7 @@ country_event = {
 		name = hyenia.13.a	
 		set_variable = { HYE_masaska_support = 0 }
 		set_variable = { HYE_furasho_support = 0 }
-		country_event = { id = hyenia.14 days = 1 }
+		hidden_effect = { country_event = { id = hyenia.22 days = 5 } } 
 	}
 }
 
@@ -422,5 +422,29 @@ country_event = {
 	option = { 
 		name = hyenia.21.a	
 		## assorted effects: switch country leader, ruling party, party popularities, etc. ##
+	}
+}
+
+country_event = {
+	id = hyenia.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.22"}
+	title = hyenia.22.t
+	desc = hyenia.22.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.22.a	
+		kill_country_leader = yes
+		remove_unit_leader = 1272020
+		create_country_leader = {
+			name = "Power Vacuum"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		country_event = { id = hyenia.14 days = 1 }
 	}
 }

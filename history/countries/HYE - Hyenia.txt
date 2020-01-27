@@ -97,6 +97,7 @@ create_field_marshal = {
 	planning_skill = 4
 	logistics_skill = 4
 	female = yes
+	id = 1272020
 }
 
 create_corps_commander = {
