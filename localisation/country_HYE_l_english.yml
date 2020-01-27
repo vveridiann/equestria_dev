@@ -27,6 +27,9 @@ HYE_finalize_sneaky:0 "Coup De Grace"
 HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
 HYE_end_the_yeti:0 "On the Eve of Battle"
 HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
+HYE_victory_in_the_war:0 "A Much-Deserved Victory"
+HYE_victory_in_the_war_desc:0 ""
+
 HYE_qaylid_dervish:0 "The Qaylid Dervish"
 HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, The Matriarch Fahamka ‘The Boss’ led the dogs of the Dervish in their ways, the ways of Qaylid (The Bark or the Shout). This has come to define the society of the post war Hyenia, as the Dervish now rules over the vast lands left to them after the Storm Empire’s collapse"
 HYE_regency:0 "Furasho's Regency"
@@ -111,6 +114,47 @@ hyenia.11.a:0 "In fire and death, we become one."
 hyenia.12.t:0 "Shadowdancers" #Shadowdancers
 hyenia.12.d:0 "Masaska’s warning have been heeded, and the Dervishes who carried on the struggle will be the ones to finish it as well. The refugees and the impoverished have lost enough without seeing their children, siblings and parents forcibly dragged into war.  None who freely wishes to fight is turned away, but none is dragged into battle like a slave.\n\nMaintaining the integrity of their original formations, the Dervishes can move like shadows through the enemy lines. Entire divisions are rising in the mountains to wreak havoc on the occupiers’ supply lines and communications and block their routes of escape. In the end, the swift shadow warfare of the Dervishes are leaving them surrounded and ready to be cut into pieces.\n\nWith only a few extra divisions gathered for the struggle ahead, the pace set by our forces must be set high, indeed blinding, and none but the dervishes could truly maintain it for as long as needed. With the hardened veterans of years of war carrying on the fight, it can be done though, and those who wait in the desert shall see the Dervishes’ mettle in the days and weeks ahead. They will see heroes and paragons, and they will know that even in the last days, the Dervishes were neither slavers nor tyrants, but protectors and teachers."
 hyenia.12.a:0 "Faster, faster, cut them down!"
+
+hyenia.13.t:0 "<the first of the power struggle events, an introduction>"
+hyenia.13.d:0 "perhaps another event between .13 and .14, depicting Fahamka's death? or you could do it in .13"
+hyenia.13.a:0 ""
+
+hyenia.14.t:0 "Establishing Authority"
+hyenia.14.d:0 ""
+hyenia.14.a:0 "Furasho"
+hyenia.14.b:0 "Masaska"
+
+hyenia.15.t:0 "Dealing with the Collaborators"
+hyenia.15.d:0 ""
+hyenia.15.a:0 "Masaska"
+hyenia.15.b:0 "Furasho"
+
+hyenia.16.t:0 "The New Leadership"
+hyenia.16.d:0 ""
+hyenia.16.a:0 "Furasho"
+hyenia.16.b:0 "Masaska"
+
+hyenia.17.t:0 "Fahamka's Grave"
+hyenia.17.d:0 ""
+hyenia.17.a:0 "Masaska"
+hyenia.17.b:0 "Furasho"
+
+hyenia.18.t:0 "Tensions among the Hyenas"
+hyenia.18.d:0 ""
+hyenia.18.a:0 "Furasho"
+hyenia.18.b:0 "Masaska"
+
+hyenia.19.t:0 "The Duel"
+hyenia.19.d:0 ""
+hyenia.19.a:0 "Whos gon be the winner?"
+
+hyenia.20.t:0 "Furasho Wins the Duel"
+hyenia.20.d:0 ""
+hyenia.20.a:0 ""
+
+hyenia.21.t:0 "Masaska Wins the Duel"
+hyenia.21.d:0 ""
+hyenia.21.a:0 ""
 
 ##Equipment##
 
