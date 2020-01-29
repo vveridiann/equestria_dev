@@ -214,6 +214,23 @@ EQSBUF_DEM = {
 	color = rgb { 158 242 117 }
 	color_ui = rgb { 158 242 117 }
 }
+
+PLB_scyfling = {
+	color = rgb { 0 67 111 }
+	color_ui = rgb { 0 52 86 }
+}
+PLB_kingdom_of_winter = {
+	color = rgb { 210 201 129 }
+	color_ui = rgb { 210 201 129 }
+}
+PLB_confederation = {
+	color = rgb { 212 123 64 }
+	color_ui = rgb { 212 123 64 }
+}
+PLB_northern_republic = {
+    color = rgb { 247 208 158 }
+	color_ui = rgb { 247 208 158 }
+}
 ####### NLR PUPPETS #############
 OLE_NLR = {
 	color = rgb { 41 37 110 }

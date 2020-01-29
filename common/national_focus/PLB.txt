@@ -1,0 +1,92 @@
+focus_tree = {
+	id = polar_bear_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PLB
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 250 y = 1650 }
+
+	shared_focus = PLB_yearly_review
+}
+
+focus_tree = {
+	id = PLB_scyfling
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PLB
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 250 y = 2500 }
+
+	shared_focus = PLB_scyfling_shall_not_surrender
+}
+
+focus_tree = {
+	id = PLB_svartpels
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PLB
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 250 y = 2500 }
+
+	shared_focus = PLB_scyfling_has_no_honor
+}
+
+focus_tree = {
+	id = PLB_volsungr
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PLB
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 250 y = 2500 }
+
+	shared_focus = PLB_scyfling_has_no_competence
+}
+
+
+focus_tree = {
+	id = PLB_scyfling_united
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PLB
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 250 y = 2500 }
+
+	shared_focus = PLB_the_despot_triumphant
+}
+
+
+

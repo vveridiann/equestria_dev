@@ -1,0 +1,2125 @@
+ideas = {
+
+	political_advisor = {
+	PLB_granny_bear = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			
+			traits = { popular_leader }
+		}
+		
+PLB_silent_workbear = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_the_few_loyal_and_living_advisers_that_remain
+				}
+			
+			traits = { backroom_backstabber }
+		}
+   PLB_popular_bear = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_the_few_loyal_and_living_advisers_that_remain
+				}
+			
+			traits = { popular_figurehead2 }
+		}
+		
+		PLB_war_industrialist = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_an_industrialist_roaming_around
+				}
+			
+			traits = { war_industrialist }
+		}
+   PLB_wingbardian_inspired_bear = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_an_industrialist_roaming_around
+				}
+			
+			traits = { corporatist_industrialist }
+		}
+		
+		 PLB_mechanite_queen = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_the_mechanites_and_their_queen
+				}
+			
+			traits = { cult_leader  }
+			modifier = {
+			research_speed_factor = 0.05
+			}
+		}
+		
+		 PLB_volsungr_queen = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+			OR = {
+				    has_completed_focus = PLB_invite_the_harmonists_to_the_court
+					has_completed_focus = PLB_volsungr_in_storting
+				}
+				}
+			
+			traits = { ideological_crusader }
+			modifier = {
+			democratic_acceptance = 30
+			}
+		}
+		
+		PLB_volsungr_environmentalist = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+			OR = {
+				    has_completed_focus = PLB_invite_the_harmonists_to_the_court
+					has_completed_focus = PLB_volsungr_in_storting
+				}
+				}
+			
+			traits = { diehard_environmentalist }
+			modifier = {
+			}
+		}
+		
+		 PLB_lord_of_thunder = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+			OR = {
+				    has_completed_focus = PLB_invite_the_thunder_lords_to_the_court
+					has_completed_focus = PLB_svartpels_in_storting
+				}
+				}
+			
+			traits = { syncretic_revanchist }
+			modifier = {
+			fascism_acceptance = 30
+			}
+		}
+		
+		 PLB_thunder_militarist = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+			OR = {
+				    has_completed_focus = PLB_invite_the_thunder_lords_to_the_court
+					has_completed_focus = PLB_svartpels_in_storting
+				}
+				}
+			
+			traits = { war_industrialist }
+			modifier = {
+			}
+		}
+	}
+
+	army_chief = {
+PLB_scyfling_high_commander = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+			OR = {
+			has_completed_focus = PLB_a_true_army
+		    has_completed_focus = PLB_two_military_reformers_that_are_still_kicking 
+				}
+				}
+			
+			traits = { army_entrenchment_1 army_regrouping_1 }
+		}
+		
+	
+	}
+
+	air_chief = {
+
+	}
+
+	navy_chief = {
+	
+	
+	}
+	
+	
+
+	high_command = {
+PLB_scyfling_hunter = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_two_military_reformers_that_are_still_kicking 
+				}
+			
+			traits = { army_infantry_1 army_logistics_1 }
+		}
+		
+	PLB_benkestok_army_leader = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_triple_alliance_advisers
+				}
+			
+			traits = { army_infantry_2 }
+			
+		}
+		
+	PLB_brodkorb_army_leader = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_triple_alliance_advisers
+				}
+			
+			traits = { army_regrouping_1 }
+			modifier = {
+			conscription = 0.005
+			army_org_Factor = 0.05
+			}
+		}
+		
+		
+	PLB_gotlung_high_commander = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_warriors_of_onladir_in_our_high_command
+				}
+			
+			traits = { army_entrenchment_3 }
+		}
+		
+		
+	}
+
+	theorist = {
+	
+	PLB_rozenkrantz_theorist = {
+		    picture = unknown_advisor_griffon
+			allowed = {
+				original_tag = PLB
+			}
+visible = {
+				    has_completed_focus = PLB_warriors_of_onladir_in_our_high_command
+				}
+			traits = {
+				military_theorist army_chief_planning_1
+			}
+			research_bonus = {
+				land_doctrine = 0.05
+			}			
+		}
+
+	}
+
+tank_manufacturer = {
+
+		designer = yes
+
+		PLB_mechanite_cult = {
+
+			allowed = {
+				original_tag = PLB
+			}
+			visible = {
+				    has_completed_focus = PLB_the_mechanites_and_their_queen
+				}
+			
+			research_bonus = {
+				motorized = 0.15
+			}
+			traits = { 	motorized_equipment_manufacturer }
+			
+			modifier = {
+			motorized_attack_factor = 0.05
+		motorized_defence_factor = 0.05
+		mechanized_attack_factor = 0.05
+		mechanized_defence_factor = 0.05
+			}
+		}
+
+	}
+	
+	naval_manufacturer = {
+
+		designer = yes
+		
+		PLB_clan_anker = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_anker_navy
+				}
+			traits = { convoy_escort_naval_manufacturer }
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PLB_clan_falsen = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_falsen_navy
+				}
+			traits = { battlefleet_designer }
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	
+	materiel_manufacturer = {
+	PLB_clan_svartpels = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_svartpels_as_our_military_producer
+				}
+			traits = { motorized_equipment_manufacturer }
+			
+			research_bonus = {
+				motorized = 0.10
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PLB_clans_of_onladir = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_onladir_clans_as_our_military_producers
+				}
+			traits = {
+				support_equipment_manufacturer 
+			}
+			research_bonus = {
+				support_tech = 0.05
+				
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+				}
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PLB_clans_of_triple_alliance = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_triple_alliance_in_charge_of_gun_production
+				}
+			traits = {
+				infantry_equipment_manufacturer 
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PLB_clan_volsungr = {
+			picture = unknown_advisor_pony
+			allowed = {
+				original_tag = HAU
+			}
+			visible = {
+				    has_completed_focus = PLB_volsungr_as_our_military_producer
+				}
+			traits = { artillery_manufacturer tank_manufacturer }
+			
+			research_bonus = {
+				artillery = 0.05
+				armor = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	country = {
+	
+		PLB_bears = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.05
+				winter_attrition_factor = -0.5
+			}
+		}
+		}
+		
+		
+		country = {
+	
+		PLB_bears1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.05
+				winter_attrition_factor = -0.5
+			}
+			targeted_modifier = { tag = CHN attack_bonus_against = 0.05 defense_bonus_against = 0.05 }
+			targeted_modifier = { tag = GRF attack_bonus_against = 0.05 defense_bonus_against = 0.05 }
+		}
+		}
+		
+		
+		
+		country = {
+		PLB_outcasts = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		}
+		
+		
+		
+		country = {
+		PLB_outcasts_returning_min = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				MONTHLY_POPULATION = 0.25
+				stability_factor = -0.1
+			}
+		}
+		}
+		
+		country = {
+		PLB_outcasts_returning_max = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				MONTHLY_POPULATION = 1
+				stability_factor = -0.2
+			}
+		}
+		}
+		
+		
+		country = {
+		PLB_clan_divides = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.50
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.30
+				industrial_capacity_factory = -0.30
+				production_factory_max_efficiency_factor = -0.20
+				political_power_gain = -0.50
+				production_speed_buildings_factor = -0.30
+			}
+		}
+		
+		}
+		
+		
+		country = {
+		PLB_clan_divides1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.50
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.25
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.50
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		}
+		
+		
+		country = {
+		PLB_clan_divides2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.50
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.35
+				industrial_capacity_factory = -0.35
+				production_factory_max_efficiency_factor = -0.25
+				political_power_gain = -0.50
+				production_speed_buildings_factor = -0.35
+			}
+		}
+		}
+		
+		
+		country = {
+		
+		PLB_clan_divides3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.40
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				political_power_gain = -0.40
+				production_speed_buildings_factor = -0.20
+			}
+		}
+		
+		}
+		
+		country = {
+		PLB_clan_divides4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.30
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.30
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		}
+		
+		country = {
+		
+		PLB_clan_divides5 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.20
+				stability_factor = -0.08
+				war_support_factor = -0.08
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				political_power_gain = -0.20
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		
+		}
+		
+		country = {
+		
+		PLB_unified_scientific_effort = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_jap_supremacy_of_technology
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		}
+		
+		
+		country = {
+		PLB_unified_scientific_effort1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_lack_of_scientists
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+			}
+		}
+		
+	}
+	
+	country = {
+		
+		PLB_polar_bear_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		 }
+		 
+		 country = {
+		PLB_polar_bear_army1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription = -0.005
+			}
+		}
+		}
+		
+		country = {
+		
+		PLB_fish_farms = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		}
+		
+		country = {
+		PLB_fish_farms1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		}
+		
+		
+		country = {
+		
+		PLB_outcast_raids = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription = -0.005
+			}
+		}
+		
+		}
+		
+		country = {
+		PLB_outcast_raids1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription = -0.0025
+			}
+		}
+		
+		}
+		
+		country = {
+		PLB_children_of_mechas = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.10
+				conscription_factor = -0.10
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		}
+		
+		country = {
+		
+		PLB_fragile_food_supply = {
+		            allowed = {
+				always = no
+			}
+	        allowed_civil_war = {
+				always = yes
+			}
+			picture = raj_risk_of_famine
+			 removal_cost = -1
+			modifier = {
+
+			}
+		}
+		}
+		
+		country = {
+		
+		PLB_famine = {
+		            allowed = {
+				always = no
+			}
+	        allowed_civil_war = {
+				always = yes
+			}
+			picture = GRW_famine_start
+ removal_cost = -1
+			modifier = {
+				training_time_army_factor = 0.10
+				army_morale_factor = -0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				army_speed_factor = -0.10
+				MONTHLY_POPULATION = -0.15				
+			}
+		}
+		
+		}
+		
+		country = {
+		PLB_severe_famine = {
+		            allowed = {
+				always = no
+			}
+	        allowed_civil_war = {
+				always = yes
+			}
+			picture = GRW_famine
+ removal_cost = -1
+			modifier = {
+				training_time_army_factor = 0.20
+				army_morale_factor = -0.15
+				stability_factor = -0.15
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.35
+				army_speed_factor = -0.15
+				MONTHLY_POPULATION = -0.39
+			}
+}
+}			
+     country = {
+		
+		PLB_spread_out = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+				conscription = 0.015
+				army_org_Factor = -0.10
+			}
+		}
+		}
+		
+		
+		country = {
+		PLB_spread_out_further = {
+		allowed = { 
+		always = no
+		}
+		
+		allowed_civil_war = {
+		always = yes
+		}
+		
+		picture = german_advisors 
+		removal_cost = -1
+		modifier = {
+		conscription = 0.03
+		army_org_factor = -0.1
+		army_speed_factor = 0.05
+		mobilization_speed = 0.1
+		}
+		}
+		}
+		
+country = {
+		
+		PLB_mountaineers_of_Yak_mountain_range = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+				modifier = {
+				special_forces_cap = 0.15
+				special_forces_attack_factor = 0.10
+				special_forces_defence_factor = 0.10
+			}
+			}
+		}
+		
+		country = {
+		
+		PLB_great_farms_of_weslandia = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+				modifier = {
+				MONTHLY_POPULATION = 0.25	
+				production_factory_max_efficiency_factor = 0.10
+			    production_factory_efficiency_gain_factor = 0.10
+			}
+			}
+		}
+		
+		country = {
+		
+		PLB_weslandian_notes_on_cheap_guns = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+				equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			}
+		}
+	 country = {	
+		PLB_move_in = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+		conscription_factor = 0.1
+		army_org_Factor = 0.05
+	}
+	}
+	}
+	
+	country = {	
+		PLB_move_in2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+			
+			training_time_army_factor = -0.1
+				max_dig_in = 0.5
+		army_core_attack_factor = 0.15
+		conscription_factor = 0.2
+		army_org_Factor = 0.05
+	}
+	}
+	}
+	
+	
+	 country = {
+	PLB_military_base_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+			modifier = {
+			experience_gain_army = 0.05
+			    military_leader_cost_factor = -0.25
+				
+
+	}
+	
+	research_bonus = {
+				land_doctrine = 0.10
+			}
+	
+	
+}
+}
+
+country = {
+		PLB_the_muscles_that_move_the_armour = {
+		allowed = { 
+		always = no
+		}
+		
+		allowed_civil_war = {
+		always = yes
+		}
+		
+		picture = german_advisors 
+		removal_cost = -1
+		modifier = {
+		conscription = 0.03
+		mobilization_speed = -0.15
+		}
+		}
+		}
+
+ country = {
+	PLB_key_lake_research_facility = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+	research_bonus = {
+				magical_tech = 0.10
+				race_tech = 0.1
+			}
+	
+	
+}
+}
+
+country = {
+	PLB_we_are_winter = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+				equipment_bonus = {
+	mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+	motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+	polar_bear_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+}
+	    research_bonus = {
+				magical_tech = 0.10
+				race_tech = 0.1
+			}
+			modifier = {
+	army_attack_factor = 0.05
+				army_defence_factor = 0.05
+	}
+}
+}
+
+country = {
+	PLB_matthair_fearrain_research_facility = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+	research_bonus = {
+				infantry_weapons = 0.10
+				artillery = 0.10
+				
+			}
+	
+	
+}
+}
+
+country = {
+	PLB_let_the_great_furnaces_burn = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+	research_bonus = {
+				infantry_weapons = 0.10
+				artillery = 0.10
+				
+			}
+			equipment_bonus = {
+	infantry_equipment = {
+					build_cost_ic = 0.15
+					instant = yes
+				}
+	artillery_equipment = {
+					build_cost_ic = 0.15
+					instant = yes
+				}
+}
+}
+}
+
+country = {
+	PLB_the_new_clan_system = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+	        modifier = {
+			political_advisor_cost_factor = 0.25
+		trade_laws_cost_factor = 0.25
+		mobilization_laws_cost_factor = 0.25
+		economy_cost_factor = 0.25
+		high_command_cost_factor = 0.25
+		air_chief_cost_factor = 0.25
+		army_chief_cost_factor = 0.25
+		navy_chief_cost_factor = 0.25
+			}
+}
+}
+
+country = {
+	PLB_svartpels_lessons_on_thunder_armour = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+
+			equipment_bonus = {
+	mechanized_equipment = {
+					build_cost_ic = -0.07
+					instant = yes
+				}
+	motorized_equipment = {
+					build_cost_ic = -0.07
+					instant = yes
+				}
+	polar_bear_equipment = {
+					build_cost_ic = -0.07
+					instant = yes
+				}
+}
+}
+}
+
+country = {
+	PLB_svartpels_lessons_on_thunder_armour1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+
+			equipment_bonus = {
+	mechanized_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.05
+					instant = yes
+				}
+	motorized_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.05
+					instant = yes
+				}
+	polar_bear_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.05
+					instant = yes
+				}
+}
+}
+}
+
+country = {
+	PLB_foreign_lessons_on_artillery = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.05
+			}
+}
+}
+
+country = {
+	PLB_legacy_of_warrior_clans = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription = 0.01
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+			}
+}
+}
+
+country = {
+	PLB_legacy_of_warrior_clans_svartpels = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription = 0.01
+				war_support_factor = 0.05
+				army_morale_factor = 0.1
+				army_org_Factor = 0.1
+				army_attack_factor = 0.05
+				training_time_army_factor = 0.15
+				supply_consumption_factor = -0.10
+			}
+}
+}
+
+country = {
+	PLB_polar_bear_tank_corps = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+				conscription_factor = 0.1
+			}
+}
+}
+
+country = {
+	PLB_polar_bear_tank_corps2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				army_armor_attack_factor = 0.08
+				army_armor_defence_factor = 0.08
+				conscription_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					reliability = 0.10
+					instant = yes
+				}
+			}
+}
+}
+
+country = {
+	PLB_unbreakable_defence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+army_defence_factor = 0.05
+max_dig_in = 0.5
+dig_in_speed_factor = 0.1
+
+			}
+}
+}
+
+country = {
+	PLB_waves_of_iron_and_frost = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription_factor = 0.15
+				conscription = 0.01
+				training_time_factor = -0.10
+				winter_attrition_factor = -0.1
+			}
+}
+}
+
+country = {
+	PLB_waves_and_icebergs = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription_factor = 0.30
+				conscription = 0.02
+				training_time_factor = -0.10
+				winter_attrition_factor = -0.1
+				
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+}
+}
+
+country = {
+		
+		PLB_volsungr_hunters = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+				modifier = {
+				special_forces_cap = 0.10
+				special_forces_attack_factor = 0.1
+				army_artillery_attack_factor = 0.1
+			}
+			}
+		}
+
+
+
+	
+	country = {
+		PLB_council = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				industrial_capacity_factory = 0.05
+				experience_gain_army = 0.05
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_administrative_apparatus = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = 0.05
+				industry_repair_factor = 0.10
+				political_power_gain = 0.1
+				
+			}
+		}
+	}
+	
+	country = {
+		PLB_polar_bank = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.1
+				political_advisor_cost_factor = 0.15
+				trade_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+				license_purchase_cost = 0.15
+			}
+		}
+	}
+	
+	country = {
+		PLB_polar_bank2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.15
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				license_purchase_cost = -0.25
+			}
+		}
+	}
+	
+	country = {
+		PLB_agency = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = OTT_gendarmerie
+			removal_cost = -1
+			modifier = {
+				enemy_partisan_effect = -0.10
+				drift_defence_factor = 0.10
+				MONTHLY_POPULATION = -0.1
+				neutrality_drift = 0.1
+				land_reinforce_rate = 0.1
+			}
+		}
+	}
+	
+	country = {
+		PLB_wondering_shamans = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+                conscription_factor = 0.1
+				war_support_factor = 0.05
+                local_resources_factor = 0.15
+	            army_morale_factor = 0.10
+			}
+		}
+	}
+	
+	country = {
+		PLB_divine_hierarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+                stability_factor = 0.05
+				army_attack_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_holy_industries = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.10
+					build_cost_ic = 0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					reliability = 0.10
+					build_cost_ic = 0.05
+				}
+				
+				mechanized_equipment = {
+						reliability = 0.10
+					build_cost_ic = 0.05
+					instant = yes
+				}
+	motorized_equipment = {
+						reliability = 0.10
+					build_cost_ic = 0.05
+					instant = yes
+				}
+	polar_bear_equipment = {
+						reliability = 0.10
+					build_cost_ic = 0.05
+					instant = yes
+				}
+			}
+		}
+	}
+	
+	country = {
+		PLB_our_destiny = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = triumphant_will
+			removal_cost = -1
+			modifier = {
+				conscription = 0.005
+				justify_war_goal_time = -0.25
+				war_support_factor = 0.10
+			}
+		}
+	}
+	
+	country = {
+		PLB_brotherly_spirits = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.05
+				partisan_effect = 0.10
+				supply_consumption_factor = -0.1
+			}
+		}
+	}
+	
+	country = {
+		PLB_griffon_clan_council = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_avian_clan_council = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.07
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				non_core_manpower = 0.02
+			}
+		}
+	}
+	
+	country = {
+  		PLB_protected_nature_idea = {
+            allowed = {
+				always = no
+			}
+	        allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			    has_government = democratic
+			}
+            picture = generic_neutrality_drift_bonus
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.02
+				stability_factor = 0.05
+            } 
+			research_bonus = {
+				magical_tech = 0.05
+			}
+        }	
+    }
+	
+	country = {
+	PLB_great_agricultural_project1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription_factor = -0.10
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.10
+			    production_factory_efficiency_gain_factor = -0.10
+			    industrial_capacity_factory = -0.10
+			}
+}
+}
+
+country = {
+	PLB_great_agricultural_project2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = german_advisors
+            removal_cost = -1
+modifier = { 
+				conscription_factor = 0.30
+				consumer_goods_factor = -0.05
+production_factory_max_efficiency_factor = 0.05
+			    production_factory_efficiency_gain_factor = 0.05
+				MONTHLY_POPULATION = 0.50
+			}
+}
+}
+
+country = {
+		PLB_factorum_expansion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+	}
+	
+	country = {
+		PLB_eastern_key_lake_mining_operations = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			modifier = {
+			   consumer_goods_factor = 0.05
+			   research_speed_factor = 0.05
+			}
+		}
+	}
+	
+		country = {
+		PLB_polar_bear_confederation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = great_depression
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				
+			}
+		}
+	}
+	
+	country = {
+		PLB_chained_parliament = {
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				neutrality_drift = 0.01
+			}
+		}
+	}
+	
+	country = {
+		PLB_building_schools = {
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+		PLB_modernizing_the_industry = {
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+		PLB_protect_weaker_bears = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.10
+				army_morale_factor = 0.10
+				army_attack_factor = -0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_bear_welfare_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_a_fair_republic_of_bears = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				army_defence_factor = 0.05
+				MONTHLY_POPULATION = 0.20
+				army_morale_factor = 0.10
+				army_attack_factor = -0.05
+				conscription_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_grand_army_of_the_republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+			    conscription = 0.015
+				training_time_army_factor = -0.10
+			}
+		}
+	}
+	country = {
+		PLB_grand_army_of_the_democracy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+			    conscription = 0.015
+				training_time_army_factor = -0.10
+			    send_volunteers_tension = -0.9
+				send_volunteer_divisions_required = -1.0
+				send_volunteer_size = 4
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+	}
+	
+	country = {
+		PLB_institutions_of_law = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = OTT_gendarmerie
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				neutrality_drift = 0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+	}
+	
+	country = {
+		PLB_republican_shamans = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+                local_resources_factor = 0.15
+	            army_morale_factor = 0.10
+				consumer_goods_factor = -0.025
+			}
+		}
+	}
+	
+	country = {
+	PLB_the_frozen_banner = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				justify_war_goal_time = -0.15
+				ai_focus_aggressive_factor = 0.5
+				generate_wargoal_tension = -0.2
+			}
+		}
+		}
+		
+		country = {
+	PLB_fill_up_our_ranks = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				conscription = 0.025
+				political_power_gain = -1
+				training_time_army_factor = -0.3
+				mobilization_speed = 0.3
+			}
+		}
+		}
+	
+	country = {
+	PLB_outlive_and_outlast = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+	production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		army_core_defence_factor = 0.05
+		}
+		}
+		}
+		
+	country = {
+		PLB_comrades_in_desperation= {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+		PLB_catch_up= {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.5
+			}
+		}
+	}

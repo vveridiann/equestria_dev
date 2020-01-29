@@ -1087,6 +1087,18 @@ jungle_warfare = {
 		}
 		research_cost = 1
 	}
+	polar_bear_armour = {
+	    allow = {
+			always = no
+		}		
+		enable_equipments = {
+			polar_bear_equipment_0
+		}
+		enable_subunits = {
+			Panzerbar
+		}
+		research_cost = 1
+	}
 	
 	HLQ_hill_warfare = {
 		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech hill_warfare"}

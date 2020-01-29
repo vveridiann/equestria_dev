@@ -1,0 +1,11 @@
+PLB_republican_struggle_decisions = {
+	icon = border_war
+
+	visible = {
+		has_completed_focus = PLB_raise_the_frozen_banner_of_republicanism
+	}
+
+	allowed = {
+		tag = PLB
+	}
+}
