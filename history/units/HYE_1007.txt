@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Warhounds"		# Melee  
+	division_names_group = HYE_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -9,6 +10,18 @@
 		infantry = { x = 1 y = 2 }
 	}
 }
+division_template = {
+	name = "Dervishes"
+	division_names_group = HYE_INF_01
+	regiments = {
+		ironpaws = { x = 0 y = 0 }
+		ironpaws = { x = 0 y = 1 }
+		ironpaws = { x = 0 y = 2 }
+	}
+	support = {
+	}
+	priority = 2
+}
 
 units = {
 	####### Warhounds #########
@@ -17,22 +30,46 @@ units = {
 		name = "Fire Hunters"
 		location = 19482
 		division_template = "Warhounds"
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.6
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "Heralds of Sand"
 		location = 19379
 		division_template = "Warhounds"
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.6
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "Yellow Arrows"
 		location = 19569
 		division_template = "Warhounds"
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.6
 		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Daraawiish Fahamka"
+		location = 19518
+		division_template = "Dervishes"
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "Daraawiish Furasho"
+		location = 16814
+		division_template = "Dervishes"
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "Daraawiish Cidlada"
+		location = 19387
+		division_template = "Dervishes"
+		start_experience_factor = 0.75
+	}
+	division = {
+		name = "Daraawiish Masaska"
+		location = 19432
+		division_template = "Dervishes"
+		start_experience_factor = 0.8
 	}
 }
 

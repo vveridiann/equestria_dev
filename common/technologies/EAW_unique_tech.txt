@@ -1124,4 +1124,35 @@ jungle_warfare = {
 			}
 		}
 	}
+	
+	HYE_hyenia_ironpaws = {
+
+		ironpaws = {
+			maximum_speed = 0.1
+			weight = -0.1
+			recon = 0.1
+			supply_consumption = -0.05
+
+			hills = {
+				defence = 0.05
+				attack = 0.05
+			}
+			mountain = {
+				defence = 0.05
+				attack = 0.05
+			}
+			desert = {
+				movement = 0.1
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+
+		research_cost = 1
+		start_year = 950
+
+		allow = {
+			always = no
+		}
+	}
 }

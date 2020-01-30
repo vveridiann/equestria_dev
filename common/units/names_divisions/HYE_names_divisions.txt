@@ -1,0 +1,22 @@
+﻿HYE_INF_01 = {
+	name = "Dogs of War"
+
+	for_countries = { HYE }
+
+	division_types = { "infantry" "magical_infantry" }
+
+	fallback_name = "%d Daraawiish"
+	ordered = { 
+		1 = { "%d Daraawiish 'Kowaad'" }
+		2 = { "%d Daraawiish 'Labaad'" }
+		3 = { "%d Daraawiish 'Saddexaad'" }
+		4 = { "%d Daraawiish 'Afaraad'" }
+		5 = { "%d Daraawiish 'Shanaad'" }
+		6 = { "%d Daraawiish 'Lixaad'" }
+		7 = { "%d Daraawiish 'Toddobaad'" }
+		8 = { "%d Daraawiish 'Siddeedaad'" }
+		9 = { "%d Daraawiish 'Sagaalaad'" }
+		10 = { "%d Daraawiish 'Tobnaad'" }
+		11 = { "%d Daraawiish" }
+	}
+}

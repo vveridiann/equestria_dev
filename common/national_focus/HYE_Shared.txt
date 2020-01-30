@@ -364,5 +364,34 @@ shared_focus = {
 		}
 	}
 }
- 
 
+shared_focus = {
+	id = HYE_victory_in_the_war
+	icon = GFX_goal_COS_Peace
+	x = 0
+	y = 1
+	relative_position_id = HYE_end_the_yeti
+	cost = 3
+	available = {
+		SCT = {
+			NOT = { has_war_with = HYE }
+		}
+		HYE = {
+			has_full_control_of_state = 1036
+			has_full_control_of_state = 1050
+			has_full_control_of_state = 1052
+		}
+	}
+	prerequisite = {
+		focus = HYE_end_the_yeti
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_victory_in_the_war"
+		country_event = { id = hyenia.13 hours = 3 }
+	}
+}

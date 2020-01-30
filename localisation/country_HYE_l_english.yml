@@ -1,6 +1,16 @@
 ﻿l_english:
 
-##Focuses##
+##Parties##
+HYE_communism_party:0 "Communist Rebels"
+HYE_communism_party_long:0 "Communist Rebels"
+HYE_fascism_party:0 "The Harsh Rule"
+HYE_fascism_party_long:0 "School of Xukun Adag"
+HYE_democratic_party:0 "Gentle Path"
+HYE_democratic_party_long:0 "School of Wadada Jilicsan"
+HYE_neutrality_party:0 "Unmoving Orthodoxy"
+HYE_neutrality_party_long:0 "School of Caado Dhaqaajin"
+
+##Foci##
 HYE_startup:0 "The Last Fight Approaches"
 HYE_startup_desc:0 "WAAAR" #placeholder
 HYE_rally_the_clans:0 "Rise, Oh Hyenas..."
@@ -27,6 +37,9 @@ HYE_finalize_sneaky:0 "Coup De Grace"
 HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
 HYE_end_the_yeti:0 "On the Eve of Battle"
 HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
+HYE_victory_in_the_war:0 "A Much-Deserved Victory"
+HYE_victory_in_the_war_desc:0 ""
+
 HYE_qaylid_dervish:0 "The Qaylid Dervish"
 HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, The Matriarch Fahamka ‘The Boss’ led the dogs of the Dervish in their ways, the ways of Qaylid (The Bark or the Shout). This has come to define the society of the post war Hyenia, as the Dervish now rules over the vast lands left to them after the Storm Empire’s collapse"
 HYE_regency:0 "Furasho's Regency"
@@ -99,44 +112,92 @@ hyenia.3.d:0 "The Hyenian resistance has struck again. Their "dervishes" have sn
 hyenia.3.a:0 "Damn them all!"
 
 hyenia.4.t:0 "Peace with the Hyenas?" #Peace with the Hyenas?
-hyenia.4.d:0 "Two front war, one front ended at a steep price and the cessetion of Hyenian lands."
-hyenia.4.a:0 "Cede Lands to Hyenas"
-hyenia.4.b:0 "Do not Cede lands"
+hyenia.4.d:0 "We are trapped in a two front war; one front against the other successors to the Storm King, and the other against the Hyenian zealots. As it stands, we are hard pressed, and  desperate times means formerly unthinkable solutions must be considered. Between our two enemies, the Hyenas are less interested in our destruction and more in reclaiming the lands we took from them. While it would mean giving up a lot of territory and industrial capability, it would mean that we would have only one front to focus on. When we unite the Storm Kingdom again, we can return to deal with the hyenas at a later date."
+hyenia.4.a:0 "We can not fight two wars at once"
+hyenia.4.b:0 "We will not give up what we won rightfully!"
 
-hyenia.5.t:0 "Yeti Surrender" #Yetis Surrender!
-hyenia.5.d:0 "Haha they fight like French"
-hyenia.5.a:0 "Haw"
+hyenia.5.t:0 "The Yetis Surrender" #Yetis Surrender!
+hyenia.5.d:0 "Buckling under the onslaught of our assault, the Yetis have sent envoys to negotiate for peace. They know the position they are in, and are willing to yield the entirety of our homelands back to us. There is no reason for us to not accept this. It is over, and we can return home."
+hyenia.5.a:0 "Hurrah!"
 
-hyenia.6.t:0 "Yetis Refuse Surrender." #The Yetis fight on!
-hyenia.6.d:0 "Wait, what?"
-hyenia.6.a:0 "Fight on I guess"
+hyenia.6.t:0 "The Yetis Refuse to Surrender." #The Yetis fight on!
+hyenia.6.d:0 "Though we have pressed them hard, the Yetis are determined to hold onto their stolen lands. Blood flows in rivers already, yet they fight as though they actually have something to fight for. This war will only end when they are utterly destroyed it seems. So be it: If death is all they understand, the dervishes will provide."
+hyenia.6.a:0 ""
 
 hyenia.7.t:0 "Hyenian Ultimatum" #Hyenian Ultimatum to [INSERT COUNTRY HERE] for Thunderbowl
-hyenia.7.d:0 "Note: This event exists if the Thundarians die early. The Hyenas can demand their lands."
-hyenia.7.a:0 "Relent"
-hyenia.7.b:0 "Ohi. (No)"
+hyenia.7.d:0 "Though the Thundarians have been crushed by our victorious armies, we have been left with another headache. The Hyenas who once inhabited these lands have not gone away, and instead they have united in their quest to reclaim their homeland, parts of which we now hold. The question is whether we are going to attempt to hold onto it, and divide precious manpower to hold back the Hyenas while there is still a civil war to win."
+hyenia.7.a:0 "It's not worth it."
+hyenia.7.b:0 "If they want it, they can try to take it."
 
 hyenia.8.t:0 "[thunderbowl_owner.GetName] Refuses to Comply" #Not Returning our lands? War.
 hyenia.8.d:0 "The Yetis have Refused our Ultimatum."
 hyenia.8.a:0 "War it is."
 
 hyenia.9.t:0 "His Only Mother" #His Only Mother
-hyenia.9.d:0 ""
-hyenia.9.a:0 ""
+hyenia.9.d:0 "Masaska quietly gave the bowl of water to Fahamka, silently sitting by her bedside as the old hyena drank from it and taking it from her when she was finished. Over half of it was still there. Even merely drinking was becoming an issue for Fahamka.\n\n"Do not look so despondent, little ferret,"" Fahamka cautioned her gently. "You are not yet old enough for such furrows in your face."\n\n"Neither should you be," Masaska responded quietly, her face a study of sorrow, worry and fear.\n\n"And yet, I am,"" Fahamka sighed, leaning back in her bed. "It is the way of things," she said as she squeezed Masaska's paw in hers, "Surely you understood even before this that I was not eternal?"\n\n"The mind did, but not the heart," Masaska confessed, her head bowed. "When you found me, I was a shadow roaming a burning village. But without light there are no shadows, only darkness. I am afraid... I know it is our duty to let go of the past, but when you are gone, I do not know how I can move on.\n\n"Oh little ferret,"" Fahamka sighed. "A hyena, dervish or not, can still cry if she is sad. Cry for me, mourn and rail against this cruel, uncaring world, just promise me that you will rise again. Your heart is purer than you know, and you are not without light of your own. When I am gone, promise me that you will be for others what I was for you. Promise me you will be a light in the dark.""
+hyenia.9.a:0 "I promise"
 
 hyenia.10.t:0 "The Fading Queen of War" #Fading Queen of War
-hyenia.10.d:0 ""
-hyenia.10.a:0 ""
+hyenia.10.d:0 ""Why do you insist on carrying such shame?"" Fahamka asked Furasho where she sat in front of him. A board game stood between them, courtesy of the latter. He had brought it, hoping for a game that would either see him win against her for the first time, or give Fahamka a full hundred victories. The old female could see through his reasons for being here though, sniffing out the truth beneath.\n\nIn response to her question, Furasho bowed his head where he sat. "My father failed the last king of Hyenia," he murmured, "and it seems I am cursed to follow his path. I learned nothing from his failure, and though I swore to bring you back home,  it seems I can only repeat his failure."\n\n"You will carry our people home Furasho, and that must be enough,” Fahamka chided him. “Do not hang your faith and hopes on one hyena, for that is all I am."\n\n"One hyena can be everything, and without her, all hyenas nothing," Furasho muttered. "The finest smith in the world cannot forge great things out of waste iron, and good steel is wasted in the hands of a fool."\n\n"Then become such a smith," Fahamka told him. “Instead of sitting and crying at my grave, forge this nation in my absence. You carried our struggle further than I could have on my own. Yes, maybe me being eternal, akin to the queen of the ponies beyond the northern seas, would have helped you, but perfect is the enemy of good. Surely you see that, oh warmaster," she smiled, moving her piece to finish the match, winning her hundredth victory. 
+hyenia.10.a:0 "Again, I am humbled."
 
 hyenia.11.t:0 "Stormbreakers" #Stormbreakers
-hyenia.11.d:0 ""
-hyenia.11.a:0 ""
+hyenia.11.d:0 "Furasho’s strategy has been given Fahamka’s approval, and across the Hyenian deserts, be it by propaganda and calls to actions or mandatory conscription, new formations of Hyenas are being rallied and armed, with everyone not mustered being instead put to work to feed the army that is rising for the battle ahead.\n\nThe Dervishes, who never numbered more than a couple dozen thousand, are dispersed among the ranks to act as the champions and the leaders of these new armies, drilling the soldiers in shooting and marching as much as instilling the principles of Fahamka’s Qaylid in them.\n\nThey are rag-tag and ill disciplined compared to the dervishes that lead them, but these warpups can march and shoot, they are spoiling for revenge and with the right leadership they will fight stubbornly. What's more, as they fight and die, surging in behind the Dervish spearheads through the Yeti lines and into the tunnels of our ancestral homes, they will find kinship and unity under the banner of the Qaylid. Every warpup that dies here is a hero twice over, for not only do they die for our homes, but their deaths become the mortar binding our people together."
+hyenia.11.a:0 "In fire and death, we become one."
 
 hyenia.12.t:0 "Shadowdancers" #Shadowdancers
-hyenia.12.d:0 ""
-hyenia.12.a:0 ""
+hyenia.12.d:0 "Masaska’s warning have been heeded, and the Dervishes who carried on the struggle will be the ones to finish it as well. The refugees and the impoverished have lost enough without seeing their children, siblings and parents forcibly dragged into war.  None who freely wishes to fight is turned away, but none is dragged into battle like a slave.\n\nMaintaining the integrity of their original formations, the Dervishes can move like shadows through the enemy lines. Entire divisions are rising in the mountains to wreak havoc on the occupiers’ supply lines and communications and block their routes of escape. In the end, the swift shadow warfare of the Dervishes are leaving them surrounded and ready to be cut into pieces.\n\nWith only a few extra divisions gathered for the struggle ahead, the pace set by our forces must be set high, indeed blinding, and none but the dervishes could truly maintain it for as long as needed. With the hardened veterans of years of war carrying on the fight, it can be done though, and those who wait in the desert shall see the Dervishes’ mettle in the days and weeks ahead. They will see heroes and paragons, and they will know that even in the last days, the Dervishes were neither slavers nor tyrants, but protectors and teachers."
+hyenia.12.a:0 "Faster, faster, cut them down!"
+
+hyenia.13.t:0 "<the first of the power struggle events, an introduction>"
+hyenia.13.d:0 "perhaps another event between .13 and .14, depicting Fahamka's death? or you could do it in .13"
+hyenia.13.a:0 ""
+
+hyenia.14.t:0 "Establishing Authority"
+hyenia.14.d:0 ""
+hyenia.14.a:0 "Furasho"
+hyenia.14.b:0 "Masaska"
+
+hyenia.15.t:0 "Dealing with the Collaborators"
+hyenia.15.d:0 ""
+hyenia.15.a:0 "Masaska"
+hyenia.15.b:0 "Furasho"
+
+hyenia.16.t:0 "The New Leadership"
+hyenia.16.d:0 ""
+hyenia.16.a:0 "Furasho"
+hyenia.16.b:0 "Masaska"
+
+hyenia.17.t:0 "Fahamka's Grave"
+hyenia.17.d:0 ""
+hyenia.17.a:0 "Masaska"
+hyenia.17.b:0 "Furasho"
+
+hyenia.18.t:0 "Tensions among the Hyenas"
+hyenia.18.d:0 ""
+hyenia.18.a:0 "Furasho"
+hyenia.18.b:0 "Masaska"
+
+hyenia.19.t:0 "The Duel"
+hyenia.19.d:0 ""
+hyenia.19.a:0 "Whos gon be the winner?"
+
+hyenia.20.t:0 "Furasho Wins the Duel"
+hyenia.20.d:0 ""
+hyenia.20.a:0 ""
+
+hyenia.21.t:0 "Masaska Wins the Duel"
+hyenia.21.d:0 ""
+hyenia.21.a:0 ""
+
+hyenia.22.t:0 "The Death of Fahamka"
+hyenia.22.d:0 ""
+hyenia.22.a:0 ""
 
 ##Equipment##
+
+##Tech##
+HYE_hyenia_ironpaws:0 "Hyenian Ironpaws"
 
 ##Tooltips##
 HYE_saboteurs_tt:0 "Allows Saboteurs to Cause Problems with the Thundarian Armies via Decision."
