@@ -22,10 +22,12 @@
 #		add_political_power = 10 #placeholder
 #	}
 #}
+
+##Political###
 shared_focus = {
 	id = HYE_startup
 	icon = GFX_goal_bombs_away
-	x = 9
+	x = 13
 	y = 0
 	cost = 1
 	available = {
@@ -393,5 +395,347 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_victory_in_the_war"
 		country_event = { id = hyenia.13 hours = 3 }
+	}
+}
+
+###Industry###
+
+shared_focus = {
+	id = HYE_nationbuilding
+	icon = GFX_goal_revolution
+	x = 3
+	y = 0
+
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_nationbuilding"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_schools
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_nationbuilding
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_nationbuilding
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_schools"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_lessons_of_struggle
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_nationbuilding
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_nationbuilding
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lessons_of_struggle"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_education
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_schools
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_schools
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_education"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_abolish_greed
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_schools
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_schools
+	}
+	prerequisite = {
+		focus = HYE_lessons_of_struggle
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_abolish_greed"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_dogfood
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_lessons_of_struggle
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lessons_of_struggle
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_dogfood"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_modern_factory
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_dogfood
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_dogfood
+	}
+	prerequisite = {
+		focus = HYE_abolish_greed
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_modern_factory"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_eradicate_illiteracy
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_education
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_education
+	}
+	prerequisite = {
+		focus = HYE_abolish_greed
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_eradicate_illiteracy"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_university
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_eradicate_illiteracy
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_eradicate_illiteracy
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_university"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_industrialization
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_modern_factory
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_eradicate_illiteracy
+	}
+	prerequisite = {
+		focus = HYE_modern_factory
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_industrialization"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_crop_rotation
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_modern_factory
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_modern_factory
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_crop_rotation"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_qaylid_academia
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_university
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_university
+	}
+	prerequisite = {
+		focus = HYE_industrialization
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_academia"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_qaylid_industry
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_crop_rotation
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_crop_rotation
+	}
+	prerequisite = {
+		focus = HYE_industrialization
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_industry"
+		add_political_power = 10 #placeholder
+	}
+}shared_focus = {
+	id = HYE_one_purpose
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_qaylid_academia
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_academia
+	}
+	prerequisite = {
+		focus = HYE_qaylid_industry
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_purpose"
+		add_political_power = 10 #placeholder
 	}
 }

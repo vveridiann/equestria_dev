@@ -10,4 +10,5 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
 	shared_focus = HYE_startup
+	shared_focus = HYE_nationbuilding
 }
