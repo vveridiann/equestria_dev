@@ -94,6 +94,32 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus GRI_develop_fighters"
+		if = {
+			limit = {
+			    has_tech = early_fighter
+		    }
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+			}
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 2.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
 }
 
 shared_focus = {
@@ -116,6 +142,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = STM_black_demons_tt
+			hidden_effect = {
+				load_oob = "STM_black_demons"
+			}
+			
+		}
 }
 
 shared_focus = {
@@ -138,6 +173,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 2.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
 }
 
 shared_focus = {
@@ -160,6 +204,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+			add_tech_bonus = {
+				name =  tactical_bombers
+				bonus = 2.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
 }
 
 shared_focus = {
@@ -235,6 +288,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = bomber_bonus
+			bonus = 2.0
+			uses = 1
+			category = cat_strategic_bomber
+		}
+	}
 }
 
 shared_focus = {
@@ -257,6 +319,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = heavy_fighter_bonus
+			bonus = 1.0
+			uses = 2
+			category = cat_heavy_fighter
+		}
+	}
 }
 
 shared_focus = {
@@ -434,6 +505,15 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+			add_tech_bonus = {
+				name = naval_bomber_research
+				bonus = 2.0
+				uses = 1
+				category = naval_bomber
+			}
+		}
 }
 
 shared_focus = {

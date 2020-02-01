@@ -21,3 +21,6 @@ STM_mini_airforce_budget_1_SD_desc:0 ""
 
 STM_mini_airforce_budget_2_SD:0 "Substantial Heavy Aircraft-focused Airforce Budget"
 STM_mini_airforce_budget_2_SD_desc:0 ""
+
+########## Tooltips:
+STM_black_demons_tt:0 "The elite fighter squadron 'Black Demons' will be deployed in Stormwind"
