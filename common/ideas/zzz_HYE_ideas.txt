@@ -78,7 +78,6 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				fascism_drift = 0.02
 				army_morale_factor = 0.01
 				army_org_factor = -0.01
 				MONTHLY_POPULATION = -0.01
@@ -120,7 +119,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }		
+			traits = { silent_workdog }		
 		}
 		HYE_dawacada = {
 		    picture = unknown_advisor_dog
@@ -129,7 +128,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }	
+			traits = { war_industrialist }	
 		}
 		HYE_waalan = {
 		    picture = unknown_advisor_dog
@@ -138,7 +137,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }			
+			traits = { HYE_mystic }			
 		}
 		HYE_xasillon = {
 		    picture = unknown_advisor_dog
@@ -147,26 +146,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }			
+			traits = { armaments_organizer }			
 		}
-		HYE_dhagax = {
-		    picture = unknown_advisor_dog
-			allowed = {
-				original_tag = HYE
-			}
-			available = {
-			}
-			traits = { }			
-		}
-		HYE_sunta = {
-			picture = unknown_advisor_dog
-			allowed = {
-				original_tag = HYE
-			}
-			available = {
-			}
-			traits = { }
-		}
+
 		HYE_gaadiidka = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -174,7 +156,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { civilian_industry_organizer }
 		}
 		HYE_hadalka = {
 			picture = unknown_advisor_dog
@@ -183,7 +165,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { HYE_wise_old_dog }
 		}
 		
 		#Masaska's advisors begin here
@@ -195,37 +177,20 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { HYE_hidden_intellect }
 		}
-		HYE_maraq = {
-			picture = unknown_advisor_dog
-			allowed = {
-				original_tag = HYE
-			}
-			available = {
-			}
-			traits = { }
-		}
-		HYE_longrains = {
-			picture = idea_unknown_advisor #is a pegasus
-			allowed = {
-				original_tag = HYE
-			}
-			available = {
-			}
-			traits = { }
-		}
+
 		
 		#Furasho's Advisors Begin here
 		
-		HYE_bogsiiye = {
+		HYE_bogsiiye = { #Transfer to Infantry Eq designer?
 			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { }
+			traits = { HYE_healer }
 		}
 		HYE_seenyaale = {
 			picture = unknown_advisor_dog
@@ -234,7 +199,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { HYE_producer }
 		}
 		HYE_xaawa = {
 			picture = unknown_advisor_dog
@@ -243,7 +208,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { prince_of_terror }
 		}
 	}
 	army_chief = {
@@ -254,7 +219,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_chief_defensive_2 }
 		}
 		HYE_furasho_chief = {
 			picture = unknown_advisor_dog
@@ -263,7 +228,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }		
+			traits = { army_chief_offensive_3 }		
 		}
 		HYE_masaska_chief = {
 			picture = unknown_advisor_dog
@@ -272,11 +237,22 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_chief_organizational_3 }
 		}
 	}
-	#Theorists todo
-	high_command = {
+	air_chief = {
+		HYE_longrains = {
+			picture = unknown_advisor #is a pegasus
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { air_chief_all_weather_2 }
+		}
+	}
+	#Theorists 
+	theorist = {
 		HYE_yeyda = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -284,8 +260,29 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { military_theorist }
 		}
+	}
+	high_command = {
+		HYE_sunta = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_logistics_3 }
+		}
+		HYE_dhagax = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_drill_2 }			
+		}		
+
 		#Masaska's
 		HYE_iftiin = {
 			picture = unknown_advisor_dog
@@ -294,7 +291,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_concealment_2 }
 		}
 		HYE_dhalaalaya = {
 			picture = unknown_advisor_dog
@@ -303,8 +300,17 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_chief_manuver_2 }
 		}
+		HYE_maraq = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_commando_2 }
+		}		
 		#Furasho's
 		HYE_eberweyn = {
 			picture = unknown_advisor_dog
@@ -313,7 +319,7 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_infantry_2 }
 		}
 		HYE_dareere = {
 			picture = unknown_advisor_dog
@@ -322,8 +328,84 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { }
+			traits = { army_entrenchment_2 }
 		}
 	}
 	#Industry todo
+	tank_manufacturer = {
+		HYE_tank_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		HYE_navy_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		HYE_aircraft_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { light_aircraft_manufacturer }		
+		}
+	}
+	materiel_manufacturer = {
+		HYE_guns_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			traits = {
+				infantry_equipment_manufacturer 
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+				}
+			}
+		}
+	}
+	industrial_concern = {
+		designer = yes
+		HYE_industry_company ={
+		    picture = generic_refining_concern_1
+		    allowed = {
+				original_tag = HYE
+			}
+            available = {
+				has_completed_focus = ANG_our_own_oil_company
+			}
+            removal_cost = -1
+ 			research_bonus = {
+				synth_resources = 0.10
+			}
+			traits = { construction_company  }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}		
+		}
+	}
+	
 }
