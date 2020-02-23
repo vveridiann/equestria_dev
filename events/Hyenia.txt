@@ -446,6 +446,7 @@ country_event = { #The Death of Fahamka
 			}
 		}
 		country_event = { id = hyenia.14 days = 1 }
+		remove_ideas = { HYE_regency }
 	}
 }
 
