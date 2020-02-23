@@ -1715,6 +1715,7 @@ decrease_storm_king = {
 		remove_ideas = zebrica_legacy_of_storm3
 	}
 }
+
 remove_storm_king = {
 	remove_ideas = zebrica_legacy_of_storm1
 	remove_ideas = zebrica_legacy_of_storm2
