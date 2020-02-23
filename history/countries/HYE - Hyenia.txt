@@ -50,10 +50,14 @@ add_ideas = {
 	agrarian_society
 	better_science_base
 	lack_of_scientists1
+	poverty3
+	zebrica_legacy_of_storm1	
 	HYE_desert_devils 
 	HYE_to_recovery
 	HYE_regency
 	HYE_qaylid_dervish
+	partial_economic_mobilisation
+	limited_conscription
 }
 
 set_country_flag = better_science_base_unlocked

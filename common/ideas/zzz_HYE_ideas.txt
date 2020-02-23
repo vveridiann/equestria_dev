@@ -47,6 +47,10 @@ ideas = {
 				tag = SCT
 				attack_bonus_against = 0.15
 			}
+			modifier = {
+				army_morale_factor = 0.2
+				army_org_factor = 0.15
+			}
 		}
 		HYE_sabotaged_SCT = {
 			picture = anti_soviet_pact #placeholder
@@ -70,6 +74,7 @@ ideas = {
 				political_power_gain = 0.1
 				war_support_factor = 0.1
 				conscription_factor = 0.15
+				stability_factor = 0.1
 			}
 		}
 		HYE_regency = {
@@ -96,6 +101,20 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
+		HYE_recovering = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = -0.125
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.02
+				production_factory_efficiency_gain_factor = -0.02
+				stability_factor = -0.01
+			}
+		}		
 		HYE_desert_devils = {
 			picture = anti_soviet_pact #placeholder
 			removal_cost = -1
@@ -107,6 +126,26 @@ ideas = {
 				acclimatization_hot_climate_gain_factor = 0.1
 				out_of_supply_factor = -0.1
 				no_supply_grace = 36
+			}
+		}
+		HYE_build_nation_industry = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_built_industry = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 	}

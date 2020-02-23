@@ -425,8 +425,8 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = hyenia.22
+country_event = { #The Death of Fahamka
+	id = hyenia.22 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.22"}
 	title = hyenia.22.t
 	desc = hyenia.22.d
@@ -446,5 +446,18 @@ country_event = {
 			}
 		}
 		country_event = { id = hyenia.14 days = 1 }
+	}
+}
+
+country_event = {
+	id = hyenia.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.23"}
+	title = hyenia.23.t
+	desc = hyenia.23.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.23.a	
+		add_ideas = HYE_build_nation_industry
 	}
 }

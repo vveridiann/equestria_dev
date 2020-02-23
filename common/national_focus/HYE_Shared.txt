@@ -1,27 +1,5 @@
 ###Hyenia, by Sweet Chrysalis & Knifepony###
 #Startup, first focuses#
-#shared_focus = {
-#	id = HYE_
-#	icon = GFX_goal_revolution
-#	x = 0
-#	y = 1
-#	relative_position_id = HYE_
-#	cost = 1
-#	available = {
-#	}
-#	prerequisite = {
-#		focus = HYE_
-#	}
-#	bypass = {
-#	}
-#	ai_will_do = {
-#		factor = 10
-#	}
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus HYE_"
-#		add_political_power = 10 #placeholder
-#	}
-#}
 
 ##Political###
 shared_focus = {
@@ -395,6 +373,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_victory_in_the_war"
 		country_event = { id = hyenia.13 hours = 3 }
+		decrease_storm_king = yes
 	}
 }
 
@@ -418,7 +397,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_nationbuilding"
-		add_political_power = 10 #placeholder
+		effect_tooltip = {
+			add_ideas = HYE_build_nation_industry
+		}
+		hidden_effect = { country_event = { id = hyenia.23 } } #adds the idea
+		two_random_infrastructure_and_slot = yes
 	}
 }
 
@@ -441,7 +424,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_schools"
-		add_political_power = 10 #placeholder
+		decrease_illiteracy = yes
 	}
 }
 
@@ -487,7 +470,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_education"
-		add_political_power = 10 #placeholder
+		decrease_illiteracy = yes
+		swap_ideas = {
+			remove_idea = HYE_build_nation_industry
+			add_idea = HYE_built_industry
+		}
 	}
 }
 
@@ -513,7 +500,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_abolish_greed"
-		add_political_power = 10 #placeholder
+		swap_ideas = { 
+			remove_idea = HYE_to_recovery
+			add_idea = HYE_recovering
+		}
 	}
 }
 
@@ -537,6 +527,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_dogfood"
 		add_political_power = 10 #placeholder
+		decrease_poverty = yes
+		add_ideas = HYE_population_growth
+		one_random_infrastructure = yes
 	}
 }
 
@@ -562,12 +555,13 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_modern_factory"
-		add_political_power = 10 #placeholder
+		increase_society_development = yes
+		one_random_industrial_complex = yes
 	}
 }
 
-shared_focus = {
-	id = HYE_eradicate_illiteracy
+shared_focus = { #The eradication of illiteracy marks a turning point
+	id = HYE_eradicate_illiteracy 
 	icon = GFX_goal_revolution
 	x = 1
 	y = 1
@@ -588,7 +582,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_eradicate_illiteracy"
-		add_political_power = 10 #placeholder
+		decrease_illiteracy = yes
+		add_research_slot = 1
 	}
 }
 
@@ -611,7 +606,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_university"
-		add_political_power = 10 #placeholder
+		add_research_slot = 1
 	}
 }
 
@@ -637,7 +632,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_industrialization"
-		add_political_power = 10 #placeholder
+		increase_society_development = yes
+		one_random_industrial_complex = yes
 	}
 }
 
@@ -660,7 +656,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_crop_rotation"
-		add_political_power = 10 #placeholder
+		remove_poverty = yes
+		two_random_infrastructure_and_slot = yes
 	}
 }
 
@@ -686,7 +683,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_academia"
-		add_political_power = 10 #placeholder
+		add_research_slot = 1
 	}
 }
 
@@ -712,9 +709,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_industry"
-		add_political_power = 10 #placeholder
+		increase_society_development = yes
+		two_random_arms_factory = yes
 	}
-}shared_focus = {
+}
+
+shared_focus = {
 	id = HYE_one_purpose
 	icon = GFX_goal_revolution
 	x = 1
@@ -734,8 +734,42 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	completion_reward = {
+	completion_reward = { #Tentative - maybe have this be removed earlier, this provide buffs?
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_purpose"
-		add_political_power = 10 #placeholder
+		if = {
+			limit = {
+				has_idea = HYE_recovering
+			}
+			remove_ideas = HYE_recovering
+		}
+		else = {
+			remove_ideas = HYE_to_recovery
+		}
 	}
 }
+
+###QAYLID TREE###
+
+#shared_focus = {
+#	id = HYE_
+#	icon = GFX_goal_revolution
+#	x = 0
+#	y = 1
+#	relative_position_id = HYE_
+#	cost = 1
+#	available = {
+#	}
+#	prerequisite = {
+#		focus = HYE_
+#	}
+#	bypass = {
+#	}
+#	ai_will_do = {
+#		factor = 10
+#	}
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus HYE_"
+#		add_political_power = 10 #placeholder
+#	}
+#}
+
