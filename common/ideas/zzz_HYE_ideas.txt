@@ -112,9 +112,32 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 				production_factory_max_efficiency_factor = -0.02
 				production_factory_efficiency_gain_factor = -0.02
-				stability_factor = -0.01
+				stability_factor = -0.025
 			}
-		}		
+		}	
+		HYE_recover = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.01
+				production_factory_efficiency_gain_factor = -0.01
+				stability_factor = -0.05
+			}
+		}	
+		HYE_recovered = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				global_building_slots_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}			
 		HYE_desert_devils = {
 			picture = anti_soviet_pact #placeholder
 			removal_cost = -1
@@ -135,7 +158,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = -0.05
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		HYE_built_industry = {
@@ -146,8 +169,27 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
+		HYE_population_growth = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		HYE_population_boom = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+			}
+		}		
 	}
 #Political Advisors
 	political_advisor = {

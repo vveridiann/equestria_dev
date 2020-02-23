@@ -11,6 +11,7 @@ HYE_neutrality_party:0 "Unmoving Orthodoxy"
 HYE_neutrality_party_long:0 "School of Caado Dhaqaajin"
 
 ##Foci##
+#Political
 HYE_startup:0 "The Last Fight Approaches"
 HYE_startup_desc:0 "WAAAR" #placeholder
 HYE_rally_the_clans:0 "Rise, Oh Hyenas..."
@@ -40,15 +41,35 @@ HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show s
 HYE_victory_in_the_war:0 "A Much-Deserved Victory"
 HYE_victory_in_the_war_desc:0 ""
 
-HYE_qaylid_dervish:0 "The Qaylid"
-HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, Great Teacher Fahamka has led her disciples and students to create a new way of life for the Hyenas. This more spiritual and ascetic path has created something rarely before seen in Hyenia, and now the Dervishes stand as the new order in Hyenia."
-HYE_regency:0 "The Great Teacher's Weakness."
-HYE_regency_desc:0 "After a long life, Fahamka stands at the precipice of the final journey. This has scared many among the Dervishes, but also given them even greater determination to win this war and fast, so that she may look upon the homeland before age claims her."
-HYE_to_recovery:0 "Road To Recovery"
-HYE_to_recovery_desc:0 "Though the war against the Storm Empire is over, recovery from it has been slow at best. Though Matriarch Fahamka has guided us well, there is still more to be done."
-HYE_desert_devils:0 "Desert Devils"
-HYE_desert_devils_desc:0 "From their tunnels and across the plains and hills, the Dervishes have carried out their war of resistance with relentless fervor. Fighting like demons under the hot Zebrican sun and moving like shadows under the moon, they are the masters of warfare in this type of terrain."
-
+#Industrial
+HYE_nationbuilding:0 "Build a Nation"
+HYE_nationbuilding_desc:0 ""
+HYE_schools:0 "Build Schools"
+HYE_schools_desc:0 ""
+HYE_lessons_of_struggle:0 "Lessons Of Struggle"
+HYE_lessons_of_struggle_desc:0 ""
+HYE_education:0 "Qaylid Education"
+HYE_education_desc:0 ""
+HYE_abolish_greed:0 "Abolish Greed"
+HYE_abolish_greed_desc:0 ""
+HYE_dogfood:0 "Feeding Our People"
+HYE_dogfood_desc:0 ""
+HYE_eradicate_illiteracy:0 "Eradicate Illiteracy"
+HYE_eradicate_illiteracy_desc:0 ""
+HYE_modern_factory:0 "Factories, Not Manufactories"
+HYE_modern_factory_desc:0 ""
+HYE_university:0 "Establish a University"
+HYE_university_desc:0 ""
+HYE_industrialization:0 "Mass Production"
+HYE_industrialization_desc:0 ""
+HYE_crop_rotation:0 "Introduce Crop Rotation"
+HYE_crop_rotation_desc:0 ""
+HYE_qaylid_academia:0 "Higher Education"
+HYE_qaylid_academia_desc:0 ""
+HYE_qaylid_industry:0 "A Modern Industry"
+HYE_qaylid_industry_desc:0 ""
+HYE_one_purpose:0 "One Nation, One Purpose, One Miracle."
+HYE_one_purpose_desc:0 ""
 
 ##Decisions##
 HYE_sneaky_plan_decisions:0 "Against the Thundarians"
@@ -59,6 +80,23 @@ sabotage_SCT:0 "Sabotage the [SCT.GetAdjective]'s efforts"
 infiltrate_SCT_desc:0 "More stuff" #placeholder
 
 ##Ideas##
+#Starting ideas and their derivatives
+HYE_qaylid_dervish:0 "The Qaylid"
+HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, Great Teacher Fahamka has led her disciples and students to create a new way of life for the Hyenas. This more spiritual and ascetic path has created something rarely before seen in Hyenia, and now the Dervishes stand as the new order in Hyenia."
+HYE_regency:0 "The Great Teacher's Weakness."
+HYE_regency_desc:0 "After a long life, Fahamka stands at the precipice of the final journey. This has scared many among the Dervishes, but also given them even greater determination to win this war and fast, so that she may look upon the homeland before age claims her."
+HYE_to_recovery:0 "Road To Recovery"
+HYE_to_recovery_desc:0 "Though the war against the Storm Empire is over, recovery from it has been slow at best. Though Matriarch Fahamka has guided us well, there is still more to be done."
+HYE_recovering:0 "Partial Recovery"
+HYE_recovering_desc:0 ""
+HYE_recover:0 "The Hyenian Recovery"
+HYE_recovered:0 "The Hyenian Miracle"
+HYE_desert_devils:0 "Desert Devils"
+HYE_desert_devils_desc:0 "From their tunnels and across the plains and hills, the Dervishes have carried out their war of resistance with relentless fervor. Fighting like demons under the hot Zebrican sun and moving like shadows under the moon, they are the masters of warfare in this type of terrain."
+HYE_built_industry:0 "Qaylid Industry"
+HYE_built_industry_desc:0 ""
+
+#Other ideas
 HYE_movespeed:0 "Like The Wind"
 HYE_movespeed_desc:0 "We move fast and look at the enemy fast." #placeholder
 HYE_command:0 "Dervish Determination"
@@ -69,6 +107,9 @@ HYE_yetided:0 "The Last Offensive"
 HYE_yetided_desc:0 "Hyenian Artillery is led by God. Wait what is Artillery again?" #placeholder
 HYE_sabotaged_SCT:0 "Hyenian Saboteurs"
 HYE_sabotaged_SCT_desc:0 "Sabotage! Oh no!" #placeholder
+HYE_population_growth:0 "Food Programmes"
+HYE_population_boom:0 "Modern Crop Rotation"
+
 
 ##Advisors##, note that adding _desc to another line adds a description where you can add a description for the advisor if you so wish
 #Political Advisors
@@ -193,6 +234,10 @@ hyenia.21.a:0 ""
 hyenia.22.t:0 "The Death of Fahamka"
 hyenia.22.d:0 ""
 hyenia.22.a:0 ""
+
+hyenia.23.t:0 "Rebuilding Hyenia"
+hyenia.23.d:0 ""
+hyenia.23.a:0 ""
 
 ##Equipment##
 

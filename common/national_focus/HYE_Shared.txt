@@ -447,7 +447,15 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_lessons_of_struggle"
-		add_political_power = 10 #placeholder
+		swap_ideas = { 
+			remove_idea = HYE_to_recovery
+			add_idea = HYE_recovering
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
 	}
 }
 
@@ -500,9 +508,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_abolish_greed"
-		swap_ideas = { 
-			remove_idea = HYE_to_recovery
-			add_idea = HYE_recovering
+		swap_ideas = {
+			remove_idea = HYE_recovering
+			add_idea = HYE_recover
 		}
 	}
 }
@@ -658,6 +666,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_crop_rotation"
 		remove_poverty = yes
 		two_random_infrastructure_and_slot = yes
+		swap_ideas = {
+			remove_idea = HYE_population_growth
+			add_idea = HYE_population_boom
+		}
 	}
 }
 
@@ -734,21 +746,16 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	completion_reward = { #Tentative - maybe have this be removed earlier, this provide buffs?
+	completion_reward = { 
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_purpose"
-		if = {
-			limit = {
-				has_idea = HYE_recovering
-			}
-			remove_ideas = HYE_recovering
-		}
-		else = {
-			remove_ideas = HYE_to_recovery
+		swap_ideas = {
+			remove_idea = HYE_recover
+			add_idea = HYE_recovered
 		}
 	}
 }
 
-###QAYLID TREE###
+###Qaylid###
 
 #shared_focus = {
 #	id = HYE_
@@ -772,4 +779,6 @@ shared_focus = {
 #		add_political_power = 10 #placeholder
 #	}
 #}
+
+###Political Pt 2###
 
