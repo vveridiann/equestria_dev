@@ -757,6 +757,195 @@ shared_focus = {
 
 ###Qaylid###
 
+shared_focus = {
+	id = HYE_qaylid_start
+	icon = GFX_goal_revolution
+	x = 24
+	y = 0
+	cost = 1
+	available = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_start"
+		add_political_power = 70
+	}
+}
+
+shared_focus = {
+	id = HYE_past_trap
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_start
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_past_trap"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_transience_change
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_start
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_transience_change"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_action_reaction
+	icon = GFX_goal_revolution
+	x = 1
+	y = 2
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_transience_change
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_action_reaction"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_virtue_future
+	icon = GFX_goal_revolution
+	x = 3
+	y = 2
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_transience_change
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_virtue_future"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_item_skill
+	icon = GFX_goal_revolution
+	x = -1
+	y = 2
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_past_trap
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_item_skill"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_dilligence_dedication
+	icon = GFX_goal_revolution
+	x = -3
+	y = 2
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_past_trap
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_dilligence_dedication"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_qaylid_state
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_action_reaction
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_item_skill
+	}
+	prerequisite = {
+		focus = HYE_dilligence_dedication
+	}
+	prerequisite = {
+		focus = HYE_action_reaction
+	}
+	prerequisite = {
+		focus = HYE_virtue_future
+	}	
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_state"
+		add_political_power = 10 #placeholder
+	}
+}
+
 #shared_focus = {
 #	id = HYE_
 #	icon = GFX_goal_revolution
