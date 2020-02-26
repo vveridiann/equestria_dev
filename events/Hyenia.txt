@@ -450,7 +450,7 @@ country_event = { #The Death of Fahamka
 	}
 }
 
-country_event = {
+country_event = { #Rebuilding a nation - Industry
 	id = hyenia.23
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.23"}
 	title = hyenia.23.t
