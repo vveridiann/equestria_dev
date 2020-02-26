@@ -75,6 +75,12 @@ units = {
 
 ### Starting Production ###
 instant_effect = {
+	add_equipment_to_stockpile = {
+		type = melee_equipment_1
+		amount = 2000
+		producer = HYE
+	}
+}
 	add_equipment_production = {
 		equipment = {
 			type = melee_equipment_1
