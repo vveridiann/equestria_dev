@@ -80,7 +80,6 @@ instant_effect = {
 		amount = 2000
 		producer = HYE
 	}
-}
 	add_equipment_production = {
 		equipment = {
 			type = melee_equipment_1
