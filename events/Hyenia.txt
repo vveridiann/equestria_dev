@@ -388,7 +388,7 @@ country_event = {
 		name = hyenia.19.a	
 		hidden_effect = {
 			if = {
-				limit = { check_variable = { HYE_furasho_support > HYE_masaska_support } }
+				limit = { check_variable = { HYE_furasho_support > HYE_masaska_support } } 
 				country_event = { id = hyenia.20 hours = 3 }
 			}
 			if = {
@@ -400,29 +400,41 @@ country_event = {
 }
 
 country_event = {
-	id = hyenia.20
+	id = hyenia.20 #Furasho Wins
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.20"}
 	title = hyenia.20.t
 	desc = hyenia.20.d
 	#picture = 
 	is_triggered_only = yes
 	option = { 
-		name = hyenia.20.a	
-		## assorted effects: switch country leader, ruling party, party popularities, etc. ##
+		name = hyenia.20.a	#moderate path
+		set_country_flag = furasho_gone_moderate
+		load_focus_tree = HYE_furasho_moderate
 	}
+	option = { 
+		name = hyenia.20.b	#radical
+		set_country_flag = furasho_gone_radical
+		load_focus_tree = HYE_furasho_radical
+	}	
 }
 
 country_event = {
-	id = hyenia.21
+	id = hyenia.21 #Masaska wins
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.21"}
 	title = hyenia.21.t
 	desc = hyenia.21.d
 	#picture = 
 	is_triggered_only = yes
 	option = { 
-		name = hyenia.21.a	
-		## assorted effects: switch country leader, ruling party, party popularities, etc. ##
+		name = hyenia.21.a	#moderate path
+		set_country_flag = masaska_gone_moderate
+		load_focus_tree = HYE_masaska_moderate
 	}
+	option = { 
+		name = hyenia.21.b	#radical path
+		set_country_flag = masaska_gone_radical
+		load_focus_tree = HYE_masaska_radical
+	}	
 }
 
 country_event = { #The Death of Fahamka
@@ -460,5 +472,37 @@ country_event = { #Rebuilding a nation - Industry
 	option = { 
 		name = hyenia.23.a	
 		add_ideas = HYE_build_nation_industry
+	}
+}
+
+##########
+country_event = { #Dynamic Modifier Test - Remove
+	id = hyenia.998
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.998.t
+	desc = hyenia.998.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.998.a	
+		HYE = { remove_dynamic_modifier = { modifier = HYE_dynamic_modifier } }
+		clr_country_flag = qaylid_enable_dynamic_modifier
+	}
+}
+
+country_event = { #Dynamic Modifier Test - Add
+	id = hyenia.999
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.999"}
+	title = hyenia.999.t
+	desc = hyenia.999.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.999.a	
+		add_dynamic_modifier = { 
+				modifier = HYE_dynamic_modifier 
+			}
+		set_country_flag = qaylid_enable_dynamic_modifier
+		set_variable = { special_forces_cap = 0.05 }
 	}
 }

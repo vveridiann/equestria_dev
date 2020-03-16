@@ -80,6 +80,11 @@ instant_effect = {
 		amount = 2000
 		producer = HYE
 	}
+	add_equipment_to_stockpile = {
+		type = melee_equipment_1
+		amount = 500
+		producer = SCT
+	}	
 	add_equipment_production = {
 		equipment = {
 			type = melee_equipment_1
