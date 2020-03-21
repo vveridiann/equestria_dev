@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
 ##Parties##
 HYE_communism_party:0 "Communist Rebels"
@@ -210,26 +210,28 @@ hyenia.16.a:0 "By Furasho's word, the yetis are driven out."
 hyenia.16.b:0 "Masaska's protection does not yield, they stay."
 
 hyenia.17.t:0 "Fahamka's Grave"
-hyenia.17.d:0 ""
-hyenia.17.a:0 "Masaska"
-hyenia.17.b:0 "Furasho"
+hyenia.17.d:0 "Though the Dervishes stand divided, none have questioned the need to address the question of Fahamka's resting place. Yet, the agreement has reached only so far. \n\nMasaska has proclaimed her intent to bring Fahamka deep into the wilds, where her ashes will be scattered and she can become one with nature. She insists this is what Fahamka would have wanted, and the fact that few stood as close to Fahamka as Masaska is well known.\n\nFurasho has vehemently fought against it, having already ordered the creation of a grand mausoleum. In death as in life, Fahamka should stand as a great teacher, and her gravesite should be a sacred place for all Hyenas."
+hyenia.17.a:0 "Fahamka is given to the flames and returned to nature."
+hyenia.17.b:0 "Fahamka is given a worthy tomb."
 
-hyenia.18.t:0 "Tensions among the Hyenas"
-hyenia.18.d:0 ""
-hyenia.18.a:0 "Furasho"
-hyenia.18.b:0 "Masaska"
+hyenia.18.t:0 "Tensions Among the Hyenas"
+hyenia.18.d:0 "Though the infighting among the Dervishes has remained mostly hidden, the cracks are becoming more and more evident outside the order, and the hyenas who once greeted them as liberators now fear an upcoming civil war. And as the land holds its breath, the Hyenas begin to pick sides.\n\nFurasho is, to many hyenas, a memory of the lost age. He is a noble-born leader who commands great respect and whose firm leadership offers security after years of Yeti occupation. Though he demands absolute authority under the Dervishes, he gives few reasons to doubt that he will lead them to greatness.\n\nYet, the Dervishes are still a strange organization to many, and not all are so willing to bow to their absolute authority. Masaska - who moved in the occupied lands even before the war of liberation - offers guidance without demanding obedience and respects the authority of those clan elders and leaders who remain outside the Dervish order. Her respect for the traditions of Hyenian society - even as she seeks reform and change herself - has given her many supporters."
+hyenia.18.a:0 "Furasho's fiery rethoric earns him the Hyenas' respect."
+hyenia.18.b:0 "Masaska's wisdom and respect for traditions brings the Hyenas to her."
 
-hyenia.19.t:0 "The Duel"
-hyenia.19.d:0 ""
-hyenia.19.a:0 "Whos gon be the winner?"
+hyenia.19.t:0 "The Boiling Point"
+hyenia.19.d:0 "Stepping into the building, Furasho seethed with rage as he looked around himself, his paw on his sword.\n\n"Masaska!" he thundered, "I know you are here, you rat! Come out, right now! Or are you going to remain hiding and cowering as you tear the dervishes apart!?"\n\n"All I’ve done is to stand by Fahamka’s teachings, oh would-be-king," Masaska’s voice echoed from the shadows. "Rip and tear at them as much as you please, I will not stand idly by as you forge yourself a crown with them." \n\n“Fool! Mad mutt! Hyenia is broken, it broke when the Storm King tore us apart! Would you leave it all to remain broken, all because you fear the burden of leadership!?"\n\n"That burden was never ours to shoulder!" Masaska snapped. "We are not a conquering army and never were! You never understood that, being so trapped in the martial world that you couldn’t ever comprehend anything beyond the battlefield. We guide the individual who seeks wisdom! We do not twist Fahamka’s teachings to suit our power hunger!"\n\n"And instead we leave all of Hyenia to rot!?" Furasho snarled as he looked around, searching the giant chamber after Masaska. "Who would you place in charge?! Village elders and single surviving nobles?! Call it wisdom, I call it cowardice! A cowardice that would destroy all we worked for." \n\n"Then stand down!" Masaska’s voice pleaded with him. "Seek another path, guide instead of rule! We do not have to let it go to this point." \n\n"I will not be bullied into submission," Furasho growled as he drew his sword. "Face me. If you have any courage left in you, let us settle this here and now. Neither will yield, so one must die, lest the dervishes fall apart." \n\n"Damn you Furasho," Masaska growled as she appeared behind him in the shadows, her sword drawn."
+hyenia.19.a:0 "This ends now"
 
-hyenia.20.t:0 "Furasho Wins the Duel"
-hyenia.20.d:0 ""
-hyenia.20.a:0 ""
+hyenia.20.t:0 "Unquenchable Fire"
+hyenia.20.d:0 "Masaska was a demon, a snake-pit that would drown you under its toxic bites.  Whatever hellish pit Fahamka had found this mad mutt in, it had bred a fighter unlike any other. Slashing at her neck, Furasho cut only air as Masaska danced out of range and whipped her own sword towards his face. He despised her, to the depth of his soul and yet, Furasho knew that they would never have triumphed if not for her. Her guile, her silent cunning and her fierce dedication had borne them through so many of the trials that had laid before them.\n\nShe leaped back into the shadows, almost melding into them as she moved to strike at him from them. She had never played by the rules of the world as Furasho knew them. Dervishes or not, they were still part of the world, and the world respected strength and authority. Slowly turning around, he watched the shadows, waiting for the least hint of her presence and, when she struck, he met her blade mid-leap.\n\nShadows and dust, she had never been anything else, and that mad wisdom was what had brought her this far. Yet, the one that had kept her in line was gone, and he was not going to let all he fought for fall because of her insanity, It had had its place, yet now an iron paw was needed, not the confused ravings of someone who never had comprehended the world around her. With a brutal kick to the stomach, Furasho sent Masaska flying backwards, into the wall, and her sword scraped across the ground as it spun away from her, leaving her wide open as Furasho’s sword landed against her throat."
+hyenia.20.a:0 "I will not kill another dervish."
+hyenia.20.b:0 "Die, mutt. "
 
-hyenia.21.t:0 "Masaska Wins the Duel"
-hyenia.21.d:0 ""
-hyenia.21.a:0 ""
+hyenia.21.t:0 "Choking Shadows"
+hyenia.21.d:0 "'Damn you.' Masaska ducked under Furasho's wild sword strike, lashing out at his face and just managing to nick his cheek. Leaping back out of range, she slid along the floor before having to block a charging strike from Furasho. The force made her arm shake.\n\n'Damn you!' He was way stronger than her. Yet another area where this general and son of generals trumped him. He was stronger than her, more canny in the ways of grand strategy. When he spoke, Hyenas listened, and he was born for leadership. As Masaska feinted and slipped away again, retreating back into the shadows, she gritted her teeth.\n\n'Damn you!' she almost snarled as she leaped out of vew, hiding to find a better angle to strike. He should have been the obvious successor to Fahamka's, yet he was so trapped by his belief that raw might was all that mattered! Had he understood nothing?! Was all he had learned at Fahamka's feet forgotten and discarded when it no longer was convenient?!\n\nLeaping in behind Furasho, Masaska charged at him, her sword diving for his neck. If he so blindly refused to see, then the price was his to pay. Mid-leap, she saw Furasho turn towards her and counter-attack, leaving them to clash mid-charge.\n\nA shift, a twist, and suddenly Masaska was below him, her sword slicing cleanly through his robe and into his fur. Furasho crashed limply into the ground as Masaska turned around, raising her sword for the last blow."
+hyenia.21.a:0 "I already lost a mother, I will not lose a brother as well."
+hyenia.21.a:0 "No more kings, not now, not ever!"
 
 hyenia.22.t:0 "The Death of Fahamka"
 hyenia.22.d:0 "As the last gunshots ring out and the war comes to an end, word was swiftly passed back to [Root.GetCapital]. The yetis had fallen, and the path to Qalbi Weyn was clear. The oath taken by hundreds of thousands has been fulfilled, the homeland is free at last. Now, the one who had led us all to this triumph, who defied exile and persecution, could finally be brought back to Qalbi Weyn, where she could finally be honored as she deserved. And yet, as we reached her camp to begin escorting her back, all we found was mourning dervishes and a tent covered in black.\n\nFahamka, the Great Teacher, our light in the darkness and mother to us all, is no longer among us. Clinging to life to the bitter end so that we would not falter at the last moment, she has now passed on from this world as her duty is fulfilled. To the bitter end, she put her duties first, and her eyes never got to rest on the beautiful homeland again.\n\nThis should have been our greatest triumph, a victory to be cherished for eternity, and yet our hearts are ripped out of our chests, and we are left to weep."
