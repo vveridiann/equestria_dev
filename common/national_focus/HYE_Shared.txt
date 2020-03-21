@@ -331,10 +331,10 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	will_lead_to_war_with = SCT		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_the_yeti"
 		add_timed_idea = { idea = HYE_yetided days = 150 }
-		will_lead_to_war_with = SCT
 		declare_war_on = { target = SCT type = annex_everything }
 		hidden_effect = {
 			create_wargoal = {
@@ -773,6 +773,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_start"
 		add_political_power = 70
+		add_dynamic_modifier = { modifier = HYE_dynamic_modifier }
+		set_country_flag = qaylid_enable_dynamic_modifier
+		set_variable = { HYE_special_forces_cap_variable = 0.05}
 	}
 }
 
@@ -946,6 +949,271 @@ shared_focus = {
 	}
 }
 
+shared_focus = {
+	id = HYE_qaylid_syncreticism
+	icon = GFX_goal_revolution
+	x = -4
+	y = 1
+	relative_position_id = HYE_qaylid_state
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_state
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_qaylid_conservatism
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_syncreticism"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_only_teachers
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_qaylid_syncreticism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_syncreticism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_only_teachers"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_many_species
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_qaylid_syncreticism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_syncreticism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_many_species"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_humility
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_qaylid_syncreticism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_syncreticism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_humility"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_evolving_qaylid
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_humility
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_humility
+	}
+	prerequisite = {
+		focus = HYE_many_species
+	}
+	prerequisite = {
+		focus = HYE_only_teachers
+	}	
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_evolving_qaylid"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_qaylid_conservatism
+	icon = GFX_goal_revolution
+	x = 4
+	y = 1
+	relative_position_id = HYE_qaylid_state
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_state
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_qaylid_syncreticism
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_conservatism"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_righteous
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_qaylid_conservatism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_conservatism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_righteous"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_purity
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_qaylid_conservatism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_conservatism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_many_species"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_no_compromise
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_qaylid_conservatism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_qaylid_conservatism
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_humility"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_der_ewige_qaylid
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_no_compromise
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_purity
+	}
+	prerequisite = {
+		focus = HYE_no_compromise
+	}
+	prerequisite = {
+		focus = HYE_righteous
+	}	
+	bypass = {
+	}
+	mutually_exclusive = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_der_ewige_qaylid"
+		add_political_power = 10 #placeholder
+	}
+}
+
+
 #shared_focus = {
 #	id = HYE_
 #	icon = GFX_goal_revolution
@@ -971,3 +1239,793 @@ shared_focus = {
 
 ###Political Pt 2###
 
+#Furasho Radical
+
+shared_focus = {
+	id = HYE_hound_who_sold_the_world
+	icon = GFX_goal_revolution
+	x = 13
+	y = 8
+	cost = 1
+	available = {
+		has_country_flag = furasho_gone_radical
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_hound_who_sold_the_world"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_yeti_slaves
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_hound_who_sold_the_world
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_hound_who_sold_the_world
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_yeti_slaves"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_absolutism
+	icon = GFX_goal_revolution
+	x = 0
+	y = 2
+	relative_position_id = HYE_hound_who_sold_the_world
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_hound_who_sold_the_world
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_absolutism"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_purges
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_hound_who_sold_the_world
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_hound_who_sold_the_world
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_purges"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_slave_soldiers
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_yeti_slaves
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_yeti_slaves
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_slave_soldiers"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_all_must_serve
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_slave_soldiers
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_slave_soldiers
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_all_must_serve"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_all_for_hyenia
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_slave_soldiers
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_slave_soldiers
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_all_for_hyenia"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_old_and_new
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_purges
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_purges
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_old_and_new"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_warrior_bribe
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_old_and_new
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_old_and_new
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_warrior_bribe"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_whips_and_dogma
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_old_and_new
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_old_and_new
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_whips_and_dogma"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_prophet_king
+	icon = GFX_goal_revolution
+	x = 0
+	y = 2
+	relative_position_id = HYE_absolutism
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_warrior_bribe
+	}
+	prerequisite = {
+		focus = HYE_whips_and_dogma
+	}	
+	prerequisite = {
+		focus = HYE_absolutism
+	}	
+	prerequisite = {
+		focus = HYE_all_must_serve
+	}		
+	prerequisite = {
+		focus = HYE_all_for_hyenia
+	}	
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_prophet_king"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_calm_before_storm_conquest
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_prophet_king
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_prophet_king
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_calm_before_storm_conquest"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_to_clear_skies #Stab stab stab the Yetis, and have it be all.
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_calm_before_storm_conquest
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_calm_before_storm_conquest
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_to_clear_skies"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_extend_enslavement
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_to_clear_skies
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_to_clear_skies
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_extend_enslavement"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_execute_the_yeti_leaders
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_to_clear_skies
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_to_clear_skies
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_execute_the_yeti_leaders"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_consolidate_yeti_lands
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_extend_enslavement
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_extend_enslavement
+	}
+	prerequisite = {
+		focus = HYE_execute_the_yeti_leaders
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_consolidate_yeti_lands"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_expel_the_yeti
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_execute_the_yeti_leaders
+	cost = 7
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_execute_the_yeti_leaders
+		focus = HYE_extend_enslavement
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_consolidate_yeti_lands"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_hyena_minority #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_calm_before_storm_conquest
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_calm_before_storm_conquest
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_hyena_minority" #Hayzyges Wargoal todo
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_hayseed #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_hyena_minority
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_hyena_minority
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_hayseed" 
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_convert_hay #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_hyena_minority
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_hyena_minority
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_convert_hay"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_our_hay #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09 02 2020 in teaser channel.
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_hayseed
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_convert_hay
+	}
+	prerequisite = {
+		focus = HYE_hayseed
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_our_hay"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_furasho_empire #Hoo boy.
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_our_hay
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_our_hay
+	}
+	prerequisite = {
+		focus = HYE_consolidate_yeti_lands
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_furasho_empire"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_ancients_begone
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_furasho_empire
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_furasho_empire
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_ancients_begone"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_divide_and_conquer
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_ancients_begone
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_ancients_begone
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_divide_and_conquer"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_gargoyle_centaur
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_ancients_begone
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_ancients_begone
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_gargoyle_centaur"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_ending_ancients
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_gargoyle_centaur
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_gargoyle_centaur
+	}
+	prerequisite = {
+		focus = HYE_divide_and_conquer
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_ending_ancients"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_lake_statelets
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_furasho_empire
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_furasho_empire
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_statelets"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_lake_slaves
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_lake_statelets
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_statelets
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_slaves"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_lake_resources
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_lake_statelets
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_statelets
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_resources"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_lake_of_wealth
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_lake_resources
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_resources
+	}
+	prerequisite = {
+		focus = HYE_lake_slaves
+	}	
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_of_wealth"
+		add_political_power = 10 #placeholder
+	}
+}
+
+#Furasho Normal
+
+shared_focus = {
+	id = HYE_deep_faith
+	icon = GFX_goal_revolution
+	x = 13
+	y = 8
+	cost = 1
+	available = {
+		has_country_flag = furasho_gone_moderate
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_deep_faith"
+		add_political_power = 10 #placeholder
+	}
+}
+
+#Masaska Normal
+
+shared_focus = {
+	id = HYE_champion_of_harmony
+	icon = GFX_goal_revolution
+	x = 13
+	y = 8
+	cost = 1
+	available = {
+		has_country_flag = masaska_gone_moderate
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_champion_of_harmony"
+		add_political_power = 10 #placeholder
+	}
+}
+
+#Masaska Radical
+
+shared_focus = {
+	id = HYE_radical_isolationism
+	icon = GFX_goal_revolution
+	x = 13
+	y = 8
+	cost = 1
+	available = {
+		has_country_flag = masaska_gone_radical
+	}
+	prerequisite = {
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_radical_isolationism"
+		add_political_power = 10 #placeholder
+	}
+}

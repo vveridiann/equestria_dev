@@ -75,6 +75,7 @@ ideas = {
 				war_support_factor = 0.1
 				conscription_factor = 0.15
 				stability_factor = 0.1
+				consumer_goods_factor = -0.05 #Consider moving this...
 			}
 		}
 		HYE_regency = {
@@ -340,6 +341,9 @@ ideas = {
 				original_tag = HYE
 			}
 			available = {
+			}
+			research_bonus = {
+				land_doctrine = 0.07
 			}
 			traits = { military_theorist }
 		}
