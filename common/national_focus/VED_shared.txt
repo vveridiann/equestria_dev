@@ -1991,8 +1991,8 @@ shared_focus = {
 	id = VED_Harmoy_Princess
 	icon = GFX_goal_griffon_harmony_char
 	cost = 5.00
-	x = 10
-	y = 13
+	x = 12
+	y = 9
 	
 	ai_will_do = {
 		factor = 100
