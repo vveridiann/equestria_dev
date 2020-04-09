@@ -1,0 +1,80 @@
+HYE_sneaky_plan_decisions = {
+	infiltrate_SCT = {
+		icon =  generic_decision #probably will wait for espionage update for icons here.
+		ai_will_do = { factor = 100 }
+		cost = 25
+	
+		visible = {
+			has_completed_focus = HYE_infiltrators
+		}
+		available = {
+			HYE = { has_war_with = SCT }
+		}
+
+		fire_only_once = yes
+		complete_effect = {
+			load_oob = HYE_infiltrators_oob
+		}
+	}
+	sabotage_SCT = {
+		icon =  generic_decision #probably will wait for espionage update for icons here.
+		ai_will_do = { factor = 100 }
+		cost = 25
+		
+		visible = {
+			has_completed_focus = HYE_saboteurs
+		}
+		available = {
+			HYE = { has_war_with = SCT }
+		}
+		fire_only_once = yes
+		complete_effect = { 
+			SCT = { add_timed_idea = { idea = HYE_sabotaged_SCT days = 150 } }
+			hidden_effect = {
+				SCT = {
+					country_event = { 
+						id = hyenia.3
+					}
+				}
+			}
+		}
+	}
+}
+
+HYE_thunder_war_decisions = {
+	peace_for_thunderbowl = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		cost = 0
+		visible = {
+			any_country = {
+				NOT = { original_tag = HYE }
+				owns_state = 1036
+			}
+		}
+		available = {
+			HYE = { controls_state = 1036 }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			SCT = { country_event = { id = hyenia.4 } }
+		}
+	}
+	ultimatum_for_thunderbowl = {
+		icon = decision_border_war
+		ai_will_do = { factor = 100 }
+		cost = 50
+		visible = {
+			NOT = { country_exists = SCT }
+		}
+		available = {
+			HYE = { NOT = { owns_state = 1036 } }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			1036 = {
+				owner = { country_event = { id = hyenia.7 } }
+			}
+		}
+	}
+}

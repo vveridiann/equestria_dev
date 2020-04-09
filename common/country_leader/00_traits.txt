@@ -2259,6 +2259,8 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+
 
 ### BRITISH TRADE UNION MINISTER TRAITS ###
 
@@ -6455,6 +6457,52 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 2
+		}
+	}
+	### HYENIAN IDEAS ###
+	HYE_mystic = {
+	
+		random = no
+		stability_factor = -0.05
+		political_power_gain = 0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HYE_wise_old_dog = {
+	
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.01
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	HYE_hidden_intellect = {
+		random = no
+		research_speed_factor = 0.05
+		decryption_factor = 0.05
+		encryption_factor = 0.05
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	HYE_healer = {
+		random = no
+		monthly_population = 0.1
+		casualty_trickleback = 0.03
+		experience_loss_factor = -0.05
+		ai_will_do = {
+			factor = 6
+		}
+	}
+	HYE_producer = {
+		random = no
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

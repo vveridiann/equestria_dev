@@ -1,0 +1,508 @@
+add_namespace = hyenia
+
+country_event = { #War council, triggered via event on focus tree. The War to Come
+	id = hyenia.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.1"}
+	title = hyenia.1.t
+	desc = hyenia.1.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = hyenia.1.a
+		set_country_flag = masaska_sneaky_plan
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			country_event = { id = hyenia.2 days = 15 random = 5 } #Time is inexorable and pitiless
+		}		
+	}
+	option = {
+		name = hyenia.1.b
+		set_country_flag = furasho_force_plan
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			country_event = { id = hyenia.2 days = 15 random = 5 } #See above.
+		}
+	}
+}
+
+country_event = { #Flavor, foreshadows Fahamka's death, Time is inexorable and pitiless
+	id = hyenia.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
+	title = hyenia.2.t
+	desc = hyenia.2.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia.2.a
+	}
+}
+
+country_event = { #Hyenias Sabotage Thundarians/SCT
+	id = hyenia.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.3"}
+	title = hyenia.3.t
+	desc = hyenia.3.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = hyenia.3.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = HYE_sabotaged_SCT
+				days = 150
+			}
+		}
+	}
+}
+country_event = { #Peace with Angry Hyenas?
+	id = hyenia.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.4"}
+	title = hyenia.4.t
+	desc = hyenia.4.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = hyenia.4.a
+		ai_chance = {
+			factor = 100
+		}
+		effect_tooltip = {
+			HYE = {
+				transfer_state = 1036 #Thunderbowl
+				transfer_state = 1052 #Gajar
+				transfer_state = 1050 #Thunder Bay
+			}
+		}
+		set_capital = 1030 #rainguard	
+		hidden_effect = { HYE = { country_event = { id = hyenia.5 days = 1 } } }
+	}
+	option = {
+		name = hyenia.4.b
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.05
+		add_political_power = -50
+		hidden_effect = { HYE = { country_event = { id = hyenia.6 days = 1 } } }
+	}
+}
+
+country_event = { #Reclamation of our lands!
+	id = hyenia.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.5"}
+	title = hyenia.5.t
+	desc = hyenia.5.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Yay, land!
+		name = hyenia.5.a
+		HYE = {
+			transfer_state = 1036 #Thunderbowl
+			transfer_state = 1052 #Gajar
+			transfer_state = 1050 #Thunder Bay
+		}
+		1036 = { set_state_name = "Buur Dhurwaa" }
+		set_province_name = {
+			id = 15255
+			name = "Qalbi Weyn"
+		}
+		every_other_country = { #SCT/CST/CAM/STM
+			limit = { 
+				has_war_with = ROOT 
+				NOT = { 
+					has_wargoal_against = ROOT
+					has_offensive_war_with = ROOT
+				}
+			}
+			set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+			white_peace = ROOT
+		}
+		set_capital = 1036
+	}
+}
+
+country_event = { #They Have Chosen to Fight on!
+	id = hyenia.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.6"}
+	title = hyenia.6.t
+	desc = hyenia.6.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Then Fight on we Shall!
+		name = hyenia.6.a
+		add_war_support = 0.1
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+country_event = { #Hyenas demand the return of their ancestral lands!
+	id = hyenia.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.7"}
+	title = hyenia.7.t
+	desc = hyenia.7.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #Alright, Alright, we'll hand it over.
+		name = hyenia.7.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = HYE
+					ratio = 0.5
+				}
+			}
+		}
+		HYE = {
+			transfer_state = 1036
+			if = {
+				limit = {
+					ROOT = { owns_state = 1052 }
+				}
+				transfer_state = 1052
+			}
+			if = {
+				limit = {
+					ROOT = { owns_state = 1050 }
+				}
+				transfer_state = 1050
+			}
+		}
+		add_political_power = -50
+	}
+	option = { #Nope
+		name = hyenia.7.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = HYE
+					ratio = 2
+				}
+			}
+		}
+		country_event = { id = hyenia.8 days = 1 }
+		add_political_power = -100
+		save_global_event_target_as = thunderbowl_owner
+		effect_tooltip = {
+			HYE = { 
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+country_event = { #They will not return our lands.
+	id = hyenia.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.8"}
+	title = hyenia.8.t
+	desc = hyenia.8.d
+	#picture = 
+	is_triggered_only = yes
+	option = { #war it is
+		name = hyenia.8.a
+		HYE = { 
+			declare_war_on = {
+				target = event_target:thunderbowl_owner
+				type = annex_everything
+			}
+		}	
+	}
+}
+
+country_event = { #His Only Mother, triggered by Focus HYE_sneaky_plan
+	id = hyenia.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.9"}
+	title = hyenia.9.t
+	desc = hyenia.9.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.9.a	
+	}
+}
+
+country_event = { #The Fading Queen of War, triggered by Focus HYE_force_plan
+	id = hyenia.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.10"}
+	title = hyenia.10.t
+	desc = hyenia.10.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.10.a	
+	}
+}
+
+country_event = { #Stormbreakers, triggered in HYE_manpower
+	id = hyenia.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.11"}
+	title = hyenia.11.t
+	desc = hyenia.11.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.11.a	
+	}
+}
+
+country_event = { #HShadowdancers. triggered in HYE_infiltrators
+	id = hyenia.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.12"}
+	title = hyenia.12.t
+	desc = hyenia.12.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.12.a	
+	}
+}
+
+country_event = {
+	id = hyenia.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.13"}
+	title = hyenia.13.t
+	desc = hyenia.13.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.13.a	
+		set_variable = { HYE_masaska_support = 0 }
+		set_variable = { HYE_furasho_support = 0 }
+		hidden_effect = { country_event = { id = hyenia.22 days = 5 } } 
+	}
+}
+
+country_event = {
+	id = hyenia.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.14"}
+	title = hyenia.14.t
+	desc = hyenia.14.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.14.a	
+		add_to_variable = { HYE_furasho_support = 1 } 
+		country_event = { id = hyenia.15 days = 3 }
+	}
+	option = { 
+		name = hyenia.14.b	
+		add_to_variable = { HYE_masaska_support = 1 } 
+		country_event = { id = hyenia.15 days = 3 }
+	}
+}
+
+country_event = {
+	id = hyenia.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.15"}
+	title = hyenia.15.t
+	desc = hyenia.15.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.15.a	
+		add_to_variable = { HYE_masaska_support = 1 } 
+		country_event = { id = hyenia.16 days = 2 }
+	}
+	option = { 
+		name = hyenia.15.b	
+		add_to_variable = { HYE_furasho_support = 1 } 
+		country_event = { id = hyenia.16 days = 2 }
+	}
+}
+
+country_event = {
+	id = hyenia.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.16"}
+	title = hyenia.16.t
+	desc = hyenia.16.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.16.a	
+		add_to_variable = { HYE_furasho_support = 1 } 
+		country_event = { id = hyenia.17 days = 3 }
+	}
+	option = { 
+		name = hyenia.16.b	
+		add_to_variable = { HYE_masaska_support = 1 } 
+		country_event = { id = hyenia.17 days = 3 }
+	}
+}
+
+country_event = {
+	id = hyenia.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.17"}
+	title = hyenia.17.t
+	desc = hyenia.17.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.17.a	
+		add_to_variable = { HYE_masaska_support = 1 } 
+		country_event = { id = hyenia.18 days = 4 }
+	}
+	option = { 
+		name = hyenia.17.b	
+		add_to_variable = { HYE_furasho_support = 1 } 
+		country_event = { id = hyenia.18 days = 4 }
+	}
+}
+
+country_event = {
+	id = hyenia.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.18"}
+	title = hyenia.18.t
+	desc = hyenia.18.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.18.a	
+		add_to_variable = { HYE_furasho_support = 1 } 
+		country_event = { id = hyenia.19 days = 3 }
+	}
+	option = { 
+		name = hyenia.18.b	
+		add_to_variable = { HYE_masaska_support = 1 } 
+		country_event = { id = hyenia.19 days = 3 }
+	}
+}
+
+country_event = {
+	id = hyenia.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.19"}
+	title = hyenia.19.t
+	desc = hyenia.19.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.19.a	
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { HYE_furasho_support > HYE_masaska_support } } 
+				country_event = { id = hyenia.20 hours = 3 }
+			}
+			if = {
+				limit = { check_variable = { HYE_furasho_support < HYE_masaska_support } }
+				country_event = { id = hyenia.21 hours = 3 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hyenia.20 #Furasho Wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.20"}
+	title = hyenia.20.t
+	desc = hyenia.20.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.20.a	#moderate path
+		set_country_flag = furasho_gone_moderate
+		load_focus_tree = HYE_furasho_moderate
+	}
+	option = { 
+		name = hyenia.20.b	#radical
+		set_country_flag = furasho_gone_radical
+		load_focus_tree = HYE_furasho_radical
+	}	
+}
+
+country_event = {
+	id = hyenia.21 #Masaska wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.21"}
+	title = hyenia.21.t
+	desc = hyenia.21.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.21.a	#moderate path
+		set_country_flag = masaska_gone_moderate
+		load_focus_tree = HYE_masaska_moderate
+	}
+	option = { 
+		name = hyenia.21.b	#radical path
+		set_country_flag = masaska_gone_radical
+		load_focus_tree = HYE_masaska_radical
+	}	
+}
+
+country_event = { #The Death of Fahamka
+	id = hyenia.22 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.22"}
+	title = hyenia.22.t
+	desc = hyenia.22.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.22.a	
+		kill_country_leader = yes
+		remove_unit_leader = 1272020
+		create_country_leader = {
+			name = "Power Vacuum"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		country_event = { id = hyenia.14 days = 1 }
+		remove_ideas = { HYE_regency }
+	}
+}
+
+country_event = { #Rebuilding a nation - Industry
+	id = hyenia.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.23"}
+	title = hyenia.23.t
+	desc = hyenia.23.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.23.a	
+		add_ideas = HYE_build_nation_industry
+	}
+}
+
+##########
+country_event = { #Dynamic Modifier Test - Remove
+	id = hyenia.998
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.998.t
+	desc = hyenia.998.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.998.a	
+		HYE = { remove_dynamic_modifier = { modifier = HYE_dynamic_modifier } }
+		clr_country_flag = qaylid_enable_dynamic_modifier
+	}
+}
+
+country_event = { #Dynamic Modifier Test - Add
+	id = hyenia.999
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.999"}
+	title = hyenia.999.t
+	desc = hyenia.999.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.999.a	
+		add_dynamic_modifier = { 
+				modifier = HYE_dynamic_modifier 
+			}
+		set_country_flag = qaylid_enable_dynamic_modifier
+		set_variable = { special_forces_cap = 0.05 }
+	}
+}

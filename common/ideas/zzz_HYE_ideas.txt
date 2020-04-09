@@ -1,0 +1,496 @@
+ideas = {
+
+#Country Ideas
+	country = {
+		HYE_movespeed = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { original_tag = HYE }
+			allowed_civil_war = { always = yes }
+			available = { always = yes }
+			modifier = {
+				army_speed_factor = 0.05
+				recon_factor = 0.1
+			}
+		}
+		
+		HYE_command ={
+			picture = anti_soviet_pact #placeholder		
+			removal_cost = -1
+			allowed = { original_tag = HYE }
+			allowed_civil_war = { always = yes }
+			available = { always = yes }
+			modifier = {
+				command_power_gain = 0.1
+				max_command_power = 10
+			}			
+		}
+		
+		HYE_attack = {
+			picture = anti_soviet_pact #placeholder	
+			removal_cost = -1
+			allowed = { original_tag = HYE }
+			allowed_civil_war = { always = yes }
+			available = { always = yes }
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+			}			
+		}
+		HYE_yetided = {
+			picture = anti_soviet_pact #placeholder		
+			removal_cost = -1
+			allowed = { original_tag = HYE }
+			allowed_civil_war = { always = yes }
+			available = { always = yes }
+			targeted_modifier = { 
+				tag = SCT
+				attack_bonus_against = 0.15
+			}
+			modifier = {
+				army_morale_factor = 0.2
+				army_org_factor = 0.15
+			}
+		}
+		HYE_sabotaged_SCT = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			targeted_modifier = {
+				tag = HYE
+				defense_bonus_against = -0.1
+			}
+			modifier = {
+				army_speed_factor = -0.03
+			}
+		}
+		HYE_qaylid_dervish = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_gain = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05 #Consider moving this...
+			}
+		}
+		HYE_regency = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_morale_factor = 0.01
+				army_org_factor = -0.01
+				MONTHLY_POPULATION = -0.01
+			}
+		}
+		HYE_to_recovery = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = -0.25
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_recovering = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = -0.125
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.02
+				production_factory_efficiency_gain_factor = -0.02
+				stability_factor = -0.025
+			}
+		}	
+		HYE_recover = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.01
+				production_factory_efficiency_gain_factor = -0.01
+				stability_factor = -0.05
+			}
+		}	
+		HYE_recovered = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				global_building_slots_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}			
+		HYE_desert_devils = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				heat_attrition_factor = -0.2
+				attrition = -0.05
+				acclimatization_hot_climate_gain_factor = 0.1
+				out_of_supply_factor = -0.1
+				no_supply_grace = 36
+			}
+		}
+		HYE_build_nation_industry = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		HYE_built_industry = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_population_growth = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		HYE_population_boom = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+			}
+		}		
+	}
+#Political Advisors
+	political_advisor = {
+		HYE_nafaqo = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { silent_workdog }		
+		}
+		HYE_dawacada = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { war_industrialist }	
+		}
+		HYE_waalan = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { HYE_mystic }			
+		}
+		HYE_xasillon = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { armaments_organizer }			
+		}
+
+		HYE_gaadiidka = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { civilian_industry_organizer }
+		}
+		HYE_hadalka = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { HYE_wise_old_dog }
+		}
+		
+		#Masaska's advisors begin here
+		
+		HYE_kelidii = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { HYE_hidden_intellect }
+		}
+
+		
+		#Furasho's Advisors Begin here
+		
+		HYE_bogsiiye = { #Transfer to Infantry Eq designer?
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { HYE_healer }
+		}
+		HYE_seenyaale = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { HYE_producer }
+		}
+		HYE_xaawa = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	army_chief = {
+		HYE_tuke = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_defensive_2 }
+		}
+		HYE_furasho_chief = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_offensive_3 }		
+		}
+		HYE_masaska_chief = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_organizational_3 }
+		}
+	}
+	air_chief = {
+		HYE_longrains = {
+			picture = unknown_advisor #is a pegasus
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { air_chief_all_weather_2 }
+		}
+	}
+	#Theorists 
+	theorist = {
+		HYE_yeyda = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			traits = { military_theorist }
+		}
+	}
+	high_command = {
+		HYE_sunta = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_logistics_3 }
+		}
+		HYE_dhagax = {
+		    picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_drill_2 }			
+		}		
+
+		#Masaska's
+		HYE_iftiin = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_concealment_2 }
+		}
+		HYE_dhalaalaya = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_chief_maneuver_2 }
+		}
+		HYE_maraq = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_commando_2 }
+		}		
+		#Furasho's
+		HYE_eberweyn = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_infantry_2 }
+		}
+		HYE_dareere = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { army_entrenchment_2 }
+		}
+	}
+	#Industry todo
+	tank_manufacturer = {
+		HYE_tank_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		HYE_navy_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		HYE_aircraft_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = { light_aircraft_manufacturer }		
+		}
+	}
+	materiel_manufacturer = {
+		HYE_guns_company = {
+			picture = mauser #placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			traits = {
+				infantry_equipment_manufacturer 
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+				}
+			}
+		}
+	}
+	industrial_concern = {
+		designer = yes
+		HYE_industry_company ={
+		    picture = generic_refining_concern_1
+		    allowed = {
+				original_tag = HYE
+			}
+            available = {
+				has_completed_focus = ANG_our_own_oil_company
+			}
+            removal_cost = -1
+ 			research_bonus = {
+				synth_resources = 0.10
+			}
+			traits = { construction_company  }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}		
+		}
+	}
+	
+}

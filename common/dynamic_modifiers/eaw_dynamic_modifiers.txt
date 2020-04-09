@@ -54,6 +54,20 @@
 		war_support_factor = MAN_dynamic_modifier_central_variable_final
 		industrial_capacity_factory = MAN_dynamic_modifier_central_variable_final
 	}
+	
+	HYE_dynamic_modifier = {
+		icon = GFX_idea_FRA_scw_intervention_republicans_focus #Placeholder
+		enable = {
+			original_tag = HYE
+			has_country_flag = qaylid_enable_dynamic_modifier
+		}
+		special_forces_cap = HYE_special_forces_cap_variable
+		research_speed_factor = HYE_research_speed_variable
+		non_core_manpower = HYE_non_core_manpower_variable
+		army_attack_factor = HYE_army_attack_factor_variable
+		army_defence_factor = HYE_army_defence_factor_variable
+		attrition = HYE_attrition_variable
+	}
 
 	DED_crystal_cost = {
 		icon = GFX_idea_MAN_framed_heart

@@ -1,0 +1,29 @@
+HYE_sneaky_plan_decisions = {
+	icon = generic_decision
+
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 100
+	}
+	visible = {
+		has_completed_focus = HYE_sneaky_plan
+	}
+	
+}
+
+HYE_thunder_war_decisions = {
+	icon = crossed_swords
+	
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 110
+	}
+	visible = {
+		has_completed_focus = HYE_end_the_yeti
+	}
+}
+	
