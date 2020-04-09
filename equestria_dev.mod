@@ -1,4 +1,4 @@
-version="1.8.*"
+version="1.9.1"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -34,4 +34,4 @@ tags={
 }
 name="Equestria at War Dev"
 path="C:/Users/andyw/Documents/Paradox Interactive/Hearts of Iron IV/mod/equestria_dev"
-supported_version="1.8.1"
+supported_version="1.9.1"
