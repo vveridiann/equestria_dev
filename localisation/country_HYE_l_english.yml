@@ -12,34 +12,34 @@ HYE_neutrality_party_long:0 "School of Caado Dhaqaajin"
 
 ##Foci##
 #Political
-HYE_startup:0 "The Last Fight Approaches"
-HYE_startup_desc:0 "WAAAR" #placeholder
+HYE_startup:0 "The Weerar Weyn Approaches"
+HYE_startup_desc:0 "For years we have waited, fought and bled. Through countless tears and rivers of blood we have waited for the opportune moment. Now, finally, it is upon us, and throughout the lands, the Dervishes prepare to, for the first time in a decade, go on the offensive." 
 HYE_rally_the_clans:0 "Rise, Oh Hyenas..."
-HYE_rally_the_clans_desc:0 "Good bois eat dog bone yes" #placeholder
+HYE_rally_the_clans_desc:0 "We have endured unbelievable hardships for over a decade, and the flame of our fury has faded in so many. Yet the winds of beckoning triumph blow yet again, stirring the embers and rallying our people. They have, for the first time in so long, hope, and they reach for it."
 HYE_scavenge_equipment:0 "...Be it with Guns or Swords..."
-HYE_scavenge_equipment_desc:0 "Take gun yes good" #placeholder
+HYE_scavenge_equipment_desc:0 "The Dervishes fought in small scale guerilla battles, never holding territory and instead aiming to simply make the yetis pay. They stole and scavenged when they could, and never expended more resources than needed. It all was for this moment, and the arms they gathered for all those years are now brought to bear."
 HYE_fervor:0 "...For Zeal is our Greatest Weapon"
-HYE_fervor_desc:0 "Remove Yeti" #placeholder
+HYE_fervor_desc:0 "The spirit of Hyenia broke when it was ground to the dust by the Storm King, yet it can still be rekindled, and when the war comes, it will be fought by a people giving all they have, even their very lives, if that is what it takes." 
 HYE_force_plan:0 "Breaking the Storm"
-HYE_force_plan_desc:0 "grug smash" #placeholder
+HYE_force_plan_desc:0 "Few hold as much knowledge of war as Furasho, and his plan for absolute war has been given Fahamka's blessing. There can be no half measures, but instead we must meet the yetis with a fury and force that can surpass even theirs."
 HYE_manpower:0 "One People at War"
-HYE_manpower_desc:0 "Manpower good yes" #placeholder
+HYE_manpower_desc:0 "None shall be excused from doing their duty in the battle ahead. Dervish or not, female or male, young or old, all shall be rallied for the battle to come, and we shall push at the yetis with the full fury of all hyenas."
 HYE_property_industry:0 "Using All we Have"
-HYE_property_industry_desc:0 "Storm King Smash so much stuff we have some empty places. Let's use those." #placeholder
+HYE_property_industry_desc:0 "There are still some independent clans out there, and thus far they have been shown the respect due their station, and been allowed to rebuild their lives. With the battle that awaits they will have to commit to the cause as well. If they are not giving their all in the struggle, are they even our kin?"
 HYE_finalize_force:0 "Together, like an Avalanche"
-HYE_finalize_force_desc:0 "Smash The Yetis!" #placeholder
+HYE_finalize_force_desc:0 "As we charge into battle we must be ready to die. As Furasho has said, our deaths will be the hammer that breaks down the Yeti's dominion over Hyenia, and our blood will be the mortar holding the new Hyenian state together. Forwards, brave ones. In life: triumph. In death: immortality."
 HYE_sneaky_plan:0 "Staying in the Shadows"
-HYE_sneaky_plan_desc:0 "grug hide" #placeholder
+HYE_sneaky_plan_desc:0 "We have stayed in the shadows for years, and that's where we have triumphed. We do not play by the yeti's rules and meet them in open combat: we flow past them like the wind, choke them like smoke and strike in the darkness. Confusion and misdirection are our foremost weapons, and even as we drive the yetis from our lands, they still won't know what hit them. " 
 HYE_infiltrators:0 "A Blade in Their Backs"
-HYE_infiltrators_desc:0 "We hide" #placeholder
+HYE_infiltrators_desc:0 "As the war approaches, our agents are moving deep into the occupied lands, sleeper cells are awakening and faithful rebels in the mountains prepare themselves. When that day comes, we will spring up far behind the front lines and leave the yetis caught between the hammer and the anvil."
 HYE_saboteurs:0 "Cut their Tendons"
-HYE_saboteurs_desc:0 "We decieve" #placeholder
+HYE_saboteurs_desc:0 "The yetis might have a strong army, but it will be for naught when their airships are grounded, the roads are mined and their supply lines are ripped apart. Let's see how well they fight without food, ammunition or supplies."
 HYE_finalize_sneaky:0 "Coup De Grace"
-HYE_finalize_sneaky_desc:0 "Sneak Sneak" #placeholder
-HYE_end_the_yeti:0 "On the Eve of Battle"
-HYE_end_the_yeti_desc:0 "Something Something we must take their lands and show strength?" #placeholder
+HYE_finalize_sneaky_desc:0 "We will only have one chance at this, so we must strike fast, and we must strike first. The battles must happen on our terms and we must give them no time to recover or take back the initiative. If we are fast enough, we can end this war in one, fell swoop, cutting the head off the enemy war machine before they can properly react." 
+HYE_end_the_yeti:0 "The Night Before the Weerar Weyn"
+HYE_end_the_yeti_desc:0 "Tonight, all Dervishes sit silently in meditation, reflecting on the years that have led them here. We have endured a night longer than any should have, yet the dawn is slowly drawing near, even as we almost forgot what it looked like. Yet before that, we stand before the final challenge, that last thrust to reclaim our home, and tomorrow there is only one choice. Geeri ama Guul: death or victory."
 HYE_victory_in_the_war:0 "A Much-Deserved Victory"
-HYE_victory_in_the_war_desc:0 ""
+HYE_victory_in_the_war_desc:0 "It is over. The smoke clears over our ancient home, the guns fall silent, and we stand atop the hallowed peaks of our ancient home. The cost was high, and we weep as we remember all those who died in exile, yet Hyenia, for the first time in over a decade, is finally free."
 
 #Industrial
 HYE_nationbuilding:0 "Build a Nation"
@@ -73,7 +73,7 @@ HYE_one_purpose_desc:0 ""
 
 #Qaylid
 HYE_qaylid_start:0 "Living By The Qaylid"
-HYE_qaylid_start_desc:0 ""
+HYE_qaylid_start_desc:0 "Fahamka's teachings has led us to victory, now it will lead us to wisdom. We pledge ourselves to reject the old ways, the greed and the selfish pride that drove us. We will no longer be slaves to our desires but instead transcend them. We rise above what was, and Hyenia will blossom under the guiding principles of the Qaylid. "
 HYE_past_trap:0 "The Trap Of The Past"
 HYE_past_trap_desc:0 ""
 HYE_dilligence_dedication:0 "Dilligence and Dedication"
@@ -187,7 +187,7 @@ infiltrate_SCT_desc:0 "More stuff" #placeholder
 ##Ideas##
 #Starting ideas and their derivatives
 HYE_qaylid_dervish:0 "The Qaylid"
-HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, Great Teacher Fahamka has led her disciples and students to create a new way of life for the Hyenas. This more spiritual and ascetic path has created something rarely before seen in Hyenia, and now the Dervishes stand as the new order in Hyenia."
+HYE_qaylid_dervish_desc:0 "Since the exodus from her own kin, Great Teacher Fahamka has led her disciples and students to create a new way of life for the Hyenas. This more spiritual and ascetic path has created something rarely before seen in Hyenia, and now the Dervishes stand as the new order in these lands."
 HYE_regency:0 "The Great Teacher's Weakness."
 HYE_regency_desc:0 "After a long life, Fahamka stands at the precipice of the final journey. This has scared many among the Dervishes, but also given them even greater determination to win this war and fast, so that she may look upon the homeland before age claims her."
 HYE_to_recovery:0 "Road To Recovery"
@@ -209,7 +209,7 @@ HYE_build_nation_industry_desc:0 ""
 HYE_movespeed:0 "Like The Wind"
 HYE_movespeed_desc:0 "We move fast and look at the enemy fast." #placeholder
 HYE_command:0 "Dervish Determination"
-HYE_command_desc:0 "Fight to the last man, we shall." #placeholder
+HYE_command_desc:0 "Every Dervish knows their duty, and it is time to push, harder than ever." #placeholder
 HYE_attack:0 "Unrelenting Push"
 HYE_attack_desc:0 "URAAAAAAAAAAAAAAAAAAAAAA" #placeholder
 HYE_yetided:0 "The Last Offensive"
@@ -249,12 +249,12 @@ HYE_furasho_chief:0 "Furasho"
 ##Events##
 
 hyenia.1.t:0 "The War To Come"
-hyenia.1.d:0 "The Storm King lies dead in the north and Yeti authority has collapsed. The Dervishes, last and most driven in the battle to liberate the Hyenian homelands, have seized upon this opportunity and are readying themselves for the greatest offensive they ever have committed. The inner circle of Fahamka’s trusted advisors and generals has convened to debate how to carry this out. Until now, the Dervishes focused on guerilla warfare and subterfuge, making the most of their limited resources. Now, with the end of the war in sight, their ranks swell by the thousands, and they may well be able to break the Yetis in open battle.\n\n"The subterfuge we have employed until this moment has served us well," silent Masaska said calmly."However numerous we are, the challenge before us is monumental. We must play to our strengths instead of being seduced by fantasies of grand battles." \n\n"And so we shall!" Furasho, warmaster and son of warmasters, boomed. "Yet beyond the war lies peace, and in that peace we will be the sole uniting force in Hyenia. Shall we cast aside this unity, so hard won in blood? No, we must not, and our unity was built on the battlefield. Hyenia must be baptized in fire, as we were."\n\n"There will be time to build unity without the death of countless." Masaska retorted. "The hyenas you speak of are not dervishes, and their lives are not for us to throw away in order to trick them into obedience."\n\n"Yet Dervishes they must become! Ours is the new order of the land, and we must seize it to recast this nation so that we can stand firmly at its helm."\n\n"That sounds like the words of a would-be king," Masaska remarked sweetly, leaving Furasho to growl and Fahamka to rise from her seat.\n\n"Enough,” she said, both falling silent at the first syllable. “I have heard enough...""
+hyenia.1.d:0 "The Storm King lies dead in the north and Yeti authority has collapsed. The Dervishes, last and most driven in the battle to liberate the Hyenian homelands, have seized upon this opportunity and are readying themselves for the greatest offensive they have ever undertaken.\n\nThe inner circle of Fahamka’s trusted advisors and generals has convened to debate how to carry this out. Until now, the Dervishes have focused on guerilla warfare and subterfuge, making the most of their limited resources. Now, with the end of the war in sight, their ranks swell by the thousands, and they may well be able to break the Yetis in open battle.\n\n"The subterfuge we have employed until this moment has served us well," Masaska - the silent blade of Fahamka - said calmly. "However numerous we are, the challenge before us is monumental. We must play to our strengths instead of being seduced by fantasies of grand battles." \n\n"And so we shall!" Furasho, warmaster and son of warmasters, boomed. "Yet beyond the war lies peace, and in that peace we will be the sole uniting force in Hyenia. Shall we cast aside this unity, so hard won in blood? No, we must not, and our unity was built on the battlefield. Hyenia must be baptized in fire, as we were."\n\n"There will be time to build unity without the death of countless." Masaska retorted. "The hyenas you speak of are not dervishes, and their lives are not for us to throw away in order to trick them into obedience."\n\n"Yet Dervishes they must become! Ours is the new order of the land, and we must seize it to recast this nation so that we can stand firmly at its helm."\n\n"That sounds like the words of a would-be king," Masaska remarked sweetly, leaving Furasho to growl and Fahamka to rise from her seat.\n\n"Enough,” she said, both falling silent at the first syllable. “I have heard enough...""
 hyenia.1.a:0 ""Masaska is right, we are warriors of shadow, not pretender kings.""
 hyenia.1.b:0 ""Furasho is right, let our unconvinced kin see the truth in battle.""
 
 hyenia.2.t:0 "Time is Inexorable and Pitiless"
-hyenia.2.d:0 "As the Dervishes stand at the brink of their greatest trial, another, more insidious, enemy has advanced upon them: time.\n\nEven before the Storm King's invasion, Fahamka - the Great Teacher - lived a hard life. First she was an exile deep in the deserts before she found enlightenment. Then she was the wandering teacher of a marginalized and ridiculed philosophy. In a way, the trials of war are merely the peak of the trials and tribulations she has known for decades at this point.\n\nMore and more however, she has been feeling her strength slipping away from her. Pure determination - some might even call it spite - has kept her going for years at this point, but no dog is eternal. Fahamka has been forced to retreat more and more from the duties of leadership. Ever the stoic, she has refused to let this show, but Furasho and Masaska both know their teacher too well to avoid it, and both are starting to worry." 
+hyenia.2.d:0 "As the Dervishes stand at the brink of their greatest trial, another enemy, more insidious and unsoppable than any, has advanced upon them: time.\n\nEven before the Storm King's invasion, Fahamka - the Great Teacher - lived a hard life. First she was an exile deep in the deserts before she found enlightenment. Then she was the wandering teacher of a marginalized and ridiculed philosophy. In a way, the trials of war are merely the peak of the trials and tribulations she has known for decades at this point.\n\nMore and more however, she has been feeling her strength slipping away from her. Pure determination - some might even call it spite - has kept her going for years at this point, but no dog is eternal. Fahamka has been forced to retreat more and more from the duties of leadership. Ever the stoic, she has refused to let this show, but Furasho and Masaska both know their teacher too well to miss it, and both are starting to worry." 
 hyenia.2.a:0 "Soon she will no longer be with us..."
 
 hyenia.3.t:0 "Dervish Sabotage!"
@@ -284,7 +284,7 @@ hyenia.8.d:0 "Though we hoped to avoid further bloodshed, the [thunderbowl_owner
 hyenia.8.a:0 "War it is."
 
 hyenia.9.t:0 "Her Only Mother" #His Only Mother
-hyenia.9.d:0 "Masaska quietly gave the bowl of water to Fahamka, silently sitting by her bedside as the old hyena drank from it. When Fahamka was done, Masaska gently took it from her when she was finished. Over half of it was still there. Even merely drinking was becoming an issue for Fahamka. The visage that had betrayed only strength and conviction was marked by age and weariness.\n\n"Do not look so despondent, little ferret,"" Fahamka cautioned her gently, her once strong voice a whisper. "You are not yet old enough for such furrows in your face."\n\n"Neither should you be," Masaska responded quietly, her face a study of sorrow, worry and fear.\n\n"And yet, I am,"" Fahamka sighed, leaning back in her bed. "It is the way of things," she said as she squeezed Masaska's paw in hers, "Surely you understood even before this that I was not eternal?"\n\n"The mind did, but not the heart," Masaska confessed, her head bowed. "When you found me, I was a shadow roaming a burning village. But without light there are no shadows, only darkness. I am afraid... I know it is our duty to let go of the past, but when you are gone, I do not know how I can move on.\n\n"Oh little ferret,"" Fahamka sighed. "A hyena, dervish or not, can still cry if she is sad. Cry for me, mourn and rail against this cruel, uncaring world, just promise me that you will rise again. Your heart is purer than you know, your wisdom is deep, and you are not without light of your own. When I am gone, promise me that you will be for others what I was for you. Promise me you will be a light in the dark.""
+hyenia.9.d:0 "Masaska quietly gave the bowl of water to Fahamka, silently sitting by her bedside as the old hyena drank from it. When Fahamka was done, Masaska gently took it from her. Over half of it was still there. Even merely drinking was becoming an issue for Fahamka, the visage that had betrayed only strength and conviction was marked by age and weariness.\n\n"Do not look so despondent, little ferret,"" Fahamka cautioned her gently, her once strong voice a whisper. "You are not yet old enough for such furrows in your face."\n\n"Neither should you be," Masaska responded quietly, her face a study of sorrow, worry and fear.\n\n"And yet, I am,"" Fahamka sighed, leaning back in her bed. "It is the way of things," she said as she squeezed Masaska's paw in hers, "Surely you understood even before this that I was not eternal?"\n\n"The mind did, but not the heart," Masaska confessed, her head bowed. "When you found me, I was a shadow roaming a burning village. But without light there are no shadows, only darkness. I am afraid... I know it is our duty to let go of the past, but when you are gone, I do not know how I can move on."\n\n"Oh little ferret,"" Fahamka sighed. "A hyena, dervish or not, can still cry if she is sad. Cry for me, mourn and rail against this cruel, uncaring world, just promise me that you will rise again. Your heart is purer than you know, your wisdom is deep, and you are not without light of your own. When I am gone, promise me that you will be for others what I was for you. Promise me you will be a light in the dark.""
 hyenia.9.a:0 "I promise."
 
 hyenia.10.t:0 "The Fading Queen of War" #Fading Queen of War
@@ -314,7 +314,7 @@ hyenia.15.a:0 "Masaska keeps the collaborators hidden away"
 hyenia.15.b:0 "Furasho's soldiers seize them - by force if needed."
 
 hyenia.16.t:0 "The Yetis"
-hyenia.16.d:0 "After the Storm King's invasion, much of Hyenia was left emptied of life, and opportunistic Yetis moved in to settle there. The yetis number in the tens of thousands, with many of them having created large estates in the south parts of the homeland - even setting themselves up as local landlords in some cases.\n\nThis will not be tolerate, that much is clear, yet what to do about it is less obvious.\n\nFurasho has marshalled his forces, preparing to expel the yetis by force. This is not their land and Hyenia has no place for these thieves, no matter how long they have lived here. They built their homes on the graves of murdered hyenas, and their presence is an insult that cannot be tolerated.\n\nInitial attempts have been stymied however, as Masaska's Dervishes have blocked any attempts to drive them out, physically in some cases. The war was fought against the occupiers, not against yetis as a species, and as long as these yetis swear to live by our laws and surrender land back to those hyenas who still live, there is no cause for further bloodshed. The Qaylid, after all, teaches us to let go of the past and build the future unburdened by what was.\n\nThe standoff has continued for days, and though neither side wants bloodshed, this will continue until either side gives way."
+hyenia.16.d:0 "After the Storm King's invasion, much of Hyenia was left emptied of life, and opportunistic Yetis moved in to settle there. The yetis number in the tens of thousands, with many of them having created large estates in the south parts of the homeland - even setting themselves up as local landlords in some cases. This is unacceptable, that much is clear, yet what to do about it is less obvious.\n\nFurasho has marshalled his forces, preparing to expel the yetis by force. This is not their land and Hyenia has no place for these thieves, no matter how long they have lived here. They built their homes on the graves of murdered hyenas, and their presence is an insult that cannot be tolerated.\n\nInitial attempts have been stymied however, as Masaska's Dervishes have blocked any attempts to drive them out, physically in some cases. The war was fought against the occupiers, not against yetis as a species, and as long as these yetis swear to live by our laws and surrender land back to those hyenas who still live, there is no cause for further bloodshed. The Qaylid, after all, teaches us to let go of the past and build the future unburdened by what was.\n\nThe standoff has continued for days, and though neither side wants bloodshed, this will continue until either side gives way."
 hyenia.16.a:0 "By Furasho's word, the yetis are driven out."
 hyenia.16.b:0 "Masaska's protection does not yield, they stay."
 
@@ -340,15 +340,15 @@ hyenia.20.b:0 "Die, mutt. "
 hyenia.21.t:0 "Choking Shadows"
 hyenia.21.d:0 "'Damn you.' Masaska ducked under Furasho's wild sword strike, lashing out at his face and just managing to nick his cheek. Leaping back out of range, she slid along the floor before having to block a charging strike from Furasho. The force made her arm shake.\n\n'Damn you!' He was way stronger than her. Yet another area where this general and son of generals trumped him. He was stronger than her, more canny in the ways of grand strategy. When he spoke, Hyenas listened, and he was born for leadership. As Masaska feinted and slipped away again, retreating back into the shadows, she gritted her teeth.\n\n'Damn you!' she almost snarled as she leaped out of vew, hiding to find a better angle to strike. He should have been the obvious successor to Fahamka's, yet he was so trapped by his belief that raw might was all that mattered! Had he understood nothing?! Was all he had learned at Fahamka's feet forgotten and discarded when it no longer was convenient?!\n\nLeaping in behind Furasho, Masaska charged at him, her sword diving for his neck. If he so blindly refused to see, then the price was his to pay. Mid-leap, she saw Furasho turn towards her and counter-attack, leaving them to clash mid-charge.\n\nA shift, a twist, and suddenly Masaska was below him, her sword slicing cleanly through his robe and into his fur. Furasho crashed limply into the ground as Masaska turned around, raising her sword for the last blow."
 hyenia.21.a:0 "I already lost a mother, I will not lose a brother as well."
-hyenia.21.a:0 "No more kings, not now, not ever!"
+hyenia.21.b:0 "No more kings, not now, not ever!"
 
 hyenia.22.t:0 "The Death of Fahamka"
 hyenia.22.d:0 "As the last gunshots ring out and the war comes to an end, word was swiftly passed back to [Root.GetCapital]. The yetis had fallen, and the path to Qalbi Weyn was clear. The oath taken by hundreds of thousands has been fulfilled, the homeland is free at last. Now, the one who had led us all to this triumph, who defied exile and persecution, could finally be brought back to Qalbi Weyn, where she could finally be honored as she deserved. And yet, as we reached her camp to begin escorting her back, all we found was mourning dervishes and a tent covered in black.\n\nFahamka, the Great Teacher, our light in the darkness and mother to us all, is no longer among us. Clinging to life to the bitter end so that we would not falter at the last moment, she has now passed on from this world as her duty is fulfilled. To the bitter end, she put her duties first, and her eyes never got to rest on the beautiful homeland again.\n\nThis should have been our greatest triumph, a victory to be cherished for eternity, and yet our hearts are ripped out of our chests, and we are left to weep."
 hyenia.22.a:0 "Our light has died."
 
 hyenia.23.t:0 "Rebuilding Hyenia"
-hyenia.23.d:0 ""
-hyenia.23.a:0 ""
+hyenia.23.d:0 "Hyenia was once a great nation of towering citadels, massive cities and splendid monuments, yet after wars and occupation it lies in ruins. So much of its wealth was lost, be it due to the Storm King's ravages or our own people burning down the nation rather than let the king have it. Though we were victorious in the Weerar Weyn, we have retaken a kingdom of ashes.\n\nYet, what is matters not. What matters is what will be, and we will not rest on our laurels. The forges will burn hot once more, the farmers' fields will sway in the winds and the cattle will grow fat and happy on the mountainsides. Bent, but not broken, we now forge our swords and guns into hammers and plowshares to not reclaim, but to rebuild." 
+hyenia.23.a:0 "Hyenia will live again."
 
 ##Equipment##
 
