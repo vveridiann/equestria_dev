@@ -3669,6 +3669,7 @@ shared_focus = {
 		LUS = { add_to_ROOT_potential_cores = yes }
 		GRW = { add_to_ROOT_potential_cores = yes }
 		BRF = { add_to_ROOT_potential_cores = yes }
+		GRY = { add_to_ROOT_potential_cores = yes }
 		GRU = { add_to_ROOT_potential_cores = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6636,7 +6637,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_no_more_police"
-		add_ideas = GRI_military_police
+		add_ideas = GRI_military_police_idea
 	}
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESISTANCE FOCUS_FILTER_POLITICAL }
 }
