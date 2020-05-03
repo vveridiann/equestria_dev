@@ -28,9 +28,9 @@ shared_focus = {
     id = STM_fleet_future
     icon = GFX_focus_generic_paratrooper
     
-    x = 10
+    x = 0
     y = 1
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -44,6 +44,9 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+		air_experience = 20
+	}
 }
 
 ### Operational Integrity path ###
@@ -51,9 +54,9 @@ shared_focus = {
     id = STM_revolutionize_the_fleet
     icon = GFX_focus_generic_paratrooper
     
-    x = 5
+    x = -5
     y = 2
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -78,9 +81,9 @@ shared_focus = {
     id = STM_modern_fighters
     icon = GFX_focus_generic_paratrooper
     
-    x = 3
+    x = -7
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -103,7 +106,7 @@ shared_focus = {
 		    }
 		    add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 1.5
+				bonus = 1.0
 				uses = 1
 				category = light_fighter
 			}
@@ -114,7 +117,7 @@ shared_focus = {
 			}
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 1.0
+				bonus = 0.75
 				uses = 1
 				category = light_fighter
 			}
@@ -126,9 +129,9 @@ shared_focus = {
     id = STM_black_demons
     icon = GFX_focus_generic_paratrooper
     
-    x = 4
+    x = -6
     y = 4
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -164,9 +167,9 @@ shared_focus = {
     id = STM_army_support
     icon = GFX_focus_generic_paratrooper
     
-    x = 7
+    x = -3
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -195,9 +198,9 @@ shared_focus = {
     id = STM_light_bombers
     icon = GFX_focus_generic_paratrooper
     
-    x = 6
+    x = -4
     y = 4
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -226,9 +229,9 @@ shared_focus = {
     id = STM_lightning_and_thunder
     icon = GFX_focus_generic_paratrooper
     
-    x = 5
+    x = -5
     y = 5
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -245,6 +248,9 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+	add_ideas = STM_lightning_thunder
+	}
 }
 
 ### Strategic Destruction path ###
@@ -252,9 +258,9 @@ shared_focus = {
     id = STM_grand_fleet_legacy
     icon = GFX_focus_generic_paratrooper
     
-    x = 15
+    x = 5
     y = 2
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -279,9 +285,9 @@ shared_focus = {
     id = STM_airships_of_new_age
     icon = GFX_focus_generic_paratrooper
     
-    x = 13
+    x = 3
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -310,9 +316,9 @@ shared_focus = {
     id = STM_heavy_fighter_escorts
     icon = GFX_focus_generic_paratrooper
     
-    x = 14
+    x = 4
     y = 4
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -341,9 +347,9 @@ shared_focus = {
     id = STM_armed_transport_planes
     icon = GFX_focus_generic_paratrooper
     
-    x = 17
+    x = 7
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -363,9 +369,9 @@ shared_focus = {
     id = STM_Sky_marines
     icon = GFX_focus_generic_paratrooper
     
-    x = 16
+    x = 6
     y = 4
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -379,15 +385,29 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+			custom_effect_tooltip = STM_Sky_Marines_effect
+			hidden_effect = { set_technology = { popup = no STM_Sky_Marines = 1 } }
+			set_technology = {
+				paratroopers = 1
+			}
+			add_tech_bonus = {
+				name = paratrooper_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
 }
 
 shared_focus = {
     id = STM_across_the_oceans
     icon = GFX_focus_generic_paratrooper
     
-    x = 15
+    x = 5
     y = 5
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -404,6 +424,9 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+	add_ideas = STM_across_oceans
+	}
 }
 
 ### Universal Focuses ###
@@ -411,9 +434,9 @@ shared_focus = {
     id = STM_new_bases
     icon = GFX_focus_generic_paratrooper
     
-    x = 9
+    x = -1
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -428,15 +451,41 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+			1025 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			983 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			985 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 }
 
 shared_focus = {
     id = STM_island_of_aa
     icon = GFX_focus_generic_paratrooper
     
-    x = 11
+    x = 1
     y = 3
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -451,15 +500,45 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+			982 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			983 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			984 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			985 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 }
 
 shared_focus = {
     id = STM_continue_increasing_budget
     icon = GFX_focus_generic_paratrooper
     
-    x = 10
+    x = 0
     y = 4
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -496,9 +575,9 @@ shared_focus = {
     id = STM_naval_aviation
     icon = GFX_focus_generic_paratrooper
     
-    x = 8
+    x = -2
     y = 5
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -527,9 +606,9 @@ shared_focus = {
     id = STM_aircraft_concerns
     icon = GFX_focus_generic_paratrooper
     
-    x = 10
+    x = 0
     y = 5
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -549,9 +628,9 @@ shared_focus = {
     id = STM_taming_storms
     icon = GFX_focus_generic_paratrooper
     
-    x = 12
+    x = 2
     y = 5
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -565,15 +644,18 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+	add_ideas = STM_flying_in_storms
+	}
 }
 
 shared_focus = {
     id = STM_arisen_from_ashes
     icon = GFX_focus_generic_paratrooper
     
-    x = 10
+    x = 0
     y = 6
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -597,15 +679,20 @@ shared_focus = {
     available = {
         always = yes
     }
+	
+	completion_reward = {
+		air_experience = 20
+		swap_ideas = { remove_idea = STM_memories_grand_fleet add_idea = STM_memories_grand_fleet_upgraded }
+	}
 }
 
 shared_focus = {
     id = STM_nuke_project
     icon = GFX_focus_generic_paratrooper
     
-    x = 9
+    x = -1
     y = 7
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -619,15 +706,23 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 1.0
+			uses = 1
+			category = nuclear
+		}
+	}
 }
 
 shared_focus = {
     id = STM_rocket_project
     icon = GFX_focus_generic_paratrooper
     
-    x = 11
+    x = 1
     y = 7
-	
+	relative_position_id = STM_begin_refunding
 	cost = 5
 	
     prerequisite = {
@@ -641,4 +736,11 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
 }

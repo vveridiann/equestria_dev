@@ -11,28 +11,4 @@ focus_tree = {
 	}
 
 shared_focus = STM_begin_refunding
-shared_focus = STM_fleet_future
 
-shared_focus = STM_grand_fleet_legacy
-shared_focus = STM_airships_of_new_age
-shared_focus = STM_heavy_fighter_escorts
-shared_focus = STM_armed_transport_planes
-shared_focus = STM_Sky_marines
-shared_focus = STM_across_the_oceans
-
-shared_focus = STM_revolutionize_the_fleet
-shared_focus = STM_modern_fighters
-shared_focus = STM_black_demons
-shared_focus = STM_army_support
-shared_focus = STM_light_bombers
-shared_focus = STM_lightning_and_thunder
-
-shared_focus = STM_new_bases
-shared_focus = STM_island_of_aa
-shared_focus = STM_continue_increasing_budget
-shared_focus = STM_naval_aviation
-shared_focus = STM_aircraft_concerns
-shared_focus = STM_taming_storms
-shared_focus = STM_arisen_from_ashes
-shared_focus = STM_nuke_project
-shared_focus = STM_rocket_project

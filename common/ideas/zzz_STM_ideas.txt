@@ -18,6 +18,26 @@ ideas = {
 	}
 	
 	country = {
+		STM_memories_grand_fleet_upgraded = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = storm_king_symbol
+			modifier = {
+				experience_gain_air	= 0.04
+				air_ace_generation_chance_factor = 0.20
+				war_support_factor	= 0.10
+				air_maximum_speed_factor = 0.05
+				air_bombing_targetting = 0.05
+			}
+		}
+	}
+	
+	country = {
 		STM_mini_airforce_budget = {
             allowed = {
 				always = no
@@ -343,6 +363,92 @@ ideas = {
 						build_cost_ic = -0.05
 						instant = yes
 					}
+			}
+		}
+	}
+	
+	country = {
+		STM_flying_in_storms = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = storm_king_symbol
+			modifier = {
+				air_accidents = -0.10
+				air_weather_penalty = -0.20
+			}
+		}
+	}
+	
+	country = {
+		STM_lightning_thunder = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = storm_king_symbol
+			equipment_bonus = {
+				fighter_equipment = {
+					air_agility = 0.03
+					air_attack = 0.05
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					air_agility = 0.03
+					air_attack = 0.05
+					instant = yes
+				}
+				CAS_equipment = {
+					air_agility = 0.03
+					air_ground_attack = 0.05
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					air_agility = 0.03
+					air_ground_attack = 0.05
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					air_agility = 0.03
+					air_ground_attack = 0.05
+					instant = yes
+				}
+			}
+		}
+	}
+	country = {
+		STM_across_oceans = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = { 
+			    always = yes 
+			}
+			removal_cost = -1
+			picture = storm_king_symbol
+			equipment_bonus = {
+				heavy_fighter_equipment = {
+					air_range = 0.10
+					air_defence = 0.05
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					air_range = 0.10
+					air_defence = 0.05
+					instant = yes
+				}
+				transport_plane_equipment = {
+					air_range = 0.10
+					air_defence = 0.05
+					instant = yes
+				}
 			}
 		}
 	}

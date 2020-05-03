@@ -1312,4 +1312,20 @@ jungle_warfare = {
 			}
 		}
 	}
+	
+	STM_Sky_Marines = {
+		research_cost = 1
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+		paratrooper = {
+			no_supply_grace = 24
+			out_of_supply_factor = -0.15
+			max_strength = 0.10
+			breakthrough = 0.05
+			attack = 0.1
+			defense = 0.1
+		}
+	}
 }
