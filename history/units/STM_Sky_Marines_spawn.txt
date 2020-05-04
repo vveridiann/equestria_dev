@@ -1,0 +1,34 @@
+﻿division_template = {
+	name = "Sky Marines Division"
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+		paratrooper = { x = 1 y = 2 }
+		paratrooper = { x = 2 y = 0 }
+		paratrooper = { x = 2 y = 1 }
+		paratrooper = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Sky Marines Division"
+		location = 20057
+		division_template = "Sky Marines Division"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Sky Marines Division"
+		location = 20057
+		division_template = "Sky Marines Division"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+}

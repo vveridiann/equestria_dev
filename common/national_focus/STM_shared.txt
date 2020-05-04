@@ -15,6 +15,7 @@ shared_focus = {
         always = yes
     }
 	completion_reward = {
+			add_political_power = -50
 			if = {
 				limit = {
 					has_idea = STM_mini_airforce_budget
@@ -73,7 +74,13 @@ shared_focus = {
         always = yes
     }
 	completion_reward = {
-		swap_ideas = { remove_idea = STM_mini_airforce_budget_1 add_idea = STM_mini_airforce_budget_1_OI }	
+		swap_ideas = { remove_idea = STM_mini_airforce_budget_1 add_idea = STM_mini_airforce_budget_1_OI }
+		add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = operational_integrity_tree
+			}
 	}
 }
 
@@ -278,6 +285,12 @@ shared_focus = {
     }
 	completion_reward = {
 		swap_ideas = { remove_idea = STM_mini_airforce_budget_1 add_idea = STM_mini_airforce_budget_1_SD }	
+		add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = strategic_destruction_tree
+			}
 	}
 }
 
@@ -363,6 +376,14 @@ shared_focus = {
     available = {
         always = yes
     }
+	completion_reward = {
+		custom_effect_tooltip = STM_Armed_Transports_effect
+		hidden_effect = {set_technology = {
+				early_bomber = 1
+			}
+		set_technology = { popup = no STM_Armed_Transports = 1 }  }
+		add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 5 producer = STM }
+	}
 }
 
 shared_focus = {
@@ -397,6 +418,9 @@ shared_focus = {
 				uses = 1
 				technology = paratroopers2
 				technology = paratroopers3
+			}
+			hidden_effect = {
+				load_oob = "STM_Sky_Marines_spawn"
 			}
 		}
 }
@@ -682,7 +706,14 @@ shared_focus = {
 	
 	completion_reward = {
 		air_experience = 20
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = air_doctrine
+		}
 		swap_ideas = { remove_idea = STM_memories_grand_fleet add_idea = STM_memories_grand_fleet_upgraded }
+		
 	}
 }
 

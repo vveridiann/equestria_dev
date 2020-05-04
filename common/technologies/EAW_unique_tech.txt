@@ -1328,4 +1328,17 @@ jungle_warfare = {
 			defense = 0.1
 		}
 	}
+	
+	STM_Armed_Transports = {
+		research_cost = 1
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+		transport_plane_equipment = {
+			air_defence = 0.50
+			air_agility = 0.25
+		}
+	}
+ 
 }

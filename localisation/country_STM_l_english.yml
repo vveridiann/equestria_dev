@@ -26,5 +26,9 @@ STM_mini_airforce_budget_2_SD_desc:0 ""
 STM_black_demons_tt:0 "§GAn elite fighter squadron 'Black Demons' will be deployed in Stormwind§!"
 
 STM_Sky_Marines:0 "Stormland Sky Marines"
-STM_Sky_Marines_effect:0 "Enables §HStormland Sky Marines§!\n§HParatroopers:§!\n   Attack: §G+10%§!\n   Defense: §G+10%§!\n   Breakthrough: §G+5%§!\n   Supply Grace: §G+24.0§!  Hour(s)\n   Out of Supply: §G-15%§!\n   HP: §G+10%§!\n"
+STM_Sky_Marines_effect:0 "Enables §HStormland Sky Marines§!\n§HParatroopers:§!\n   Attack: §G+10%§!\n   Defense: §G+10%§!\n   Breakthrough: §G+5%§!\n   Supply Grace: §G+24.0§!  Hour(s)\n   Out of Supply: §G-15%§!\n   HP: §G+10%§!\n§GTwo elite Sky Marines divisions will be deployed in Stormwind§!"
 STM_Sky_Marines_desc:0 ""
+
+STM_Armed_Transports:0 "Armed Transport Planes"
+STM_Armed_Transports_effect:0 "Enables §HArmed Transport Planes§!\n§HTransport Plane:§!\n   Defense: §G+50%§!\n   Agility: §G+25%§!\n"
+STM_Armed_Transports_desc:0 ""
