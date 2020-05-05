@@ -1249,6 +1249,7 @@ jungle_warfare = {
 			}
 		}
 	}
+
 	
 	HYE_hyenia_ironpaws = {
 
@@ -1291,6 +1292,7 @@ jungle_warfare = {
 			breakthrough = 0.15
 		}
 	}
+
 	GAR_gargoyles = {
 
 		research_cost = 1
