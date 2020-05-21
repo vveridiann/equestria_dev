@@ -250,7 +250,7 @@ KAT_bribe_those_with_power_desc:0 "While the Katerintreue holds much sway over t
 KAT_loyal_gang_bosses:0 "Loyal Gang Bosses"
 KAT_loyal_gang_bosses_desc:0 "While normally trusting the leader of a group of bandits is an unwise proposition, this situation in Katerin is far from normal. In particular, several of the gang bosses we have dealt with in the past have proven to be very agreeable to working for the government, especially when certain “incentives” are presented."
 KAT_serfs_clear_marshes:0 "Restarting the Strass Industry"
-KAT_serfs_clear_marshes_desc:0 "Under the Rule of Princess Diellza the Mad, What little industry was present in Katerin declined. The Strass industry in the Strassmark, once crucial in the old days as a Kingdom has remained so up until Diellza's reign and her inane orders and requests. This old heart of Katerin shall be re-organized and rejuvinated into its old glory, and it takess is a small push..."
+KAT_serfs_clear_marshes_desc:0 "Under the Rule of Princess Diellza the Mad, What little industry was present in Katerin declined. The Strass industry in the Strassmark, once crucial in the old days as a Kingdom has remained so up until Diellza's reign and her inane orders and requests. This old heart of Katerin shall be re-organized and rejuvinated into its old glory, and it takes is a small push..."
 KAT_increase_peonage_conscripts:0 "Increase Peonage Conscripts"
 KAT_increase_peonage_conscripts_desc:0 "The current armed forces under the direct control of the Katerintreue are, to put it bluntly, pathetic. If we are to reclaim control of the countryside then our forces must be drastically expanded, and while former prisoners might not make for the best of soldiers, they do fill out the ranks quite nicely."
 KAT_ganger_armies:0 "Punish Disloyalty"
@@ -475,11 +475,11 @@ KAT_mandatory_mil_service_desc:0 "This is an age of war, and nogriff will escape
 KAT_expand_estates:0 "The Noble Estates"
 KAT_expand_estates_desc:0 "The nobles need to be brought in line, but Diellza's idea of being brought in line was repression and violence. Like the commoners, the nobles need to be rewarded for their service, and many estates in the principality has been left destitute. The faithful shall be rewarded for their service, and their family legacies shall endure."
 KAT_demand_allegiance_from_republicans:0 "Big Guns..."
-KAT_demand_allegiance_from_republicans_desc:0 "With the end of the age of the airships came with it the start of the age of planes. Whilst knights were an integral part of airship combat, planes have shown themselves to be speedier and more brutal on the battlefield than even the most savage of bersekers. This has left air operations as knights untenable, but perhaps we merely need to innovate elsewhere to equalize on this..."
+KAT_demand_allegiance_from_republicans_desc:0 "The end of the age of the airships brought with it the start of the age of planes. Whilst knights were an integral part of airship combat, planes have shown themselves to be speedier and more brutal on the battlefield than even the most savage of bersekers. This has left air operations as knights untenable, but perhaps we merely need to innovate elsewhere to equalize on this..."
 KAT_find_suitable_prelate:0 "...For Big Problems"
 KAT_find_suitable_prelate_desc:0 "The development of artillery pieces has brought on the idea of using similarly sized guns to shoot down planes. Initial tests have shown promise in this concept, and we should pursue it."
  #KAT_peace_through_war:0 "Peace Through War"# Identical duplicate from Eaw
-KAT_peace_through_war_desc:0 "Whilst we are unable to produce the great steel beasts in any significant capacity at the moment compared to the Empire, we could attempt to shoot them down and force their pilots to fight on our terms - on the ground."
+KAT_peace_through_war_desc:0 "Whilst we are unable to produce the great steel beasts in any significant capacity compared to the Empire at the moment, we could attempt to shoot them down and force their pilots to fight on our terms - on the ground."
 KAT_topple_empire:0 "Topple the Empire" #Loc needed, talk a bit more about Grimclaw's claim and the Von katerinburg's deceit via Grover
 KAT_topple_empire_desc:0 "The old empire seized Katerin through treachery and deceit, and yet it still views us as its subjects. If we are to survive, the best option is not to wait for our undoing, but to seize the initiative and charge against our unprepared enemy. Katerin's destiny is doomed to be written in blood, but it can be written on our terms or somegriff else's."
 KAT_hold_the_line:0 "Hold the Line" #Loc needed, Again, more about the treacherous Von Katerinburgs and incoming Grovers.
@@ -1471,6 +1471,7 @@ KAT_alliance_desc:0 "We cannot stand alone against the Empire. If we do not coop
 
 ### Form the Empire/Republic ###
 form_griffon_empire_KAT:0 "Succeed the Griffonian Empire"
+form_griffon_empire_KAT1:0 "Declare the Griffonian Socialist Theocracy"
 form_griffon_empire_KAT2:0 "Form Herzland"
 form_griffon_empire_KAT3:0 "Form the Republic"
 
@@ -1524,6 +1525,7 @@ tt_KAT_peasantarmy:0 "Even more §YPeasant Conscripts§! will be called up."
 tt_KAT_mercs:0 "§CMercenaries§! will be hired and integrated into the armed forces."
 
 ### Cosmetic Tags ###
+#Old Raptor shit - check cosmetic tags in eaw_griffon_continent_countries_l_english.yml
 
 KAT_heartland_neutrality:0 "Kingdom of Herzland"
 KAT_heartland_fascism:0 "Kingdom of Herzland"

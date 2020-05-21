@@ -717,9 +717,9 @@ country_event = { #Katerintreue tests the knights, literally to attack the grifk
 		#554 = {
 		#	set_demilitarized_zone = no
 		#}
-		#hidden_effect = {
-		#	set_country_flag = KAT_like_talon #This seems like an artefact of old.
-		#}
+		hidden_effect = {
+			set_country_flag = KAT_like_talon 
+		}
 	}
 	option = { #Grimclaw rallies
 		name = katerin.60.b
@@ -739,12 +739,12 @@ country_event = { #Katerintreue tests the knights, literally to attack the grifk
 		}
 		add_popularity = { ideology = neutrality popularity = 0.05}
 		add_stability = -0.05
-		506 = {
-			set_demilitarized_zone = no
-		}
-		554 = {
-			set_demilitarized_zone = no
-		}
+		#506 = {
+		#	set_demilitarized_zone = no
+		#}
+		#554 = {
+		#	set_demilitarized_zone = no
+		#}
 		hidden_effect = {
 			set_country_flag = KAT_like_claw
 		}

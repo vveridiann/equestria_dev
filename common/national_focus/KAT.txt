@@ -43,7 +43,7 @@ focus_tree = { #Harmonic interwar
 	country = {
 		factor = 0
 		modifier = {
-			add = 5
+			add = 55
 			tag = KAT
 		}
 	}
