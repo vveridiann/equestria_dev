@@ -43,7 +43,7 @@ focus_tree = { #Harmonic interwar
 	country = {
 		factor = 0
 		modifier = {
-			add = 55
+			add = 5
 			tag = KAT
 		}
 	}
@@ -137,7 +137,7 @@ focus_tree = { #Republic/Harmonic after unification
 	country = {
 		factor = 0
 		modifier = {
-			add = 2
+			add = 22
 			tag = KAT
 		}
 	}

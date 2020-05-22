@@ -2214,7 +2214,10 @@
 				limit = {
 					has_idea = KAT_council_knights
 				}
-					remove_ideas = KAT_council_knights
+					swap_ideas = {
+						remove_idea = KAT_council_knights
+						add_idea = KAT_council_knights_republicans
+					}
 				}			
 			}			
 			search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -7458,7 +7461,7 @@ shared_focus = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}	
 	
-	shared_focus = {
+	shared_focus = { #Contacting the Northern Government
 		id = KAT_renovate_our_goverment
 		icon = GFX_goal_solar_fair_but_just
 		relative_position_id = KAT_unite_heezlands_republic
@@ -7471,6 +7474,12 @@ shared_focus = {
 
 		available = {
 			is_subject = no 
+			owns_state = 398
+			owns_state = 411
+			owns_state = 492
+			owns_state = 378
+			owns_state = 520
+			owns_state = 486
 		}
 
 		ai_will_do = {
@@ -7478,570 +7487,188 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KAT_renovate_our_goverment"
-			add_political_power = 100
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_political_power = 50
+			country_event = { id = katerin_new.999 days = 1 } #Conference setup event - deny or not?
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
-	shared_focus = { #Note that the Diellza Event Chain is triggered from here as well, via the Grover event
-		id = KAT_fate_of_grover_vi_republic
-		icon = GFX_goal_grover_vi
-		cost = 2
-		
-		available = {
-			is_subject = no 
-		}
-		
-		bypass = {
-			has_global_flag = GRI_grover_vi_dead
-		}
-
-        prerequisite = {
-            focus = KAT_renovate_our_goverment
-        }
-        ai_will_do = {
-            factor = 220
-        }
-
-        relative_position_id = KAT_renovate_our_goverment
-        x = 0
-        y = 1
-
-    completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_fate_of_grover_vi_republic"
-			country_event = {
-					id = katerin_new.16
-					days = 1
-			}
-			add_political_power = 25
-       }
-       search_filters = { FOCUS_FILTER_POLITICAL }
-   }
 	
-	shared_focus = { 
-		id = KAT_republican_rally_post
-		icon = GFX_goal_ideology_social_liberal
-		relative_position_id = KAT_renovate_our_goverment
-		x = -2
+	shared_focus = {
+		id = KAT_cloudbury_conference
+		icon = GFX_goal_griffon_money_growth
+		x = 1
 		y = 1
-		cost = 3
+		relative_position_id = KAT_renovate_our_goverment
+		cost = 6
 		prerequisite = {
 			focus = KAT_renovate_our_goverment
 		}
 		
-		available = {
-			is_subject = no 
+		mutually_exclusive = {
+			focus = KAT_talks_break_down
 		}
 
+		available = {
+		}	
+		
 		ai_will_do = {
 			factor = 220
 		}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_republican_rally_post"
-			add_manpower = 5000
-			add_ideas = KAT_republican_rally_post_idea
+		log = "[GetDateText]: [Root.GetName]: Focus KAT_cloudbury_conference"
 		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 
 	shared_focus = {
-		id = KAT_remember_diellza_republic
-		icon = GFX_focus_rom_abdicate
-		relative_position_id = KAT_renovate_our_goverment
-		x = 2
+		id = KAT_talks_break_down
+		icon = GFX_goal_griffon_money_growth
+		x = -1
 		y = 1
-		cost = 3
+		relative_position_id = KAT_renovate_our_goverment
+		cost = 6
 		prerequisite = {
 			focus = KAT_renovate_our_goverment
 		}
-
-		available = {
-			is_subject = no 
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_remember_diellza_republic"
-			remove_ideas = KAT_recovering_from_madness
-		}
-	}
-	
-
-
-	shared_focus = {
-		id = KAT_liberty_republic
-		icon = GFX_goal_liberty
-		relative_position_id = KAT_fate_of_grover_vi_republic
-		x = 1
-		y = 1
-		cost = 3
-		prerequisite = {
-			focus = KAT_fate_of_grover_vi_republic
-		}
-		prerequisite = {
-			focus = KAT_remember_diellza_republic
-		}
 		
+		mutually_exclusive = {
+			focus = KAT_cloudbury_conference
+		}
+
 		available = {
-			is_subject = no 
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_liberty_republic"
-			country_event = {
-					id = katerin_new.22
-					days = 1
-			}	
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_status_of_the_new_republic
-		icon = GFX_goal_griffon_harmony_char
-		x = -1
-		y = 1
-		relative_position_id = KAT_fate_of_grover_vi_republic
-		cost = 3
-		prerequisite = {
-			focus = KAT_fate_of_grover_vi_republic
-		}
-		prerequisite = {
-			focus = KAT_republican_rally_post
-		}
-		available = {
-			is_subject = no 
-		}		
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_status_of_the_new_republic"
-			add_ideas = KAT_state_of_the_republic
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	shared_focus = {
-		id = KAT_hector_as_first_president
-		icon = GFX_goal_COS_Peace
-		relative_position_id = KAT_fate_of_grover_vi_republic
-		x = 0
-		y = 2
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_status_of_the_new_republic
-		}
-		prerequisite = {
-			focus = KAT_liberty_republic
-		}
-		
-		available = {
-			is_subject = no 
-		}
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_hector_as_first_president"
-			country_event = {
-					id = katerin_new.18
-					days = 1
-			}
-		if = {
-            limit = { has_unit_leader = 2005 }
-            remove_unit_leader = 2005
-			}			
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_reach_out_to_river_republic
-		icon = GFX_goal_fre_federation
-		x = 3
-		y = 1
-		relative_position_id = KAT_hector_as_first_president
-		cost = 3
-		prerequisite = {
-			focus = KAT_hector_as_first_president
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_reach_out_to_river_republic"
-		if = {
-			limit = {
-				country_exists = RCT
-				}
-				RCT = { add_opinion_modifier = { target = ROOT modifier = large_increase  } }
-				ROOT = { add_opinion_modifier = { target = RCT modifier = large_increase  } }
-				add_political_power = 55
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	shared_focus = {
-		id = KAT_reach_out_to_equestria
-		icon = GFX_goal_equestria
-		x = -3
-		y = 1
-		relative_position_id = KAT_hector_as_first_president
-		cost = 3
-		prerequisite = {
-			focus = KAT_hector_as_first_president
-		}
-		
-		available = {
-			event_target:equestria = { has_government = democratic NOT = { has_war_with = ROOT } }
 		}	
-
+		
 		ai_will_do = {
 			factor = 220
 		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus KAT_reach_out_to_equestria"
-			event_target:equestria = { add_opinion_modifier = { target = ROOT modifier = large_increase  } }
-			ROOT = { add_opinion_modifier = { target = event_target:equestria modifier = large_increase  } }
-			add_political_power = 55
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KAT_cloudbury_conference"
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
+	
 	shared_focus = {
-		id = KAT_harmony_leads_the_knights
-		icon = GFX_goal_griffon_knights
-		x = 0
+		id = KAT_referendum_approved
+		icon = GFX_goal_griffon_money_growth
+		x = 1
 		y = 1
-		relative_position_id = KAT_hector_as_first_president
-		cost = 5
+		relative_position_id = KAT_cloudbury_conference
+		cost = 6
 		prerequisite = {
-			focus = KAT_hector_as_first_president
+			focus = KAT_cloudbury_conference
 		}
+
 		available = {
-			is_subject = no 
-		}		
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_harmony_leads_the_knights"
-			add_ideas = KAT_frontier_knights
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-	
-	shared_focus = {
-		id = KAT_strengthening_the_economy
-		icon = GFX_focus_generic_the_giant_wakes
-		x = -2
-		y = 1
-		relative_position_id = KAT_harmony_leads_the_knights
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_harmony_leads_the_knights
-		}
-		available = {
-			is_subject = no 
-		}		
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_strengthening_the_economy"
-			add_political_power = 100
-			add_ideas= KAT_a_new_dawn_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
-	}
-	
-	shared_focus = {
-		id = KAT_improve_research
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 3
-		relative_position_id = KAT_strengthening_the_economy
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_strengthening_the_economy
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_improve_research"
-			add_ideas = KAT_research_improve
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
-	shared_focus = {
-		id = KAT_basic_tax
-		icon = GFX_goal_generic_national_unity_claws
-		x = -1
-		y = 1
-		relative_position_id = KAT_strengthening_the_economy
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_strengthening_the_economy
-		}
-		available = {
-			is_subject = no 
-		}		
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_basic_tax"
-			add_ideas = KAT_Social_idea1
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	shared_focus = {
-		id = KAT_provide_welfare
-		icon = GFX_goal_economic_control
-		x = 0
-		y = 1
-		relative_position_id = KAT_basic_tax
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_basic_tax
 		}	
-
+		
 		ai_will_do = {
 			factor = 220
 		}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_provide_welfare"
-			swap_ideas = {remove_idea = KAT_Social_idea1 add_idea = KAT_Social_idea2}
+		log = "[GetDateText]: [Root.GetName]: Focus KAT_referendum_approved" #TODO event
 		}
-	}
+	}	
 	
 	shared_focus = {
-		id = KAT_industrial_center
-		icon = GFX_goal_generic_consumer_goods
-		x = 1
-		y = 1
-		relative_position_id = KAT_strengthening_the_economy
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_strengthening_the_economy
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_industrial_center"
-			swap_ideas = {remove_idea = KAT_a_new_dawn_idea add_idea = KAT_a_new_dawn_idea2}
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_improve_the_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 1
-		relative_position_id = KAT_industrial_center
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_industrial_center
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_improve_the_infrastructure"
-			swap_ideas = {remove_idea = KAT_a_new_dawn_idea2 add_idea = KAT_a_new_dawn_idea3}
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_solidifying_our_ideals
-		icon = GFX_goal_support_democracy
-		x = 2
-		y = 1
-		relative_position_id = KAT_harmony_leads_the_knights
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_harmony_leads_the_knights
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_solidifying_our_ideals"
-			add_ideas = KAT_Liberty_idea1
-			add_political_power = 50
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	shared_focus = {
-		id = KAT_new_institutions_for_all
-		icon = GFX_goal_government_icon
-		x = 0
-		y = 3
-		relative_position_id = KAT_solidifying_our_ideals
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_solidifying_our_ideals
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_new_institutions_for_all"
-			add_ideas = KAT_new_institutions_idea			
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-	
-	shared_focus = {
-		id = KAT_harmony_for_all
-		icon = GFX_goal_generic_propaganda
+		id = KAT_plead_with_kemerskai
+		icon = GFX_goal_griffon_money_growth
 		x = -1
 		y = 1
-		relative_position_id = KAT_solidifying_our_ideals
-		cost = 4.40
+		relative_position_id = KAT_talks_break_down
+		cost = 6
 		prerequisite = {
-			focus = KAT_solidifying_our_ideals
+			focus = KAT_talks_break_down
 		}
 
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_harmony_for_all"
-			swap_ideas = {remove_idea = KAT_Liberty_idea1 add_idea = KAT_Liberty_idea2}
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_freedom_of_the_press
-		icon = GFX_goal_big_news
-		x = 0
-		y = 1
-		relative_position_id = KAT_harmony_for_all
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_harmony_for_all
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_freedom_of_the_press"
-			swap_ideas = {remove_idea = KAT_Liberty_idea2 add_idea = KAT_Liberty_idea3}		
-		}
-	}
-	
-	shared_focus = {
-		id = KAT_elect_new_leaders
-		icon = GFX_goal_GRF_free_elections
-		x = 1
-		y = 1
-		cost = 4.40
-		relative_position_id = KAT_solidifying_our_ideals
-		prerequisite = {
-			focus = KAT_solidifying_our_ideals
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_elect_new_leaders"
-		add_political_power = 150
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	shared_focus = {
-		id = KAT_guarantee_freedom
-		icon = GFX_goal_constitutional_guarantees
-		x = 0
-		y = 1
-		relative_position_id = KAT_elect_new_leaders
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_elect_new_leaders
-		}
-
-		ai_will_do = {
-			factor = 220
-		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_guarantee_freedom"
-			add_political_power = 50
-			add_stability = 0.10
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-	}
-	
-	
-	shared_focus = {
-		id = KAT_the_new_griffon_republic
-		icon = GFX_focus_indy_give_democracy
-		x = 0
-		y = 5
-		relative_position_id = KAT_harmony_leads_the_knights
-		cost = 4.40
-		prerequisite = {
-			focus = KAT_freedom_of_the_press
-		}
-		prerequisite = {
-			focus = KAT_new_institutions_for_all
-		}
-		prerequisite = {
-			focus = KAT_guarantee_freedom
-		}
-		prerequisite = {
-			focus = KAT_provide_welfare
-		}
-		prerequisite = {
-			focus = KAT_improve_research
-		}
-		prerequisite = {
-			focus = KAT_improve_the_infrastructure
-		}
 		available = {
-			is_subject = no 
-		}
+		}	
+		
 		ai_will_do = {
 			factor = 220
 		}
-
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus KAT_the_new_griffon_republic"
-			add_ideas = KAT_beacon_of_light
+		log = "[GetDateText]: [Root.GetName]: Focus KAT_plead_with_kemerskai"
 		}
-		search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 	}
+	
+	#shared_focus = { #Note that the Diellza Event Chain is triggered from here as well, via the Grover event
+	#	id = KAT_fate_of_grover_vi_republic
+	#	icon = GFX_goal_grover_vi
+	#	cost = 2
+	##	
+	#	available = {
+	#		is_subject = no 
+	#	}
+	#	
+	##	bypass = {
+	#		has_global_flag = GRI_grover_vi_dead #Bypasses the focus if Grover is dead - prevents event popup as well!
+	#	}
+	#
+    #   prerequisite = {
+    #        focus = KAT_renovate_our_goverment
+    #    }
+    #    ai_will_do = {
+    #        factor = 220
+	#	}
+	#
+    #    relative_position_id = KAT_renovate_our_goverment
+    #    x = 1
+    #    y = 1
+
+    #completion_reward = {
+	#	log = "[GetDateText]: [Root.GetName]: Focus KAT_fate_of_grover_vi_republic"
+	#		country_event = {
+	#				id = katerin_new.16
+	#				days = 1
+	#		}
+	#		add_political_power = 25
+	#		hidden_effect = {
+	#			set_country_flag = KAT_citizen_grover
+	#		}
+    #   }
+    #   search_filters = { FOCUS_FILTER_POLITICAL }
+   #}
+ #  shared_focus = { #Note that the Diellza Event Chain is triggered from here as well, via the Grover event. Last event won't fire if Grover becomes a constitutional monarch.
+#		id = KAT_constitutional_monarchy
+#		icon = GFX_goal_grover_vi
+#		cost = 2
+#		
+#		available = {
+#			is_subject = no 
+#			NOT = { has_global_flag = GRI_grover_vi_dead}
+#		}
+#		
+#		bypass = {
+#			#has_global_flag = GRI_grover_vi_dead #Prevents bypass if Grover VI is dead.
+#		}
+#		
+#		mutually_exclusive = {
+#			focus = KAT_fate_of_grover_vi_republic
+#		}
+#
+#       prerequisite = {
+#          focus = KAT_renovate_our_goverment
+#        }
+#        ai_will_do = {
+#            factor = 220
+#        }
+#
+#        relative_position_id = KAT_renovate_our_goverment
+#        x = -1
+#        y = 1
+
+#    completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus KAT_fate_of_grover_vi_republic"
+#			country_event = {
+#					id = katerin_new.16
+#					days = 1
+#			}
+#			add_political_power = 25
+#			hidden_effect = {
+#				set_country_flag = KAT_grover_constituional_monarchy
+#			}
+#       }
+#       search_filters = { FOCUS_FILTER_POLITICAL }
+#   }
+
 ### ###
 
 ### Unaligned Post Unification Tree ###

@@ -1328,7 +1328,7 @@ ideas = {
 					democratic_drift = 0.01
 					industrial_capacity_factory = 0.05
 					production_speed_buildings_factor = 0.05
-					consumer_goods_factor = 0.02
+					consumer_goods_factor = -0.02
 				}
 		}
 		KAT_logistics_officers = {
