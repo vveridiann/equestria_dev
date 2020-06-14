@@ -132,11 +132,11 @@ ideas = {
 			allowed = {
 				original_tag = KAT
 			}
-			visible = {
-				NOT = {
-					has_country_flag = KAT_advisor_died
-				}
-			}
+			#visible = {
+			#	NOT = {
+			#		has_country_flag = KAT_advisor_died
+			#	}
+			#}
 			available = {
 				OR = {
 					has_government = democratic
@@ -653,7 +653,7 @@ ideas = {
 				}
 		}
 		
-		KAT_theocracy = {
+		KAT_theocracy_i = {
 			picture = idol_of_boreas_lost
 				modifier = {
 					political_power_gain = 0.1
