@@ -1,0 +1,90 @@
+BAN_commune_control_modifier = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_commune_control_quarter
+	local_building_slots_factor = FROM.FROM.BAN_commune_control_half
+	state_resources_factor = FROM.FROM.BAN_commune_control_half
+	state_production_speed_buildings_factor = FROM.FROM.BAN_commune_control_quarter
+	army_speed_factor = -0.2
+}
+BAN_commune_control_modifier_good = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_commune_control_quarter
+	local_building_slots_factor = FROM.FROM.BAN_commune_control_quarter
+	state_production_speed_buildings_factor = FROM.FROM.BAN_commune_control_quarter_good
+	army_core_defence_factor = 0.1
+
+}
+BAN_noble_control_modifier = {
+	icon = GFX_modifiers_sabotaged_resource
+		enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_noble_control_half
+	local_building_slots_factor = FROM.FROM.BAN_noble_control_quarter
+	state_resources_factor = FROM.FROM.BAN_noble_control_quarter
+}
+BAN_noble_control_modifier_good = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_noble_control_quarter_good
+	army_core_attack_factor = 0.05
+}
+BAN_religious_control_modifier = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_religious_control_quarter
+	local_building_slots_factor = FROM.FROM.BAN_religious_control_half
+	state_production_speed_buildings_factor = FROM.FROM.BAN_religious_control_quarter
+}
+BAN_religious_control_modifier_good = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = FROM.FROM.BAN_religious_control_quarter_good
+	state_production_speed_buildings_factor = FROM.FROM.BAN_religious_control_quarter_good
+	local_org_regain = 0.1
+}
+BAN_bandit_control_modifier = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	attrition = FROM.FROM.BAN_bandit_control_half_good
+	army_speed_factor = FROM.FROM.BAN_bandit_control_half
+	state_production_speed_buildings_factor = FROM.FROM.BAN_bandit_control_half
+}
+BAN_bandit_control_modifier_good = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	army_speed_factor = FROM.FROM.BAN_bandit_control_quarter_good
+	state_resources_factor = FROM.FROM.BAN_bandit_control_quarter_good
+	state_production_speed_buildings_factor = FROM.FROM.BAN_bandit_control_quarter_good
+}
+BAN_minotaurs_are_based = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	recruitable_population_factor = 0.3
+}
+BAN_special_defenses = {
+	icon = GFX_modifiers_sabotaged_resource
+	enable = {
+		always = yes
+	}
+	army_core_attack_factor = 0.05
+	army_core_defence_factor = 0.15
+}

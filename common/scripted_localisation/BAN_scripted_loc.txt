@@ -1,0 +1,290 @@
+defined_text = {
+	name = BAN_actual_state_controller_murkbeak_key
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_actual_controller_bandits } }
+		localization_key = BAN_actual_state_controller_bandit
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_actual_controller_nobles } }
+		localization_key = BAN_actual_state_controller_noble
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_actual_controller_communes } }
+		localization_key = BAN_actual_state_controller_commune
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_banditplace_key
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_actual_controller_bandits } }
+		localization_key = BAN_actual_state_controller_bandit
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_actual_controller_nobles } }
+		localization_key = BAN_actual_state_controller_noble
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_actual_controller_communes } }
+		localization_key = BAN_actual_state_controller_commune
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_naniwich_key
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_actual_controller_bandits } }
+		localization_key = BAN_actual_state_controller_bandit
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_actual_controller_nobles } }
+		localization_key = BAN_actual_state_controller_noble
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_actual_controller_communes } }
+		localization_key = BAN_actual_state_controller_commune
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_creeper_key
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_actual_controller_bandits } }
+		localization_key = BAN_actual_state_controller_bandit
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_actual_controller_nobles } }
+		localization_key = BAN_actual_state_controller_noble
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_actual_controller_communes } }
+		localization_key = BAN_actual_state_controller_commune
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_blackhollow_key
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_actual_controller_bandits } }
+		localization_key = BAN_actual_state_controller_bandit
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_actual_controller_nobles } }
+		localization_key = BAN_actual_state_controller_noble
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_actual_controller_communes } }
+		localization_key = BAN_actual_state_controller_commune
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_naniwich_general_key
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_blackrock_controls_state } }
+		localization_key = BAN_blackrock_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_ulrich_controls_state } }
+		localization_key = BAN_ulrich_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_dominik_controls_state } }
+		localization_key = BAN_dominik_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_kajetan_controls_state } }
+		localization_key = BAN_kajetan_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_cyrille_controls_state } }
+		localization_key = BAN_cyrille_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_silas_controls_state } }
+		localization_key = BAN_silas_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_sir_controls_state } }
+		localization_key = BAN_sir_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_reeve_controls_state } }
+		localization_key = BAN_reeve_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_gavrila_controls_state } }
+		localization_key = BAN_gavrila_controller
+	}
+	text = {
+		trigger = { 489 = { has_state_flag = BAN_giannis_controls_state } }
+		localization_key = BAN_giannis_controller
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_banditplace_general_key
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_blackrock_controls_state } }
+		localization_key = BAN_blackrock_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_ulrich_controls_state } }
+		localization_key = BAN_ulrich_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_dominik_controls_state } }
+		localization_key = BAN_dominik_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_kajetan_controls_state } }
+		localization_key = BAN_kajetan_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_cyrille_controls_state } }
+		localization_key = BAN_cyrille_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_silas_controls_state } }
+		localization_key = BAN_silas_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_sir_controls_state } }
+		localization_key = BAN_sir_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_reeve_controls_state } }
+		localization_key = BAN_reeve_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_gavrila_controls_state } }
+		localization_key = BAN_gavrila_controller
+	}
+	text = {
+		trigger = { 606 = { has_state_flag = BAN_giannis_controls_state } }
+		localization_key = BAN_giannis_controller
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_murkbeak_general_key
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_blackrock_controls_state } }
+		localization_key = BAN_blackrock_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_ulrich_controls_state } }
+		localization_key = BAN_ulrich_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_dominik_controls_state } }
+		localization_key = BAN_dominik_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_kajetan_controls_state } }
+		localization_key = BAN_kajetan_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_cyrille_controls_state } }
+		localization_key = BAN_cyrille_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_silas_controls_state } }
+		localization_key = BAN_silas_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_sir_controls_state } }
+		localization_key = BAN_sir_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_reeve_controls_state } }
+		localization_key = BAN_reeve_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_gavrila_controls_state } }
+		localization_key = BAN_gavrila_controller
+	}
+	text = {
+		trigger = { 532 = { has_state_flag = BAN_giannis_controls_state } }
+		localization_key = BAN_giannis_controller
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_blackhollow_general_key
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_blackrock_controls_state } }
+		localization_key = BAN_blackrock_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_ulrich_controls_state } }
+		localization_key = BAN_ulrich_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_dominik_controls_state } }
+		localization_key = BAN_dominik_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_kajetan_controls_state } }
+		localization_key = BAN_kajetan_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_cyrille_controls_state } }
+		localization_key = BAN_cyrille_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_silas_controls_state } }
+		localization_key = BAN_silas_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_sir_controls_state } }
+		localization_key = BAN_sir_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_reeve_controls_state } }
+		localization_key = BAN_reeve_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_gavrila_controls_state } }
+		localization_key = BAN_gavrila_controller
+	}
+	text = {
+		trigger = { 490 = { has_state_flag = BAN_giannis_controls_state } }
+		localization_key = BAN_giannis_controller
+	}
+}
+defined_text = {
+	name = BAN_actual_state_controller_creeper_general_key
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_blackrock_controls_state } }
+		localization_key = BAN_blackrock_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_ulrich_controls_state } }
+		localization_key = BAN_ulrich_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_dominik_controls_state } }
+		localization_key = BAN_dominik_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_kajetan_controls_state } }
+		localization_key = BAN_kajetan_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_cyrille_controls_state } }
+		localization_key = BAN_cyrille_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_silas_controls_state } }
+		localization_key = BAN_silas_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_sir_controls_state } }
+		localization_key = BAN_sir_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_reeve_controls_state } }
+		localization_key = BAN_reeve_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_gavrila_controls_state } }
+		localization_key = BAN_gavrila_controller
+	}
+	text = {
+		trigger = { 446 = { has_state_flag = BAN_giannis_controls_state } }
+		localization_key = BAN_giannis_controller
+	}
+}

@@ -1,0 +1,645 @@
+#	Example:
+#
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+BAN_battle_win = {
+	OR = {
+		has_state_flag = BAN_free_win_flag
+		AND = {
+			ROOT = { has_completed_focus = BAN_noble_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_normal_attacker_noble
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							check_variable = { BAN_bandit_garrison < 2 }
+							check_variable = { BAN_special_bandit_garrison = 0 }
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 2 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_normal_attacker_noble
+					has_state_flag = BAN_actual_controller_communes
+					OR = {
+						AND = {
+							check_variable = { BAN_commune_garrison < 2 }
+							check_variable = { BAN_special_commune_garrison = 0 }
+						}
+						AND = {
+							check_variable = { BAN_commune_garrison = 0 }
+							check_variable = { BAN_special_commune_garrison < 2 }
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_noble_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_two_normal_attacker_noble
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_two_normal_attacker_noble
+					has_state_flag = BAN_actual_controller_communes
+					OR = {
+						AND = {
+							check_variable = { BAN_commune_garrison < 3 }
+							check_variable = { BAN_special_commune_garrison = 0 }
+						}
+						AND = {
+							check_variable = { BAN_commune_garrison = 0 }
+							check_variable = { BAN_special_commune_garrison < 3 }
+						}
+						AND = {
+							check_variable = { BAN_commune_garrison = 1 }
+							check_variable = { BAN_special_commune_garrison = 1 }
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_noble_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_special_attacker_noble
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							check_variable = { BAN_bandit_garrison < 2 }
+							check_variable = { BAN_special_bandit_garrison = 0 }
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_special_attacker_noble
+					has_state_flag = BAN_actual_controller_communes
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_commune_garrison < 3 }
+									check_variable = { BAN_special_commune_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 0 }
+									check_variable = { BAN_special_commune_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_commune_garrison < 2 }
+									check_variable = { BAN_special_commune_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 0 }
+									check_variable = { BAN_special_commune_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_noble_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_normal_one_special_attacker_noble
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 4 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 4 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 2 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 2 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_normal_one_special_attacker_noble
+					has_state_flag = BAN_actual_controller_communes
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_commune_garrison < 4 }
+									check_variable = { BAN_special_commune_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 0 }
+									check_variable = { BAN_special_commune_garrison < 4 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 2 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 2 }
+								}
+							}
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_commune_garrison < 3 }
+									check_variable = { BAN_special_commune_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 0 }
+									check_variable = { BAN_special_commune_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_normal_attacker_commune
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							check_variable = { BAN_bandit_garrison < 2 }
+							check_variable = { BAN_special_bandit_garrison = 0 }
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 2 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_normal_attacker_commune
+					has_state_flag = BAN_actual_controller_nobles
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 2 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							check_variable = { BAN_noble_garrison < 2 }
+							check_variable = { BAN_special_noble_garrison = 0 }
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_two_normal_attacker_commune
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_two_normal_attacker_commune
+					has_state_flag = BAN_actual_controller_nobles
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 3 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 1 }
+									check_variable = { BAN_special_noble_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 3 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_special_attacker_commune
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							check_variable = { BAN_bandit_garrison < 2 }
+							check_variable = { BAN_special_bandit_garrison = 0 }
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 2 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_special_attacker_commune
+					has_state_flag = BAN_actual_controller_nobles
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 2 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							check_variable = { BAN_noble_garrison < 2 }
+							check_variable = { BAN_special_noble_garrison = 0 }
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+			OR = {
+				AND = {
+					has_state_flag = BAN_one_normal_one_special_attacker_commune
+					has_state_flag = BAN_actual_controller_bandits
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_bandit_garrison < 3 }
+									check_variable = { BAN_special_bandit_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 0 }
+									check_variable = { BAN_special_bandit_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 490
+								state = 532
+							}
+						}
+					}
+				}
+				AND = {
+					has_state_flag = BAN_one_normal_one_special_attacker_commune
+					has_state_flag = BAN_actual_controller_nobles
+					OR = {
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 3 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 3 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 1 }
+									check_variable = { BAN_special_noble_garrison = 1 }
+								}
+							}
+							OR = {
+								state = 489
+								state = 606
+								state = 446
+							}
+						}
+						AND = {
+							OR = {
+								AND = {
+									check_variable = { BAN_noble_garrison < 3 }
+									check_variable = { BAN_special_noble_garrison = 0 }
+								}
+								AND = {
+									check_variable = { BAN_noble_garrison = 0 }
+									check_variable = { BAN_special_noble_garrison < 2 }
+								}
+							}
+							OR = {
+								state = 532
+								state = 490
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

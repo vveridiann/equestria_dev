@@ -71,7 +71,6 @@ country_event = { #Blackrock wants your lunch money
 			}
 		}
 		clr_country_flag = bandit_tributary
-		remove_from_array = { BAN.bandit_tributaries = THIS }
 		add_political_power = 25
 		BAN = { country_event = { id = bandit.26 days = 3 } }
 	}
@@ -217,7 +216,6 @@ country_event = { ## Blackrock Demands you to become TRIBUTE
 		}
 
 		set_country_flag = bandit_tributary
-		add_to_array = { BAN.bandit_tributaries = THIS }
 	}
 
 	option = { ### Fuck off ye CUNT
@@ -323,7 +321,7 @@ country_event = { ## Falcor drug trade
 				if = {
 					limit = { NOT = { tag = ROOT } }
 					country_event = {
-						id = bandit.91
+						id = bandit.1010
 					}
 				}
 			}
@@ -332,15 +330,15 @@ country_event = { ## Falcor drug trade
 }
 
 country_event = { ## event for Falcor
-	id = bandit.91
-	immediate = {log = "[Root.GetName]: event bandit.91"}#Auto-logging
-	title = bandit.91.t
-	desc = bandit.91.d
+	id = bandit.1010
+	immediate = {log = "[Root.GetName]: event bandit.1010"}#Auto-logging
+	title = bandit.1010.t
+	desc = bandit.1010.d
 	picture = GFX_event_medieval_village_2
 	is_triggered_only = yes
 
 	option = {
-		name = bandit.91.a
+		name = bandit.1010.a
 		add_ideas = BAN_growing_drug_trade_bad
 		add_political_power = -20
 	}
@@ -363,7 +361,7 @@ country_event = { ## CRIME PAYS
 				if = {
 					limit = { NOT = { tag = ROOT } }
 					country_event = {
-						id = bandit.101
+						id = bandit.1011
 					}
 				}
 			}
@@ -372,15 +370,15 @@ country_event = { ## CRIME PAYS
 }
 
 country_event = { ## event for Sicameon
-	id = bandit.101
-	immediate = {log = "[Root.GetName]: event bandit.101"}#Auto-logging
-	title = bandit.101.t
-	desc = bandit.101.d
+	id = bandit.1011
+	immediate = {log = "[Root.GetName]: event bandit.1011"}#Auto-logging
+	title = bandit.1011.t
+	desc = bandit.1011.d
 	picture = GFX_event_medieval_city_ugly_street
 	is_triggered_only = yes
 
 	option = {
-		name = bandit.101.a
+		name = bandit.1011.a
 		add_ideas = BAN_criminal_organizations
 	}
 }
@@ -405,7 +403,7 @@ country_event = { ## Cyanolisia drug farms
 				if = {
 					limit = { NOT = { tag = ROOT } }
 					country_event = {
-						id = bandit.102
+						id = bandit.1012
 					}
 				}
 			}
@@ -414,15 +412,15 @@ country_event = { ## Cyanolisia drug farms
 }
 
 country_event = { ## event for Cyanolisia
-	id = bandit.102
+	id = bandit.1012
 	immediate = {log = "[Root.GetName]: event bandit.101"}#Auto-logging
-	title = bandit.102.t
-	desc = bandit.102.d
+	title = bandit.1012.t
+	desc = bandit.1012.d
 	picture = GFX_event_medieval_village_2
 	is_triggered_only = yes
 
 	option = {
-		name = bandit.102.a
+		name = bandit.1012.a
 		add_ideas = BAN_growing_drug_trade_bad
 	}
 }
@@ -1217,7 +1215,14 @@ country_event = { ## civil war start
 
 country_event = { ## Blackhollow
 	id = bandit.29
-	immediate = {log = "[Root.GetName]: event bandit.29"}#Auto-logging
+	immediate = { 
+		log = "[Root.GetName]: event bandit.29"
+		save_current_manpower = yes
+		490 = {
+			add_manpower = -5000
+		}
+		restore_previous_manpower = yes
+	}
 	title = bandit.29.t
 	desc =  {
 		text = bandit.29.d_commie
@@ -1232,21 +1237,70 @@ country_event = { ## Blackhollow
 
 	option = {
 		name = bandit.29.a
-
-		add_manpower = -2500
-		add_political_power = 40
-		save_current_manpower = yes
-		490 = {
-			set_demilitarized_zone = no
-			add_manpower = -7500
+		trigger = {
+			490 = { BAN_battle_win = yes }
 		}
-		restore_previous_manpower = yes
+		490 = {
+			BAN_kill_divisions_win = yes
+			clr_state_flag = BAN_actual_controller_bandits
+			clr_state_flag = BAN_actual_controller_nobles
+			clr_state_flag = BAN_actual_controller_communes
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_actual_controller_nobles
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_actual_controller_communes
+					else = {
+						set_state_flag = BAN_actual_controller_bandits
+					}
+				}
+			}
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		country_event = { id = bandit.38 }
+		country_event = { id = bandit.39 }
+	}
+	option = {
+		name = bandit.29.b
+		trigger = {
+			490 = { BAN_battle_win = no }
+		}
+		490 = {
+			BAN_kill_divisions_loss = yes
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
 	}
 }
 
 country_event = { ## Murkbeak
 	id = bandit.30
-	immediate = {log = "[Root.GetName]: event bandit.30"}#Auto-logging
+	immediate = {
+		log = "[Root.GetName]: event bandit.30"
+		save_current_manpower = yes
+		532 = {
+			add_manpower = -10000
+		}
+		restore_previous_manpower = yes
+	}
 	title = bandit.30.t
 	desc =  {
 		text = bandit.30.d_commie
@@ -1261,21 +1315,70 @@ country_event = { ## Murkbeak
 
 	option = {
 		name = bandit.30.a
-
-		add_manpower = -3000
-		add_political_power = 40
-		save_current_manpower = yes
-		532 = {
-			set_demilitarized_zone = no
-			add_manpower = -10000
+		trigger = {
+			532 = { BAN_battle_win = yes }
 		}
-		restore_previous_manpower = yes
+		532 = {
+			BAN_kill_divisions_win = yes
+			clr_state_flag = BAN_actual_controller_bandits
+			clr_state_flag = BAN_actual_controller_nobles
+			clr_state_flag = BAN_actual_controller_communes
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_actual_controller_nobles
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_actual_controller_communes
+					else = {
+						set_state_flag = BAN_actual_controller_bandits
+					}
+				}
+			}
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		country_event = { id = bandit.38 }
+		country_event = { id = bandit.39 }
+	}
+	option = {
+		name = bandit.30.b
+		trigger = {
+			532 = { BAN_battle_win = no }
+		}
+		532 = {
+			BAN_kill_divisions_loss = yes
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
 	}
 }
 
 country_event = { ## Creeper Neutral
 	id = bandit.31
-	immediate = {log = "[Root.GetName]: event bandit.31"}#Auto-logging
+	immediate = {
+		log = "[Root.GetName]: event bandit.31"
+		save_current_manpower = yes
+		446 = {
+			add_manpower = -5000
+		}
+		restore_previous_manpower = yes
+	}
 	title = bandit.31.t
 	desc =  {
 		text = bandit.31.d_commie
@@ -1290,20 +1393,71 @@ country_event = { ## Creeper Neutral
 
 	option = {
 		name = bandit.31.a
-		add_manpower = -1000
-		add_political_power = 40
-		save_current_manpower = yes
-		446 = {
-			set_demilitarized_zone = no
-			add_manpower = -5000
+		trigger = {
+			446 = { BAN_battle_win = yes }
 		}
-		restore_previous_manpower = yes
+		446 = {
+			BAN_kill_divisions_win = yes
+			clr_state_flag = BAN_actual_controller_bandits
+			clr_state_flag = BAN_actual_controller_nobles
+			clr_state_flag = BAN_actual_controller_communes
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_actual_controller_nobles
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_actual_controller_communes
+					else = {
+						set_state_flag = BAN_actual_controller_bandits
+					}
+				}
+			}
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		country_event = { id = bandit.38 }
+		country_event = { id = bandit.39 }
+	}
+	option = {
+		name = bandit.31.b
+		trigger = {
+			446 = { BAN_battle_win = no }
+		}
+		446 = {
+			BAN_kill_divisions_loss = yes
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
 	}
 }
 
 country_event = { ## Banditplace Neutral
 	id = bandit.32
-	immediate = {log = "[Root.GetName]: event bandit.32"}#Auto-logging
+	immediate = {
+		log = "[Root.GetName]: event bandit.32"
+		save_current_manpower = yes
+		606 = {
+			set_demilitarized_zone = no
+			add_manpower = -5000
+		}
+		restore_previous_manpower = yes
+	}
 	title = bandit.32.t
 	desc =  {
 		text = bandit.32.d_commie
@@ -1318,20 +1472,70 @@ country_event = { ## Banditplace Neutral
 
 	option = {
 		name = bandit.29.a
-		add_manpower = -1000
-		add_political_power = 40
-		save_current_manpower = yes
-		606 = {
-			set_demilitarized_zone = no
-			add_manpower = -5000
+		trigger = {
+			606 = { BAN_battle_win = yes }
 		}
-		restore_previous_manpower = yes
+		606 = {
+			BAN_kill_divisions_win = yes
+			clr_state_flag = BAN_actual_controller_bandits
+			clr_state_flag = BAN_actual_controller_nobles
+			clr_state_flag = BAN_actual_controller_communes
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_actual_controller_nobles
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_actual_controller_communes
+					else = {
+						set_state_flag = BAN_actual_controller_bandits
+					}
+				}
+			}
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		country_event = { id = bandit.38 }
+		country_event = { id = bandit.39 }
+	}
+	option = {
+		name = bandit.32.b
+		trigger = {
+			606 = { BAN_battle_win = no }
+		}
+		606 = {
+			BAN_kill_divisions_loss = yes
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
 	}
 }
 
 country_event = { ## Naniwich Neutral
 	id = bandit.33
-	immediate = {log = "[Root.GetName]: event bandit.33"}#Auto-logging
+	immediate = {
+		log = "[Root.GetName]: event bandit.33"
+		save_current_manpower = yes
+		489 = {
+			add_manpower = -5000
+		}
+		restore_previous_manpower = yes
+	}
 	title = bandit.33.t
 	desc =  {
 		text = bandit.33.d_commie
@@ -1346,14 +1550,57 @@ country_event = { ## Naniwich Neutral
 
 	option = {
 		name = bandit.33.a
-		add_manpower = -1000
-		add_political_power = 40
-		save_current_manpower = yes
-		489 = {
-			set_demilitarized_zone = no
-			add_manpower = -5000
+		trigger = {
+			489 = { BAN_battle_win = yes }
 		}
-		restore_previous_manpower = yes
+		489 = {
+			BAN_kill_divisions_win = yes
+			clr_state_flag = BAN_actual_controller_bandits
+			clr_state_flag = BAN_actual_controller_nobles
+			clr_state_flag = BAN_actual_controller_communes
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_actual_controller_nobles
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_actual_controller_communes
+					else = {
+						set_state_flag = BAN_actual_controller_bandits
+					}
+				}
+			}
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		country_event = { id = bandit.38 }
+		country_event = { id = bandit.39 }
+	}
+	option = {
+		name = bandit.33.b
+		trigger = {
+			489 = { BAN_battle_win = no }
+		}
+		489 = {
+			BAN_kill_divisions_loss = yes
+			clr_state_flag = BAN_one_normal_attacker_noble
+			clr_state_flag = BAN_two_normal_attacker_noble
+			clr_state_flag = BAN_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_one_special_attacker_noble
+			clr_state_flag = BAN_one_normal_attacker_commune
+			clr_state_flag = BAN_two_normal_attacker_commune
+			clr_state_flag = BAN_one_special_attacker_commune
+			clr_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
 	}
 }
 
@@ -1416,6 +1663,2899 @@ country_event = { ## Queen Cyrille
 		add_political_power = 200
 	}
 }
+
+country_event = { # division commitment event
+	id = bandit.37
+	immediate = { 
+		log = "[Root.GetName]: event bandit.37"
+	}
+	title = bandit.37.t
+	desc = bandit.37.desc
+	picture = GFX_event_griffon_soldier
+	is_triggered_only = yes
+	option = { # Commit one normal division
+		name = bandit.37.a
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_noble_divisions > 0 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_commune_divisions > 0 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_one_normal_attacker_noble
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_one_normal_attacker_commune
+				}
+			}
+		}
+	}
+	option = { # Commit two normal divisions
+		name = bandit.37.b
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_noble_divisions > 1 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_commune_divisions > 1 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_two_normal_attacker_noble
+				else_if = {
+					limit = {
+						has_completed_focus = BAN_revolutionary_spirit
+					}
+					set_state_flag = BAN_two_normal_attacker_commune
+				}
+			}
+		}
+	}
+	option = { # Commit one special division
+		name = bandit.37.c
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_special_noble_divisions > 0 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_special_commune_divisions > 0 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_one_special_attacker_noble
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_one_special_attacker_commune
+				}
+			}
+		}
+	}
+	option = { # Commit one special division and one normal division
+		name = bandit.37.d
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_noble_divisions > 0 }
+					check_variable = { BAN_available_special_noble_divisions > 0 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_commune_divisions > 0 }
+					check_variable = { BAN_available_special_commune_divisions > 0 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					ROOT = { has_completed_focus = BAN_noble_spirit }
+				}
+				set_state_flag = BAN_one_normal_one_special_attacker_noble
+				else_if = {
+					limit = {
+						ROOT = { has_completed_focus = BAN_revolutionary_spirit }
+					}
+					set_state_flag = BAN_one_normal_one_special_attacker_commune
+				}
+			}
+		}
+	}
+	option = {
+		name = bandit.37.e
+		trigger = {
+			ROOT = { has_country_flag = BAN_free_win_flag }
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_free_win_flag
+		}
+		clr_country_flag = BAN_free_win_flag
+	}
+}
+
+country_event = { # selecting a garrison commander (only matters for assassinations)
+	id = bandit.38
+	immediate = {
+		log = "[Root.GetName]: event bandit.38"
+		event_target:BAN_battle_target = {
+			clr_state_flag = BAN_dominik_controls_state
+			clr_state_flag = BAN_blackrock_controls_state
+			clr_state_flag = BAN_ulrich_controls_state
+			clr_state_flag = BAN_kajetan_controls_state
+			clr_state_flag = BAN_cyrille_controls_state
+			clr_state_flag = BAN_silas_controls_state
+			clr_state_flag = BAN_sir_controls_state
+			clr_state_flag = BAN_reeve_controls_state
+			clr_state_flag = BAN_gavrila_controls_state
+			clr_state_flag = BAN_giannis_controls_state
+		}
+	}
+	title = bandit.38.t
+	desc = bandit.38.desc
+	is_triggered_only = yes
+	option = { # Select Blackrock
+		name = bandit.38.a
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_bandits
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_blackrock_controls_state
+		}
+	}
+	option = { # Select Pinfeather
+		name = bandit.38.b
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_bandits
+			}
+			NOT = {
+				has_country_flag = BAN_pinfeather_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_dominik_controls_state
+		}
+	}
+	option = { # Select Hiperion
+		name = bandit.38.c
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_bandits
+			}
+			NOT = {
+				has_country_flag = BAN_hiperion_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_ulrich_controls_state
+		}
+	}
+	option = { # Select Bronsfeather
+		name = bandit.38.d
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_bandits
+			}
+			NOT = {
+				has_country_flag = BAN_bronsfeather_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_kajetan_controls_state
+		}
+	}
+	option = { # Select Cyrille
+		name = bandit.38.e
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_nobles
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_cyrille_controls_state
+		}
+	}
+	option = { # Select Silas
+		name = bandit.38.f
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_nobles
+			}
+			NOT = {
+				has_country_flag = BAN_blackbeak_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_silas_controls_state
+		}
+	}
+	option = { # Select Sir
+		name = bandit.38.g
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_nobles
+			}
+			has_country_flag = BAN_sir_available
+			NOT = {
+				has_country_flag = BAN_sir_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_sir_controls_state
+		}
+	}
+	option = { # Select Reeve
+		name = bandit.38.h
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_communes
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_reeve_controls_state
+		}
+	}
+	option = { # Select Gavrila
+		name = bandit.38.i
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_communes
+			}
+			NOT = {
+				has_country_flag = BAN_tercel_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_gavrila_controls_state
+		}
+	}
+	option = { # Select Giannis
+		name = bandit.38.j
+		trigger = {
+			event_target:BAN_battle_target = {
+				has_state_flag = BAN_actual_controller_communes
+			}
+			NOT = {
+				has_country_flag = BAN_horndrogiannis_killed
+			}
+		}
+		event_target:BAN_battle_target = {
+			set_state_flag = BAN_giannis_controls_state
+		}
+	}
+}
+country_event = { # selecting garrison
+	id = bandit.39
+	immediate = { log = "[Root.GetName]: event bandit.39" }
+	title = bandit.39.t
+	desc = bandit.39.desc
+	is_triggered_only = yes
+	option = { # NO GARRISON (BASED) (REDPILLED)
+		name = bandit.39.a
+	}
+	option = { # one normal division
+		name = bandit.39.b
+		trigger = {
+			OR  = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_noble_divisions > 0 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_commune_divisions > 0 }
+				}
+				AND = {
+					NOT = {
+						has_completed_focus = BAN_noble_spirit
+						has_completed_focus = BAN_revolutionary_spirit
+					}
+					check_variable = { BAN_available_bandit_divisions > 0 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				set_variable = {
+					var = BAN_noble_garrison
+					value = 1
+				}
+				else_if = {
+					limit = {
+						has_state_flag = BAN_actual_controller_communes
+					}
+					set_variable = {
+						var = BAN_commune_garrison
+						value = 1
+					}
+					else = {
+						set_variable = {
+							var = BAN_bandit_garrison
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		update_BAN_variables = yes
+	}
+	option = { # one special division
+		name = bandit.39.c
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_special_noble_divisions > 0 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_special_commune_divisions > 0 }
+				}
+				AND = {
+					NOT = {
+						has_completed_focus = BAN_noble_spirit
+						has_completed_focus = BAN_revolutionary_spirit
+					}
+					check_variable = { BAN_available_special_bandit_divisions > 0 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				set_variable = {
+					var = BAN_special_noble_garrison
+					value = 1
+				}
+				else_if = {
+					limit = {
+						has_state_flag = BAN_actual_controller_communes
+					}
+					set_variable = {
+						var = BAN_special_commune_garrison
+						value = 1
+					}
+					else = {
+						set_variable = {
+							var = BAN_special_bandit_garrison
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		update_BAN_variables = yes
+	}
+	option = { # Two normal
+		name = bandit.39.d
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = BAN_noble_spirit
+					check_variable = { BAN_available_noble_divisions > 1 }
+				}
+				AND = {
+					has_completed_focus = BAN_revolutionary_spirit
+					check_variable = { BAN_available_commune_divisions > 1 }
+				}
+				AND = {
+					NOT = {
+						has_completed_focus = BAN_noble_spirit
+						has_completed_focus = BAN_revolutionary_spirit
+					}
+					check_variable = { BAN_available_bandit_divisions > 1 }
+				}
+			}
+		}
+		event_target:BAN_battle_target = {
+			if = {
+				limit = {
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				set_variable = {
+					var = BAN_noble_garrison
+					value = 2
+				}
+				else_if = {
+					limit = {
+						has_state_flag = BAN_actual_controller_communes
+					}
+					set_variable = {
+						var = BAN_commune_garrison
+						value = 2
+					}
+					else = {
+						set_variable = {
+							var = BAN_bandit_garrison
+							value = 2
+						}
+					}
+				}
+			}
+		}
+		update_BAN_variables = yes
+	}
+}
+
+country_event = { # Speak with Pinfeather
+	id = bandit.40
+	immediate = { log = "[Root.GetName]: event bandit.40" }
+	title = bandit.40.t
+	desc = {
+		text = bandit.40.cyrille.desc
+		trigger = { has_completed_focus = BAN_noble_spirit }
+	}
+	desc = {
+		text = bandit.40.reeve.desc
+		trigger = { has_completed_focus = BAN_revolutionary_spirit }
+	}
+	is_triggered_only = yes
+	option = {
+		name = bandit.40.a
+		set_country_flag = BAN_pinfeather_is_spoken_to
+		# its flavor lol
+	}
+}
+
+country_event = { # Align Pinfeather
+	id = bandit.41
+	immediate = { log = "[Root.GetName]: event bandit.41" }
+	title = bandit.41.t
+	desc = {
+		text = bandit.41.cyrille.desc
+		trigger = { has_completed_focus = BAN_noble_spirit }
+	}
+	desc = {
+		text = bandit.41.reeve.desc
+		trigger = { has_completed_focus = BAN_revolutionary_spirit }
+	}
+	is_triggered_only = yes
+	option = {
+		name = bandit.41.a
+		if = {
+			limit = {
+				has_completed_focus = BAN_noble_spirit
+			}
+			set_country_flag = BAN_cyrille_pinfeather
+			else = {
+				set_country_flag = BAN_reeve_pinfeather
+			}
+		}
+	}
+}
+
+country_event = { # Garrison Report
+	id = bandit.42
+	immediate = { log = "[Root.GetName]: event bandit.42" }
+	title = {
+		text = bandit.42.pinfeather.t
+		trigger = { has_country_flag = BAN_use_pinfeather_desc }
+	}
+	title = {
+		text = bandit.42.bribe.t
+		trigger = { has_country_flag = BAN_use_bribe_desc }
+	}
+	desc = {
+		text = bandit.42.pinfeather.desc
+		trigger = { has_country_flag = BAN_use_pinfeather_desc }
+	}
+	desc = {
+		text = bandit.42.bribe.desc
+		trigger = { has_country_flag = BAN_use_bribe_desc }
+	}
+	is_triggered_only = yes
+	option = {
+		name = bandit.42.pinfeather.a
+		trigger = { has_country_flag = BAN_use_pinfeather_desc }
+	}
+	option = {
+		name = bandit.42.bribe.a
+		trigger = { has_country_flag = BAN_use_bribe_desc }
+	}
+}
+
+country_event = { # autoreeve actions
+	id = bandit.43
+	title = bandit.43.t
+	desc = bandit.43.desc
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "[Root.GetName]: event bandit.43"
+		clr_country_flag = BAN_reeve_start
+	}
+	option = { # strengthen in 446
+		name = bandit.43.a
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			446 = { check_variable = { BAN_commune_control < 50 } }
+		}
+		activate_decision = BAN_auto_reeve_increase_446
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_446_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # attack in 446
+		name = bandit.43.aa
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			446 = {
+				check_variable = { BAN_commune_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_communes
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_oppose_communism }
+					NOT = { has_state_flag = BAN_actual_controller_nobles }
+				}
+			}
+			check_variable = { BAN_available_commune_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_446
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_446_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # strengthen in 490
+		name = bandit.43.b
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			490 = { check_variable = { BAN_commune_control < 50 } }
+		}
+		activate_decision = BAN_auto_reeve_increase_490
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_490_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # attack in 490
+		name = bandit.43.ba
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			490 = { 
+				check_variable = { BAN_commune_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_communes
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_oppose_communism }
+					NOT = { has_state_flag = BAN_actual_controller_nobles }
+				} 
+			} 
+			check_variable = { BAN_available_commune_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_490
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_490_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # strengthen in 532
+		name = bandit.43.c
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			532 = { check_variable = { BAN_commune_control < 50 } }
+		}
+		activate_decision = BAN_auto_reeve_increase_532
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_532_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # attack in 532
+		name = bandit.43.ca
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			532 = { 
+				check_variable = { BAN_commune_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_communes
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_oppose_communism }
+					NOT = { has_state_flag = BAN_actual_controller_nobles }
+				} 
+			} 
+			check_variable = { BAN_available_commune_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_532
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_532_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # strengthen in 606
+		name = bandit.43.d
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			606 = { check_variable = { BAN_commune_control < 50 } }
+		}
+		activate_decision = BAN_auto_reeve_increase_606
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_606_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # attack in 606
+		name = bandit.43.da
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			606 = { 
+				check_variable = { BAN_commune_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_communes
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_oppose_communism }
+					NOT = { has_state_flag = BAN_actual_controller_nobles }
+				} 
+			} 
+			check_variable = { BAN_available_commune_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_606
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_606_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # strengthen in 489
+		name = bandit.43.e
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			489 = { check_variable = { BAN_commune_control < 50 } }
+		}
+		activate_decision = BAN_auto_reeve_increase_489
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_489_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+		clr_country_flag = BAN_auto_reeve_attack_489_flag
+	}
+	option = { # attack in 489
+		name = bandit.43.ea
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			489 = {
+				check_variable = { BAN_commune_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_communes
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_oppose_communism }
+					NOT = { has_state_flag = BAN_actual_controller_nobles }
+				} 
+			} 
+			check_variable = { BAN_available_commune_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_489
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_reeve_increase_489_flag
+			}
+		}
+		set_country_flag = BAN_auto_reeve_attack_489_flag
+		clr_country_flag = BAN_auto_reeve_increase_446_flag
+		clr_country_flag = BAN_auto_reeve_increase_490_flag
+		clr_country_flag = BAN_auto_reeve_increase_532_flag
+		clr_country_flag = BAN_auto_reeve_increase_606_flag
+		clr_country_flag = BAN_auto_reeve_increase_489_flag
+		clr_country_flag = BAN_auto_reeve_attack_446_flag
+		clr_country_flag = BAN_auto_reeve_attack_490_flag
+		clr_country_flag = BAN_auto_reeve_attack_532_flag
+		clr_country_flag = BAN_auto_reeve_attack_606_flag
+	}
+}
+
+
+country_event = { # Reeve assassination
+	id = bandit.44
+	title = bandit.44.t
+	desc = bandit.44.desc
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "[Root.GetName]: event bandit.44"
+		clr_country_flag = BAN_reeve_target_pinfeather
+		clr_country_flag = BAN_reeve_target_bronsfeather
+		clr_country_flag = BAN_reeve_target_hiperion
+		clr_country_flag = BAN_reeve_target_blackbeak
+		clr_country_flag = BAN_reeve_target_sir
+		add_to_variable = {
+			BAN_commune_assassinate_desire = -5
+		}
+	}
+	option = { # no action
+		name = bandit.44.a
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+		}
+		country_event = {
+			id = bandit.44
+			days = 10
+		}
+		ai_chance = {
+			base = 150
+			modifier = {
+				add = ROOT.BAN_commune_assassinate_desire
+				always = yes
+			}
+		}
+	}
+	option = { # target pinfeather
+		name = bandit.44.b
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_pinfeather_killed
+				has_country_flag = BAN_reeve_pinfeather
+				AND = {
+					NOT = { has_completed_focus = BAN_oppose_communism }
+					has_country_flag = BAN_cyrille_pinfeather
+				}
+			}
+		}
+		activate_decision = BAN_auto_reeve_kill_pinfeather
+		set_country_flag = BAN_reeve_target_pinfeather
+		set_variable = {
+			BAN_commune_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.44
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target bronsfeather
+		name = bandit.44.c
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_bronsfeather_killed
+			}
+		}
+		activate_decision = BAN_auto_reeve_kill_bronsfeather
+		set_country_flag = BAN_reeve_target_bronsfeather
+		set_variable = {
+			BAN_commune_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.44
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target hiperion
+		name = bandit.44.d
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_hiperion_killed
+			}
+		}
+		activate_decision = BAN_auto_reeve_kill_hiperion
+		set_country_flag = BAN_reeve_target_hiperion
+		set_variable = {
+			BAN_commune_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.44
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target blackbeak
+		name = bandit.44.e
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_target_communists
+			NOT = {
+				has_country_flag = BAN_blackbeak_killed
+			}
+		}
+		activate_decision = BAN_auto_reeve_kill_blackbeak
+		set_country_flag = BAN_reeve_target_blackbeak
+		set_variable = {
+			BAN_commune_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.44
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target sir
+		name = bandit.44.f
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_target_communists
+			has_country_flag = BAN_sir_available
+			NOT = {
+				has_country_flag = BAN_sir_killed
+			}
+		}
+		activate_decision = BAN_auto_reeve_kill_sir
+		set_country_flag = BAN_reeve_target_sir
+		set_variable = {
+			BAN_commune_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.44
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { # autocyrille actions
+	id = bandit.45
+	title = bandit.45.t
+	desc = bandit.45.desc
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "[Root.GetName]: event bandit.45"
+		clr_country_flag = BAN_cyrille_start
+	}
+	option = { # strengthen in 446
+		name = bandit.45.a
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			446 = { check_variable = { BAN_noble_control < 50 } }
+		}
+		activate_decision = BAN_auto_cyrille_increase_446
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_446_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # attack in 446
+		name = bandit.45.aa
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			446 = {
+				check_variable = { BAN_noble_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_noble
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_no_compromise }
+					NOT = { has_state_flag = BAN_actual_controller_communes }
+				}
+			}
+			check_variable = { BAN_available_noble_divisions > 0 }
+		}
+		activate_decision = BAN_auto_cyrille_attack_446
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_446_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # strengthen in 490
+		name = bandit.45.b
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			490 = { check_variable = { BAN_noble_control < 50 } }
+		}
+		activate_decision = BAN_auto_cyrille_increase_490
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_490_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # attack in 490
+		name = bandit.45.ba
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			490 = { 
+				check_variable = { BAN_noble_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_no_compromise }
+					NOT = { has_state_flag = BAN_actual_controller_communes }
+				} 
+			} 
+			check_variable = { BAN_available_noble_divisions > 0 }
+		}
+		activate_decision = BAN_auto_cyrille_attack_490
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_490_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_attack_490_flag
+	}
+	option = { # strengthen in 532
+		name = bandit.45.c
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			532 = { check_variable = { BAN_noble_control < 50 } }
+		}
+		activate_decision = BAN_auto_cyrille_increase_532
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_532_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # attack in 532
+		name = bandit.45.ca
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			532 = { 
+				check_variable = { BAN_noble_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_no_compromise }
+					NOT = { has_state_flag = BAN_actual_controller_communes }
+				} 
+			} 
+			check_variable = { BAN_available_noble_divisions > 0 }
+		}
+		activate_decision = BAN_auto_reeve_attack_532
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_532_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # strengthen in 606
+		name = bandit.45.d
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			606 = { check_variable = { BAN_noble_control < 50 } }
+		}
+		activate_decision = BAN_auto_cyrille_increase_606
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_606_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # attack in 606
+		name = bandit.45.da
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			606 = { 
+				check_variable = { BAN_noble_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_no_compromise }
+					NOT = { has_state_flag = BAN_actual_controller_communes }
+				} 
+			} 
+			check_variable = { BAN_available_noble_divisions > 0 }
+		}
+		activate_decision = BAN_auto_cyrille_attack_606
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_606_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # strengthen in 489
+		name = bandit.45.e
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			489 = { check_variable = { BAN_noble_control < 50 } }
+		}
+		activate_decision = BAN_auto_cyrille_increase_489
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_489_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+		clr_country_flag = BAN_auto_cyrille_attack_489_flag
+	}
+	option = { # attack in 489
+		name = bandit.45.ea
+		trigger = { 
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			489 = {
+				check_variable = { BAN_noble_control > 50 }
+				NOT = { 
+					has_state_flag = BAN_actual_controller_nobles
+				}
+				OR = {
+					ROOT = { has_completed_focus = BAN_no_compromise }
+					NOT = { has_state_flag = BAN_actual_controller_communes }
+				} 
+			} 
+			check_variable = { BAN_available_noble_divisions > 0 }
+		}
+		activate_decision = BAN_auto_cyrille_attack_489
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 180
+				has_country_flag = BAN_auto_cyrille_increase_489_flag
+			}
+		}
+		set_country_flag = BAN_auto_cyrille_attack_489_flag
+		clr_country_flag = BAN_auto_cyrille_increase_446_flag
+		clr_country_flag = BAN_auto_cyrille_increase_490_flag
+		clr_country_flag = BAN_auto_cyrille_increase_532_flag
+		clr_country_flag = BAN_auto_cyrille_increase_606_flag
+		clr_country_flag = BAN_auto_cyrille_increase_489_flag
+		clr_country_flag = BAN_auto_cyrille_attack_446_flag
+		clr_country_flag = BAN_auto_cyrille_attack_490_flag
+		clr_country_flag = BAN_auto_cyrille_attack_532_flag
+		clr_country_flag = BAN_auto_cyrille_attack_606_flag
+	}
+}
+
+country_event = { # Cyrille assassination
+	id = bandit.46
+	title = bandit.46.t
+	desc = bandit.46.desc
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "[Root.GetName]: event bandit.46"
+		clr_country_flag = BAN_reeve_target_pinfeather
+		clr_country_flag = BAN_reeve_target_bronsfeather
+		clr_country_flag = BAN_reeve_target_hiperion
+		clr_country_flag = BAN_reeve_target_tercel
+		clr_country_flag = BAN_reeve_target_horndrogiannis
+		add_to_variable = {
+			BAN_noble_assassinate_desire = -5
+		}
+	}
+	option = { # no action
+		name = bandit.46.a
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+		}
+		country_event = {
+			id = bandit.46
+			days = 10
+		}
+		ai_chance = {
+			base = 150
+			modifier = {
+				add = ROOT.BAN_noble_assassinate_desire
+				always = yes
+			}
+		}
+	}
+	option = { # target pinfeather
+		name = bandit.46.b
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_pinfeather_killed
+				has_country_flag = BAN_cyrille_pinfeather
+				AND = {
+					NOT = { has_completed_focus = BAN_no_compromise }
+					has_country_flag = BAN_reeve_pinfeather
+				}
+			}
+		}
+		activate_decision = BAN_auto_cyrille_kill_pinfeather
+		set_country_flag = BAN_cyrille_target_pinfeather
+		set_variable = {
+			BAN_noble_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.46
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target bronsfeather
+		name = bandit.46.c
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_bronsfeather_killed
+			}
+		}
+		activate_decision = BAN_auto_cyrille_kill_bronsfeather
+		set_country_flag = BAN_cyrille_target_bronsfeather
+		set_variable = {
+			BAN_noble_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.46
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target hiperion
+		name = bandit.46.d
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_assassinate_bandits
+			NOT = {
+				has_country_flag = BAN_hiperion_killed
+			}
+		}
+		activate_decision = BAN_auto_cyrille_kill_hiperion
+		set_country_flag = BAN_cyrille_target_hiperion
+		set_variable = {
+			BAN_noble_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.46
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target tercel
+		name = bandit.46.e
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_target_nobles
+			NOT = {
+				has_country_flag = BAN_tercel_killed
+			}
+		}
+		activate_decision = BAN_auto_cyrille_kill_tercel
+		set_country_flag = BAN_cyrille_target_tercel
+		set_variable = {
+			BAN_noble_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.46
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { # target horndrogiannis
+		name = bandit.46.f
+		trigger = {
+			NOT = { has_country_flag = BAN_stop_resistance_shit_flag }
+			has_completed_focus = BAN_target_nobles
+			NOT = {
+				has_country_flag = BAN_sir_killed
+			}
+		}
+		activate_decision = BAN_auto_cyrille_kill_horndrogiannis
+		set_country_flag = BAN_cyrille_target_horndrogiannis
+		set_variable = {
+			BAN_noble_assassinate_desire = 0
+		}
+		country_event = {
+			id = bandit.46
+			days = 45
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { # Anti-Communist, concludes civil war if communes are weak shit
+	id = bandit.47
+	title = bandit.47.t
+	desc = bandit.47.desc
+	immediate = { log = "[Root.GetName]: event bandit.47" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.47.a
+		load_focus_tree = BAN_anti_commie_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_anti_commie_flag
+	}
+}
+
+country_event = { # United Resistance
+	id = bandit.48
+	title = bandit.48.t
+	desc = bandit.48.desc
+	immediate = { log = "[Root.GetName]: event bandit.48" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.48.a
+		load_focus_tree = BAN_united_govt_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_united_govt_flag
+	}
+}
+
+country_event = { # Anti-Noble weak
+	id = bandit.49
+	title = bandit.49.t
+	desc = bandit.49.desc
+	immediate = { log = "[Root.GetName]: event bandit.49" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.49.a
+		load_focus_tree = BAN_anti_noble_weak_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_anti_noble_weak_flag
+	}
+}
+
+country_event = { # Anti-Noble strong
+	id = bandit.50
+	title = bandit.50.t
+	desc = bandit.50.desc
+	immediate = { log = "[Root.GetName]: event bandit.50" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.50.a
+		load_focus_tree = BAN_anti_noble_strong_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_anti_noble_strong_flag
+	}
+}
+
+country_event = { # anti-commie but you fucked up kid
+	id = bandit.51
+	title = bandit.51.t
+	desc = bandit.51.desc
+	immediate = { log = "[Root.GetName]: event bandit.51" }
+	is_triggered_only = yes
+	option = { # AAAAAAAAAAAAAAAAA
+		name = bandit.51.a
+		country_event = { id = bandit.52 }
+	}
+}
+
+country_event = { # the duel
+	id = bandit.52
+	title = bandit.52.t
+	desc = bandit.52.desc
+	immediate = { log = "[Root.GetName]: event bandit.52" }
+	is_triggered_only = yes
+	option = { # Cyrille strikes down Reeve, as expected.
+		name = bandit.52.a
+		country_event = { id = bandit.53 }
+		load_focus_tree = BAN_anti_commie_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_anti_commie_flag
+	}
+	option = { # Reeve does the impossible
+		name = bandit.52.b
+		country_event = { id = bandit.54 }
+	}
+}
+
+country_event = { # cyrille victory event
+	id = bandit.53
+	title = bandit.53.t
+	desc = bandit.53.desc
+	immediate = { log = "[Root.GetName]: event bandit.53" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.53.a
+		load_focus_tree = BAN_anti_commie_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_anti_commie_flag
+	}
+}
+
+country_event = { # reeve victory event
+	id = bandit.54
+	title = bandit.54.t
+	desc = bandit.54.desc
+	immediate = { log = "[Root.GetName]: event bandit.54" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.54.a
+		load_focus_tree = BAN_weak_reeve_tree
+		set_country_flag = BAN_other_tree_flag
+		set_country_flag = BAN_weak_reeve_flag
+	}
+}
+
+country_event = { # united government starter event
+	id = bandit.55
+	title = bandit.55.t
+	desc = bandit.55.desc
+	immediate = { log = "[Root.GetName]: event bandit.55" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.55.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_political_power = 25
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		add_ideas = {
+			BAN_anti_war
+			BAN_disorganized_army
+		}
+		hidden_effect = {
+			add_ideas = {
+				civilian_economy
+				volunteer_only
+			}
+		}
+		remove_ideas = {
+			outlaw_economy
+			BAN_blackrocks_army
+		}
+		every_owned_state = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = BAN_noble_control_modifier }
+				}
+				remove_dynamic_modifier = { modifier = BAN_noble_control_modifier }
+				add_dynamic_modifier = { modifier = BAN_noble_control_modifier_good }
+			}
+		}
+		every_owned_state = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = BAN_religious_control_modifier }
+				}
+				remove_dynamic_modifier = { modifier = BAN_religious_control_modifier }
+				add_dynamic_modifier = { modifier = BAN_religious_control_modifier_good }
+			}
+		}
+		every_owned_state = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = BAN_bandit_control_modifier_good }
+				}
+				remove_dynamic_modifier = { modifier = BAN_bandit_control_modifier_good }
+				add_dynamic_modifier = { modifier = BAN_bandit_control_modifier }
+			}
+		}
+	}
+}
+
+country_event = { # cyrille's coronation
+	id = bandit.56
+	title = bandit.56.t
+	desc = bandit.56.desc
+	immediate = { log = "[Root.GetName]: event bandit.56" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.56.a
+		add_stability = 0.025
+		add_political_power = 25
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # reeve's speech
+	id = bandit.57
+	title = bandit.57.t
+	desc = bandit.57.desc
+	immediate = { log = "[Root.GetName]: event bandit.57" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.57.a
+		add_war_support = 0.025
+		add_political_power = 25
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = { # blackrock is captured
+	id = bandit.58
+	title = bandit.58.t
+	desc = bandit.58.desc
+	immediate = { log = "[Root.GetName]: event bandit.58" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.58.a
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
+	}
+}
+
+country_event = { # naniwich trials begin
+	id = bandit.59
+	title = bandit.59.t
+	desc = bandit.59.desc
+	immediate = { log = "[Root.GetName]: event bandit.59" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.59.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = BAN_hiperion_killed
+				}
+			}
+			country_event = { id = bandit.60 hours = 6 }
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = BAN_pinfeather_killed
+						has_country_flag = BAN_cyrille_pinfeather
+						has_country_flag = BAN_reeve_pinfeather
+					}
+				}
+				country_event = { id = bandit.61 hours = 6 }
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = BAN_bronsfeather_killed
+						}
+					}
+					country_event = { id = bandit.62 hours = 6 }
+					else = {
+						country_event = { id = bandit.63 hours = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # hiperion on trial
+	id = bandit.60
+	title = bandit.60.t
+	desc = bandit.60.desc
+	immediate = { log = "[Root.GetName]: event bandit.60" }
+	is_triggered_only = yes
+	option = { # death
+		name = bandit.60.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = BAN_pinfeather_killed
+						has_country_flag = BAN_cyrille_pinfeather
+					has_country_flag = BAN_reeve_pinfeather
+				}
+			}
+			country_event = { id = bandit.61 hours = 6 }
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = BAN_bronsfeather_killed
+					}
+				}
+				country_event = { id = bandit.62 hours = 6 }
+				else = {
+					country_event = { id = bandit.63 hours = 6 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { # pinfeather on trial
+	id = bandit.61
+	title = bandit.61.t
+	desc = bandit.61.desc
+	immediate = { log = "[Root.GetName]: event bandit.61" }
+	is_triggered_only = yes
+	option = { # death
+		name = bandit.61.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = BAN_bronsfeather_killed
+				}
+			}
+			country_event = { id = bandit.62 hours = 6 }
+			else = {
+				country_event = { id = bandit.63 hours = 6 }
+			}			
+		}
+	}
+}
+
+country_event = { # bronsfeather on trial
+	id = bandit.62
+	title = bandit.62.t
+	desc = bandit.62.desc
+	immediate = { log = "[Root.GetName]: event bandit.62" }
+	is_triggered_only = yes
+	option = { # death
+		name = bandit.62.a
+		country_event = { id = bandit.63 hours = 6 }
+	}
+}
+
+country_event = { # finally, blackrock
+	id = bandit.63
+	title = bandit.63.t
+	desc = bandit.63.desc
+	immediate = { log = "[Root.GetName]: event bandit.63" }
+	is_triggered_only = yes
+	option = { # death
+		name = bandit.63.a
+		add_stability = 0.1
+		add_war_support = 0.05
+		add_political_power = 100
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		kill_ideology_leader = fascism
+	}
+}
+
+country_event = { # first election
+	id = bandit.64
+	title = bandit.64.t
+	desc = bandit.64.desc
+	immediate = { log = "[Root.GetName]: event bandit.64" }
+	is_triggered_only = yes
+	option = { # Re-elect Reeve
+		name = bandit.64.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		set_country_flag = BAN_reeve_elected
+	}
+	option = { # Election Silas Blackbeak
+		name = bandit.64.b
+		trigger = {
+			NOT = {
+				has_country_flag = BAN_blackbeak_killed
+			}
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_country_flag = BAN_blackbeak_elected
+		hidden_effect = {
+			create_country_leader = {
+				name = "Silas Blackbeak"
+				desc = "silas_desc"
+				picture = "Silas_Blackbeak.tga"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+	option = { # Election Dominik Pinfeather
+		name = bandit.64.c
+		trigger = {
+			OR = {
+				has_country_flag = BAN_reeve_pinfeather
+				has_country_flag = BAN_cyrille_pinfeather
+			}
+			NOT = {
+				has_country_flag = BAN_pinfeather_killed
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_country_flag = BAN_pinfeather_elected
+		hidden_effect = {
+			create_country_leader = {
+				name = "Dominik Pinfeather"
+				desc = "pinfeather_desc"
+				picture = "BANGen1.tga"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+country_event = { # A Wink event (Blackhollow)
+	id = bandit.65
+	title = bandit.65.t
+	desc = bandit.65.desec
+	immediate = { log = "[Root.GetName]: event bandit.65" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.65.a
+		LUS = {
+			country_event = { id = bandit.66 }
+			every_neighbor_state = {
+				limit = {
+					is_owned_by = BAN
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { # A Wink event (Lushi)
+	id = bandit.66
+	title = bandit.66.t
+	desc = bandit.66.desec
+	immediate = { log = "[Root.GetName]: event bandit.66" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.66.a
+		BAN = {
+			every_neighbor_state = {
+				limit = {
+					is_owned_by = LUS
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { # A Nudge event (Blackhollow)
+	id = bandit.67
+	title = bandit.67.t
+	desc = bandit.67.desec
+	immediate = { log = "[Root.GetName]: event bandit.67" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.67.a
+		LUS = { country_event = { id = bandit.68 } }
+	}
+}
+
+country_event = { # A Nudge event (Lushi)
+	id = bandit.68
+	title = bandit.68.t
+	desc = bandit.68.desec
+	immediate = { log = "[Root.GetName]: event bandit.68" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.68.a
+		diplomatic_relation = {
+			country = BAN
+			relation = guarantee
+			active = yes
+		}
+		diplomatic_relation = {
+			country = BAN
+			relation = non_aggression_pact
+			active = yes
+		}
+		BAN = {
+			diplomatic_relation = {
+				country = LUS
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+				country = LUS
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		BAN = { country_event = { id = bandit.69 } }
+	}
+	option = {
+		name = bandit.68.b
+		BAN = {
+			country_event = { id = bandit.70 }
+		}
+	}
+}
+
+country_event = { # A Nudge accepted
+	id = bandit.69
+	title = bandit.69.t
+	desc = bandit.69.desc
+	immediate = { log = "[Root.GetName]: event bandit.69" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.69.a
+		add_political_power = 10
+	}
+}
+
+country_event = { # A Nudge refused
+	id = bandit.70
+	title = bandit.70.t
+	desc = bandit.70.desc
+	immediate = { log = "[Root.GetName]: event bandit.70" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.70.a
+		add_political_power = -10
+	}
+}
+
+country_event = { # Prywhen receives offer of non-aggression from Blackhollow
+	id = bandit.71
+	title = bandit.71.t
+	desc = bandit.71.desc
+	immediate = { log = "[Root.GetName]: event bandit.71" }
+	is_triggered_only = yes
+	option = { # Accept
+		name = bandit.71.a
+		ai_chance = {
+			base = 0
+		}
+		diplomatic_relation = {
+			country = BAN
+			relation = non_aggression_pact
+			active = yes
+		}
+		BAN = {
+			diplomatic_relation = {
+				country = GRW
+				relation = non_aggression_pact
+				active = yes
+			}
+			country_event = { id = bandit.72 }
+		}
+	}
+	option = {
+		name = bandit.71.b
+		ai_chance = {
+			base = 100
+		}
+		BAN = { country_event = { id = bandit.73 } }
+	}
+}
+
+country_event = { # Non-aggression accepted
+	id = bandit.72
+	title = bandit.72.t
+	desc = bandit.72.desc
+	immediate = { log = "[Root.GetName]: event bandit.72" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.72.a
+		add_political_power = 10
+	}
+}
+
+country_event = { # Non-aggression refused
+	id = bandit.73
+	title = bandit.73.t
+	desc = bandit.73.desc
+	immediate = { log = "[Root.GetName]: event bandit.73" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.73.a
+		add_political_power = -10
+	}
+}
+
+country_event = { # Co-operate with the Griffonstone Government event
+	id = bandit.74
+	title = bandit.74.t
+	desc = bandit.74.desc
+	immediate = { log = "[Root.GetName]: event bandit.74" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.74.a
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 15
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_advisors
+		set_country_flag = BAN_unlock_BOI_advisors
+	}
+}
+
+country_event = { # Meet with the Generals event
+	id = bandit.75
+	title = bandit.75.t
+	desc = bandit.75.desc
+	immediate = { log = "[Root.GetName]: event bandit.75" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.75.a
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 15
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_high_command
+		set_country_flag = BAN_unlock_BOI_high_command
+		hidden_effect = {
+			country_event = { # Gallus
+				id = bandit.76
+				days = 6
+			}
+			country_event = { # Gabriella
+				id = bandit.77
+				days = 11
+			}
+			country_event = { # Greta
+				id = bandit.78
+				days = 14
+			}
+			country_event = { # Gilda
+				id = bandit.79
+				days = 16
+			}
+		}
+	}
+}
+
+country_event = { # Gallus meeting
+	id = bandit.76
+	title = bandit.76.t
+	desc = {
+		text = bandit.76.desc.a
+		trigger = { has_completed_focus = BAN_silas_term }
+	}
+	desc = {
+		text = bandit.76.desc.b
+		trigger = { has_completed_focus = BAN_reeves_real_term }
+	}
+	desc = {
+		text = bandit.76.desc.c
+		trigger = { has_completed_focus = BAN_dominik_term }
+	}
+	immediate = { log = "[Root.GetName]: event bandit.76" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.76.a
+		custom_effect_tooltip = BAN_TT_get_Gallus
+		set_country_flag = BAN_unlock_Gallus
+	}
+}
+
+country_event = { # Gabriella meeting
+	id = bandit.77
+	title = bandit.77.t
+	desc = {
+		text = bandit.77.desc.a
+		trigger = { has_completed_focus = BAN_silas_term }
+	}
+	desc = {
+		text = bandit.77.desc.b
+		trigger = { has_completed_focus = BAN_reeves_real_term }
+	}
+	desc = {
+		text = bandit.77.desc.c
+		trigger = { has_completed_focus = BAN_dominik_term }
+	}
+	immediate = { log = "[Root.GetName]: event bandit.77" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.77.a
+		custom_effect_tooltip = BAN_TT_get_Gabriella
+	}
+}
+
+country_event = { # Greta meeting
+	id = bandit.78
+	title = bandit.78.t
+	desc = {
+		text = bandit.78.desc.a
+		trigger = { has_completed_focus = BAN_silas_term }
+	}
+	desc = {
+		text = bandit.78.desc.b
+		trigger = { has_completed_focus = BAN_reeves_real_term }
+	}
+	desc = {
+		text = bandit.78.desc.c
+		trigger = { has_completed_focus = BAN_dominik_term }
+	}
+	immediate = { log = "[Root.GetName]: event bandit.78" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.78.a
+		custom_effect_tooltip = BAN_TT_get_Greta
+		set_country_flag = BAN_unlock_Greta
+	}
+}
+
+country_event = { # Gilda meeting
+	id = bandit.79
+	title = bandit.79.t
+	desc = {
+		text = bandit.79.desc.a
+		trigger = { has_completed_focus = BAN_silas_term }
+	}
+	desc = {
+		text = bandit.79.desc.b
+		trigger = { has_completed_focus = BAN_reeves_real_term }
+	}
+	desc = {
+		text = bandit.79.desc.c
+		trigger = { has_completed_focus = BAN_dominik_term }
+	}
+	immediate = { log = "[Root.GetName]: event bandit.79" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.79.a
+		custom_effect_tooltip = BAN_TT_get_Gilda
+	}
+}
+
+country_event = { # Gruff meeting
+	id = bandit.80
+	title = bandit.80.t
+	desc = bandit.80.desc
+	immediate = { log = "[Root.GetName]: event bandit.80" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.80.a
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 10
+		}
+		custom_effect_tooltip = BAN_TT_crown_available
+		BOI = {
+			add_to_ROOT_potential_cores = yes
+		}
+	}
+}
+
+country_event = { # BAN_claim_the_crown event (Blackhollow)
+	id = bandit.82
+	title = bandit.82.t
+	desc = bandit.82.desc
+	immediate = { log = "[Root.GetName]: event bandit.82" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.82.a
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = BAN_BOI_united_gov
+		add_political_power = 200
+		add_stability = 0.1
+	}
+}
+
+country_event = { # A Push event (Lushi)
+	id = bandit.83
+	title = bandit.83.t
+	desc = bandit.83.desc
+	immediate = { log = "[Root.GetName]: event bandit.83" }
+	is_triggered_only = yes
+	option = { # oh thanks
+		name = bandit.83.a
+		two_random_industrial_complex = yes
+	}
+}
+
+country_event = { # A Shove event (Lushi) starts event chain of flavor (for BAN) of cyrille and elias flirting if lushi accepts
+	id = bandit.84
+	title = bandit.84.t
+	desc = bandit.84.desc
+	immediate = { log = "[Root.GetName]: event bandit.84" }
+	is_triggered_only = yes
+	option = { # sure thing
+		name = bandit.84.a
+		ai_chance = {
+			base = 100
+		}
+		BAN = { country_event = { id = bandit.86 } }
+	}
+	option = { # what the hell :(
+		name = bandit.84.b
+		ai_chance = {
+			base = 0
+		}
+		BAN = { country_event = { id = bandit.85 } }
+	}
+}
+
+country_event = { # A Shove, refused (Blackhollow)
+	id = bandit.85
+	title = bandit.85.t
+	desc = bandit.85.desc
+	immediate = { log = "[Root.GetName]: event bandit.85" }
+	is_triggered_only = yes
+	option = { # shid
+		name = bandit.85.a
+	}
+}
+
+country_event = { # A Shove, accepted (Blackhollow)
+	id = bandit.86
+	title = bandit.86.t
+	desc = bandit.86.desc
+	immediate = { log = "[Root.GetName]: event bandit.86" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.86.a
+		country_event = { id = bandit.87 } #more as necessary
+	}
+}
+
+country_event = { # A Shove, final event (Blackhollow)
+	id = bandit.87
+	title = bandit.87.t
+	desc = bandit.87.desc
+	immediate = { log = "[Root.GetName]: event bandit.87" }
+	is_triggered_only = yes
+	option = { # epic annex
+		name = bandit.87.a
+		annex_country = {
+			target = LUS
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = LUS
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = { # The Creeper Mountains event (Blackhollow)
+	id = bandit.88
+	title = bandit.88.t
+	desc = bandit.88.desc
+	immediate = { log = "[Root.GetName]: event bandit.88" }
+	is_triggered_only = yes
+	option = { # negotiate an agreement
+		name = bandit.88.a
+		country_event = { id = bandit.89 } 
+	}
+	option = { # cede the land
+		name = bandit.88.b
+		country_event = { id = bandit.90 } 
+		set_country_flag = BAN_asterion_placated
+	}
+}
+
+country_event = { # Negotiating for the Creeper Mountains (Asterion)
+	id = bandit.89
+	title = bandit.89.t
+	desc = bandit.89.desc
+	immediate = { log = "[Root.GetName]: event bandit.89" }
+	is_triggered_only = yes
+	option = { # fuck it alert
+		name = bandit.89.a
+		remove_state_claim = 446
+		BAN = { country_event = { id = bandit.91 } }
+	}
+	option = { # no lol
+		name = bandit.89.b
+		BAN = { country_event = { id = bandit.92 } }
+	}
+}
+
+country_event = { # Cede the Creeper Mountains (Asterion)
+	id = bandit.90
+	title = bandit.90.t
+	desc = bandit.90.desc
+	immediate = { log = "[Root.GetName]: event bandit.90" }
+	is_triggered_only = yes
+	option = { # cool
+		name = bandit.90.a
+		transfer_state = 446
+	}
+}
+
+country_event = { # Agree to the Creeper Mountains (Blackhollow)
+	id = bandit.91
+	title = bandit.91.t
+	desc = bandit.91.desc
+	immediate = { log = "[Root.GetName]: event bandit.91" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.91.a
+		set_country_flag = BAN_asterion_placated
+	}
+}
+
+country_event = { # Refuse to the Creeper Mountains (Blackhollow)
+	id = bandit.92
+	title = bandit.92.t
+	desc = bandit.92.desc
+	immediate = { log = "[Root.GetName]: event bandit.92" }
+	is_triggered_only = yes
+	option = { # aw
+		name = bandit.92.a
+	}
+}
+
+country_event = { # Monument to the Fallen event (Blackhollow)
+	id = bandit.93
+	title = bandit.93.t
+	desc = bandit.93.desc
+	immediate = { log = "[Root.GetName]: event bandit.93" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.93.a
+		remove_ideas = BAN_anti_war2
+		add_political_power = 100
+	}
+}
+
+country_event = { # The Bluecrest and the Whitecrest event (Blackhollow)
+	id = bandit.94
+	title = bandit.94.t
+	desc = bandit.94.desc
+	immediate = { log = "[Root.GetName]: event bandit.94" }
+	is_triggered_only = yes
+	option = { # nice
+		name = bandit.94.a
+		give_guarantee = LUS
+	}
+}
+
+country_event = { # Flirtatious Negotiations event (Blackhollow)
+	id = bandit.95
+	title = bandit.95.t
+	desc = bandit.95.desc
+	immediate = { log = "[Root.GetName]: event bandit.95" }
+	is_triggered_only = yes
+	option = { # friend time
+		name = bandit.95.a
+		LUS = { country_event = { id = bandit.96 } }
+	}
+}
+
+country_event = { # Flirtatious Negotiations event (Lushi)
+	id = bandit.96
+	title = bandit.96.t
+	desc = bandit.96.desc
+	immediate = { log = "[Root.GetName]: event bandit.96" }
+	is_triggered_only = yes
+	option = { # friendship is cool
+		name = bandit.96.a
+		BAN = {
+			country_event = { id = bandit.97 }
+		}
+	}
+	option = { # no eat my mom
+		name = bandit.96.b
+		BAN = {
+			country_event = { id = bandit.98 }
+		}
+	}
+}
+
+country_event = { # Flirtatious Negotiations accepted event (Blackhollow)
+	id = bandit.97
+	title = bandit.97.t
+	desc = bandit.97.desc
+	immediate = { log = "[Root.GetName]: event bandit.97" }
+	is_triggered_only = yes
+	option = { # hell yeah
+		name = bandit.97.a
+		create_faction = BAN_cyrille_faction
+		add_to_faction = LUS
+	}
+}
+
+country_event = { # Flirtatious Negotiations refused event (Blackhollow)
+	id = bandit.98
+	title = bandit.98.t
+	desc = bandit.98.desc
+	immediate = { log = "[Root.GetName]: event bandit.98" }
+	is_triggered_only = yes
+	option = { # aw
+		name = bandit.98.a
+	}
+	option = { # THEY HAVE REJECTED HARMONY. -Pinfeather, at some date
+		name = bandit.98.b
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = LUS
+		}
+	}
+}
+
+country_event = { # BAN_sex event (Blackhollow)
+	id = bandit.99
+	title = bandit.99.t
+	desc = bandit.99.desc
+	immediate = { log = "[Root.GetName]: event bandit.99" }
+	is_triggered_only = yes
+	option = { # sex is cool
+		name = bandit.99.a
+		LUS = {
+			country_event = { id = bandit.100 }
+		}
+	}
+}
+
+country_event = { # BAN_sex event (Lushi)
+	id = bandit.100
+	title = bandit.100.t
+	desc = bandit.100.desc
+	immediate = { log = "[Root.GetName]: event bandit.100" }
+	is_triggered_only = yes
+	option = { # sex is cool, i agree
+		name = bandit.100.a
+		BAN = {
+			country_event = { id = bandit.101 }
+		}
+	}
+	option = { # me? have sex? impossible
+		name = bandit.100.b
+		BAN = {
+			country_event = { id = bandit.102 }
+		}
+	}
+}
+
+country_event = { # BAN_sex event accepted (Blackhollow)
+	id = bandit.101
+	title = bandit.101.t
+	desc = bandit.101.desc
+	immediate = { log = "[Root.GetName]: event bandit.101" }
+	is_triggered_only = yes
+	option = { # epic sex moment
+		name = bandit.101.a
+		annex_country = {
+			target = LUS
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = LUS
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = { # BAN_sex event refused (Blackhollow)
+	id = bandit.102
+	title = bandit.102.t
+	desc = bandit.102.desc
+	immediate = { log = "[Root.GetName]: event bandit.102" }
+	is_triggered_only = yes
+	option = { # cucked again
+		name = bandit.102.a
+	}
+}
+
+country_event = { # BAN_harmony_with_the_commoner event (Blackhollow)
+	id = bandit.103
+	title = bandit.103.t
+	desc = bandit.103.desc
+	immediate = { log = "[Root.GetName]: event bandit.103" }
+	is_triggered_only = yes
+	option = { # i sure do love harmony
+		name = bandit.103.a
+		add_political_power = -75
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 20
+		}
+	}
+}
+
+country_event = { # BAN_harmony_with_the_government event (Blackhollow)
+	id = bandit.104
+	title = bandit.104.t
+	desc = bandit.104.desc
+	immediate = { log = "[Root.GetName]: event bandit.104" }
+	is_triggered_only = yes
+	option = { # i sure do love harmony
+		name = bandit.104.a
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 10
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_advisors
+		set_country_flag = BAN_unlock_BOI_advisors
+	}
+}
+
+country_event = { # BAN_harmony_with_the_military event (Blackhollow)
+	id = bandit.105
+	title = bandit.105.t
+	desc = bandit.105.desc
+	immediate = { log = "[Root.GetName]: event bandit.105" }
+	is_triggered_only = yes
+	option = { # i sure do love harmony
+		name = bandit.105.a
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 10
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_high_command
+		set_country_flag = BAN_unlock_BOI_high_command
+
+		hidden_effect = {
+			country_event = { # Gallus
+				id = bandit.76
+				days = 6
+			}
+			country_event = { # Gabriella
+				id = bandit.77
+				days = 11
+			}
+			country_event = { # Greta
+				id = bandit.78
+				days = 14
+			}
+			country_event = { # Gilda
+				id = bandit.79
+				days = 16
+			}
+		}
+	}
+}
+
+country_event = { # BAN_harmony_and_griffonstone event (Blackhollow)
+	id = bandit.106
+	title = bandit.106.t
+	desc = bandit.106.desc
+	immediate = { log = "[Root.GetName]: event bandit.106" }
+	is_triggered_only = yes
+	option = { # i sure do love harmony
+		name = bandit.106.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 5
+		}
+		BOI = {
+			add_to_ROOT_potential_cores = yes
+		}
+	}
+}
+
+country_event = { # BAN_throne_of_harmony event (Blackhollow)
+	id = bandit.107
+	title = bandit.107.t
+	desc = bandit.107.desc
+	immediate = { log = "[Root.GetName]: event bandit.107" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.107.a
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = BAN_BOI_united_gov
+		add_political_power = 200
+		add_stability = 0.1
+	}
+}
+
+country_event = { # BAN_knight_the_generals event (Blackhollow)
+	id = bandit.108
+	title = bandit.108.t
+	desc = bandit.108.desc
+	immediate = { log = "[Root.GetName]: event bandit.108" }
+	is_triggered_only = yes
+	option = { # epic
+		name = bandit.108.a
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 15
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_high_command
+		set_country_flag = BAN_unlock_BOI_high_command
+
+		hidden_effect = {
+			country_event = { # Gallus
+				id = bandit.76
+				days = 6
+			}
+			country_event = { # Gabriella
+				id = bandit.77
+				days = 11
+			}
+			country_event = { # Greta
+				id = bandit.78
+				days = 14
+			}
+			country_event = { # Gilda
+				id = bandit.79
+				days = 16
+			}
+		}
+	}
+}
+
+country_event = { # BAN_new_jobs_for_former_government event (Blackhollow)
+	id = bandit.109
+	title = bandit.109.t
+	desc = bandit.109.desc
+	immediate = { log = "[Root.GetName]: event bandit.109" }
+	is_triggered_only = yes
+	option = { # cool.com
+		name = bandit.109.a
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 15
+		}
+		custom_effect_tooltip = BAN_TT_unlock_BOI_advisors
+		set_country_flag = BAN_unlock_BOI_advisors
+	}
+}
+
+country_event = { # BAN_with_respect_to_the_regent event (Blackhollow)
+	id = bandit.110
+	title = bandit.110.t
+	desc = bandit.110.desc
+	immediate = { log = "[Root.GetName]: event bandit.110" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.110.a
+		every_owned_state = {
+			limit = {
+				is_core_of = BOI
+			}
+			add_compliance = 10
+		}
+		BOI = {
+			add_to_ROOT_potential_cores = yes
+		}
+	}
+}
+
+country_event = { # BAN_throne_of_harmony event (Blackhollow)
+	id = bandit.111
+	title = bandit.111.t
+	desc = bandit.111.desc
+	immediate = { log = "[Root.GetName]: event bandit.111" }
+	is_triggered_only = yes
+	option = {
+		name = bandit.111.a
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = BAN_BOI_united_gov
+		add_political_power = 200
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+country_event = { # BAN_a_time_held_tradition select_effect event (Blackhollow)
+	id = bandit.112
+	title = bandit.112.t
+	desc = bandit.112.desc
+	immediate = { log = "[Root.GetName]: event bandit.112" }
+	is_triggered_only = yes
+	option = { # YOOOOO DA SHIPPING EVENTS??
+		name = bandit.112.a
+	}
+}
+
+country_event = { # BAN_a_time_held_tradition completion_reward event (Blackhollow)
+	id = bandit.113
+	title = bandit.113.t
+	desc = bandit.113.desc
+	immediate = { log = "[Root.GetName]: event bandit.113" }
+	is_triggered_only = yes
+	option = { # YOOOOO DA SHIPPING EVENTS??
+		name = bandit.113.a
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue select_effect event (Blackhollow)
+	id = bandit.114
+	title = bandit.114.t
+	desc = bandit.114.desc
+	immediate = { log = "[Root.GetName]: event bandit.114" }
+	is_triggered_only = yes
+	option = { # YOOOOO DA SHIPPING EVENTS??
+		name = bandit.114.a
+		LUS = {
+			country_event = { id = bandit.117 days = 1 }
+		}
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue completion_reward event Lushi Accept (Blackhollow)
+	id = bandit.115
+	title = bandit.115.t
+	desc = bandit.115.desc
+	immediate = { log = "[Root.GetName]: event bandit.115" }
+	is_triggered_only = yes
+	option = { # hell yeah
+		name = bandit.115.a
+		annex_country = {
+			target = LUS
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = LUS
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue completion_reward event Lushi Deny (Blackhollow)
+	id = bandit.116
+	title = bandit.116.t
+	desc = bandit.116.desc
+	immediate = { log = "[Root.GetName]: event bandit.116" }
+	is_triggered_only = yes
+	option = { # sad
+		name = bandit.116.a
+		add_political_power = -50
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue select_effect event (Lushi)
+	id = bandit.117
+	title = bandit.117.t
+	desc = bandit.117.desc
+	immediate = { log = "[Root.GetName]: event bandit.117" }
+	is_triggered_only = yes
+	option = { # accept the marriage
+		name = bandit.117.a
+		BAN = {
+			country_event = { id = bandit.118 days = 1 }
+		}
+	}
+	option = { # refuse the marriage
+		name = bandit.117.b
+		BAN = {
+			country_event = { id = bandit.119 days = 1 }
+			set_country_flag = BAN_LUS_marriage_denied
+		}
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue select_effect event, Lushi Accept (Blackhollow)
+	id = bandit.118
+	title = bandit.118.t
+	desc = bandit.118.desc
+	immediate = { log = "[Root.GetName]: event bandit.118" }
+	is_triggered_only = yes
+	option = { # pop off
+		name = bandit.118.a
+	}
+}
+
+country_event = { # BAN_wedding_of_white_and_blue select_effect event, Lushi Deny (Blackhollow)
+	id = bandit.119
+	title = bandit.119.t
+	desc = bandit.119.desc
+	immediate = { log = "[Root.GetName]: event bandit.119" }
+	is_triggered_only = yes
+	option = { # gay
+		name = bandit.119.a
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 country_event = { ## Decision workaround
 	id = bandit.1000

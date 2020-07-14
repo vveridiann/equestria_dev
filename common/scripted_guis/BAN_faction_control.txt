@@ -1,0 +1,21 @@
+scripted_gui = {
+	BAN_faction_control_container_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "BAN_faction_control_window"
+		visible = {
+			ROOT = {
+				original_tag = BAN
+			}
+			THIS = {
+				OR = {
+					state = 446
+					state = 489
+					state = 490
+					state = 532
+					state = 606
+				}
+			}
+		}
+	}
+}

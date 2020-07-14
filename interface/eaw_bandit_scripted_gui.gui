@@ -1,0 +1,47 @@
+guiTypes = {
+	containerWindowType = {
+		name = BAN_faction_control_window
+		position = { x = 440 y = 16 }
+		size = { width = 250 height = 500 }
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window2_1b_border"
+		}
+		instantTextBoxType = {
+			name = "BAN_commune_in_state_text"
+			position = { x = 25 y = 100 }
+			font = "hoi_18mbs"
+			text = "BAN_commune_control_in_state"
+			maxwidth = 150
+			maxheight = 100
+			format = center
+		}
+		instantTextBoxType = {
+			name = "BAN_noble_in_state_text"
+			position = { x = 25 y = 200 }
+			font = "hoi_18mbs"
+			text = "BAN_noble_control_in_state"
+			maxwidth = 150
+			maxheight = 100
+			format = center
+		}
+		instantTextBoxType = {
+			name = "BAN_religious_in_state_text"
+			position = { x = 25 y = 300 }
+			font = "hoi_18mbs"
+			text = "BAN_religious_control_in_state"
+			maxwidth = 150
+			maxheight = 100
+			format = center
+		}
+		instantTextBoxType = {
+			name = "BAN_bandit_in_state_text"
+			position = { x = 25 y = 400 }
+			font = "hoi_18mbs"
+			text = "BAN_bandit_control_in_state"
+			maxwidth = 150
+			maxheight = 100
+			format = center
+		}
+	}
+}

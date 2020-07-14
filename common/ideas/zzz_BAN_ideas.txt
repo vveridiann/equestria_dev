@@ -1,5 +1,590 @@
 ideas = {
 	country = {
+
+		BAN_cyrille_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+
+		BAN_reeve_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				war_support_factor = 0.05
+				communism_drift = 0.01
+			}
+		}
+
+		BAN_commune_concessions = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.3
+				consumer_goods_factor = 0.03
+				production_speed_buildings_factor = -0.2
+				stability_weekly = 0.005
+			}
+		}
+
+		BAN_anti_war = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.3
+				war_support_factor = -0.25
+				war_support_weekly = -0.005
+			}
+		}
+
+		BAN_anti_war2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.1
+				war_support_factor = -0.2
+				war_support_weekly = -0.0025
+			}
+		}
+
+		BAN_real_government = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		BAN_peoples_assembly = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				democratic_drift = 0.02
+				communism_drift = 0.02
+				fascism_drift = -0.01
+				economy_laws_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+			}
+		}
+
+		BAN_empowered_peoples_assembly = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				democratic_drift = 0.03
+				communism_drift = 0.03
+				fascism_drift = -0.02
+				economy_laws_cost_factor = 0.1
+				trade_laws_cost_factor = 0.1
+				mobilization_laws_cost_factor = 0.1
+			}
+		}
+
+		BAN_noble_council = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				neutrality_drift = 0.01
+				fascism_drift = -0.01
+				high_command_cost_factor = 0.25
+				army_chief_cost_factor = 0.25
+				navy_chief_cost_factor = 0.25
+				air_chief_cost_factor = 0.25
+			}
+		}
+
+		BAN_emphasized_noble_council = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.01
+				neutrality_drift = 0.02
+				fascism_drift = -0.02
+				high_command_cost_factor = 0.1
+				army_chief_cost_factor = 0.1
+				navy_chief_cost_factor = 0.1
+				air_chief_cost_factor = 0.1
+			}
+		}
+
+		BAN_courts = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		BAN_religious_judges = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		BAN_appointed_judges = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		BAN_pro_war_campaigns = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.2
+				war_support_weekly = 0.0075
+			}
+		}
+
+		BAN_disorganized_army = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				command_power_gain = -0.3
+				army_org_factor = -0.3
+				army_morale_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		BAN_forming_army = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				command_power_gain = -0.1
+				conscription = 0.005
+				army_org_factor = -0.15
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		BAN_reconstruction_committee = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		BAN_propaganda_ministry = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.25
+				war_support_factor = 0.05
+				political_power_cost = 0.05
+				resistance_target_on_our_occupied_states = 0.05
+			}
+		}
+
+		BAN_bdsm_no_lr = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				decryption = 0.5
+				encryption = 1
+				political_power_cost = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		BAN_bdsm_lr = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.15
+				resistance_damage_to_garrison = -0.15
+				resistance_target = -0.05
+				political_power_cost = 0.05
+			}
+		}
+
+		BAN_welfare = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				MONTHLY_POPULATION = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		BAN_extensive_welfare = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.3
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		BAN_integration_is_a_slow_process = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = -0.25
+				production_speed_buildings_factor = -0.15
+				opinion_gain_monthly_factor = -0.8
+			}
+		}
+
+		BAN_dominiks_harmony = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		BAN_dominiks_harmony2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = 0.05
+			}
+		}
+
+		BAN_dominiks_harmony3 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_cost = 0.1
+				MONTHLY_POPULATION = 0.1
+				opinion_gain_monthly_factor = 0.5
+				resistance_target = -0.05
+			}
+		}
+
+		BAN_dominiks_harmony4 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.25
+				political_power_cost = 0.15
+				MONTHLY_POPULATION = 0.25
+				opinion_gain_monthly_factor = 0.5
+				resistance_target = -0.05
+				resistance_target_on_our_occupied_states = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		BAN_dominiks_harmony5 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.1
+				political_power_cost = 0.2
+				MONTHLY_POPULATION = 0.25
+				opinion_gain_monthly_factor = 0.5
+				resistance_target = -0.05
+				resistance_target_on_our_occupied_states = 0.05
+				army_morale_factor = 0.05
+				generate_wargoal_tension = -1
+			}
+		}
+
+		BAN_military_harmony = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				experience_gain_army = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		BAN_bandit_stashes = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_cost = 0.15
+			}
+		}
+
+		BAN_CYA_forced_racial_harmony = {
+			allowed = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.02
+				political_power_factor = -0.35
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.25
+				drift_defence_factor = -0.1
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
+			}
+		}
+
+		BAN_CYA_developed_outback = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				global_building_slots_factor = -0.05
+			}
+		}
+
+		BAN_MIT_reinforced_military_industrial_complex = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				mic_to_overlord_factor = 0.2
+			}
+		}
+
+		BAN_subject_pinfeather_harmony = {
+			allowed = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				political_power_cost = 0.2
+				MONTHLY_POPULATION = 0.15
+				resistance_target = -0.05
+				resistance_target_on_our_occupied_states = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		BAN_national_pride = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.02
+				political_power_cost = -0.05
+				drift_defence_factor = 0.2
+			}
+		}
+
+		BAN_national_pride2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				army_core_attack_factor = 0.04
+				army_core_defence_factor = 0.03
+				political_power_cost = -0.05
+				drift_defence_factor = 0.35
+			}
+		}
+
+		BAN_national_pride3 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.06
+				army_core_defence_factor = 0.06
+				army_morale_factor = 0.03
+				political_power_cost = -0.05
+				drift_defence_factor = 0.5
+			}
+		}
+
+		BAN_forced_philanthropy = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.2
+				consumer_goods_factor = -0.01
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+
+		BAN_commies_deplatformed = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = -0.05
+				communism_drift = -0.02
+			}
+		}
+
+		BAN_LUS_drak_lord = {
+			picture = LUS_drak_lord
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.002
+				stability_factor = 0.05
+				communism_drift = -0.02
+				democratic_drift = -0.02
+			}
+		}
+
+		BAN_LUS_talvonia_lord = {
+			picture = LUS_talvonia_lord
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.125
+				consumer_goods_factor = -0.01
+				communism_drift = -0.01
+				fascism_drift = -0.02
+			}
+		}
+
+		BAN_LUS_damoi_lord = {
+			picture = LUS_damoi_lord
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				local_resources_factor = 0.025
+				communism_drift = -0.01
+				democratic_drift = -0.01
+				fascism_drift = -0.01
+			}
+		}
+
+		BAN_LUS_knightly_rulership = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				neutrality_drift = 0.02
+				drift_defence_factor = 0.25
+				special_forces_cap = 0.25
+				modifier_army_sub_unit_knights_attack_factor = 0.1
+				modifier_army_sub_unit_knights_defence_factor = 0.1
+			}
+		}
+
+
+
 		BAN_lawless_land = {
 			allowed = {
 				always = no

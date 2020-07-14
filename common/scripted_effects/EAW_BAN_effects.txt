@@ -1,0 +1,964 @@
+update_BAN_variables = {
+	532 = {
+		set_variable = {
+			BAN_commune_control_half = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_half = -200
+		}
+		set_variable = {
+			BAN_commune_control_quarter = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_commune_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_commune_control_quarter_good = BAN_commune_control_quarter
+		}
+		set_variable = {
+			BAN_noble_control_half = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_half = -200
+		}
+		set_variable = {
+			BAN_noble_control_quarter = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_quarter = -400
+		}
+		set_variable = {
+		var = BAN_noble_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_noble_control_quarter_good = BAN_noble_control_quarter
+			}
+		set_variable = {
+			BAN_religious_control_half = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_half = -200
+		}
+		set_variable = {
+			BAN_religious_control_quarter = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_religious_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_religious_control_quarter_good = BAN_religious_control_quarter
+		}
+		set_variable = {
+			BAN_bandit_control_half = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_half = -200
+		}
+		set_variable = {
+			BAN_bandit_control_quarter = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_bandit_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_quarter_good = BAN_bandit_control_quarter
+		}
+		set_variable = {
+			var = BAN_bandit_control_half_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_half_good = BAN_bandit_control_half
+		}
+	}
+	446 = {
+		set_variable = {
+			BAN_commune_control_half = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_half = -200
+		}
+		set_variable = {
+			BAN_commune_control_quarter = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_commune_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_commune_control_quarter_good = BAN_commune_control_quarter
+		}
+		set_variable = {
+			BAN_noble_control_half = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_half = -200
+		}
+		set_variable = {
+			BAN_noble_control_quarter = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_quarter = -400
+		}
+		set_variable = {
+		var = BAN_noble_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_noble_control_quarter_good = BAN_noble_control_quarter
+			}
+		set_variable = {
+			BAN_religious_control_half = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_half = -200
+		}
+		set_variable = {
+			BAN_religious_control_quarter = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_religious_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_religious_control_quarter_good = BAN_religious_control_quarter
+		}
+		set_variable = {
+			BAN_bandit_control_half = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_half = -200
+		}
+		set_variable = {
+			BAN_bandit_control_quarter = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_bandit_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_quarter_good = BAN_bandit_control_quarter
+		}
+		set_variable = {
+			var = BAN_bandit_control_half_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_half_good = BAN_bandit_control_half
+		}
+	}
+	490 = {
+		set_variable = {
+			BAN_commune_control_half = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_half = -200
+		}
+		set_variable = {
+			BAN_commune_control_quarter = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_commune_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_commune_control_quarter_good = BAN_commune_control_quarter
+		}
+		set_variable = {
+			BAN_noble_control_half = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_half = -200
+		}
+		set_variable = {
+			BAN_noble_control_quarter = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_quarter = -400
+		}
+		set_variable = {
+		var = BAN_noble_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_noble_control_quarter_good = BAN_noble_control_quarter
+			}
+		set_variable = {
+			BAN_religious_control_half = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_half = -200
+		}
+		set_variable = {
+			BAN_religious_control_quarter = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_religious_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_religious_control_quarter_good = BAN_religious_control_quarter
+		}
+		set_variable = {
+			BAN_bandit_control_half = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_half = -200
+		}
+		set_variable = {
+			BAN_bandit_control_quarter = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_bandit_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_quarter_good = BAN_bandit_control_quarter
+		}
+		set_variable = {
+			var = BAN_bandit_control_half_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_half_good = BAN_bandit_control_half
+		}
+	}
+	489 = {
+		set_variable = {
+			BAN_commune_control_half = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_half = -200
+		}
+		set_variable = {
+			BAN_commune_control_quarter = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_commune_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_commune_control_quarter_good = BAN_commune_control_quarter
+		}
+		set_variable = {
+			BAN_noble_control_half = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_half = -200
+		}
+		set_variable = {
+			BAN_noble_control_quarter = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_quarter = -400
+		}
+		set_variable = {
+		var = BAN_noble_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_noble_control_quarter_good = BAN_noble_control_quarter
+			}
+		set_variable = {
+			BAN_religious_control_half = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_half = -200
+		}
+		set_variable = {
+			BAN_religious_control_quarter = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_religious_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_religious_control_quarter_good = BAN_religious_control_quarter
+		}
+		set_variable = {
+			BAN_bandit_control_half = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_half = -200
+		}
+		set_variable = {
+			BAN_bandit_control_quarter = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_bandit_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_quarter_good = BAN_bandit_control_quarter
+		}
+		set_variable = {
+			var = BAN_bandit_control_half_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_half_good = BAN_bandit_control_half
+		}
+	}
+	606 = {
+		set_variable = {
+			BAN_commune_control_half = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_half = -200
+		}
+		set_variable = {
+			BAN_commune_control_quarter = BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_commune_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_commune_control_quarter_good = BAN_commune_control_quarter
+		}
+		set_variable = {
+			BAN_noble_control_half = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_half = -200
+		}
+		set_variable = {
+			BAN_noble_control_quarter = BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_quarter = -400
+		}
+		set_variable = {
+		var = BAN_noble_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_noble_control_quarter_good = BAN_noble_control_quarter
+			}
+		set_variable = {
+			BAN_religious_control_half = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_half = -200
+		}
+		set_variable = {
+			BAN_religious_control_quarter = BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_religious_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_religious_control_quarter_good = BAN_religious_control_quarter
+		}
+		set_variable = {
+			BAN_bandit_control_half = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_half = -200
+		}
+		set_variable = {
+			BAN_bandit_control_quarter = BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_quarter = -400
+		}
+		set_variable = {
+			var = BAN_bandit_control_quarter_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_quarter_good = BAN_bandit_control_quarter
+		}
+		set_variable = {
+			var = BAN_bandit_control_half_good
+			value = -1
+		}
+		multiply_variable = {
+			BAN_bandit_control_half_good = BAN_bandit_control_half
+		}
+	}
+	BAN = {
+		set_variable = {
+			var = BAN_commune_control_total
+			value = 0
+		}
+		add_to_variable = {
+			BAN_commune_control_total = 489.BAN_commune_control
+		}
+		add_to_variable = {
+			BAN_commune_control_total = 532.BAN_commune_control
+		}
+		add_to_variable = {
+			BAN_commune_control_total = 446.BAN_commune_control
+		}
+		add_to_variable = {
+			BAN_commune_control_total = 606.BAN_commune_control
+		}
+		add_to_variable = {
+			BAN_commune_control_total = 490.BAN_commune_control
+		}
+		divide_variable = {
+			BAN_commune_control_total = 5
+		}
+		set_variable = {
+			var = BAN_noble_control_total
+			value = 0
+		}
+		add_to_variable = {
+			BAN_noble_control_total = 489.BAN_noble_control
+		}
+		add_to_variable = {
+			BAN_noble_control_total = 532.BAN_noble_control
+		}
+		add_to_variable = {
+			BAN_noble_control_total = 446.BAN_noble_control
+		}
+		add_to_variable = {
+			BAN_noble_control_total = 606.BAN_noble_control
+		}
+		add_to_variable = {
+			BAN_noble_control_total = 490.BAN_noble_control
+		}
+		divide_variable = {
+			BAN_noble_control_total = 5
+		}
+		set_variable = {
+			var = BAN_religious_control_total
+			value = 0
+		}
+		add_to_variable = {
+			BAN_religious_control_total = 489.BAN_religious_control
+		}
+		add_to_variable = {
+			BAN_religious_control_total = 532.BAN_religious_control
+		}
+		add_to_variable = {
+			BAN_religious_control_total = 446.BAN_religious_control
+		}
+		add_to_variable = {
+			BAN_religious_control_total = 606.BAN_religious_control
+		}
+		add_to_variable = {
+			BAN_religious_control_total = 490.BAN_religious_control
+		}
+		divide_variable = {
+			BAN_religious_control_total = 5
+		}
+		set_variable = {
+			var = BAN_bandit_control_total
+			value = 0
+		}
+		add_to_variable = {
+			BAN_bandit_control_total = 489.BAN_bandit_control
+		}
+		add_to_variable = {
+			BAN_bandit_control_total = 532.BAN_bandit_control
+		}
+		add_to_variable = {
+			BAN_bandit_control_total = 446.BAN_bandit_control
+		}
+		add_to_variable = {
+			BAN_bandit_control_total = 606.BAN_bandit_control
+		}
+		add_to_variable = {
+			BAN_bandit_control_total = 490.BAN_bandit_control
+		}
+		divide_variable = {
+			BAN_bandit_control_total = 5
+		}
+		set_variable = {
+			var = BAN_available_bandit_divisions
+			value = BAN_bandit_divisions
+		}
+		set_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = BAN_special_bandit_divisions
+		}
+		set_variable = {
+			var = BAN_available_noble_divisions
+			value = BAN_noble_divisions
+		}
+		set_variable = {
+			var = BAN_available_special_noble_divisions
+			value = BAN_special_noble_divisions
+		}
+		set_variable = {
+			var = BAN_available_commune_divisions
+			value = BAN_commune_divisions
+		}
+		set_variable = {
+			var = BAN_available_special_commune_divisions
+			value = BAN_special_commune_divisions
+		}
+		subtract_from_variable = {
+			var = BAN_available_bandit_divisions
+			value = 489.BAN_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_bandit_divisions
+			value = 532.BAN_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_bandit_divisions
+			value = 606.BAN_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_bandit_divisions
+			value = 490.BAN_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_bandit_divisions
+			value = 446.BAN_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = 489.BAN_special_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = 532.BAN_special_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = 606.BAN_special_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = 490.BAN_special_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_bandit_divisions
+			value = 446.BAN_special_bandit_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_noble_divisions
+			value = 489.BAN_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_noble_divisions
+			value = 532.BAN_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_noble_divisions
+			value = 606.BAN_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_noble_divisions
+			value = 490.BAN_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_noble_divisions
+			value = 446.BAN_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_noble_divisions
+			value = 489.BAN_special_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_noble_divisions
+			value = 532.BAN_special_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_noble_divisions
+			value = 606.BAN_special_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_noble_divisions
+			value = 490.BAN_special_noble_garrison
+		}
+		subtract_from_variable = {
+			var = BAN_available_special_noble_divisions
+			value = 446.BAN_special_noble_garrison
+		}
+		if = {
+			limit = {
+				has_completed_focus = BAN_noble_spirit
+			}
+			set_variable = {
+				var = BAN_main_faction_control
+				value = BAN_noble_control_total
+			}
+			if = {
+				limit = {
+					has_completed_focus = BAN_allies_in_temples
+				}
+				add_to_variable = {
+					BAN_main_faction_control = BAN_religious_control_total
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BAN_united_resistance_cyrille
+				}
+				add_to_variable = {
+					BAN_main_faction_control = BAN_commune_control_total
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = BAN_revolutionary_spirit
+			}
+			set_variable = {
+				var = BAN_main_faction_control
+				value = BAN_commune_control_total
+			}
+			if = {
+				limit = {
+					has_completed_focus = BAN_common_goals_with_clergy
+				}
+				add_to_variable = {
+					BAN_main_faction_control = BAN_religious_control_total
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BAN_united_resistance_reeve
+				}
+				add_to_variable = {
+					BAN_main_faction_control = BAN_noble_control_total
+				}
+			}
+		}
+	}
+}
+BAN_kill_divisions_win = {
+	if = {
+		limit = {
+			has_state_flag = BAN_two_normal_attacker_noble
+		}
+		if = { 
+			limit = {
+				NOT = { 
+					OR = {
+						check_variable = { BAN_bandit_garrison = 2 }
+						check_variable = { BAN_commune_garrison = 2 }
+						AND = {
+							OR = {
+								state = 489
+								state = 446
+								state = 606
+							}
+							OR = {
+								check_variable = { BAN_special_bandit_garrison = 1 }
+								check_variable = { BAN_special_commune_garrison = 2 }
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+							}
+						}
+						AND = {
+							OR = {
+								state = 490
+								state = 532
+							}
+							OR = {
+								check_variable = { BAN_special_bandit_garrison = 2 }
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+								check_variable = { BAN_special_commune_garrison = 2 }
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+			ROOT = { subtract_from_variable = { var = BAN_noble_divisions value = 1 } }
+			custom_effect_tooltip = BAN_one_noble_div_killed
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_one_normal_one_special_attacker_noble
+		}
+		if = { 
+			limit = {
+				NOT = { 
+					OR = {
+						check_variable = { BAN_bandit_garrison = 2 }
+						check_variable = { BAN_commune_garrison = 2 }
+						AND = {
+							OR = {
+								state = 489
+								state = 446
+								state = 606
+							}
+							OR = {
+								check_variable = { BAN_special_bandit_garrison = 1 }
+								check_variable = { BAN_special_commune_garrison = 2 }
+								AND = {
+									check_variable = { BAN_commune_garrison = 1 }
+									check_variable = { BAN_special_commune_garrison = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+			ROOT = {
+				random_list = {
+					50 = {
+						subtract_from_variable = {
+							var = BAN_noble_divisions
+							value = 1
+						}
+						custom_effect_tooltip = BAN_one_noble_div_killed
+					}
+					50 = {
+						subtract_from_variable = {
+							var = BAN_special_noble_divisions
+							value = 1
+						}
+						custom_effect_tooltip = BAN_one_spec_noble_div_killed
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_state_flag = BAN_two_normal_attacker_commune
+				has_state_flag = BAN_one_normal_one_special_attacker_commune
+			}
+		}
+		if = { 
+			limit = {
+				NOT = { 
+					OR = {
+						check_variable = { BAN_bandit_garrison = 2 }
+						check_variable = { BAN_noble_garrison = 2 }
+						AND = {
+							OR = {
+								state = 489
+								state = 446
+								state = 606
+							}
+							OR = {
+								check_variable = { BAN_special_bandit_garrison = 1 }
+								check_variable = { BAN_special_noble_garrison = 2 }
+								AND = {
+									check_variable = { BAN_noble_garrison = 1 }
+									check_variable = { BAN_special_noble_garrison = 1 }
+								}
+							}
+						}
+						AND = {
+							OR = {
+								state = 490
+								state = 532
+							}
+							OR = {
+								check_variable = { BAN_special_bandit_garrison = 2 }
+								AND = {
+									check_variable = { BAN_bandit_garrison = 1 }
+									check_variable = { BAN_special_bandit_garrison = 1 }
+								}
+								check_variable = { BAN_special_noble_garrison = 1 }
+							}
+						}
+					}
+				}
+			}
+			ROOT = {
+				subtract_from_variable = {
+					var = BAN_commune_divisions
+					value = 1
+				}
+				custom_effect_tooltip = BAN_one_commie_div_killed
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_actual_controller_bandits
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_bandit_divisions
+				value = event_target:BAN_battle_target.BAN_bandit_garrison
+			}
+			subtract_from_variable = {
+				var = BAN_special_bandit_divisions
+				value = event_target:BAN_battle_target.BAN_special_bandit_garrison
+			}
+		}
+		set_variable = {
+			BAN_bandit_garrison = 0
+		}
+		set_variable = {
+			BAN_special_bandit_garrison = 0
+		}
+		else_if = {
+			limit = {
+				has_state_flag = BAN_actual_controller_nobles
+			}
+			ROOT = {
+				subtract_from_variable = {
+					var = BAN_noble_divisions
+					value = event_target:BAN_battle_target.BAN_noble_garrison
+				}
+				subtract_from_variable = {
+					var = BAN_special_noble_divisions
+					value = event_target:BAN_battle_target.BAN_special_noble_garrison
+				}
+			}
+			set_variable = {
+				BAN_noble_garrison = 0
+			}
+			set_variable = {
+				BAN_special_noble_garrison = 0
+			}
+			else = {
+				ROOT = {
+					subtract_from_variable = {
+						var = BAN_commune_divisions
+						value = event_target:BAN_battle_target.BAN_commune_garrison
+					}
+				}
+				set_variable = {
+					BAN_commune_garrison = 0
+				}
+			}
+		}
+	}
+	ROOT = { update_BAN_variables = yes }
+}
+BAN_kill_divisions_loss = {
+	custom_effect_tooltip = BAN_all_attackers_killed
+	if = {
+		limit = {
+			has_state_flag = BAN_one_normal_attacker_noble
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_noble_divisions
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_two_normal_attacker_noble
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_noble_divisions
+				value = 2
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_one_special_attacker_noble
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_special_noble_divisions
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_one_normal_one_special_attacker_noble
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_noble_divisions
+				value = 1
+			}
+			subtract_from_variable = {
+				var = BAN_special_noble_divisions
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_one_normal_attacker_commune
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_commune_divisions
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_two_normal_attacker_commune
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_commune_divisions
+				value = 2
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_state_flag = BAN_one_normal_one_special_attacker_commune
+		}
+		ROOT = {
+			subtract_from_variable = {
+				var = BAN_commune_divisions
+				value = 1
+			}
+		}
+	}
+	ROOT = { update_BAN_variables = yes }
+}

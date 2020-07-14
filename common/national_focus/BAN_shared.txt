@@ -1,0 +1,3231 @@
+focus_tree = {
+	id = BAN_anti_commie_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAN
+			has_country_flag = BAN_anti_commie_flag
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1900 }
+
+	shared_focus = BAN_anticommunist_start
+}
+
+focus_tree = {
+	id = BAN_united_govt_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAN
+			has_country_flag = BAN_united_govt_flag
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 6000 }
+
+	shared_focus = BAN_united_start
+}
+
+focus_tree = {
+	id = BAN_anti_noble_weak_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAN
+			has_country_flag = BAN_anti_noble_weak_flag
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1900 }
+
+	shared_focus = BAN_nobles_uncontained_reeve_start
+}
+
+focus_tree = {
+	id = BAN_anti_noble_strong_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAN
+			has_country_flag = BAN_anti_noble_strong_flag
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1900 }
+
+	shared_focus = BAN_nobles_contained_reeve_start
+}
+
+focus_tree = {
+	id = BAN_weak_reeve_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAN
+			has_country_flag = BAN_weak_reeve_flag
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1900 }
+
+	shared_focus = BAN_weak_reeve_start
+}
+
+
+
+
+######################
+### ANTI-COMMUNIST ###
+######################
+shared_focus = { # bandit.47, bandit.51 into reeve death
+	id = BAN_anticommunist_start
+	x = 8
+	y = 0
+	cost = 1
+	completion_reward = {
+	}
+}
+
+
+
+
+######################
+### WEAKSHIT REEVE ###
+######################
+shared_focus = { # bandit.51 into cyrille death
+	id = BAN_weak_reeve_start
+	x = 8
+	y = 0
+	cost = 1
+	completion_reward = {
+	}
+}
+
+
+
+
+#########################
+### UNITED GOVERNMENT ###
+#########################
+shared_focus = { # bandit.48
+	id = BAN_united_start
+	icon = GFX_goal_liberty
+	x = 21
+	y = 0
+	cost = 1
+	completion_reward = {
+		country_event = { id = bandit.55 }
+	}
+}
+shared_focus = {
+	id = BAN_cyrilles_coronation
+	icon = GFX_focus_rom_royal_dictatorship
+	prerequisite = { focus = BAN_united_start }
+	relative_position_id = BAN_united_start
+	x = -1
+	y = 1
+	cost = 1
+	completion_reward = {
+		country_event = { id = bandit.56 }
+	}
+}
+shared_focus = {
+	id = BAN_reeves_speech
+	icon = GFX_focus_generic_join_comintern
+	prerequisite = { focus = BAN_united_start }
+	relative_position_id = BAN_united_start
+	x = 1
+	y = 1
+	cost = 1
+	completion_reward = {
+		country_event = { id = bandit.57 }
+	}
+}
+shared_focus = {
+	id = BAN_formal_government
+	icon = GFX_goal_government_icon
+	prerequisite = { focus = BAN_cyrilles_coronation }
+	prerequisite = { focus = BAN_reeves_speech }
+	relative_position_id = BAN_united_start
+	x = 0
+	y = 2
+	cost = 2
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		create_country_leader = {
+			name = "Reeve Blyeddin"
+			desc = "gommie_boi_desc"
+			picture = "Reeve.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+}
+		add_ideas = BAN_cyrille_idea
+		set_cosmetic_tag = BAN_united_gov
+	}
+}
+shared_focus = {
+	id = BAN_concessions_to_communes
+	icon = GFX_goal_commune_politics
+	prerequisite = { focus = BAN_formal_government }
+	relative_position_id = BAN_united_start
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = -25
+		add_timed_idea = {
+			idea = BAN_commune_concessions
+			days = 180
+		}
+		every_owned_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = BAN_commune_control_modifier }
+			}
+			remove_dynamic_modifier = { modifier = BAN_commune_control_modifier }
+			add_dynamic_modifier = { modifier = BAN_commune_control_modifier_good }
+		}
+	}
+}
+shared_focus = {
+	id = BAN_reward_generals
+	icon = GFX_goal_conscription
+	prerequisite = { focus = BAN_concessions_to_communes }
+	relative_position_id = BAN_united_start
+	x = 0
+	y = 5
+	cost = 2
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+}
+shared_focus = {
+	id = BAN_hunt_blackrock
+	icon = GFX_goal_purge_opposition 
+	prerequisite = { focus = BAN_formal_government }
+	relative_position_id = BAN_united_start
+	x = -2
+	y = 3
+	cost = 4
+	completion_reward = { # event?
+		custom_effect_tooltip = BAN_remove_5_bandit_control_every_state_tt
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 446
+						state = 606
+						state = 489
+						state = 490
+						state = 532
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { BAN_bandit_control > 4 }
+					}
+					add_to_variable = {
+						BAN_bandit_control = -5
+					}
+					add_to_variable = {
+						BAN_commune_control = 2
+					}
+					add_to_variable = {
+						BAN_noble_control = 3
+					}
+					else_if = {
+						limit = {
+							check_variable = { BAN_bandit_control > 3 }
+						}
+						add_to_variable = {
+							BAN_bandit_control = -4
+						}
+						add_to_variable = {
+							BAN_commune_control = 2
+						}
+						add_to_variable = {
+							BAN_noble_control = 2
+						}
+						else_if = {
+							limit = {
+								check_variable = { BAN_bandit_control > 2 }
+							}
+							add_to_variable = {
+								BAN_bandit_control = -3
+							}
+							add_to_variable = {
+								BAN_commune_control = 1
+							}
+							add_to_variable = {
+								BAN_noble_control = 2
+							}
+							else_if = {
+								limit = {
+									check_variable = { BAN_bandit_control > 1 }
+								}
+								add_to_variable = {
+									BAN_bandit_control = -2
+								}
+								add_to_variable = {
+									BAN_commune_control = 1
+								}
+								add_to_variable = {
+									BAN_noble_control = 1
+								}
+								else_if = {
+									limit = {
+										check_variable = { BAN_bandit_control > 0 }
+									}
+									add_to_variable = {
+										BAN_bandit_control = -1
+									}
+									add_to_variable = {
+										BAN_noble_control = 1
+									}
+									else = {
+										#
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			update_BAN_variables = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_hunt_continues
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	prerequisite = { focus = BAN_hunt_blackrock }
+	mutually_exclusive = { focus = BAN_pinfeathers_help }
+	relative_position_id = BAN_united_start
+	x = -3
+	y = 4
+	cost = 8
+	completion_reward = {
+		custom_effect_tooltip = BAN_remove_5_bandit_control_every_state_tt
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 446
+						state = 606
+						state = 489
+						state = 490
+						state = 532
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { BAN_bandit_control > 4 }
+					}
+					add_to_variable = {
+						BAN_bandit_control = -5
+					}
+					add_to_variable = {
+						BAN_commune_control = 2
+					}
+					add_to_variable = {
+						BAN_noble_control = 3
+					}
+					else_if = {
+						limit = {
+							check_variable = { BAN_bandit_control > 3 }
+						}
+						add_to_variable = {
+							BAN_bandit_control = -4
+						}
+						add_to_variable = {
+							BAN_commune_control = 2
+						}
+						add_to_variable = {
+							BAN_noble_control = 2
+						}
+						else_if = {
+							limit = {
+								check_variable = { BAN_bandit_control > 2 }
+							}
+							add_to_variable = {
+								BAN_bandit_control = -3
+							}
+							add_to_variable = {
+								BAN_commune_control = 1
+							}
+							add_to_variable = {
+								BAN_noble_control = 2
+							}
+							else_if = {
+								limit = {
+									check_variable = { BAN_bandit_control > 1 }
+								}
+								add_to_variable = {
+									BAN_bandit_control = -2
+								}
+								add_to_variable = {
+									BAN_commune_control = 1
+								}
+								add_to_variable = {
+									BAN_noble_control = 1
+								}
+								else_if = {
+									limit = {
+										check_variable = { BAN_bandit_control > 0 }
+									}
+									add_to_variable = {
+										BAN_bandit_control = -1
+									}
+									add_to_variable = {
+										BAN_noble_control = 1
+									}
+									else = {
+										#
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			update_BAN_variables = yes
+		}
+	}
+}
+shared_focus = { # he tells you hideouts bro
+	id = BAN_pinfeathers_help
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = BAN_hunt_blackrock }
+	mutually_exclusive = { focus = BAN_hunt_continues }
+	available = {
+		OR = {
+			has_country_flag = BAN_cyrille_pinfeather
+			has_country_flag = BAN_reeve_pinfeather
+		}
+		NOT = {
+			has_country_flag = BAN_pinfeather_killed
+		}
+	}
+	relative_position_id = BAN_united_start
+	x = -1
+	y = 4
+	cost = 2
+	completion_reward = {
+		custom_effect_tooltip = BAN_remove_5_bandit_control_every_state_tt
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 446
+						state = 606
+						state = 489
+						state = 490
+						state = 532
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { BAN_bandit_control > 4 }
+					}
+					add_to_variable = {
+						BAN_bandit_control = -5
+					}
+					add_to_variable = {
+						BAN_commune_control = 2
+					}
+					add_to_variable = {
+						BAN_noble_control = 3
+					}
+					else_if = {
+						limit = {
+							check_variable = { BAN_bandit_control > 3 }
+						}
+						add_to_variable = {
+							BAN_bandit_control = -4
+						}
+						add_to_variable = {
+							BAN_commune_control = 2
+						}
+						add_to_variable = {
+							BAN_noble_control = 2
+						}
+						else_if = {
+							limit = {
+								check_variable = { BAN_bandit_control > 2 }
+							}
+							add_to_variable = {
+								BAN_bandit_control = -3
+							}
+							add_to_variable = {
+								BAN_commune_control = 1
+							}
+							add_to_variable = {
+								BAN_noble_control = 2
+							}
+							else_if = {
+								limit = {
+									check_variable = { BAN_bandit_control > 1 }
+								}
+								add_to_variable = {
+									BAN_bandit_control = -2
+								}
+								add_to_variable = {
+									BAN_commune_control = 1
+								}
+								add_to_variable = {
+									BAN_noble_control = 1
+								}
+								else_if = {
+									limit = {
+										check_variable = { BAN_bandit_control > 0 }
+									}
+									add_to_variable = {
+										BAN_bandit_control = -1
+									}
+									add_to_variable = {
+										BAN_noble_control = 1
+									}
+									else = {
+										#
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			update_BAN_variables = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_blackrock_capture
+	icon = GFX_goal_ban_blackrock
+	prerequisite = { focus = BAN_hunt_continues focus = BAN_pinfeathers_help }
+	relative_position_id = BAN_united_start
+	x = -2
+	y = 5
+	cost = 4
+	completion_reward = {
+		custom_effect_tooltip = BAN_remove_5_bandit_control_every_state_tt
+		country_event = { id = bandit.58 }
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 446
+						state = 606
+						state = 489
+						state = 490
+						state = 532
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { BAN_bandit_control > 4 }
+					}
+					add_to_variable = {
+						BAN_bandit_control = -5
+					}
+					add_to_variable = {
+						BAN_commune_control = 2
+					}
+					add_to_variable = {
+						BAN_noble_control = 3
+					}
+					else_if = {
+						limit = {
+							check_variable = { BAN_bandit_control > 3 }
+						}
+						add_to_variable = {
+							BAN_bandit_control = -4
+						}
+						add_to_variable = {
+							BAN_commune_control = 2
+						}
+						add_to_variable = {
+							BAN_noble_control = 2
+						}
+						else_if = {
+							limit = {
+								check_variable = { BAN_bandit_control > 2 }
+							}
+							add_to_variable = {
+								BAN_bandit_control = -3
+							}
+							add_to_variable = {
+								BAN_commune_control = 1
+							}
+							add_to_variable = {
+								BAN_noble_control = 2
+							}
+							else_if = {
+								limit = {
+									check_variable = { BAN_bandit_control > 1 }
+								}
+								add_to_variable = {
+									BAN_bandit_control = -2
+								}
+								add_to_variable = {
+									BAN_commune_control = 1
+								}
+								add_to_variable = {
+									BAN_noble_control = 1
+								}
+								else_if = {
+									limit = {
+										check_variable = { BAN_bandit_control > 0 }
+									}
+									add_to_variable = {
+										BAN_bandit_control = -1
+									}
+									add_to_variable = {
+										BAN_noble_control = 1
+									}
+									else = {
+										#
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			update_BAN_variables = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_honor_the_gods
+	icon = GFX_goal_generic_archonism
+	prerequisite = { focus = BAN_formal_government }
+	relative_position_id = BAN_united_start
+	x = 2
+	y = 3
+	cost = 2
+	completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+	}
+}
+shared_focus = {
+	id = BAN_rebuild_temples
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { focus = BAN_honor_the_gods }
+	relative_position_id = BAN_united_start
+	x = 1
+	y = 4
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+		532 = {
+			if = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_rebuild_mountain_roads
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = BAN_honor_the_gods }
+	bypass = {
+		NOT = {
+			owns_state = 489
+			owns_state = 606
+			owns_state = 446
+		}
+	}
+	relative_position_id = BAN_united_start
+	x = 3
+	y = 4
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		489 = {
+			if = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		606 = {
+			if = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		446 = {
+			if = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_foundations_for_government
+	icon = GFX_focus_indy_generic_political
+	prerequisite = { focus = BAN_rebuild_temples }
+	prerequisite = { focus = BAN_rebuild_mountain_roads }
+	relative_position_id = BAN_united_start
+	x = 2
+	y = 5
+	cost = 4
+	completion_reward = {
+		add_political_power = -100
+		add_ideas = BAN_real_government
+		swap_ideas = {
+			add_idea = BAN_lawless_land2
+			remove_idea = BAN_lawless_land
+		}
+	}
+}
+shared_focus = {
+	id = BAN_naniwich_trials
+	icon = GFX_goal_DOM_The_Trial
+	prerequisite = { focus = BAN_blackrock_capture }
+	prerequisite = { focus = BAN_reward_generals }
+	prerequisite = { focus = BAN_foundations_for_government }
+	relative_position_id = BAN_united_start
+	x = 0
+	y = 6
+	cost = 8
+	completion_reward = {
+		country_event = { id = bandit.59 }
+	}
+}
+shared_focus = {
+	id = BAN_reeves_term
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = BAN_naniwich_trials }
+	relative_position_id = BAN_naniwich_trials
+	x = 0
+	y = 1
+	cost = 1
+	completion_reward = {
+		add_political_power = 50
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+shared_focus = {
+	id = BAN_reeve_mil
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = BAN_reeves_term }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -4
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = BAN_anti_pacifism_campaign
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = BAN_reeve_mil }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -3
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_war_support = 0.05
+		add_timed_idea = {
+			idea = BAN_pro_war_campaigns
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BAN_open_bandit_armories
+	icon = GFX_goal_generic_fortify_city
+	prerequisite = { focus = BAN_reeve_mil }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -5
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1500
+			producer = BAN
+		}
+	}
+}
+shared_focus = {
+	id = BAN_real_army
+	icon = GFX_goal_conscription
+	prerequisite = { focus = BAN_anti_pacifism_campaign }
+	prerequisite = { focus = BAN_open_bandit_armories }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -4
+	y = 4
+	cost = 8
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_forming_army
+			remove_idea = BAN_disorganized_army
+		}
+	}
+}
+shared_focus = {
+	id = BAN_mitigate_pacifism
+	icon = GFX_focus_hol_war_on_pacifism
+	prerequisite = { focus = BAN_real_army }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -3
+	y = 5
+	cost = 8
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_anti_war2
+			remove_idea = BAN_anti_war
+		}
+	}
+}
+shared_focus = {
+	id = BAN_power_to_the_people
+	icon = GFX_goal_generic_national_unity_claws
+	prerequisite = { focus = BAN_reeves_term }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -1
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_ideas = BAN_peoples_assembly
+	}
+}
+shared_focus = {
+	id = BAN_lordly_council
+	icon = GFX_goal_top_hat
+	prerequisite = { focus = BAN_reeves_term }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 1
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_ideas = BAN_noble_council
+	}
+}
+shared_focus = {
+	id = BAN_form_the_courts
+	icon = GFX_goal_government_icon
+	prerequisite = { focus = BAN_power_to_the_people }
+	prerequisite = { focus = BAN_lordly_council }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_ideas = BAN_courts
+	}
+}
+shared_focus = {
+	id = BAN_godly_judges
+	icon = GFX_goal_generic_archonism
+	prerequisite = { focus = BAN_form_the_courts }
+	mutually_exclusive = { focus = BAN_appoint_judges }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = -1
+	y = 4
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_religious_judges
+			remove_idea = BAN_courts
+		}
+	}
+}
+shared_focus = {
+	id = BAN_appoint_judges
+	icon = GFX_goal_constitutional_guarantees
+	prerequisite = { focus = BAN_form_the_courts }
+	mutually_exclusive = { focus = BAN_godly_judges }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 1
+	y = 4
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_appointed_judges
+			remove_idea = BAN_courts
+		}
+	}
+}
+shared_focus = {
+	id = BAN_functional_government
+	icon = GFX_focus_indy_democratic_process
+	prerequisite = { focus = BAN_godly_judges focus = BAN_appoint_judges }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 0
+	y = 5
+	cost = 4
+	completion_reward = {
+		remove_ideas = BAN_real_government
+		swap_ideas = {
+			add_idea = BAN_lawless_land3
+			remove_idea = BAN_lawless_land2
+		}
+	}
+}
+shared_focus = {
+	id = BAN_reeve_econ
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = BAN_reeves_term }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 4
+	y = 2
+	cost = 8
+	completion_reward = {
+		add_ideas = BAN_reconstruction_committee
+	}
+}
+shared_focus = {
+	id = BAN_rebuild_military_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = BAN_reeve_econ }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 3
+	y = 3
+	cost = 4
+	completion_reward = {
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = BAN_rebuild_civilian_industry
+	icon = GFX_focus_generic_industry_3
+	prerequisite = { focus = BAN_reeve_econ }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 5
+	y = 3
+	cost = 4
+	completion_reward = {
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = BAN_rebuild_roads
+	icon = GFX_goal_generic_construction
+	prerequisite = { focus = BAN_rebuild_military_industry }
+	prerequisite = { focus = BAN_rebuild_civilian_industry }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 4
+	y = 4
+	cost = 2
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_initial_recovery
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = BAN_rebuild_roads }
+	available = { has_country_leader = { name = "Reeve Blyeddin" ruling_only = yes } }
+	relative_position_id = BAN_naniwich_trials
+	x = 3
+	y = 5
+	cost = 4
+	completion_reward = {
+		remove_ideas = BAN_reconstruction_committee
+		swap_ideas = {
+			add_idea = BAN_economic_wasteland2
+			remove_idea = BAN_economic_wasteland
+		}
+	}
+}
+shared_focus = {
+	id = BAN_proper_election
+	icon = GFX_goal_generic_elections
+	prerequisite = { focus = BAN_mitigate_pacifism }
+	prerequisite = { focus = BAN_functional_government }
+	prerequisite = { focus = BAN_initial_recovery }
+	relative_position_id = BAN_naniwich_trials
+	x = 0
+	y = 6
+	cost = 2
+	completion_reward = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							has_country_flag = BAN_reeve_pinfeather
+							has_country_flag = BAN_cyrille_pinfeather
+						}
+						NOT = {
+							has_country_flag = BAN_pinfeather_killed
+						}
+					}
+					NOT = {
+						has_country_flag = BAN_blackbeak_killed
+					}
+				}
+			}
+			country_event = { id = bandit.64 }
+			else = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				set_country_flag = BAN_reeve_elected
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_silas_term
+	prerequisite = { focus = BAN_proper_election }
+	available = { always = no }
+	bypass = { has_country_flag = BAN_blackbeak_elected }
+	relative_position_id = BAN_proper_election
+	x = -17
+	y = 1
+	cost = 1
+	completion_reward = {
+		#
+	}
+}
+shared_focus = {
+	id = BAN_pride_in_the_countess
+	prerequisite = { focus = BAN_silas_term }
+	relative_position_id = BAN_silas_term
+	x = -1
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_ideas = BAN_national_pride
+	}
+}
+shared_focus = {
+	id = BAN_pride_in_blackhollow
+	prerequisite = { focus = BAN_pride_in_the_countess }
+	relative_position_id = BAN_silas_term
+	x = -1
+	y = 2
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_national_pride2
+			remove_idea = BAN_national_pride
+		}
+	}
+}
+shared_focus = {
+	id = BAN_knightly_police_force
+	prerequisite = { focus = BAN_pride_in_the_countess }
+	relative_position_id = BAN_silas_term
+	x = -3
+	y = 2
+	cost = 4
+	completion_reward = {
+		remove_ideas = BAN_lawless_land3
+	}
+}
+shared_focus = {
+	id = BAN_pride_in_the_military
+	prerequisite = { focus = BAN_pride_in_blackhollow }
+	prerequisite = { focus = BAN_knightly_police_force }
+	relative_position_id = BAN_silas_term
+	x = -2
+	y = 3
+	cost = 8
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_national_pride3
+			remove_idea = BAN_national_pride2
+		}
+		remove_ideas = BAN_anti_war2
+	}
+}
+shared_focus = {
+	id = BAN_emphasize_the_nobility
+	prerequisite = { focus = BAN_silas_term }
+	relative_position_id = BAN_silas_term
+	x = 1
+	y = 1
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_emphasized_noble_council
+			remove_idea = BAN_noble_council
+		}
+	}
+}
+shared_focus = {
+	id = BAN_state_mandated_philanthropy
+	prerequisite = { focus = BAN_emphasize_the_nobility }
+	relative_position_id = BAN_silas_term
+	x = 3
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -25
+		one_random_industrial_complex = yes
+		add_ideas = BAN_forced_philanthropy
+	}
+}
+shared_focus = {
+	id = BAN_curtail_the_communes
+	prerequisite = { focus = BAN_emphasize_the_nobility }
+	relative_position_id = BAN_silas_term
+	x = 1
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+}
+shared_focus = {
+	id = BAN_deplatform_commies
+	prerequisite = { focus = BAN_state_mandated_philanthropy }
+	prerequisite = { focus = BAN_curtail_the_communes }
+	relative_position_id = BAN_silas_term
+	x = 2
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_ideas = BAN_commies_deplatformed
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+}
+shared_focus = {
+	id = BAN_ensure_loyalty
+	prerequisite = { focus = BAN_pride_in_blackhollow }
+	prerequisite = { focus = BAN_curtail_the_communes }
+	relative_position_id = BAN_silas_term
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		add_stability = 0.025
+		add_war_support = 0.025
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+}
+shared_focus = {
+	id = BAN_mobilization
+	prerequisite = { focus = BAN_pride_in_the_military }
+	prerequisite = { focus = BAN_ensure_loyalty }
+	prerequisite = { focus = BAN_deplatform_commies }
+	relative_position_id = BAN_silas_term
+	x = 0
+	y = 4
+	cost = 8
+	completion_reward = {
+		add_political_power = -100
+		add_war_support = 0.05
+		if = {
+			limit = {
+				OR = {
+					has_idea = civilian_economy
+					has_idea = low_economic_mobilisation
+				}
+			}
+			add_ideas = partial_economic_mobilisation
+			else_if = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = disarmed_nation
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+				}
+			}
+			add_ideas = extensive_conscription
+			else_if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				add_ideas = service_by_requirement
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_rightful_claim
+	prerequisite = { focus = BAN_mobilization }
+	relative_position_id = BAN_mobilization
+	x = 0
+	y = 1
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			target = BOI
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = BAN_the_legitimate_queen
+	prerequisite = { focus = BAN_rightful_claim }
+	available = {
+		owns_state = 389
+	}
+	cancel_if_invalid = yes
+	relative_position_id = BAN_mobilization
+	x = 0
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_ideas = BAN_integration_is_a_slow_process
+	}
+}
+shared_focus = {
+	id = BAN_repaying_the_lushians
+	prerequisite = { focus = BAN_the_legitimate_queen }
+	available = {
+		has_country_flag = BAN_lushian_friends
+	}
+	relative_position_id = BAN_mobilization
+	x = -5
+	y = 3
+	cost = 4
+	completion_reward = {
+		LUS = {
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = {
+							name = "Prince Elias Whitecrest"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "King Elias I Whitecrest"
+							ruling_only = yes
+						}
+					}
+					OR = {
+						is_subject_of = ROOT
+						is_subject = no
+					}
+					OR = {
+						has_country_leader = {
+							name = "Prince Elias Whitecrest"
+							ruling_only = no
+						}
+						has_country_leader = {
+							name = "King Elias I Whitecrest"
+							ruling_only = no
+						}
+					}
+				}
+				one_random_industrial_complex = yes
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								name = "Prince Elias Whitecrest"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "King Elias I Whitecrest"
+								ruling_only = yes
+							}
+						}
+						OR = {
+							has_country_leader = {
+								name = "Prince Elias Whitecrest"
+								ruling_only = no
+							}
+							has_country_leader = {
+								name = "King Elias I Whitecrest"
+								ruling_only = no
+							}
+							AND = {
+								is_subject = yes
+								NOT = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							target = LUS
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_lushis_finest_leader
+	prerequisite = { focus = BAN_repaying_the_lushians }
+	mutually_exclusive = { focus = BAN_a_time_held_tradition }
+	available = {
+		has_subject = LUS
+	}
+	relative_position_id = BAN_mobilization
+	x = -6
+	y = 4
+	cost = 4
+	completion_reward = {
+		LUS = {
+			if = {
+				limit = {
+					NOT = {
+						has_government = neutrality
+					}
+				}
+				set_ruling_party = {
+					ideology = neutrality
+					elections_allowed = no
+				}
+			}
+			create_country_leader = {
+				name = "Sir"
+				desc = "sir_desc"	
+				portrait_path = "gfx/leaders/BAN/cyrille_lushi_general.tga"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+			add_ideas = BAN_LUS_knightly_rulership
+		}
+	}
+}
+shared_focus = {
+	id = BAN_prop_up_nobles
+	available = {
+		has_subject = LUS
+	}
+	prerequisite = { focus = BAN_lushis_finest_leader }
+	relative_position_id = BAN_mobilization
+	x = -6
+	y = 5
+	cost = 4
+	completion_reward = {
+		LUS = {
+			if = {
+				limit = {
+					has_idea = LUS_prywhen_communist_influence
+				}
+				remove_ideas = LUS_prywhen_communist_influence
+				else_if = {
+					limit = {
+						has_idea = LUS_prywhen_communist_influence_softer
+					}
+					remove_ideas = LUS_prywhen_communist_influence_softer
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = lord_drak_killed
+							has_country_flag = lord_drak_captured
+							has_country_flag = lord_drak_escaped
+							has_country_flag = lord_drak_left
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = LUS_drak_lord
+					}
+					swap_ideas = {
+						add_idea = BAN_LUS_drak_lord
+						remove_idea = LUS_drak_lord
+					}
+					else = {
+						add_idea = BAN_LUS_drak_lord
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = LUS_damoi_lord
+				}
+				swap_ideas = {
+					add_idea = BAN_LUS_damoi_lord
+					remove_idea = LUS_damoi_lord
+				}
+				else = {
+					add_idea = BAN_LUS_damoi_lord
+				}
+			}
+			if = {
+				limit = {
+					has_idea = LUS_talvonia_lord
+				}
+				swap_ideas = {
+					add_idea = BAN_LUS_talvonia_lord
+					remove_idea = LUS_talvonia_lord
+				}
+				else_if = {
+					limit = {
+						has_idea = LUS_talvonia_lord_2
+					}
+					swap_ideas = {
+						add_idea = BAN_LUS_talvonia_lord
+						remove_idea = LUS_talvonia_lord_2
+					}
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_a_time_held_tradition
+	prerequisite = { focus = BAN_repaying_the_lushians }
+	mutually_exclusive = { focus = BAN_lushis_finest_leader }
+	relative_position_id = BAN_mobilization
+	x = -4
+	y = 4
+	cost = 4
+	select_effect = {
+		hidden_effect = { country_event = { id = bandit.112 days = 14 } }
+	}
+	completion_reward = {
+		country_event = { id = bandit.113 }
+	}
+}
+shared_focus = {
+	id = BAN_wedding_of_blue_and_white
+	prerequisite = { focus = BAN_a_time_held_tradition }
+	relative_position_id = BAN_mobilization
+	x = -4
+	y = 5
+	cost = 4
+	select_effect = {
+		hidden_effect = { country_event = { id = bandit.114 days = 14 } }
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				has_country_flag = BAN_LUS_marriage_denied
+			}
+			country_event = { id = bandit.116 }
+			else = {
+				country_event = { id = bandit.115 }
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_asterionese_alliance_please_bro
+	prerequisite = { focus = BAN_the_legitimate_queen }
+	available = {
+		has_country_flag = BAN_minotaur_friends
+		NOT = {
+			has_war_with = MIT
+			MIT = {
+				has_government = communism
+			}
+		}
+		MIT = {
+			is_faction_leader = yes
+		}
+	}
+	bypass = {
+		OR = {
+			has_war_with = MIT
+			MIT = {
+				OR = {
+					is_faction_leader = no
+					has_government = communism
+				}
+			}
+			NOT = {
+				has_country_flag = BAN_minotaur_friends
+			}
+		}
+	}
+	relative_position_id = BAN_mobilization
+	x = 5
+	y = 3
+	cost = 4
+	completion_reward = {
+		MIT = { country_event = { id = generic.2 } }
+	}
+}
+shared_focus = {
+	id = BAN_kill_CYA
+	prerequisite = { focus = BAN_asterionese_alliance_please_bro }
+	available = {
+		CYA = {
+			exists = yes
+			is_subject = no
+		}
+		NOT = {
+			is_in_faction_with = MIT
+		}
+		has_country_flag = BAN_minotaur_friends
+	}
+	relative_position_id = BAN_mobilization
+	x = 3
+	y = 4
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			target = CYA
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = BAN_autonomy_in_cyanolisia
+	prerequisite = { focus = BAN_kill_CYA }
+	available = {
+		any_owned_state = {
+			NOT = {
+				state = 446
+			}
+			is_core_of = CYA
+		}
+	}
+	relative_position_id = BAN_mobilization
+	x = 3
+	y = 5
+	cost = 4
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 446
+				}
+				is_core_of = CYA
+			}
+			add_dynamic_modifier = {
+				modifier = autonomous_state
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_defend_the_creeper_mountains
+	prerequisite = { focus = BAN_asterionese_alliance_please_bro }
+	mutually_exclusive = { focus = BAN_cede_the_creeper_mountains }
+	available = {
+		owns_state = 446
+	}
+	relative_position_id = BAN_mobilization
+	x = 5
+	y = 4
+	cost = 4
+	completion_reward = {
+		# adds a number of forts on the Cyanolisian border
+	}
+}
+shared_focus = {
+	id = BAN_special_defenses_in_creeper_mountains
+	prerequisite = { focus = BAN_defend_the_creeper_mountains }
+	available = {
+		owns_state = 446
+	}
+	relative_position_id = BAN_mobilization
+	x = 5
+	y = 5
+	cost = 4
+	completion_reward = {
+		446 = {
+			add_dynamic_modifier = {
+				modifier = BAN_special_defenses
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_cede_the_creeper_mountains
+	prerequisite = { focus = BAN_asterionese_alliance_please_bro }
+	mutually_exclusive = { focus = BAN_defend_the_creeper_mountains }
+	available = {
+		owns_state = 446
+		is_in_faction_with = MIT
+		MIT = {
+			owns_state = 511
+		}
+	}
+	bypass = {
+		NOT = {
+			owns_state = 446
+		}
+	}
+	relative_position_id = BAN_mobilization
+	x = 7
+	y = 4
+	cost = 4
+	completion_reward = {
+		MIT = {
+			transfer_state = 446
+		}
+	}
+}
+shared_focus = {
+	id = BAN_mutual_aid_with_asterion
+	prerequisite = { focus = BAN_cede_the_creeper_mountains }
+	available = {
+		is_in_faction_with = MIT
+	}
+	relative_position_id = BAN_mobilization
+	x = 7
+	y = 5
+	cost = 8
+	completion_reward = {
+		two_random_industrial_complex = yes
+		MIT = {
+			two_random_industrial_complex = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_knight_the_generals
+	prerequisite = { focus = BAN_the_legitimate_queen }
+	relative_position_id = BAN_mobilization
+	x = 1
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.108 }
+	}
+}
+shared_focus = {
+	id = BAN_new_jobs_for_former_government
+	prerequisite = { focus = BAN_the_legitimate_queen }
+	relative_position_id = BAN_mobilization
+	x = -1
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.109 }
+	}
+}
+shared_focus = {
+	id = BAN_with_respect_to_the_regent
+	prerequisite = { focus = BAN_knight_the_generals }
+	prerequisite = { focus = BAN_new_jobs_for_former_government }
+	relative_position_id = BAN_mobilization
+	x = 0
+	y = 4
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.110 }
+	}
+}
+shared_focus = {
+	id = BAN_kingdom_with_a_queen
+	available = {
+		all_owned_state = {
+			OR = {
+				NOT = {
+					AND = {
+						is_core_of = BOI
+						is_core_of = BAN
+					}
+				}
+				AND = {
+					is_core_of = BOI
+					is_core_of = BAN
+				}
+				is_core_of = BAN
+			}
+		}
+	}
+	prerequisite = { focus = BAN_with_respect_to_the_regent }
+	relative_position_id = BAN_mobilization
+	x = 0
+	y = 5
+	cost = 8
+	completion_reward = {
+		country_event = { id = bandit.111 }
+	}
+}
+shared_focus = {
+	id = BAN_reeves_real_term
+	icon = GFX_goal_ideology_communist
+	prerequisite = { focus = BAN_proper_election }
+	available = { always = no }
+	bypass = { has_country_flag = BAN_reeve_elected }
+	relative_position_id = BAN_proper_election
+	x = 0
+	y = 1
+	cost = 1
+	completion_reward = {
+		#
+	}
+}
+shared_focus = {
+	id = BAN_subvert_noble_authority
+	icon = GFX_focus_rom_handle_king
+	prerequisite = { focus = BAN_reeves_real_term }
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_political_power = 50
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+}
+shared_focus = {
+	id = BAN_empower_the_assembly
+	icon = GFX_goal_ideology_democratic_socialist
+	prerequisite = { focus = BAN_reeves_real_term }
+	relative_position_id = BAN_reeves_real_term
+	x = -2
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_political_power = -25
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		swap_ideas = {
+			add_idea = BAN_empowered_peoples_assembly
+			remove_idea = BAN_peoples_assembly
+		}
+	}
+}
+shared_focus = {
+	id = BAN_create_propaganda_ministry
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = BAN_reeves_real_term }
+	relative_position_id = BAN_reeves_real_term
+	x = 2
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_political_power = -25
+		add_ideas = BAN_propaganda_ministry
+	}
+}
+shared_focus = {
+	id = BAN_form_intelligence_agency
+	icon = GFX_goal_secret_agents_red
+	prerequisite = { focus = BAN_subvert_noble_authority }
+	prerequisite = { focus = BAN_empower_the_assembly }
+	prerequisite = { focus = BAN_create_propaganda_ministry }
+	relative_position_id = BAN_reeves_real_term
+	x = 2
+	y = 2
+	cost = 4
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = BAN_bdsm_lr
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+			else = {
+				add_ideas = BAN_bdsm_no_lr
+			}
+		}
+		remove_ideas = BAN_lawless_land3
+	}
+}
+shared_focus = {
+	id = BAN_establish_extensive_welfare
+	icon = GFX_focus_indy_give_democracy
+	prerequisite = { focus = BAN_empower_the_assembly }
+	relative_position_id = BAN_reeves_real_term
+	x = -2
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -100
+		add_ideas = BAN_welfare
+	}
+}
+shared_focus = {
+	id = BAN_silence_pacifists
+	icon = GFX_goal_generic_media_controls
+	prerequisite = { focus = BAN_subvert_noble_authority }
+	prerequisite = { focus = BAN_empower_the_assembly }
+	prerequisite = { focus = BAN_create_propaganda_ministry }
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 2
+	cost = 8
+	completion_reward = {
+		add_stability = -0.15
+		add_political_power = -150
+		remove_ideas = BAN_anti_war2
+	}
+}
+shared_focus = {
+	id = BAN_begin_militarization
+	icon = GFX_goal_chn_red_military_factories
+	prerequisite = { focus = BAN_silence_pacifists }
+	bypass = {
+		OR = {
+			has_idea = partial_economic_mobilisation
+			has_idea = war_economy
+			has_idea = tot_economic_mobilisation
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = -1
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_ideas = partial_economic_mobilisation
+	}
+}
+shared_focus = {
+	id = BAN_begin_conscription
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = BAN_silence_pacifists }
+	bypass = {
+		OR = {
+			has_idea = extensive_conscription
+			has_idea = service_by_requirement
+			has_idea = all_adults_serve
+			has_idea = scraping_the_barrel
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = 1
+	y = 3
+	cost = 4
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_idea = limited_conscription
+				}
+			}
+			add_ideas = limited_conscription
+			else = {
+				add_ideas = extensive_conscription
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_gamer_da_welfare
+	icon = GFX_goal_socialist_infrastructure
+	prerequisite = { focus = BAN_establish_extensive_welfare }
+	prerequisite = { focus = BAN_begin_militarization }
+	relative_position_id = BAN_reeves_real_term
+	x = -2
+	y = 4
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_extensive_welfare
+			remove_idea = BAN_welfare
+		}
+	}
+}
+shared_focus = {
+	id = BAN_prepare_for_conflict
+	icon = GFX_focus_generic_support_the_left_right_claw
+	prerequisite = { focus = BAN_begin_militarization }
+	prerequisite = { focus = BAN_begin_conscription }
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 4
+	cost = 4
+	completion_reward = {
+		add_war_support = 0.1
+		add_manpower = 5000
+	}
+}
+shared_focus = {
+	id = BAN_military_police
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = BAN_begin_militarization }
+	prerequisite = { focus = BAN_form_intelligence_agency }
+	relative_position_id = BAN_reeves_real_term
+	x = 2
+	y = 4
+	cost = 4
+	completion_reward = {
+		army_experience = 15
+		add_tech_bonus = {
+			name = BAN_military_police
+			bonus = 1.0
+			uses = 1
+			category = military_police_tech
+		}
+	}
+}
+shared_focus = {
+	id = BAN_repaying_our_debts
+	icon = GFX_goal_support_from_lushi
+	prerequisite = { focus = BAN_gamer_da_welfare }
+	prerequisite = { focus = BAN_prepare_for_conflict }
+	prerequisite = { focus = BAN_military_police }
+	available = {
+		has_country_flag = BAN_lushian_friends
+		LUS = {
+			NOT = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "King Elias I Whitecrest"
+					ruling_only = yes
+				}
+			}
+			OR = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = no
+				}
+				has_country_leader = {
+					name = "King Elias I Whitecrest"
+					ruling_only = no
+				}
+				AND = {
+					is_subject = yes
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = -7
+	y = 5
+	cost = 2
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = BAN_liberating_lushi
+	icon = GFX_goal_liberty
+	prerequisite = { focus = BAN_repaying_our_debts }
+	relative_position_id = BAN_reeves_real_term
+	x = -7
+	y = 6
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			type = topple_government
+			target = LUS
+		}
+	}
+}
+shared_focus = {
+	id = BAN_cement_lushian_relations
+	icon = GFX_goal_LUS_clover
+	prerequisite = { focus = BAN_gamer_da_welfare }
+	prerequisite = { focus = BAN_prepare_for_conflict }
+	prerequisite = { focus = BAN_military_police }
+	available = {
+		has_country_flag = BAN_lushian_friends
+		LUS = {
+			OR = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "King Elias I Whitecrest"
+					ruling_only = yes
+				}
+			}
+			OR = {
+				is_subject_of = ROOT
+				is_subject = no
+			}
+			OR = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = no
+				}
+				has_country_leader = {
+					name = "King Elias I Whitecrest"
+					ruling_only = no
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = -4
+	y = 5
+	cost = 2
+	completion_reward = {
+		add_political_power = 25
+	}
+}
+shared_focus = {
+	id = BAN_a_wink
+	prerequisite = { focus = BAN_cement_lushian_relations }
+	relative_position_id = BAN_reeves_real_term
+	x = -5
+	y = 6
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.65 }
+	}
+}
+shared_focus = {
+	id = BAN_a_nudge
+	prerequisite = { focus = BAN_cement_lushian_relations }
+	relative_position_id = BAN_reeves_real_term
+	x = -3
+	y = 6
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.67 }
+	}
+}
+shared_focus = {
+	id = BAN_da_lushian_alliance
+	icon = GFX_goal_LUS_shield
+	prerequisite = { focus = BAN_a_wink }
+	prerequisite = { focus = BAN_a_nudge }
+	relative_position_id = BAN_reeves_real_term
+	x = -4
+	y = 7
+	cost = 8
+	completion_reward = {
+		create_faction = BAN_cyrille_faction
+		LUS = { country_event = { id = generic.5 } }
+	}
+}
+shared_focus = {
+	id = BAN_reach_out_to_asterion
+	icon = GFX_focus_indy_bullish_diplomacy
+	prerequisite = { focus = BAN_gamer_da_welfare }
+	prerequisite = { focus = BAN_prepare_for_conflict }
+	prerequisite = { focus = BAN_military_police }
+	available = {
+		has_country_flag = BAN_minotaur_friends
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = 4
+	y = 5
+	cost = 2
+	completion_reward = {
+		add_stability = 0.025
+	}
+}
+shared_focus = {
+	id = BAN_enshrine_minotaur_culture
+	icon = GFX_goal_MIT_The_Brutes_of_Old
+	prerequisite = { focus = BAN_reach_out_to_asterion }
+	relative_position_id = BAN_reeves_real_term
+	x = 3
+	y = 6
+	cost = 4
+	completion_reward = {
+		446 = {
+			add_dynamic_modifier = { modifier = BAN_minotaurs_are_based }
+		}
+	}
+}
+shared_focus = {
+	id = BAN_minotaur_ironworks
+	icon = GFX_Steel
+	prerequisite = { focus = BAN_reach_out_to_asterion }
+	relative_position_id = BAN_reeves_real_term
+	x = 5
+	y = 6
+	cost = 4
+	completion_reward = {
+		446 = {
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 446
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_asterion_alliance
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { focus = BAN_enshrine_minotaur_culture }
+	prerequisite = { focus = BAN_minotaur_ironworks }
+	bypass = {
+		OR = {
+			has_war_with = MIT
+			is_in_faction_with = MIT
+			AND = {
+				MIT = {
+					is_faction_leader = yes
+				}
+				is_in_faction = yes
+				NOT = {
+					is_in_faction_with = MIT
+				}
+			}
+			AND = {
+				MIT = {
+					is_faction_leader = no
+					is_in_faction = yes
+				}
+				NOT = {
+					is_in_faction_with = MIT
+				}
+			}
+			AND = {
+				MIT = {
+					is_in_faction = no
+				}
+				is_faction_leader = no
+			}
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = 4
+	y = 7
+	cost = 8
+	completion_reward = {
+		if = {
+			limit = {
+				MIT = {
+					is_faction_leader = yes
+				}
+			}
+			MIT = {
+				country_event = { id = generic.2 }
+			}
+			else_if = {
+				limit = {
+					MIT = {
+						is_in_faction = no
+					}
+					is_faction_leader = yes
+				}
+				MIT = {
+					country_event = { id = generic.5 }
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_matter_of_prywhen
+	icon = GFX_focus_grw_flag
+	prerequisite = { focus = BAN_gamer_da_welfare }
+	prerequisite = { focus = BAN_prepare_for_conflict }
+	prerequisite = { focus = BAN_military_police }
+	available = {
+		GRW = {
+			exists = yes
+			NOT = { has_war_with = BAN }
+		}
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = 7
+	y = 5
+	cost = 2
+	completion_reward = {
+		add_political_power = 25
+	}
+}
+shared_focus = {
+	id = BAN_ensure_blackhollows_survival
+	icon = GFX_goal_red_star_dove
+	prerequisite = { focus = BAN_matter_of_prywhen }
+	available = {
+		GRW = {
+			exists = yes
+			NOT = { has_war_with = BAN }
+		}
+	}
+	cancel_if_invalid = yes
+	relative_position_id = BAN_reeves_real_term
+	x = 7
+	y = 6
+	cost = 8
+	completion_reward = {
+		GRW = { country_event = { id = bandit.71 } }
+	}
+}
+shared_focus = {
+	id = BAN_liberation_of_griffonstone
+	icon = GFX_focus_strike_griffonstone
+	prerequisite = { focus = BAN_gamer_da_welfare }
+	prerequisite = { focus = BAN_prepare_for_conflict }
+	prerequisite = { focus = BAN_military_police }
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 5
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = BOI
+		}
+	}
+}
+shared_focus = {
+	id = BAN_integration_of_griffonstone
+	icon = GFX_goal_generic_national_unity_claws
+	prerequisite = { focus = BAN_liberation_of_griffonstone }
+	available = {
+		owns_state = 389
+	}
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 6
+	cost = 4
+	completion_reward = {
+		add_ideas = BAN_integration_is_a_slow_process
+	}
+}
+shared_focus = {
+	id = BAN_negotiate_with_the_government
+	icon = GFX_goal_generic_government_deals
+	prerequisite = { focus = BAN_integration_of_griffonstone }
+	relative_position_id = BAN_reeves_real_term
+	x = -1
+	y = 7
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		country_event = { id = bandit.74 }
+	}
+}
+shared_focus = {
+	id = BAN_negotiate_with_the_generals
+	icon = GFX_goal_military_academy
+	prerequisite = { focus = BAN_integration_of_griffonstone }
+	relative_position_id = BAN_reeves_real_term
+	x = 1
+	y = 7
+	cost = 4
+	completion_reward = {
+		add_command_power = -100
+		add_political_power = -25
+		country_event = { id = bandit.75 }
+	}
+}
+shared_focus = {
+	id = BAN_negotiate_with_gruff
+	prerequisite = { focus = BAN_negotiate_with_the_government }
+	prerequisite = { focus = BAN_negotiate_with_the_generals }
+	relative_position_id = BAN_reeves_real_term
+	x = 0
+	y = 8
+	cost = 4
+	completion_reward = {
+		add_political_power = -50
+		country_event = { id = bandit.80 }
+	}
+}
+shared_focus = {
+	id = BAN_claim_the_crown
+	icon = GFX_goal_griffon_crown
+	prerequisite = { focus = BAN_negotiate_with_gruff }
+	relative_position_id = BAN_reeves_real_term
+	available = {
+		all_owned_state = {
+			OR = {
+				NOT = {
+					AND = {
+						is_core_of = BOI
+						is_core_of = BAN
+					}
+				}
+				AND = {
+					is_core_of = BOI
+					is_core_of = BAN
+				}
+				is_core_of = BAN
+			}
+		}
+	}
+	x = 0
+	y = 9
+	cost = 8
+	completion_reward = {
+		remove_ideas = BAN_integration_is_a_slow_process
+		country_event = {
+			id = bandit.82
+		}
+	}
+}
+shared_focus = {
+	id = BAN_a_push
+	prerequisite = { focus = BAN_da_lushian_alliance }
+	prerequisite = { focus = BAN_claim_the_crown }
+	relative_position_id = BAN_claim_the_crown
+	x = -2
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_political_power = -100
+		LUS = {
+			country_event = { id = bandit.83 days = 3 }
+		}
+	}
+}
+shared_focus = {
+	id = BAN_a_shove
+	prerequisite = { focus = BAN_a_push }
+	relative_position_id = BAN_claim_the_crown
+	x = -3
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = -100
+		LUS = {
+			country_event = { id = bandit.84 }
+		}
+	}
+}
+shared_focus = {
+	id = BAN_claim_the_jewel
+	icon = GFX_focus_generic_eagle
+	prerequisite = { focus = BAN_claim_the_crown }
+	relative_position_id = BAN_claim_the_crown
+	x = 0
+	y = 1
+	cost = 4
+	completion_reward = {
+		create_wargoal = {
+			target = LAK
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = BAN_southern_fortifications 
+	icon = GFX_goal_generic_fortify_city
+	prerequisite = { focus = BAN_claim_the_jewel }
+	relative_position_id = BAN_claim_the_crown
+	x = -1
+	y = 2
+	cost = 4
+	completion_reward = {
+		# effect later
+	}
+}
+shared_focus = {
+	id = BAN_northern_fortifications
+	icon = GFX_goal_nested_fortifications
+	prerequisite = { focus = BAN_claim_the_jewel }
+	relative_position_id = BAN_claim_the_crown
+	x = 1
+	y = 2
+	cost = 4
+	completion_reward = {
+		# effect later
+	}
+}
+shared_focus = {
+	id = BAN_the_creeper_mountains
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = BAN_claim_the_crown }
+	prerequisite = { focus = BAN_asterion_alliance }
+	relative_position_id = BAN_claim_the_crown
+	x = 2
+	y = 1
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.88 }
+	}
+}
+shared_focus = {
+	id = BAN_celebrate_minotaurs
+	icon = GFX_goal_MIT_Legends_of_Old_2
+	prerequisite = { focus = BAN_the_creeper_mountains }
+	available = {
+		has_country_flag = BAN_asterion_placated
+	}
+	relative_position_id = BAN_claim_the_crown
+	x = 3
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = BAN_dominik_term
+	icon = GFX_goal_griffon_harmony
+	prerequisite = { focus = BAN_proper_election }
+	available = { always = no }
+	bypass = { has_country_flag = BAN_pinfeather_elected }
+	relative_position_id = BAN_proper_election
+	x = 17
+	y = 1
+	cost = 1
+	completion_reward = {
+		#
+	}
+}
+shared_focus = {
+	id = BAN_harmony_within
+	icon = GFX_goal_griffon_harmony_char
+	prerequisite = { focus = BAN_dominik_term }
+	relative_position_id = BAN_dominik_term
+	x = 0
+	y = 1
+	cost = 4
+	completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_ideas = BAN_dominiks_harmony
+	}
+}
+shared_focus = {
+	id = BAN_bill_of_rights
+	icon = GFX_goal_new_treaty
+	prerequisite = { focus = BAN_harmony_within }
+	relative_position_id = BAN_dominik_term
+	x = -1
+	y = 2
+	cost = 4
+	completion_reward = {
+		remove_ideas = BAN_lawless_land3
+		swap_ideas = {
+			add_idea = BAN_dominiks_harmony2
+			remove_idea = BAN_dominiks_harmony
+		}
+	}
+}
+shared_focus = {
+	id = BAN_monument_to_the_fallen
+	icon = GFX_goal_government_icon
+	prerequisite = { focus = BAN_harmony_within }
+	relative_position_id = BAN_dominik_term
+	x = 1
+	y = 2
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.93 }
+	}
+}
+shared_focus = {
+	id = BAN_friendship_programs
+	icon = GFX_focus_generic_diplomatic_treaty
+	prerequisite = { focus = BAN_bill_of_rights }
+	relative_position_id = BAN_dominik_term
+	x = -2
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_political_power = -25
+		swap_ideas = {
+			add_idea = BAN_dominiks_harmony3
+			remove_idea = BAN_dominiks_harmony2
+		}
+	}
+}
+shared_focus = {
+	id = BAN_armed_harmony
+	icon = GFX_goal_generic_army_tank_2
+	prerequisite = { focus = BAN_bill_of_rights }
+	prerequisite = { focus = BAN_monument_to_the_fallen }
+	relative_position_id = BAN_dominik_term
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_war_support = 0.05
+		add_ideas = BAN_military_harmony
+	}
+}
+shared_focus = {
+	id = BAN_access_stashes
+	icon = GFX_goal_gold_reserve
+	prerequisite = { focus = BAN_monument_to_the_fallen }
+	relative_position_id = BAN_dominik_term
+	x = 2
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_timed_idea = {
+			idea = BAN_bandit_stashes
+			days = 365
+		}
+	}
+}
+shared_focus = {
+	id = BAN_unite_the_classes
+	icon = GFX_goal_generic_national_unity_claws
+	prerequisite = { focus = BAN_armed_harmony }
+	prerequisite = { focus = BAN_friendship_programs }
+	relative_position_id = BAN_dominik_term
+	x = -1
+	y = 4
+	cost = 4
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_dominiks_harmony4
+			remove_idea = BAN_dominiks_harmony3
+		}
+	}
+}
+shared_focus = {
+	id = BAN_give_alms
+	icon = GFX_focus_indy_give_democracy
+	prerequisite = { focus = BAN_armed_harmony }
+	prerequisite = { focus = BAN_access_stashes }
+	available = {
+		has_ideas = BAN_bandit_stashes
+	}
+	bypass = {
+		NOT = {
+			has_ideas = BAN_bandit_stashes
+		}
+	}
+	relative_position_id = BAN_dominik_term
+	x = 1
+	y = 4
+	cost = 4
+	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+		one_random_industrial_complex = yes
+		modify_timed_idea = {
+			idea = BAN_bandit_stashes
+			days = -100
+		}
+	}
+}
+shared_focus = {
+	id = BAN_harmony_is_non_negotiable
+	icon = GFX_focus_generic_bastion_of_democracy
+	prerequisite = { focus = BAN_unite_the_classes }
+	prerequisite = { focus = BAN_give_alms }
+	relative_position_id = BAN_dominik_term
+	x = 0
+	y = 5
+	cost = 8
+	completion_reward = {
+		swap_ideas = {
+			add_idea = BAN_dominiks_harmony5
+			remove_idea = BAN_dominiks_harmony4
+		}
+		set_rule = {
+			can_guarantee_other_ideologies = no
+			can_only_justify_war_on_threat_country = no
+			can_create_collaboration_government = yes
+			can_declare_war_on_same_ideology = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_harmonize_lushi
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	mutually_exclusive = { focus = BAN_cyrille_and_elias }
+	available = {
+		if = {
+			limit = {
+				has_country_flag = BAN_lushian_friends
+			}
+			LUS = {
+				NOT = {
+					has_country_leader = {
+						name = "Prince Elias Whitecrest"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "King Elias I Whitecrest"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -7
+	y = 1
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = LUS
+		}
+	}
+}
+shared_focus = {
+	id = BAN_cyrille_and_elias
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	mutually_exclusive = { focus = BAN_harmonize_lushi }
+	available = {
+		has_country_flag = BAN_lushian_friends
+		LUS = {
+			OR = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = yes
+				}
+				has_country_leader = {
+				name = "King Elias I Whitecrest"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -5
+	y = 1
+	cost = 2
+	completion_reward = {
+		country_event = { id = bandit.94 }
+	}
+}
+shared_focus = {
+	id = BAN_extend_harmony_to_lushi
+	prerequisite = { focus = BAN_harmonize_lushi }
+	available = {
+		has_subject = LUS
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -8
+	y = 2
+	cost = 4
+	completion_reward = {
+		LUS = {
+			add_stability = 0.1
+			add_war_support = 0.2
+			add_political_power = 100
+			add_manpower = 15000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_develop_lushi
+	prerequisite = { focus = BAN_harmonize_lushi focus = BAN_cyrille_and_elias }
+	available = {
+		OR = {
+			has_subject = LUS
+			LUS = {
+				OR = {
+					has_country_leader = {
+						name = "Prince Elias Whitecrest"
+						ruling_only = yes
+					}
+					has_country_leader = {
+					name = "King Elias I Whitecrest"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -6
+	y = 2
+	cost = 4
+	completion_reward = {
+		LUS = {
+			two_random_industrial_complex = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_flirtatious_negotiations
+	prerequisite = { focus = BAN_cyrille_and_elias }
+	available = {
+		LUS = {
+			OR = {
+				has_country_leader = {
+					name = "Prince Elias Whitecrest"
+					ruling_only = yes
+				}
+				has_country_leader = {
+				name = "King Elias I Whitecrest"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -4
+	y = 2
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.95 }
+	}
+}
+shared_focus = {
+	id = BAN_lushi_is_harmonized
+	prerequisite = { focus = BAN_extend_harmony_to_lushi }
+	prerequisite = { focus = BAN_develop_lushi }
+	mutually_exclusive = { focus = BAN_sex }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -7
+	y = 3
+	cost = 4
+	completion_reward = {
+		add_political_power = 300
+		annex_country = {
+			target = LUS
+			transfer_troops = yes
+		}
+	}
+}
+shared_focus = {
+	id = BAN_sex # epic
+	prerequisite = { focus = BAN_flirtatious_negotiations }
+	prerequisite = { focus = BAN_develop_lushi }
+	mutually_exclusive = { focus = BAN_lushi_is_harmonized }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -5
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.99 }
+	}
+}
+shared_focus = {
+	id = BAN_harmonize_cyanolisia
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	mutually_exclusive = { focus = BAN_comrades_in_harmony }
+	available = {
+		has_country_flag = BAN_minotaur_friends
+		CYA = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 5
+	y = 1
+	cost = 4
+	completion_reward = {
+		create_wargoal = {
+			target = CYA
+			type = puppet_wargoal_focus
+		}
+	}
+}
+shared_focus = {
+	id = BAN_force_harmony_in_cyanolisia
+	prerequisite = { focus = BAN_harmonize_cyanolisia }
+	available = {
+		has_subject = CYA
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 4
+	y = 2
+	cost = 4
+	completion_reward = {
+		CYA = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_idea = CYA_minotaurian_indigenes
+				}
+				swap_ideas = {
+					add_idea = BAN_CYA_forced_racial_harmony
+					remove_idea = CYA_minotaurian_indigenes
+				}
+				else_if = {
+					limit = {
+						has_idea = CYA_suppressed_indigenes
+					}
+					swap_ideas = {
+						add_idea = BAN_CYA_forced_racial_harmony
+						remove_idea = CYA_minotaurian_indigenes
+					}
+					else_if = {
+						limit = {
+							has_idea = CYA_defeated_indigenes
+						}
+						swap_ideas = {
+							add_idea = BAN_CYA_developed_outback
+							remove_idea = CYA_defeated_indigenes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_develop_cyanolisian_outback
+	prerequisite = { focus = BAN_harmonize_cyanolisia }
+	available = {
+		has_subject = CYA
+		CYA = {
+			OR = {
+				owns_state = 510
+				owns_state = 511
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 6
+	y = 2
+	cost = 4
+	completion_reward = {
+		CYA = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_idea = CYA_minotaurian_outback
+				}
+				swap_ideas = {
+					add_idea = BAN_CYA_developed_outback
+					remove_idea = CYA_minotaurian_outback
+				}
+				else_if = {
+					limit = {
+						has_idea = CYA_policed_outback
+					}
+					swap_ideas = {
+						add_idea = BAN_CYA_developed_outback
+						remove_idea = CYA_minotaurian_outback
+					}
+					else_if = {
+						limit = {
+							has_idea = CYA_ignored_outback
+						}
+						swap_ideas = {
+							add_idea = BAN_CYA_developed_outback
+							remove_idea = CYA_ignored_outback
+						}
+					}
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_cyanolisia_is_harmonized
+	prerequisite = { focus = BAN_force_harmony_in_cyanolisia }
+	prerequisite = { focus = BAN_develop_cyanolisian_outback }
+	available = {
+		has_subject = CYA
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 5
+	y = 3
+	cost = 8
+	completion_reward = {
+		CYA = {
+			add_stability = 0.15
+			add_war_support = 0.05
+			add_manpower = 20000
+			add_political_power = 150
+			add_ideas = BAN_subject_pinfeather_harmony
+		}
+	}
+}
+shared_focus = {
+	id = BAN_comrades_in_harmony
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	mutually_exclusive = { focus = BAN_harmonize_cyanolisia focus = BAN_harmonize_asterion }
+	available = {
+		has_country_flag = BAN_minotaur_friends
+		NOT = {
+			has_war_with = MIT
+		}
+		MIT = {
+			has_government = democratic
+			is_faction_leader = yes
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 7
+	y = 1
+	cost = 4
+	completion_reward = {
+		MIT = { country_event = { id = generic.2 } }
+	}
+}
+shared_focus = {
+	id = BAN_addressing_the_creeper_mountains
+	prerequisite = { focus = BAN_comrades_in_harmony }
+	available = {
+		is_in_faction_with = MIT
+		owns_state = 446
+	}
+	cancel_if_invalid = yes
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 7
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.88 }
+	}
+}
+shared_focus = {
+	id = BAN_harmonize_asterion
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	mutually_exclusive = { focus = BAN_comrades_in_harmony }
+	available = {
+		has_country_flag = BAN_minotaur_friends
+		any_owned_state = {
+			is_controlled_by = ROOT
+			is_coastal = yes
+		}
+		MIT = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 9
+	y = 1
+	cost = 4
+	completion_reward = {
+		create_wargoal = {
+			target = MIT
+			type = puppet_wargoal_focus
+		}
+	}
+}
+shared_focus = {
+	id = BAN_anti_harmonist_crackdown
+	prerequisite = { focus = BAN_harmonize_asterion }
+	available = {
+		has_subject = MIT
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 8
+	y = 2
+	cost = 4
+	completion_reward = {
+		MIT = {
+			add_stability = -0.15
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_reinforce_the_mil_ind_complex
+	prerequisite = { focus = BAN_harmonize_asterion }
+	available = {
+		has_subject = MIT
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 10
+	y = 2
+	cost = 4
+	completion_reward = {
+		MIT = {
+			if = {
+				limit = {
+					has_idea = MIT_militaryindustrialcomplex
+				}
+				swap_ideas = {
+					add_idea = BAN_MIT_reinforced_military_industrial_complex
+					remove_idea = MIT_militaryindustrialcomplex
+				}
+				else_if = {
+					limit = {
+						has_idea = MIT_militaryindustrialcomplex_2
+					}
+					swap_ideas = {
+						add_idea = BAN_MIT_reinforced_military_industrial_complex
+						remove_idea = MIT_militaryindustrialcomplex_2
+					}
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_make_distinction_clear
+	prerequisite = { focus = BAN_anti_harmonist_crackdown }
+	prerequisite = { focus = BAN_reinforce_the_mil_ind_complex }
+	available = {
+		has_subject = MIT
+	}
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 9
+	y = 3
+	cost = 8
+	completion_reward = {
+		add_political_power = -150
+		MIT = {
+			add_stability = 0.05
+			add_political_power = -150
+			swap_ideas = {
+				add_idea = BAN_subject_pinfeather_harmony
+				remove_idea = MIT_neveragain
+			}
+		}
+	}
+}
+shared_focus = {
+	id = BAN_bring_harmony_to_griffonstone
+	prerequisite = { focus = BAN_harmony_is_non_negotiable }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 0
+	y = 1
+	cost = 8
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = BOI
+		}
+	}
+}
+shared_focus = {
+	id = BAN_bringing_harmony
+	prerequisite = { focus = BAN_bring_harmony_to_griffonstone }
+	available = {
+		owns_state = 389
+	}
+	cancel_if_invalid = yes
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 0
+	y = 2
+	cost = 4
+	completion_reward = {
+		add_ideas = BAN_integration_is_a_slow_process
+	}
+}
+shared_focus = {
+	id = BAN_harmony_with_the_commoner
+	prerequisite = { focus = BAN_bringing_harmony }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 0
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.103 }
+	}
+}
+shared_focus = {
+	id = BAN_harmony_with_the_government
+	prerequisite = { focus = BAN_bringing_harmony }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = -2
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.104 }
+	}
+}
+shared_focus = {
+	id = BAN_harmony_with_the_military
+	prerequisite = { focus = BAN_bringing_harmony }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 2
+	y = 3
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.105 }
+	}
+}
+shared_focus = {
+	id = BAN_harmony_and_griffonstone
+	prerequisite = { focus = BAN_harmony_with_the_government }
+	prerequisite = { focus = BAN_harmony_with_the_commoner }
+	prerequisite = { focus = BAN_harmony_with_the_military }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 0
+	y = 4
+	cost = 8
+	completion_reward = {
+		country_event = { id = bandit.106 }
+	}
+}
+shared_focus = {
+	id = BAN_throne_of_harmony
+	prerequisite = { focus = BAN_harmony_and_griffonstone }
+	relative_position_id = BAN_harmony_is_non_negotiable
+	x = 0
+	y = 5
+	cost = 4
+	completion_reward = {
+		country_event = { id = bandit.107 }
+	}
+}
+
+
+
+
+
+
+
+
+#######################
+### WEAK ANTI-NOBLE ###
+#######################
+shared_focus = { # bandit.49
+	id = BAN_nobles_uncontained_reeve_start
+	x = 8
+	y = 0
+	cost = 1
+	completion_reward = {
+	}
+}
+
+
+
+
+#########################
+### STRONG ANTI-NOBLE ###
+#########################
+shared_focus = { # bandit.50
+	id = BAN_nobles_contained_reeve_start
+	x = 8
+	y = 0
+	cost = 1
+	completion_reward = {
+	}
+}
