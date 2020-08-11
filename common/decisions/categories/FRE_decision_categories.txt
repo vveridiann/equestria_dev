@@ -1,0 +1,5 @@
+FRE_monk_decisions_cat = {
+	allowed = {
+		original_tag = FRE
+	}
+}

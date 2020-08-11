@@ -1,0 +1,116 @@
+FRE_monk_decisions_cat = {
+	FRE_rescue_captives_from_baard = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_rescue_captives_from_baard_tt
+		}
+	}
+	FRE_stop_evil_baard_thing = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_stop_evil_baard_thing_tt
+		}
+	}
+	FRE_free_slaves_in_hjartholar = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_free_slaves_in_hjartholar_tt
+		}
+	}
+	FRE_help_ponies_in_hellquill = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_help_ponies_in_hellquill_tt
+		}
+	}
+	FRE_sabotarge_hellquils_dark_industry = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_sabotarge_hellquils_dark_industry_tt
+		}
+	}
+	FRE_send_mission_to_kasa = {
+		allowed = {
+			original_tag = FRE
+		}
+
+		cost = 75
+
+		days_remove = 30
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = send_event
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = FRE_send_mission_to_kasa_tt
+		}
+	}
+}
