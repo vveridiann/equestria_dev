@@ -773,7 +773,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_start"
 		add_political_power = 70
-		add_dynamic_modifier = { modifier = HYE_dynamic_modifier }
+		add_dynamic_modifier = { modifier = HYE_dynamic_modifier } #TODO dynamic modifier change text
 		set_country_flag = qaylid_enable_dynamic_modifier
 		set_variable = { HYE_special_forces_cap_variable = 0.05}
 		set_variable = { HYE_research_speed_variable = 0}
