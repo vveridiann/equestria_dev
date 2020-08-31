@@ -776,10 +776,40 @@ shared_focus = {
 		add_dynamic_modifier = { modifier = HYE_dynamic_modifier }
 		set_country_flag = qaylid_enable_dynamic_modifier
 		set_variable = { HYE_special_forces_cap_variable = 0.05}
+		set_variable = { HYE_research_speed_variable = 0}
+		set_variable = { HYE_non_core_manpower_variable = 0 }
+		set_variable = { HYE_army_attack_factor_variable = 0 }
+		set_variable = { HYE_army_defence_factor_variable = 0 }
+		set_variable = { HYE_attrition_variable = -0.05 }
 	}
 }
 
 shared_focus = {
+	id = HYE_action_reaction #Trap of the Past, Swapped due to loc
+	icon = GFX_goal_revolution
+	x = 1
+	y = 2
+	relative_position_id = HYE_qaylid_start
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_transience_change
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_action_reaction"
+		add_to_variable = {
+			var = HYE_army_attack_factor_variable = 0.1
+		}
+	}
+}
+
+shared_focus = { #Action and Reflection, Swapped due to loc
 	id = HYE_past_trap
 	icon = GFX_goal_revolution
 	x = -2
@@ -802,8 +832,8 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = HYE_transience_change
+shared_focus = { #Traps of the Past, swapped due to loc
+	id = HYE_transience_change 
 	icon = GFX_goal_revolution
 	x = 2
 	y = 1
@@ -825,28 +855,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = HYE_action_reaction
-	icon = GFX_goal_revolution
-	x = 1
-	y = 2
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_transience_change
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_action_reaction"
-		add_political_power = 10 #placeholder
-	}
-}
+
 
 shared_focus = {
 	id = HYE_virtue_future
@@ -1768,7 +1777,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
+shared_focus = { #Centaurs and Gargoyles
 	id = HYE_ancients_begone
 	icon = GFX_goal_revolution
 	x = -2
@@ -1933,6 +1942,29 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = HYE_lake_resources
+	icon = GFX_goal_revolution
+	x = 1
+	y = 1
+	relative_position_id = HYE_lake_statelets
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_statelets
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_resources"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = { #ZUG, ZEL, ZWA consolidation foci
 	id = HYE_lake_of_wealth
 	icon = GFX_goal_revolution
 	x = -1
@@ -1954,6 +1986,255 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_of_wealth"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_one_more_round
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_lake_of_wealth
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_of_wealth
+	}
+	prerequisite = {
+		focus = HYE_ending_ancients
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_one_more_round
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_lake_of_wealth
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_of_wealth
+	}
+	prerequisite = {
+		focus = HYE_ending_ancients
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_one_more_round
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_lake_of_wealth
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_lake_of_wealth
+	}
+	prerequisite = {
+		focus = HYE_ending_ancients
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_conquer_MAZ
+	icon = GFX_goal_revolution
+	x = -2
+	y = 1
+	relative_position_id = HYE_one_more_round
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_one_more_round
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_conquer_SON
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_one_more_round
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_one_more_round
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_SON"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_conquer_MSH
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_one_more_round
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_one_more_round
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MSH"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_REE_ultimatum
+	icon = GFX_goal_revolution
+	x = -1
+	y = 1
+	relative_position_id = HYE_conquer_SON
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_conquer_SON
+		focus = HYE_conquer_MAZ
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
+		add_political_power = 10 #placeholder
+	}
+}
+
+shared_focus = {
+	id = HYE_conquer_MSS
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_conquer_MSH
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_conquer_MSH
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MSS"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_hyena_empire
+	icon = GFX_goal_revolution
+	x = 2
+	y = 1
+	relative_position_id = HYE_REE_ultimatum
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_REE_ultimatum
+	}
+	prerequisite = {
+		focus = HYE_conquer_MSS
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_justifying_more
+	}	
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
+		add_political_power = 10 #placeholder
+	}
+}
+shared_focus = {
+	id = HYE_justifying_more
+	icon = GFX_goal_revolution
+	x = 0
+	y = 1
+	relative_position_id = HYE_REE_ultimatum
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_REE_ultimatum
+	}
+	prerequisite = {
+		focus = HYE_conquer_MSS
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_hyena_empire
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
 		add_political_power = 10 #placeholder
 	}
 }
