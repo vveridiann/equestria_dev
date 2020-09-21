@@ -1,0 +1,15 @@
+﻿units = {
+	fleet = {
+		name = "Floating Guardians"
+		naval_base = 673
+		task_force = {
+			name = "Floating Guardians"
+			location = 673 # Stableside
+			ship = { name = "Guardian" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CES version_name = "Marigold Class" } } }
+			ship = { name = "Sentinel" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CES version_name = "Twilight Class" } } }
+			ship = { name = "Watcher" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CES version_name = "Constellation Class" } } }
+			ship = { name = "Protector" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CES version_name = "Constellation Class" } } }
+			ship = { name = "Defender" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CES version_name = "Constellation Class" } } }
+		}
+	}
+}

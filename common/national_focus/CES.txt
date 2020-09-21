@@ -58,6 +58,16 @@ focus_tree = {
 		  hidden_effect = {
 			load_oob = "CES_tribals"
 		  }
+		  if = {
+			limit = {
+				has_dlc = "Man the Guns"
+				
+			}
+			load_oob = "CES_guardians"
+		  }
+		  else = {
+			  load_oob = "Ces_guardians_legacy"
+		  }
 		  add_offsite_building = {
 				type = dockyard
 					level = 2
