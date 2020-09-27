@@ -66,7 +66,7 @@ focus_tree = {
 			load_oob = "CES_guardians"
 		  }
 		  else = {
-			  load_oob = "Ces_guardians_legacy"
+			  load_oob = "CES_guardians_legacy"
 		  }
 		  add_offsite_building = {
 				type = dockyard
@@ -221,7 +221,7 @@ focus_tree = {
 	focus = {
 		id = CES_phase_two # not actually sure for this one really, either pp or stab would be first guess or a civ fac
 		icon = GFX_goal_ces_our_cause
-		cost = 4
+		cost = 5
 		prerequisite = { focus = CES_floating_guardians }
 		prerequisite = { focus = CES_southern_accord focus = CES_zebrican_mercenaries }
 		x = 0
@@ -271,12 +271,16 @@ focus_tree = {
 	focus = {
 		id = CES_strike_disciples # idea giving targeted attack/defence of 10% against disciples
 		icon = GFX_goal_ces_push_the_darkness
-		cost = 3
+		cost = 5
 		prerequisite = {
 			focus = CES_guns_for_gold
 		}
 		prerequisite = {
 			focus = CES_foreign_advisors
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_strike_disciples"
+			add_ideas = CES_attack_bats
 		}
 		x = 7
 		y = 8
@@ -285,10 +289,14 @@ focus_tree = {
 	focus = {
 		id = CES_atzlan_end  # idea giving targeted attack/defence of 10% against Atzland
 		icon = GFX_goal_ces_palm
-		cost = 3
+		cost = 5
 		prerequisite = {
 			focus = CES_strike_disciples
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_atzlan_end"
+			add_ideas = CES_attack_jungle
+		}		
 		x = 6
 		y = 9
 
@@ -296,10 +304,14 @@ focus_tree = {
 	focus = {
 		id = CES_commie_putdown # # idea giving targeted attack/defence of 10% against Batlimare
 		icon = GFX_goal_ces_approach_baltimare
-		cost = 3
+		cost = 5
 		prerequisite = {
 			focus = CES_strike_disciples
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_commie_putdown"
+			add_ideas = CES_attack_communists
+		}		
 		x = 8
 		y = 9
 
@@ -310,6 +322,10 @@ focus_tree = {
 		cost = 3
 		prerequisite = {
 			focus = CES_guns_for_gold
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_rolling_trench_lines"
+			add_ideas = CES_rolling_lines
 		}
 		x = 5
 		y = 8
