@@ -1,0 +1,681 @@
+focus_tree = {
+	id = celestial_state_post_war
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = CES
+		}
+	}
+	default = no
+	focus = {
+		id = CES_prepare_the_parade # Filler focus to get closer to the political trees 1 infra in Stableside
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 11
+		y = 0
+
+	}
+	focus = {
+		id = CES_clean_streets #  Stab 2.5 and pp 75
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = CES_prepare_the_parade
+		}
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = CES_the_celebration # Event fires and based on flags either goes fine and leads down middle path, left tribal revolt or the secret rate path of Pony of Shadows
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = CES_clean_streets
+		}
+		x = 0
+		y = 2
+		relative_position_id = CES_prepare_the_parade
+
+	}
+	focus = {
+		id = CES_native_uprising # spawns extra native units
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_celebration
+		}
+		x = -7
+		y = 3
+		relative_position_id = CES_prepare_the_parade
+
+	}
+	focus = {
+		id = CES_blowpipes # idea that provides +10% attack and defence in Jungle
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_native_uprising
+		}
+		x = -2
+		y = 1
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_scavenge_their_guns # idea providing extra scavenge ratio
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_native_uprising
+		}
+		x = 2
+		y = 1
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_jungle_workshops # 2 arm factories
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_native_uprising
+		}
+		x = 0
+		y = 1
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_hit_and_run # out of supply grace 48 hours
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_blowpipes
+		}
+		prerequisite = {
+			focus = CES_scavenge_their_guns
+		}
+		x = 0
+		y = 3
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_pig_iron # lack of resources modifier buff and 16 steel in one owned state
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_jungle_workshops
+		}
+		x = 0
+		y = 2
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_tribal_democracy # stab buff 
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_hit_and_run
+		}
+		x = -2
+		y = 4
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_jungle_constitution # daily pp gain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_hit_and_run
+		}
+		x = 2
+		y = 4
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_demand_jungle_autonomy # Offer to rejoin Equestria as a dominion 
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_tribal_democracy
+		}
+		prerequisite = {
+			focus = CES_jungle_constitution
+		}
+		mutually_exclusive = {
+			focus = CES_independent_south_east
+		}
+		x = -1
+		y = 5
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_independent_south_east # Tell the alicorns to fuck off you and staying independent as the Free South East
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_jungle_constitution
+		}
+		prerequisite = {
+			focus = CES_tribal_democracy
+		}
+		mutually_exclusive = {
+			focus = CES_demand_jungle_autonomy
+		}
+		x = 1
+		y = 5
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_equestrian_advisors # Idea providing doctrine and research modifers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_demand_jungle_autonomy
+		}
+		x = -3
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_equestrian_investors # 4 civ factories and 1 infra in 3 states
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_demand_jungle_autonomy
+		}
+		x = -1
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_harmony_nature # resource extraction buff
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_equestrian_advisors
+		}
+		prerequisite = {
+			focus = CES_equestrian_investors
+		}
+		x = -2
+		y = 7
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_seek_foreign_support # send event to any major with negative opinion of Equestria giving them the option to supply arms and 1 offmap factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_independent_south_east
+		}
+		x = 1
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_jungle_fortlines # level 2 forts constructed on the border
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_independent_south_east
+		}
+		x = 3
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_never_again # idea providing core attack and defence buff
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_seek_foreign_support
+		}
+		prerequisite = {
+			focus = CES_jungle_fortlines
+		}
+		x = 2
+		y = 7
+		relative_position_id = CES_native_uprising
+    }
+		focus = {
+		id = CES_what_a_party # event describing what a party
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_celebration
+		}
+		x = 0
+		y = 3
+		relative_position_id = CES_prepare_the_parade
+
+	}
+	focus = {
+		id = CES_pow_releases # gives 75k manpower and a stab buff
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_what_a_party
+		}
+		x = -2
+		y = 1
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_demobilize # changes economy law to early mob and conscription law to limited conscription
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_what_a_party
+		}
+		x = 2
+		y = 1
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_junta_or_democracy # Event decides whether the Junta stays in charge and keep your merc/zebrican advisors or disband and hold elections
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_what_a_party
+		}
+		prerequisite = {
+			focus = CES_pow_releases
+		}
+		prerequisite = {
+			focus = CES_demobilize
+		}
+		x = 0
+		y = 2
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_the_jungle_doctor # Event fires to gain Cab as a general and advisor
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_junta_or_democracy
+		}
+		x = 0
+		y = 3
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_foster_stableside_industries # 2 civ, 2 mil, 2 dockyards in stableside
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_junta_or_democracy
+		}
+		x = -2
+		y = 4
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_native_equality # recruitable pop factor +10% boost
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_jungle_doctor
+		}
+		x = 2
+		y = 4
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_stableside_is_open_for_business # idea exporting extra resources 15%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_jungle_doctor
+		}
+		x = 0
+		y = 5
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_bang_for_buck # consumer goods -5%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_foster_stableside_industries
+		}
+		x = -2
+		y = 5
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_maternity_grants # monthly pop +25%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_native_equality
+		}
+		x = 2
+		y = 5
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_the_equestrian_question # event to be annexed and switch control to equestria or look for a second way
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_stableside_is_open_for_business
+		}
+		x = 0
+		y = 6
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_equal_partners # independent member of the faction
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_equestrian_question
+		}
+		mutually_exclusive = {
+			focus = CES_loyal_subject
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = CES_loyal_subject # become a dominion of equestria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_equestrian_question
+		}
+		mutually_exclusive = {
+			focus = CES_equal_partners
+		}
+		x = 2
+		y = 7
+		relative_position_id = CES_what_a_party
+
+	}
+	focus = {
+		id = CES_sundown_over_stableside # Daring Do retiring and disappearing for one last adventure
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_equal_partners
+		}
+		prerequisite = {
+			focus = CES_loyal_subject
+		}
+		x = 0
+		y = 9
+		relative_position_id = CES_the_celebration
+
+	}
+	focus = {
+		id = CES_darkest_day # Pony of Shadows return thanks to the darkness and despair unleashed during the CW creates his field marshal with unique trait and spawns divs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_celebration
+		}
+		x = 7
+		y = 3
+		relative_position_id = CES_prepare_the_parade
+
+	}
+	focus = {
+		id = CES_shadow_energies # boosts recruit pop factor by 10
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_darkest_day
+		}
+		x = 0
+		y = 1
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_accursed_weapons # flat attack buff of 5%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_darkest_day
+		}
+		prerequisite = {
+			focus = CES_darkest_day
+		}
+		x = -2
+		y = 1
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_enforced_servitude # non core recruitable of 5%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_darkest_day
+		}
+		x = 2
+		y = 1
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_despair_blades # 4 arms factories
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_bring_down_the_alicorns
+		}
+		x = -3
+		y = 4
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_shadow_call_to_monsters # Enable the star bears Ahui has and spawn 2 of them
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_accursed_weapons
+		}
+		prerequisite = {
+			focus = CES_shadow_energies
+		}
+		x = -1
+		y = 2
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_prepare_the_reclamation # Idea providing planning max and speed for 720 days
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_shadow_energies
+		}
+		prerequisite = {
+			focus = CES_enforced_servitude
+		}
+		x = 1
+		y = 2
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_bring_down_the_alicorns # Wargoal on Equestria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_shadow_call_to_monsters
+		}
+		prerequisite = {
+			focus = CES_prepare_the_reclamation
+		}
+		x = 0
+		y = 3
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_the_twinned_castle # Moves capital to the ruined castle and swaps Pony of Shadows trait for a stronger version 
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_bring_down_the_alicorns
+		}
+		x = 0
+		y = 4
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_accursed_crystals # Spawn 24 crystals at the twinned castle
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_twinned_castle
+		}
+		x = -3
+		y = 5
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_legacy_of_shadow # Reduced Garrison requirement idea
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_twinned_castle
+		}
+		x = 0
+		y = 5
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_salt_canterlot # Rename Canterlot to Canterlot Ruins and event describing it being a no go zone
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_twinned_castle
+		}
+		x = 3
+		y = 5
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_darkness_is_our_friend # spawn some elite divs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_bring_down_the_alicorns
+		}
+		x = 3
+		y = 4
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_stalliongrad_subjugation # war goal on stalliongrad or whoever controls their root
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_twinned_castle
+		}
+		x = -1
+		y = 6
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_heckle_yaks # wargoal on yaks or whoever controls their root
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_twinned_castle
+		}
+		x = 1
+		y = 6
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_detente_bugs_or_death # Event telling changelings to fuck off away from PoS dominions or get vored too
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_legacy_of_shadow
+		}
+		x = 0
+		y = 7
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_nerfarious_rituals # destory infrastructure in stalliongrad by 4 levels for -7.5% consumer goods bonus
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_stalliongrad_subjugation
+		}
+		x = -3
+		y = 7
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_battle_beasts # modify the earlier non-core pop idea by +5%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_heckle_yaks
+		}
+		x = 3
+		y = 7
+		relative_position_id = CES_darkest_day
+
+	}
+	focus = {
+		id = CES_darkness_and_despair # Justify war goal time of -40%
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_detente_bugs_or_death
+		}
+		prerequisite = {
+			focus = CES_nerfarious_rituals
+		}
+		prerequisite = {
+			focus = CES_battle_beasts
+		}
+		x = 0
+		y = 8
+		relative_position_id = CES_darkest_day
+
+	}
