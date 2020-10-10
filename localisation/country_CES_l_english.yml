@@ -23,6 +23,8 @@ CES_further_afield:0 "Further Afield"
 CES_chimera_offer:0 "Chimera Offer"
 CES_what_now:0 "What Now?"
 
+CES_post_war:0 "Aftermath of the Civil War Focus Tree"
+
 ##### IDEAS ####
 CES_disorganized:0 "Disorganised Resistance"
 CES_fight_for_light:0 "Fighting for Light"
@@ -35,6 +37,7 @@ CES_attack_communists:0 "Squeeze the Reds"
 CES_attack_bats:0 "The Last Eeeeeeeeeee"
 CES_attack_jungle:0 "Jungle Showdown"
 CES_rolling_lines:0 "Rolling Trench-Lines"
+CES_griffonian_advisors:0 "Griffonian Advisors"
 
 CES_military_potential_idea:0 "All for the Front!"
 quibblepants:0 "Quibble Pants"

@@ -253,7 +253,7 @@ focus_tree = {
 			add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = EQS }		
 			add_offsite_building = {
 				type = arms_factory
-					level = 1
+					level = 2
 			}
 		}
 	}
@@ -266,7 +266,10 @@ focus_tree = {
 		}
 		x = 9
 		y = 7
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_foreign_advisors"
+			add_ideas = CES_griffonian_advisors
+		}
 	}
 	focus = {
 		id = CES_strike_disciples # idea giving targeted attack/defence of 10% against disciples
@@ -340,7 +343,43 @@ focus_tree = {
 		}
 		x = 9
 		y = 8
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_further_afield"
+				if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_equipment_to_stockpile = { type = convoy amount = 50 producer = EQS }
+		}
 	}
 	focus = {
 		id = CES_chimera_offer # Event that unlocks The Chimera Advisor
@@ -352,14 +391,14 @@ focus_tree = {
 		x = 7
 		y = 7
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CES_phase_two"
+			log = "[GetDateText]: [Root.GetName]: Focus CES_chimera_offer"
 			country_event = { id = daring.10 days = 5 }
 		}
 	}
 	focus = {
 		id = CES_what_now # For now until post CW tree is made should just fire the dominion focus that exists now and only takeable when the CW is over and EQS has won
 		icon = GFX_goal_ces_future
-		cost = 20
+		cost = 8
 		prerequisite = {
 			focus = CES_atzlan_end
 		}
@@ -368,6 +407,12 @@ focus_tree = {
 		}
 		x = 7
 		y = 10
-
+		available = {
+			eqs_civil_war_ended = yes
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CES_what_now"
+			load_focus_tree = CES_post_war
+		}
 	}
 }
