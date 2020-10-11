@@ -1,4 +1,5 @@
 ﻿add_namespace = daring
+add_namespace = daring_post_cw
 
 country_event = {
 	id = daring.1
@@ -537,5 +538,149 @@ country_event = {
 	option = {
 		name = daring.17.a
 		create_wargoal = { target = FROM type = annex_everything }
+	}
+}
+country_event = { #End of The Civil War - triggered through focus
+	id = daring.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring.18"}
+	title = daring.18.t
+	desc = daring.18.d
+	
+	picture = GFX_event_jungles
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = daring.18.a
+		custom_effect_tooltip = JUN_new_focus_tree_tp
+		add_popularity = { 
+		    ideology = neutrality 
+		    popularity = 0.15 
+		}
+		set_party_name = {
+		    ideology = neutrality 
+			name = BAL_neutrality_p_party 
+			long_name = BAL_neutrality_p_party_long 
+		}
+		create_country_leader = {
+	        name = "Doctor Caballeron"
+	        expire = "1965.1.1"
+			picture = "BAL_Caballeron.tga"
+	        ideology = despotism
+	        traits = {
+            }
+        }
+		add_popularity = { 
+		    ideology = communism 
+		    popularity = 0.15 
+		}
+		set_party_name = {
+		    ideology = communism 
+			name = JUN_communism_p_party 
+			long_name = JUN_communism_p_party_long 
+		}
+		create_country_leader = {
+	        name = "Cricket Chafer"
+	        expire = "1965.1.1"
+			picture = "JUN_Chafer.tga"
+	        ideology = leninism
+	        traits = {
+            }
+        }
+		add_popularity = { 
+		    ideology = fascism 
+		    popularity = 0.15 
+		}
+		set_party_name = {
+		    ideology = fascism 
+			name = BAL_fascism_p_party 
+			long_name = BAL_fascism_p_party_long 
+		}
+		create_country_leader = {
+	        name = "Stars Whirl"
+	        expire = "1965.1.1"
+			picture = "BAL_StarsWhirl.tga"
+	        ideology = fascism_ideology
+	        traits = {
+            }
+        }
+		add_ideas = JUN_lunar_remnants
+		add_ideas = JUN_discontent_in_cities
+		add_ideas = JUN_economic_backwater
+		hidden_effect = {
+			remove_ideas = CES_griffonian_advisors
+			remove_ideas = CES_attack_bats
+			remove_ideas = CES_attack_jungle 
+			remove_ideas = CES_attack_communists
+			remove_ideas = CES_rolling_lines
+			remove_ideas = CES_breadbasket_idea
+		    load_focus_tree = { 
+			   tree = celestial_state_post_war
+			}
+		}
+	}
+}
+country_event = {
+	id = daring_post_cw.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.1"}
+	title = daring_post_cw.1.t
+	desc = daring_post_cw.1.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.1.a
+			15 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}	
+	}
+}
+country_event = {
+	id = daring_post_cw.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.2"}
+	title = daring_post_cw.2.t
+	desc = daring_post_cw.2.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.2.a
+		add_stability = 0.025
+		add_political_power = 75
+	}
+}
+country_event = {
+	id = daring_post_cw.3 ####FOR INDY, THE CELEBRATION EVENT
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.3"}
+	title = daring_post_cw.3.t
+	desc = daring_post_cw.3.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.3.a
+		
+	}
+}
+country_event = {
+	id = daring_post_cw.4 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.4"}
+	title = daring_post_cw.4.t
+	desc = daring_post_cw.4.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.4.a
+		
 	}
 }

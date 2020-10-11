@@ -51,7 +51,7 @@ focus_tree = {
 			focus = CES_emergency_battalions
 		}
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = CES_emergency_battalions
 		completion_reward = {
 		  custom_effect_tooltip = floating_guardians_tt
@@ -141,7 +141,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CES_book_profits
 		}
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = CES_daring_knows_best
 		completion_reward = {
@@ -210,7 +210,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CES_tribal_summit
 		}
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = CES_willing_hoof
 		completion_reward = {
@@ -247,7 +247,7 @@ focus_tree = {
 			focus = CES_phase_two
 		}
 		x = 5
-		y = 7
+		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_phase_two"
 			add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = EQS }		
@@ -265,7 +265,7 @@ focus_tree = {
 			focus = CES_phase_two
 		}
 		x = 9
-		y = 7
+		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_foreign_advisors"
 			add_ideas = CES_griffonian_advisors
@@ -286,7 +286,7 @@ focus_tree = {
 			add_ideas = CES_attack_bats
 		}
 		x = 7
-		y = 8
+		y = 7
 
 	}
 	focus = {
@@ -301,7 +301,7 @@ focus_tree = {
 			add_ideas = CES_attack_jungle
 		}		
 		x = 6
-		y = 9
+		y = 8
 
 	}
 	focus = {
@@ -316,7 +316,7 @@ focus_tree = {
 			add_ideas = CES_attack_communists
 		}		
 		x = 8
-		y = 9
+		y = 8
 
 	}
 	focus = {
@@ -331,7 +331,7 @@ focus_tree = {
 			add_ideas = CES_rolling_lines
 		}
 		x = 5
-		y = 8
+		y = 7
 
 	}
 	focus = {
@@ -342,7 +342,7 @@ focus_tree = {
 			focus = CES_foreign_advisors
 		}
 		x = 9
-		y = 8
+		y = 7
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_further_afield"
 				if = {
@@ -389,7 +389,7 @@ focus_tree = {
 			focus = CES_phase_two
 		}
 		x = 7
-		y = 7
+		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_chimera_offer"
 			country_event = { id = daring.10 days = 5 }
@@ -406,13 +406,13 @@ focus_tree = {
 			focus = CES_commie_putdown
 		}
 		x = 7
-		y = 10
+		y = 9
 		available = {
 			eqs_civil_war_ended = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_what_now"
-			load_focus_tree = CES_post_war
+			country_event = daring.18
 		}
 	}
 }

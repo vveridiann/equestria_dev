@@ -3,17 +3,21 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = CES
 		}
 	}
 	default = no
+	continuous_focus_position = { x = 300 y = 2000 }
 	focus = {
 		id = CES_prepare_the_parade # Filler focus to get closer to the political trees 1 infra in Stableside
 		icon = GFX_goal_unknown
 		cost = 5
 		x = 11
 		y = 0
+		completion_reward = {
+		country_event = daring_post_cw.1
+		}
 
 	}
 	focus = {
@@ -25,6 +29,9 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
+		completion_reward = {
+		country_event = daring_post_cw.2
+		}
 
 	}
 	focus = {
@@ -37,24 +44,29 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = CES_prepare_the_parade
+		completion_reward = {
+		country_event = daring_post_cw.3
+		}
 
 	}
 	focus = {
 		id = CES_native_uprising # spawns extra native units
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CES_the_celebration
 		}
 		x = -7
 		y = 3
 		relative_position_id = CES_prepare_the_parade
-
+		completion_reward = {
+		country_event = daring_post_cw.4
+		}
 	}
 	focus = {
 		id = CES_blowpipes # idea that provides +10% attack and defence in Jungle
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = CES_native_uprising
 		}
@@ -66,7 +78,7 @@ focus_tree = {
 	focus = {
 		id = CES_scavenge_their_guns # idea providing extra scavenge ratio
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = CES_native_uprising
 		}
@@ -78,7 +90,7 @@ focus_tree = {
 	focus = {
 		id = CES_jungle_workshops # 2 arm factories
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = CES_native_uprising
 		}
@@ -90,12 +102,42 @@ focus_tree = {
 	focus = {
 		id = CES_hit_and_run # out of supply grace 48 hours
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = CES_blowpipes
 		}
 		prerequisite = {
+			focus = CES_jungle_workshops
+		}
+		x = -1
+		y = 2
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_pig_iron # lack of resources modifier buff and 16 steel in one owned state
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = CES_jungle_workshops
+		}
+		prerequisite = {
 			focus = CES_scavenge_their_guns
+		}
+		x = 1
+		y = 2
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_a_glorious_victory
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_hit_and_run
+		}
+		prerequisite = {
+			focus = CES_pig_iron
 		}
 		x = 0
 		y = 3
@@ -103,26 +145,89 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CES_pig_iron # lack of resources modifier buff and 16 steel in one owned state
+		id = CES_tribal_democracy # stab buff 
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 8
 		prerequisite = {
-			focus = CES_jungle_workshops
+			focus = CES_a_glorious_victory
 		}
-		x = 0
-		y = 2
+		x = -2
+		y = 4
 		relative_position_id = CES_native_uprising
 
 	}
 	focus = {
-		id = CES_tribal_democracy # stab buff 
+		id = CES_end_to_the_rituals
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 8
 		prerequisite = {
-			focus = CES_hit_and_run
+			focus = CES_tribal_democracy
 		}
 		x = -2
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_chinampa_system # economic modifiers 
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_a_glorious_victory
+		}
+		x = 0
 		y = 4
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_preserve_our_customs #religious values, popularity to harmony 
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_chinampa_system
+		}
+		x = -1
+		y = 5
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_chain_the_capitalists
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_chinampa_system
+		}
+		x = 1
+		y = 5
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_thestral_tribal_decentralization
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_preserve_our_customs
+		}
+		prerequisite = {
+			focus = CES_chain_the_capitalists
+		}
+		x = 0
+		y = 6
+		relative_position_id = CES_native_uprising
+
+	}
+	focus = {
+		id = CES_never_again_swindled #attack and def on core territory
+		icon = GFX_goal_unknown
+		cost = 8
+		prerequisite = {
+			focus = CES_jungle_constitution
+		}
+		x = 2
+		y = 6
 		relative_position_id = CES_native_uprising
 
 	}
@@ -131,7 +236,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = CES_hit_and_run
+			focus = CES_a_glorious_victory
 		}
 		x = 2
 		y = 4
@@ -143,16 +248,19 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = CES_tribal_democracy
+			focus = CES_end_to_the_rituals
 		}
 		prerequisite = {
-			focus = CES_jungle_constitution
+			focus = CES_thestral_tribal_decentralization
+		}
+		prerequisite = {
+			focus = CES_never_again_swindled
 		}
 		mutually_exclusive = {
 			focus = CES_independent_south_east
 		}
 		x = -1
-		y = 5
+		y = 7
 		relative_position_id = CES_native_uprising
 
 	}
@@ -161,16 +269,19 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = CES_jungle_constitution
+			focus = CES_end_to_the_rituals
 		}
 		prerequisite = {
-			focus = CES_tribal_democracy
+			focus = CES_thestral_tribal_decentralization
+		}
+		prerequisite = {
+			focus = CES_never_again_swindled
 		}
 		mutually_exclusive = {
 			focus = CES_demand_jungle_autonomy
 		}
 		x = 1
-		y = 5
+		y = 7
 		relative_position_id = CES_native_uprising
 
 	}
@@ -182,7 +293,7 @@ focus_tree = {
 			focus = CES_demand_jungle_autonomy
 		}
 		x = -3
-		y = 6
+		y = 8
 		relative_position_id = CES_native_uprising
 
 	}
@@ -194,7 +305,7 @@ focus_tree = {
 			focus = CES_demand_jungle_autonomy
 		}
 		x = -1
-		y = 6
+		y = 8
 		relative_position_id = CES_native_uprising
 
 	}
@@ -209,7 +320,7 @@ focus_tree = {
 			focus = CES_equestrian_investors
 		}
 		x = -2
-		y = 7
+		y = 9
 		relative_position_id = CES_native_uprising
 
 	}
@@ -221,7 +332,7 @@ focus_tree = {
 			focus = CES_independent_south_east
 		}
 		x = 1
-		y = 6
+		y = 8
 		relative_position_id = CES_native_uprising
 
 	}
@@ -233,7 +344,7 @@ focus_tree = {
 			focus = CES_independent_south_east
 		}
 		x = 3
-		y = 6
+		y = 8
 		relative_position_id = CES_native_uprising
 
 	}
@@ -248,7 +359,7 @@ focus_tree = {
 			focus = CES_jungle_fortlines
 		}
 		x = 2
-		y = 7
+		y = 9
 		relative_position_id = CES_native_uprising
     }
 		focus = {
@@ -261,7 +372,6 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CES_prepare_the_parade
-
 	}
 	focus = {
 		id = CES_pow_releases # gives 75k manpower and a stab buff
