@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = CES_native_uprising # spawns extra native units
 		icon = GFX_goal_unknown
-		cost = 5
+		cost = 2
 		prerequisite = {
 			focus = CES_the_celebration
 		}
@@ -60,7 +60,11 @@ focus_tree = {
 		y = 3
 		relative_position_id = CES_prepare_the_parade
 		completion_reward = {
+		custom_effect_tooltip = CES_tribal_warbands_tt
 		country_event = daring_post_cw.4
+		hidden_effect = {
+		load_oob = CES_native_militia
+		}
 		}
 	}
 	focus = {
