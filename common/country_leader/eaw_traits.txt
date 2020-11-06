@@ -3236,4 +3236,14 @@ leader_traits = {
             factor = 10
         }
     }
+	
+	zebrican_mercenary_leader = {
+        random = no
+		army_morale_factor = 0.1
+		army_speed_factor = 0.05
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
 }

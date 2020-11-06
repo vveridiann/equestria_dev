@@ -23,7 +23,11 @@ CES_further_afield:0 "Further Afield"
 CES_chimera_offer:0 "Chimera Offer"
 CES_what_now:0 "What Now?"
 
+### TOOLTIPS ###
 CES_post_war:0 "Aftermath of the Civil War Focus Tree"
+CES_native_advisors_flag:0 "Natives have been accepted into the Government"
+CES_chimera_deal:0 "The Chimera's offer has been accepted"
+CES_zebrican_advisors_flag:0 "Zebrican Mercenaries have been hired"
 
 ##### IDEAS ####
 CES_disorganized:0 "Disorganised Resistance"
@@ -76,12 +80,16 @@ phantom_factory:0 ""Phantom" Machinery Works"
 CES_uphold_harmony:0 "Uphold Harmony"
 CES_uphold_harmony2:0 "Uphold Harmony"
 jungle_economy:0 "Jungle Economics"
-CES_native_doctor:0 "Starshine Bliss"
-native_doctor:0 "Native Doctor"
+CES_sabre_slash:0 "Sabre Slash"
+
 
 ### Traits ###
 chimera_gaze:0 "Chimera's Gaze"
 chimera_gaze_desc:0 "The Chimera has lived for hundreds of years and knows the South-Eastern Jungle intimately, following it's deal with Daring Do it is now advising our forces providing we pay it's heavy costs."
+zebrican_mercenary_leader:0 "Zebrican Mercenary"
+CES_native_doctor:0 "Starshine Bliss"
+native_doctor:0 "Native Doctor"
+
 
 ### events #####
 daring.1.t:0 "Mercenaries!"

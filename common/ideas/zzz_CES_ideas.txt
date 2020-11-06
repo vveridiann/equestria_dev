@@ -40,6 +40,8 @@ ideas = {
 			allowed = {
 				original_tag = CES
 			}
+			
+			available = { has_country_flag = CES_chimera_deal }
 
 			traits = { chimera_gaze }
 
@@ -53,6 +55,7 @@ ideas = {
 			allowed = {
 				original_tag = CES
 			}
+			available = { has_country_flag = CES_native_advisors_flag }
 
 			traits = { native_doctor }
 
@@ -70,6 +73,19 @@ ideas = {
 				original_tag = CES
 			}
 			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CES_sabre_slash = {
+
+			allowed = {
+				original_tag = CES
+			}
+			available = { has_country_flag = CES_zebrican_advisors_flag }
+			traits = { zebrican_mercenary_leader }
 
 			ai_will_do = {
 				factor = 1

@@ -146,6 +146,7 @@ focus_tree = {
 		relative_position_id = CES_daring_knows_best
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_zebrican_mercenaries"
+			set_country_flag = CES_zebrican_advisors_flag
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -216,6 +217,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_southern_accord"
 			custom_effect_tooltip = tribal_concord_advisors
+			set_country_flag = CES_native_advisors_flag
 		}
 	}
 	focus = {
@@ -393,6 +395,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CES_chimera_offer"
 			country_event = { id = daring.10 days = 5 }
+			set_country_flag = CES_chimera_deal
 		}
 	}
 	focus = {
