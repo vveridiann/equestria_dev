@@ -267,176 +267,6 @@ country_event = { #HShadowdancers. triggered in HYE_infiltrators
 	}
 }
 
-country_event = {
-	id = hyenia.13
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.13"}
-	title = hyenia.13.t
-	desc = hyenia.13.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.13.a	
-		set_variable = { HYE_masaska_support = 0 }
-		set_variable = { HYE_furasho_support = 0 }
-		hidden_effect = { country_event = { id = hyenia.22 days = 5 } } 
-	}
-}
-
-country_event = {
-	id = hyenia.14
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.14"}
-	title = hyenia.14.t
-	desc = hyenia.14.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.14.a	
-		add_to_variable = { HYE_furasho_support = 1 } 
-		country_event = { id = hyenia.15 days = 3 }
-	}
-	option = { 
-		name = hyenia.14.b	
-		add_to_variable = { HYE_masaska_support = 1 } 
-		country_event = { id = hyenia.15 days = 3 }
-	}
-}
-
-country_event = {
-	id = hyenia.15
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.15"}
-	title = hyenia.15.t
-	desc = hyenia.15.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.15.a	
-		add_to_variable = { HYE_masaska_support = 1 } 
-		country_event = { id = hyenia.16 days = 2 }
-	}
-	option = { 
-		name = hyenia.15.b	
-		add_to_variable = { HYE_furasho_support = 1 } 
-		country_event = { id = hyenia.16 days = 2 }
-	}
-}
-
-country_event = {
-	id = hyenia.16
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.16"}
-	title = hyenia.16.t
-	desc = hyenia.16.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.16.a	
-		add_to_variable = { HYE_furasho_support = 1 } 
-		country_event = { id = hyenia.17 days = 3 }
-	}
-	option = { 
-		name = hyenia.16.b	
-		add_to_variable = { HYE_masaska_support = 1 } 
-		country_event = { id = hyenia.17 days = 3 }
-	}
-}
-
-country_event = {
-	id = hyenia.17
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.17"}
-	title = hyenia.17.t
-	desc = hyenia.17.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.17.a	
-		add_to_variable = { HYE_masaska_support = 1 } 
-		country_event = { id = hyenia.18 days = 4 }
-	}
-	option = { 
-		name = hyenia.17.b	
-		add_to_variable = { HYE_furasho_support = 1 } 
-		country_event = { id = hyenia.18 days = 4 }
-	}
-}
-
-country_event = {
-	id = hyenia.18
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.18"}
-	title = hyenia.18.t
-	desc = hyenia.18.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.18.a	
-		add_to_variable = { HYE_furasho_support = 1 } 
-		country_event = { id = hyenia.19 days = 3 }
-	}
-	option = { 
-		name = hyenia.18.b	
-		add_to_variable = { HYE_masaska_support = 1 } 
-		country_event = { id = hyenia.19 days = 3 }
-	}
-}
-
-country_event = {
-	id = hyenia.19
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.19"}
-	title = hyenia.19.t
-	desc = hyenia.19.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.19.a	
-		hidden_effect = {
-			if = {
-				limit = { check_variable = { HYE_furasho_support > HYE_masaska_support } } 
-				country_event = { id = hyenia.20 hours = 3 }
-			}
-			if = {
-				limit = { check_variable = { HYE_furasho_support < HYE_masaska_support } }
-				country_event = { id = hyenia.21 hours = 3 }
-			}
-		}
-	}
-}
-
-country_event = {
-	id = hyenia.20 #Furasho Wins
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.20"}
-	title = hyenia.20.t
-	desc = hyenia.20.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.20.a	#moderate path
-		set_country_flag = furasho_gone_moderate
-		load_focus_tree = HYE_furasho_moderate
-	}
-	option = { 
-		name = hyenia.20.b	#radical
-		set_country_flag = furasho_gone_radical
-		load_focus_tree = HYE_furasho_radical
-	}	
-}
-
-country_event = {
-	id = hyenia.21 #Masaska wins
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.21"}
-	title = hyenia.21.t
-	desc = hyenia.21.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.21.a	#moderate path
-		set_country_flag = masaska_gone_moderate
-		load_focus_tree = HYE_masaska_moderate
-	}
-	option = { 
-		name = hyenia.21.b	#radical path
-		set_country_flag = masaska_gone_radical
-		load_focus_tree = HYE_masaska_radical
-	}	
-}
-
 country_event = { #The Death of Fahamka
 	id = hyenia.22 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.22"}
@@ -453,12 +283,16 @@ country_event = { #The Death of Fahamka
 			desc = ""
 			picture = ""
 			expire = "1965.1.1"
-			ideology = conservatism
+			ideology = tribal_federation
 			traits = {
 			}
 		}
-		country_event = { id = hyenia.14 days = 1 }
+		load_focus_tree = HYE_house_divided
 		remove_ideas = { HYE_regency }
+		swap_ideas = {
+			remove_idea = HYE_qaylid_dervish
+			add_idea = HYE_divided_nation
+		}
 	}
 }
 
@@ -476,33 +310,58 @@ country_event = { #Rebuilding a nation - Industry
 }
 
 ##########
-country_event = { #Dynamic Modifier Test - Remove
-	id = hyenia.998
+country_event = { #Nothing there just a dummy event
+	id = hyenia.9901
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
-	title = hyenia.998.t
-	desc = hyenia.998.d
+	title = hyenia.9901.t
+	desc = hyenia.9901.d
 	#picture = 
 	is_triggered_only = yes
 	option = { 
-		name = hyenia.998.a	
-		HYE = { remove_dynamic_modifier = { modifier = HYE_dynamic_modifier } }
-		clr_country_flag = qaylid_enable_dynamic_modifier
+		name = hyenia.9901.a	
 	}
 }
-
-country_event = { #Dynamic Modifier Test - Add
-	id = hyenia.999
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.999"}
-	title = hyenia.999.t
-	desc = hyenia.999.d
+country_event = { #Nothing there just a dummy event
+	id = hyenia.9902
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.9902.t
+	desc = hyenia.9902.d
 	#picture = 
 	is_triggered_only = yes
 	option = { 
-		name = hyenia.999.a	
-		add_dynamic_modifier = { 
-				modifier = HYE_dynamic_modifier 
-			}
-		set_country_flag = qaylid_enable_dynamic_modifier
-		set_variable = { special_forces_cap = 0.05 }
+		name = hyenia.9902.a	
+	}
+}
+country_event = { #Nothing there just a dummy event
+	id = hyenia.9903
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.9903.t
+	desc = hyenia.9903.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.9903.a	
+	}
+}
+country_event = { #Nothing there just a dummy event
+	id = hyenia.9904
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.9904.t
+	desc = hyenia.9904.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.9904.a	
+	}
+}
+country_event = { #Nothing there just a dummy event
+	id = hyenia.9905
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.998"}
+	title = hyenia.9905.t
+	desc = hyenia.9905.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia.9905.a	
 	}
 }

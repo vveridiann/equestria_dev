@@ -10,74 +10,88 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
 	shared_focus = HYE_startup
-	shared_focus = HYE_nationbuilding
-	shared_focus = HYE_qaylid_start
+	shared_focus = HYE_end_of_the_war
+}
+focus_tree = {
+	id = HYE_house_divided
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HYE
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_startup
+	shared_focus = HYE_end_of_the_war
+	shared_focus = HYE_famka_death
 }
 
-focus_tree = {
-	id = HYE_furasho_radical
-	country = {
-		factor = 0
-		modifier = {
-			add = 20 #temp while working on this
-			tag = HYE
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 0 y = 9999}
-	shared_focus = HYE_startup
-	shared_focus = HYE_nationbuilding
-	shared_focus = HYE_qaylid_start
-	shared_focus = HYE_hound_who_sold_the_world
-}	
+#focus_tree = {
+#	id = HYE_furasho_radical
+#	country = {
+##		factor = 0
+#		modifier = {
+#			add = 20 #temp while working on this
+#			tag = HYE
+#		}
+#	}
+#	default = no
+#	continuous_focus_position = { x = 0 y = 9999}
+#	shared_focus = HYE_startup
+#	shared_focus = HYE_nationbuilding
+#	shared_focus = HYE_qaylid_start
+#	shared_focus = HYE_hound_who_sold_the_world
+#}	
 
-focus_tree = {
-	id = HYE_furasho_moderate
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = HYE
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 0 y = 9999}
-	shared_focus = HYE_startup
-	shared_focus = HYE_nationbuilding
-	shared_focus = HYE_qaylid_start
-	shared_focus = HYE_deep_faith
-}	
+#focus_tree = {
+#	id = HYE_furasho_moderate
+#	country = {
+##		factor = 0
+#		modifier = {
+#			add = 10
+#			tag = HYE
+#		}
+#	}
+#	default = no
+#	continuous_focus_position = { x = 0 y = 9999}
+#	shared_focus = HYE_startup
+##	shared_focus = HYE_nationbuilding
+#	shared_focus = HYE_qaylid_start
+#	shared_focus = HYE_deep_faith
+#}	
 
-focus_tree = {
-	id = HYE_masaska_moderate
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = HYE
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 0 y = 9999}
-	shared_focus = HYE_startup
-	shared_focus = HYE_nationbuilding
-	shared_focus = HYE_qaylid_start
-	shared_focus = HYE_champion_of_harmony
-}	
+#focus_tree = {
+#	id = HYE_masaska_moderate
+#	country = {
+#		factor = 0
+#		modifier = {
+##			add = 10
+#			tag = HYE
+#		}
+#	}
+#	default = no
+##	continuous_focus_position = { x = 0 y = 9999}
+#	shared_focus = HYE_startup
+#	shared_focus = HYE_nationbuilding
+##	shared_focus = HYE_qaylid_start
+#	shared_focus = HYE_champion_of_harmony
+#}	
 
-focus_tree = {
-	id = HYE_masaska_radical
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = HYE
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 0 y = 9999}
-	shared_focus = HYE_startup
-	shared_focus = HYE_nationbuilding
-	shared_focus = HYE_qaylid_start
-	shared_focus = HYE_radical_isolationism
-}	
+#focus_tree = {
+#	id = HYE_masaska_radical
+#	country = {
+#		factor = 0
+#		modifier = {
+#			add = 10
+#			tag = HYE
+#		}
+#	}
+#	default = no
+#	continuous_focus_position = { x = 0 y = 9999}
+##	shared_focus = HYE_startup
+#	shared_focus = HYE_nationbuilding
+#	shared_focus = HYE_qaylid_start
+#	shared_focus = HYE_radical_isolationism
+#}	

@@ -1,11 +1,7 @@
-###Hyenia, by Sweet Chrysalis & Knifepony###
-#Startup, first focuses#
-
-##Political###
 shared_focus = {
 	id = HYE_startup
 	icon = GFX_goal_bombs_away
-	x = 13
+	x = 4
 	y = 0
 	cost = 1
 	available = {
@@ -22,108 +18,10 @@ shared_focus = {
 		country_event = { id = hyenia.1 }
 	}
 }
-
-shared_focus = { #Take them by stealth!
-	id = HYE_sneaky_plan
-	icon = GFX_focus_generic_provoke_border_clashes
-	x = -3
-	y = 1
-	relative_position_id = HYE_startup
-	cost = 1
-	available = {
-		has_country_flag = masaska_sneaky_plan
-	}
-	prerequisite = {
-		focus = HYE_startup
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_sneaky_plan_plan"
-		add_stability = 0.05
-		hidden_effect = { country_event = { id = hyenia.9 days = 20 random = 7 } } #His Only Mother 
-	}
-}
-shared_focus = {
-	id = HYE_saboteurs
-	icon = GFX_focus_indy_swing_the_sword
-	x = 1
-	y = 1
-	relative_position_id = HYE_sneaky_plan
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_sneaky_plan
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 9999
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
-		custom_effect_tooltip = HYE_saboteurs_tt
-	}
-}
-shared_focus = {
-	id = HYE_infiltrators
-	icon = GFX_goal_dagger
-	x = -1
-	y = 1
-	relative_position_id = HYE_sneaky_plan
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_sneaky_plan
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 9999
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
-		custom_effect_tooltip = HYE_infiltrators_tt
-		hidden_effect = { country_event = { id = hyenia.12 } } #shadowdancers
-	}
-}
-shared_focus = {
-	id = HYE_finalize_sneaky
-	icon = GFX_goal_skull_cannon
-	x = 1
-	y = 1
-	relative_position_id = HYE_infiltrators
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_infiltrators
-	}
-	prerequisite = {
-		focus = HYE_saboteurs
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_finalize_sneaky"
-		add_ideas = { HYE_movespeed } 
-	}
-}
 shared_focus = {
 	id = HYE_rally_the_clans
 	icon = GFX_goal_national_arsenal
-	x = 0
+	x = -1
 	y = 1
 	relative_position_id = HYE_startup
 	cost = 1
@@ -152,14 +50,14 @@ shared_focus = {
 shared_focus = {
 	id = HYE_scavenge_equipment
 	icon = GFX_HOL_papua_camps
-	x = 0
+	x = 1
 	y = 1
-	relative_position_id = HYE_rally_the_clans
+	relative_position_id = HYE_startup
 	cost = 1
 	available = {
 	}
 	prerequisite = {
-		focus = HYE_rally_the_clans
+		focus = HYE_startup
 	}
 	bypass = {
 	}
@@ -190,10 +88,13 @@ shared_focus = {
 	id = HYE_fervor
 	icon = GFX_goal_generic_position_armies
 	x = 0
-	y = 1
-	relative_position_id = HYE_scavenge_equipment
+	y = 2
+	relative_position_id = HYE_startup
 	cost = 1
 	available = {
+	}
+	prerequisite = {
+		focus = HYE_rally_the_clans
 	}
 	prerequisite = {
 		focus = HYE_scavenge_equipment
@@ -209,23 +110,154 @@ shared_focus = {
 	}
 }
 
+shared_focus = {
+	id = HYE_end_the_yeti
+	icon = GFX_goal_revolution
+	x = 0
+	y = 3
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_fervor
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	will_lead_to_war_with = SCT		
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_the_yeti"
+		add_timed_idea = { idea = HYE_yetided days = 150 }
+		declare_war_on = { target = SCT type = annex_everything }
+		hidden_effect = {
+			create_wargoal = {
+				type =  annex_everything
+				target = SCT
+			}
+		}
+	}
+}
+shared_focus = { #Take them by stealth!
+	id = HYE_sneaky_plan
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = -2
+	y = 4
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+		has_country_flag = masaska_sneaky_plan
+	}
+	prerequisite = {
+		focus = HYE_end_the_yeti
+	}
+	bypass = {
+	}
+	mutually_exclusive = {
+		focus = HYE_force_plan
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_sneaky_plan_plan"
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = hyenia.9 days = 20 random = 7 } } #His Only Mother 
+	}
+}
+shared_focus = {
+	id = HYE_saboteurs
+	icon = GFX_focus_indy_swing_the_sword
+	x = -3
+	y = 5
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_saboteurs"
+		custom_effect_tooltip = HYE_saboteurs_tt
+	}
+}
+shared_focus = {
+	id = HYE_infiltrators
+	icon = GFX_goal_dagger
+	x = -1
+	y = 5
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_sneaky_plan
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 9999
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_infiltrators"
+		custom_effect_tooltip = HYE_infiltrators_tt
+		hidden_effect = { country_event = { id = hyenia.12 } } #shadowdancers
+	}
+}
+shared_focus = {
+	id = HYE_finalize_sneaky
+	icon = GFX_goal_skull_cannon
+	x = -2
+	y = 6
+	relative_position_id = HYE_startup
+	cost = 1
+	available = {
+	}
+	prerequisite = {
+		focus = HYE_infiltrators
+	}
+	prerequisite = {
+		focus = HYE_saboteurs
+	}
+	bypass = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_finalize_sneaky"
+		add_timed_idea = {
+			idea = HYE_movespeed
+			days = 90
+		}
+	}
+}
+
 shared_focus = { #Take them by Force!
 	id = HYE_force_plan
 	icon = GFX_goal_generic_major_war
-	x = 3
-	y = 1
+	x = 2
+	y = 4
 	relative_position_id = HYE_startup
 	cost = 1
 	available = {
 		has_country_flag = furasho_force_plan
 	}
 	prerequisite = {
-		focus = HYE_startup
+		focus = HYE_end_the_yeti
 	}
 	bypass = {
 	}
 	mutually_exclusive = {
-
+		focus = HYE_sneaky_plan
 	}
 	ai_will_do = {
 		factor = 10
@@ -240,9 +272,9 @@ shared_focus = { #Take them by Force!
 shared_focus = {
 	id = HYE_manpower
 	icon = GFX_goal_generic_military_sphere
-	x = -1
-	y = 1
-	relative_position_id = HYE_force_plan
+	x = 1
+	y = 5
+	relative_position_id = HYE_startup
 	cost = 1
 	available = {
 	}
@@ -264,9 +296,9 @@ shared_focus = {
 shared_focus = {
 	id = HYE_property_industry
 	icon = GFX_goal_construction_engineering
-	x = 1
-	y = 1
-	relative_position_id = HYE_force_plan
+	x = 3
+	y = 5
+	relative_position_id = HYE_startup
 	cost = 1
 	available = {
 	}
@@ -287,9 +319,9 @@ shared_focus = {
 shared_focus = {
 	id = HYE_finalize_force
 	icon = GFX_goal_artillery
-	x = 1
-	y = 1
-	relative_position_id = HYE_manpower
+	x = 2
+	y = 6
+	relative_position_id = HYE_startup
 	cost = 1
 	available = {
 	}
@@ -306,2007 +338,449 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_finalize_force"
-		add_ideas = {HYE_attack} 
+		add_timed_idea = {
+			idea = HYE_attack
+			days = 90
+		}
 	}
 }
 
 shared_focus = {
-	id = HYE_end_the_yeti
-	icon = GFX_goal_revolution
-	x = 0
-	y = 1
-	relative_position_id = HYE_fervor
+	id = HYE_end_of_the_war
+	icon = GFX_goal_artillery
+	x = 14
+	y = 0
 	cost = 1
 	available = {
-	}
-	prerequisite = {
-		focus = HYE_fervor
-	}
-	prerequisite = {
-		focus = HYE_finalize_force
-		focus =  HYE_finalize_sneaky
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	will_lead_to_war_with = SCT		
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_the_yeti"
-		add_timed_idea = { idea = HYE_yetided days = 150 }
-		declare_war_on = { target = SCT type = annex_everything }
-		hidden_effect = {
-			create_wargoal = {
-				type =  annex_everything
-				target = SCT
+		HYE = {
+			owns_state = 1036
+		}
+		OR = {
+			NOT = {
+				country_exists = SCT
+			}
+			SCT = {
+				is_subject = yes
 			}
 		}
 	}
-}
-
-shared_focus = {
-	id = HYE_victory_in_the_war
-	icon = GFX_goal_COS_Peace
-	x = 0
-	y = 1
-	relative_position_id = HYE_end_the_yeti
-	cost = 3
-	available = {
-		SCT = {
-			NOT = { has_war_with = HYE }
-		}
-		HYE = {
-			has_full_control_of_state = 1036
-			has_full_control_of_state = 1050
-			has_full_control_of_state = 1052
-		}
-	}
-	prerequisite = {
-		focus = HYE_end_the_yeti
-	}
 	bypass = {
 	}
 	ai_will_do = {
-		factor = 50
+		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_victory_in_the_war"
-		country_event = { id = hyenia.13 hours = 3 }
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		hidden_effect = {
+			country_event = { id = hyenia.22 days = 90 }
+		}
+		
 		decrease_storm_king = yes
 	}
 }
-
-###Industry###
-
 shared_focus = {
-	id = HYE_nationbuilding
-	icon = GFX_goal_revolution
-	x = 3
-	y = 0
-
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_nationbuilding"
-		effect_tooltip = {
-			add_ideas = HYE_build_nation_industry
-		}
-		hidden_effect = { country_event = { id = hyenia.23 } } #adds the idea
-		two_random_infrastructure_and_slot = yes
-	}
-}
-
-shared_focus = {
-	id = HYE_schools
-	icon = GFX_goal_revolution
-	x = -1
+	id = HYE_connect_nation
+	icon = GFX_goal_artillery
+	x = -2
 	y = 1
-	relative_position_id = HYE_nationbuilding
-	cost = 1
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
-	}
-	prerequisite = {
-		focus = HYE_nationbuilding
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_schools"
-		decrease_illiteracy = yes
-	}
-}
-
-shared_focus = {
-	id = HYE_lessons_of_struggle
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_nationbuilding
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_nationbuilding
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lessons_of_struggle"
-		swap_ideas = { 
-			remove_idea = HYE_to_recovery
-			add_idea = HYE_recovering
-		}
-		add_tech_bonus = {
-			bonus = 0.5
-			uses = 1
-			category = industry
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
 		}
 	}
-}
-
-shared_focus = {
-	id = HYE_education
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_schools
-	cost = 1
-	available = {
-	}
 	prerequisite = {
-		focus = HYE_schools
-	}
-	bypass = {
+		focus = HYE_end_of_the_war
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_education"
-		decrease_illiteracy = yes
-		swap_ideas = {
-			remove_idea = HYE_build_nation_industry
-			add_idea = HYE_built_industry
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HYE_connect_nation_literally
+	icon = GFX_goal_artillery
+	x = 0
+	y = 1
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
+	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
 		}
 	}
-}
-
-shared_focus = {
-	id = HYE_abolish_greed
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_schools
-	cost = 1
-	available = {
-	}
 	prerequisite = {
-		focus = HYE_schools
-	}
-	prerequisite = {
-		focus = HYE_lessons_of_struggle
-	}
-	bypass = {
+		focus = HYE_end_of_the_war
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_abolish_greed"
-		swap_ideas = {
-			remove_idea = HYE_recovering
-			add_idea = HYE_recover
-		}
-	}
-}
-
-shared_focus = {
-	id = HYE_dogfood
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_lessons_of_struggle
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lessons_of_struggle
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_dogfood"
-		add_political_power = 10 #placeholder
-		decrease_poverty = yes
-		add_ideas = HYE_population_growth
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_infrastructure = yes
 		one_random_infrastructure = yes
 	}
 }
-
 shared_focus = {
-	id = HYE_modern_factory
-	icon = GFX_goal_revolution
-	x = -1
+	id = HYE_rebuild_nation
+	icon = GFX_goal_artillery
+	x = 2
 	y = 1
-	relative_position_id = HYE_dogfood
-	cost = 1
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_dogfood
-	}
-	prerequisite = {
-		focus = HYE_abolish_greed
-	}
-	bypass = {
+		focus = HYE_end_of_the_war
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_modern_factory"
-		increase_society_development = yes
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		one_random_industrial_complex = yes
 	}
 }
-
-shared_focus = { #The eradication of illiteracy marks a turning point
-	id = HYE_eradicate_illiteracy 
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_education
-	cost = 1
+shared_focus = {
+	id = HYE_hyenia_is_one
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_education
+		focus = HYE_connect_nation
 	}
 	prerequisite = {
-		focus = HYE_abolish_greed
+		focus = HYE_connect_nation_literally
 	}
-	bypass = {
+	prerequisite = {
+		focus = HYE_rebuild_nation
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_eradicate_illiteracy"
-		decrease_illiteracy = yes
-		add_research_slot = 1
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia.9901 days = 7 }
 	}
 }
-
 shared_focus = {
-	id = HYE_university
-	icon = GFX_goal_revolution
+	id = HYE_rebuild2
+	icon = GFX_goal_artillery
 	x = -1
-	y = 1
-	relative_position_id = HYE_eradicate_illiteracy
-	cost = 1
+	y = 3
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_eradicate_illiteracy
-	}
-	bypass = {
+		focus = HYE_hyenia_is_one
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_university"
-		add_research_slot = 1
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		two_random_industrial_complex = yes
 	}
 }
-
 shared_focus = {
-	id = HYE_industrialization
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_modern_factory
-	cost = 1
+	id = HYE_everything_for_people
+	icon = GFX_goal_artillery
+	x = -2
+	y = 5
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_eradicate_illiteracy
-	}
-	prerequisite = {
-		focus = HYE_modern_factory
-	}
-	bypass = {
+		focus = HYE_rebuild2
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_industrialization"
-		increase_society_development = yes
-		one_random_industrial_complex = yes
-	}
-}
-
-shared_focus = {
-	id = HYE_crop_rotation
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_modern_factory
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_modern_factory
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_crop_rotation"
-		remove_poverty = yes
-		two_random_infrastructure_and_slot = yes
-		swap_ideas = {
-			remove_idea = HYE_population_growth
-			add_idea = HYE_population_boom
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = -200
+		add_timed_idea = {
+			idea = HYE_construction_buff
+			days = 720
 		}
 	}
 }
-
 shared_focus = {
-	id = HYE_qaylid_academia
-	icon = GFX_goal_revolution
+	id = HYE_regain_whats_lost
+	icon = GFX_goal_artillery
 	x = 1
-	y = 1
-	relative_position_id = HYE_university
-	cost = 1
+	y = 3
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
-	}
-	prerequisite = {
-		focus = HYE_university
-	}
-	prerequisite = {
-		focus = HYE_industrialization
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_academia"
-		add_research_slot = 1
-	}
-}
-
-shared_focus = {
-	id = HYE_qaylid_industry
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_crop_rotation
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_crop_rotation
-	}
-	prerequisite = {
-		focus = HYE_industrialization
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_industry"
-		increase_society_development = yes
-		two_random_arms_factory = yes
-	}
-}
-
-shared_focus = {
-	id = HYE_one_purpose
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_qaylid_academia
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_academia
-	}
-	prerequisite = {
-		focus = HYE_qaylid_industry
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = { 
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_purpose"
-		swap_ideas = {
-			remove_idea = HYE_recover
-			add_idea = HYE_recovered
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
 		}
 	}
-}
-
-###Qaylid###
-
-shared_focus = {
-	id = HYE_qaylid_start
-	icon = GFX_goal_revolution
-	x = 24
-	y = 0
-	cost = 1
-	available = {
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_start"
-		add_political_power = 70
-		add_dynamic_modifier = { modifier = HYE_dynamic_modifier } #TODO dynamic modifier change text
-		set_country_flag = qaylid_enable_dynamic_modifier
-		set_variable = { HYE_special_forces_cap_variable = 0.05}
-		set_variable = { HYE_research_speed_variable = 0}
-		set_variable = { HYE_non_core_manpower_variable = 0 }
-		set_variable = { HYE_army_attack_factor_variable = 0 }
-		set_variable = { HYE_army_defence_factor_variable = 0 }
-		set_variable = { HYE_attrition_variable = -0.05 }
-	}
-}
-
-shared_focus = {
-	id = HYE_action_reaction #Trap of the Past, Swapped due to loc
-	icon = GFX_goal_revolution
-	x = 1
-	y = 2
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
 	prerequisite = {
-		focus = HYE_transience_change
-	}
-	bypass = {
+		focus = HYE_hyenia_is_one
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_action_reaction"
-		add_to_variable = {
-			var = HYE_army_attack_factor_variable = 0.1
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_open_paw
+	icon = GFX_goal_artillery
+	x = 2
+	y = 5
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
+	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
 		}
 	}
-}
-
-shared_focus = { #Action and Reflection, Swapped due to loc
-	id = HYE_past_trap
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
 	prerequisite = {
-		focus = HYE_qaylid_start
-	}
-	bypass = {
+		focus = HYE_regain_whats_lost
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_past_trap"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia.9902 days = 5 }
 	}
 }
-
-shared_focus = { #Traps of the Past, swapped due to loc
-	id = HYE_transience_change 
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_start
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_transience_change"
-		add_political_power = 10 #placeholder
-	}
-}
-
-
-
 shared_focus = {
-	id = HYE_virtue_future
-	icon = GFX_goal_revolution
-	x = 3
-	y = 2
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_transience_change
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_virtue_future"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_item_skill
-	icon = GFX_goal_revolution
-	x = -1
-	y = 2
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_past_trap
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_item_skill"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_dilligence_dedication
-	icon = GFX_goal_revolution
-	x = -3
-	y = 2
-	relative_position_id = HYE_qaylid_start
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_past_trap
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_dilligence_dedication"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_qaylid_state
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_action_reaction
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_item_skill
-	}
-	prerequisite = {
-		focus = HYE_dilligence_dedication
-	}
-	prerequisite = {
-		focus = HYE_action_reaction
-	}
-	prerequisite = {
-		focus = HYE_virtue_future
-	}	
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_state"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_qaylid_syncreticism
-	icon = GFX_goal_revolution
-	x = -4
-	y = 1
-	relative_position_id = HYE_qaylid_state
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_state
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_qaylid_conservatism
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_syncreticism"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_only_teachers
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_qaylid_syncreticism
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_syncreticism
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_only_teachers"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_many_species
-	icon = GFX_goal_revolution
+	id = HYE_dawn_in_distance
+	icon = GFX_goal_artillery
 	x = 0
-	y = 1
-	relative_position_id = HYE_qaylid_syncreticism
-	cost = 1
+	y = 4
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_qaylid_syncreticism
+		focus = HYE_regain_whats_lost
 	}
-	bypass = {
+	prerequisite = {
+		focus = HYE_rebuild2
 	}
-	mutually_exclusive = {
+	prerequisite = {
+		focus = HYE_hyenia_is_one
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_many_species"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+		add_political_power = 100
 	}
 }
-
 shared_focus = {
-	id = HYE_humility
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_qaylid_syncreticism
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_syncreticism
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_humility"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_evolving_qaylid
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_humility
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_humility
-	}
-	prerequisite = {
-		focus = HYE_many_species
-	}
-	prerequisite = {
-		focus = HYE_only_teachers
-	}	
-	bypass = {
-	}
-	mutually_exclusive = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_evolving_qaylid"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_qaylid_conservatism
-	icon = GFX_goal_revolution
-	x = 4
-	y = 1
-	relative_position_id = HYE_qaylid_state
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_state
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_qaylid_syncreticism
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_qaylid_conservatism"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_righteous
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_qaylid_conservatism
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_qaylid_conservatism
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_righteous"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_purity
-	icon = GFX_goal_revolution
+	id = HYE_liberators_we_were
+	icon = GFX_goal_artillery
 	x = 0
-	y = 1
-	relative_position_id = HYE_qaylid_conservatism
-	cost = 1
+	y = 5
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_qaylid_conservatism
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
+		focus = HYE_dawn_in_distance
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_many_species"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia.9903 days = 5 }
 	}
 }
-
 shared_focus = {
-	id = HYE_no_compromise
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_qaylid_conservatism
-	cost = 1
+	id = HYE_even_sun_will_settle
+	icon = GFX_goal_artillery
+	x = 0
+	y = 6
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_qaylid_conservatism
+		focus = HYE_everything_for_people
 	}
-	bypass = {
+	prerequisite = {
+		focus = HYE_open_paw
 	}
-	mutually_exclusive = {
+	prerequisite = {
+		focus = HYE_liberators_we_were
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_humility"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+		add_political_power = 100
+		country_event = { id = hyenia.9904 days = 5 }
 	}
 }
-
 shared_focus = {
-	id = HYE_der_ewige_qaylid
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_no_compromise
-	cost = 1
+	id = HYE_formalize_qaylid
+	icon = GFX_goal_artillery
+	x = 1
+	y = 7
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
-		focus = HYE_purity
-	}
-	prerequisite = {
-		focus = HYE_no_compromise
-	}
-	prerequisite = {
-		focus = HYE_righteous
-	}	
-	bypass = {
-	}
-	mutually_exclusive = {
+		focus = HYE_even_sun_will_settle
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_der_ewige_qaylid"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_research_buff
 	}
 }
-
-
-#shared_focus = {
-#	id = HYE_
-#	icon = GFX_goal_revolution
-#	x = 0
-#	y = 1
-#	relative_position_id = HYE_
-#	cost = 1
-#	available = {
-#	}
-#	prerequisite = {
-#		focus = HYE_
-#	}
-#	bypass = {
-#	}
-#	ai_will_do = {
-#		factor = 10
-#	}
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus HYE_"
-#		add_political_power = 10 #placeholder
-#	}
-#}
-
-###Political Pt 2###
-
-#Furasho Radical
-
 shared_focus = {
-	id = HYE_hound_who_sold_the_world
-	icon = GFX_goal_revolution
-	x = 13
+	id = HYE_prepare_for_journey
+	icon = GFX_goal_artillery
+	x = -1
+	y = 7
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
+	available = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
+	}
+	prerequisite = {
+		focus = HYE_even_sun_will_settle
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_stab_buff
+	}
+}
+shared_focus = {
+	id = HYE_next_teacher
+	icon = GFX_goal_artillery
+	x = 0
 	y = 8
-	cost = 1
+	cost = 6
+	relative_position_id = HYE_end_of_the_war
 	available = {
-		has_country_flag = furasho_gone_radical
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+    			ruling_only = yes	
+			}
+		}
 	}
 	prerequisite = {
+		focus = HYE_prepare_for_journey
 	}
-	bypass = {
+	prerequisite = {
+		focus = HYE_formalize_qaylid
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_hound_who_sold_the_world"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_yeti_slaves
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_hound_who_sold_the_world
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_hound_who_sold_the_world
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_yeti_slaves"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_absolutism
-	icon = GFX_goal_revolution
-	x = 0
-	y = 2
-	relative_position_id = HYE_hound_who_sold_the_world
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_hound_who_sold_the_world
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_absolutism"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_purges
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_hound_who_sold_the_world
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_hound_who_sold_the_world
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_purges"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_slave_soldiers
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_yeti_slaves
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_yeti_slaves
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_slave_soldiers"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_all_must_serve
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_slave_soldiers
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_slave_soldiers
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_all_must_serve"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_all_for_hyenia
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_slave_soldiers
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_slave_soldiers
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_all_for_hyenia"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_old_and_new
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_purges
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_purges
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_old_and_new"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_warrior_bribe
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_old_and_new
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_old_and_new
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_warrior_bribe"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_whips_and_dogma
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_old_and_new
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_old_and_new
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_whips_and_dogma"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_prophet_king
-	icon = GFX_goal_revolution
-	x = 0
-	y = 2
-	relative_position_id = HYE_absolutism
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_warrior_bribe
-	}
-	prerequisite = {
-		focus = HYE_whips_and_dogma
-	}	
-	prerequisite = {
-		focus = HYE_absolutism
-	}	
-	prerequisite = {
-		focus = HYE_all_must_serve
-	}		
-	prerequisite = {
-		focus = HYE_all_for_hyenia
-	}	
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_prophet_king"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_calm_before_storm_conquest
-	icon = GFX_goal_revolution
-	x = 0
-	y = 1
-	relative_position_id = HYE_prophet_king
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_prophet_king
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_calm_before_storm_conquest"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_to_clear_skies #Stab stab stab the Yetis, and have it be all.
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_calm_before_storm_conquest
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_calm_before_storm_conquest
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_to_clear_skies"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_extend_enslavement
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_to_clear_skies
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_to_clear_skies
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_extend_enslavement"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_execute_the_yeti_leaders
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_to_clear_skies
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_to_clear_skies
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_execute_the_yeti_leaders"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_consolidate_yeti_lands
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_extend_enslavement
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_extend_enslavement
-	}
-	prerequisite = {
-		focus = HYE_execute_the_yeti_leaders
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_consolidate_yeti_lands"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_expel_the_yeti
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_execute_the_yeti_leaders
-	cost = 7
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_execute_the_yeti_leaders
-		focus = HYE_extend_enslavement
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_consolidate_yeti_lands"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_hyena_minority #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_calm_before_storm_conquest
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_calm_before_storm_conquest
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_hyena_minority" #Hayzyges Wargoal todo
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_hayseed #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_hyena_minority
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_hyena_minority
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_hayseed" 
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_convert_hay #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09/02/2020 in teaser channel.
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_hyena_minority
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_hyena_minority
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_convert_hay"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_our_hay #Small Exodus to Zkoma, maybe use this as pretext? See Teaser at 09 02 2020 in teaser channel.
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_hayseed
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_convert_hay
-	}
-	prerequisite = {
-		focus = HYE_hayseed
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_our_hay"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_furasho_empire #Hoo boy.
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_our_hay
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_our_hay
-	}
-	prerequisite = {
-		focus = HYE_consolidate_yeti_lands
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_furasho_empire"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = { #Centaurs and Gargoyles
-	id = HYE_ancients_begone
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_furasho_empire
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_furasho_empire
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_ancients_begone"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_divide_and_conquer
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_ancients_begone
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_ancients_begone
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_divide_and_conquer"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_gargoyle_centaur
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_ancients_begone
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_ancients_begone
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_gargoyle_centaur"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_ending_ancients
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_gargoyle_centaur
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_gargoyle_centaur
-	}
-	prerequisite = {
-		focus = HYE_divide_and_conquer
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_ending_ancients"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_lake_statelets
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_furasho_empire
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_furasho_empire
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_statelets"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_lake_slaves
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_lake_statelets
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_statelets
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_slaves"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_lake_resources
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_lake_statelets
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_statelets
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_resources"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_lake_resources
-	icon = GFX_goal_revolution
-	x = 1
-	y = 1
-	relative_position_id = HYE_lake_statelets
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_statelets
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_resources"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = { #ZUG, ZEL, ZWA consolidation foci
-	id = HYE_lake_of_wealth
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_lake_resources
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_resources
-	}
-	prerequisite = {
-		focus = HYE_lake_slaves
-	}	
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_lake_of_wealth"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_one_more_round
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_lake_of_wealth
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_of_wealth
-	}
-	prerequisite = {
-		focus = HYE_ending_ancients
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_one_more_round
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_lake_of_wealth
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_of_wealth
-	}
-	prerequisite = {
-		focus = HYE_ending_ancients
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_one_more_round
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_lake_of_wealth
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_lake_of_wealth
-	}
-	prerequisite = {
-		focus = HYE_ending_ancients
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_one_more_round"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia.9905 days = 5 }
 	}
 }
 shared_focus = {
-	id = HYE_conquer_MAZ
-	icon = GFX_goal_revolution
-	x = -2
-	y = 1
-	relative_position_id = HYE_one_more_round
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_one_more_round
-	}
-	bypass = {
-	}
+	id = HYE_famka_death
+	icon = GFX_goal_artillery
+	x = 10
+	y = 10
+	cost = 6
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_conquer_SON
-	icon = GFX_goal_revolution
-	x = 0
-	y = 1
-	relative_position_id = HYE_one_more_round
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_one_more_round
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_SON"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_conquer_MSH
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_one_more_round
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_one_more_round
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MSH"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_REE_ultimatum
-	icon = GFX_goal_revolution
-	x = -1
-	y = 1
-	relative_position_id = HYE_conquer_SON
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_conquer_SON
-		focus = HYE_conquer_MAZ
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
-		add_political_power = 10 #placeholder
-	}
-}
-
-shared_focus = {
-	id = HYE_conquer_MSS
-	icon = GFX_goal_revolution
-	x = 0
-	y = 1
-	relative_position_id = HYE_conquer_MSH
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_conquer_MSH
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MSS"
-		add_political_power = 10 #placeholder
-	}
-}
-shared_focus = {
-	id = HYE_hyena_empire
-	icon = GFX_goal_revolution
-	x = 2
-	y = 1
-	relative_position_id = HYE_REE_ultimatum
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_REE_ultimatum
-	}
-	prerequisite = {
-		focus = HYE_conquer_MSS
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_justifying_more
-	}	
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
-		add_political_power = 10 #placeholder
-	}
-}
-shared_focus = {
-	id = HYE_justifying_more
-	icon = GFX_goal_revolution
-	x = 0
-	y = 1
-	relative_position_id = HYE_REE_ultimatum
-	cost = 1
-	available = {
-	}
-	prerequisite = {
-		focus = HYE_REE_ultimatum
-	}
-	prerequisite = {
-		focus = HYE_conquer_MSS
-	}
-	bypass = {
-	}
-	mutually_exclusive = {
-		focus = HYE_hyena_empire
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_conquer_MAZ"
-		add_political_power = 10 #placeholder
-	}
-}
-
-#Furasho Normal
-
-shared_focus = {
-	id = HYE_deep_faith
-	icon = GFX_goal_revolution
-	x = 13
-	y = 8
-	cost = 1
-	available = {
-		has_country_flag = furasho_gone_moderate
-	}
-	prerequisite = {
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_deep_faith"
-		add_political_power = 10 #placeholder
-	}
-}
-
-#Masaska Normal
-
-shared_focus = {
-	id = HYE_champion_of_harmony
-	icon = GFX_goal_revolution
-	x = 13
-	y = 8
-	cost = 1
-	available = {
-		has_country_flag = masaska_gone_moderate
-	}
-	prerequisite = {
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_champion_of_harmony"
-		add_political_power = 10 #placeholder
-	}
-}
-
-#Masaska Radical
-
-shared_focus = {
-	id = HYE_radical_isolationism
-	icon = GFX_goal_revolution
-	x = 13
-	y = 8
-	cost = 1
-	available = {
-		has_country_flag = masaska_gone_radical
-	}
-	prerequisite = {
-	}
-	bypass = {
-	}
-	ai_will_do = {
-		factor = 10
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus HYE_radical_isolationism"
-		add_political_power = 10 #placeholder
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 	}
 }
