@@ -251,6 +251,13 @@ focus_tree = {
 				add_manpower = -5000
 			}
 			restore_previous_manpower = yes
+			every_owned_state = {
+            limit = {
+                is_core_of = GRW
+                is_core_of = BRF
+            }
+            add_core_of = BAN
+        }	
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -438,6 +445,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAN_train_bandits"
 			army_experience = 30
+			add_manpower = 30000
+			add_ideas = BAN_train_em
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}

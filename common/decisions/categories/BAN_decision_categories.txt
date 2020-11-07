@@ -17,7 +17,28 @@ BAN_tributaries = {
 		base = 110
 	}
 }
+BAN_core_prywhen = {
+	icon = border_war
+	allowed = {
+		tag = BAN
+	}
+	visible = {
+		has_completed_focus = BAN_burn_the_cities
+	}
+	priority = {
+		base = 110
+	}
+}
 
+BAN_tributaries = {
+	icon = border_war
+	allowed = {
+		tag = BAN
+	}
+	priority = {
+		base = 110
+	}
+}
 BAN_society_development_cat = {
 	icon = bird_skull
 	allowed = {

@@ -27,7 +27,7 @@ BAN_fortify_the_mountain_desc:0 "The Prywhen civil war ain't our problem, nor ca
 BAN_border_guard:0 "Border Patrols"
 BAN_border_guard_desc:0 "We gotta keep an eye on the border, you never know when an attack can happen. Blackrock has chosen "volunteers" who will patrol the common border and keep us informed of anything amiss. A bandit gotta be always prepared, or won't live for long."
 BAN_train_bandits:0 "Training Exercises" 
-BAN_train_bandits_desc:0 ""Stop sleeping all day and do your pushups, you lazy chicks! The boss needs us to be in top shape for the battles to come.""
+BAN_train_bandits_desc:0 "Get off your behinds and get to work! You want to steal gold? You want to show those cityslickers and peasant fiefs who's in charge? \n\nThen run five laps, fly a mile front, and back too! Oh and Karl, if you miss that next barrage, I'm shooting you myself!"
 
 BAN_core_prywhen:0 "Take It All"
 BAN_core_prywhen_desc:0 "We've taken the lands of Prywhen by conquest. It is our right now to extract full benefits from it, and this cannot be disputed. Anygriff saying otherwise gets the bullet."
@@ -276,6 +276,7 @@ BAN_battlecruiser_operational:0 "Carrier Technology"
 BAN_battlecruiser_operational_desc:0 "The undisputed king of naval warfare. It is said that who ever controls the seas controls the war, what they don't mention is that who ever controls the air, controls the seas."
 
 ### ideas ###
+BAN_train_em:0 "Drilled Bandits"
 BAN_lawless_land:0 "Lawless Land"
 BAN_lawless_land_desc:0 "For anyone who isn't one of Blackrock's griffons, this land is a death trap. The civilians can barely live without being harassed by bandits, and no foreigners dare to visit, if they value they life and wealth. Just the way Blackrock likes."
 BAN_lawless_land2:0 "Lawless Land"
