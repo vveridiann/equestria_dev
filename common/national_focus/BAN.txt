@@ -218,6 +218,7 @@ focus_tree = {
 			508 = { is_controlled_by = ROOT }
 			385 = { is_controlled_by = ROOT }
 		}
+
 		relative_position_id = BAN_gather_tribute
 		cost = 10.00
 		x = -2
@@ -228,6 +229,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAN_burn_the_cities"
 			custom_effect_tooltip = BAN_TT_2_loot
+			custom_effect_tooltip = BAN_TT_core_prywhen
 			add_to_variable = {
 				var = loot
 				value = 2
@@ -250,14 +252,7 @@ focus_tree = {
 
 				add_manpower = -5000
 			}
-			restore_previous_manpower = yes
-			every_owned_state = {
-            limit = {
-                is_core_of = GRW
-                is_core_of = BRF
-            }
-            add_core_of = BAN
-        }	
+			restore_previous_manpower = yes	
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}

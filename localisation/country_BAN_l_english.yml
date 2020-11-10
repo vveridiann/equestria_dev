@@ -554,6 +554,8 @@ BAN_TT_mercs:0 "Allows you to hire mercenary companies from the §YBlack Market�
 BAN_TT_black_market:0 "Allows you to purchase illicit goods from the §YBlack Market§!.\n"
 BAN_TT_expand_market:0 "Allows you to "purchase" labourers and "hire" researchers at the §YBlack Market§!.\n"
 
+BAN_TT_core_prywhen:0 "§RThis focus will allow you to core the Prywhen territories, all it takes is some death and discipline.§!\n"
+
 BAN_TT_fix_economy:0 "Unlocks decisions that allow you to increase society development.\n"
 BAN_TT_tribute:0 "Unlocks decisions that allow you to force other nations to pay tribute to you.\n"
 
@@ -592,6 +594,34 @@ BAN_flatfeathers_suber:0 "Flatfeathers Suber"
 BAN_don_adv:0 "Don Espadarte"
 
 ### Decisions ###
+
+####Core Prywhen###############
+BAN_core_state_first:0 "The Reds Capital"
+BAN_core_state_first_desc:0 "Breaking this place down is going to be easy, a couple of beatings here and there, some disciplinary action and it's good as ours."
+
+BAN_core_state_second:0 "The Acute Forest"
+BAN_core_state_second_desc:0 "Burn the homes of those who do not follow us, let the forest be splotched by ash, teach them that their trees are only kindle and not a defense."
+
+BAN_core_state_third:0 "Breaking A Griffonswill"
+BAN_core_state_third_desc:0 "Show them we're not to be messed with, Kajetan wants us to break these people quickly and smoothly. Make sure to snip beaks and cut wings."
+
+BAN_core_state_fourth:0 "Brodfeld The Gone"
+BAN_core_state_fourth_desc:0 "With Brodfeld gone, the reds gone and only us left. Who do they have to turn to? Their simpleton king has long since said goodbye, violence is all that's left. Fight for us, or die against us."
+
+BAN_core_state_fifth:0 "Bomb The Terrible Marsh"
+BAN_core_state_fifth_desc:0 "Who has the patience to wade through this place? I'm not losing griffs to this damned place, bomb it until they understand who's in charge."
+
+BAN_core_state_sixth:0 "Lifov The Easy"
+BAN_core_state_sixth_desc:0 "Lifov fell within days, the people there seemingly ready to accept us as their new overlords. A rabble fit for banditry!"
+
+BAN_core_state_seven:0 "Kivessin The Lesson"
+BAN_core_state_seven_desc:0 "Bomb the houses, break the families. These capital dwellers think themselves beyond our control, that they are from a heritage of finer blood. Lets show them that their blood is just as red as the rest of us."
+
+BAN_core_state_eight:0 "Drown The Port"
+BAN_core_state_eight_desc:0 "Sydia is just as stubborn as Kivessin, traders and merchants the lot of them. Scared of us and what we plan to do with them. Their mistakes will cost them dearly, they'll shut up once they see the bloated griffs on the Gryphus sea."
+#######################
+
+
 BAN_mercs_and_blackmarket:0 "Mercenary Companies and the Black Market"
 BAN_mercs_and_blackmarket_desc:0 "The Black Market is the place to hire mercenary companies, acquire large amounts of weapons, or purchase stolen blueprints.\n\nYou have §Y[?loot]§! piles of £loot_text  §YLoot§!."
 BAN_society_development_cat:0 "Societal Development"

@@ -531,20 +531,172 @@ BAN_mercs_and_blackmarket = {
 }
 BAN_core_prywhen = {
 	BAN_core_state_first = {
-		icon = griffon_bandits
+		icon = GFX_decision_bird_skull
+		highlight_state_targets = {
+			state = 605
+		}
+
 		visible = {
 			has_completed_focus = BAN_burn_the_cities
 		}
 		available = {
-			resistance > 10
+			605 = {resistance < 10 }
 			605 = { is_owned_and_controlled_by = BAN }
+		}
+		
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 605
+			605 = { add_manpower = -861 }
+		}
+	}
+	BAN_core_state_second = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 651
+		}
+		available = {
+			651 = {resistance < 10 }
+			651 = { is_owned_and_controlled_by = BAN }
 		}
 
 		fire_only_once = yes
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 605
+			add_core = 651
+			651 = { add_manpower = -439 }
+		}
+	}
+	BAN_core_state_third = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 414
+		}
+		available = {
+			414 = {resistance < 10 }
+			414 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 414
+			414 = { add_manpower = -1084 }
+		}
+	}
+	BAN_core_state_fourth = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 589
+		}
+		available = {
+			589 = {resistance < 10 }
+			589 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 589
+			589 = { add_manpower = -956 }
+		}
+	}
+	BAN_core_state_fifth = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 588
+		}
+		available = {
+			588 = {resistance < 10 }
+			588 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 588
+			588 = { add_manpower = -153 }
+		}
+	}
+	BAN_core_state_sixth = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 590
+		}
+		available = {
+			590 = {resistance < 10 }
+			590 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 590
+		}
+	}
+	BAN_core_state_seven = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 508
+		}
+		available = {
+			508 = {resistance < 10 }
+			508 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 508
+			651 = { add_manpower = -21532 }
+		}
+	}
+
+	BAN_core_state_eight = {
+		icon = GFX_decision_bird_skull
+		visible = {
+			has_completed_focus = BAN_burn_the_cities
+		}
+		highlight_state_targets = {
+			state = 385
+		}
+		available = {
+			385 = {resistance < 10 }
+			385 = { is_owned_and_controlled_by = BAN }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 40
+		remove_effect = {
+			add_core = 385
+			385 = { add_manpower = -1344 }
 		}
 	}
 }
