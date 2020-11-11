@@ -774,13 +774,327 @@ shared_focus = {
 shared_focus = {
 	id = HYE_famka_death
 	icon = GFX_goal_artillery
-	x = 10
-	y = 10
+	x = 6
+	y = 9
 	cost = 6
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+	}
+}
+shared_focus = {
+	id = HYE_our_bastion
+	icon = GFX_goal_artillery
+	x = -4
+	y = 1
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_famka_death
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.1 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_war_refugees
+	icon = GFX_goal_artillery
+	x = -5
+	y = 2
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_our_bastion
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.2 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_enlarge_cities
+	icon = GFX_goal_artillery
+	x = -6
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	mutually_exclusive = {
+		focus = HYE_countryside_relocation
+	}
+	prerequisite = {
+		focus = HYE_war_refugees
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.3 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_countryside_relocation
+	icon = GFX_goal_artillery
+	x = -4
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	mutually_exclusive = {
+		focus = HYE_enlarge_cities
+	}
+	prerequisite = {
+		focus = HYE_war_refugees
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.4 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_people_of_sand
+	icon = GFX_goal_artillery
+	x = -3
+	y = 2
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_our_bastion
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.5 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_smuggler_alliance
+	icon = GFX_goal_artillery
+	x = -2
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_people_of_sand
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.6 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_monarch_without_throne
+	icon = GFX_goal_artillery
+	x = 0
+	y = 1
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_famka_death
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.7 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_monarchy_support
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 6
+	relative_position_id = HYE_famka_death
+	available = {
+		always = no
+	}
+	prerequisite = {
+		focus = HYE_monarch_without_throne
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.8 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_prepare_council
+	icon = GFX_goal_artillery
+	x = 0
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_monarchy_support
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HYE_reclaimed_lands
+	icon = GFX_goal_artillery
+	x = 4
+	y = 1
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_famka_death
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.9 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_collaborators_lynch
+	icon = GFX_goal_artillery
+	x = 3
+	y = 2
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_reclaimed_lands
+	}
+	mutually_exclusive = {
+		focus = HYE_collaborators_forgivness
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.10 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_rope_for_a_tyrant
+	icon = GFX_goal_artillery
+	x = 2
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_collaborators_lynch
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.11 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_collaborators_forgivness
+	icon = GFX_goal_artillery
+	x = 5
+	y = 2
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_reclaimed_lands
+	}
+	mutually_exclusive = {
+		focus = HYE_collaborators_lynch
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.12 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_hope_for_a_tyrant
+	icon = GFX_goal_artillery
+	x = 6
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_collaborators_forgivness
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.13 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_partisans
+	icon = GFX_goal_artillery
+	x = 4
+	y = 3
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_collaborators_forgivness
+		focus = HYE_collaborators_lynch
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.14 days = 4 }
+	}
+}
+shared_focus = {
+	id = HYE_begin_peace_talks
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 6
+	relative_position_id = HYE_famka_death
+	prerequisite = {
+		focus = HYE_countryside_relocation
+		focus = HYE_enlarge_cities
+	}
+	prerequisite = {
+		focus = HYE_smuggler_alliance
+	}
+	prerequisite = {
+		focus = HYE_prepare_council
+	}
+	prerequisite = {
+		focus = HYE_partisans
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		country_event = { id = hyenia_troubles.15 days = 4 }
 	}
 }

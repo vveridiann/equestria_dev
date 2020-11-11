@@ -1,4 +1,5 @@
 add_namespace = hyenia
+add_namespace = hyenia_troubles
 
 country_event = { #War council, triggered via event on focus tree. The War to Come
 	id = hyenia.1
@@ -293,6 +294,16 @@ country_event = { #The Death of Fahamka
 			remove_idea = HYE_qaylid_dervish
 			add_idea = HYE_divided_nation
 		}
+		hidden_effect = {
+			set_variable = {
+				var = HYE_spymaster_score
+				value = 0
+			}
+			set_variable = {
+				var = HYE_general_score
+				value = 0
+			}
+		}
 	}
 }
 
@@ -365,3 +376,255 @@ country_event = { #Nothing there just a dummy event
 		name = hyenia.9905.a	
 	}
 }
+
+
+
+
+country_event = { #
+	id = hyenia_troubles.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.1"}
+	title = hyenia_troubles.1.t
+	desc = hyenia_troubles.1.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.1.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.1.b
+		add_to_variable = { HYE_general_score = 1 } 
+	}
+}
+country_event = { #
+	id = hyenia_troubles.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.2"}
+	title = hyenia_troubles.2.t
+	desc = hyenia_troubles.2.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.2.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.2.b	
+		add_to_variable = { HYE_general_score = 1 } 
+	}
+}
+country_event = { #
+	id = hyenia_troubles.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.3"}
+	title = hyenia_troubles.3.t
+	desc = hyenia_troubles.3.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.3.a	
+		subtract_from_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.3.b
+		subtract_from_variable = { HYE_general_score = 1 } 
+	}
+}
+country_event = { #
+	id = hyenia_troubles.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.4"}
+	title = hyenia_troubles.4.t
+	desc = hyenia_troubles.4.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.4.a	
+		subtract_from_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.4.b
+		subtract_from_variable = { HYE_general_score = 1 } 
+	}
+}
+country_event = { #
+	id = hyenia_troubles.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.5"}
+	title = hyenia_troubles.5.t
+	desc = hyenia_troubles.5.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.5.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.5.b	
+		add_to_variable = { HYE_general_score = 1 } 
+	}
+}
+country_event = { #
+	id = hyenia_troubles.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.6"}
+	title = hyenia_troubles.6.t
+	desc = hyenia_troubles.6.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.6.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+	}
+	option = { 
+		name = hyenia_troubles.6.b	
+		add_to_variable = { HYE_general_score = 1 } 
+	}
+}
+
+country_event = { #
+	id = hyenia_troubles.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.7"}
+	title = hyenia_troubles.7.t
+	desc = hyenia_troubles.7.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.7.a	
+		hidden_effect = { 
+			country_event = { id = hyenia_troubles.71 days = 42 }
+		}
+	}
+}
+country_event = { #
+	id = hyenia_troubles.71
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.71"}
+	title = hyenia_troubles.71.t
+	desc = hyenia_troubles.71.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.71.a	
+		country_event = { id = hyenia_troubles.72 days = 7 }
+	}
+	option = { 
+		name = hyenia_troubles.71.b	
+		country_event = { id = hyenia_troubles.72 days = 7 }
+	}
+}
+country_event = { #
+	id = hyenia_troubles.72
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.72"}
+	title = hyenia_troubles.72.t
+	desc = hyenia_troubles.72.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.72.a	
+		add_to_variable = { HYE_general_score = 3 } 
+		hidden_effect = {
+			complete_national_focus = HYE_monarchy_support
+		}
+	}
+}
+country_event = { #
+	id = hyenia_troubles.73
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.73"}
+	title = hyenia_troubles.73.t
+	desc = hyenia_troubles.73.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.73.a	
+		add_to_variable = { HYE_spymaster_score = 3 } 
+		hidden_effect = {
+			complete_national_focus = HYE_monarchy_support
+		}
+	}
+}
+country_event = { #
+	id = hyenia_troubles.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.8"}
+	title = hyenia_troubles.8.t
+	desc = hyenia_troubles.8.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.8.a	
+		add_political_power = 100
+	}
+}
+
+country_event = { #
+	id = hyenia_troubles.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.9"}
+	title = hyenia_troubles.9.t
+	desc = hyenia_troubles.9.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.9.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.10"}
+	title = hyenia_troubles.10.t
+	desc = hyenia_troubles.10.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.10.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.11"}
+	title = hyenia_troubles.11.t
+	desc = hyenia_troubles.11.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.11.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.12"}
+	title = hyenia_troubles.12.t
+	desc = hyenia_troubles.12.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.12.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.13"}
+	title = hyenia_troubles.13.t
+	desc = hyenia_troubles.13.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.13.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.14"}
+	title = hyenia_troubles.14.t
+	desc = hyenia_troubles.14.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.14.a	
+	}
+}
+country_event = { #
+	id = hyenia_troubles.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_troubles.15"}
+	title = hyenia_troubles.15.t
+	desc = hyenia_troubles.15.d
+	#picture = 
+	is_triggered_only = yes
+	option = { 
+		name = hyenia_troubles.15.a	
+	}
+}
+
