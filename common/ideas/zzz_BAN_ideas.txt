@@ -123,8 +123,8 @@ ideas = {
 			modifier = {
 			training_time_army_factor = -0.15
 			army_org_factor = 0.12
-			army_morale_factor = 0.15
-			army_artillery_attack_factor = 0.10
+			army_morale_factor = 0.10
+			army_artillery_attack_factor = 0.09
 			army_leader_start_level = 1
 			}
 		}
