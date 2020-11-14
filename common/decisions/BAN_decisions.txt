@@ -548,7 +548,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 605
+			add_state_core = 605 ##FIX THIS FOR EVERYONE
 			605 = { add_manpower = -861 }
 		}
 	}
@@ -569,7 +569,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 651
+			add_state_core = 651
 			651 = { add_manpower = -439 }
 		}
 	}
@@ -590,7 +590,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 414
+			add_state_core = 414
 			414 = { add_manpower = -1084 }
 		}
 	}
@@ -611,7 +611,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 589
+			add_state_core = 589
 			589 = { add_manpower = -956 }
 		}
 	}
@@ -632,7 +632,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 588
+			add_state_core = 588
 			588 = { add_manpower = -153 }
 		}
 	}
@@ -653,7 +653,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 590
+			add_state_core = 590
 		}
 	}
 	BAN_core_state_seven = {
@@ -673,7 +673,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 508
+			add_state_core = 508
 			651 = { add_manpower = -21532 }
 		}
 	}
@@ -695,7 +695,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_core = 385
+			add_state_core = 385
 			385 = { add_manpower = -1344 }
 		}
 	}
