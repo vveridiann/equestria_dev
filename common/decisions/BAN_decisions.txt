@@ -540,7 +540,6 @@ BAN_core_prywhen = {
 			has_completed_focus = BAN_burn_the_cities
 		}
 		available = {
-			605 = {resistance < 10 }
 			605 = { is_owned_and_controlled_by = BAN }
 		}
 		
@@ -548,7 +547,7 @@ BAN_core_prywhen = {
 		cost = 25
 		days_remove = 40
 		remove_effect = {
-			add_state_core = 605 ##FIX THIS FOR EVERYONE
+			add_state_core = 605
 			605 = { add_manpower = -861 }
 		}
 	}
@@ -561,7 +560,6 @@ BAN_core_prywhen = {
 			state = 651
 		}
 		available = {
-			651 = {resistance < 10 }
 			651 = { is_owned_and_controlled_by = BAN }
 		}
 
@@ -582,7 +580,6 @@ BAN_core_prywhen = {
 			state = 414
 		}
 		available = {
-			414 = {resistance < 10 }
 			414 = { is_owned_and_controlled_by = BAN }
 		}
 
@@ -603,7 +600,6 @@ BAN_core_prywhen = {
 			state = 589
 		}
 		available = {
-			589 = {resistance < 10 }
 			589 = { is_owned_and_controlled_by = BAN }
 		}
 
@@ -624,7 +620,6 @@ BAN_core_prywhen = {
 			state = 588
 		}
 		available = {
-			588 = {resistance < 10 }
 			588 = { is_owned_and_controlled_by = BAN }
 		}
 
@@ -645,7 +640,6 @@ BAN_core_prywhen = {
 			state = 590
 		}
 		available = {
-			590 = {resistance < 10 }
 			590 = { is_owned_and_controlled_by = BAN }
 		}
 
@@ -687,7 +681,6 @@ BAN_core_prywhen = {
 			state = 385
 		}
 		available = {
-			385 = {resistance < 10 }
 			385 = { is_owned_and_controlled_by = BAN }
 		}
 

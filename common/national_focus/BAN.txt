@@ -211,7 +211,7 @@ focus_tree = {
 
 	focus = {
 		id = BAN_burn_the_cities
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_goal_slash_and_burn
 		prerequisite = { focus = BAN_loot_the_fields }
 		available = {
 			has_government = fascism
