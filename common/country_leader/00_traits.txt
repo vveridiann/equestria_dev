@@ -5642,7 +5642,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+	HYE_yeti_guy = {
+		random = no
+		stability_factor = -0.075
+		production_factory_efficiency_gain_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		ai_will_do = {
+			factor = 6
+		}
+	}
 	zebrican_close_combat_expert = { # +8 paratrooper/marine/mountain efficiency
         random = no
 		special_forces_attack_factor = 0.15

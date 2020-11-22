@@ -66,11 +66,14 @@ HYE_thunder_war_decisions = {
 		cost = 50
 		visible = {
 			NOT = { country_exists = SCT }
+			any_country = {
+				NOT = { original_tag = HYE }
+				owns_state = 1036
+			}
 		}
 		available = {
 			HYE = { NOT = { owns_state = 1036 } }
 		}
-		fire_only_once = yes
 		complete_effect = {
 			1036 = {
 				owner = { country_event = { id = hyenia.7 } }

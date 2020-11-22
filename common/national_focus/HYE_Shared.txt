@@ -1,7 +1,7 @@
 shared_focus = {
 	id = HYE_startup
 	icon = GFX_goal_bombs_away
-	x = 4
+	x = 6
 	y = 0
 	cost = 1
 	available = {
@@ -775,7 +775,7 @@ shared_focus = {
 	id = HYE_famka_death
 	icon = GFX_goal_artillery
 	x = 6
-	y = 9
+	y = 8
 	cost = 6
 	ai_will_do = {
 		factor = 10
@@ -980,6 +980,11 @@ shared_focus = {
 	y = 2
 	cost = 6
 	relative_position_id = HYE_famka_death
+	available = {
+		owns_state = 1050
+		owns_state = 1036
+		owns_state = 1052
+	}
 	prerequisite = {
 		focus = HYE_reclaimed_lands
 	}
@@ -1001,6 +1006,17 @@ shared_focus = {
 	y = 3
 	cost = 6
 	relative_position_id = HYE_famka_death
+	available = {
+		NOT = {
+			country_exists = SCT
+		}
+		owns_state = 1050
+		owns_state = 1036
+		owns_state = 1052
+		NOT = {
+			has_completed_focus = HYE_begin_peace_talks
+		}
+	}
 	prerequisite = {
 		focus = HYE_collaborators_lynch
 	}
@@ -1019,6 +1035,11 @@ shared_focus = {
 	y = 2
 	cost = 6
 	relative_position_id = HYE_famka_death
+	available = {
+		owns_state = 1050
+		owns_state = 1036
+		owns_state = 1052
+	}
 	prerequisite = {
 		focus = HYE_reclaimed_lands
 	}
@@ -1040,6 +1061,17 @@ shared_focus = {
 	y = 3
 	cost = 6
 	relative_position_id = HYE_famka_death
+	available = {
+		NOT = {
+			country_exists = SCT
+		}
+		owns_state = 1050
+		owns_state = 1036
+		owns_state = 1052
+		NOT = {
+			has_completed_focus = HYE_begin_peace_talks
+		}
+	}
 	prerequisite = {
 		focus = HYE_collaborators_forgivness
 	}

@@ -390,10 +390,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.1.a	
 		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_citizens_spy
 	}
 	option = { 
 		name = hyenia_troubles.1.b
 		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_citizens_warrior
 	}
 }
 country_event = { #
@@ -406,10 +408,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.2.a	
 		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_refugees_spy
 	}
 	option = { 
 		name = hyenia_troubles.2.b	
 		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_refugees_warrior
 	}
 }
 country_event = { #
@@ -422,10 +426,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.3.a	
 		subtract_from_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_enlarge_cities_spy
 	}
 	option = { 
 		name = hyenia_troubles.3.b
 		subtract_from_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_enlarge_cities_warrior
 	}
 }
 country_event = { #
@@ -438,10 +444,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.4.a	
 		subtract_from_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_relocation_spy
 	}
 	option = { 
 		name = hyenia_troubles.4.b
 		subtract_from_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_relocation_warrior
 	}
 }
 country_event = { #
@@ -454,10 +462,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.5.a	
 		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_sand_people_spy
 	}
 	option = { 
 		name = hyenia_troubles.5.b	
 		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_sand_people_warrior
 	}
 }
 country_event = { #
@@ -470,10 +480,12 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.6.a	
 		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_smugglers_spy
 	}
 	option = { 
 		name = hyenia_troubles.6.b	
 		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_smugglers_warrior
 	}
 }
 
@@ -546,7 +558,8 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.8.a	
-		add_political_power = 100
+		add_political_power = 150
+		add_stability = 0.05
 	}
 }
 
@@ -559,9 +572,13 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.9.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_reclaimed_lands_spy
 	}
 	option = { 
 		name = hyenia_troubles.9.b	
+		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_reclaimed_lands_warrior
 	}
 }
 country_event = { #
@@ -572,10 +589,8 @@ country_event = { #
 	#picture = 
 	is_triggered_only = yes
 	option = { 
-		name = hyenia_troubles.10.a	
-	}
-	option = { 
 		name = hyenia_troubles.10.b
+		add_to_variable = { HYE_general_score = 1 } 
 	}
 }
 country_event = { #
@@ -588,9 +603,6 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.11.a	
 	}
-	option = { 
-		name = hyenia_troubles.11.b	
-	}
 }
 country_event = { #
 	id = hyenia_troubles.12
@@ -601,9 +613,7 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.12.a	
-	}
-	option = { 
-		name = hyenia_troubles.12.b
+		add_to_variable = { HYE_spymaster_score = 1 } 
 	}
 }
 country_event = { #
@@ -615,9 +625,9 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.13.a	
-	}
-	option = { 
-		name = hyenia_troubles.13.b
+		hidden_effect = {
+			set_country_flag = HYE_yeti_guy_spared
+		}
 	}
 }
 country_event = { #
@@ -629,9 +639,13 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.14.a	
+		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_partisans_spy
 	}
 	option = { 
 		name = hyenia_troubles.14.b
+		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_partisans_warrior
 	}
 }
 country_event = { #end event

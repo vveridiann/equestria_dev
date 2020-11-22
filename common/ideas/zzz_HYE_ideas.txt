@@ -202,6 +202,20 @@ ideas = {
 			traits = { HYE_wise_old_dog }
 		}
 		
+		HYE_yeti_guy = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			visible = {
+				has_country_flag = HYE_yeti_guy_spared
+			}
+			available = {
+				has_country_flag = HYE_yeti_guy_spared
+			}
+			traits = { HYE_yeti_guy }
+		}
+
 		#Masaska's advisors begin here
 		
 		HYE_kelidii = {
