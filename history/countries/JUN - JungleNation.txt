@@ -64,6 +64,8 @@ add_ideas = {
 	eqs_civil_war
 	disrupted_communications
 	jungle_economy
+	no_lack_of_scientists
+	no_poverty
 }
 
 set_stability = 0.55
@@ -141,7 +143,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Zambezi"
 	picture = "zigger.tga"
-	traits = { pony_race_trait commando }
+	traits = { zebra_race_trait commando }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -163,7 +165,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jungle Trek"
 	picture = "Baron.tga"
-	traits = { jungle_rat }
+	traits = { pony_race_trait jungle_rat }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
