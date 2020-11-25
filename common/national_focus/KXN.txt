@@ -28,7 +28,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: KXN_Elections"
-		country_event = { id = Kir.1 }
+		country_event = { id = KirXang.1 }
 	}
 }
 
@@ -47,7 +47,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KXN_getting_food"
-		country_event = { id = Kir.6 }
+		country_event = { id = KirXang.6 }
 	}
 }
 
@@ -66,7 +66,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KXN_the_linguistic_debate"
-		country_event = { id = Kir.5 }
+		country_event = { id = KirXang.5 }
 	}
 }
 
@@ -85,7 +85,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KXN_Nirik_Debate"
-		country_event = { id = Kir.2 }
+		country_event = { id = KirXang.2 }
 	}
 }
 
@@ -104,7 +104,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KXN_The_Banners"
-		country_event = { id = Kir.4 }
+		country_event = { id = KirXang.4 }
 	}
 }
 
@@ -123,7 +123,7 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus KXN_About_Our_Neighbour"
-		country_event = { id = Kir.3 }
+		country_event = { id = KirXang.3 }
 	}
 }
 }
