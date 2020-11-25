@@ -1,0 +1,181 @@
+add_namespace = KirXang
+add_namespace = KirXangWildAce
+
+country_event = {
+	id = KirXang.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.1"}
+	title = KirXang.1.t
+	desc = KirXang.1.d
+	
+	picture = GFX_event_KIR_evening
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.1.a
+	}
+}
+country_event = {
+	id = KirXang.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.2"}
+	title = KirXang.2.t
+	desc = KirXang.2.d
+	
+	picture = GFX_event_jungles
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.2.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+country_event = {
+	id = KirXang.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.3"}
+	title = KirXang.3.t
+	desc = KirXang.3.d
+	
+	picture = GFX_event_jungles
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.3.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+			add_war_support = 15
+		}
+	}
+	option = {
+		name = KirXang.3.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.10
+			add_war_support = 10
+		}
+	}
+	option = {
+		name = KirXang.3.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.8
+		}
+		add_political_power = 30
+	}
+}
+country_event = {
+	id = KirXang.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.4"}
+	title = KirXang.4.t
+	desc = KirXang.4.d
+	
+	picture = GFX_event_jungles
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.4.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+		add_war_support = 25
+	}
+	option = {
+		name = KirXang.4.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.25
+		}
+		add_political_power = -70
+		add_war_support = 10
+	}
+	option = {
+		name = KirXang.4.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.20
+		}
+		add_political_power = -100	
+		add_stability = 10
+	}
+}
+country_event = {
+	id = KirXang.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.5"}
+	title = KirXang.5.t
+	desc = KirXang.5.d
+	
+	picture = GFX_event_jungles
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.5.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_stability = 20
+	}
+	option = {
+		name = KirXang.5.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.30
+		}
+		add_political_power = -70
+		add_stability = 10
+	}
+	option = {
+		name = KirXang.5.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.20
+		}
+		add_political_power = -100	
+		add_stability = -10
+	}
+}
+country_event = {
+	id = KirXang.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KirXang.6"}
+	title = KirXang.6.t
+	desc = KirXang.6.d
+	
+	picture = GFX_event_jungles
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KirXang.6.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.20
+		}
+		}
+	option = {
+		name = KirXang.6.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.20
+		}
+	}
+	option = {
+		name = KirXang.6.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_stability = -10
+	}
+}

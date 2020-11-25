@@ -8,7 +8,7 @@ division_template = {
 	priority = 0
 }
 division_template = {
-	name = "Warriors"		
+	name = "Bannerkirin"		
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -21,10 +21,24 @@ division_template = {
 units = {
 	
 	division = {
-		name = "Warrior Group"
+		name = "First Brigade"
 		location = 16579
-		division_template = "Warriors"
-		start_equipment_factor = 0.5
+		division_template = "Bannerkirin"
+		start_equipment_factor = 1
 		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Second Brigade"
+		location = 16579
+		division_template = "Bannerkirin"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Native Newbies"
+		location = 16579
+		division_template = "Local Levy"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.0
 	}
 }

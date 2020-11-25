@@ -9,10 +9,13 @@ set_research_slots = 2
 # Starting tech
 set_technology = {
     melee_weapons = 1
-    melee_weapons1 = 1
-    pre_gw_artillery = 1
-    transport = 1
-	generic_race = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	kirin_race = 1
+	tech_support = 1
+	tech_kirin_brave = 1
+	tech_kirin_nirik2 = 1
+	tech_kirin_vanguard = 1
 }
 actually_fix_weapon_techs = yes
 
@@ -20,6 +23,8 @@ add_ideas = {
 	agrarian_society
 	 better_science_base
 	 lack_of_scientists
+	closed_economy
+	no_lack_of_scientists
 }
 
 
@@ -29,30 +34,63 @@ set_popularities = {
 
 	democratic = 25
 
-	fascism = 75
+	fascism = 70
 
 	communism = 0
 
-	neutrality = 0
+	neutrality = 5
 
 }
 	
-create_country_leader = {
-	name = "Wildfire Flourish" 
-	desc = ""
-	#picture = ""
-	expire = "1953.3.1"
-	ideology = stratocracy
-	traits = {
-		
-	}
-}
 	
 set_politics = {
 	ruling_party = fascism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 8845
+}
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+    amount = 1000
+    producer = CNT
+}
+create_country_leader = {
+	name = "Fire Stash"
+	desc = ""
+	picture = ""
+	expire = "1953.3.1"
+	ideology = stratocracy
+	traits = {special_forces_commander}
+}
+create_country_leader = {
+	name = "Yellow Flower"
+	desc = ""
+	picture = ""
+	expire = "1953.3.1"
+	ideology = primitive_communism
+	female = yes
+	traits = {cult_leader champion_of_peace_1}
+}
+create_country_leader = {
+	name = "Shadow Bright"
+	desc = ""
+	picture = ""
+	expire = "1953.3.1"
+	ideology = populism
+	traits = {FBK_anti_extremist democratic_sympathies}
+}
+create_country_leader = {
+	name = "Sugar Song"
+	desc = ""
+	picture = ""
+	expire = "1953.3.1"
+	ideology = conservatism
+	female = yes
+	traits = {field_surgeon}
 }
 set_rule = {
 	can_generate_female_aces = yes

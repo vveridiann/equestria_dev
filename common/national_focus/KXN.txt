@@ -1,0 +1,129 @@
+focus_tree = {
+	id = Kir_Xang_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = KXN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2200 y = 850 }
+	
+	
+focus = {
+	id = KXN_Elections
+	icon = GFX_focus_generic_home_defense
+	x = 15
+	y = 0
+
+	cost = 2.9
+	available = {
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: KXN_Elections"
+		country_event = { id = Kir.1 }
+	}
+}
+
+focus = {
+	id = KXN_getting_food
+	prerequisite = { focus = KXN_Elections }
+	icon = GFX_goal_generic_consumer_goods
+	x = 4
+	y = 1
+	relative_position_id = GRU_the_riaporto_congress
+
+	cost = 3.6
+	ai_will_do = {
+		factor = 20
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KXN_getting_food"
+		country_event = { id = Kir.6 }
+	}
+}
+
+focus = {
+	id = KXN_the_linguistic_debate
+	prerequisite = { focus = KXN_Elections }
+	icon = GFX_goal_KTG_Bookstack
+	x = -4
+	y = 1
+	relative_position_id = KXN_Elections
+
+	cost = 3.6
+	ai_will_do = {
+		factor = 20
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KXN_the_linguistic_debate"
+		country_event = { id = Kir.5 }
+	}
+}
+
+focus = {
+	id = KXN_Nirik_Debate
+	prerequisite = { focus = KXN_Elections }
+	icon = GFX_goal_griffon_knights
+	x = -2
+	y = 1
+	relative_position_id = KXN_Elections
+
+	cost = 3.6
+	ai_will_do = {
+		factor = 20
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KXN_Nirik_Debate"
+		country_event = { id = Kir.2 }
+	}
+}
+
+focus = {
+	id = KXN_The_Banners
+	prerequisite = { focus = KXN_Elections }
+	icon = GFX_goal_generic_major_alliance
+	x = 2
+	y = 1
+	relative_position_id = KXN_Elections
+
+	cost = 3.6
+	ai_will_do = {
+		factor = 20
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KXN_The_Banners"
+		country_event = { id = Kir.4 }
+	}
+}
+
+focus = {
+	id = KXN_About_Our_Neighbour
+	prerequisite = { focus = KXN_Elections }
+	icon = GFX_focus_generic_the_giant_wakes
+	x = 0
+	y = 1
+	relative_position_id = KXN_Elections
+
+	cost = 3.6
+	ai_will_do = {
+		factor = 20
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KXN_About_Our_Neighbour"
+		country_event = { id = Kir.3 }
+	}
+}
+}
