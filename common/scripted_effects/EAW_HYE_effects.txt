@@ -1,0 +1,175 @@
+hye_start_promises_missions = {
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_citizens_spy
+		}
+		activate_mission = hye_promise_citizens
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_citizens_warrior
+		}
+		activate_mission = hye_promise_citizens
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_refugees_spy
+		}
+		activate_mission = hye_promise_refugees
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_refugees_warrior
+		}
+		activate_mission = hye_promise_refugees
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_enlarge_cities_spy
+		}
+		activate_mission = hye_promise_enlarge_cities
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_enlarge_cities_warrior
+		}
+		activate_mission = hye_promise_enlarge_cities
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_relocation_spy
+		}
+		activate_mission = hye_promise_relocation
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_relocation_warrior
+		}
+		activate_mission = hye_promise_relocation
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_sand_people_spy
+		}
+		activate_mission = hye_promise_sand_people
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_smugglers_spy
+		}
+		activate_mission = hye_promise_smugglers
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_smugglers_warrior
+		}
+		activate_mission = hye_promise_smugglers
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_monarchy_spy
+		}
+		activate_mission = hye_promise_monarchy
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_monarchy_general
+		}
+		activate_mission = hye_promise_monarchy
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_reclaimed_lands_warrior
+		}
+		activate_mission = hye_promise_reclaimed_lands
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_reclaimed_lands_spy
+		}
+		activate_mission = hye_promise_reclaimed_lands
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_partisans_warrior
+		}
+		activate_mission = hye_promise_partisans_1
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_partisans_spy
+		}
+		activate_mission = hye_promise_partisans_1
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_partisans_warrior
+		}
+		activate_mission = hye_promise_partisans_2
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_partisans_spy
+		}
+		activate_mission = hye_promise_partisans_2
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_partisans_warrior
+		}
+		activate_mission = hye_promise_partisans_3
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_partisans_spy
+		}
+		activate_mission = hye_promise_partisans_3
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_general_victory
+			has_country_flag = hye_promise_partisans_warrior
+		}
+		activate_mission = hye_promise_partisans_4
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_spymaster_victory
+			has_country_flag = hye_promise_partisans_spy
+		}
+		activate_mission = hye_promise_partisans_4
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_promise_army_size
+		}
+		activate_mission = hye_promise_army_size_mission
+	}
+	if = {
+		limit = {
+			has_country_flag = hye_promise_rebuilding
+		}
+		activate_mission = hye_promise_rebuilding_mission
+	}
+}

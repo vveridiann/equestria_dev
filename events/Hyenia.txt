@@ -531,6 +531,7 @@ country_event = { #
 		add_to_variable = { HYE_general_score = 3 } 
 		hidden_effect = {
 			complete_national_focus = HYE_monarchy_support
+			set_country_flag = hye_promise_monarchy_general
 		}
 	}
 }
@@ -546,6 +547,7 @@ country_event = { #
 		add_to_variable = { HYE_spymaster_score = 3 } 
 		hidden_effect = {
 			complete_national_focus = HYE_monarchy_support
+			set_country_flag = hye_promise_monarchy_spy
 		}
 	}
 }
@@ -591,6 +593,7 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.10.b
 		add_to_variable = { HYE_general_score = 1 } 
+		set_country_flag = hye_promise_army_size
 	}
 }
 country_event = { #
@@ -602,6 +605,8 @@ country_event = { #
 	is_triggered_only = yes
 	option = { 
 		name = hyenia_troubles.11.a	
+		add_stability = 0.1
+		add_political_power = 100
 	}
 }
 country_event = { #
@@ -614,6 +619,7 @@ country_event = { #
 	option = { 
 		name = hyenia_troubles.12.a	
 		add_to_variable = { HYE_spymaster_score = 1 } 
+		set_country_flag = hye_promise_rebuilding
 	}
 }
 country_event = { #
@@ -655,8 +661,49 @@ country_event = { #end event
 	desc = hyenia_troubles.15.d
 	#picture = 
 	is_triggered_only = yes
-	option = { 
+	option = { #spy wins by slight margin
+		trigger = {
+			check_variable = { HYE_spymaster_score = 4 }
+		}
+		set_country_flag = hye_spymaster_victory
+		clr_country_flag = hye_promise_monarchy_spy
+		hye_start_promises_missions = yes
 		name = hyenia_troubles.15.a	
+	}
+	option = { #lady inquistor wins by slight margin
+		trigger = {
+			check_variable = { HYE_general_score = 4 }
+		}
+		set_country_flag = hye_general_victory
+		clr_country_flag = hye_promise_monarchy_general
+		hye_start_promises_missions = yes
+		name = hyenia_troubles.15.b
+	}
+	option = { #spy wins by a lot
+		trigger = {
+			check_variable = {
+				var = HYE_spymaster_score
+				value = 4
+				compare = not_equals
+			}
+			check_variable = { HYE_spymaster_score > HYE_general_score }
+		}
+		set_country_flag = hye_spymaster_victory
+		hye_start_promises_missions = yes
+		name = hyenia_troubles.15.c
+	}
+	option = { #lady inquistor wins by a lot
+		trigger = {
+			check_variable = {
+				var = HYE_general_score
+				value = 4
+				compare = not_equals
+			}
+			check_variable = { HYE_general_score > HYE_spymaster_score }
+		}
+		set_country_flag = hye_general_victory
+		hye_start_promises_missions = yes
+		name = hyenia_troubles.15.e
 	}
 }
 

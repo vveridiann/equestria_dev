@@ -81,3 +81,496 @@ HYE_thunder_war_decisions = {
 		}
 	}
 }
+HEY_promises_missions = {
+	hye_promise_citizens = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 730   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_citizens_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_citizens_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			has_stability > 0.65
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_refugees = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 770   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_refugees_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_refugees_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				has_idea = HYE_to_recovery
+			}
+			num_of_civilian_factories > 8
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_enlarge_cities = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 750   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_enlarge_cities_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_enlarge_cities_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			1045 = {
+				industrial_complex > 3
+			}
+			1040 = {
+				industrial_complex > 3
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_relocation = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 750   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_relocation_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_relocation_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			all_controlled_state = {
+				is_core_of = ROOT
+				infrastructure > 2
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_sand_people = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_sand_people_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_sand_people_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			any_owned_state = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				is_owned_by = ROOT
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_smugglers = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_smugglers_spy
+				}
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_smugglers_warrior
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			any_country = {
+				has_volunteers_amount_from = {
+					tag = ROOT
+					count > 0
+				}
+			}	
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_monarchy = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_monarchy_spy
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_monarchy_general
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			has_stability > 0.5	
+			amount_taken_ideas = {
+				amount > 2
+				slots = {
+					political_advisor
+				}
+			}
+			NOT = {
+				has_idea = poverty3
+			}
+			NOT = {
+				has_idea = lack_of_scientists1
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_reclaimed_lands = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_reclaimed_lands_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_reclaimed_lands_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				has_idea = poverty3
+			}
+			NOT = {
+				has_idea = HYE_to_recovery
+			}
+			NOT = {
+				has_idea = zebrica_legacy_of_storm1
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_partisans_1 = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_partisans_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_partisans_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = SCT
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_partisans_2 = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_partisans_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_partisans_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = CST
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_partisans_3 = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_partisans_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_partisans_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = CAM
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_partisans_4 = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_partisans_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_partisans_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = STM
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_army_size_mission = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				has_country_flag = hye_promise_army_size
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			has_army_manpower = { size > 200000 }
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+	hye_promise_rebuilding_mission = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				has_country_flag = hye_promise_rebuilding
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				has_idea = zebrica_legacy_of_storm1
+			}
+			NOT = {
+				has_idea = zebrica_legacy_of_storm2
+			}
+			NOT = {
+				has_idea = zebrica_legacy_of_storm3
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+}
