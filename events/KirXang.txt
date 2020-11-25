@@ -1,4 +1,4 @@
-add_namespace = KirXang
+﻿add_namespace = KirXang
 add_namespace = KirXangWildAce
 
 country_event = {
