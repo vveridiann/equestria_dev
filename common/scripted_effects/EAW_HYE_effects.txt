@@ -173,3 +173,32 @@ hye_start_promises_missions = {
 		activate_mission = hye_promise_rebuilding_mission
 	}
 }
+hye_start_promises_missions_debug = {
+	set_country_flag = hye_spymaster_victory
+	set_country_flag = hye_promise_citizens_spy
+	activate_mission = hye_promise_citizens
+	set_country_flag = hye_promise_refugees_spy
+	activate_mission = hye_promise_refugees
+	set_country_flag = hye_promise_enlarge_cities_spy
+	activate_mission = hye_promise_enlarge_cities
+	set_country_flag = hye_promise_relocation_spy
+	activate_mission = hye_promise_relocation
+	set_country_flag = hye_promise_sand_people_spy
+	activate_mission = hye_promise_sand_people
+	set_country_flag = hye_promise_smugglers_spy
+	activate_mission = hye_promise_smugglers
+	set_country_flag = hye_promise_monarchy_general
+	activate_mission = hye_promise_monarchy
+	set_country_flag = hye_promise_reclaimed_lands_spy
+	activate_mission = hye_promise_reclaimed_lands
+	set_country_flag = hye_promise_partisans_warrior
+	activate_mission = hye_promise_partisans_1
+	activate_mission = hye_promise_partisans_2
+	activate_mission = hye_promise_partisans_3
+	activate_mission = hye_promise_partisans_4
+	activate_mission = hye_promise_reclaimed_lands
+	set_country_flag = hye_promise_rebuilding_mission
+	activate_mission = hye_promise_rebuilding_mission
+	set_country_flag = hye_promise_army_size
+	activate_mission = hye_promise_army_size_mission
+}

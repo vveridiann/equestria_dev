@@ -707,3 +707,15 @@ country_event = { #end event
 	}
 }
 
+country_event = { #debug
+	id = hyenia.112997
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
+	title = hyenia.2.t
+	desc = hyenia.2.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia.2.a
+		hye_start_promises_missions_debug = yes
+	}
+}

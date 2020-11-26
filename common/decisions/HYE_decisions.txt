@@ -243,12 +243,7 @@ HEY_promises_missions = {
 			always = no
 		}
 		available = {
-			any_owned_state = {
-				NOT = {
-					is_core_of = ROOT
-				}
-				is_owned_by = ROOT
-			}
+			land_doctrine_level > 2
 		}
 		timeout_effect = {
 			add_stability = -0.1
