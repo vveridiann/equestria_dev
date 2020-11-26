@@ -32,6 +32,7 @@ tags={
 	"Events"
 	"Map"
 }
-name="Equestria at War Dev"
-supported_version="1.8.1"
-path="C:/Users/andyw/Documents/Paradox Interactive/Hearts of Iron IV/mod/equestria_dev"
+picture="equestria.jpg"
+remote_file_id="1826643372"
+supported_version="1.10.*"
+path="mod/equestria"
