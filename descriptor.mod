@@ -1,4 +1,7 @@
-version="1.8.*"
+version="1.0"
+tags={
+	"Balance"
+}
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -27,12 +30,6 @@ replace_path="history/states"
 replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
-tags={
-	"Alternative History"
-	"Events"
-	"Map"
-}
-picture="equestria.jpg"
-remote_file_id="1826643372"
+name="eaw_dew"
 supported_version="1.10.*"
-path="mod/equestria"
+path="C:/Users/MiszczTheMaste/Documents/Paradox Interactive/Hearts of Iron IV/mod/eaw_dew"
