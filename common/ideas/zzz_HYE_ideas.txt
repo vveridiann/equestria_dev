@@ -102,6 +102,19 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
+		HYE_to_recovery_1 = {
+			picture = anti_soviet_pact #placeholder
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = -0.10
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.025
+				production_factory_efficiency_gain_factor = -0.025
+			}
+		}
 		HYE_construction_buff = {
 			picture = anti_soviet_pact #placeholder
 			removal_cost = -1
@@ -131,7 +144,7 @@ ideas = {
 			}
 		}	
 		HYE_divided_nation = {
-			picture = anti_soviet_pact #placeholder
+			picture = anti_soviet_pact
 			removal_cost = -1
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }	
@@ -143,6 +156,99 @@ ideas = {
 				production_speed_buildings_factor = -0.15
 			}
 		}	
+		HYE_divided_nation_1 = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_gain = -0.25
+				war_support_factor = -0.125
+				conscription_factor = -0.125
+				stability_factor = -0.125
+				production_speed_buildings_factor = -0.075
+			}
+		}	
+		HYE_divided_nation_2 = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_gain = -0.1
+				war_support_factor = -0.05
+				conscription_factor = -0.05
+				stability_factor = -0.05
+			}
+		}	
+		HYE_faith_keepers = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				conscription_factor = 0.05
+				stability_factor = 0.05
+			}
+		}	
+		HYE_faith_keepers2 = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				conscription_factor = 0.05
+				stability_factor = 0.1
+				non_core_manpower = 0.02
+			}
+		}	
+		HYE_military_fanatism = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}	
+		HYE_military_fanatism2 = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				army_org_factor = 0.1
+				army_morale_factor = 0.15
+				army_defence_factor = 0.15 
+				army_attack_factor = 0.075
+				training_time_army_factor = 0.15
+			}
+		}	
+		HYE_officers_primacy = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				high_command_cost_factor = -0.15 
+				air_chief_cost_factor = -0.15 
+				army_chief_cost_factor = -0.15 
+				navy_chief_cost_factor = -0.15 
+				experience_gain_army = 0.02
+			}
+		}
+		HYE_inquisition_primacy = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.25 
+			}
+		}
+	
 	}
 #Political Advisors
 	political_advisor = {

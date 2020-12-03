@@ -201,4 +201,31 @@ hye_start_promises_missions_debug = {
 	activate_mission = hye_promise_rebuilding_mission
 	set_country_flag = hye_promise_army_size
 	activate_mission = hye_promise_army_size_mission
+	add_ideas = HYE_divided_nation
+}
+HYE_lower_divide = {
+	if = {
+		limit = {
+			has_idea = HYE_divided_nation
+		}
+		swap_ideas = {
+			add_idea = HYE_divided_nation_1
+			remove_idea = HYE_divided_nation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = HYE_divided_nation_1
+		}
+		swap_ideas = {
+			add_idea = HYE_divided_nation_2
+			remove_idea = HYE_divided_nation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = HYE_divided_nation_2
+		}
+		remove_ideas = HYE_divided_nation_2
+	}
 }

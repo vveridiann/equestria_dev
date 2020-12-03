@@ -1130,3 +1130,546 @@ shared_focus = {
 		country_event = { id = hyenia_troubles.15  }
 	}
 }
+shared_focus = {
+	id = HYE_the_path_is_dark
+	icon = GFX_goal_artillery
+	x = 26
+	y = 0
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		
+	}
+}
+shared_focus = {
+	id = HYE_protector_of_faith
+	icon = GFX_goal_artillery
+	x = 0
+	y = 1
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_the_path_is_dark
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_country_leader_trait = HYE_protector_of_qaylid
+	}
+}
+shared_focus = {
+	id = HYE_penance_work_camps
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_protector_of_faith
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			remove_idea = HYE_to_recovery
+			add_idea = HYE_to_recovery_1
+		}
+	}
+}
+shared_focus = {
+	id = HYE_rebuild_propaganda_campaign
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_protector_of_faith
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_secret_trials
+	icon = GFX_goal_artillery
+	x = -2
+	y = 3
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_penance_work_camps
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+		add_political_power = 50
+	}
+}
+shared_focus = {
+	id = HYE_witchhunt
+	icon = GFX_goal_artillery
+	x = 0
+	y = 3
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_penance_work_camps
+	}
+	prerequisite = {
+		focus = HYE_rebuild_propaganda_campaign
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_lower_divide = yes
+		add_stability = -0.1
+	}
+}
+shared_focus = {
+	id = HYE_military_foreman
+	icon = GFX_goal_artillery
+	x = 2
+	y = 3
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_rebuild_propaganda_campaign
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_army_primacy
+	icon = GFX_goal_artillery
+	x = 1
+	y = 4
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	available = {
+		has_completed_focus = HYE_military_faith_oath
+	}
+	mutually_exclusive = {
+		focus = HYE_faith_keepers_primacy
+	}
+	prerequisite = {
+		focus = HYE_military_foreman
+	}
+	prerequisite = {
+		focus = HYE_witchhunt
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_officers_primacy
+	}
+}
+shared_focus = {
+	id = HYE_faith_keepers_primacy
+	icon = GFX_goal_artillery
+	x = -1
+	y = 4
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	available = {
+		has_completed_focus = HYE_faith_keepers
+	}
+	mutually_exclusive = {
+		focus = HYE_army_primacy
+	}
+	prerequisite = {
+		focus = HYE_witchhunt
+	}
+	prerequisite = {
+		focus = HYE_secret_trials
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_inquisition_primacy
+	}
+}
+shared_focus = {
+	id = HYE_dawn_has_come
+	icon = GFX_goal_artillery
+	x = 0
+	y = 5
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = HYE_nation_was_reunited
+			NOT = {
+				has_idea = HYE_divided_nation
+				has_idea = HYE_divided_nation_1
+				has_idea = HYE_divided_nation_2
+			}
+		}
+	}
+	prerequisite = {
+		focus = HYE_faith_keepers_primacy
+		focus = HYE_army_primacy
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_qaylid_dervish
+		load_focus_tree = HYE_furasho_radical2
+	}
+}
+shared_focus = {
+	id = HYE_military_faith_oath
+	icon = GFX_goal_artillery
+	x = 4
+	y = 1
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_the_path_is_dark
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_military_fanatism
+	}
+}
+shared_focus = {
+	id = HYE_mandated_meditation
+	icon = GFX_goal_artillery
+	x = 4
+	y = 3
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_military_faith_oath
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1.0
+			uses = 1
+			category = race_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_unity_thought_strenght
+	icon = GFX_goal_artillery
+	x = 4
+	y = 4
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_mandated_meditation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_war_support = 0.1
+	}
+}
+shared_focus = {
+	id = HYE_preaching_officers
+	icon = GFX_goal_artillery
+	x = 4
+	y = 5
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_unity_thought_strenght
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_lower_divide = yes
+	}
+}
+shared_focus = {
+	id = HYE_education_and_knownledge
+	icon = GFX_goal_artillery
+	x = 3
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_military_faith_oath
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = land_doctrine_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = HYE_unresting_training
+	icon = GFX_goal_artillery
+	x = 5
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_military_faith_oath
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			add_idea = HYE_military_fanatism2
+			remove_idea = HYE_military_fanatism
+		}
+	}
+}
+shared_focus = {
+	id = HYE_faith_keepers
+	icon = GFX_goal_artillery
+	x = -4
+	y = 1
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_the_path_is_dark
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_faith_keepers
+	}
+}
+shared_focus = {
+	id = HYE_feed_the_hungry
+	icon = GFX_goal_artillery
+	x = -5
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_faith_keepers
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_poverty = yes
+		add_political_power = -100
+	}
+}
+shared_focus = {
+	id = HYE_teach_the_unskillful
+	icon = GFX_goal_artillery
+	x = -3
+	y = 2
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_faith_keepers
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+		add_political_power = -100
+	}
+}
+shared_focus = {
+	id = HYE_fire_and_sword
+	icon = GFX_goal_artillery
+	x = -4
+	y = 3
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_faith_keepers
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		save_current_manpower = yes
+		every_controlled_state = {
+			limit = {
+				state_population > 20000
+			}
+			add_manpower = -5000
+		}
+		restore_previous_manpower = yes
+	}
+}
+shared_focus = {
+	id = HYE_forceful_persuation
+	icon = GFX_goal_artillery
+	x = -4
+	y = 4
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_fire_and_sword
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_lower_divide = yes
+	}
+}
+shared_focus = {
+	id = HYE_holy_words_of_famka
+	icon = GFX_goal_artillery
+	x = -4
+	y = 5
+	cost = 6
+	relative_position_id = HYE_the_path_is_dark
+	prerequisite = {
+		focus = HYE_forceful_persuation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			remove_idea = HYE_faith_keepers
+			add_idea = HYE_faith_keepers2
+		}
+	}
+}
+shared_focus = {
+	id = HYE_military_driven_industry
+	icon = GFX_goal_artillery
+	x = 24
+	y = 6
+	cost = 6
+	bypass = {
+		has_ideas = war_economy
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = war_economy
+	}
+}
+shared_focus = {
+	id = HYE_arty_prototypes
+	icon = GFX_goal_artillery
+	x = -2
+	y = 1
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_driven_industry
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = arty_bonus
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+	}
+}
+shared_focus = {
+	id = HYE_small_arms_prototypes
+	icon = GFX_goal_artillery
+	x = 2
+	y = 1
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_driven_industry
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+shared_focus = {
+	id = HYE_austerities_for_industry
+	icon = GFX_goal_artillery
+	x = 0
+	y = 1
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_driven_industry
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+		one_random_industrial_complex = yes
+		add_political_power = -100
+	}
+}

@@ -28,22 +28,31 @@ focus_tree = {
 	shared_focus = HYE_famka_death
 }
 
-#focus_tree = {
-#	id = HYE_furasho_radical
-#	country = {
-##		factor = 0
-#		modifier = {
-#			add = 20 #temp while working on this
-#			tag = HYE
-#		}
-#	}
-#	default = no
-#	continuous_focus_position = { x = 0 y = 9999}
-#	shared_focus = HYE_startup
-#	shared_focus = HYE_nationbuilding
-#	shared_focus = HYE_qaylid_start
-#	shared_focus = HYE_hound_who_sold_the_world
-#}	
+focus_tree = {
+	id = HYE_furasho_radical
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_startup
+	shared_focus = HYE_end_of_the_war
+	shared_focus = HYE_famka_death
+	shared_focus = HYE_the_path_is_dark
+}	
+focus_tree = {
+	id = HYE_furasho_radical2
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_startup
+	shared_focus = HYE_end_of_the_war
+	shared_focus = HYE_famka_death
+	shared_focus = HYE_the_path_is_dark
+	shared_focus = HYE_military_driven_industry
+}	
 
 #focus_tree = {
 #	id = HYE_furasho_moderate
