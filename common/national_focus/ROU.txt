@@ -18,6 +18,22 @@ focus_tree = {
 	shared_focus = ROU_revolutionary_economy
 }
 focus_tree = {
+	id = romau_republican_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = ROU
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 290 y = 2500 }
+	shared_focus = ROU_revolutionary_victory
+	shared_focus = ROU_air_1
+	shared_focus = ROU_army_reforms
+	shared_focus = ROU_industrial_reforms
+}
+focus_tree = {
 	id = romau_imperial_red_tree
 	country = {
 		factor = 0

@@ -41,16 +41,37 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_fight_for_romau"
 		country_event = romau.3
-		set_country_flag = ROU_economics_sorted_out
 	}
 }
 
 shared_focus = {
+	id = ROU_revolutionary_victory
+	icon = GFX_goal_revolution
+	x = 15
+	y = 0
+	cost = 1
+	available = {
+		always = no
+	}
+	bypass = {
+		has_country_flag = ROU_chaos_in_the_streets
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_chaos_and_disorder"
+		custom_effect_tooltip = unlock_focuses
+	}
+}
+
+
+shared_focus = {
 	id = ROU_the_commune
 	icon = GFX_goal_ideology_syndicalist
-	x = -10
+	x = -5
 	y = 1
-	relative_position_id = ROU_fight_for_romau
+	relative_position_id = ROU_revolutionary_victory
 	cost = 5
 	ai_will_do = {
 		factor = 100
@@ -62,7 +83,7 @@ shared_focus = {
 		has_country_flag = ROU_commune_won
 	}
 	prerequisite = {
-		focus = ROU_fight_for_romau
+		focus = ROU_revolutionary_victory
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_commune"
@@ -72,8 +93,8 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_destroy_the_archonate
-	icon = GFX_focus_generic_anti_fascist_diplomacy
-	x = 2
+	icon = GFX_HOL_crackdown_natpop
+	x = 3
 	y = 1
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -100,15 +121,15 @@ shared_focus = {
 shared_focus = {
 	id = ROU_remodel_the_palace
 	icon = GFX_goal_HOL_council_communism
-	x = 0
-	y = 1
+	x = 3
+	y = 3
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_the_commune
+		focus = ROU_confiscate_church_assets
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_remodel_the_palace"
@@ -120,7 +141,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_internationalist_doctrine
 	icon = GFX_goal_red_menace_griffonia
-	x = 0
+	x = -1
 	y = 3
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -128,7 +149,7 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_remodel_the_palace
+		focus = ROU_necessary_republican_cooperation
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_internationalist_doctrine"
@@ -141,7 +162,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_confiscate_church_assets
 	icon = GFX_goal_gold
-	x = 3
+	x = 4
 	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -149,7 +170,6 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_chase_out_the_archon
 		focus = ROU_destroy_the_archonate
 	}
 	completion_reward = {
@@ -180,7 +200,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_necessary_republican_cooperation
 	icon = GFX_goal_griffonia_integrate_minors
-	x = 1
+	x = 0
 	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -188,7 +208,10 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_destroy_the_archonate
+		focus = ROU_romau_tuc
+	}
+	prerequisite = {
+		focus = ROU_union_militias
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_necessary_republican_cooperation"
@@ -205,19 +228,56 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
-
 shared_focus = {
-	id = ROU_unions_take_over_factories
-	icon = GFX_goal_syndicalist_industry
-	x = -2
+	id = ROU_revolutionary_economy
+	icon = GFX_goal_chn_red_economic_boom
+	x = -3
 	y = 1
+	relative_position_id = ROU_the_commune
+	cost = 5
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+	focus = ROU_the_commune
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_revolutionary_economy"
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = ROU_jursten_marcher
+	}
+}
+shared_focus = {
+	id = ROU_collectivization_efforts
+	icon = GFX_goal_revolution_tools
+	x = -4
+	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_the_commune
+		focus = ROU_revolutionary_economy
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_collectivization_efforts"
+		add_ideas = ROU_collectives_idea
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = ROU_unions_take_over_factories
+	icon = GFX_goal_syndicalist_industry
+	x = -2
+	y = 2
+	relative_position_id = ROU_the_commune
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_revolutionary_economy
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_unions_take_over_factories"
@@ -246,14 +306,14 @@ shared_focus = {
 	id = ROU_romau_tuc
 	icon = GFX_focus_generic_treaty_red
 	x = -1
-	y = 2
+	y = 1
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_unions_take_over_factories
+		focus = ROU_the_commune
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_romau_tuc"
@@ -270,15 +330,15 @@ shared_focus = {
 shared_focus = {
 	id = ROU_union_militias
 	icon = GFX_goal_red_star_guard
-	x = -3
-	y = 2
+	x = 1
+	y = 1
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_unions_take_over_factories
+		focus = ROU_the_commune
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_union_militias"
@@ -294,7 +354,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_industrial_democracy
 	icon = GFX_goal_socialist_industry
-	x = -2
+	x = -3
 	y = 3
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -302,10 +362,10 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_romau_tuc
+		focus = ROU_collectivization_efforts
 	}
 	prerequisite = {
-		focus = ROU_union_militias
+		focus = ROU_unions_take_over_factories
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_industrial_democracy"
@@ -317,15 +377,12 @@ shared_focus = {
 shared_focus = {
 	id = ROU_union_forts
 	icon = GFX_goal_chn_red_military_factories
-	x = 2
+	x = 1
 	y = 3
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_confiscate_church_assets
 	}
 	prerequisite = {
 		focus = ROU_necessary_republican_cooperation
@@ -369,13 +426,7 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_union_forts
-	}
-	prerequisite = {
-		focus = ROU_industrial_democracy
-	}
-	prerequisite = {
-		focus = ROU_internationalist_doctrine
+		focus = ROU_the_new_romau
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_new_romau"
@@ -629,9 +680,9 @@ shared_focus = {
 shared_focus = {
 	id = ROU_the_republicans
 	icon = GFX_goal_ideology_social_liberal
-	x = -4
+	x = 5
 	y = 1
-	relative_position_id = ROU_fight_for_romau
+	relative_position_id = ROU_revolutionary_victory
 	cost = 5
 	ai_will_do = {
 		factor = 100
@@ -643,7 +694,7 @@ shared_focus = {
 		has_country_flag = ROU_republicans_won
 	}
 	prerequisite = {
-		focus = ROU_fight_for_romau
+		focus = ROU_revolutionary_victory
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_republicans"
@@ -1292,16 +1343,10 @@ shared_focus = {
 	id = ROU_industrial_reforms
 	icon = GFX_goal_generic_production2
 	x = 32
-	y = 1
+	y = 0
 	cost = 5
 	ai_will_do = {
 		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_convene_the_council_of_the_industrialists
-		focus = ROU_holy_economy
-		focus = ROU_republican_economy
-		focus = ROU_revolutionary_economy
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_industrial_reforms"
@@ -1325,7 +1370,6 @@ shared_focus = {
 		factor = 100
 	}
 	available = {
-		has_country_flag = ROU_economics_sorted_out
 		has_government = neutrality
 	}
 	completion_reward = {
@@ -1345,7 +1389,6 @@ shared_focus = {
 		factor = 100
 	}
 	available = {
-		has_country_flag = ROU_economics_sorted_out
 		has_government = fascism
 	}
 	completion_reward = {
@@ -1365,33 +1408,12 @@ shared_focus = {
 		factor = 100
 	}
 	available = {
-		has_country_flag = ROU_economics_sorted_out
 		has_government = democratic
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_republican_economy"
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = ROU_hammenchet
-	}
-}
-
-shared_focus = {
-	id = ROU_revolutionary_economy
-	icon = GFX_goal_ideology_syndicalist
-	x = 35
-	y = 0
-	cost = 5
-	ai_will_do = {
-		factor = 100
-	}
-	available = {
-		has_country_flag = ROU_economics_sorted_out
-		has_government = communism
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_revolutionary_economy"
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = ROU_jursten_marcher
 	}
 }
 
@@ -1458,25 +1480,6 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-}
-
-shared_focus = {
-	id = ROU_collectivization_efforts
-	icon = GFX_goal_revolution_tools
-	x = 36
-	y = 1
-	cost = 8
-	ai_will_do = {
-		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_revolutionary_economy
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_collectivization_efforts"
-		add_ideas = ROU_collectives_idea
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
