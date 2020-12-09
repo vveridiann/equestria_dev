@@ -93,7 +93,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_destroy_the_archonate
-	icon = GFX_HOL_crackdown_natpop
+	icon = GFX_goal_fire
 	x = 3
 	y = 1
 	relative_position_id = ROU_the_commune
@@ -120,7 +120,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_remodel_the_palace
-	icon = GFX_goal_HOL_council_communism
+	icon = GFX_goal_GRI_grover_v_death
 	x = 3
 	y = 3
 	relative_position_id = ROU_the_commune
@@ -131,32 +131,14 @@ shared_focus = {
 	prerequisite = {
 		focus = ROU_confiscate_church_assets
 	}
+	prerequisite = {
+		focus = ROU_union_militias
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_remodel_the_palace"
 		add_ideas = ROU_palace_of_the_people
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-}
-
-shared_focus = {
-	id = ROU_internationalist_doctrine
-	icon = GFX_goal_red_menace_griffonia
-	x = -1
-	y = 3
-	relative_position_id = ROU_the_commune
-	cost = 8
-	ai_will_do = {
-		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_necessary_republican_cooperation
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_internationalist_doctrine"
-		add_war_support = 0.05
-		add_ideas = ANG_internationalism_idea
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -196,10 +178,9 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 }
-
 shared_focus = {
-	id = ROU_necessary_republican_cooperation
-	icon = GFX_goal_griffonia_integrate_minors
+	id = ROU_virtue_and_terror
+	icon = GFX_goal_LEC_monkey
 	x = 0
 	y = 2
 	relative_position_id = ROU_the_commune
@@ -211,7 +192,33 @@ shared_focus = {
 		focus = ROU_romau_tuc
 	}
 	prerequisite = {
-		focus = ROU_union_militias
+		focus = ROU_union_forts
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_virtue_and_terror"
+		swap_ideas = {
+			remove_idea = ROU_the_worst_is_over
+			add_idea = ROU_the_worst_is_over2
+		}
+		
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+shared_focus = {
+	id = ROU_necessary_republican_cooperation
+	icon = GFX_goal_griffonia_integrate_minors
+	x = -1
+	y = 3
+	relative_position_id = ROU_the_commune
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_virtue_and_terror
+	}
+	mutually_exclusive = {
+		focus = ROU_purity_of_the_revolution
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_necessary_republican_cooperation"
@@ -229,8 +236,38 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 shared_focus = {
+	id = ROU_purity_of_the_revolution
+	icon = GFX_goal_HOL_council_communism
+	x = 1
+	y = 3
+	relative_position_id = ROU_the_commune
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_virtue_and_terror
+	}
+	mutually_exclusive = {
+		focus = ROU_necessary_republican_cooperation
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_necessary_republican_cooperation"
+		add_stability = 0.05
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+shared_focus = {
 	id = ROU_revolutionary_economy
-	icon = GFX_goal_chn_red_economic_boom
+	icon = GFX_goal_schemeing
 	x = -3
 	y = 1
 	relative_position_id = ROU_the_commune
@@ -243,6 +280,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_revolutionary_economy"
+		add_popularity = {
+		ideology = neutrality
+		popularity = -0.05
+		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = ROU_jursten_marcher
 	}
@@ -250,7 +291,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_collectivization_efforts
 	icon = GFX_goal_revolution_tools
-	x = -4
+	x = -2
 	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -269,7 +310,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_unions_take_over_factories
 	icon = GFX_goal_syndicalist_industry
-	x = -2
+	x = -4
 	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
@@ -330,15 +371,15 @@ shared_focus = {
 shared_focus = {
 	id = ROU_union_militias
 	icon = GFX_goal_red_star_guard
-	x = 1
-	y = 1
+	x = 2
+	y = 2
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_the_commune
+		focus = ROU_destroy_the_archonate
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_union_militias"
@@ -369,7 +410,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_industrial_democracy"
-		add_ideas = TRD_worker_self_managment_idea
+		swap_ideas = {
+		add_idea = TRD_worker_self_managment_idea
+		remove_idea = ROU_collectives_idea
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -378,14 +422,14 @@ shared_focus = {
 	id = ROU_union_forts
 	icon = GFX_goal_chn_red_military_factories
 	x = 1
-	y = 3
+	y = 1
 	relative_position_id = ROU_the_commune
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_necessary_republican_cooperation
+		focus = ROU_the_commune
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_union_forts"
@@ -426,14 +470,20 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_the_new_romau
+		focus = ROU_industrial_democracy
+	}
+	prerequisite = {
+		focus = ROU_necessary_republican_cooperation
+		focus = ROU_purity_of_the_revolution
+	}
+	prerequisite = {
+		focus = ROU_remodel_the_palace
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_new_romau"
-		add_political_power = 100
 		add_stability = 0.1
 		swap_ideas = {
-			remove_idea = ROU_the_worst_is_over
+			remove_idea = ROU_the_worst_is_over2
 			add_idea = ROU_new_culture
 		}
 	}
@@ -941,9 +991,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = ROU_citizen_guard
-	}
-	prerequisite = {
-		focus = ROU_confiscate_church_assets
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_guard_the_city"
@@ -2605,7 +2652,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_leftist_diplomacy
-	icon = GFX_goal_red_star_green_wreath
+	icon = GFX_goal_red_menace_griffonia
 	x = 0
 	y = 1
 	relative_position_id = ROU_the_new_romau
@@ -2631,6 +2678,7 @@ shared_focus = {
 				modifier = ROU_leftist_unity
 			}
 		}
+		add_ideas = ANG_internationalism_idea
 	}
 }
 

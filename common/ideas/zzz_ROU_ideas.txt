@@ -60,7 +60,7 @@ ideas = {
 			has_completed_focus = ROU_revolutionary_economy
 			}
 
-			traits = { council_communist }
+			traits = { socialist_director }
 		}
 		ROU_anders_fynnister = {
 			picture = unknown_advisor_griffon
@@ -623,6 +623,23 @@ ideas = {
 	}
 
 	country = {
+		ROU_the_worst_is_over2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
 		ROU_palace_of_the_people = {
 			allowed = {
 				always = no
@@ -1153,7 +1170,24 @@ ideas = {
 			picture = FRA_factory_strikes
 			modifier = {
 				industrial_capacity_factory = 0.10
-				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+	}
+	country = {
+		ROU_collectives_idea2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FRA_factory_strikes
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
 			}
 		}
 	}
