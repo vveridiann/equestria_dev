@@ -1,93 +1,12 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
+		name = "BLITZKREIG_NAME"
+		desc = "BLITZKREIG_DESC"
 		date = 1007.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "EQS"
+		default_country = "GRI"
 		default = yes
 
-		"EQS"={
-			history = "EQS_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				home_of_ponies
-				alicorn_sisters
-				friendly_harmony
-			}
-			focuses = {
-				Ministry_of_defense
-				Friendship_Games
-				unicorn_academy_f
-			}
-		}
-		"CRY"={
-			history = "CRY_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				crystal_heart
-				royal_family
-				sombra_threat
-			}
-			focuses = {
-				CRY_oldorder
-				CRY_comrevolution
-				CRY_oldking
-			}
-		}
-		"STG"={
-			history = "STG_GATHERING_STORM_DESC"
-			ideology = communism
-			ideas = {
-				severe_famine
-				incomplete_industrialization
-			}
-			focuses = {
-				vasya_2
-				the_palace
-				manifesto_of_materialism
-			}
-		}
-		"CHN"={
-			history = "CHN_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				canterlot_defeat
-				political_divisions
-				CHN_GRI_Attache_For_CHN
-			}
-			focuses = {
-				unite_the_people
-				Chrysalis
-				demand_equestria
-			}
-		}
-		"OLE"={
-			history = "OLE_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				OLE_currupt_government
-				OLE_raising_dissent
-			}
-			focuses = {
-				OLE_proclaim_deers_republic
-				OLE_squash_the_bugs
-				OLE_new_vikings
-			}
-		}
-		# "NCR"={
-		# 	history = "NCR_GATHERING_STORM_DESC"
-		# 	ideology = neutrality
-		# 	ideas = {
-		# 		NCR_homeland_exports
-		# 		NCR_pony_minorities
-		# 	}
-		# 	focuses = {
-		# 		NCR_give_the_bear_an_ushanka
-		# 		NCR_army_better_rangers
-		# 		NCR_war_with_equestria
-		# 	}
-		# }
 		"GRI"={
 			history = "GRI_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -116,6 +35,88 @@ bookmarks = {
 				RCT_fabian_strategy
 			}
 		}
+		"JER"={
+			history = "JER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				JER_memories
+			}
+			focuses = {
+				JER_to_kill_an_idea
+				JER_election_radicals
+				JER_election_democracy
+			}
+		}
+		"WNG"={
+			history = "WNG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				WNG_rampant_unemployment
+				WNG_famine
+				WNG_political_deadlock
+			}
+			focuses = {
+				WNG_harmony_with_griffon_characterises
+				WNG_wingbard_empire
+				WNG_wingbardy_forever
+			}
+		}
+		"LCT"={
+			history = "LCT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				LCT_defenders_of_the_east
+				LCT_guilds
+				LCT_rising_militarism
+			}
+			focuses = {
+				LCT_princely_restoration
+				LCT_river_empire
+				LCT_curtail_the_militery
+			}
+		}
+		"FAT"={
+			history = "FAT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FAT_republican_struggle
+				FAT_The_Cloudburian_Minority_idea
+				FAT_unruly_army_idea
+		    }
+			focuses = {
+				FST_new_dawn_for_the_republic
+			    FAT_radicalize_the_party
+				FAT_the_iron_marshal
+			}
+		}
+		"EQC"={
+			history = "EQC_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				EQC_great_depression_1
+				EQC_griffon_minorities1
+				equestrian_overlord
+			}
+			focuses = {
+				EQC_royal_visit
+				EQC_the_election
+				EQC_nmac_spirit
+			}
+		}
+		
+		# "NCR"={
+		# 	history = "NCR_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		NCR_homeland_exports
+		# 		NCR_pony_minorities
+		# 	}
+		# 	focuses = {
+		# 		NCR_give_the_bear_an_ushanka
+		# 		NCR_army_better_rangers
+		# 		NCR_war_with_equestria
+		# 	}
+		# }
 		"SOL"={
 			history = "RANDOM_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -224,22 +225,7 @@ bookmarks = {
 				LSC_hellquill_harcom
 			}
 		}
-		
-		"FAT"={
-			minor = yes
-			history = "FAT_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				FAT_republican_struggle
-				FAT_The_Cloudburian_Minority_idea
-				FAT_unruly_army_idea
-		    }
-			focuses = {
-				FST_new_dawn_for_the_republic
-			    FAT_radicalize_the_party
-				FAT_the_iron_marshal
-			}
-		}
+	
 		"GRF"={
 			minor = yes
 			history = "GRF_GATHERING_STORM_DESC"
@@ -255,20 +241,20 @@ bookmarks = {
 				GRF_free_elections
 			}
 		}
-		 #"STW"={
-		#	minor = yes
-		#	history = "STW_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	ideas = {
-		#		STW_absent_ruler
-		#		STW_modernisation_restistance
-		#	}
-		#	focuses = {
-		#		STW_our_own_nation
-		#		STW_better_red_than_dead
-		#		STW_strawberry_rules_archons_fucking_dead
-		#	}
-		 #}
+		 "STW"={
+			minor = yes
+			history = "STW_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				STW_absent_ruler
+				STW_modernisation_restistance
+			}
+			focuses = {
+				STW_our_own_nation
+				STW_better_red_than_dead
+				STW_strawberry_rules_archons_fucking_dead
+			}
+		 }
 		 "ANG"={
 			minor = yes
 			history = "ANG_GATHERING_STORM_DESC"
@@ -471,21 +457,6 @@ bookmarks = {
 			#	LAK_industry_technology
 			#}
 		 #}
-		#"WNG"={
-		#	minor = yes
-		#	history = "WNG_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	ideas = {
-		#		WNG_rampant_unemployment
-		#		WNG_famine
-		#		WNG_political_deadlock
-		#	}
-		#	focuses = {
-		#		WNG_harmony_with_griffon_characterises
-		#		WNG_wingbard_empire
-		#		WNG_wingbardy_forever
-		#	}
-		#}
 		#"JER"={
 		 #	minor = yes
 			#history = "JER_GATHERING_STORM_DESC"
