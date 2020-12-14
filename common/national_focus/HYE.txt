@@ -9,6 +9,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 }
@@ -23,6 +24,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
@@ -35,6 +37,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
@@ -47,6 +50,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 0 y = 9999}
+	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death

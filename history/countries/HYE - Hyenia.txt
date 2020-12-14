@@ -59,7 +59,19 @@ add_ideas = {
 	partial_economic_mobilisation
 	limited_conscription
 }
-
+complete_national_focus = HYE_history
+complete_national_focus = HYE_collapse_the_tunnels
+complete_national_focus = HYE_fighting_retreat
+complete_national_focus = HYE_whatever_aid_we_can_find
+complete_national_focus = HYE_rise_of_the_dervishes
+complete_national_focus = HYE_no_fronts_no_battles
+complete_national_focus = HYE_faith_not_blood
+complete_national_focus = HYE_submission_of_generals
+complete_national_focus = HYE_in_shadows
+complete_national_focus = HYE_remember_those_left_behind
+complete_national_focus = HYE_rekindle_flame
+complete_national_focus = HYE_unbroken_an_undaunted
+complete_national_focus = HYE_the_long_night
 set_country_flag = better_science_base_unlocked
 
 set_popularities = {

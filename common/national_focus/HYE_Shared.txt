@@ -1,7 +1,260 @@
+
+shared_focus = {
+	id = HYE_history
+	icon = GFX_goal_bombs_away
+	x = 2
+	y = 0
+	cost = 1
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_history1
+	}
+}
+shared_focus = {
+	id = HYE_collapse_the_tunnels
+	icon = GFX_goal_bombs_away
+	x = -1
+	y = 1
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_history
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_collapse_the_tunnels1
+	}
+}
+shared_focus = {
+	id = HYE_fighting_retreat
+	icon = GFX_goal_bombs_away
+	x = 1
+	y = 1
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_history
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_fighting_retreat1
+	}
+}
+shared_focus = {
+	id = HYE_whatever_aid_we_can_find
+	icon = GFX_goal_bombs_away
+	x = 0
+	y = 2
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_history
+	}
+	prerequisite = {
+		focus = HYE_fighting_retreat
+	}
+	prerequisite = {
+		focus = HYE_collapse_the_tunnels
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_whatever_aid_we_can_find1
+	}
+}
+shared_focus = {
+	id = HYE_rise_of_the_dervishes
+	icon = GFX_goal_bombs_away
+	x = 0
+	y = 2
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_whatever_aid_we_can_find
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		set_party_name = { 
+			ideology = democratic 
+			name = HYE_democratic_party 
+			long_name = HYE_democratic_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+	}
+}
+shared_focus = {
+	id = HYE_no_fronts_no_battles
+	icon = GFX_goal_bombs_away
+	x = -1
+	y = 3
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_rise_of_the_dervishes
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_no_fronts_no_battles1
+	}
+}
+shared_focus = {
+	id = HYE_faith_not_blood
+	icon = GFX_goal_bombs_away
+	x = 1
+	y = 3
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_rise_of_the_dervishes
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_faith_not_blood1
+	}
+}
+shared_focus = {
+	id = HYE_submission_of_generals
+	icon = GFX_goal_bombs_away
+	x = 2
+	y = 4
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_faith_not_blood
+	}
+	prerequisite = {
+		focus = HYE_rise_of_the_dervishes
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_submission_of_generals1
+	}
+}
+shared_focus = {
+	id = HYE_in_shadows
+	icon = GFX_goal_bombs_away
+	x = -2
+	y = 4
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_no_fronts_no_battles
+	}
+	prerequisite = {
+		focus = HYE_rise_of_the_dervishes
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_in_shadows1
+	}
+}
+shared_focus = {
+	id = HYE_remember_those_left_behind
+	icon = GFX_goal_bombs_away
+	x = -1
+	y = 5
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_in_shadows
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_remember_those_left_behind1
+	}
+}
+shared_focus = {
+	id = HYE_rekindle_flame
+	icon = GFX_goal_bombs_away
+	x = 1
+	y = 5
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_submission_of_generals
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_rekindle_flame1
+	}
+}
+shared_focus = {
+	id = HYE_unbroken_an_undaunted
+	icon = GFX_goal_bombs_away
+	x = 0
+	y = 6
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_rekindle_flame
+	}
+	prerequisite = {
+		focus = HYE_remember_those_left_behind
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_unbroken_an_undaunted1
+	}
+}
+shared_focus = {
+	id = HYE_the_long_night
+	icon = GFX_goal_bombs_away
+	x = 0
+	y = 7
+	cost = 1
+	relative_position_id = HYE_history
+	prerequisite = {
+		focus = HYE_unbroken_an_undaunted
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
+		custom_effect_tooltip = HYE_the_long_night1
+	}
+}
 shared_focus = {
 	id = HYE_startup
 	icon = GFX_goal_bombs_away
-	x = 6
+	x = 9
 	y = 0
 	cost = 1
 	available = {
@@ -348,7 +601,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_end_of_the_war
 	icon = GFX_goal_artillery
-	x = 14
+	x = 16
 	y = 0
 	cost = 1
 	available = {
@@ -774,7 +1027,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_famka_death
 	icon = GFX_goal_artillery
-	x = 6
+	x = 8
 	y = 8
 	cost = 6
 	ai_will_do = {
@@ -1133,7 +1386,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_the_path_is_dark
 	icon = GFX_goal_artillery
-	x = 26
+	x = 28
 	y = 0
 	cost = 6
 	ai_will_do = {
@@ -1593,7 +1846,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_military_driven_industry
 	icon = GFX_goal_artillery
-	x = 24
+	x = 26
 	y = 6
 	cost = 6
 	bypass = {
