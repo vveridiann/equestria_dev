@@ -88,14 +88,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_startup"
-		set_party_name = { 
-			ideology = democratic 
-			name = HYE_democratic_party 
-			long_name = HYE_democratic_party_long
-		}
-		set_politics = {
-			ruling_party = democratic
-		}
+		custom_effect_tooltip = HYE_rise_of_the_dervishes1
 	}
 }
 shared_focus = {

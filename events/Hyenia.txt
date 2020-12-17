@@ -717,6 +717,6 @@ country_event = { #debug
 	option = {
 		name = hyenia.2.a
 		hye_start_promises_missions_debug = yes
-		load_focus_tree = HYE_furasho_radical
+		load_focus_tree = HYE_furasho_radical2
 	}
 }
