@@ -239,6 +239,9 @@ ideas = {
     
 			available = {
 				NOT = {
+					has_country_flag = cannot_change_economic_laws
+				}
+				NOT = {
 					has_country_flag = war_economy_only_flag
 				}
 				NOT = {
@@ -272,6 +275,9 @@ ideas = {
 		low_economic_mobilisation = {
 
 			available = {
+				NOT = {
+					has_country_flag = cannot_change_economic_laws
+				}
 				NOT = {
 					has_country_flag = war_economy_only_flag
 				}
@@ -320,6 +326,9 @@ ideas = {
 		partial_economic_mobilisation = {
 
 			available = {
+				NOT = {
+					has_country_flag = cannot_change_economic_laws
+				}
 				if = {
 					limit = { has_country_flag = is_maresoc }
 					has_country_flag = is_maresoc
@@ -379,6 +388,9 @@ ideas = {
 		war_economy = {
 
 			available = {
+				NOT = {
+					has_country_flag = cannot_change_economic_laws
+				}
 				if = {
 					limit = { has_country_flag = is_maresoc }
 					has_country_flag = is_maresoc
@@ -450,6 +462,9 @@ ideas = {
 
 
 			available = {
+				NOT = {
+					has_country_flag = cannot_change_economic_laws
+				}
 				if = {
 					limit = { has_country_flag = is_maresoc }
 					has_country_flag = is_maresoc

@@ -32,6 +32,32 @@ ideas = {
 				industry_air_damage_factor = 0.1
 			}
 		}
+		military_society = {
+			cost = -1
+			traits = { society_idea }
+			picture = outdated_industry
+			allowed = {
+				always = yes
+			}
+			visible = { 
+				has_idea = military_society
+			}
+			available = {
+				has_idea = military_society
+			}			
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_industrial_complex_factor = -0.3
+				research_speed_factor = -0.10
+			}
+		}
 		modern_society = {
 			
 			cost = -1

@@ -4,6 +4,32 @@ ideas = {
 		law = yes
 		use_list_view = yes
 		
+		religious_indoctrination = {
+			cost = -1
+			traits = { illiteracy_idea }
+			picture = old_lack_of_scientists
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+				has_idea = religious_indoctrination
+			}
+			visible = {
+				has_idea = religious_indoctrination
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				compliance_gain = 0.025
+				drift_defence_factor = 0.9
+				research_speed_factor = -0.15
+			}
+		}
+
 		no_lack_of_scientists = {
 			cost = -1
 			traits = { illiteracy_idea }

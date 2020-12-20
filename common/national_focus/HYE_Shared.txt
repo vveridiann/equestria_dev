@@ -1423,10 +1423,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		swap_ideas = {
-			remove_idea = HYE_to_recovery
-			add_idea = HYE_to_recovery_1
-		}
+		decrease_storm_king = yes
 	}
 }
 shared_focus = {
@@ -1850,7 +1847,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		add_ideas = war_economy
+		add_ideas = tot_economic_mobilisation
+		hidden_effect = {
+			set_country_flag = cannot_change_economic_laws
+		}
+		custom_effect_tooltip = HYE_total_mob_till_industrialised
 	}
 }
 shared_focus = {
@@ -1917,5 +1918,801 @@ shared_focus = {
 		one_random_industrial_complex = yes
 		one_random_industrial_complex = yes
 		add_political_power = -100
+	}
+}
+shared_focus = {
+	id = HYE_agricultural_reorganisation
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_austerities_for_industry
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			remove_idea = agrarian_society
+			add_idea = pre_industrial_society
+		}
+		add_stability = -0.3
+	}
+}
+shared_focus = {
+	id = HYE_argiculture_vehicles_manufacturies
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	available = {
+		has_tech = motorised_infantry
+	}
+	prerequisite = {
+		focus = HYE_agricultural_reorganisation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_shovel_in_every_pawn
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_agricultural_reorganisation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		every_owned_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HYE_small_arms_manufacturies
+	icon = GFX_goal_artillery
+	x = 3
+	y = 3
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	available = {
+		has_tech = infantry_weapons
+	}
+	prerequisite = {
+		focus = HYE_agricultural_reorganisation
+	}
+	prerequisite = {
+		focus = HYE_small_arms_prototypes
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_arty_manufacturies
+	icon = GFX_goal_artillery
+	x = -3
+	y = 3
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	available = {
+		has_tech = gw_artillery
+	}
+	prerequisite = {
+		focus = HYE_agricultural_reorganisation
+	}
+	prerequisite = {
+		focus = HYE_arty_prototypes
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_explosive_mining
+	icon = GFX_goal_artillery
+	x = -2
+	y = 4
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_arty_manufacturies
+	}
+	prerequisite = {
+		focus = HYE_shovel_in_every_pawn
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_resource = {
+			type = steel
+			amount = 7
+			state = 1040
+		}
+		add_resource = {
+			type = crystals
+			amount = 4
+			state = 1040
+		}
+		add_resource = {
+			type = crystals
+			amount = 4
+			state = 1045
+		}
+		add_resource = {
+			type = aluminium
+			amount = 12
+			state = 1045
+		}
+		add_resource = {
+			type = steel
+			amount = 7
+			state = 1045
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+		add_stability = -0.05
+	}
+}
+shared_focus = {
+	id = HYE_armoured_cars_experiments
+	icon = GFX_goal_artillery
+	x = 2
+	y = 4
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_small_arms_manufacturies
+	}
+	prerequisite = {
+		focus = HYE_argiculture_vehicles_manufacturies
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = armored_car1
+			bonus = 1.0
+			uses = 1
+			category = motorized_equipment
+		}
+	}
+}
+shared_focus = {
+	id = HYE_armoured_cars_factories
+	icon = GFX_goal_artillery
+	x = 4
+	y = 5
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_armoured_cars_experiments
+	}
+	available = {
+		has_tech = armored_car1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_armoured_cars_factories2
+	icon = GFX_goal_artillery
+	x = 3
+	y = 8
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_armoured_cars_factories
+	}
+	available = {
+		has_tech = armored_car1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_old_tunnels_excavation
+	icon = GFX_goal_artillery
+	x = -4
+	y = 5
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_explosive_mining
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry_bonus
+			bonus = 1.0
+			uses = 2
+			category = excavation_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_old_tunnels_excavation2
+	icon = GFX_goal_artillery
+	x = -3
+	y = 8
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_old_tunnels_excavation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry_bonus
+			bonus = 1.0
+			uses = 2
+			category = excavation_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_military_economic_council
+	icon = GFX_goal_artillery
+	x = 0
+	y = 5
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_shovel_in_every_pawn
+	}
+	prerequisite = {
+		focus = HYE_argiculture_vehicles_manufacturies
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = HYE_industry_consolidation
+	icon = GFX_goal_artillery
+	x = 2
+	y = 6
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_economic_council
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+		increase_society_development_gradually_with_tt = yes
+	}
+}
+shared_focus = {
+	id = HYE_ciidacirood_expansion
+	icon = GFX_goal_artillery
+	x = -2
+	y = 6
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_economic_council
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		1040 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}	
+		}
+		increase_society_development_gradually_with_tt = yes
+	}
+}
+shared_focus = {
+	id = HYE_thunderbowl_restructurisation
+	icon = GFX_goal_artillery
+	x = 0
+	y = 6
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_military_economic_council
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradually_with_tt = yes
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_factories_mil
+	icon = GFX_goal_artillery
+	x = 1
+	y = 7
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_industry_consolidation
+	}
+	prerequisite = {
+		focus = HYE_thunderbowl_restructurisation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_factories_civ
+	icon = GFX_goal_artillery
+	x = -1
+	y = 7
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_ciidacirood_expansion
+	}
+	prerequisite = {
+		focus = HYE_thunderbowl_restructurisation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_economy_ready_for_war
+	icon = GFX_goal_artillery
+	x = 0
+	y = 8
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	available = {
+		has_idea = pre_industrial_society3
+	}
+	prerequisite = {
+		focus = HYE_factories_civ
+	}
+	prerequisite = {
+		focus = HYE_factories_mil
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradually_with_tt = yes
+		if = {
+			limit = {
+				has_idea = tot_economic_mobilisation
+			}
+			add_ideas = war_economy
+		}
+		decrease_storm_king = yes
+		clr_country_flag = cannot_change_economic_laws
+	}
+}
+shared_focus = {
+	id = HYE_distribute_leftovers
+	icon = GFX_goal_artillery
+	x = 1
+	y = 9
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_economy_ready_for_war
+	}
+	prerequisite = {
+		focus = HYE_old_tunnels_excavation2
+	}
+	prerequisite = {
+		focus = HYE_armoured_cars_factories2
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_military_schools
+	icon = GFX_goal_artillery
+	x = -1
+	y = 9
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_economy_ready_for_war
+	}
+	prerequisite = {
+		focus = HYE_old_tunnels_excavation2
+	}
+	prerequisite = {
+		focus = HYE_armoured_cars_factories2
+	}
+	available= {
+		NOT = {
+			has_idea = HYE_faith_keepers2
+		}
+		NOT = {
+			has_idea = HYE_inquisition_primacy 
+		}
+		NOT = {
+			has_idea = HYE_inquisition_state 
+		}
+	}
+	bypass = {
+		has_idea = religious_indoctrination
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+	}
+}
+
+shared_focus = {
+	id = HYE_internal_affairs
+	icon = GFX_goal_artillery
+	x = 35
+	y = 6
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HYE_formal_state_education
+	icon = GFX_goal_artillery
+	x = -2
+	y = 1
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	prerequisite = {
+		focus = HYE_internal_affairs
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_abbadon_local_laws
+	icon = GFX_goal_artillery
+	x = 2
+	y = 1
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	prerequisite = {
+		focus = HYE_internal_affairs
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HYE_formalize_keepers_as_police
+	icon = GFX_goal_artillery
+	x = 0
+	y = 1
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	prerequisite = {
+		focus = HYE_internal_affairs
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+	}
+}
+shared_focus = {
+	id = HYE_expand_faith_keepers_role
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	available = {
+		has_idea = HYE_faith_keepers2
+	}
+	prerequisite = {
+		focus = HYE_formalize_keepers_as_police
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_stability = 0.1
+	}
+}
+shared_focus = {
+	id = HYE_forced_work_for_minor_crimes
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	prerequisite = {
+		focus = HYE_formalize_keepers_as_police
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_inquisitorial_state
+	icon = GFX_goal_artillery
+	x = 0
+	y = 3
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	available = {
+		has_idea = HYE_faith_keepers2
+		has_idea = HYE_inquisition_primacy
+	}
+	prerequisite = {
+		focus = HYE_forced_work_for_minor_crimes
+	}
+	prerequisite = {
+		focus = HYE_expand_faith_keepers_role
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		remove_ideas = HYE_faith_keepers2
+		remove_ideas = HYE_inquisition_primacy
+		add_ideas = HYE_inquisition_state
+	}
+}
+shared_focus = {
+	id = HYE_religious_indoctrination
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 6
+	relative_position_id = HYE_internal_affairs
+	available = {
+		has_idea = lack_of_scientists3
+	}
+	prerequisite = {
+		focus = HYE_inquisitorial_state
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			remove_idea = lack_of_scientists3
+			add_idea = religious_indoctrination
+		}
+	}
+}
+shared_focus = {
+	id = HYE_military_directionism
+	icon = GFX_goal_artillery
+	x = 40
+	y = 6
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		army_experience = 20
+	}
+}
+shared_focus = {
+	id = HYE_superriof_firepower
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	mutually_exclusive = {
+		focus = HYE_grand_battleplan
+	}
+	prerequisite = {
+		focus = HYE_military_directionism
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cat_superior_firepower
+			bonus = 1.0
+			uses = 2
+			category = cat_superior_firepower
+		}
+	}
+}
+shared_focus = {
+	id = HYE_grand_battleplan
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	mutually_exclusive = {
+		focus = HYE_superriof_firepower
+	}
+	prerequisite = {
+		focus = HYE_military_directionism
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cat_grand_battle_plan
+			bonus = 1.0
+			uses = 2
+			category = cat_grand_battle_plan
+		}
+	}
+}
+shared_focus = {
+	id = HYE_military_state
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = hye_had_industrialised
+			OR = {
+				has_idea = outdated_industry
+				has_idea = outdated_industry2
+				has_idea = modern_society
+			}
+		}
+		has_idea = HYE_officers_primacy
+		has_idea = HYE_military_fanatism2
+	}
+	prerequisite = {
+		focus = HYE_grand_battleplan
+		focus = HYE_superriof_firepower
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		remove_ideas = HYE_officers_primacy
+		remove_ideas = HYE_military_fanatism2
+		add_ideas = HYE_military_state_idea
+	}
+}
+shared_focus = {
+	id = HYE_military_state2
+	icon = GFX_goal_artillery
+	x = 0
+	y = 3
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = hye_had_industrialised
+			OR = {
+				has_idea = outdated_industry
+				has_idea = outdated_industry2
+				has_idea = modern_society
+			}
+		}
+		has_idea = HYE_officers_primacy
+		has_idea = HYE_military_fanatism2
+	}
+	prerequisite = {
+		focus = HYE_grand_battleplan
+		focus = HYE_superriof_firepower
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = military_society
 	}
 }
