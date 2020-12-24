@@ -1020,8 +1020,8 @@ shared_focus = {
 shared_focus = {
 	id = HYE_famka_death
 	icon = GFX_goal_artillery
-	x = 8
-	y = 8
+	x = 9
+	y = 7
 	cost = 6
 	ai_will_do = {
 		factor = 10
@@ -1379,7 +1379,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_the_path_is_dark
 	icon = GFX_goal_artillery
-	x = 28
+	x = 25
 	y = 0
 	cost = 6
 	ai_will_do = {
@@ -2407,9 +2407,6 @@ shared_focus = {
 	}
 	available= {
 		NOT = {
-			has_idea = HYE_faith_keepers2
-		}
-		NOT = {
 			has_idea = HYE_inquisition_primacy 
 		}
 		NOT = {
@@ -2427,11 +2424,35 @@ shared_focus = {
 		decrease_illiteracy = yes
 	}
 }
+shared_focus = {
+	id = HYE_vanguard_of_light
+	icon = GFX_goal_artillery
+	x = 0
+	y = 10
+	cost = 6
+	relative_position_id = HYE_military_driven_industry
+	prerequisite = {
+		focus = HYE_distribute_leftovers
+	}
+	prerequisite = {
+		focus = HYE_military_schools
+	}
+	available= {
+		has_idea = religious_indoctrination
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = modern_society
+	}
+}
 
 shared_focus = {
 	id = HYE_internal_affairs
 	icon = GFX_goal_artillery
-	x = 35
+	x = 32
 	y = 6
 	cost = 6
 	ai_will_do = {
@@ -2671,8 +2692,6 @@ shared_focus = {
 				has_idea = modern_society
 			}
 		}
-		has_idea = HYE_officers_primacy
-		has_idea = HYE_military_fanatism2
 	}
 	prerequisite = {
 		focus = HYE_grand_battleplan
