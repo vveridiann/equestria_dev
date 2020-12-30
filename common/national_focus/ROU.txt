@@ -14,8 +14,6 @@ focus_tree = {
 	shared_focus = ROU_army_reforms
 	shared_focus = ROU_convene_the_council_of_the_industrialists
 	shared_focus = ROU_holy_economy
-	shared_focus = ROU_republican_economy
-	shared_focus = ROU_revolutionary_economy
 }
 focus_tree = {
 	id = romau_republican_focus_tree
@@ -49,8 +47,6 @@ focus_tree = {
 	shared_focus = ROU_army_reforms
 	shared_focus = ROU_convene_the_council_of_the_industrialists
 	shared_focus = ROU_holy_economy
-	shared_focus = ROU_republican_economy
-	shared_focus = ROU_revolutionary_economy
 }
 focus_tree = {
 	id = romau_imperial_eyr_tree
@@ -68,8 +64,6 @@ focus_tree = {
 	shared_focus = ROU_army_reforms
 	shared_focus = ROU_convene_the_council_of_the_industrialists
 	shared_focus = ROU_holy_economy
-	shared_focus = ROU_republican_economy
-	shared_focus = ROU_revolutionary_economy
 }
 focus_tree = {
 	id = romau_imperial_republican_tree
@@ -87,8 +81,6 @@ focus_tree = {
 	shared_focus = ROU_army_reforms
 	shared_focus = ROU_convene_the_council_of_the_industrialists
 	shared_focus = ROU_holy_economy
-	shared_focus = ROU_republican_economy
-	shared_focus = ROU_revolutionary_economy
 }
 focus_tree = {
 	id = romau_ravioli_tree
@@ -106,6 +98,4 @@ focus_tree = {
 	shared_focus = ROU_army_reforms
 	shared_focus = ROU_convene_the_council_of_the_industrialists
 	shared_focus = ROU_holy_economy
-	shared_focus = ROU_republican_economy
-	shared_focus = ROU_revolutionary_economy
 }

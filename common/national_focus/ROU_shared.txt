@@ -85,6 +85,9 @@ shared_focus = {
 	prerequisite = {
 		focus = ROU_revolutionary_victory
 	}
+	mutually_exclusive = {
+	focus = ROU_the_republicans
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_commune"
 		custom_effect_tooltip = ROU_commune_won_tp
@@ -746,6 +749,9 @@ shared_focus = {
 	prerequisite = {
 		focus = ROU_revolutionary_victory
 	}
+	mutually_exclusive = {
+	focus = ROU_the_commune
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_the_republicans"
 		custom_effect_tooltip = ROU_republicans_won_tp
@@ -754,13 +760,16 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_cooperate_with_syndies
-	icon = GFX_goal_generic_war_with_comintern
-	x = 3
+	icon = GFX_goal_HOL_ban_paramilitary_left
+	x = 0
 	y = 2
 	relative_position_id = ROU_the_republicans
 	cost = 8
 	ai_will_do = {
 		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_the_new_romau_council
 	}
 	prerequisite = {
 		focus = ROU_memories_of_the_revolution
@@ -785,9 +794,53 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = ROU_reward_our_benefactors
+	icon = GFX_goal_shadow_government
+	x = -1
+	y = 3
+	relative_position_id = ROU_the_republicans
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_cooperate_with_syndies
+	}
+	mutually_exclusive = {
+	focus = ROU_clean_the_streets
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_reward_our_benefactors"
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = ROU_clean_the_streets
+	icon = GFX_goal_generic_investigation
+	x = 1
+	y = 3
+	relative_position_id = ROU_the_republicans
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_cooperate_with_syndies
+	}
+	mutually_exclusive = {
+	focus = ROU_reward_our_benefactors
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_clean_the_streets"
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
 	id = ROU_memories_of_the_revolution
 	icon = GFX_goal_graveyard
-	x = 2
+	x = 1
 	y = 1
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -819,9 +872,28 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = ROU_freedom_of_worship
+	icon = GFX_HON_peace_in_our_time
+	x = -4
+	y = 2
+	relative_position_id = ROU_the_republicans
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = ROU_chase_out_the_archon
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_freedom_of_worship"
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
 	id = ROU_citizen_guard
-	icon = GFX_goal_conscription
-	x = -1
+	icon = GFX_goal_FAT_army
+	x = -2
 	y = 2
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -848,8 +920,8 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_chase_out_the_archon
-	icon = GFX_goal_demand_sudetenland
-	x = -2
+	icon = GFX_goal_purge_opposition
+	x = -3
 	y = 1
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -878,7 +950,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_the_new_romau_council
 	icon = GFX_goal_government_icon
-	x = 0
+	x = -1
 	y = 1
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -907,7 +979,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_new_education
 	icon = GFX_goal_technological_supremacy
-	x = 0
+	x = 3
 	y = 3
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -915,7 +987,10 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_the_new_romau_council
+		focus = ROU_seize_oligarchy_holdings
+	}
+	prerequisite = {
+		focus = ROU_reshuffle_the_economic_ministry
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_new_education"
@@ -927,15 +1002,15 @@ shared_focus = {
 shared_focus = {
 	id = ROU_revive_kemerskaian_welfare
 	icon = GFX_goal_ideology_social_democrat
-	x = 1
-	y = 2
+	x = 3
+	y = 1
 	relative_position_id = ROU_the_republicans
 	cost = 8
 	ai_will_do = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_memories_of_the_revolution
+		focus = ROU_the_republicans
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_revive_kemerskaian_welfare"
@@ -944,11 +1019,12 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
+
 shared_focus = {
-	id = ROU_seize_oligarchy_holdings
-	icon = GFX_goal_state_economy
-	x = 2
-	y = 3
+	id = ROU_reshuffle_the_economic_ministry
+	icon = GFX_focus_generic_treaty
+	x = 4
+	y = 2
 	relative_position_id = ROU_the_republicans
 	cost = 8
 	ai_will_do = {
@@ -957,8 +1033,37 @@ shared_focus = {
 	prerequisite = {
 		focus = ROU_revive_kemerskaian_welfare
 	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ROU_reshuffle_the_economic_ministry"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		add_tech_bonus = {
+			name = electronics_bonus
+			bonus = 1
+			uses = 1
+			category = electronics
+		}
+		add_political_power = -50
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = ROU_seize_oligarchy_holdings
+	icon = GFX_goal_state_economy
+	x = 2
+	y = 2
+	relative_position_id = ROU_the_republicans
+	cost = 8
+	ai_will_do = {
+		factor = 100
+	}
 	prerequisite = {
-		focus = ROU_cooperate_with_syndies
+		focus = ROU_revive_kemerskaian_welfare
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_seize_oligarchy_holdings"
@@ -982,7 +1087,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_guard_the_city
 	icon = GFX_goal_generic_construct_military
-	x = -2
+	x = -3
 	y = 3
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -991,6 +1096,9 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = ROU_citizen_guard
+	}
+	prerequisite = {
+		focus = ROU_freedom_of_worship
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_guard_the_city"
@@ -1024,7 +1132,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ROU_outpost_of_republicanism
-	icon = GFX_goal_support_democracy
+	icon = GFX_goal_FAT_coat_of_arms
 	x = 0
 	y = 4
 	relative_position_id = ROU_the_republicans
@@ -1033,7 +1141,8 @@ shared_focus = {
 		factor = 100
 	}
 	prerequisite = {
-		focus = ROU_seize_oligarchy_holdings
+		focus = ROU_reward_our_benefactors
+		focus = ROU_clean_the_streets
 	}
 	prerequisite = {
 		focus = ROU_guard_the_city
@@ -1443,90 +1552,6 @@ shared_focus = {
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = ROU_haufenschuler
 	}
-}
-
-shared_focus = {
-	id = ROU_republican_economy
-	icon = GFX_goal_ideology_social_democrat
-	x = 33
-	y = 0
-	cost = 5
-	ai_will_do = {
-		factor = 100
-	}
-	available = {
-		has_government = democratic
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_republican_economy"
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = ROU_hammenchet
-	}
-}
-
-shared_focus = {
-	id = ROU_reshuffle_the_economic_ministry
-	icon = GFX_focus_generic_treaty
-	x = 34
-	y = 1
-	cost = 8
-	ai_will_do = {
-		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_republican_economy
-		focus = ROU_revolutionary_economy
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_reshuffle_the_economic_ministry"
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 1
-			uses = 1
-			category = industry
-		}
-		add_tech_bonus = {
-			name = electronics_bonus
-			bonus = 1
-			uses = 1
-			category = electronics
-		}
-		add_political_power = -50
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-}
-
-shared_focus = {
-	id = ROU_nationalize_imperial_industry
-	icon = GFX_goal_state_economy
-	x = 35
-	y = 2
-	cost = 8
-	ai_will_do = {
-		factor = 100
-	}
-	prerequisite = {
-		focus = ROU_reshuffle_the_economic_ministry
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus ROU_nationalize_imperial_industry"
-		add_stability = -0.05
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 2
-		}
-		random_owned_state = {
-			add_extra_state_shared_building_slots = 1
-		}
-		add_offsite_building = { 
-		    type = industrial_complex 
-			level = 2
-		}
-		add_offsite_building = { 
-		    type = arms_factory 
-			level = 1
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
