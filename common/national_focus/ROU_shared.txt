@@ -874,7 +874,7 @@ shared_focus = {
 shared_focus = {
 	id = ROU_freedom_of_worship
 	icon = GFX_HON_peace_in_our_time
-	x = -4
+	x = -2
 	y = 2
 	relative_position_id = ROU_the_republicans
 	cost = 8
@@ -893,10 +893,10 @@ shared_focus = {
 shared_focus = {
 	id = ROU_citizen_guard
 	icon = GFX_goal_FAT_army
-	x = -2
+	x = -4
 	y = 2
 	relative_position_id = ROU_the_republicans
-	cost = 8
+	cost = 5
 	ai_will_do = {
 		factor = 100
 	}
@@ -905,10 +905,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_citizen_guard"
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.07
-		}
 		add_ideas = ROU_republican_guard
 		custom_effect_tooltip = ROU_citizen_guard_tp
 		hidden_effect = {
@@ -934,14 +930,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_chase_out_the_archon"
 		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}
-		add_popularity = {
 			ideology = fascism
 			popularity = -0.1
 		}
-		add_political_power = 50
 		remove_ideas = ROU_eyr_archonate
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -953,7 +944,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = ROU_the_republicans
-	cost = 8
+	cost = 5
 	ai_will_do = {
 		factor = 100
 	}
@@ -994,6 +985,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_new_education"
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
 		add_ideas = ROU_new_education
 	}
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
@@ -1035,6 +1030,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_reshuffle_the_economic_ministry"
+				add_political_power = -50
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 1
@@ -1047,7 +1043,6 @@ shared_focus = {
 			uses = 1
 			category = electronics
 		}
-		add_political_power = -50
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 }
@@ -1058,7 +1053,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = ROU_the_republicans
-	cost = 8
+	cost = 5
 	ai_will_do = {
 		factor = 100
 	}
@@ -1067,16 +1062,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_seize_oligarchy_holdings"
-		add_political_power = 50
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}
 		674 = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
+				instant_build = yes
+			}
+		}
+		674 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -1102,7 +1100,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ROU_guard_the_city"
-		add_stability = 0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.05
