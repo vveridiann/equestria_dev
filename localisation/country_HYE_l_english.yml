@@ -647,3 +647,5 @@ HYE_the_long_night_desc:0 "As long as the murderous Storm King lived, any attemp
 HYE_the_long_night1:0 "The dervishes will settle in, awaiting the opportune moment to strike. It might be months, it might be years, but they are here, and they are waiting."
 
 religious_indoctrination:0 "Religious Indoctrination"
+
+HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n\n    §YHills§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n\n    §YDessert§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n"
