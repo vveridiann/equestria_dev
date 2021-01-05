@@ -58,6 +58,7 @@ focus_tree = {
 	shared_focus = HYE_military_driven_industry
 	shared_focus = HYE_internal_affairs
 	shared_focus = HYE_military_directionism
+	shared_focus = HYE_fanatical_revanchism
 }	
 
 #focus_tree = {

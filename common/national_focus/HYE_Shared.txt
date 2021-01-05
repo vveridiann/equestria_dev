@@ -1836,7 +1836,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_military_driven_industry
 	icon = GFX_goal_artillery
-	x = 25
+	x = 21
 	y = 6
 	cost = 6
 	bypass = {
@@ -3018,5 +3018,283 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		add_ideas = military_society
+	}
+}
+shared_focus = {
+	id = HYE_jihad_air_naval
+	icon = GFX_goal_artillery
+	x = 0
+	y = 6
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_arty
+		focus = HYE_jihad_engis
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		air_experience = 15
+		navy_experience = 15
+	}
+}
+shared_focus = {
+	id = HYE_jihad_airfields
+	icon = GFX_goal_artillery
+	x = -2
+	y = 7
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_air_naval
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_airfield = yes
+		one_airfield = yes
+	}
+}
+shared_focus = {
+	id = HYE_jihad_boats
+	icon = GFX_goal_artillery
+	x = 2
+	y = 7
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_air_naval
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = destroyers
+			bonus = 1.0
+			uses = 2
+			category = dd_tech
+			category = cl_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_cas
+	icon = GFX_goal_artillery
+	x = -1
+	y = 8
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_airfields
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cas_efforts
+			bonus = 1.0
+			uses = 1
+			category = cas_bomber
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_fighters
+	icon = GFX_goal_artillery
+	x = -3
+	y = 8
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_airfields
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = fighter_research
+			bonus = 1.0
+			uses = 1
+			category = light_fighter
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_bombers
+	icon = GFX_goal_artillery
+	x = -2
+	y = 9
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_fighters
+	}
+	prerequisite = {
+		focus = HYE_jihad_cas
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = bomber_bonus
+			bonus = 1.0
+			uses = 1
+			category = tactical_bomber
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_dockyards
+	icon = GFX_goal_artillery
+	x = 1
+	y = 8
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_boats
+	}
+	available = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_submarines
+	icon = GFX_goal_artillery
+	x = 3
+	y = 8
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_boats
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = submarine_research
+			bonus = 1.0
+			uses = 2
+			category = ss_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_wolfpack
+	icon = GFX_goal_artillery
+	x = 2
+	y = 9
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_military_directionism
+	prerequisite = {
+		focus = HYE_jihad_submarines
+	}
+	prerequisite = {
+		focus = HYE_jihad_dockyards
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navdoctrine_bonus
+			bonus = 1.0
+			uses = 2
+			category = cat_trade_interdiction
+		}
+	}
+}
+shared_focus = {
+	id = HYE_fanatical_revanchism
+	icon = GFX_goal_artillery
+	x = 26
+	y = 6
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_fanatical_revanchism
+	}
+}
+shared_focus = {
+	id = HYE_holy_war
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_fanatical_revanchism
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		swap_ideas = {
+			add_idea = HYE_fanatical_revanchism2
+			remove_idea = HYE_fanatical_revanchism
+		}
+	}
+}
+shared_focus = {
+	id = HYE_small_formality
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_fanatical_revanchism
+	}
+	bypass = {
+		NOT = {
+			country_exists = SCS
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = SCS
+		}
 	}
 }

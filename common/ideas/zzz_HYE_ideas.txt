@@ -283,6 +283,61 @@ ideas = {
 				experience_gain_army = 0.05
 			}
 		}
+		HYE_fanatical_revanchism = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			targeted_modifier = {
+				tag = SCS
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CST
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAM
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = STM
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		HYE_fanatical_revanchism2 = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = {
+				conscription = 0.02
+			}
+			targeted_modifier = {
+				tag = SCS
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CST
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAM
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = STM
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
 	}
 #Political Advisors
 	political_advisor = {
