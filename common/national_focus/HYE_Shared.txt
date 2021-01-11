@@ -3270,6 +3270,7 @@ shared_focus = {
 			add_idea = HYE_fanatical_revanchism2
 			remove_idea = HYE_fanatical_revanchism
 		}
+		custom_effect_tooltip = HYE_enable_yeti_repressions
 	}
 }
 shared_focus = {
@@ -3287,14 +3288,101 @@ shared_focus = {
 	}
 	bypass = {
 		NOT = {
-			country_exists = SCS
+			country_exists = SCT
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		create_wargoal = {
 			type = annex_everything
-			target = SCS
+			target = SCT
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_cst
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_small_formality
+	}
+	prerequisite = {
+		focus = HYE_holy_war
+	}
+	bypass = {
+		NOT = {
+			country_exists = CST
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = CST
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_cam
+	icon = GFX_goal_artillery
+	x = 2
+	y = 2
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_small_formality
+	}
+	prerequisite = {
+		focus = HYE_holy_war
+	}
+	bypass = {
+		NOT = {
+			country_exists = CAM
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = CAM
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_stm
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_cam
+	}
+	prerequisite = {
+		focus = HYE_jihad_cst
+	}
+	bypass = {
+		NOT = {
+			country_exists = STM
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = STM
 		}
 	}
 }

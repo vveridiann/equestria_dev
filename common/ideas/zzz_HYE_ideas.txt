@@ -289,7 +289,7 @@ ideas = {
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }	
 			targeted_modifier = {
-				tag = SCS
+				tag = SCT
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
