@@ -3386,3 +3386,120 @@ shared_focus = {
 		}
 	}
 }
+shared_focus = {
+	id = HYE_jihad_contain_yetis
+	icon = GFX_goal_artillery
+	x = 1
+	y = 4
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_stm
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+	}
+}
+shared_focus = {
+	id = HYE_jihad_czr
+	icon = GFX_goal_artillery
+	x = 1
+	y = 5
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_contain_yetis
+	}
+	bypass = {
+		NOT = {
+			country_exists = CZR
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = CZR
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_gar_cnt
+	icon = GFX_goal_artillery
+	x = 3
+	y = 5
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_contain_yetis
+	}
+	bypass = {
+		NOT = {
+			country_exists = GAR
+		}
+		NOT = {
+			country_exists = CNT
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = GAR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CNT
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_great_lakes
+	icon = GFX_goal_artillery
+	x = 5
+	y = 5
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_contain_yetis
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = HAY
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ZEL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = MSH
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ZUG
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ZWA
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SON
+		}
+	}
+}
