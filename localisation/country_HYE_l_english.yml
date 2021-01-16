@@ -36,7 +36,7 @@ HYE_saboteurs:0 "Cut their Tendons"
 HYE_saboteurs_desc:0 "The yetis might have a strong army, but it will be for naught when their airships are grounded, the roads are mined and their supply lines are ripped apart. Let's see how well they fight without food, ammunition or supplies."
 HYE_finalize_sneaky:0 "Coup De Grace"
 HYE_finalize_sneaky_desc:0 "We will only have one chance at this, so we must strike fast, and we must strike first. The battles must happen on our terms and we must give them no time to recover or take back the initiative. If we are fast enough, we can end this war in one, fell swoop, cutting the head off the enemy war machine before they can properly react." 
-HYE_end_the_yeti:0 "The Night Before the Weerar Weyn"
+HYE_end_the_yeti:0 "The Night Before the Weerar Weyn" #event
 HYE_end_the_yeti_desc:0 "Tonight, all Dervishes sit silently in meditation, reflecting on the years that have led them here. We have endured a night longer than any should have, yet the dawn is slowly drawing near, even as we almost forgot what it looked like. Yet before that, we stand before the final challenge, that last thrust to reclaim our home, and tomorrow there is only one choice. Geeri ama Guul: death or victory."
 HYE_victory_in_the_war:0 "A Much-Deserved Victory"
 HYE_victory_in_the_war_desc:0 "It is over. The smoke clears over our ancient home, the guns fall silent, and we stand atop the hallowed peaks of our ancient home. The cost was high, and we weep as we remember all those who died in exile, yet Hyenia, for the first time in over a decade, is finally free."
@@ -523,31 +523,31 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
 
 
 
- hyenia_troubles.1.t:0 "1"
+ hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles
  hyenia_troubles.1.d:0 ""
  hyenia_troubles.1.a:0 ""
  hyenia_troubles.1.b:0 ""
- hyenia_troubles.2.t:0 "2"
+ hyenia_troubles.2.t:0 "It's Time to Go Home" #return of refugees
  hyenia_troubles.2.d:0 ""
  hyenia_troubles.2.a:0 ""
  hyenia_troubles.2.b:0 ""
- hyenia_troubles.3.t:0 "3"
+ hyenia_troubles.3.t:0 "Rebuilding the Broken Cities" #focus on cities
  hyenia_troubles.3.d:0 ""
  hyenia_troubles.3.a:0 ""
  hyenia_troubles.3.b:0 ""
- hyenia_troubles.4.t:0 "4"
+ hyenia_troubles.4.t:0 "The Blossoming Countryside"
  hyenia_troubles.4.d:0 ""
  hyenia_troubles.4.a:0 ""
  hyenia_troubles.4.b:0 ""
- hyenia_troubles.5.t:0 "5"
+ hyenia_troubles.5.t:0 "The Others who Fought" #other rebel groups
  hyenia_troubles.5.d:0 ""
  hyenia_troubles.5.a:0 ""
  hyenia_troubles.5.b:0 ""
- hyenia_troubles.6.t:0 "6"
+ hyenia_troubles.6.t:0 "A Friend in the Darkest Hour" #queen of hayzeb
  hyenia_troubles.6.d:0 ""
  hyenia_troubles.6.a:0 ""
  hyenia_troubles.6.b:0 ""
- hyenia_troubles.7.t:0 "7"
+ hyenia_troubles.7.t:0 "The Last Prince" #the little princeling
  hyenia_troubles.7.d:0 ""
  hyenia_troubles.7.a:0 ""
  hyenia_troubles.71.t:0 "71"
@@ -560,40 +560,40 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  hyenia_troubles.73.t:0 "73"
  hyenia_troubles.73.d:0 ""
  hyenia_troubles.73.a:0 ""
- hyenia_troubles.8.t:0 "8"
+ hyenia_troubles.8.t:0 "The Dervish Regents" #dealing with royalist supporters
  hyenia_troubles.8.d:0 ""
  hyenia_troubles.8.a:0 ""
- hyenia_troubles.9.t:0 "9"
+ hyenia_troubles.9.t:0 "Passing Judgement?" #what to do with collaborators and traitors
  hyenia_troubles.9.d:0 ""
  hyenia_troubles.9.a:0 ""
  hyenia_troubles.9.b:0 ""
- hyenia_troubles.10.t:0 "10"
+ hyenia_troubles.10.t:0 "A Traitor's Due" #harsh justice
  hyenia_troubles.10.d:0 ""
  hyenia_troubles.10.a:0 ""
  hyenia_troubles.10.b:0 ""
- hyenia_troubles.11.t:0 "11"
+ hyenia_troubles.11.t:0 "Silencing the Thunder" #executing the Thundarian Leader
  hyenia_troubles.11.d:0 ""
  hyenia_troubles.11.b:0 ""
  hyenia_troubles.11.a:0 ""
- hyenia_troubles.12.t:0 "12"
+ hyenia_troubles.12.t:0 "Carefully Measured, Carefully Applied" #moderate justice
  hyenia_troubles.12.d:0 ""
  hyenia_troubles.12.a:0 ""
  hyenia_troubles.12.b:0 ""
- hyenia_troubles.13.t:0 "13"
+ hyenia_troubles.13.t:0 "Hearing the Thunder" #imprisoning the Thundarian Leader to try to convert him
  hyenia_troubles.13.d:0 ""
  hyenia_troubles.13.a:0 ""
  hyenia_troubles.13.b:0 ""
- hyenia_troubles.14.t:0 "15"
+ hyenia_troubles.14.t:0 "14"
  hyenia_troubles.14.d:0 ""
  hyenia_troubles.14.a:0 ""
  hyenia_troubles.14.b:0 ""
- hyenia_troubles.15.t:0 "15"
+ hyenia_troubles.15.t:0 "The Summit" #trying to decide who will lead the nation
  hyenia_troubles.15.d:0 ""
  hyenia_troubles.15.a:0 ""
  
 
 HYE_history:0 "The Darkest of Days"
-HYE_history_desc:0 "Our front lines lay broken, our capitol was being devoured by the flames and our queen lay slain. The Queendom of Hyenia was no more, and as the last, scattered remnants of the once mighty armies retreated in desperation, darkness fell above us all. The war was over. We lost."
+HYE_history_desc:0 "Our front lines laid broken, our capitol was being devoured by the flames and our queen had been slain. The Queendom of Hyenia was no more, and as the last, scattered remnants of the once mighty armies retreated in desperation, darkness fell above us all. The war was over. We lost."
 HYE_history1:0 "The Queendom of Hyenia will be annexed by Thundaria. Gods help us all..." 
 
 HYE_collapse_the_tunnels:0 "An Hour of Darkness and Honor"
@@ -601,11 +601,11 @@ HYE_collapse_the_tunnels_desc:0 "Though the throne lay broken and the queen slai
 HYE_collapse_the_tunnels1:0 "Every Hyena who gets the chance will flee north, desperate to escape the ravages of the Yetis."
 
 HYE_fighting_retreat:0 "One Final Stand"
-HYE_fighting_retreat_desc:0 ""Our duty is to Qalbi Weyn and the Queen. Such it has been, such it will remain. There are no questions to be answered Here. I ask you this, my fellow Ironpaws: do you believe, or are you as low as any rat?! In this moment, will you stand and fight not for victory, but because it is your duty?! Will you laugh in the face of death, and show the mettle of the royal guard to the very end?!""
+HYE_fighting_retreat_desc:0 ""Our duty is to Qalbi Weyn and the Queen. Such it has been, such it will remain. There are no questions to be answered here. I ask you this, my fellow Ironpaws: do you believe, or are you as low as any rat?! In this moment, will you stand and fight not for victory, but because it is your duty?! Will you laugh in the face of death, and show the mettle of the royal guard to the very end?!""
 HYE_fighting_retreat1:0 "The Yeti forces will be held at bay by Warmaster Ciddiyo and the last members of the royal guard, buying time - however little - for the refugees."
 
 HYE_whatever_aid_we_can_find:0 "Is Anyone Left...?"
-HYE_whatever_aid_we_can_find_desc:0 "Walking the bloody gauntlet of monsters, bandits and yetis, the refugees flee north, trying to reach some kind of safe harbor. The few surviving nobles and leaders lobby for the position of the new Queen, trying to bring order back to their broken people."
+HYE_whatever_aid_we_can_find_desc:0 "Walking the bloody gauntlet of monsters, bandits and yetis, the refugees fled north, trying to reach some kind of safe harbor. The few surviving nobles and leaders lobbied for the position of the new Queen, trying to bring order back to their broken people."
 HYE_whatever_aid_we_can_find1:0 "Even though Hyenia lies broken, its remaining elite will scramble for power, trying to find a new leader in this dark hour."
 
 HYE_rise_of_the_dervishes:0 "The Rise of the Dervishes"
@@ -628,7 +628,7 @@ HYE_submission_of_generals1:0 "Furasho will be available as a general for the Qa
 
 HYE_in_shadows:0 "In the Shadows"
 HYE_in_shadows_desc:0 "Fahamka's right paw was a surprising figure. A slight, almost pup-like male with gentle manners and a soft voice, Masaska would seem to be an adoring child instead of the master assassin he actually is. At Fahamka's command, he has embarked along with his personal entourage on a campaign of death and destruction throughout occupied Hyenia."
-HYE_in_shadows1:0 "Masaska will be available as a general for the Qaylid Dervishes. "
+HYE_in_shadows1:0 "Masaska will be available as a general for the Qaylid Dervishes."
 
 HYE_remember_those_left_behind:0 "Remembering those Left Behind"
 HYE_remember_those_left_behind_desc:0 "Hundreds of thousands of our people were trapped in Yeti-controlled lands, and Masaska worked tirelessly for them. Cruel overseers had "accidents", starving hyenas were given food stolen from the occupiers, intelligence was gathered. In a thousand and one ways, the enslaved hyenas were reminded that they were not forgotten, and that their people would come for them."  
