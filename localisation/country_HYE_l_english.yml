@@ -506,23 +506,6 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_dawn_has_come:0 "A Pure Hyenia" #event
  HYE_dawn_has_come_desc:0 "The traitors and heathens are purged, the meek conquered and the doubters cowed. Never again shall Hyenia be divided, and as her internal enemies are dealt with, the Sword looks outwards, remembering the world that would seek to bring harm upon the faithful."
 
-
- HYE_military_driven_industry:0 ""
- HYE_military_driven_industry_desc:0 ""
- HYE_arty_prototypes:0 ""
- HYE_arty_prototypes_desc:0 ""
- HYE_small_arms_prototypes:0 ""
- HYE_small_arms_prototypes_desc:0 ""
- HYE_austerities_for_industry:0 ""
- HYE_austerities_for_industry_desc:0 ""
-
-
-
- HYE_nation_was_reunited:0 ""
- HYE_nation_was_reunited_desc:0 ""
-
-
-
  hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles
  hyenia_troubles.1.d:0 ""
  hyenia_troubles.1.a:0 ""
@@ -651,6 +634,10 @@ religious_indoctrination:0 "Religious Indoctrination"
 HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n\n    §YHills§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n\n    §YDessert§!\n      Movement: §G+5.0%§!\n      Attack: §G+10.0%§!\n      Defense: §G+5.0%§!\n"
 
 ### furasho industrial tree (left one)
+ HYE_military_driven_industry:0 "HYE_military_driven_industry"
+ HYE_arty_prototypes:0 "HYE_arty_prototypes"
+ HYE_small_arms_prototypes:0 "HYE_small_arms_prototypes"
+ HYE_austerities_for_industry:0 "HYE_austerities_for_industry"
  HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
  HYE_agricultural_reorganisation:0 "HYE_agricultural_reorganisation"
  HYE_argiculture_vehicles_manufacturies:0 "HYE_argiculture_vehicles_manufacturies"
@@ -726,6 +713,7 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
 
  ### custom conditions ###
   hye_had_industrialised:0 "Had industrialised"
+  HYE_nation_was_reunited:0 "Nation is reunited"
 
   ### tooltips
   HYE_enable_yeti_repressions:0 "yeti bad, dog good"
