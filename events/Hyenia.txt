@@ -1,5 +1,6 @@
 add_namespace = hyenia
 add_namespace = hyenia_troubles
+add_namespace = hyenia_flavour
 
 country_event = { #War council, triggered via event on focus tree. The War to Come
 	id = hyenia.1
@@ -707,7 +708,129 @@ country_event = { #end event
 	}
 }
 
-country_event = { #debug
+country_event = { 
+	id = hyenia_flavour.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.1"}
+	title = hyenia_flavour.1.t
+	desc = hyenia_flavour.1.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.1.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.2"}
+	title = hyenia_flavour.2.t
+	desc = hyenia_flavour.2.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.2.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.3"}
+	title = hyenia_flavour.3.t
+	desc = hyenia_flavour.3.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.3.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.4"}
+	title = hyenia_flavour.4.t
+	desc = hyenia_flavour.4.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.4.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.5"}
+	title = hyenia_flavour.5.t
+	desc = hyenia_flavour.5.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.5.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.6"}
+	title = hyenia_flavour.6.t
+	desc = hyenia_flavour.6.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.6.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.7"}
+	title = hyenia_flavour.7.t
+	desc = hyenia_flavour.7.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.7.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.8"}
+	title = hyenia_flavour.8.t
+	desc = hyenia_flavour.8.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.8.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.9"}
+	title = hyenia_flavour.9.t
+	desc = hyenia_flavour.9.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.9.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.10"}
+	title = hyenia_flavour.10.t
+	desc = hyenia_flavour.10.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.10.a
+	}
+}
+country_event = { 
+	id = hyenia_flavour.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.11"}
+	title = hyenia_flavour.11.t
+	desc = hyenia_flavour.11.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_flavour.11.a
+	}
+}
+
+country_event = { 
 	id = hyenia.112997
 	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.2"}
 	title = hyenia.2.t
