@@ -1,0 +1,32 @@
+spriteTypes = {
+	  SpriteType = {
+		name = "GFX_idea_nuinu_institute"
+		texturefile = "gfx/interface/ideas/nuinu_institute.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_STG_veronica_advisor"
+		texturefile = "gfx/interface/ideas/STG_veronica_advisor.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_STG_housing_problems"
+		texturefile = "gfx/interface/ideas/STG_housing_problems.dds"
+	}
+	spriteType = {
+		name = "GFX_event_gaz_aero"
+		texturefile = "gfx/event_pictures/event_gaz_aero.dds"
+	}
+	spriteType = {
+		name = "GFX_event_gaz_aero_race"
+		texturefile = "gfx/event_pictures/event_gaz_aero_race.dds"
+	}
+	spriteType = {
+		name = "GFX_event_film_irony_of_fate"
+		texturefile = "gfx/event_pictures/event_film_irony_of_fate.dds"
+	}
+	spriteType = {
+		name = "GFX_event_film_alexander_nevsky"
+		texturefile = "gfx/event_pictures/event_film_alexander_nevsky.dds"
+	}
+	
+}
