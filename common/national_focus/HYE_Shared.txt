@@ -3270,7 +3270,8 @@ shared_focus = {
 			add_idea = HYE_fanatical_revanchism2
 			remove_idea = HYE_fanatical_revanchism
 		}
-		custom_effect_tooltip = HYE_enable_yeti_repressions
+		set_country_flag = HYE_enable_forced_assmilation_flag
+		custom_effect_tooltip = HYE_enable_forced_assmilation
 	}
 }
 shared_focus = {
@@ -3477,29 +3478,85 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = HAY
 		}
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = ZEL
 		}
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = MSH
 		}
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = ZUG
 		}
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = ZWA
 		}
-		create_wargoal = {
+		declare_war_on = {
 			type = annex_everything
 			target = SON
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = TIM
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = ALO
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = MAZ
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = MSS
+		}
+	}
+}
+shared_focus = {
+	id = HYE_jihad_to_the_sea
+	icon = GFX_goal_artillery
+	x = 5
+	y = 6
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_fanatical_revanchism
+	prerequisite = {
+		focus = HYE_jihad_great_lakes
+	}
+	bypass = {
+		NOT = {
+			country_exists = HMR
+		}
+		NOT = {
+			country_exists = MTA
+		}
+		NOT = {
+			country_exists = MHR
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		create_wargoal = {
+			type = annex_everything
+			target = HMR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = MTA
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = MHR
 		}
 	}
 }

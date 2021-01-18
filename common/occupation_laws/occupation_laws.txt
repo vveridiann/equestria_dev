@@ -701,3 +701,34 @@ brutally_oppressive_occupation = {
 		}
 	}
 }
+forced_assimilation = {
+	icon = 10
+	sound_effect = "Martial_Law_Interface_Brutally_Oppressive_Occupation_Unique_FAS"
+	
+	visible = {
+		has_government = fascism
+		has_country_flag = HYE_enable_forced_assmilation_flag
+	}
+
+	available = {
+		has_government = fascism
+		has_country_flag = HYE_enable_forced_assmilation_flag
+	}
+	
+	state_modifier = {		
+		resistance_target 				= -0.4
+		compliance_gain 				= 0.02
+		required_garrison_factor 		= 0.25
+		local_factories 				= 0
+		local_resources 				= 0
+		local_manpower 				= 0.08
+	}
+	
+	ai_will_do = {
+		base = 120
+		modifier = {
+			check_variable  = { resistance_target_without_law > 0.29} 						
+			add = 100
+		}
+	}
+}
