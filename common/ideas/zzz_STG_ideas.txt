@@ -239,7 +239,7 @@ ideas = {
 	}
 	high_command = {
 		ponyarchuk = {
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}
@@ -255,7 +255,7 @@ ideas = {
 			}
 		}
 		STG_vinous_kostylev = {
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}
@@ -268,7 +268,7 @@ ideas = {
 			}
 		}
 		wild_vet = {
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}
@@ -284,7 +284,7 @@ ideas = {
 			}
 		}
 		nevsky = {
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}
@@ -299,7 +299,7 @@ ideas = {
 	}
 	theorist = {
 		STG_veronica_advisor = {
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}
@@ -317,7 +317,7 @@ ideas = {
 			}
 		}
 		nestor_lunin = {
-
+			ledger = army
 
 			allowed = {
 				original_tag = STG
@@ -337,7 +337,7 @@ ideas = {
 		}
 		fleetfoot = {
 
-
+			ledger = army
 			allowed = {
 				original_tag = STG
 			}

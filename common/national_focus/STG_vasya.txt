@@ -8,7 +8,7 @@ focus_tree = {
 			OR = {
 				has_country_leader = { ruling_only = yes name = "Vasiliy Pantsushenko"}
 				has_country_leader = { ruling_only = yes name = "Elena Tankova"}
-				has_completed_focus = STGVAS_second_five_year_plans
+				#has_completed_focus = STGVAS_second_five_year_plans
 			}
 		}
 	}	
@@ -1592,7 +1592,7 @@ focus_tree = {
 					has_food_shortages_STG = yes
 				}
 			}
-			has_completed_focus = STG_militarized_schools
+			#has_completed_focus = STG_militarized_schools
 		}
 		completion_reward = {
 			country_event = {
@@ -1771,7 +1771,7 @@ focus_tree = {
 		relative_position_id = STGVAS_factory_production
 		available = {
 			has_government = communism
-			has_completed_focus = free_education
+			#has_completed_focus = free_education
 			OR = {
 				has_country_flag = vasya_elected
 				has_country_flag = sinister_elected

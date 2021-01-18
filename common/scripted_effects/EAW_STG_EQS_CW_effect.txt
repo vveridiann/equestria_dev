@@ -175,7 +175,7 @@ STG_infiltrate_army_desertion_effect = {
 		start_civil_war = {
 			ideology = communism
 			size = var:desertion_size
-			only_own_territory = no
+			#only_own_territory = no
 			states = {
 				168
 			}
@@ -191,7 +191,7 @@ STG_infiltrate_army_desertion_effect = {
 		start_civil_war = {
 			ideology = communism
 			size = 0.5
-			only_own_territory = no
+			#only_own_territory = no
 			states = {
 				161
 			}
@@ -207,7 +207,7 @@ STG_infiltrate_army_desertion_effect = {
 		start_civil_war = {
 			ideology = communism
 			size = 0.5
-			only_own_territory = no
+			#only_own_territory = no
 			states = {
 				165
 			}
@@ -220,7 +220,7 @@ STG_infiltrate_army_desertion_effect = {
 		start_civil_war = {
 			ideology = communism
 			size = 0.5
-			only_own_territory = no
+			#only_own_territory = no
 			states_filter = {
 				is_fully_controlled_by = ROOT
 				any_neighbor_state = {

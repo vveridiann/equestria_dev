@@ -837,7 +837,7 @@ focus_tree = {
 		x = -1
 		y = 4
 		completion_reward = {
-			unlock_decision_tooltip = STG_sinister_suppress_opposition_cat
+			#unlock_decision_tooltip = STG_sinister_suppress_opposition_cat
 			add_political_power = -150
 		}
 	}
