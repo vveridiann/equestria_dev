@@ -507,64 +507,64 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_dawn_has_come_desc:0 "The traitors and heathens are purged, the meek conquered and the doubters cowed. Never again shall Hyenia be divided, and as her internal enemies are dealt with, the Sword looks outwards, remembering the world that would seek to bring harm upon the faithful."
 
  hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles
- hyenia_troubles.1.d:0 ""
- hyenia_troubles.1.a:0 ""
- hyenia_troubles.1.b:0 ""
+ hyenia_troubles.1.d:0 "" #The returning nobility is setting up shop, blimey quite a few of them survived! So who goes first to meet them and parley with them?
+ hyenia_troubles.1.a:0 "" #appear among them before they know what happened
+ hyenia_troubles.1.b:0 "" #A show of force to mark that they're not the kings
  hyenia_troubles.2.t:0 "It's Time to Go Home" #return of refugees
- hyenia_troubles.2.d:0 ""
- hyenia_troubles.2.a:0 ""
- hyenia_troubles.2.b:0 ""
+ hyenia_troubles.2.d:0 "" #
+ hyenia_troubles.2.a:0 "" #set up long term return possibilities (and remittances)
+ hyenia_troubles.2.b:0 "" #bring them home with escorts
  hyenia_troubles.3.t:0 "Rebuilding the Broken Cities" #focus on cities
- hyenia_troubles.3.d:0 ""
- hyenia_troubles.3.a:0 ""
- hyenia_troubles.3.b:0 ""
+ hyenia_troubles.3.d:0 "" 
+ hyenia_troubles.3.a:0 "" #Restore what was destroyed and focus on the poor quarters
+ hyenia_troubles.3.b:0 "" #Tear its down and create modern cities
  hyenia_troubles.4.t:0 "The Blossoming Countryside"
  hyenia_troubles.4.d:0 ""
- hyenia_troubles.4.a:0 ""
- hyenia_troubles.4.b:0 ""
+ hyenia_troubles.4.a:0 "" #Small farms
+ hyenia_troubles.4.b:0 "" #Big farms
  hyenia_troubles.5.t:0 "The Others who Fought" #other rebel groups
  hyenia_troubles.5.d:0 ""
- hyenia_troubles.5.a:0 ""
- hyenia_troubles.5.b:0 ""
+ hyenia_troubles.5.a:0 "" # Learn from them, and let them prosper
+ hyenia_troubles.5.b:0 "" # Offer them tutelage and training to dervishood
  hyenia_troubles.6.t:0 "A Friend in the Darkest Hour" #queen of hayzeb
  hyenia_troubles.6.d:0 ""
- hyenia_troubles.6.a:0 ""
- hyenia_troubles.6.b:0 ""
+ hyenia_troubles.6.a:0 "" 
+ hyenia_troubles.6.b:0 "" 
  hyenia_troubles.7.t:0 "The Last Prince" #the little princeling
- hyenia_troubles.7.d:0 ""
- hyenia_troubles.7.a:0 ""
- hyenia_troubles.71.t:0 "71"
- hyenia_troubles.71.d:0 ""
- hyenia_troubles.71.a:0 ""
- hyenia_troubles.71.b:0 ""
- hyenia_troubles.72.t:0 "72"
- hyenia_troubles.72.d:0 ""
+ hyenia_troubles.7.d:0 "With the return of the nobles came a surprise indeed; the youngest child of the dead queen, prince Jawharad. Merely an infant when Hyenia fell, he was presumed dead much like the rest of his family. It turns out he was spirited away to safety and has grown up in exile. The boy is now the figurehead of the royalists, and has already made appearances among the dogs along the coast. The average Hyena relishes the idea of the return of the old monarchy, but a sober assessment of the situation must be made. Do we believe a ten year old child truly is in charge of this attempted monarchist revival?\n\nMasaska's agents have infiltrated the camp, and they have listened to the scheming that goes on behind the boy's back. As suspected, the boy is being 'advised' by the surviving members of the old royal council, and they seem determined to reassert their old positions of privilege. More, even, as the prince seems to have been pushed to promise them rich rewards for their service to the nation.\n\nSeeing how they, even as Hyenia suffered under occupation, protected and expanded their own power before anything else is nauseating. Something must be done to block them from achieving their goals, we did not fight for a decade just to let the old order reassert itself and drive us back into the desert. The prince cannot be held responsible, he is but a puppet to these old schemers, but they must be dealt with."
+ hyenia_troubles.7.a:0 "Let us contact the little one." 
+ hyenia_troubles.71.t:0 "The Dervish Regency"
+ hyenia_troubles.71.d:0 "The little prince has already converted many to his cause, so he must be handled with a soft touch. We can presume he is untouchable, but that does not mean we are without options. Fortunately, it appears the boy has both heard of the dervishes and, despite his advisors' best efforts, become enamoured with the notion of the 'valiant desert rebels'. If he holds us in such high regard, we have an opportunity to wrest control of him from the nobility.\n\nThe nobles have insisted that they're loyal servants of the crown, even as they 'suggest' and 'advise' him to get whatever they want out of the prince, but that just means we must be the ones to speak to him first. Masaska has already planned to personally infiltrate the prince's current location and speak to him. Given enough time, he can advise the boy in the guise of a hidden friend, and in due time appear before him as a dervish. Furasho is unconvinced by this sneaking, and plans to ambush him as they move across the countryside. Surrounded and outnumbered ten to one, the nobles will see the writing on the wall even before we approach the prince. Both are gearing up to carry out their plans, the question is just who strikes first."
+ hyenia_troubles.71.a:0 "Furasho's army waylays them in the mountain pass."
+ hyenia_troubles.71.b:0 "Masaska enters the prince's home like a shadow."
+ hyenia_troubles.72.t:0 "Might of the Dervishes"
+ hyenia_troubles.72.d:0 "" #Furasho waylays and surrounds them, talking to the prince
  hyenia_troubles.72.a:0 ""
- hyenia_troubles.73.t:0 "73"
- hyenia_troubles.73.d:0 ""
- hyenia_troubles.73.a:0 ""
+ hyenia_troubles.73.t:0 "A Friend in the Shadows"
+ hyenia_troubles.73.d:0 "" #Ninja Masaska sneaks in to visit him
+ hyenia_troubles.73.a:0 "" 
  hyenia_troubles.8.t:0 "The Dervish Regents" #dealing with royalist supporters
- hyenia_troubles.8.d:0 ""
+ hyenia_troubles.8.d:0 "" #Jawharad is in awe of the dervishes, and the old advisors are sidelined.
  hyenia_troubles.8.a:0 ""
  hyenia_troubles.9.t:0 "Passing Judgement?" #what to do with collaborators and traitors
- hyenia_troubles.9.d:0 ""
- hyenia_troubles.9.a:0 ""
- hyenia_troubles.9.b:0 ""
+ hyenia_troubles.9.d:0 "" 
+ hyenia_troubles.9.a:0 "" #Soft Justice
+ hyenia_troubles.9.b:0 "" #Harsh Justice
  hyenia_troubles.10.t:0 "A Traitor's Due" #harsh justice
  hyenia_troubles.10.d:0 ""
- hyenia_troubles.10.a:0 ""
+ hyenia_troubles.10.a:0 "" #military-esque courts, executions, hard labour, confiscated property, banishments.
  hyenia_troubles.10.b:0 ""
  hyenia_troubles.11.t:0 "Silencing the Thunder" #executing the Thundarian Leader
  hyenia_troubles.11.d:0 ""
- hyenia_troubles.11.b:0 ""
+ hyenia_troubles.11.b:0 "" #execution by axe
  hyenia_troubles.11.a:0 ""
  hyenia_troubles.12.t:0 "Carefully Measured, Carefully Applied" #moderate justice
  hyenia_troubles.12.d:0 ""
- hyenia_troubles.12.a:0 ""
+ hyenia_troubles.12.a:0 "" #Imprisonments, confiscated property, placed on probation, "urged" to go into the dervishes
  hyenia_troubles.12.b:0 ""
  hyenia_troubles.13.t:0 "Hearing the Thunder" #imprisoning the Thundarian Leader to try to convert him
  hyenia_troubles.13.d:0 ""
- hyenia_troubles.13.a:0 ""
+ hyenia_troubles.13.a:0 "" #Masaska meeting the thundarian in prison
  hyenia_troubles.13.b:0 ""
  hyenia_troubles.14.t:0 "14"
  hyenia_troubles.14.d:0 ""
@@ -602,7 +602,7 @@ HYE_no_fronts_no_battles1:0 "The Dervishes will embark on a massive campaign of 
 
 
 HYE_faith_not_blood:0 "Faith, not Blood."
-HYE_faith_not_blood_desc:0 "Your mighty titles did not avail you against the king, nor did it give you the virtue to stop squabbling as our homeland burned. Even now, you scheme to use me and find one among you to one day become the new monarch. You are fools, and our people deserves better. Begone! You have no authority here, and any power you wish to claim you will work for, like all others."
+HYE_faith_not_blood_desc:0 ""Your mighty titles did not avail you against the king, nor did it give you the virtue to stop squabbling as our homeland burned. Even now, you scheme to use me and find one among you to one day become the new monarch. You are fools, and our people deserves better. Begone! You have no authority here, and any power you wish to claim you will work for, like all others.""
 HYE_faith_not_blood1:0 "Fahamka will dismiss the Hyenian nobility, denying them positions of power lest they commit to the philosophy of the dervishes."
 
 HYE_submission_of_generals:0 "Submission of the Generals"
@@ -711,7 +711,7 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
  HYE_superriof_firepower:0 "HYE_superriof_firepower"
  HYE_superriof_firepower_desc:0 "HYE_superriof_firepower"
  HYE_grand_battleplan:0 "HYE_grand_battleplan"
- HYE_grand_battleplan:0_desc:0 "HYE_grand_battleplan"
+ HYE_grand_battleplan_desc:0 "HYE_grand_battleplan"
  HYE_jihad_engis:0 "HYE_jihad_engis"
  HYE_jihad_engis_desc:0 "HYE_jihad_engis"
  HYE_jihad_arty:0 "HYE_jihad_arty"

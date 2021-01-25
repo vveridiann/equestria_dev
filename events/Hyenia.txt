@@ -517,7 +517,7 @@ country_event = { #
 	}
 	option = { 
 		name = hyenia_troubles.71.b	
-		country_event = { id = hyenia_troubles.72 days = 7 }
+		country_event = { id = hyenia_troubles.73 days = 7 }
 	}
 }
 country_event = { #
