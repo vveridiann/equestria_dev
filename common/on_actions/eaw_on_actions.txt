@@ -875,6 +875,9 @@ on_actions = {
 					}
 				}
 			}
+			HYE = {
+				set_country_flag = HYE_nobles_havent_returned
+			}
 			log = "[GetDateText] Equestria at War main on_startup end"
 		}
 		
@@ -1831,6 +1834,19 @@ on_actions = {
 				}
 				FROM = {
 					clr_country_flag = NLR_preparing_to_attack_country
+				}
+			}
+			if = {
+				limit = {
+					tag = HYE
+					has_country_flag = HYE_nobles_havent_returned
+					FROM = {
+						tag = SCT
+					}
+				}
+				HYE = {
+					clr_country_flag = HYE_nobles_havent_returned
+					country_event = { id = hyenia_flavour.9 days = 13 }
 				}
 			}
 		}

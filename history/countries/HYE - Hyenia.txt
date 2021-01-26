@@ -51,8 +51,7 @@ add_ideas = {
 	better_science_base
 	lack_of_scientists1
 	poverty3
-	zebrica_legacy_of_storm1	
-	HYE_desert_devils 
+	zebrica_legacy_of_storm1	 
 	HYE_regency
 	HYE_qaylid_dervish
 	partial_economic_mobilisation
@@ -114,7 +113,7 @@ create_field_marshal = {
 	planning_skill = 4
 	logistics_skill = 4
 	female = yes
-	id = 1272020
+	id = 12720
 }
 
 create_corps_commander = {
@@ -126,6 +125,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 1
+	id = 12721
 }
 
 create_corps_commander = {
@@ -138,6 +138,7 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 4
 	female = yes
+	id = 12722
 }
 
 set_rule = {

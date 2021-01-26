@@ -498,6 +498,7 @@ ideas = {
 	theorist = {
 		HYE_yeyda = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -512,6 +513,7 @@ ideas = {
 	high_command = {
 		HYE_sunta = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -520,7 +522,8 @@ ideas = {
 			traits = { army_logistics_3 }
 		}
 		HYE_dhagax = {
-		    picture = unknown_advisor_dog
+			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -532,6 +535,7 @@ ideas = {
 		#Masaska's
 		HYE_iftiin = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -541,6 +545,7 @@ ideas = {
 		}
 		HYE_dhalaalaya = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -550,6 +555,7 @@ ideas = {
 		}
 		HYE_maraq = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -560,6 +566,7 @@ ideas = {
 		#Furasho's
 		HYE_eberweyn = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}
@@ -569,6 +576,7 @@ ideas = {
 		}
 		HYE_dareere = {
 			picture = unknown_advisor_dog
+			ledger = army
 			allowed = {
 				original_tag = HYE
 			}

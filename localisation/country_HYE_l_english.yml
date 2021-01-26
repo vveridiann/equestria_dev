@@ -198,12 +198,8 @@ HYE_recover:0 "The Hyenian Recovery"
 HYE_recover_desc:0 ""
 HYE_recovered:0 "The Hyenian Miracle"
 HYE_recovered_desc:0 ""
-HYE_desert_devils:0 "Desert Devils"
-HYE_desert_devils_desc:0 "From their tunnels and across the plains and hills, the Dervishes have carried out their war of resistance with relentless fervor. Fighting like demons under the hot Zebrican sun and moving like shadows under the moon, they are the masters of warfare in this type of terrain."
 HYE_built_industry:0 "Qaylid Industry"
 HYE_built_industry_desc:0 ""
-HYE_build_nation_industry:0 "Re-Forging Hyenia"
-HYE_build_nation_industry_desc:0 ""
 
 #Other ideas
 HYE_movespeed:0 "Like The Wind"
@@ -456,12 +452,12 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_hope_for_a_tyrant_desc:0 "The Thundarian Warlord has caused great pain to our people. Yet unlike old master he is not merely a plundering scourge, but rather someone who sought to elevate the yetis. Oh the poor yetis, that this would be their Fahamka... yet in understanding him, we can understand the yetis."
  HYE_partisans:0 "The Yeti Threat"
  HYE_partisans_desc:0 ""
- HYE_begin_peace_talks:0 "The Dervish Summit"  #event
+ HYE_begin_peace_talks:0 "The Dervish Summit" 
  HYE_begin_peace_talks_desc:0 "All of Hyenia holds its breath as the Dervish leaders gather to decide who will take up the mantle of leadership. There is none like Fahamka, but the Dervishes can no longer remain leaderless. Someone must take up the mantle, yet who has reached a position where they can achieve this? "
 
 
 #Radical Furasho 
- HYE_the_path_is_dark:0 "The Dark Path to Purity" #event
+ HYE_the_path_is_dark:0 "The Dark Path to Purity"
  HYE_the_path_is_dark_desc:0 "We are disgraced in the eyes of our Great Teacher. The summit revealed nothing but how far the dervishes have fallen thanks to the mad mutt and his ilk. No more half-measures. Now the Dervishes and all of Hyenia will be purged of all who would oppose the great cause."
  HYE_protector_of_faith:0 "The Sword of the Qaylid"
  HYE_protector_of_faith_desc:0 "Furasho has fought for years. She has fought zebra, yeti and now other hyenas. Through it all, she has been the Sword of the Qaylid, and now her creed shall be absolute. No mercy, no remorse, only purity of purpose. All who threaten it will be destroyed without quarter or mercy."
@@ -479,7 +475,7 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_army_primacy_desc:0 "No matter how loudly one praises the Qaylid, brutal, decisive action was what freed us from the Yetis. Even in this new society, the grim, hard truth is that martial might is everything, and we will not be found lacking, not as long as the Champions of Faith stand closest to the Sword."
  HYE_faith_keepers_primacy:0 "Spiritual Supremacy"
  HYE_faith_keepers_primacy_desc:0 "Our fight is not merely martial, but also spiritual. It was not the lack of martial might that allowed the mad mutt to challenge us, but lack of spiritual purity. Never again shall unorthodoxy be excused because of convenience, the Keepers of the Faith stand by the Sword's side to ensure this!" 
- HYE_military_faith_oath:0 "The Champions of Faith" #event
+ HYE_military_faith_oath:0 "The Champions of Faith"
  HYE_military_faith_oath_desc:0 "To be a dervish is to be a warrior, and to know that you fight for something greater than yourself. What carried the day during the long years in the desert was not merely training, but an unshakable faith in your cause. Like fire and water in the forge, these two wholes made the dervish a warrior like no other, and such they will remain." 
  HYE_mandated_meditation:0 "A Faithful Soldier"
  HYE_mandated_meditation_desc:0 "It is not enough for our soldiers to give for the Qaylid, they must be ready to give everything, and not in a blindly suicidal manner. Rather, every soldier will be expected to observe all the rituals of the Qaylid, and to ever sharpen their skills."
@@ -489,21 +485,21 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_preaching_officers_desc:0 "Our officers are not only responsible for the training and leadership of our soldiers, but also for their spiritual wellbeing. If a soldier loses the way, she must be either brought back into the fold or dealt with harshly."
  HYE_education_and_knownledge:0 "To Study War"
  HYE_education_and_knownledge_desc:0 "To learn is one of the great duties given to use by the Great Teacher, and war is no exception. Every battle, every dead soldier and every victory holds a lesson to learn for the faithful, and if we fail to learn from it, then we are condemned to once again be broken under foreign tyranny."
- HYE_unresting_training:0 "Ceaseless Training" #event
+ HYE_unresting_training:0 "Ceaseless Training"
  HYE_unresting_training_desc:0 "As the Qaylid makes clear, no soldier has ever finished learning, and we expect nothing less but perfection from our fighters. The price can be whatever it wants to be, for martial superiority is our divine duty. A soldier whose paws are not worked to the bone is not worthy of the title."
- HYE_faith_keepers:0 "The Keepers of the Faith" #event
+ HYE_faith_keepers:0 "The Keepers of the Faith"
  HYE_faith_keepers_desc:0 "Hyenia remains a divided nation, and the only way to bring it together is through spiritual enlightenment. By orders of the Sword, the Keepers of the Faith shall seek out heretics and apostates wherever they find them. The Qaylid is higher than all, and it shall be kept pure - by the sword if needed."
- HYE_feed_the_hungry:0 "Feed the Hungry" #event
+ HYE_feed_the_hungry:0 "Feed the Hungry"
  HYE_feed_the_hungry_desc:0 "The desperate and weak, huddling in the dark, will be given food and shelter so that they can better serve the Qaylid. What good is a starving, homeless pup to anyone? What has he learned of the world in the gutter? We will teach him, and all like him, that even in their darkest moment, the Qaylid protected them."
  HYE_teach_the_unskillful:0 "Teach the Ignorant"
  HYE_teach_the_unskillful_desc:0 "To be unenlightened is a failing, but not a sin. There are countless out there who simply did not know any better, and who need the firm, guiding paw of the righteous to set them straight. They will be elevated above their lowly position, and raised to serve a higher calling."
- HYE_fire_and_sword:0 "The Sword of Judgement" #event
+ HYE_fire_and_sword:0 "The Sword of Judgement"
  HYE_fire_and_sword_desc:0 "Some were starving and desperate, some were ignorant, but some were well aware of their heresy and committed it anyway. The day of judgement is upon these hyenas, as the Keepers of the Faith organize to cleanse Hyenia. Their judgement will be merciless and precise, tearing all heresy out by the roots, and never again shall the Qaylid be divided!"
  HYE_forceful_persuation:0 "The Book and the Sword"
  HYE_forceful_persuation_desc:0 "As the smoke rises from the pyres, the Keepers of the Faith are continuing their work. The worst heretics are dealt with, and the lesser ones are now prostrating themselves before the holy, pleading for clemency. Their penance will be in hard labour, and they will repay their sins in blood and toil."
  HYE_holy_words_of_famka:0 "The Holy Words of Fahamka"
  HYE_holy_words_of_famka_desc:0 "There will never be a Hyena like Fahamka again, and even the first time around she gave our unworthy species a gift we might well not deserve. We will remember her forever, as the great guiding light that birthed the new Hyenia, and the Keepers of the Faith will ensure - on pain of death - that none speaks ill of her."
- HYE_dawn_has_come:0 "A Pure Hyenia" #event
+ HYE_dawn_has_come:0 "A Pure Hyenia"
  HYE_dawn_has_come_desc:0 "The traitors and heathens are purged, the meek conquered and the doubters cowed. Never again shall Hyenia be divided, and as her internal enemies are dealt with, the Sword looks outwards, remembering the world that would seek to bring harm upon the faithful."
 
  hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles
@@ -574,6 +570,34 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  hyenia_troubles.15.d:0 ""
  hyenia_troubles.15.a:0 ""
  
+ hyenia_flavour.1.t:0 "HYE_the_path_is_dark"
+ hyenia_flavour.1.d:0 ""
+ hyenia_flavour.1.a:0 ""
+ hyenia_flavour.2.t:0 "HYE_military_faith_oath"
+ hyenia_flavour.2.d:0 ""
+ hyenia_flavour.2.a:0 ""
+ hyenia_flavour.3.t:0 "HYE_unresting_training"
+ hyenia_flavour.3.d:0 ""
+ hyenia_flavour.3.a:0 ""
+ hyenia_flavour.4.t:0 "HYE_faith_keepers"
+ hyenia_flavour.4.d:0 ""
+ hyenia_flavour.4.a:0 ""
+ hyenia_flavour.5.t:0 "HYE_feed_the_hungry"
+ hyenia_flavour.5.d:0 ""
+ hyenia_flavour.5.a:0 ""
+ hyenia_flavour.6.t:0 "HYE_fire_and_sword"
+ hyenia_flavour.6.d:0 ""
+ hyenia_flavour.6.a:0 ""
+ hyenia_flavour.7.t:0 "HYE_dawn_has_come"
+ hyenia_flavour.7.d:0 ""
+ hyenia_flavour.7.a:0 ""
+ hyenia_flavour.8.t:0 "HYE_fanatical_revanchism"
+ hyenia_flavour.8.d:0 ""
+ hyenia_flavour.8.a:0 ""
+ hyenia_flavour.9.t:0 "Return of nobles during the war with SCT"
+ hyenia_flavour.9.d:0 ""
+ hyenia_flavour.9.a:0 ""
+
 
 HYE_history:0 "The Darkest of Days"
 HYE_history_desc:0 "Our front lines laid broken, our capitol was being devoured by the flames and our queen had been slain. The Queendom of Hyenia was no more, and as the last, scattered remnants of the once mighty armies retreated in desperation, darkness fell above us all. The war was over. We lost."
@@ -760,8 +784,8 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
  HYE_jihad_wolfpack_desc:0 "HYE_jihad_wolfpack"
 
 ### furasho war tree (right one)
- HYE_fanatical_revanchism:0 "HYE_fanatical_revanchism" #event
- HYE_fanatical_revanchism_desc:0 "HYE_fanatical_revanchism" #event
+ HYE_fanatical_revanchism:0 "HYE_fanatical_revanchism"
+ HYE_fanatical_revanchism_desc:0 "HYE_fanatical_revanchism"
  HYE_holy_war:0 "HYE_holy_war"
  HYE_holy_war_desc:0 "HYE_holy_war"
  HYE_small_formality:0 "HYE_small_formality"

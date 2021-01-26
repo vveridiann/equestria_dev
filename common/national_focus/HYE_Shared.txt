@@ -1387,7 +1387,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		
+		country_event = { id = hyenia_flavour.1  }
 	}
 }
 shared_focus = {
@@ -1590,6 +1590,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		add_ideas = HYE_qaylid_dervish
 		load_focus_tree = HYE_furasho_radical2
+		country_event = { id = hyenia_flavour.7 }
 	}
 }
 shared_focus = {
@@ -1608,6 +1609,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		add_ideas = HYE_military_fanatism
+		country_event = { id = hyenia_flavour.2 }
 	}
 }
 shared_focus = {
@@ -1711,6 +1713,7 @@ shared_focus = {
 			add_idea = HYE_military_fanatism2
 			remove_idea = HYE_military_fanatism
 		}
+		country_event = {id = hyenia_flavour.3 }
 	}
 }
 shared_focus = {
@@ -1729,6 +1732,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		add_ideas = HYE_faith_keepers
+		country_event = { id = hyenia_flavour.4 }
 	}
 }
 shared_focus = {
@@ -1748,6 +1752,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		decrease_poverty = yes
 		add_political_power = -100
+		country_event = { id = hyenia_flavour.5 }
 	}
 }
 shared_focus = {
@@ -1792,6 +1797,7 @@ shared_focus = {
 			add_manpower = -5000
 		}
 		restore_previous_manpower = yes
+		country_event = { id = hyenia_flavour.6 }
 	}
 }
 shared_focus = {
@@ -3249,6 +3255,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		add_ideas = HYE_fanatical_revanchism
+		country_event = { id = hyenia_flavour.8 }
 	}
 }
 shared_focus = {
@@ -3558,5 +3565,19 @@ shared_focus = {
 			type = annex_everything
 			target = MHR
 		}
+	}
+}
+shared_focus = {
+	id = HYE_the_impure
+	icon = GFX_goal_artillery
+	x = 25
+	y = 0
+	cost = 6
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+
 	}
 }

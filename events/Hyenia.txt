@@ -279,7 +279,12 @@ country_event = { #The Death of Fahamka
 	option = { 
 		name = hyenia.22.a	
 		kill_country_leader = yes
-		remove_unit_leader = 1272020
+		if = {
+			limit = {
+				has_unit_leader = 12720
+			}
+			remove_unit_leader = 12720
+		}
 		create_country_leader = {
 			name = "Power Vacuum"
 			desc = ""
@@ -308,18 +313,6 @@ country_event = { #The Death of Fahamka
 	}
 }
 
-country_event = { #Rebuilding a nation - Industry
-	id = hyenia.23
-	immediate = {log = "[GetDateText]: [Root.GetName]: event hyenia.23"}
-	title = hyenia.23.t
-	desc = hyenia.23.d
-	#picture = 
-	is_triggered_only = yes
-	option = { 
-		name = hyenia.23.a	
-		add_ideas = HYE_build_nation_industry
-	}
-}
 
 ##########
 country_event = { #Nothing there just a dummy event
@@ -805,6 +798,38 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = hyenia_flavour.9.a
+		custom_effect_tooltip = ANG_paratroopers_tp
+			hidden_effect = {
+				division_template = {
+					name = "Noble Battalions"
+					priority = 2
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 1040 }
+					create_unit = {
+						division = "name = \"Royal Guard\" division_template = \"Noble Battalions\" start_experience_factor = 0.8" 
+						owner = HYE
+					}
+					create_unit = {
+						division = "name = \"Noble Insurectionists\" division_template = \"Noble Battalions\" start_experience_factor = 0.8" 
+						owner = HYE
+					}
+				}
+			}
 	}
 }
 country_event = { 
