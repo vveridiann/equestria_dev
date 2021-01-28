@@ -502,26 +502,26 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  HYE_dawn_has_come:0 "A Pure Hyenia"
  HYE_dawn_has_come_desc:0 "The traitors and heathens are purged, the meek conquered and the doubters cowed. Never again shall Hyenia be divided, and as her internal enemies are dealt with, the Sword looks outwards, remembering the world that would seek to bring harm upon the faithful."
 
- hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles
+ hyenia_troubles.1.t:0 "The Stubborn Old Order" #convince nobles (ties into hyenia.flavour.9)
  hyenia_troubles.1.d:0 "" #The returning nobility is setting up shop, blimey quite a few of them survived! So who goes first to meet them and parley with them?
- hyenia_troubles.1.a:0 "" #appear among them before they know what happened
- hyenia_troubles.1.b:0 "" #A show of force to mark that they're not the kings
+ hyenia_troubles.1.a:0 "" #appear among them before they know what happened M
+ hyenia_troubles.1.b:0 "" #A show of force to mark that they're not the kings F
  hyenia_troubles.2.t:0 "It's Time to Go Home" #return of refugees
- hyenia_troubles.2.d:0 "" #
- hyenia_troubles.2.a:0 "" #set up long term return possibilities (and remittances)
- hyenia_troubles.2.b:0 "" #bring them home with escorts
+ hyenia_troubles.2.d:0 "" #During the war, tens if not hundreds of thousands fled hyenia in various directions, and these have now languished in foreign lands. If they're brought back, they'd be grateful.
+ hyenia_troubles.2.a:0 "" #set up long term return possibilities (and remittances) M
+ hyenia_troubles.2.b:0 "" #bring them home with escorts F
  hyenia_troubles.3.t:0 "Rebuilding the Broken Cities" #focus on cities
- hyenia_troubles.3.d:0 "" 
- hyenia_troubles.3.a:0 "" #Restore what was destroyed and focus on the poor quarters
- hyenia_troubles.3.b:0 "" #Tear its down and create modern cities
+ hyenia_troubles.3.d:0 ""  #hyenia's cities used to be splendid, and 
+ hyenia_troubles.3.a:0 "" #Restore what was destroyed and focus on the poor quarters M
+ hyenia_troubles.3.b:0 "" #Tear its down and create modern cities F
  hyenia_troubles.4.t:0 "The Blossoming Countryside"
  hyenia_troubles.4.d:0 ""
- hyenia_troubles.4.a:0 "" #Small farms
- hyenia_troubles.4.b:0 "" #Big farms
+ hyenia_troubles.4.a:0 "" #Small farms M
+ hyenia_troubles.4.b:0 "" #Big farms F
  hyenia_troubles.5.t:0 "The Others who Fought" #other rebel groups
  hyenia_troubles.5.d:0 ""
- hyenia_troubles.5.a:0 "" # Learn from them, and let them prosper
- hyenia_troubles.5.b:0 "" # Offer them tutelage and training to dervishood
+ hyenia_troubles.5.a:0 "" # Learn from them, and let them prosper M
+ hyenia_troubles.5.b:0 "" # Offer them tutelage and training to dervishhood F
  hyenia_troubles.6.t:0 "A Friend in the Darkest Hour" #queen of hayzeb
  hyenia_troubles.6.d:0 ""
  hyenia_troubles.6.a:0 "" 
@@ -570,32 +570,32 @@ HYE_masaska_moderate:0 "The Path Of Harmony"
  hyenia_troubles.15.d:0 ""
  hyenia_troubles.15.a:0 ""
  
- hyenia_flavour.1.t:0 "HYE_the_path_is_dark"
- hyenia_flavour.1.d:0 ""
+ hyenia_flavour.1.t:0 "HYE_the_path_is_dark" 
+ hyenia_flavour.1.d:0 "" #a furasho standing in the destruction, slowly resolving her to fanaticism
  hyenia_flavour.1.a:0 ""
  hyenia_flavour.2.t:0 "HYE_military_faith_oath"
- hyenia_flavour.2.d:0 ""
+ hyenia_flavour.2.d:0 "" #hyenas swearing oaths to fight and die
  hyenia_flavour.2.a:0 ""
  hyenia_flavour.3.t:0 "HYE_unresting_training"
- hyenia_flavour.3.d:0 ""
+ hyenia_flavour.3.d:0 "" #a young hyena, paws bleeding as he's trained relentlessly
  hyenia_flavour.3.a:0 ""
  hyenia_flavour.4.t:0 "HYE_faith_keepers"
- hyenia_flavour.4.d:0 ""
+ hyenia_flavour.4.d:0 "" #hyena inquisition/religious police
  hyenia_flavour.4.a:0 ""
  hyenia_flavour.5.t:0 "HYE_feed_the_hungry"
- hyenia_flavour.5.d:0 ""
+ hyenia_flavour.5.d:0 "" #orphan being given food as he's told of the qaylid
  hyenia_flavour.5.a:0 ""
  hyenia_flavour.6.t:0 "HYE_fire_and_sword"
- hyenia_flavour.6.d:0 ""
+ hyenia_flavour.6.d:0 "" #prisoners being judged, fire and brimstone
  hyenia_flavour.6.a:0 ""
  hyenia_flavour.7.t:0 "HYE_dawn_has_come"
- hyenia_flavour.7.d:0 ""
+ hyenia_flavour.7.d:0 "" #Furasho standing before a grand army of loyal zealots.
  hyenia_flavour.7.a:0 ""
  hyenia_flavour.8.t:0 "HYE_fanatical_revanchism"
  hyenia_flavour.8.d:0 ""
  hyenia_flavour.8.a:0 ""
  hyenia_flavour.9.t:0 "Return of nobles during the war with SCT"
- hyenia_flavour.9.d:0 ""
+ hyenia_flavour.9.d:0 "" #nobles hid in the centaur lands and are returning in force.
  hyenia_flavour.9.a:0 ""
 
 
@@ -619,11 +619,9 @@ HYE_rise_of_the_dervishes:0 "The Rise of the Dervishes"
 HYE_rise_of_the_dervishes_desc:0 "It was among the crags of Ciidacirood that the fangs of Hyenia's last hope were bared. The desert mystic Fahamka and her cultists had long controlled the area, and neither yeti or bandit escaped the wrath of the infamous dervishes. Leaders among refugees, desperate for hope, threw themselves before her and pleaded for deliverance. The Great Teacher obliged, and the Dervishes went to war."
 HYE_rise_of_the_dervishes1:0 "The Qaylid Dervishes will become the leaders of the Hyenian resistance. Let us hope we have not sacrificed our souls to these mad fanatics."
 
-
 HYE_no_fronts_no_battles:0 "No Frontlines, No Battles"
 HYE_no_fronts_no_battles_desc:0 "The dervish ways of war were alien to the average Hyena. Instead of relying on their fortifications and Ironpaws, the dervishes moved swiftly and struck without warning only to suddenly retreat. It seemed to most like the dervishes sought only to annoy the yetis instead of defeating them, but the dervishes knew what they had to do. Their role was not grand victories, but to avoid defeat."
 HYE_no_fronts_no_battles1:0 "The Dervishes will embark on a massive campaign of harassment and sabotage against the Yetis."
-
 
 HYE_faith_not_blood:0 "Faith, not Blood."
 HYE_faith_not_blood_desc:0 ""Your mighty titles did not avail you against the king, nor did it give you the virtue to stop squabbling as our homeland burned. Even now, you scheme to use me and find one among you to one day become the new monarch. You are fools, and our people deserves better. Begone! You have no authority here, and any power you wish to claim you will work for, like all others.""
@@ -666,8 +664,6 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
  HYE_small_arms_prototypes_desc:0 "HYE_small_arms_prototypes"
  HYE_austerities_for_industry:0 "Spare Nothing, and Starve if you must"
  HYE_austerities_for_industry_desc:0 "HYE_austerities_for_industry"
- HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
- HYE_total_mob_till_industrialised_desc:0 "HYE_total_mob_till_industrialised"
  HYE_agricultural_reorganisation:0 "The Roar of the Factories"
  HYE_agricultural_reorganisation_desc:0 "HYE_agricultural_reorganisation"
  HYE_argiculture_vehicles_manufacturies:0 "Agricultural Machines"
@@ -712,29 +708,29 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
  HYE_vanguard_of_light_desc:0 "HYE_vanguard_of_light"
 
 ### furasho internal affairs tree (3rd one)
- HYE_internal_affairs:0 "HYE_internal_affairs"
+ HYE_internal_affairs:0 "The Mandate of Virtue"
  HYE_internal_affairs_desc:0 "HYE_internal_affairs"
- HYE_formal_state_education:0 "HYE_formal_state_education"
+ HYE_formal_state_education:0 "Qaylid Schools"
  HYE_formal_state_education_desc:0 "HYE_formal_state_education"
- HYE_abbadon_local_laws:0 "HYE_abbadon_local_laws"
+ HYE_abbadon_local_laws:0 "Abandon the Old Laws"
  HYE_abbadon_local_laws_desc:0 "HYE_abbadon_local_laws"
- HYE_formalize_keepers_as_police:0 "HYE_formalize_keepers_as_police"
+ HYE_formalize_keepers_as_police:0 "Law and Faith"
  HYE_formalize_keepers_as_police_desc:0 "HYE_formalize_keepers_as_police"
- HYE_expand_faith_keepers_role:0 "HYE_expand_faith_keepers_role"
+ HYE_expand_faith_keepers_role:0 "Expand the Faith Keepers' Role"
  HYE_expand_faith_keepers_role_desc:0 "HYE_expand_faith_keepers_role"
- HYE_forced_work_for_minor_crimes:0 "HYE_forced_work_for_minor_crimes"
+ HYE_forced_work_for_minor_crimes:0 "Hard Labour"
  HYE_forced_work_for_minor_crimes_desc:0 "HYE_forced_work_for_minor_crimes"
- HYE_inquisitorial_state:0 "HYE_inquisitorial_state"
+ HYE_inquisitorial_state:0 "The Faithful State"
  HYE_inquisitorial_state_desc:0 "HYE_inquisitorial_state"
- HYE_religious_indoctrination:0 "HYE_religious_indoctrination"
+ HYE_religious_indoctrination:0 "Religious Schooling"
  HYE_religious_indoctrination_desc:0 "HYE_religious_indoctrination"
 
 ### furasho military tree (right one)
- HYE_military_directionism:0 "HYE_military_directionism"
+ HYE_military_directionism:0 "The Mandate of War"
  HYE_military_directionism_desc:0 "HYE_military_directionism"
- HYE_superriof_firepower:0 "HYE_superriof_firepower"
+ HYE_superriof_firepower:0 "Overwhelming Firepower"
  HYE_superriof_firepower_desc:0 "HYE_superriof_firepower"
- HYE_grand_battleplan:0 "HYE_grand_battleplan"
+ HYE_grand_battleplan:0 "Methodical and Calculated"
  HYE_grand_battleplan_desc:0 "HYE_grand_battleplan"
  HYE_jihad_engis:0 "HYE_jihad_engis"
  HYE_jihad_engis_desc:0 "HYE_jihad_engis"
@@ -811,3 +807,4 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
 
   ### tooltips
   HYE_enable_forced_assmilation:0 "everyone bad, dog good"
+  HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
