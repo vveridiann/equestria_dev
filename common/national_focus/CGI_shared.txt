@@ -1,0 +1,518 @@
+shared_focus = {
+	id = CGI_amin_a
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 15
+	y = 0
+	cost = 0
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_a"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_b
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_a
+	}
+
+	relative_position_id = CGI_amin_a
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_b"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_c
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_a
+	}
+
+	relative_position_id = CGI_amin_a
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_c"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_d
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_c
+	}
+
+	relative_position_id = CGI_amin_c
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_d"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_e
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_b
+	}
+
+	relative_position_id = CGI_amin_b
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_e"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_f
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_d
+	}
+
+	relative_position_id = CGI_amin_d
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_f"
+	}
+}
+
+shared_focus = {
+	id = CGI_amin_g
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_e
+	}
+
+	relative_position_id = CGI_amin_e
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_amin_g"
+	}
+}
+
+shared_focus = {
+	id = CGI_intro
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_amin_f
+	}
+	prerequisite = {
+		focus = CGI_amin_g
+	}
+
+	relative_position_id = CGI_amin_f
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_intro"
+	}
+}
+
+shared_focus = {
+	id = CGI_a
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_intro
+	}
+
+	relative_position_id = CGI_intro
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_a"
+	}
+}
+
+shared_focus = {
+	id = CGI_b
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 2
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_intro
+	}
+
+	relative_position_id = CGI_intro
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_b"
+	}
+}
+
+shared_focus = {
+	id = CGI_c
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -2
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_intro
+	}
+
+	relative_position_id = CGI_intro
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_c"
+	}
+}
+
+shared_focus = {
+	id = CGI_d
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -2
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_c
+	}
+
+	relative_position_id = CGI_c
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_d"
+	}
+}
+
+shared_focus = {
+	id = CGI_e
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_d
+	}
+
+	relative_position_id = CGI_d
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_e"
+	}
+}
+
+shared_focus = {
+	id = CGI_f
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -3
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_d
+	}
+
+	relative_position_id = CGI_d
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_f"
+	}
+}
+
+shared_focus = {
+	id = CGI_g
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_e
+	}
+
+	relative_position_id = CGI_e
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_g"
+	}
+}
+
+shared_focus = {
+	id = CGI_h
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_f
+	}
+
+	relative_position_id = CGI_f
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_h"
+	}
+}
+
+shared_focus = {
+	id = CGI_i
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_h
+	}
+	prerequisite = {
+		focus = CGI_g
+	}
+
+	relative_position_id = CGI_h
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_i"
+	}
+}
+
+shared_focus = {
+	id = CGI_j
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_a
+	}
+
+	relative_position_id = CGI_a
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_j"
+	}
+}
+
+shared_focus = {
+	id = CGI_k
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_j
+	}
+
+	relative_position_id = CGI_j
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_k"
+	}
+}
+
+shared_focus = {
+	id = CGI_l
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_j
+	}
+
+	relative_position_id = CGI_j
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_l"
+	}
+}
+
+shared_focus = {
+	id = CGI_m
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_k
+	}
+
+	relative_position_id = CGI_k
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_m"
+	}
+}
+
+shared_focus = {
+	id = CGI_n
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_l
+	}
+
+	relative_position_id = CGI_l
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_n"
+	}
+}
+
+shared_focus = {
+	id = CGI_o
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_m
+	}
+	prerequisite = {
+		focus = CGI_n
+	}
+
+	relative_position_id = CGI_m
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_o"
+	}
+}
+
+shared_focus = {
+	id = CGI_p
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 2
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_b
+	}
+
+	relative_position_id = CGI_b
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_p"
+	}
+}
+
+shared_focus = {
+	id = CGI_q
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 3
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_p
+	}
+
+	relative_position_id = CGI_p
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_q"
+	}
+}
+
+shared_focus = {
+	id = CGI_r
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_p
+	}
+
+	relative_position_id = CGI_p
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_r"
+	}
+}
+
+shared_focus = {
+	id = CGI_s
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_q
+	}
+
+	relative_position_id = CGI_q
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_s"
+	}
+}
+
+shared_focus = {
+	id = CGI_t
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_r
+	}
+
+	relative_position_id = CGI_r
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_t"
+	}
+}
+
+shared_focus = {
+	id = CGI_u
+	icon = GFX_goal_generic_major_alliance_pony
+	x = -1
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_t
+	}
+	prerequisite = {
+		focus = CGI_s
+	}
+
+	relative_position_id = CGI_s
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_u"
+	}
+}
+
+shared_focus = {
+	id = CGI_v
+	icon = GFX_goal_generic_major_alliance_pony
+	x = 0
+	y = 1
+	cost = 0
+	prerequisite = {
+		focus = CGI_i
+		focus = CGI_o
+		focus = CGI_u
+	}
+
+	relative_position_id = CGI_o
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CGI_v"
+	}
+}

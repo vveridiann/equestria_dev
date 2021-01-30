@@ -1,0 +1,16 @@
+focus_tree = {
+	id = CGI_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			original_tag = CGI
+		}
+	}
+
+	shared_focus = CGI_amin_a
+
+	continuous_focus_position = { x = 50 y = 1475 }
+}

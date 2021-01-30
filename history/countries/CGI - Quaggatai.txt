@@ -16,11 +16,11 @@ actually_fix_weapon_techs = yes
 
 add_ideas = {
 	agrarian_society
-	 poor_science_base
+	 better_science_base
 	 lack_of_scientists
 	 slavery_economy
 	 zebrica_legacy_of_storm2
-	 poverty4
+	 poverty3
 }
 
 set_popularities = {
@@ -44,7 +44,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Khan Zaghu" 
+	name = "Khan Amin Zutakolt" 
 	desc = ""
 	picture = "ZiggaKhan.tga"
 	expire = "1953.3.1"
