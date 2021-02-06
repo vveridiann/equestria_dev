@@ -614,9 +614,9 @@ focus_tree = {
 		relative_position_id = CES_native_uprising
 		completion_reward = {
 			swap_ideas = {
-			add_idea = CES_uphold_harmony3
-			remove_idea = CES_uphold_harmony4
-			}
+			add_idea = CES_uphold_harmony4
+			remove_idea = CES_uphold_harmony3
+			} 
 		}		
     }
 		focus = {
