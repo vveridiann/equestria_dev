@@ -3,7 +3,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 100
 			tag = CES
 		}
 	}
@@ -17,6 +17,13 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 		country_event = daring_post_cw.1
+			15 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 
 	}
@@ -31,6 +38,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 		country_event = daring_post_cw.2
+		add_stability = 0.025
+		add_political_power = 75
 		}
 
 	}
@@ -62,13 +71,13 @@ focus_tree = {
 		completion_reward = {
 		custom_effect_tooltip = CES_tribal_warbands_tt
 		country_event = daring_post_cw.4
-		hidden_effect = {
-		load_oob = CES_native_militia
-		}
+			hidden_effect = {
+			load_oob = CES_native_militia
+			}
 		}
 	}
 	focus = {
-		id = CES_blowpipes # idea that provides +10% attack and defence in Jungle
+		id = CES_blowpipes # idea that provides +10% attack and defence in Jungle #We already have a jungle_warfare tech that does that but also gives movement bonuses at the cost of less atk, 5%.
 		icon = GFX_goal_unknown
 		cost = 3
 		prerequisite = {
@@ -77,7 +86,12 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = CES_native_uprising
-
+		completion_reward = { #Note: CES_uphold_harmony2 has an idea that already gives +15% defense and attack on core territory.
+			set_technology = {
+				jungle_warfare = 1
+			}
+			custom_effect_tooltip = CES_jungle_warfare_techinfo_tt #note to self: inf atk 0.05, def 0.1, movement 0.1, specops atk 0.1, def 0.1, movement 0.1
+		}
 	}
 	focus = {
 		id = CES_scavenge_their_guns # idea providing extra scavenge ratio
@@ -89,7 +103,47 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_scavenging
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = NMS
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = BAL
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = JUN
+			}				
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+				producer = NMS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+				producer = BAL
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+				producer = JUN
+			}			
+		}
+		hidden_effect = {
+			country_event = { 
+				id = daring_post_cw.5 #Scavenging guns flavor event
+				days = 7
+			}
+		}
 	}
 	focus = {
 		id = CES_jungle_workshops # 2 arm factories
@@ -101,7 +155,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			two_random_arms_factory = yes
+		}
 	}
 	focus = {
 		id = CES_hit_and_run # out of supply grace 48 hours
@@ -116,7 +172,11 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_supply_grace
+			}
+		}
 	}
 	focus = {
 		id = CES_pig_iron # lack of resources modifier buff and 16 steel in one owned state
@@ -131,7 +191,15 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = CES_scarcity
+			34 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
 	}
 	focus = {
 		id = CES_a_glorious_victory
@@ -146,7 +214,9 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_political_power = 100 #What else?
+		}
 	}
 	focus = {
 		id = CES_tribal_democracy # stab buff 
@@ -158,7 +228,9 @@ focus_tree = {
 		x = -2
 		y = 4
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_stability = 0.05
+		}
 	}
 	focus = {
 		id = CES_end_to_the_rituals
@@ -170,7 +242,10 @@ focus_tree = {
 		x = -2
 		y = 6
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_war_support = -0.05
+			add_political_power = 20
+		}
 	}
 	focus = {
 		id = CES_chinampa_system # economic modifiers 
@@ -182,7 +257,11 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_chinampa_idea
+			}
+		}
 	}
 	focus = {
 		id = CES_preserve_our_customs #religious values, popularity to harmony 
@@ -194,7 +273,12 @@ focus_tree = {
 		x = -1
 		y = 5
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
 	}
 	focus = {
 		id = CES_chain_the_capitalists
@@ -206,7 +290,11 @@ focus_tree = {
 		x = 1
 		y = 5
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_state_capitalism
+			}
+		}
 	}
 	focus = {
 		id = CES_thestral_tribal_decentralization
@@ -221,10 +309,14 @@ focus_tree = {
 		x = 0
 		y = 6
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.02
+			add_manpower = 1000
+		}
 	}
 	focus = {
-		id = CES_never_again_swindled #attack and def on core territory
+		id = CES_never_again_swindled #attack and def on core territory #Increased it by 0.05
 		icon = GFX_goal_unknown
 		cost = 8
 		prerequisite = {
@@ -233,7 +325,31 @@ focus_tree = {
 		x = 2
 		y = 6
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CES_uphold_harmony2
+				}		
+				swap_ideas = {
+					remove_idea = CES_uphold_harmony2
+					add_idea = CES_uphold_harmony3
+				}
+			}
+			if_else = {
+				limit = {
+					has_idea = CES_uphold_harmony2
+				}					
+				swap_ideas = {
+					remove_idea = CES_uphold_harmony
+					add_idea = CES_uphold_harmony3
+				}
+			}
+			else = {
+				add_ideas = {
+					CES_uphold_harmony3
+				}
+			}
+		}
 	}
 	focus = {
 		id = CES_jungle_constitution # daily pp gain
@@ -245,7 +361,11 @@ focus_tree = {
 		x = 2
 		y = 4
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_constitution_idea
+			}
+		}
 	}
 	focus = {
 		id = CES_demand_jungle_autonomy # Offer to rejoin Equestria as a dominion 
@@ -263,13 +383,24 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CES_independent_south_east
 		}
+		available = {
+			event_target:equestria = {
+				has_war = no
+			}
+		}
 		x = -1
 		y = 7
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			event_target:equestria = {
+				country_event = {
+					id = daring_post_cw.6
+				}
+			}
+		}
 	}
 	focus = {
-		id = CES_independent_south_east # Tell the alicorns to fuck off you and staying independent as the Free South East
+		id = CES_independent_south_east # Free South-East
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -287,7 +418,18 @@ focus_tree = {
 		x = 1
 		y = 7
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			reverse_add_opinion_modifier = {
+				target = event_target:equestria
+				modifier = faction_traitor
+			}
+			reverse_add_opinion_modifier = {
+				target = CES
+				modifier = faction_traitor
+			}
+		}
 	}
 	focus = {
 		id = CES_equestrian_advisors # Idea providing doctrine and research modifers
@@ -299,7 +441,13 @@ focus_tree = {
 		x = -3
 		y = 8
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
 	}
 	focus = {
 		id = CES_equestrian_investors # 4 civ factories and 1 infra in 3 states
@@ -311,7 +459,12 @@ focus_tree = {
 		x = -1
 		y = 8
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			four_random_industrial_complex = yes
+			one_random_infrastructure = yes
+			one_random_infrastructure = yes
+			two_random_infrastructure_and_slot = yes
+		}
 	}
 	focus = {
 		id = CES_harmony_nature # resource extraction buff
@@ -326,10 +479,14 @@ focus_tree = {
 		x = -2
 		y = 9
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			add_ideas = {
+				CES_resource_extraction_idea
+			}
+		}
 	}
 	focus = {
-		id = CES_seek_foreign_support # send event to any major with negative opinion of Equestria giving them the option to supply arms and 1 offmap factory
+		id = CES_seek_foreign_support # send event to any major with negative opinion of Equestria giving them the option to supply arms and 1 offmap factory #there's a cap to these!
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -338,7 +495,9 @@ focus_tree = {
 		x = 1
 		y = 8
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			three_random_industrial_complex = yes #Just straight-up add some rather than giving RNG, it's easier to balance this way.
+		}
 	}
 	focus = {
 		id = CES_jungle_fortlines # level 2 forts constructed on the border
@@ -350,7 +509,95 @@ focus_tree = {
 		x = 3
 		y = 8
 		relative_position_id = CES_native_uprising
-
+		completion_reward = {
+			custom_effect_tooltip = CES_forts_tt
+			hidden_effect = {
+				50 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+				81 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+				35 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}	
+				17 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+				27 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+				28 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+				37 ={
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							limit_to_border = yes	
+							all_provinces = yes
+			
+						}
+					}		
+				}
+			}
+		}
 	}
 	focus = {
 		id = CES_never_again # idea providing core attack and defence buff
@@ -365,6 +612,12 @@ focus_tree = {
 		x = 2
 		y = 9
 		relative_position_id = CES_native_uprising
+		completion_reward = {
+			swap_ideas = {
+			add_idea = CES_uphold_harmony3
+			remove_idea = CES_uphold_harmony4
+			}
+		}		
     }
 		focus = {
 		id = CES_what_a_party # event describing what a party
@@ -376,6 +629,9 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CES_prepare_the_parade
+		completion_reward = {
+		
+		}		
 	}
 	focus = {
 		id = CES_pow_releases # gives 75k manpower and a stab buff
@@ -387,7 +643,9 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_demobilize # changes economy law to early mob and conscription law to limited conscription
@@ -399,7 +657,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_junta_or_democracy # Event decides whether the Junta stays in charge and keep your merc/zebrican advisors or disband and hold elections
@@ -417,7 +677,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_the_jungle_doctor # Event fires to gain Cab as a general and advisor
@@ -429,7 +691,9 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_foster_stableside_industries # 2 civ, 2 mil, 2 dockyards in stableside
@@ -441,7 +705,9 @@ focus_tree = {
 		x = -2
 		y = 4
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_native_equality # recruitable pop factor +10% boost
@@ -453,7 +719,9 @@ focus_tree = {
 		x = 2
 		y = 4
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_stableside_is_open_for_business # idea exporting extra resources 15%
@@ -465,7 +733,9 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_bang_for_buck # consumer goods -5%
@@ -477,7 +747,9 @@ focus_tree = {
 		x = -2
 		y = 5
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_maternity_grants # monthly pop +25%
@@ -489,7 +761,9 @@ focus_tree = {
 		x = 2
 		y = 5
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_the_equestrian_question # event to be annexed and switch control to equestria or look for a second way
@@ -501,7 +775,9 @@ focus_tree = {
 		x = 0
 		y = 6
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_equal_partners # independent member of the faction
@@ -515,7 +791,9 @@ focus_tree = {
 		}
 		x = 9
 		y = 10
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_loyal_subject # become a dominion of equestria
@@ -530,7 +808,9 @@ focus_tree = {
 		x = 2
 		y = 7
 		relative_position_id = CES_what_a_party
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_sundown_over_stableside # Daring Do retiring and disappearing for one last adventure
@@ -545,7 +825,9 @@ focus_tree = {
 		x = 0
 		y = 9
 		relative_position_id = CES_the_celebration
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_darkest_day # Pony of Shadows return thanks to the darkness and despair unleashed during the CW creates his field marshal with unique trait and spawns divs
@@ -557,7 +839,9 @@ focus_tree = {
 		x = 7
 		y = 3
 		relative_position_id = CES_prepare_the_parade
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_shadow_energies # boosts recruit pop factor by 10
@@ -569,7 +853,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_accursed_weapons # flat attack buff of 5%
@@ -584,7 +870,9 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_enforced_servitude # non core recruitable of 5%
@@ -596,7 +884,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_despair_blades # 4 arms factories
@@ -608,7 +898,9 @@ focus_tree = {
 		x = -3
 		y = 4
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_shadow_call_to_monsters # Enable the star bears Ahui has and spawn 2 of them
@@ -623,7 +915,9 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_prepare_the_reclamation # Idea providing planning max and speed for 720 days
@@ -638,7 +932,9 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_bring_down_the_alicorns # Wargoal on Equestria
@@ -653,7 +949,9 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_the_twinned_castle # Moves capital to the ruined castle and swaps Pony of Shadows trait for a stronger version 
@@ -665,7 +963,9 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_accursed_crystals # Spawn 24 crystals at the twinned castle
@@ -677,7 +977,9 @@ focus_tree = {
 		x = -3
 		y = 5
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_legacy_of_shadow # Reduced Garrison requirement idea
@@ -689,7 +991,9 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_salt_canterlot # Rename Canterlot to Canterlot Ruins and event describing it being a no go zone
@@ -701,7 +1005,9 @@ focus_tree = {
 		x = 3
 		y = 5
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_darkness_is_our_friend # spawn some elite divs
@@ -713,7 +1019,9 @@ focus_tree = {
 		x = 3
 		y = 4
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_stalliongrad_subjugation # war goal on stalliongrad or whoever controls their root
@@ -725,7 +1033,9 @@ focus_tree = {
 		x = -1
 		y = 6
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_heckle_yaks # wargoal on yaks or whoever controls their root
@@ -737,7 +1047,9 @@ focus_tree = {
 		x = 1
 		y = 6
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_detente_bugs_or_death # Event telling changelings to fuck off away from PoS dominions or get vored too
@@ -749,7 +1061,9 @@ focus_tree = {
 		x = 0
 		y = 7
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_nerfarious_rituals # destory infrastructure in stalliongrad by 4 levels for -7.5% consumer goods bonus
@@ -761,7 +1075,9 @@ focus_tree = {
 		x = -3
 		y = 7
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
 		id = CES_battle_beasts # modify the earlier non-core pop idea by +5%
@@ -773,10 +1089,12 @@ focus_tree = {
 		x = 3
 		y = 7
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}
 	focus = {
-		id = CES_darkness_and_despair # Justify war goal time of -40%
+		id = CES_darkness_and_despair # Justify war goal time of -40% #That's a bit much?
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -791,5 +1109,7 @@ focus_tree = {
 		x = 0
 		y = 8
 		relative_position_id = CES_darkest_day
-
+		completion_reward = {
+		
+		}	
 	}

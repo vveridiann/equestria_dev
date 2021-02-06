@@ -690,6 +690,42 @@ ideas = {
 		}
 	}
 	country = {
+		CES_uphold_harmony3 = {
+			picture = CES_uphold_harmony
+			allowed = {
+				original_tag = CES
+			}
+			modifier = {
+				political_power_gain = 0.05
+				democratic_drift = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				production_speed_bunker_factor = 0.3
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+	}
+	country = {
+		CES_uphold_harmony4 = {
+			picture = CES_uphold_harmony
+			allowed = {
+				original_tag = CES
+			}
+			modifier = {
+				political_power_gain = 0.05
+				democratic_drift = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.25
+				production_speed_bunker_factor = 0.3
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+	}		
+	country = {
 		CES_attack_jungle = {
 
 			picture = generic_disjointed_gov
@@ -751,4 +787,63 @@ ideas = {
 			}
 		}
 	}
+	
+	country = {
+		CES_scavenging = {
+		picture = generic_disjointed_gov
+			modifier = {
+				equipment_capture_factor = 0.075
+			}
+		}
+	}
+	country = {
+		CES_supply_grace = {
+		picture = generic_disjointed_gov
+			modifier = {
+				no_supply_grace = 48
+			}
+		}
+	}	
+	country = {
+		CES_scarcity = {
+		picture = generic_disjointed_gov
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+	}
+	country = {
+		CES_chinampa_idea = {
+		picture = generic_disjointed_gov
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+	}
+	country = {
+		CES_state_capitalism = {
+		picture = generic_disjointed_gov
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+	}	
+	country = {
+		CES_constitution_idea = {
+		picture = generic_disjointed_gov
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+	}
+	country = {
+		CES_resource_extraction_idea = {
+		picture = generic_disjointed_gov
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+	}		
 }
