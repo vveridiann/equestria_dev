@@ -1846,7 +1846,7 @@ on_actions = {
 				}
 				HYE = {
 					clr_country_flag = HYE_nobles_havent_returned
-					country_event = { id = hyenia_flavour.9 days = 13 }
+					country_event = { id = hyenia_flavour.9 days = 5 }
 				}
 			}
 		}

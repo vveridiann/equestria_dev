@@ -535,7 +535,58 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_manpower"
 		add_manpower = 5000
-		load_oob = HYE_levies
+		if = {
+			limit = {
+				NOT = {
+					has_template = "Local Levy"
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 1040 }
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+			}
+		}
+		else = {
+			division_template = {
+				name = "Local Levy"
+				priority = 0
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+				}
+				support = {
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 1040 }
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+				create_unit = {
+					division = "name = \"Levies\" division_template = \"Local Levy\" start_experience_factor = 0.4" 
+					owner = HYE
+				}
+			}
+		}
 		hidden_effect = { country_event = { id = hyenia.11 } } #stormbreakers
 	}
 }
