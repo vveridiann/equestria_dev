@@ -3629,6 +3629,259 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-
+	}
+}
+shared_focus = {
+	id = HYE_desperate_attempts_at_reconstruction
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 12
+	relative_position_id = HYE_the_impure
+	prerequisite = {
+		focus = HYE_the_impure
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_attempt_at_uniting_nation
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 12
+	relative_position_id = HYE_the_impure
+	prerequisite = {
+		focus = HYE_the_impure
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 75
+	}
+}
+shared_focus = {
+	id = HYE_skimrish_with_bandits
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 12
+	relative_position_id = HYE_the_impure
+	prerequisite = {
+		focus = HYE_desperate_attempts_at_reconstruction
+		focus = HYE_attempt_at_uniting_nation
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		army_experience = 20
+	}
+}
+shared_focus = {
+	id = HYE_peacekeepers_tactics
+	icon = GFX_goal_artillery
+	x = 0
+	y = 3
+	cost = 12
+	relative_position_id = HYE_the_impure
+	prerequisite = {
+		focus = HYE_skimrish_with_bandits
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = HYE_return_of_dervishes
+	icon = GFX_goal_artillery
+	x = 25
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		
+		bar_kill_advisors = yes
+		create_country_leader = {
+			name = "Hyenian Communes"
+			picture = "tba"
+			expire = "1965.1.1"
+			ideology = anarchist_communism
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		create_country_leader = {
+			name = "Furasho"
+			picture = "tba"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {}
+		}
+		every_owned_state = {
+			set_demilitarized_zone = no
+		}
+	}
+}
+shared_focus = {
+	id = HYE_assasination_spree
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_return_of_dervishes
+	prerequisite = {
+		focus = HYE_return_of_dervishes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		set_country_flag = HYE_massaska_murderhobo
+		custom_effect_tooltip = HYE_reign_of_terror
+		add_political_power = 50
+	}
+}
+shared_focus = {
+	id = HYE_envoy_to_centaurs
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_return_of_dervishes
+	prerequisite = {
+		focus = HYE_return_of_dervishes
+	}
+	bypass = {
+		NOT = {
+			CNT = {
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						is_in_faction = yes
+					}
+				}
+			}
+		}
+		NOT = {
+			GAR = {
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						is_in_faction = yes
+					}
+				}
+			}
+		}
+	}
+	available = {
+		OR = {
+			CNT = {
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						is_in_faction = yes
+					}
+				}
+			}
+			GAR = {
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						is_in_faction = yes
+					}
+				}
+			}
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		if = {
+			limit = {
+				CNT = {
+					OR = {
+						is_faction_leader = yes
+						NOT = {
+							is_in_faction = yes
+						}
+					}
+				}
+			}
+			CNT = {
+				country_event = { id = hyenia_masaska.1 days = 4 }
+			}	
+		}
+		else = {
+			GAR = {
+				country_event = { id = hyenia_masaska.1 days = 4 }
+			}
+		}	
+	}
+}
+shared_focus = {
+	id = HYE_we_stand_alone
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_return_of_dervishes
+	mutually_exclusive = {
+		focus = HYE_we_stand_together
+	}
+	prerequisite = {
+		focus = HYE_envoy_to_centaurs
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+	}
+}
+shared_focus = {
+	id = HYE_we_stand_together
+	icon = GFX_goal_artillery
+	x = 2
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_return_of_dervishes
+	mutually_exclusive = {
+		focus = HYE_we_stand_alone
+	}
+	prerequisite = {
+		focus = HYE_envoy_to_centaurs
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 	}
 }

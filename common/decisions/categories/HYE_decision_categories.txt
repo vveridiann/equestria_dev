@@ -40,4 +40,17 @@ HEY_promises_missions = {
 		has_completed_focus = HYE_sneaky_plan
 	}
 }
+HEY_massaska_radical = {
+	icon = generic_decision
+
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 100
+	}
+	visible = {
+		has_country_flag = HYE_massaska_murderhobo
+	}
+}
 	

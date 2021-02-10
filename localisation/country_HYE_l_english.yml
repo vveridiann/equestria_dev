@@ -808,3 +808,9 @@ HYE_mounain_desert_troops_tooltip:0 "§YEffect§!:\nInfantry:\n    §YMountains�
   ### tooltips
   HYE_enable_forced_assmilation:0 "everyone bad, dog good"
   HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
+
+  ### leader traits ###
+  HYE_prodigal_son:0 "Prodigal Son"
+
+
+  HYE_centaur_alliance:0 "Some cool aliance name"

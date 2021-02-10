@@ -206,6 +206,15 @@ hye_start_promises_missions_debug = {
 HYE_lower_divide = {
 	if = {
 		limit = {
+			has_idea = HYE_destroyed_nation
+		}
+		swap_ideas = {
+			add_idea = HYE_divided_nation
+			remove_idea = HYE_destroyed_nation
+		}
+	}
+	else_if = {
+		limit = {
 			has_idea = HYE_divided_nation
 		}
 		swap_ideas = {

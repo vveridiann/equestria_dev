@@ -143,6 +143,19 @@ ideas = {
 				political_power_gain = 0.25
 			}
 		}	
+		HYE_destroyed_nation = {
+			picture = anti_soviet_pact
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }	
+			modifier = { 
+				political_power_gain = -0.6
+				war_support_factor = -1
+				conscription_factor = -0.25
+				stability_factor = -1
+				production_speed_buildings_factor = -0.2
+			}
+		}	
 		HYE_divided_nation = {
 			picture = anti_soviet_pact
 			removal_cost = -1

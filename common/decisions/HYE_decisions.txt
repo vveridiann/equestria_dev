@@ -569,3 +569,77 @@ HEY_promises_missions = {
 		}
 	}
 }
+HEY_massaska_radical = {
+	HYE_assasin_spree_1 = {
+		icon =  generic_decision
+		ai_will_do = { factor = 100 }
+		cost = 25
+	
+		visible = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		available = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		complete_effect = {
+			HYE_lower_divide = yes
+		}
+	}
+	HYE_assasin_spree_1 = {
+		icon =  generic_decision
+		ai_will_do = { factor = 100 }
+		cost = 25
+	
+		visible = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		available = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		complete_effect = {
+			HYE_lower_divide = yes
+		}
+	}
+	HYE_assasin_spree_1 = {
+		icon =  generic_decision
+		ai_will_do = { factor = 100 }
+		cost = 25
+	
+		visible = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		available = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		complete_effect = {
+			HYE_lower_divide = yes
+		}
+	}
+	HYE_assasin_spree_1 = {
+		icon =  generic_decision
+		ai_will_do = { factor = 100 }
+		cost = 25
+	
+		visible = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		available = {
+			has_country_flag = HYE_massaska_murderhobo
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		complete_effect = {
+			HYE_lower_divide = yes
+		}
+	}
+}

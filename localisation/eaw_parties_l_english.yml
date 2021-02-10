@@ -57,7 +57,9 @@
  religious_socialism_desc:0 "Theocratic socialism is based on religious values. It sees capitalism as idolatry and sin that goes against the teachings of religious leaders. According to its advocates, the Gods intended for all living beings to be equal and not oppress one another."
  juche:0 "Juche"
  juche_desc:0 "Juche is the belief that the masses cannot self-regulate, but rather must be guided by a 'Great Leader' who is the mastermind of the working class. The Great Leader is without flaw and never commits mistakes, is always benevolent and always rules for the masses. The army is the greatest of all institutions guided by the Great Leader."
- 
+ communal_isolationism:0 "Communal Isolationism"
+ communal_isolationism_desc:0 "when you make monastery but the size of state"
+
  #nazism:0 "Imperialism"# moved to replace folder
  #nazism_desc:0 "Imperialism promotes aggresive expansion as a way to increase the power and wealth of the state. With an absolute ruler (often a monarch), an Imperialist state often goes great lengths to ensure that dissident and seditious ideas are suppressed."# moved to replace folder
  #fascism_ideology:0 "Fascism"# Identical duplicate from hoi4
@@ -94,6 +96,8 @@
  magocracy_desc:0 "Magocracy is the rule of spellcasters, often unicorns, where magical talent is the most valued trait among the people. In a magocracy, a peasant who has magical skill can quickly rise to the upper class. Mighty sorcerers or necromancers lead the government, and the nation's most important purpose is to support and fuel magical research."
  neofeudalism:0 "Neo-Feudalism"
  neofeudalism_desc:0 "Feudalism was once a common political system in many kingdoms, but it has been largely abandoned as society has progressed into the industrial age. Neo-feudalism demands a radical return to traditional hierarchies, with nobles owning all land in the nation, and the peasants bound to the land in turn. Factory workers fare no better, being bound to the factories they work at. Peasants and urban workers have barely any rights, being only just above slaves, and can be ordered to work or be conscripted as the nobility desires. Neo-feudalism accepts elements of modern society such as factories and science as useful, but refuses to let them erode the old hierarchies it deems necessary."
+religious_fundamentalism:0 "Religious Fundamentalism"
+religious_fundamentalism_desc:0 "when you fucking misunderstand the whole thing and make bitch out of logic"
 
  #despotism:0 "Despotic"# Identical duplicate from hoi4
  #despotism_desc:0 "Despotism is a form of government in which a single person, usually a hereditary monarch, rules with absolute power. However, the ruler's policies are moderate and conservative as they seek to maintain the status quo."# moved to replace folder
