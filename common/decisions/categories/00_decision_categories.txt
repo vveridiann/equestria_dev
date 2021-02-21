@@ -18,6 +18,7 @@ propaganda_efforts = {
 MTG_naval_treaties = {
 	picture = GFX_decision_cat_picture_naval_treaties
 	allowed = {
+		always = no
 		has_dlc = "Man the Guns"
 	}
 	visible = {
@@ -169,6 +170,7 @@ economy_decisions = {
 
 	allowed = {
 		NOT = { tag = DED }
+		NOT = { tag = BAR }
 	}
 }
 

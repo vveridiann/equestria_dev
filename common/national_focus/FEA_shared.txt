@@ -2376,6 +2376,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_radar_project"
 		add_tech_bonus = {
+			name = radar_bonus
 			bonus = 3
 			uses = 1
 			category = radar_tech
@@ -2784,6 +2785,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_transport"
 		add_tech_bonus = {
+			name = tp_bonus
 			bonus = 1.0
 			uses = 1
 			category = tp_tech
@@ -6468,6 +6470,7 @@ shared_focus = {
 		add_stability = 0.05
 		add_political_power = 100
 		add_ideas = limited_exports
+		set_country_flag = FLO_forced_limited
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
 }
@@ -6499,6 +6502,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_full_economic_mobilisation"
 		custom_effect_tooltip = GRI_war_economy_tp
 		add_ideas = war_economy
+		set_country_flag = war_economy_only_flag
 		random_owned_controlled_state = {
 			limit = {
 				free_building_slots = {
@@ -6962,6 +6966,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_retool_the_industrial_sector"
 		custom_effect_tooltip = GRI_war_economy_tp
 		add_ideas = war_economy
+		set_country_flag = war_economy_only_flag
 		random_owned_controlled_state = {
 			limit = {
 				free_building_slots = {
@@ -7316,6 +7321,7 @@ shared_focus = {
 		add_stability = 0.05
 		add_political_power = 100
 		add_ideas = limited_exports
+		set_country_flag = FLO_forced_limited
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
 }
@@ -7867,7 +7873,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_c_industry_2"
 		FEA_gradually_remove_ruined_economy = yes
 		add_tech_bonus = {
-			name = excevation
+			name = excavation
 			bonus = 1.0
 			uses = 2
 			technology = excavation1
@@ -8943,6 +8949,7 @@ shared_focus = {
 		create_corps_commander = {
 			name = "Jacob Klauwen"
 			picture = "Jacob_Klauwen.tga"
+			desc = "FEA_jacob_desc"
 			traits = { trait_engineer griffon_race_trait }
 			skill = 2
 			attack_skill = 1
@@ -8953,7 +8960,8 @@ shared_focus = {
 		custom_effect_tooltip = FEA_jacob_stats_tp
 		create_corps_commander = {
 			name = "Nicolaas Swartvleugel"
-			portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_3.dds"
+			desc = "FEA_nicolaas_desc"
+			picture = "Nicolaas_Swartvleugel.tga"
 			traits = { trait_reckless griffon_race_trait }
 			skill = 3
 			attack_skill = 2
@@ -8963,8 +8971,9 @@ shared_focus = {
 		}
 		custom_effect_tooltip = FEA_nicolaas_stats_tp
 		create_corps_commander = {
-			name = "General Jan Onverschrikt"
-			portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_5.dds"
+			name = "Jan Onverschrikt"
+			desc = "FEA_jan_onver_desc"
+			picture = "Jan_Onverschrikt.tga"
 			traits = { infantry_officer griffon_race_trait }
 			skill = 3
 			attack_skill = 3
@@ -9221,7 +9230,7 @@ shared_focus = {
 
 shared_focus = {
 	id = FEA_ancient_claims
-	icon = GFX_goal_generic_attack_allies
+	icon = GFX_goal_FEA_ancient_claims
 	x = 2
 	y = 8
 	relative_position_id = FEA_martial_law
@@ -10570,8 +10579,8 @@ shared_focus = {
 	x = 0
 	y = 6
 	relative_position_id = FEA_the_throne
-	cost = 16.00
-	prerequisite = { focus = FEA_the_empire_rises }
+	cost = 7.20
+	prerequisite = { focus = FEA_reclaim_north }
 	available = {
 		has_political_power > 200
 	}
@@ -10641,7 +10650,7 @@ shared_focus = {
 	x = -3
 	y = 7
 	relative_position_id = FEA_the_throne
-	cost = 16.00
+	cost = 7.20
 	prerequisite = { focus = FEA_reclaim_center }
 	available = {
 		has_political_power > 200
@@ -10698,10 +10707,7 @@ shared_focus = {
 	will_lead_to_war_with = JFT
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FEA_reclaim_west"
-		if = {
-			limit = { has_government = neutrality }
-			create_wargoal = { type = annex_everything target = TRD }
-		}
+		create_wargoal = { type = annex_everything target = TRD }
 		if = {
 			limit = { NOT = { has_guaranteed = AET } }
 			create_wargoal = { type = annex_everything target = AET }
@@ -10723,7 +10729,7 @@ shared_focus = {
 	x = 3
 	y = 7
 	relative_position_id = FEA_the_throne
-	cost = 16.00
+	cost = 7.20
 	prerequisite = { focus = FEA_reclaim_west }
 	available = {
 		has_political_power > 200
@@ -10836,7 +10842,7 @@ shared_focus = {
 	x = 0
 	y = 9
 	relative_position_id = FEA_the_throne
-	cost = 15.00
+	cost = 7.20
 	prerequisite = { focus = FEA_core_south }
 	prerequisite = { focus = FEA_core_west }
 	prerequisite = { focus = FEA_core_center }

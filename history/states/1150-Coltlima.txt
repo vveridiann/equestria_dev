@@ -2,7 +2,9 @@
 state={
 	id=1150
 	name="STATE_1150"
-
+	resources={
+		rubber=6
+	}
 	history={
 		owner = IDO
 		add_core_of = IDO
@@ -14,5 +16,5 @@ state={
 	}
 	manpower=230000
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=pastoral
 }

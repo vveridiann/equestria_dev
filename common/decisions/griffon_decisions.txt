@@ -180,26 +180,18 @@ form_griffon_empire_category = {
 			set_capital = 382
 			every_state = {
 				limit = {
-					OR = {
-						region = 164
-						region = 188
-						region = 156
-						region = 157
-						region = 174
-						region = 191
-					}
+					region = 164
 				}
 				add_core_of = ROOT
 			}
-			439= {
-				add_core_of = ROOT
-			}
-			398 = {
-				add_core_of = ROOT
-			}
-			479 = {
-				add_core_of = ROOT
-			}
+			ANG = { add_to_ROOT_potential_cores = yes }
+			KAT = { add_to_ROOT_potential_cores = yes }
+			FEA = { add_to_ROOT_potential_cores = yes }
+			STW = { add_to_ROOT_potential_cores = yes }
+			BRZ = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			PYT = { add_to_ROOT_potential_cores = yes }
 		}
 		ai_will_do = {
 			factor = 200
@@ -925,6 +917,42 @@ form_griffon_empire_category = {
 						id = angriver_news.1
 						hours = 6
 					}
+					if = {
+						limit = {
+							has_focus_tree = angriver_focus_republicans_imperial
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.33
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_focus_tree = angriver_focus_blackclaw_imperial
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.35
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+						NOT = {
+							has_global_flag = GRI_grover_vi_dead
+						}
+					}
+					country_event = {
+						id = grover.34
+						days = 1
+					}
 				}
 				set_capital = 382
 				every_state = {
@@ -1355,6 +1383,30 @@ form_griffon_empire_category = {
 						id = angriver_news.3
 						hours = 6
 					}
+					if = {
+						limit = {
+							has_country_leader = { ruling_only = yes name = "Baron Leer the Vicious" }
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.32
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_focus_tree = angriver_focus_republicans_imperial
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.33
+							days = 1
+						}
+					}
 				}
 				set_capital = 382
 				every_state = {
@@ -1686,6 +1738,42 @@ form_griffon_empire_category = {
 							value = 1
 						}
 					}
+					if = {
+						limit = {
+							has_government = democratic
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.37
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_government = neutrality
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.38
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_government = fascism
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.39
+							days = 1
+						}
+					}
 				}
 				save_global_event_target_as = griffonian_empire
 				set_variable = {
@@ -1985,6 +2073,42 @@ form_griffon_empire_category = {
 						set_country_flag = {
 							flag = holds_griffon_capital
 							value = 1
+						}
+					}
+					if = {
+						limit = {
+							has_government = neutrality
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.38
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_government = communism
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.40
+							days = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_government = fascism
+							NOT = {
+								has_global_flag = GRI_grover_vi_dead
+							}
+						}
+						country_event = {
+							id = grover.41
+							days = 1
 						}
 					}
 				}
@@ -3107,7 +3231,7 @@ form_griffon_empire_category = {
 					}
 				}
 				drop_cosmetic_tag = yes
-				set_cosmetic_tag = YAL_herzland
+				set_cosmetic_tag = GRIF_EMPIRE
 				load_focus_tree = yale_fascist
 			}
 			hidden_effect = {
@@ -3601,26 +3725,18 @@ form_griffon_empire_category = {
 			set_capital = 382
 			every_state = {
 				limit = {
-					OR = {
-						region = 164
-						region = 188
-						region = 156
-						region = 157
-						region = 174
-						region = 191
-					}
+					region = 164
 				}
 				add_core_of = ROOT
 			}
-			439 = {
-				add_core_of = ROOT
-			}
-			398 = {
-				add_core_of = ROOT
-			}
-			479 = {
-				add_core_of = ROOT
-			}
+			ANG = { add_to_ROOT_potential_cores = yes }
+			KAT = { add_to_ROOT_potential_cores = yes }
+			FEA = { add_to_ROOT_potential_cores = yes }
+			STW = { add_to_ROOT_potential_cores = yes }
+			BRZ = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			PYT = { add_to_ROOT_potential_cores = yes }
 		}
 		ai_will_do = {
 			factor = 200
@@ -3677,26 +3793,18 @@ form_griffon_empire_category = {
 			set_capital = 382
 			every_state = {
 				limit = {
-					OR = {
-						region = 164
-						region = 188
-						region = 156
-						region = 157
-						region = 174
-						region = 191
-					}
+					region = 164
 				}
 				add_core_of = ROOT
 			}
-			439 = {
-				add_core_of = ROOT
-			}
-			398 = {
-				add_core_of = ROOT
-			}
-			479 = {
-				add_core_of = ROOT
-			}
+			ANG = { add_to_ROOT_potential_cores = yes }
+			KAT = { add_to_ROOT_potential_cores = yes }
+			FEA = { add_to_ROOT_potential_cores = yes }
+			STW = { add_to_ROOT_potential_cores = yes }
+			BRZ = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			PYT = { add_to_ROOT_potential_cores = yes }
 		}
 		ai_will_do = {
 			factor = 200
@@ -3740,7 +3848,6 @@ form_griffon_empire_category = {
 						value = 1
 					}
 				}
-			}
 			save_global_event_target_as = griffonian_empire
 			set_variable = {
 				global.griffonian_empire_var = THIS
@@ -3748,18 +3855,25 @@ form_griffon_empire_category = {
 			set_capital = 382
 			every_state = {
 				limit = {
-					OR = {
-						region = 164
-						region = 188
-						region = 156
-						region = 157
-						region = 174
-						region = 191
-					}
-					is_core_of = GRI
+					region = 164
 				}
-				remove_core_of = GRI
-				add_core_of = FAW
+				add_core_of = ROOT
+			}
+			ANG = { add_to_ROOT_potential_cores = yes }
+			KAT = { add_to_ROOT_potential_cores = yes }
+			FEA = { add_to_ROOT_potential_cores = yes }
+			STW = { add_to_ROOT_potential_cores = yes }
+			BRZ = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			PYT = { add_to_ROOT_potential_cores = yes }
+			AVI = { add_to_ROOT_potential_cores = yes }
+			BAN = { add_to_ROOT_potential_cores = yes }
+			EYR = { add_to_ROOT_potential_cores = yes }
+			ERI = { add_to_ROOT_potential_cores = yes }
+			LAK = { add_to_ROOT_potential_cores = yes }
+			FLO = { add_to_ROOT_potential_cores = yes }
+			BOI = { add_to_ROOT_potential_cores = yes }
 			}
 		}
 		ai_will_do = {
@@ -3894,87 +4008,95 @@ form_aquileia_category = {
 					add_core_of = ROOT
 				}
 			}
+			POM = { add_to_ROOT_potential_cores = yes }
+			FLO = { add_to_ROOT_potential_cores = yes }
+			HEL = { add_to_ROOT_potential_cores = yes }
+			AET = { add_to_ROOT_potential_cores = yes }
+			FEZ = { add_to_ROOT_potential_cores = yes }
+			JES = { add_to_ROOT_potential_cores = yes }
+			AVI = { add_to_ROOT_potential_cores = yes }
+			ERI = { add_to_ROOT_potential_cores = yes }
 			# Pomovarra
 			custom_effect_tooltip = form_country_pomovarra_coring_states_tt
 			hidden_effect = {
 				672 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				501 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Flowena
 			custom_effect_tooltip = form_country_flowena_coring_states_tt
 			hidden_effect = {
 				442 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Adelart
 			custom_effect_tooltip = form_country_adelart_coring_states_tt
 			hidden_effect = {
 				493 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				494 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Greifwald
 			custom_effect_tooltip = form_country_greifwald_coring_states_tt
 			hidden_effect = {
 				496 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				495 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				457 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				436 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Fezera
 			custom_effect_tooltip = form_country_fezera_coring_states_tt
 			hidden_effect = {
 				390 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Tarrin
 			custom_effect_tooltip = form_country_tarrin_coring_states_tt
 			hidden_effect = {
 				652 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				521 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				487 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Avian
 			custom_effect_tooltip = form_country_avian_coring_states_tt
 			hidden_effect = {
 				470 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# House Erie
 			custom_effect_tooltip = form_country_erie_coring_states_tt
 			hidden_effect = {
 				401 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				500 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				673 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			hidden_effect = {
@@ -4143,80 +4265,87 @@ form_aquileia_category = {
 					add_core_of = ROOT
 				}
 			}
+			POM = { add_to_ROOT_potential_cores = yes }
+			FLO = { add_to_ROOT_potential_cores = yes }
+			HEL = { add_to_ROOT_potential_cores = yes }
+			AET = { add_to_ROOT_potential_cores = yes }
+			JES = { add_to_ROOT_potential_cores = yes }
+			AVI = { add_to_ROOT_potential_cores = yes }
+			ERI = { add_to_ROOT_potential_cores = yes }
 			# Pomovarra
 			custom_effect_tooltip = form_country_pomovarra_coring_states_tt
 			hidden_effect = {
 				672 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				501 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Flowena
 			custom_effect_tooltip = form_country_flowena_coring_states_tt
 			hidden_effect = {
 				442 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Adelart
 			custom_effect_tooltip = form_country_adelart_coring_states_tt
 			hidden_effect = {
 				493 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				494 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Greifwald
 			custom_effect_tooltip = form_country_greifwald_coring_states_tt
 			hidden_effect = {
 				496 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				495 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				457 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				436 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Tarrin
 			custom_effect_tooltip = form_country_tarrin_coring_states_tt
 			hidden_effect = {
 				652 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				521 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				487 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# Avian
 			custom_effect_tooltip = form_country_avian_coring_states_tt
 			hidden_effect = {
 				470 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			# House Erie
 			custom_effect_tooltip = form_country_erie_coring_states_tt
 			hidden_effect = {
 				401 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				500 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 				673 = {
-					add_core_of = ROOT
+					add_claim_by = ROOT
 				}
 			}
 			hidden_effect = {
@@ -4234,12 +4363,6 @@ form_evi = {
 		icon = griffon
 		available = {
 			has_war = no
-		}
-		visible = {
-			is_subject = no
-			NOT = {
-				has_global_flag = EVI_formed
-			}
 			owns_prywhen = yes
 			LUS = {
 				all_cores_owned_by_ROOT = yes
@@ -4251,129 +4374,32 @@ form_evi = {
 				all_cores_owned_by_ROOT = yes
 			}
 		}
+		visible = {
+			is_subject = no
+			NOT = {
+				has_global_flag = EVI_formed
+				has_country_flag = holds_griffon_capital
+			}
+		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_evi_decision"
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = EVI_commonwealth
-			# Prywhen
-			custom_effect_tooltip = form_country_prywhen_coring_states_tt
-			hidden_effect = {
-				663 = {
-					add_core_of = ROOT
+			if = {
+				limit = {
+					is_river_fed_member = yes
 				}
-				651 = {
-					add_core_of = ROOT
-				}
-				605 = {
-					add_core_of = ROOT
-				}
-				590 = {
-					add_core_of = ROOT
-				}
-				589 = {
-					add_core_of = ROOT
-				}
-				588 = {
-					add_core_of = ROOT
-				}
-				508 = {
-					add_core_of = ROOT
-				}
-				414 = {
-					add_core_of = ROOT
-				}
-				385 = {
-					add_core_of = ROOT
-				}
-				507 = {
-					add_core_of = ROOT
-				}
+				set_cosmetic_tag = EVI_commonwealth_RIV
 			}
-			# Lushi
-			custom_effect_tooltip = form_country_lushi_coring_states_tt
-			hidden_effect = {
-				632 = {
-					add_core_of = ROOT
-				}
-				608 = {
-					add_core_of = ROOT
-				}
-				607 = {
-					add_core_of = ROOT
-				}
-				593 = {
-					add_core_of = ROOT
-				}
-				591 = {
-					add_core_of = ROOT
-				}
+			else = {
+				set_cosmetic_tag = EVI_commonwealth
 			}
-			# Gryphia
-			custom_effect_tooltip = form_country_gryphia_coring_states_tt
+			set_country_flag = EVI_commonwealth
+			BRF = { add_to_ROOT_potential_cores = yes }
+			LUS = { add_to_ROOT_potential_cores = yes }
+			GRY = { add_to_ROOT_potential_cores = yes }
+			GRU = { add_to_ROOT_potential_cores = yes }
 			hidden_effect = {
-				613 = {
-					add_core_of = ROOT
-				}
-				631 = {
-					add_core_of = ROOT
-				}
-				612 = {
-					add_core_of = ROOT
-				}
-				611 = {
-					add_core_of = ROOT
-				}
-				609 = {
-					add_core_of = ROOT
-				}
-				598 = {
-					add_core_of = ROOT
-				}
-				597 = {
-					add_core_of = ROOT
-				}
-				592 = {
-					add_core_of = ROOT
-				}
-				596 = {
-					add_core_of = ROOT
-				}
-				610 = {
-					add_core_of = ROOT
-				}
-			}
-			# Gryphus
-			custom_effect_tooltip = form_country_gryphus_coring_states_tt
-			hidden_effect = {
-				623 = {
-					add_core_of = ROOT
-				}
-				599 = {
-					add_core_of = ROOT
-				}
-				600 = {
-					add_core_of = ROOT
-				}
-				594 = {
-					add_core_of = ROOT
-				}
-				595 = {
-					add_core_of = ROOT
-				}
-				559 = {
-					add_core_of = ROOT
-				}
-				512 = {
-					add_core_of = ROOT
-				}
-				514 = {
-					add_core_of = ROOT
-				}
-				630 = {
-					add_core_of = ROOT
-				}
-			}
-			hidden_effect = {
+				news_event = { id = griffonian.13 hours = 6 }
 				set_global_flag = EVI_formed
 			}
 		}
@@ -4388,8 +4414,11 @@ form_evi = {
 			has_war = no
 		}
 		visible = {
-			is_subject = no
 			has_global_flag = EVI_formed
+			508 = {
+				is_capital = no
+			}
+			is_subject = no
 		}
 		cost = 10
 		fire_only_once = yes

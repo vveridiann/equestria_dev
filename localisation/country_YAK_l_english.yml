@@ -430,7 +430,7 @@
  
  YAK_strike_north:0 "Reclaim Lost Realms"
  
- YAK_strike_north_desc:0 "Once, we roamed all of the north. But Griffin colonization pushed us back into these valleys and the bears and penguins have kingdoms now. We must reclaim what was stolen from us."
+ YAK_strike_north_desc:0 "Once, we roamed all of the north. But Griffon colonization pushed us back into these valleys and the bears and penguins have kingdoms now. We must reclaim what was stolen from us."
  
  YAK_prepare_changeling_war:0 "War Plan Black"
  
@@ -482,7 +482,7 @@
  
  YAK_victory_birbs:0 "SMASHED Catbirds"
  
- YAK_victory_birbs_desc:0 "What is good in life, [This.YakOrJakLowercase]s? Stampede tracks with very unhappy griffins lying in them."
+ YAK_victory_birbs_desc:0 "What is good in life, [This.YakOrJakLowercase]s? Stampede tracks with very unhappy griffons lying in them."
  
  ################################ Sekrit bug [This.YakOrJakLowercase] path #######################
  
@@ -818,7 +818,7 @@
  yakistan.11.a:0 "Happy Sneldarfest!"
  
  yakistan.12.t:0 "The Equestrian Alliance"
- yakistan.12.d:0 "Late at night, in the palatial suites in Yakitown, the Prince of Yakyakistan and his advisors host a party of ponies. They are very strange creatures, these ponies. They are so small and frail, yet have so much power and influence. On some level, it should offend the yak way. Yet he finds instead that these strange little ponies delight him.\n\nThey are here on a mission of great import, here to hear out his minister's offer of alliance. Yakyakistan seeks to join the Equestria-led alliance. The changelings are rising, the griffins are resurgent, and the world is far more dangerous now than it was before--and so he needs friends. He needs allies, and Equestria needs a war-proven army to keep the Changelings and perhaps one day the griffins at bay. Can Rutherford and Celestia find common ground across vast cultural divides? And if she can... should we tie ourselves to the Sun and its troubles?"
+ yakistan.12.d:0 "Late at night, in the palatial suites in Yakitown, the Prince of Yakyakistan and his advisors host a party of ponies. They are very strange creatures, these ponies. They are so small and frail, yet have so much power and influence. On some level, it should offend the yak way. Yet he finds instead that these strange little ponies delight him.\n\nThey are here on a mission of great import, here to hear out his minister's offer of alliance. Yakyakistan seeks to join the Equestria-led alliance. The changelings are rising, the griffons are resurgent, and the world is far more dangerous now than it was before--and so he needs friends. He needs allies, and Equestria needs a war-proven army to keep the Changelings and perhaps one day the griffons at bay. Can Rutherford and Celestia find common ground across vast cultural divides? And if she can... should we tie ourselves to the Sun and its troubles?"
  yakistan.12.a:0 "Yakyakistan joins the Alliance!"
  yakistan.12.b:0 "Negotiations break down..."
  
@@ -860,7 +860,7 @@
  yakistan.21.a:0 "Traitors deserve no better."
  
  yakistan.22.t:0 "SMASHING Is The Highest Calling"
- yakistan.22.d:0 "With new weapons in hand, the Khan plans for Yakyakistan's future conquests. Our neighbors are existential threats until we have either annihilated them or humbled them. The bears to the north are worthy opponents in hoof to claw, but their forces are weak compared to our own. Even further north, after we've crushed the bears, the penguins and their frozen empire might also be worth our time to subjugate.\n\nTo the east is the difficult yet rewarding task of teaching the griffons a long overdue lesson for driving us out of our ancestral lands. They will be difficult to defeat, but it will be a war that most yaks are hungry for...\n\nTo the south is Equestria and the Crystal Empire. These are, for now, far beyond us. One day, once we've united much of the continent under our rule, we can dream of storming through the southern lands.\n\nThe last choice is to go west. The Changelings are a mysterious, if disgusting people. We know little besides myth and legend, and that their tanks are legendary. They have industry and resources, that we know, and those things may win us the continent if we can claim them for our own. "
+ yakistan.22.d:0 "With new weapons in hoof, the Khan plans for Yakyakistan's future conquests. Our neighbors are existential threats until we have either annihilated them or humbled them. The bears to the north are worthy opponents in hoof to claw, but their forces are weak compared to our own. Even further north, after we've crushed the bears, the penguins and their frozen empire might also be worth our time to subjugate.\n\nTo the east is the difficult yet rewarding task of teaching the griffons a long overdue lesson for driving us out of our ancestral lands. They will be difficult to defeat, but it will be a war that most yaks are hungry for...\n\nTo the south is Equestria and the Crystal Empire. These are, for now, far beyond us. One day, once we've united much of the continent under our rule, we can dream of storming through the southern lands.\n\nThe last choice is to go west. The Changelings are a mysterious, if disgusting people. We know little besides myth and legend, and that their tanks are legendary. They have industry and resources, that we know, and those things may win us the continent if we can claim them for our own. "
  yakistan.22.a:0 "Where shall we strike first?"
  
  yakistan.23.t:0 "An Otherwise Normal Day"

@@ -7,6 +7,8 @@ continent = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -26,6 +28,7 @@ continent = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
 		}
 		female = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
@@ -51,6 +54,10 @@ GRF = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
 		}
 		female = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
@@ -66,6 +73,86 @@ GFF = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
+		}
+		female = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+		}
+	}
+}
+GFS = {
+	operative = {
+		male = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
+		}
+		female = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+		}
+	}
+}
+TSV = {
+	operative = {
+		male = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
+		}
+		female = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+		}
+	}
+}
+TRP = {
+	operative = {
+		male = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
+		}
+		female = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+		}
+	}
+}
+YAN = {
+	operative = {
+		male = {
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_2.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_4.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_5.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_6.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_7.tga"
+			"gfx/leaders/Asia/portrait_griffon_generic_operative_male_8.tga"
 		}
 		female = {
 			"gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
@@ -149,6 +236,7 @@ YAK = {
 			"gfx/leaders/YAK/yak5.tga"
 			"gfx/leaders/YAK/yak6.tga"
 			"gfx/leaders/YAK/yak7.tga"
+			"gfx/leaders/YAK/portrait_yak_generic_operative_female_1.tga"
 		}
 	}
 }
@@ -166,6 +254,7 @@ JAK = {
 			"gfx/leaders/YAK/yak5.tga"
 			"gfx/leaders/YAK/yak6.tga"
 			"gfx/leaders/YAK/yak7.tga"
+			"gfx/leaders/YAK/portrait_yak_generic_operative_female_1.tga"
 		}
 	}
 }
@@ -177,6 +266,8 @@ EQC = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -193,6 +284,8 @@ FIR = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -208,6 +301,8 @@ FBK = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -223,6 +318,8 @@ WAT = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -238,6 +335,8 @@ LSC = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -253,6 +352,8 @@ RCT = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -268,6 +369,8 @@ LCT = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -283,6 +386,8 @@ BAK = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -298,6 +403,8 @@ DEP = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -313,6 +420,8 @@ NIM = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -328,6 +437,8 @@ FRE = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -343,6 +454,8 @@ WIT = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -358,6 +471,8 @@ BAR = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
 			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
 		}
 		female = {
 			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
@@ -366,7 +481,23 @@ BAR = {
 		}
 	}
 }
-
+NTR = {
+	operative = {
+		male = {
+			"gfx/leaders/Pony/portrait_pony_generic_operative_1.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_2.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_3.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_4.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_5.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_land_14.dds"
+		}
+		female = {
+			"gfx/leaders/Pony/portrait_pony_generic_operative_female_1.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_female_2.tga"
+			"gfx/leaders/Pony/portrait_pony_generic_operative_female_3.tga"
+		}
+	}
+}
 ######## DOGGOS ########
 DMT = {
 	operative = {
@@ -451,6 +582,106 @@ OLV = {
 		}
 	}
 }
+SRI = {
+	operative = {
+		male = {
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_5.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_6.tga"
+		}
+		female = {
+			"gfx/leaders/OLE/portrait_deer_leader_generic_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_5.tga"
+		}
+	}
+}
+HIN = {
+	operative = {
+		male = {
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_5.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_6.tga"
+		}
+		female = {
+			"gfx/leaders/OLE/portrait_deer_leader_generic_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_5.tga"
+		}
+	}
+}
+CTL = {
+	operative = {
+		male = {
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_5.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_6.tga"
+		}
+		female = {
+			"gfx/leaders/OLE/portrait_deer_leader_generic_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_5.tga"
+		}
+	}
+}
+SAM = {
+	operative = {
+		male = {
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_5.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_6.tga"
+		}
+		female = {
+			"gfx/leaders/OLE/portrait_deer_leader_generic_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_5.tga"
+		}
+	}
+}
+SPL = {
+	operative = {
+		male = {
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_5.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_male_6.tga"
+		}
+		female = {
+			"gfx/leaders/OLE/portrait_deer_leader_generic_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_1.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_2.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_3.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_4.tga"
+			"gfx/leaders/OLE/portrait_deer_generic_operative_female_5.tga"
+		}
+	}
+}
 ######## SKELETONS ########
 DED = {
 	operative = {
@@ -467,6 +698,10 @@ MIT = {
 	operative = {
 		male = {
 			"gfx/leaders/MIT/portrait_minotaur_generic_operative_male_1.tga"
+			"gfx/leaders/MIT/portrait_minotaur_generic_operative_male_2.tga"
+			"gfx/leaders/MIT/portrait_minotaur_generic_operative_male_3.tga"
+			"gfx/leaders/MIT/portrait_minotaur_generic_operative_male_4.tga"
+			"gfx/leaders/MIT/portrait_minotaur_generic_operative_male_5.tga"
 		}
 		female = {
 			"gfx/leaders/MIT/portrait_minotaur_generic_operative_female_1.tga"
@@ -481,8 +716,7 @@ ZES = {
 			"gfx/leaders/zebra/portrait_zebra_generic_operative_male_2.tga"
 		}
 		female = {
-			"gfx/leaders/zebra/army_zebra_2.tga"
-			"gfx/leaders/zebra/army_zebra_3.tga"
+			"gfx/leaders/zebra/portrait_zebra_generic_operative_female_1.tga"
 		}
 	}
 }
@@ -495,5 +729,14 @@ PNG = {
 		}
 		female = {
 		}
+	}
+}
+######## Buffalo ########
+BUF = {
+	operative = {
+		male = {
+			"gfx/leaders/BUF/portrait_buffalo_generic_operative_male_1.tga"
+		}
+		female = {}
 	}
 }
