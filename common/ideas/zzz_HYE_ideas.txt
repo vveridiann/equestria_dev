@@ -1,49 +1,66 @@
 ideas = {
-
-#Country Ideas
+	#Country Ideas
 	country = {
 		HYE_movespeed = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { original_tag = HYE }
-			allowed_civil_war = { always = yes }
-			available = { always = yes }
+			picture = anti_soviet_pact			#placeholder
+			allowed = {
+				original_tag = HYE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
 			modifier = {
 				army_speed_factor = 0.05
 				recon_factor = 0.1
 			}
 		}
-		
-		HYE_command ={
-			picture = anti_soviet_pact #placeholder		
-			removal_cost = -1
-			allowed = { original_tag = HYE }
-			allowed_civil_war = { always = yes }
-			available = { always = yes }
+		HYE_command = {
+			picture = anti_soviet_pact			#placeholder		
+			allowed = {
+				original_tag = HYE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
 			modifier = {
 				command_power_gain = 0.1
 				max_command_power = 10
-			}			
+			}
 		}
-		
 		HYE_attack = {
-			picture = anti_soviet_pact #placeholder	
-			removal_cost = -1
-			allowed = { original_tag = HYE }
-			allowed_civil_war = { always = yes }
-			available = { always = yes }
+			picture = anti_soviet_pact			#placeholder	
+			allowed = {
+				original_tag = HYE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
 			modifier = {
 				army_attack_factor = 0.1
 				army_morale_factor = 0.1
-			}			
+			}
 		}
 		HYE_yetided = {
-			picture = anti_soviet_pact #placeholder		
-			removal_cost = -1
-			allowed = { original_tag = HYE }
-			allowed_civil_war = { always = yes }
-			available = { always = yes }
-			targeted_modifier = { 
+			picture = anti_soviet_pact			#placeholder		
+			allowed = {
+				original_tag = HYE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				always = yes
+			}
+			targeted_modifier = {
 				tag = SCT
 				attack_bonus_against = 0.15
 			}
@@ -53,10 +70,13 @@ ideas = {
 			}
 		}
 		HYE_sabotaged_SCT = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+			picture = anti_soviet_pact			#placeholder
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			targeted_modifier = {
 				tag = HYE
 				defense_bonus_against = -0.1
@@ -66,23 +86,23 @@ ideas = {
 			}
 		}
 		HYE_qaylid_dervish = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
 				political_power_gain = 0.1
 				war_support_factor = 0.1
 				conscription_factor = 0.15
 				stability_factor = 0.1
-				consumer_goods_factor = -0.05 #Consider moving this...
+				consumer_goods_factor = -0.05				#Consider moving this...
 			}
 		}
 		HYE_regency = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+			picture = anti_soviet_pact			#placeholder
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				army_morale_factor = 0.01
 				army_org_factor = -0.01
@@ -90,10 +110,13 @@ ideas = {
 			}
 		}
 		HYE_to_recovery = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+			picture = anti_soviet_pact			#placeholder
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				local_resources_factor = -0.25
 				industrial_capacity_factory = -0.2
@@ -103,204 +126,159 @@ ideas = {
 			}
 		}
 		HYE_to_recovery_1 = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+			picture = anti_soviet_pact			#placeholder
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
-				local_resources_factor = -0.10
-				industrial_capacity_factory = -0.1
+				local_resources_factor = -0.1
+				industrial_capacity_factory = -0.05
 				production_speed_buildings_factor = -0.05
 				production_factory_max_efficiency_factor = -0.025
 				production_factory_efficiency_gain_factor = -0.025
 			}
 		}
 		HYE_construction_buff = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
 				production_speed_buildings_factor = 0.4
 			}
-		}	
+		}
 		HYE_research_buff = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
 				research_speed_factor = 0.1
 			}
-		}	
+		}
 		HYE_stab_buff = {
-			picture = anti_soviet_pact #placeholder
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
 				stability_factor = 0.1
 				political_power_gain = 0.25
 			}
-		}	
+		}
 		HYE_destroyed_nation = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				political_power_gain = -0.6
 				war_support_factor = -1
 				conscription_factor = -0.25
 				stability_factor = -1
 				production_speed_buildings_factor = -0.2
 			}
-		}	
+		}
 		HYE_divided_nation = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				political_power_gain = -0.5
 				war_support_factor = -0.25
 				conscription_factor = -0.25
 				stability_factor = -0.25
 				production_speed_buildings_factor = -0.15
 			}
-		}	
+		}
 		HYE_divided_nation_1 = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				political_power_gain = -0.25
 				war_support_factor = -0.125
 				conscription_factor = -0.125
 				stability_factor = -0.125
 				production_speed_buildings_factor = -0.075
 			}
-		}	
+		}
 		HYE_divided_nation_2 = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				political_power_gain = -0.1
 				war_support_factor = -0.05
 				conscription_factor = -0.05
 				stability_factor = -0.05
 			}
-		}	
+		}
 		HYE_faith_keepers = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				conscription_factor = 0.05
 				stability_factor = 0.05
 			}
-		}	
+		}
 		HYE_faith_keepers2 = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				conscription_factor = 0.05
 				stability_factor = 0.1
 				non_core_manpower = 0.02
 			}
-		}	
+		}
 		HYE_military_fanatism = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
 				war_support_factor = 0.1
 			}
-		}	
+		}
 		HYE_military_fanatism2 = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.15
-				army_defence_factor = 0.15 
+				army_defence_factor = 0.15
 				army_attack_factor = 0.075
 				war_support_factor = 0.1
 				training_time_army_factor = 0.15
 			}
-		}	
+		}
 		HYE_officers_primacy = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
-				high_command_cost_factor = -0.15 
-				air_chief_cost_factor = -0.15 
-				army_chief_cost_factor = -0.15 
-				navy_chief_cost_factor = -0.15 
+			modifier = {
+				high_command_cost_factor = -0.15
+				air_chief_cost_factor = -0.15
+				army_chief_cost_factor = -0.15
+				navy_chief_cost_factor = -0.15
 				experience_gain_army = 0.02
 			}
 		}
 		HYE_inquisition_primacy = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				political_power_factor = 0.1
-				political_advisor_cost_factor = -0.25 
+				political_advisor_cost_factor = -0.25
 			}
 		}
 		HYE_inquisition_state = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
-			modifier = { 
+			modifier = {
 				stability_factor = 0.2
 				war_support_factor = 0.1
 				political_power_factor = 0.1
-				political_advisor_cost_factor = -0.25 
+				political_advisor_cost_factor = -0.25
 				conscription_factor = 0.1
 				non_core_manpower = 0.03
 			}
 		}
 		HYE_military_state_idea = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
 			modifier = {
 				army_org_factor = 0.15
 				army_morale_factor = 0.15
-				army_defence_factor = 0.15 
+				army_defence_factor = 0.15
 				army_attack_factor = 0.15
 				war_support_factor = 0.1
 				conscription_factor = 0.05
-				high_command_cost_factor = -0.15 
-				air_chief_cost_factor = -0.15 
-				army_chief_cost_factor = -0.15 
-				navy_chief_cost_factor = -0.15 
+				high_command_cost_factor = -0.15
+				air_chief_cost_factor = -0.15
+				army_chief_cost_factor = -0.15
+				navy_chief_cost_factor = -0.15
 				experience_gain_army = 0.05
 			}
 		}
 		HYE_fanatical_revanchism = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
 			targeted_modifier = {
 				tag = SCT
 				attack_bonus_against = 0.1
@@ -324,9 +302,6 @@ ideas = {
 		}
 		HYE_fanatical_revanchism2 = {
 			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }	
 			modifier = {
 				conscription = 0.02
 			}
@@ -351,46 +326,758 @@ ideas = {
 				breakthrough_bonus_against = 0.1
 			}
 		}
+		HYE_patriotic_burden = {
+			picture = anti_soviet_pact
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_factor = -0.6
+				stability_factor = -0.2
+				army_morale_factor = 0.15
+				conscription_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_a = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_ac = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+			}
+		}
+		HYE_yeti_laws_ad = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		HYE_yeti_laws_ace = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+			}
+		}
+		HYE_yeti_laws_ade = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+			}
+		}
+		HYE_yeti_laws_acf = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+			}
+		}
+		HYE_yeti_laws_adf = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+			}
+		}
+		HYE_yeti_laws_aceg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_adeg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_acfg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_adfg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_aceh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_adeh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_acfh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_adfh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_acegi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_adegi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_acfgi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_adfgi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_acehi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_adehi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_acfhi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_adfhi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_acegj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_adegj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_acfgj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_adfgj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_acehj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_adehj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_acfhj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_adfhj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_b = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+			}
+		}
+		HYE_yeti_laws_bc = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+			}
+		}
+		HYE_yeti_laws_bd = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		HYE_yeti_laws_bce = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+			}
+		}
+		HYE_yeti_laws_bde = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+			}
+		}
+		HYE_yeti_laws_bcf = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+			}
+		}
+		HYE_yeti_laws_bdf = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+			}
+		}
+		HYE_yeti_laws_bceg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_bdeg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_bcfg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_bdfg = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HYE_yeti_laws_bceh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_bdeh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_bcfh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_bdfh = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+			}
+		}
+		HYE_yeti_laws_bcegi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bdegi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bcfgi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bdfgi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bcehi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bdehi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bcfhi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bdfhi = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		HYE_yeti_laws_bcegj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bdegj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bcfgj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bdfgj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bcehj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bdehj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.02
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bcfhj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.02
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_yeti_laws_bdfhj = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_growth = -0.05
+				industrial_capacity_factory = -0.05
+				non_core_manpower = 0.04
+				political_power_factor = -0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		HYE_loans = {
+			picture = anti_soviet_pact
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		HYE_loans_CNT = {
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		HYE_strat_mob = {
+			picture = anti_soviet_pact
+			modifier = {
+				army_speed_factor = 0.1
+			}
+		}
+		HYE_ploughs_for_swords = {
+			picture = anti_soviet_pact
+			modifier = {
+				monthly_population = -0.15
+			}
+		}
 	}
-#Political Advisors
+	#Political Advisors
 	political_advisor = {
 		HYE_nafaqo = {
-		    picture = unknown_advisor_dog
+			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { silent_workdog }		
+			traits = {
+				silent_workdog
+			}
 		}
 		HYE_dawacada = {
-		    picture = unknown_advisor_dog
+			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { war_industrialist }	
+			traits = {
+				war_industrialist
+			}
 		}
 		HYE_waalan = {
-		    picture = unknown_advisor_dog
+			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { HYE_mystic }			
+			traits = {
+				HYE_mystic
+			}
 		}
 		HYE_xasillon = {
-		    picture = unknown_advisor_dog
+			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { armaments_organizer }			
+			traits = {
+				armaments_organizer
+			}
 		}
-
 		HYE_gaadiidka = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -398,7 +1085,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { civilian_industry_organizer }
+			traits = {
+				civilian_industry_organizer
+			}
 		}
 		HYE_hadalka = {
 			picture = unknown_advisor_dog
@@ -407,9 +1096,10 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { HYE_wise_old_dog }
+			traits = {
+				HYE_wise_old_dog
+			}
 		}
-		
 		HYE_yeti_guy = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -421,11 +1111,11 @@ ideas = {
 			available = {
 				has_country_flag = HYE_yeti_guy_spared
 			}
-			traits = { HYE_yeti_guy }
+			traits = {
+				HYE_yeti_guy
+			}
 		}
-
 		#Masaska's advisors begin here
-		
 		HYE_kelidii = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -433,20 +1123,22 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { HYE_hidden_intellect }
+			traits = {
+				HYE_hidden_intellect
+			}
 		}
-
-		
 		#Furasho's Advisors Begin here
-		
-		HYE_bogsiiye = { #Transfer to Infantry Eq designer?
+		HYE_bogsiiye = {
+			#Transfer to Infantry Eq designer?
 			picture = unknown_advisor_dog
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { HYE_healer }
+			traits = {
+				HYE_healer
+			}
 		}
 		HYE_seenyaale = {
 			picture = unknown_advisor_dog
@@ -455,7 +1147,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { HYE_producer }
+			traits = {
+				HYE_producer
+			}
 		}
 		HYE_xaawa = {
 			picture = unknown_advisor_dog
@@ -464,7 +1158,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { prince_of_terror }
+			traits = {
+				prince_of_terror
+			}
 		}
 	}
 	army_chief = {
@@ -475,7 +1171,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_chief_defensive_2 }
+			traits = {
+				army_chief_defensive_2
+			}
 		}
 		HYE_furasho_chief = {
 			picture = unknown_advisor_dog
@@ -484,7 +1182,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_chief_offensive_3 }		
+			traits = {
+				army_chief_offensive_3
+			}
 		}
 		HYE_masaska_chief = {
 			picture = unknown_advisor_dog
@@ -493,18 +1193,22 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_chief_organizational_3 }
+			traits = {
+				army_chief_organizational_3
+			}
 		}
 	}
 	air_chief = {
 		HYE_longrains = {
-			picture = unknown_advisor #is a pegasus
+			picture = unknown_advisor			#is a pegasus
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { air_chief_all_weather_2 }
+			traits = {
+				air_chief_all_weather_2
+			}
 		}
 	}
 	#Theorists 
@@ -520,7 +1224,9 @@ ideas = {
 			research_bonus = {
 				land_doctrine = 0.07
 			}
-			traits = { military_theorist }
+			traits = {
+				military_theorist
+			}
 		}
 	}
 	high_command = {
@@ -532,7 +1238,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_logistics_3 }
+			traits = {
+				army_logistics_3
+			}
 		}
 		HYE_dhagax = {
 			picture = unknown_advisor_dog
@@ -542,9 +1250,10 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_chief_drill_2 }			
-		}		
-
+			traits = {
+				army_chief_drill_2
+			}
+		}
 		#Masaska's
 		HYE_iftiin = {
 			picture = unknown_advisor_dog
@@ -554,7 +1263,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_concealment_2 }
+			traits = {
+				army_concealment_2
+			}
 		}
 		HYE_dhalaalaya = {
 			picture = unknown_advisor_dog
@@ -564,7 +1275,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_chief_maneuver_2 }
+			traits = {
+				army_chief_maneuver_2
+			}
 		}
 		HYE_maraq = {
 			picture = unknown_advisor_dog
@@ -574,8 +1287,10 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_commando_2 }
-		}		
+			traits = {
+				army_commando_2
+			}
+		}
 		#Furasho's
 		HYE_eberweyn = {
 			picture = unknown_advisor_dog
@@ -585,7 +1300,9 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_infantry_2 }
+			traits = {
+				army_infantry_2
+			}
 		}
 		HYE_dareere = {
 			picture = unknown_advisor_dog
@@ -595,56 +1312,64 @@ ideas = {
 			}
 			available = {
 			}
-			traits = { army_entrenchment_2 }
+			traits = {
+				army_entrenchment_2
+			}
 		}
 	}
 	#Industry todo
 	tank_manufacturer = {
 		HYE_tank_company = {
-			picture = mauser #placeholder
+			picture = mauser			#placeholder
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { fast_tank_manufacturer }
+			traits = {
+				fast_tank_manufacturer
+			}
 		}
 	}
 	naval_manufacturer = {
 		designer = yes
 		HYE_navy_company = {
-			picture = mauser #placeholder
+			picture = mauser			#placeholder
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { convoy_escort_naval_manufacturer }
+			traits = {
+				convoy_escort_naval_manufacturer
+			}
 		}
 	}
 	aircraft_manufacturer = {
 		designer = yes
 		HYE_aircraft_company = {
-			picture = mauser #placeholder
+			picture = mauser			#placeholder
 			allowed = {
 				original_tag = HYE
 			}
 			available = {
 			}
-			traits = { light_aircraft_manufacturer }		
+			traits = {
+				light_aircraft_manufacturer
+			}
 		}
 	}
 	materiel_manufacturer = {
 		HYE_guns_company = {
-			picture = mauser #placeholder
+			picture = mauser			#placeholder
 			allowed = {
 				original_tag = HYE
 			}
 			traits = {
-				infantry_equipment_manufacturer 
+				infantry_equipment_manufacturer
 			}
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.1
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -656,23 +1381,24 @@ ideas = {
 	}
 	industrial_concern = {
 		designer = yes
-		HYE_industry_company ={
-		    picture = generic_refining_concern_1
-		    allowed = {
+		HYE_industry_company = {
+			picture = generic_refining_concern_1
+			allowed = {
 				original_tag = HYE
 			}
-            available = {
+			available = {
 				has_completed_focus = ANG_our_own_oil_company
 			}
-            removal_cost = -1
- 			research_bonus = {
-				synth_resources = 0.10
+			removal_cost = -1
+			research_bonus = {
+				synth_resources = 0.1
 			}
-			traits = { construction_company  }
+			traits = {
+				construction_company
+			}
 			modifier = {
 				production_speed_buildings_factor = 0.05
-			}		
+			}
 		}
 	}
-	
 }

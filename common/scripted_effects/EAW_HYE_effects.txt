@@ -173,6 +173,7 @@ hye_start_promises_missions = {
 		activate_mission = hye_promise_rebuilding_mission
 	}
 }
+
 hye_start_promises_missions_debug = {
 	set_country_flag = hye_spymaster_victory
 	set_country_flag = hye_promise_citizens_spy
@@ -203,6 +204,7 @@ hye_start_promises_missions_debug = {
 	activate_mission = hye_promise_army_size_mission
 	add_ideas = HYE_divided_nation
 }
+
 HYE_lower_divide = {
 	if = {
 		limit = {
@@ -236,5 +238,203 @@ HYE_lower_divide = {
 			has_idea = HYE_divided_nation_2
 		}
 		remove_ideas = HYE_divided_nation_2
+	}
+}
+
+HYE_bp_steal_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_tech = infantry_weapons
+			}
+			PREV = {
+				has_tech = infantry_weapons
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = infantry_weapons
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = infantry_weapons1
+			}
+			PREV = {
+				has_tech = infantry_weapons1
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = infantry_weapons1
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = infantry_weapons2
+			}
+			PREV = {
+				has_tech = infantry_weapons2
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = infantry_weapons2
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = improved_infantry_weapons
+			}
+			PREV = {
+				has_tech = improved_infantry_weapons
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = improved_infantry_weapons
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = improved_infantry_weapons_2
+			}
+			PREV = {
+				has_tech = improved_infantry_weapons_2
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = improved_infantry_weapons_2
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons2
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons2
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons2
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons_a
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons_a
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons_a
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons_b
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons_b
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons_b
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons_c
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons_c
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons_c
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons_d
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons_d
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons_d
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_tech = advanced_infantry_weapons_e
+			}
+			PREV = {
+				has_tech = advanced_infantry_weapons_e
+			}
+		}
+		add_tech_bonus = {
+			name = generic_tech_bonus
+			bonus = 2
+			uses = 1
+			technology = advanced_infantry_weapons_e
+		}
+	}
+	else = {
+		add_political_power = 75
 	}
 }

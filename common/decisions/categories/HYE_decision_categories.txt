@@ -36,9 +36,6 @@ HEY_promises_missions = {
 	priority = {
 		base = 100
 	}
-	visible = {
-		has_completed_focus = HYE_sneaky_plan
-	}
 }
 HEY_massaska_radical = {
 	icon = generic_decision
@@ -49,8 +46,24 @@ HEY_massaska_radical = {
 	priority = {
 		base = 100
 	}
-	visible = {
-		has_country_flag = HYE_massaska_murderhobo
+}
+HEY_massaska_bp_theft_cat = {
+	icon = generic_decision
+
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 99
 	}
 }
-	
+HYE_massaska_eq_theft_cat = {
+	icon = generic_decision
+
+	allowed = {
+		original_tag = HYE
+	}
+	priority = {
+		base = 98
+	}
+}

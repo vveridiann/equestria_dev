@@ -8,11 +8,15 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 }
+
 focus_tree = {
 	id = HYE_house_divided
 	country = {
@@ -23,7 +27,10 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
@@ -36,20 +43,27 @@ focus_tree = {
 		factor = 0
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
 	shared_focus = HYE_the_path_is_dark
-}	
+}
+
 focus_tree = {
 	id = HYE_furasho_radical2
 	country = {
 		factor = 0
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
@@ -59,34 +73,43 @@ focus_tree = {
 	shared_focus = HYE_internal_affairs
 	shared_focus = HYE_military_directionism
 	shared_focus = HYE_fanatical_revanchism
-}	
+}
+
 focus_tree = {
 	id = HYE_massaska_radical
 	country = {
 		factor = 0
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
 	shared_focus = HYE_the_impure
-}	
+}
+
 focus_tree = {
 	id = HYE_massaska_radical2
 	country = {
 		factor = 0
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 9999}
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
 	shared_focus = HYE_the_impure
 	shared_focus = HYE_return_of_dervishes
-}	
+	shared_focus = HYE_war_gains
+}
 
 #focus_tree = {
 #	id = HYE_furasho_moderate
@@ -104,7 +127,6 @@ focus_tree = {
 #	shared_focus = HYE_qaylid_start
 #	shared_focus = HYE_deep_faith
 #}	
-
 #focus_tree = {
 #	id = HYE_masaska_moderate
 #	country = {
@@ -121,7 +143,6 @@ focus_tree = {
 ##	shared_focus = HYE_qaylid_start
 #	shared_focus = HYE_champion_of_harmony
 #}	
-
 #focus_tree = {
 #	id = HYE_masaska_radical
 #	country = {

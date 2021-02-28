@@ -588,7 +588,7 @@ HEY_massaska_radical = {
 			HYE_lower_divide = yes
 		}
 	}
-	HYE_assasin_spree_1 = {
+	HYE_assasin_spree_2 = {
 		icon =  generic_decision
 		ai_will_do = { factor = 100 }
 		cost = 25
@@ -606,7 +606,7 @@ HEY_massaska_radical = {
 			HYE_lower_divide = yes
 		}
 	}
-	HYE_assasin_spree_1 = {
+	HYE_assasin_spree_3 = {
 		icon =  generic_decision
 		ai_will_do = { factor = 100 }
 		cost = 25
@@ -624,7 +624,7 @@ HEY_massaska_radical = {
 			HYE_lower_divide = yes
 		}
 	}
-	HYE_assasin_spree_1 = {
+	HYE_assasin_spree_4 = {
 		icon =  generic_decision
 		ai_will_do = { factor = 100 }
 		cost = 25
@@ -640,6 +640,107 @@ HEY_massaska_radical = {
 		fire_only_once = yes
 		complete_effect = {
 			HYE_lower_divide = yes
+		}
+	}
+}
+HYE_massaska_eq_theft_cat = {
+	
+}
+HEY_massaska_bp_theft_cat = {
+	HEY_massaska_bp_theft_rifles = {
+		icon = hol_draw_up_staff_plans
+		fixed_random_seed = no
+		available = {
+			FROM = {
+				any_owned_state = {
+					is_controlled_by = FROM
+					any_neighbor_state = {
+						is_fully_controlled_by = ROOT
+						set_temp_variable = { var:attacker_state_temp = id }
+					}
+					set_temp_variable = { var:defender_state_temp = id }
+				}
+			}
+			NOT = { 
+                has_non_aggression_pact_with = FROM	
+            }
+		}
+
+		visible = {
+			has_country_flag = HYE_bp_theft
+			NOT = { 
+                has_country_flag = stealing_blueprints
+                has_war_with = FROM
+                is_subject_of = FROM 
+            }
+			FROM = {
+                exists = yes
+				NOT = { 
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+			}
+			OR = {
+				NOT = { has_border_war_with = FROM }
+				AND = {
+					FROM = {
+						any_owned_state = {
+							is_controlled_by = FROM
+							any_neighbor_state = {
+								is_fully_controlled_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		target_array = neighbors
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+		}
+		cost = 75
+		highlight_states = {
+			OR = {
+				state = FROM.defender_state_vs_@ROOT
+				AND = {
+					is_owned_and_controlled_by = FROM
+					any_neighbor_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+		days_re_enable = 20
+		days_remove = 100
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BAR_silver_raid_prepare target: [From.GetName]"
+			set_country_flag = stealing_blueprints
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BAR_silver_raid_prepare target: [From.GetName]"
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = FROM
+					any_neighbor_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				save_event_target_as = defender_state
+				set_variable = { FROM.defender_state_vs_@ROOT = id }
+				set_temp_variable = { defender_state_temp = id }
+				owner = {
+					ROOT = { HYE_bp_steal_effect = yes }
+				}
+			}
+			clr_country_flag = stealing_blueprints
 		}
 	}
 }
