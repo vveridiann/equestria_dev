@@ -6043,8 +6043,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/CTH/appoint_zerutra.dds"
 	}
 	SpriteType = {
+		name = "GFX_goal_appoint_zaryes"
+		texturefile = "gfx/interface/goals/CTH/appoint_zaryes.dds"
+	}
+	SpriteType = {
 		name = "GFX_goal_take_out_zeirutid"
 		texturefile = "gfx/interface/goals/CTH/take_out_zeirutid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_appoint_zakbar"
+		texturefile = "gfx/interface/goals/CTH/appoint_zakbar.tga"
 	}
 	SpriteType = {
 		name = "GFX_goal_For_the_Good_of_the_Fleet"

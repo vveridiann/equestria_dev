@@ -1569,6 +1569,7 @@ political_actions = {
 			NOT = {
 				tag = NIM
 				tag = SIC
+				tag = BAT
 				original_tag = YAL
 				original_tag = KIR
 			}
@@ -1674,6 +1675,22 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+				    has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_fascism
+				}
+			}
 		}
 		available = {
 			fascism > 0.1
@@ -1698,6 +1715,14 @@ political_actions = {
 						flag = celestia_evil_meter
 						value > 12
 					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -1846,6 +1871,38 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+            if = {
+				limit = {
+					tag = BAT
+				}
+				NOT = {
+				    OR = {
+					    has_idea = BAT_advisor_45
+						has_completed_focus = BAT_legal_opposition
+						has_completed_focus = BAT_controlled_opposition
+						has_country_leader = { 
+							ruling_only = yes 
+							name = "Carrot Stick" 
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+				    has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_harmonists
+				}
+			}
 			if = {
 			    limit = {
 					tag = NLR
@@ -1863,6 +1920,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = BAK_elections
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2007,6 +2072,22 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+				    has_country_flag = CVA_cant_ban_commies
+				}
+			}
+			if = {
+			    limit = {
+				    tag = BAT
+				}
+				NOT = {
+				    has_country_flag = BAT_no_banning_commies
+				}
+			}
 		}
 		available = {
 			communism > 0.1
@@ -2030,6 +2111,14 @@ political_actions = {
 						}
 						has_country_flag = eqs_communist_support
 					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2056,6 +2145,7 @@ political_actions = {
 			NOT = {
 				tag = SIC
 				tag = FAT
+				tag = BAT
 				original_tag = YAL
 				original_tag = KIR
 			}
@@ -2178,6 +2268,14 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_neutrality
+				}
+			}
 			NOT = {
 			    tag = NLR
 			}
@@ -2201,6 +2299,14 @@ political_actions = {
 						flag = celestia_evil_meter
 						value > 20
 					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2228,6 +2334,7 @@ political_actions = {
 				tag = NIM
 				tag = SIC
 				tag = FAT
+				tag = BAT
 				original_tag = YAL
 				original_tag = KIR
 			}
@@ -2255,6 +2362,14 @@ political_actions = {
 						flag = celestia_evil_meter
 						value > 15
 					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2344,6 +2459,22 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+				    has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_fascism
+				}
+			}
 			fascism > 0
 		}
 		remove_trigger = {
@@ -2400,6 +2531,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = BAK_elections
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2517,10 +2656,42 @@ political_actions = {
 			}
 			if = {
 				limit = {
+					tag = BAT
+				}
+				NOT = {
+				    OR = {
+					    has_idea = BAT_advisor_45
+						has_completed_focus = BAT_legal_opposition
+						has_completed_focus = BAT_controlled_opposition
+						has_country_leader = { 
+							ruling_only = yes 
+							name = "Carrot Stick" 
+						}
+					}
+				}
+			}
+            if = {
+				limit = {
 					original_tag = OLV
 				}
 				NOT = {
 				    has_completed_focus = OLV_rule_of_the_law
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+				    has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_harmonists
 				}
 			}
 			if = {
@@ -2597,6 +2768,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = PNG_communism_outlawed
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -2702,6 +2881,22 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+				    has_country_flag = CVA_cant_ban_commies
+				}
+			}
+			if = {
+			    limit = {
+				    tag = BAT
+				}
+				NOT = {
+				    has_country_flag = BAT_no_banning_commies
+				}
+			}
 			communism > 0
 		}
 		remove_trigger = {
@@ -2755,12 +2950,21 @@ political_actions = {
 					has_idea = BAK_elections
 				}
 			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
+				}
+			}
 		}
 		allowed = {
 			NOT = {
 				tag = NIM
 				tag = SIC
 				tag = FAT
+				tag = BAT
 				original_tag = YAL
 				original_tag = KIR
 			}
@@ -2866,6 +3070,14 @@ political_actions = {
 				    has_completed_focus = OLV_rule_of_the_law
 				}
 			}
+			if = {
+			    limit = {
+					tag = CVA
+				}
+				NOT = {
+					has_country_flag = CVA_cant_ban_neutrality
+				}
+			}
 			NOT = {
 			    tag = NLR
 			}
@@ -2950,6 +3162,9 @@ political_actions = {
 					has_completed_focus = NMS_the_third_position
 				}
 			}
+			NOT = {
+			   tag = BAT
+            }
 			if = {
 				limit = {
 					tag = EQC
@@ -2964,6 +3179,14 @@ political_actions = {
 				}
 				NOT = {
 				    has_completed_focus = OLV_rule_of_the_law
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_completed_focus = WIN_expand_the_council
 				}
 			}
 			if = {
@@ -2982,6 +3205,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = BAK_elections
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -3074,6 +3305,9 @@ political_actions = {
 					has_country_flag = EQC_cant_censor_press
 				}
 			}
+			NOT = {
+			   tag = BAT
+            }
 			if = {
 			    limit = {
 					tag = WIT
@@ -3088,6 +3322,14 @@ political_actions = {
 				}
 				NOT = {
 				    has_completed_focus = OLV_rule_of_the_law
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_completed_focus = WIN_expand_the_council
 				}
 			}
 			if = {
@@ -3112,6 +3354,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = BAK_elections
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}
@@ -3176,6 +3426,9 @@ political_actions = {
 					has_completed_focus = GRF_free_elections
 				}
 			}
+            NOT = {
+			   tag = BAT
+            }
 			if = {
 				limit = {
 					tag = HLQ
@@ -3213,6 +3466,14 @@ political_actions = {
 				}
 			}
 			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
 			    limit = {
 					tag = NLR
 				}
@@ -3229,6 +3490,14 @@ political_actions = {
 				NOT = {
 					has_idea = BAK_elections
                 }
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
+				}
 			}
 		}
 		modifier = {
@@ -3298,6 +3567,9 @@ political_actions = {
 					has_completed_focus = GRF_free_elections
 				}
 			}
+            NOT = {
+			   tag = BAT
+            }
 			if = {
 				limit = {
 					tag = HLQ
@@ -3346,6 +3618,14 @@ political_actions = {
 				}
 			}
 			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_completed_focus = WIN_expand_the_council
+				}
+			}
+			if = {
 			    limit = {
 					tag = NLR
 				}
@@ -3361,6 +3641,14 @@ political_actions = {
 				}
 				NOT = {
 					has_idea = BAK_elections
+				}
+			}
+			if = {
+				limit = {
+					tag = WIN
+				}
+				NOT = {
+					has_idea = WIN_chaos_in_the_city
 				}
 			}
 		}

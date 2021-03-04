@@ -1,0 +1,1945 @@
+﻿add_namespace = hippogriff
+add_namespace = hippocommie
+add_namespace = hipflavour
+add_namespace = hippogriff_society
+add_namespace = arisfirst
+
+country_event = { #Hurricane!
+	id = hippogriff.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event hippogriff.1"}
+	title = hippogriff.1.t
+	desc = hippogriff.1.d
+	
+	picture = GFX_event_olenia_generic
+	is_triggered_only = yes
+		
+	option = {	
+		name = hippogriff.1.a
+		add_manpower = -50
+		save_current_manpower = yes
+		1203 = {
+			add_manpower = -230
+			damage_building = {
+				type = infrastructure
+				damage = 2.25
+			}
+			damage_building = {
+				type = dockyard
+				damage = 0.25
+			}
+		}
+		1164 = {
+			add_manpower = -110
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		1204 = {
+			add_manpower = -90
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		1165 = {
+			add_manpower = -65
+			damage_building = {
+				type = infrastructure
+				damage = 1.75
+			}
+		}
+		695 = {
+			add_manpower = -25
+			damage_building = {
+				type = infrastructure
+				damage = 1.75
+			}
+		}
+		685 = {
+			add_manpower = -20
+			damage_building = {
+				type = infrastructure
+				damage = 1.5
+			}
+		}
+		696 = {
+			add_manpower = -20
+			damage_building = {
+				type = infrastructure
+				damage = 1.5
+			}
+		}
+		684 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1.25
+			}
+		}
+		693 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		683 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.75
+			}
+		}
+		686 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}
+		697 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.25
+			}
+		}
+		1202 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.25
+			}
+		}
+		restore_previous_manpower = yes
+		HIP_decrease_divided_society = yes
+	}
+}
+
+# For RCT - Hippogriffs come to meet the OHS
+country_event = {
+	id = hippogriff.2
+	title = hippogriff.2.t
+	desc = hippogriff.2.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Help them
+		name = hippogriff.2.a
+		ai_chance = {
+			factor = 10
+		}
+		FROM = {
+			country_event = {
+				id = hippogriff.3
+				hours = 4
+				random_hours = 2
+			}
+		}
+	}
+	option = { # Not Intrested
+		name = hippogriff.2.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = {
+				id = hippogriff.4
+				hours = 4
+				random_hours = 2
+			}
+		}
+	}
+}
+# For HIP - OHS says yes
+country_event = {
+	id = hippogriff.3
+	title = hippogriff.3.t
+	desc = hippogriff.3.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Great
+		name = hippogriff.3.a
+	}
+}
+# For HIP - OHS says no
+country_event = {
+	id = hippogriff.4
+	title = hippogriff.4.t
+	desc = hippogriff.4.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Sad
+		name = hippogriff.4.a
+		clr_country_flag = HIP_reached_out_to_OHS
+	}
+}
+
+# For RCT - Hippogriffs come to meet SMILE
+country_event = {
+	id = hippogriff.5
+	title = hippogriff.5.t
+	desc = hippogriff.5.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Help them
+		name = hippogriff.5.a
+		ai_chance = {
+			factor = 10
+		}
+		FROM = {
+			country_event = {
+				id = hippogriff.6
+				hours = 4
+				random_hours = 2
+			}
+		}
+	}
+	option = { # Not Intrested
+		name = hippogriff.5.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = {
+				id = hippogriff.7
+				hours = 4
+				random_hours = 2
+			}
+		}
+	}
+}
+# For HIP - SMILE says yes
+country_event = {
+	id = hippogriff.6
+	title = hippogriff.6.t
+	desc = hippogriff.6.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Great
+		name = hippogriff.6.a
+	}
+}
+# For HIP - SMILE says no
+country_event = {
+	id = hippogriff.7
+	title = hippogriff.7.t
+	desc = hippogriff.7.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Sad
+		name = hippogriff.7.a
+		clr_country_flag = HIP_reached_out_to_SMILE
+	}
+}
+
+# For HIP - We have banned Wingbardian Books
+country_event = {
+	id = hippogriff.8
+	title = hippogriff.8.t
+	desc = hippogriff.8.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Okay
+		name = hippogriff.8.a
+		hidden_effect = {
+			WNG = {
+				country_event = {
+					id = hippogriff.9
+					hours = 12
+					random_hours = 4
+				}
+			}
+		}
+	}
+}
+# For WNG - Hippogriffia banned Wingbardian Books
+country_event = {
+	id = hippogriff.9
+	title = hippogriff.9.t
+	desc = hippogriff.9.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Offically Protest
+		name = hippogriff.9.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Why do we care about those sad birds?
+		name = hippogriff.9.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# HIP - Which alliance to choose?
+country_event = {
+	id = hippogriff.10
+	title = hippogriff.10.t
+	desc = hippogriff.10.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Wingbardy
+		name = hippogriff.10.a
+		trigger = {
+			WNG = {
+				is_faction_leader = yes
+				has_government = democratic
+			}
+		}
+		WNG = {
+			country_event = {
+				id = generic.2
+				hours = 3
+			}
+		}
+	}
+	option = { # Sicameon
+		name = hippogriff.10.b
+		trigger = {
+			SIC = {
+				is_faction_leader = yes
+				has_government = democratic
+			}
+		}
+		SIC = {
+			country_event = {
+				id = generic.2
+				hours = 3
+			}
+		}
+	}
+	option = { # Asterion
+		name = hippogriff.10.c
+		trigger = {
+			MIT = {
+				is_faction_leader = yes
+				has_government = democratic
+			}
+		}
+		MIT = {
+			country_event = {
+				id = generic.2
+				hours = 3
+			}
+		}
+	}
+}
+# HIP - Terrafin Mission
+country_event = {
+	id = hippogriff.11
+	title = hippogriff.11.t
+	desc = hippogriff.11.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Send it
+		name = hippogriff.11.a
+		random_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+				is_faction_leader = yes
+			}
+			country_event = {
+				id = hippogriff.12
+				hours = 2
+			}
+		}
+	}
+}
+# HIP Faction Leader - Terrafin Mission
+country_event = {
+	id = hippogriff.12
+	title = hippogriff.12.t
+	desc = hippogriff.12.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Yes!
+		name = hippogriff.12.a
+		custom_effect_tooltip = HIP_Terrafin_mission_effect_tt
+		add_political_power = -25
+		FROM = {
+			country_event = {
+				id = hippogriff.13
+				hours = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { # No!
+		name = hippogriff.12.b
+		FROM = {
+			country_event = {
+				id = hippogriff.14
+				hours = 2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+# HIP - Terrafin Mission Accepted
+country_event = {
+	id = hippogriff.13
+	title = hippogriff.13.t
+	desc = hippogriff.13.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Yes!
+		name = hippogriff.13.a
+		custom_effect_tooltip = HIP_Terrafin_mission_effect_tt
+		add_political_power = -25
+		hidden_effect = {
+			country_event = {
+				id = hippogriff.15
+				days = 30
+			}
+			FROM = {
+				country_event = {
+					id = hippogriff.15
+					days = 30
+				}
+			}
+		}
+	}
+}
+# HIP - Terrafin Mission Rejected
+country_event = {
+	id = hippogriff.14
+	title = hippogriff.14.t
+	desc = hippogriff.14.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Sad :(
+		name = hippogriff.14.a
+		
+	}
+}
+# HIP - Terrafin Mission Complete
+country_event = {
+	id = hippogriff.15
+	title = hippogriff.15.t
+	desc = hippogriff.15.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Yay!
+		name = hippogriff.15.a
+		add_tech_bonus = {
+			name = HIP_terrafin_mission
+			bonus = 0.5
+			uses = 1
+			category = nuclear
+		}
+		add_tech_bonus = {
+			name = HIP_terrafin_mission
+			bonus = 1.0
+			uses = 2
+			category = rocketry
+		}
+		add_tech_bonus = {
+			name = HIP_terrafin_mission
+			bonus = 1.0
+			uses = 2
+			category = race_tech
+		}
+		add_tech_bonus = {
+			name = HIP_terrafin_mission
+			bonus = 1.0
+			uses = 2
+			category = electronics
+		}
+	}
+}
+# HIP - Crack Lightning Returns from his World Tour
+country_event = {
+	id = hippogriff.16
+	title = hippogriff.16.t
+	desc = hippogriff.16.desc
+	
+	trigger = {
+		original_tag = HIP
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+
+	option = { # Ok!
+		name = hippogriff.16.a
+		HIP_increase_divided_society = yes
+	}
+	option = { # Ok!
+		name = hippogriff.16.b
+		HIP_decrease_divided_society = yes
+	}
+}
+
+# HIP - Tank Development
+country_event = {
+	id = hippogriff.100
+	title = hippogriff.100.t
+	desc = hippogriff.100.desc
+	
+	picture = GFX_event_HIP_tank_m1
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = HIP
+		date > 1007.1.5
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = { # Favour the M1
+		name = hippogriff.100.a
+		ai_chance = {
+			factor = 1
+		}
+		add_tech_bonus = {
+			name = hippogriff.100.t
+			category = cat_light_armor
+			uses = 1
+			bonus = 1
+		}
+	}
+	option = { # Favour the M2
+		name = hippogriff.100.b
+		ai_chance = {
+			factor = 0
+		}
+		set_technology = {
+			basic_heavy_tank = 1
+		}
+	}
+	option = { # Lets listen to this Cross Tide
+		name = hippogriff.100.c
+		ai_chance = {
+			factor = 0
+		}
+		set_technology = {
+			improved_light_tank = 1
+		}
+		add_political_power = -100
+	}
+}
+
+######
+###### Advisor Flavour Events
+######
+### Rocket Neverfall
+# HIP - Skystar attends a meeting ecomanists at the Royal Aris Economic Society
+country_event = {
+	id = hippogriff.101
+	title = hippogriff.101.t
+	desc = hippogriff.101.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	trigger = {
+		original_tag = HIP
+		has_government = democratic
+		date > 1008.1.1
+		date < 1010.1.1
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	fire_only_once = yes
+
+	option = { # 
+		name = hippogriff.101.a
+		ai_chance = {
+			factor = 1
+		}
+		country_event = {
+			id = hippogriff.102
+			hours = 1
+		}
+	}
+}
+# HIP - Skystar meets Rocket neverfall
+country_event = {
+	id = hippogriff.102
+	title = hippogriff.102.t
+	desc = hippogriff.102.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	is_triggered_only = yes
+
+	option = { # 
+		name = hippogriff.102.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = hippogriff.103
+				days = 8
+			}
+		}
+	}
+}
+# HIP - Skystar and Rocket discuss plans for the future
+country_event = {
+	id = hippogriff.103
+	title = hippogriff.103.t
+	desc = hippogriff.103.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	is_triggered_only = yes
+
+	option = { # 
+		name = hippogriff.103.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = hippogriff.104
+				days = 5
+			}
+		}
+	}
+}
+# HIP - Skystar wants Rocket Neverfall to join the government
+country_event = {
+	id = hippogriff.104
+	title = hippogriff.104.t
+	desc = hippogriff.104.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	is_triggered_only = yes
+
+	option = { # Yes
+		name = hippogriff.104.a
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			amount_taken_ideas = {
+				amount < 3
+				slots = {
+					political_advisor
+				}
+			}
+		}
+		add_political_power = -50
+		add_ideas = HIP_rocket_neverfall
+		hidden_effect = {
+			set_country_flag = HIP_neverfall_joins_government
+		}
+	}
+	
+	option = { # Not yet
+		name = hippogriff.104.b
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = HIP_rocket_neverfall
+		hidden_effect = {
+			set_country_flag = HIP_neverfall_joins_government
+		}
+	}
+}
+# Rocket Establishines the Office of National Statistics
+country_event = {
+	id = hippogriff.105
+	title = hippogriff.105.t
+	desc = hippogriff.105.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	trigger = {
+		original_tag = HIP
+		has_country_flag = HIP_neverfall_joins_government
+		has_idea = HIP_rocket_neverfall
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	fire_only_once = yes
+
+	option = { # 
+		name = hippogriff.105.a
+		add_political_power = 50
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Silverstream joins our government
+country_event = {
+	id = hippogriff.106
+	title = hippogriff.106.t
+	desc = hippogriff.106.desc
+	
+	#picture = GFX_event_HIP_tank_m1
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HIP_silverstream_add_event
+		}
+	}
+
+	option = { # 
+		name = hippogriff.106.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#####################
+#### hipflavour ####
+#####################
+
+# Foreign Literature in Universities
+country_event = {
+	id = hipflavour.1
+	title = hipflavour.1.t
+	desc = hipflavour.1.desc
+	
+	#picture = TODO
+	trigger = {
+		original_tag = HIP
+		date > 1007.2.1
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+	
+	option = { # We should keep an eye on this
+		name = hipflavour.1.a
+		hidden_effect = {
+			country_event = {
+				id = hipflavour.2
+				days = 30
+				random_days = 7
+			}
+		}
+	}
+}
+
+# The Socalist and Liberal Clubs
+country_event = {
+	id = hipflavour.2
+	title = hipflavour.2.t
+	desc = hipflavour.2.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = hipflavour.3
+				days = 14
+				random_days = 5
+			}
+			country_event = {
+				id = hipflavour.4
+				days = 40
+				random_days = 7
+			}
+		}
+	}
+	
+	option = { # Its their right to exist
+		name = hipflavour.2.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		
+	}
+	option = { # Order them to be shut down
+		name = hipflavour.2.a
+		add_stability = -0.05
+		HIP_decrease_divided_society = yes
+		set_country_flag = HIP_socalist_and_liberal_clubs_banned
+	}
+}
+
+# The Aris First Committie is established
+country_event = {
+	id = hipflavour.3
+	title = hipflavour.3.t
+	desc = hipflavour.3.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HIP_aris_first_founded
+			set_party_name = {
+				ideology = neutrality
+				long_name = HPI_aris_first_party_long
+				name = HPI_aris_first_party
+			}
+			create_country_leader = {
+				name = "Raft Wood"
+				ideology = oligarchism
+				picture = "raft_wood.tga"
+				expire = "1965.1.1"
+				traits = {
+					# TODO
+				}
+			}
+			country_event = {
+				id = arisfirst.2
+				months = 7
+				random_days = 15
+			}
+		}
+	}
+	
+	option = { # Its good to see those standing up for our values
+		name = hipflavour.3.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		HIP_decrease_divided_society = yes
+		effect_tooltip = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = HPI_aris_first_party_long
+				name = HPI_aris_first_party
+			}
+			create_country_leader = {
+				name = "Raft Wood"
+				ideology = oligarchism
+				picture = "raft_wood.tga"
+				expire = "1965.1.1"
+				traits = {
+					# TODO
+				}
+			}
+		}
+	}
+	option = { # We must accept progress and not seek to hold on to the past for the sake of it.
+		name = hipflavour.3.b
+		add_stability = -0.1
+		HIP_increase_divided_society = yes
+		effect_tooltip = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = HPI_aris_first_party_long
+				name = HPI_aris_first_party
+			}
+			create_country_leader = {
+				name = "Raft Wood"
+				ideology = oligarchism
+				picture = "raft_wood.tga"
+				expire = "1965.1.1"
+				traits = {
+					# TODO
+				}
+			}
+		}
+	}
+}
+
+# The First Socialist Conference
+country_event = {
+	id = hipflavour.4
+	title = hipflavour.4.t
+	desc = {
+		text = hipflavour.4.banned.desc
+		trigger = {
+			has_country_flag = HIP_socalist_and_liberal_clubs_banned
+		}
+	}
+	desc = {
+		text = hipflavour.4.desc
+		trigger = {
+			NOT = { has_country_flag = HIP_socalist_and_liberal_clubs_banned }
+		}
+	}
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HIP_rwp_founded
+			set_party_name = {
+				ideology = communism
+				long_name = HIP_RWP_party_long
+				name = HIP_RWP_party
+			}
+			create_country_leader = {
+				name = "Posada"
+				desc = "HIP_POSADA_DESC"
+				picture = "posada.tga"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					nuclear_revolutionary
+				}
+			}
+		}
+	}
+	
+	option = { # It is their right to hold political debates
+		name = hipflavour.3.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		effect_tooltip = {
+			set_party_name = {
+				ideology = communism
+				long_name = HIP_RWP_party_long
+				name = HIP_RWP_party
+			}
+			create_country_leader = {
+				name = "Posada"
+				desc = "HIP_POSADA_DESC"
+				picture = "posada.tga"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					nuclear_revolutionary
+				}
+			}
+		}
+	}
+	option = { # Ban this at once!
+		name = hipflavour.3.b
+		add_political_power = -50
+		effect_tooltip = {
+			set_party_name = {
+				ideology = communism
+				long_name = HIP_RWP_party_long
+				name = HIP_RWP_party
+			}
+			create_country_leader = {
+				name = "Posada"
+				desc = "HIP_POSADA_DESC"
+				picture = "posada.tga"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					nuclear_revolutionary
+				}
+			}
+		}
+	}
+}
+
+############################
+#### hippogriff_society ####
+############################
+
+# HIP - Divided Society Sender
+country_event = {
+	id = hippogriff_society.0
+	title = hippogriff_society.0.t
+	desc = hippogriff_society.0.desc
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		country_event = {
+			id = hippogriff_society.0
+			days = 120
+			random_days = 3
+		}
+	}
+
+	option = { # 
+		name = hippogriff_society.0.a
+		
+		if = {
+			limit = {
+				HIP_is_going_seapony = yes
+			}
+			random_list = {
+				10 = {
+					country_event = {
+						id = hippogriff_society.1
+						days = 7
+						random_days = 6
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				HIP_is_going_hippogriff = yes
+			}
+			random_list = {
+				10 = {
+					country_event = {
+						id = hippogriff_society.2
+						days = 7
+						random_days = 6
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = HIP_divided_society_5
+			}
+			random_list = {
+				10 = {
+					country_event = {
+						id = hippogriff_society.3
+						days = 7
+						random_days = 6
+					}
+				}
+			}
+		}
+		else = {
+
+		}
+	}
+}
+
+# HIP - Generic Hippogriffs Upset
+country_event = {
+	id = hippogriff_society.1
+	title = hippogriff_society.1.t
+	desc = hippogriff_society.1.desc
+	
+	is_triggered_only = yes
+
+	option = { # Hippogriff
+		name = hippogriff_society.1.a
+		HIP_increase_divided_society = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				HIP_is_going_hippogriff = yes
+				factor = 0.1
+			}
+			modifier = {
+				HIP_is_going_seapony = yes
+				factor = 1.5
+			}
+		}
+	}
+	option = {
+		name = hippogriff_society.1.b
+		add_political_power = -30
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = { # Seapony
+		name = hippogriff_society.1.c
+		add_stability = -0.05
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_government = democratic
+				factor = 0
+			}
+			modifier = {
+				has_stability < 0.5
+				factor = 0
+			}
+		}
+	}
+}
+
+# HIP - Generic Seaponies Upset
+country_event = {
+	id = hippogriff_society.2
+	title = hippogriff_society.2.t
+	desc = hippogriff_society.2.desc
+	
+	is_triggered_only = yes
+
+	option = { # Seapony
+		name = hippogriff_society.2.a
+		HIP_decrease_divided_society = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				HIP_is_going_hippogriff = yes
+				factor = 0.1
+			}
+			modifier = {
+				HIP_is_going_seapony = yes
+				factor = 1.5
+			}
+		}
+	}
+	option = {
+		name = hippogriff_society.2.b
+		add_political_power = -30
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = { # Hippogriff
+		name = hippogriff_society.2.c
+		add_stability = -0.05
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_government = democratic
+				factor = 0
+			}
+			modifier = {
+				has_stability < 0.5
+				factor = 0
+			}
+		}
+	}
+}
+
+# HIP - Generic Pattiton to the Queen
+country_event = {
+	id = hippogriff_society.3
+	title = hippogriff_society.3.t
+	desc = hippogriff_society.3.desc
+	
+	is_triggered_only = yes
+
+	option = { # Hippogriff
+		name = hippogriff_society.3.a
+		HIP_increase_divided_society = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				HIP_is_going_hippogriff = yes
+				factor = 0.1
+			}
+			modifier = {
+				HIP_is_going_seapony = yes
+				factor = 1.5
+			}
+		}
+	}
+	option = {
+		name = hippogriff_society.3.b
+		add_political_power = -60
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = { # Seapony
+		name = hippogriff_society.3.c
+		HIP_decrease_divided_society = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				HIP_is_going_hippogriff = yes
+				factor = 1.5
+			}
+			modifier = {
+				HIP_is_going_seapony = yes
+				factor = 0.1
+			}
+		}
+	}
+}
+
+###################
+#### arisfirst ####
+###################
+# First Rally
+country_event = {
+	id = arisfirst.2
+	title = arisfirst.2.t
+	desc = arisfirst.2.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # ok
+		name = arisfirst.2.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.3
+				months = 2
+				random_days = 10
+			}
+			country_event = {
+				id = arisfirst.6
+				months = 3
+				random_days = 10
+			}
+		}
+	}
+}
+
+# Clothes Protests
+country_event = {
+	id = arisfirst.3
+	title = arisfirst.3.t
+	desc = arisfirst.3.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # ok
+		name = arisfirst.3.a
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.4
+				months = 1
+				random_days = 10
+			}
+			country_event = {
+				id = arisfirst.5
+				months = 6
+				random_days = 10
+			}
+		}
+	}
+}
+# Call to ban forign clothing
+country_event = {
+	id = arisfirst.4
+	title = arisfirst.4.t
+	desc = arisfirst.4.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # no ban
+		name = arisfirst.4.a
+		set_temp_variable = { stabilitypen_temp = party_popularity@neutrality }
+		add_to_temp_variable = { stabilitypen_temp = party_popularity@fascism }
+		multiply_temp_variable = { stabilitypen_temp = -0.25 }
+		add_stability = stabilitypen_temp
+	}
+	option = { # government only ban
+		name = arisfirst.4.b
+		add_political_power = -50
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					EQC = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						has_war = no
+					}
+				}
+				EQC = {
+					country_event = {
+						id = arisfirst.14
+						months = 13
+						random_days = 30
+					}
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		WNG = {
+			# 			exists = yes
+			# 			has_government = democratic
+			# 			has_war = no
+			# 		}
+			# 	}
+			# 	WNG = {
+			# 		country_event = {
+			# 			id = arisfirst.14
+			# 			months = 13
+			# 			random_days = 30
+			# 		}
+			# 	}
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		EQS = {
+			# 			exists = yes
+			# 			has_government = democratic
+			# 			has_war = no
+			# 		}
+			# 	}
+			# 	EQS = {
+			# 		country_event = {
+			# 			id = arisfirst.14
+			# 			months = 13
+			# 			random_days = 30
+			# 		}
+			# 	}
+			# }
+		}
+	}
+	option = { # full ban
+		name = arisfirst.4.c
+		add_stability = -0.05
+		add_political_power = -75
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					EQC = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						has_war = no
+					}
+				}
+				EQC = {
+					country_event = {
+						id = arisfirst.14
+						months = 13
+						random_days = 30
+					}
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		EQS = {
+			# 			exists = yes
+			# 			has_government = democratic
+			# 			has_war = no
+			# 		}
+			# 	}
+			# 	EQS = {
+			# 		country_event = {
+			# 			id = arisfirst.14
+			# 			months = 13
+			# 			random_days = 30
+			# 		}
+			# 	}
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		WNG = {
+			# 			exists = yes
+			# 			has_government = democratic
+			# 			has_war = no
+			# 		}
+			# 	}
+			# 	WNG = {
+			# 		country_event = {
+			# 			id = arisfirst.14
+			# 			months = 13
+			# 			random_days = 30
+			# 		}
+			# 	}
+			# }
+		}
+	}
+}
+# Hippogriff Fashion
+country_event = {
+	id = arisfirst.14
+	title = arisfirst.14.t
+	desc = arisfirst.14.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	trigger = {
+		has_war = no
+		NOT = {
+			has_government = communism
+		}
+	}
+	
+	option = { # How nice
+		name = arisfirst.14.a
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = arisfirst.13
+					days = 7
+				}
+			}
+		}
+	}
+}
+# Clothing Appropreation
+country_event = {
+	id = arisfirst.13
+	title = arisfirst.13.t
+	desc = arisfirst.13.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	trigger = {
+		has_war = no
+		has_government = democratic
+	}
+	
+	option = { # How nice
+		name = arisfirst.13.a
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				NOT = { has_government = democratic }
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = arisfirst.13
+					days = 7
+				}
+			}
+		}
+	}
+	option = { # Denounce this!
+		name = arisfirst.13.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_government = democratic
+			}
+		}
+		FROM = {
+			country_event = {
+				id = arisfirst.15
+				days = 1
+			}
+		}
+	}
+}
+# The Hippogriff Government has offically denounced all hippogriff inspired clothing
+country_event = {
+	id = arisfirst.15
+	title = arisfirst.15.t
+	desc = arisfirst.15.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Not very nice...
+		name = arisfirst.15.a
+	}
+}
+
+# Fire at a Car Dealership
+country_event = {
+	id = arisfirst.5
+	title = arisfirst.5.t
+	desc = arisfirst.5.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	trigger = {
+		has_war = no
+		OR = {
+			WNG = {
+				exists = yes
+				NOT = {
+					has_government = communism
+				}
+			}
+			EQC = {
+				exists = yes
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+	}
+	
+	option = { # Harmony
+		name = arisfirst.5.a
+		trigger = {
+			has_government = democratic
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		set_temp_variable = { stabilitypen_temp = party_popularity@neutrality }
+		add_to_temp_variable = { stabilitypen_temp = party_popularity@fascism }
+		multiply_temp_variable = { stabilitypen_temp = -0.25 }
+		add_stability = stabilitypen_temp
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.11
+				days = 7
+				random_days = 1
+			}
+		}
+	}
+	option = { # neither
+		name = arisfirst.5.b
+		set_temp_variable = { stabilitypen_temp = party_popularity@neutrality }
+		add_to_temp_variable = { stabilitypen_temp = party_popularity@fascism }
+		multiply_temp_variable = { stabilitypen_temp = -0.15 }
+		add_stability = stabilitypen_temp
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.11
+				days = 7
+				random_days = 1
+			}
+		}
+	}
+	option = { # non-alligned
+		name = arisfirst.5.c
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+	}
+}
+
+# Car Import Protests
+country_event = {
+	id = arisfirst.11
+	title = arisfirst.11.t
+	desc = arisfirst.11.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # We will not ban car imports
+		name = arisfirst.11.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				NOT = { has_government = democratic }
+				factor = 0
+			}
+		}
+		set_temp_variable = { stabilitypen_temp = party_popularity@neutrality }
+		add_to_temp_variable = { stabilitypen_temp = party_popularity@fascism }
+		multiply_temp_variable = { stabilitypen_temp = -0.3 }
+		add_stability = stabilitypen_temp
+	}
+	option = { # Fine. We will ban them.
+		name = arisfirst.11.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = democratic
+				factor = 0.75
+			}
+		}
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_political_power = -75
+		}
+		custom_effect_tooltip = arisfirst_car_ban_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					WNG = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				WNG = {
+					country_event = {
+						id = arisfirst.16
+						days = 1
+						random_hours = 4
+					}
+				}
+			}
+			if = {
+				limit = {
+					EQC = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				EQC = {
+					country_event = {
+						id = arisfirst.16
+						days = 1
+						random_hours = 4
+					}
+				}
+			}
+		}
+	}
+}
+# Hippogriffia banned imports of our cars!
+country_event = {
+	id = arisfirst.16
+	title = arisfirst.16.t
+	desc = arisfirst.16.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # We will issue a diplomatic protest
+		name = arisfirst.16.a
+		add_relation_modifier = {
+			target = FROM
+			modifier = HIP_car_ban_modifier
+		}
+		FROM = {
+			country_event = {
+				id = arisfirst.17
+				days = 1
+				random_hours = 4
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { # We shall react with equivelent bans
+		name = arisfirst.16.b
+		add_political_power = 25
+		ai_chance = {
+			factor = 5
+			modifier = {
+				NOT = {
+					has_government = democratic
+				}
+				factor = 1.5
+			}
+			modifier = {
+				is_in_faction_with = FROM
+				factor = 0.5
+			}
+		}
+		add_relation_modifier = {
+			target = FROM
+			modifier = HIP_car_ban_modifier
+		}
+		FROM = {
+			add_relation_modifier = {
+				target = ROOT
+				modifier = HIP_car_ban_trade_modifier
+			}
+			country_event = {
+				id = arisfirst.18
+				days = 1
+				random_hours = 4
+			}
+		}
+	}
+}
+# They issued a diplomatic protest
+country_event = {
+	id = arisfirst.17
+	title = arisfirst.17.t
+	desc = arisfirst.17.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = arisfirst.17.a
+		effect_tooltip = {
+			FROM = {
+				add_relation_modifier = {
+					target = ROOT
+					modifier = HIP_car_ban_modifier
+				}
+			}
+		}
+	}
+}
+# They banned our cars!
+country_event = {
+	id = arisfirst.18
+	title = arisfirst.18.t
+	desc = arisfirst.18.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = arisfirst.18.a
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_political_power = -50
+		}
+		effect_tooltip = {
+			FROM = {
+				add_relation_modifier = {
+					target = ROOT
+					modifier = HIP_car_ban_modifier
+				}
+			}
+			add_relation_modifier = {
+				target = FROM
+				modifier = HIP_car_ban_trade_modifier
+			}
+		}
+	}
+}
+# Rally in Squidville
+country_event = {
+	id = arisfirst.6
+	title = arisfirst.6.t
+	desc = arisfirst.6.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = arisfirst.6.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.7
+				months = 3
+				random_days = 10
+			}
+		}
+	}
+}
+# Rally in Canterfall
+country_event = {
+	id = arisfirst.7
+	title = arisfirst.7.t
+	desc = arisfirst.7.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok Harmony
+		name = arisfirst.7.a
+		add_political_power = -10
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.01
+		}
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.8
+				months = 3
+				random_days = 10
+			}
+		}
+	}
+	option = { # Ok
+		name = arisfirst.7.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.8
+				months = 3
+				random_days = 10
+			}
+		}
+	}
+}
+# Rally upcoming in Harmonizing Heights
+country_event = {
+	id = arisfirst.8
+	title = arisfirst.8.t
+	desc = arisfirst.8.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Denied
+		name = arisfirst.8.a
+		add_political_power = -25
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.9
+				days = 1
+				random_hours = 7
+			}
+		}
+	}
+	option = { # Allowed
+		name = arisfirst.8.b
+		hidden_effect = {
+			country_event = {
+				id = arisfirst.10
+				days = 1
+				random_hours = 7
+			}
+		}
+	}
+}
+# Aris First denounces our double standards
+country_event = {
+	id = arisfirst.9
+	title = arisfirst.9.t
+	desc = arisfirst.9.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = arisfirst.9.a
+		set_temp_variable = { stabilitypen_temp = party_popularity@neutrality }
+		add_to_temp_variable = { stabilitypen_temp = party_popularity@fascism }
+		multiply_temp_variable = { stabilitypen_temp = -0.75 }
+		add_stability = stabilitypen_temp
+	}
+}
+# Aris First has a major rally
+country_event = {
+	id = arisfirst.10
+	title = arisfirst.10.t
+	desc = arisfirst.10.desc
+	
+	#picture = TODO
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = arisfirst.10.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+#####################
+#### hippocommie ####
+#####################
+
+country_event = { # Organizing the Leftist Coalition - anarchists and orthodox Marksists meet
+	id = hippocommie.1
+	title = hippocommie.1.t
+	desc = hippocommie.1.d
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # We need to stay united against reactionaries! No matter who comes to dominate, we're a team!
+		name = hippocommie.1.a
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_country_flag = HIP_anarkiddy_tankie_bros
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { # Our ideology has to stay pure
+		name = hippocommie.1.b
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = 0.05
+		add_popularity = { ideology = communism popularity = -0.05 }
+		add_political_power = 25
+	}
+}
+country_event = { # A speech about the dream of communism at the opening of the Supreme Soviet
+	id = hippocommie.2
+	title = hippocommie.2.t
+	desc = hippocommie.2.d
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # This should also set up the Supreme Soviet parliament scripted gui
+		name = hippocommie.2.a
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+}
+
+country_event = { # The worst of the reactionaries, the imperialists who wish to go out and conquer, have their fate decided
+	id = hippocommie.3
+	title = hippocommie.3.t
+	desc = hippocommie.3.d
+	
+	#picture = TODO
+	is_triggered_only = yes
+
+	option = { # Firing squad
+		name = hippocommie.3.a
+		add_political_power = 25
+		add_popularity = { ideology = fascism popularity = -0.2 }
+	}
+}
+

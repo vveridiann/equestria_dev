@@ -60,7 +60,7 @@
  VICTORY_POINTS_6280:0 "Марипоза"
  VICTORY_POINTS_11686:0 "Мейрчестер"
  VICTORY_POINTS_11499:0 "Солтликингхэм"
- VICTORY_POINTS_3698:0 "Сиддл"
+ VICTORY_POINTS_3698:0 "Сиэддл"
  VICTORY_POINTS_9400:0 "Сауспарк"
  VICTORY_POINTS_9867:0 "Баккасл"
  VICTORY_POINTS_3915:0 "Мейрвэй"
@@ -619,8 +619,6 @@
  VICTORY_POINTS_8007:0 "Фельдбрук"
  VICTORY_POINTS_20096:0 "Келапа Бурунг"
  VICTORY_POINTS_20094:0 "Биара Гунтур"
-
-
  VICTORY_POINTS_20626:0 "Сорго"
  VICTORY_POINTS_16672:0 "Вернант"
  VICTORY_POINTS_20416:0 "Массикот"
@@ -695,6 +693,7 @@
  VICTORY_POINTS_16261:0 "Амбутар"
  VICTORY_POINTS_17068:0 "Узунди"
  VICTORY_POINTS_15466:0 "Аль Надия"
+ VICTORY_POINTS_18499:0 "Бэтсби"
  VICTORY_POINTS_8344:0 "Акорандриакарова"
  VICTORY_POINTS_8441:0 "Ценалакана"
  VICTORY_POINTS_8825:0 "Тандрокиныбе"

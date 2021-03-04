@@ -942,6 +942,14 @@ leader_traits = {
 			org_loss_when_moving = 0.15
 		}
 	}
+	fascist_sympathizer = {
+		type = all
+		trait_type = personality_trait
+		allowed = { always = no }
+
+		modifier = {	
+		}
+	}
 	##################################
 	# Corps Commander traits.
 	##################################
@@ -1513,9 +1521,10 @@ leader_traits = {
 		
 		non_shared_modifier = {
 			experience_gain_factor = -0.5
+        }
     }
-  }
-  trait_berserker = {
+	
+    trait_berserker = {
 		type = all
 		trait_type = personality_trait
 		allowed = {
@@ -1529,6 +1538,54 @@ leader_traits = {
             max_dig_in = -2
             recon_factor = -0.25
 		}
+	}
+	
+	trait_mercenary_commander = {
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			army_attack_factor = 0.05
+			army_morale_factor = 0.10
+			supply_consumption_factor = 0.10
+		}
+	}
+	########################################
+	####	COLTHAGE FACTIONT TRAITS	####
+	########################################
+
+	zarcid_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	traditionalist_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	pirate_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	constitutionalist_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	scientific_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	harmonid_supporter = {
+		type = all
+		trait_type = status_trait
+	}
+	zidonid_supporter = {
+		type = all
+		trait_type = status_trait
 	}
 	
 	trait_timberwolf_companion = {
@@ -1770,6 +1827,37 @@ leader_traits = {
 		defense_skill = 1
 		attack_skill_factor = 1
 		defense_skill_factor = 1
+    }
+	
+	night_guard_2 = {
+		type = corps_commander
+		trait_type = personality_trait
+
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		allowed = {
+			FROM = {
+				tag = BAT
+			}
+		}
+
+		modifier = {
+		    experience_gain_factor = 0.05
+			night = {
+				attack = 0.10
+				defence = 0.10
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		new_commander_weight = {
+			factor = 0
+		}
     }
 	
 	on_probation = {

@@ -375,8 +375,54 @@ vyzima_oil_refinery:0 "Нефтеперерабатывающий завод в 
 coring_decisions:0 "Интегрировать территории"
 generic_core_country:0 "Интегрировать [From.GetAdjective]ие территории"
 generic_core_country_desc:0 "Поскольку в данный момент мы владеем территориями, которые считаются неотъемлемыми частями государства [From.GetName], мы должны интегрировать их в наше государство как можно скорее."
+
 generic_core_country_original_cores:0 "Интегрировать [From.GetAdjective]ие территории"
 generic_core_country_original_cores_desc:0 "Поскольку в данный момент мы владеем территориями, которые считаются неотъемлемыми частями государства [From.GetName], мы должны интегрировать их в наше государство как можно скорее."
+
+### Zebrican Bats ###
+decision_cost_7500_test_subject:0 "£research_icon  §Y7500§!"
+decision_cost_7500_test_subject_blocked:0 "£research_icon  §R7500§!"
+decision_cost_7500_test_subject_tooltip:0 "Принятие решения стоит [This.GetDecisionCostTestSubject7500]"
+
+decision_cost_10000_test_subject:0 "£research_icon  §Y10000§!"
+decision_cost_10000_test_subject_blocked:0 "£research_icon  §R10000§!"
+decision_cost_10000_test_subject_tooltip:0 "Принятие решения стоит [This.GetDecisionCostTestSubject10000]"
+
+decision_cost_12500_test_subject:0 "£research_icon  §Y12500§!"
+decision_cost_12500_test_subject_blocked:0 "£research_icon  §R12500§!"
+decision_cost_12500_test_subject_tooltip:0 "Принятие решения стоит [This.GetDecisionCostTestSubject12500]"
+
+decision_cost_10000_labour_pp_15:0 "£manpower_icon  §Y10000§! £pol_power §Y15§!"
+decision_cost_10000_labour_pp_15_blocked:0 "£manpower_icon  §R10000§! £pol_power §R15§!"
+decision_cost_10000_labour_pp_15_tooltip:0 "Принятие решения стоит [This.GetDecisionCostLabour10000PP15]"
+
+decision_cost_15000_labour_pp_15:0 "£manpower_icon  §Y15000§! £pol_power §Y15§!"
+decision_cost_15000_labour_pp_15_blocked:0 "£manpower_icon  §R15000§! £pol_power §R15§!"
+decision_cost_15000_labour_pp_15_tooltip:0 "Принятие решения стоит [This.GetDecisionCostLabour15000PP15]"
+
+decision_cost_15000_labour:0 "£manpower_icon  §Y15000§!"
+decision_cost_15000_labour_blocked:0 "£manpower_icon  §R15000§!"
+decision_cost_15000_labour_tooltip:0 "Принятие решения стоит [This.GetDecisionCostLabour15000]"
+
+decision_cost_20000_labour_pp_15:0 "£manpower_icon  §Y[?root.GetBATDecisionCostLabour225002000015000]§! £pol_power §Y[?root.GetBATDecisionCostPP]§!"
+decision_cost_20000_labour_pp_15_blocked:0 "£manpower_icon  §R[?root.GetBATDecisionCostLabour225002000015000]§! £pol_power §R[?root.GetBATDecisionCostPP]§!"
+decision_cost_20000_labour_pp_15_tooltip:0 "Принятие решения стоит [This.GetDecisionCostLabour20000PP15]"
+
+decision_cost_25000_labour_pp_15:0 "£manpower_icon  §Y[?root.GetBATDecisionCostLabour275002500020000]§! £pol_power §Y[?root.GetBATDecisionCostPP]§!"
+decision_cost_25000_labour_pp_15_blocked:0 "£manpower_icon  §R[?root.GetBATDecisionCostLabour275002500020000]§! £pol_power §R[?root.GetBATDecisionCostPP]§!"
+decision_cost_25000_labour_pp_15_tooltip:0 "Принятие решения стоит [This.GetDecisionCostLabour25000PP15]"
+
+decision_cost_CP_15:0 "£command_power §Y15§!"
+decision_cost_CP_15_blocked:0 "£command_power §R15§!"
+decision_cost_CP_15_tooltip:0 "Принятие решения стоит [This.GetDecisionCostCP15]"
+
+decision_cost_CP_25:0 "£command_power §Y25§!"
+decision_cost_CP_25_blocked:0 "£command_power §R25§!"
+decision_cost_CP_25_tooltip:0 "Принятие решения стоит [This.GetDecisionCostCP25]"
+
+decision_cost_CP_15_pp_10:0 "£command_power §Y15§! £pol_power §Y10§!"
+decision_cost_CP_15_pp_10_blocked:0 "£command_power §Y15§! £pol_power §Y10§!"
+decision_cost_CP_15_pp_10_tooltip:0 "Принятие решения стоит [This.GetDecisionCostCP15PP10]"
 
 recruit_equestrian_operative:0 "Нанять эквестрийского оперативника"
 recruit_changeling_operative:0 "Нанять оперативника-чейнджлинга"
@@ -410,6 +456,7 @@ recruit_penguin_operative:0 "Нанять оперативника-пингви�
 recruit_riverlander_operative:0 "Нанять оперативника из Речных Земель"
 recruit_southerner_operative:0 "Нанять оперативника из южной Грифонии"
 recruit_yak_operative:0 "Нанять оперативника-яка"
+recruit_zebra_operative:0 "Нанять оперативника-зебру"
 recruit_yeti_operative:0 "Нанять оперативника-йети"
 recruit_zebra_operative:0 "Нанять оперативника-зебру"
 recruit_zebridean_operative:0 "Нанять оперативника с Зебрид"

@@ -5341,6 +5341,10 @@ SpriteType = {
 		texturefile = "gfx/interface/ideas/HIP/idea_HIP_silverstream.dds"
     }
 	SpriteType = {
+		name = "GFX_idea_HIP_rocket_neverfall"
+		texturefile = "gfx/interface/ideas/HIP/HIP_rocket_neverfall.dds"
+    }
+	SpriteType = {
 		name = "GFX_idea_chn_legus"
 		texturefile = "gfx/interface/ideas/chn_legus.dds"
 	}
@@ -6220,7 +6224,7 @@ SpriteType = {
 	SpriteType = {
 		name = "GFX_idea_FLO_queen_viviane"
 		texturefile = "gfx/interface/ideas/FLO_queen_viviane.dds"
-	}
+    }
 	SpriteType = {
 		name = "GFX_idea_E_E_rivalry"
 		texturefile = "gfx/interface/ideas/E_E_rivalry.tga"
@@ -6434,6 +6438,26 @@ SpriteType = {
 		texturefile = "gfx/interface/ideas/MAF_Merc_hat.tga"
 	}
 	SpriteType = {
+		name = "GFX_idea_batpower_start"
+		texturefile = "gfx/interface/ideas/batpower_start.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_batpower_start_1"
+		texturefile = "gfx/interface/ideas/batpower_start_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_batpower_start_2"
+		texturefile = "gfx/interface/ideas/batpower_start_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_batpower_start_3"
+		texturefile = "gfx/interface/ideas/batpower_start_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_batpower_start_4"
+		texturefile = "gfx/interface/ideas/batpower_start_4.tga"
+	}
+    SpriteType = {
 		name = "GFX_idea_CHN_love_collectors"
 		texturefile = "gfx/interface/ideas/CHN_love_collectors.dds"
 	}
@@ -6577,6 +6601,14 @@ SpriteType = {
 		name = "GFX_idea_Kasa_Warriors"
 		texturefile = "gfx/interface/ideas/Kasa_Warriors.tga"
     }
+	SpriteType = {
+		name = "GFX_idea_NMM_merc_hat_1"
+		texturefile = "gfx/interface/ideas/NMM_merc_hat_1.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_gilippo_gappi_minister"
+		texturefile = "gfx/interface/ideas/gilippo_gappi_minister.tga"
+	}
 	SpriteType = {
 		name = "GFX_idea_ZES_advisor_bicoafi"
 		texturefile = "gfx/interface/ideas/ZES_advisor_bicoafi.tga"
@@ -6842,6 +6874,14 @@ SpriteType = {
 		texturefile = "gfx/interface/modifiers_skull_icon.dds"
     }
 	SpriteType = {
+		name = "GFX_idea_WIN_Azizelquart_Zahummid_idea"
+		texturefile = "gfx/interface/ideas/WIN_Azizelquart_Zahummid_idea.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WIN_Ocean_Spray_Advisor"
+		texturefile = "gfx/interface/ideas/WIN_Ocean_Spray_Advisor.tga"
+	}
+    SpriteType = {
 		name = "GFX_idea_starry_glory_advisor"
 		texturefile = "gfx/interface/ideas/starry_glory_advisor.dds"
     }
@@ -6927,3 +6967,4 @@ SpriteType = {
     }
 	
 }
+
