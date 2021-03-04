@@ -7,15 +7,22 @@ state={
 		owner = KIR
 		add_core_of = KIR
 		buildings = {
+			dockyard = 1
+			20600 = {
+				naval_base = 1
+			}
 		}
 		victory_points = {
-			2986 5 
+			5869 5 
 		}
 		victory_points = {
-			20576 5 
+			20576 3
 		}
 		victory_points = {
-			20591 3 
+			20600 5
+		}
+		victory_points = {
+			20591 2 
 		}
 
 	}

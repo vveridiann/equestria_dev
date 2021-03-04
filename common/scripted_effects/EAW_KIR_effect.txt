@@ -1,0 +1,218 @@
+KIR_KIS_transfer_civil_war_provinces = {
+	KIS = {
+		set_province_controller = 20525 
+		set_province_controller = 20549 
+		set_province_controller = 20649 
+		set_province_controller = 20531 
+		set_province_controller = 20530 
+		set_province_controller = 20540 
+		set_province_controller = 20551 
+		set_province_controller = 20527 
+		set_province_controller = 20648 
+		set_province_controller = 20541 
+		set_province_controller = 20545 
+		set_province_controller = 20547 
+		set_province_controller = 20550 
+		set_province_controller = 20560 
+		set_province_controller = 20561 
+		set_province_controller = 20572 
+		set_province_controller = 20542
+	}
+	KIC = {
+		set_province_controller = 16721
+		set_province_controller = 20619
+	}
+	KIR = {
+		set_province_controller = 19200
+		set_province_controller = 20362
+		set_province_controller = 20347
+		set_province_controller = 20365
+		set_province_controller = 20392
+		set_province_controller = 13134
+		set_province_controller = 13057
+		set_province_controller = 13043
+		set_province_controller = 20639
+		set_province_controller = 12268
+		set_province_controller = 10319
+		set_province_controller = 10206
+	}
+}
+
+KIR_diary_SG_RESET_FRAMES = {
+	set_variable = {
+		protagonist_1_frame = 2
+	}
+	set_variable = {
+		protagonist_2_frame = 2
+	}
+	set_variable = {
+		protagonist_3_frame = 2
+	}
+	set_variable = {
+		protagonist_4_frame = 2
+	}
+}
+
+KIR_unlock_entry_effect = {
+	if = {
+		limit = {
+			has_country_flag = KIR_diary_SG_popup_toggle_YES
+		}
+		set_country_flag = KIR_toggled_diary_SG
+		KIR_diary_SG_RESET_FRAMES = yes
+		set_variable = { protagonist_1_frame = 1 }
+		add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+	}
+}
+
+KIR_diary_SG_protag_1_button_click_effect = {
+	KIR_diary_SG_RESET_FRAMES = yes
+	set_variable = { protagonist_1_frame = 1 }
+	set_variable = { KIR_diary_SG_entry_var = 0 }
+	add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+}
+
+KIR_diary_SG_protag_2_button_click_effect = {
+	KIR_diary_SG_RESET_FRAMES = yes
+	set_variable = { protagonist_2_frame = 1 }
+	set_variable = { KIR_diary_SG_entry_var = 0 }
+	add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+}
+
+KIR_diary_SG_protag_3_button_click_effect = {
+	KIR_diary_SG_RESET_FRAMES = yes
+	set_variable = { protagonist_3_frame = 1 }
+	set_variable = { KIR_diary_SG_entry_var = 0 }
+	add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+}
+
+KIR_diary_SG_protag_4_button_click_effect = {
+	KIR_diary_SG_RESET_FRAMES = yes
+	set_variable = { protagonist_4_frame = 1 }
+	set_variable = { KIR_diary_SG_entry_var = 0 }
+	add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+}
+
+KIS_treasury_figure_out_prices = {
+	#############################################
+	## Figure out GRI Infantry Equipment Level ##
+	#############################################
+	if = {
+		limit = {
+			GRI = {
+				has_tech = infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 4500 }
+	}
+	if = {
+		limit = {
+			GRI = {
+				has_tech = infantry_weapons1
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 5000 }
+	}
+	if = {
+		limit = {
+			GRI = {
+				has_tech = improved_infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 5500 }
+	}
+	if = {
+		limit = {
+			GRI = {
+				has_tech = advanced_infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 6000 }
+	}
+	if = {
+		limit = {
+			GRI = {
+				has_tech = advanced_infantry_weapons_b
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 6500 }
+	}
+	if = {
+		limit = {
+			GRI = {
+				has_tech = advanced_infantry_weapons_e
+			}
+		}
+		set_variable = { KIS_buy_guns_GRI_cost = 7000 }
+	}
+	#############################################
+	## Figure out KIS Infantry Equipment Level ##
+	#############################################
+	if = {
+		limit = {
+			KIS = {
+				has_tech = infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 3500 }
+	}
+	if = {
+		limit = {
+			KIS = {
+				has_tech = infantry_weapons1
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 4000 }
+	}
+	if = {
+		limit = {
+			KIS = {
+				has_tech = improved_infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 4500 }
+	}
+	if = {
+		limit = {
+			KIS = {
+				has_tech = advanced_infantry_weapons
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 5000 }
+	}
+	if = {
+		limit = {
+			KIS = {
+				has_tech = advanced_infantry_weapons_b
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 5500 }
+	}
+	if = {
+		limit = {
+			KIS = {
+				has_tech = advanced_infantry_weapons_e
+			}
+		}
+		set_variable = { KIS_buy_guns_KIS_cost = 6000 }
+	}
+}
+
+KIS_plebiscite_calculate_average_popular_support = {
+	set_variable = { KIS_plebiscite_average_popular_support = 0 }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_fragrance_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_comely_cape_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_prosperous_dell_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_rhapsody_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_viridian_coast_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_radiance_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_verdant_fields_support_var }
+	add_to_variable = { KIS_plebiscite_average_popular_support = KIS_plebiscite_apricot_glen_support_var }
+	multiply_variable = { KIS_plebiscite_average_popular_support = 100 }
+	divide_variable = { KIS_plebiscite_average_popular_support = 8 }
+	clamp_variable = {
+		var = KIS_plebiscite_average_popular_support
+		min = 0
+		max = 100
+	}
+}

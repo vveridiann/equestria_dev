@@ -24,19 +24,6 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
-	# research workaround to apply the pre 1.6 research speed function by Yard1
-	# before 1.6, research speed was linear, and had the equation:
-	#
-	# time = (cost-(cost/100)*x)/(speed)
-	#
-	# the research speed modifier was applied to the tech cost, so if we had a tech that had a base cost of 100 days, a research speed modifier of +50% would bring that to 50 days
-	# after 1.6, the equation changed to:
-	#
-	# time = (cost)/(speed-(speed/100)*x)
-	#
-	# now the research speed modifier was applied to the speed itself (aka daily research gain). Which meant that, if we had a +50% research speed modifier, the 100 days tech would take 66.67 days
-	# this modifier adds just the right amount of the research speed modifier to make the new equation give the same results as the old one. Without it, we would not be able to have
-	# very large maluses, as the research would take an infinite amount of days
 	research_pre_ironclad_modifier = {
 		enable = { always = yes } #optional, the modifier won't apply if not enabled
 		research_speed_factor = var_research_adjustment_pre_ironclad
@@ -411,6 +398,84 @@
 		icon = GFX_idea_FRA_scw_intervention_republicans_focus
 		enable = { always = yes }
 		stability_weekly = LSC_griffon_resistance_modifier
+	}
+
+	KIR_silence_dynamic_modifier = {
+		icon = GFX_idea_KIR_silence
+		enable = { original_tag = KIR }
+		
+		stability_weekly = KIR_the_silence_weekly_stability_var
+		political_power_gain = KIR_the_silence_daily_political_power_var
+		stability_factor = KIR_the_silence_stability_var
+		drift_defence_factor = KIR_the_silence_drift_defence_var
+		research_speed_factor = KIR_the_silence_research_var 
+		conscription_factor = KIR_the_silence_conscription_var
+		political_advisor_cost_factor = KIR_the_silence_political_advisor_var
+		enemy_justify_war_goal_time = KIR_the_silence_enemy_justify_var
+		military_leader_cost_factor = KIR_the_silence_general_cost_var
+		training_time_factor = KIR_the_silence_training_var
+		planning_speed = KIR_the_silence_planning_var
+		experience_gain_army_factor = KIR_the_silence_experience_gain_var 
+		minimum_training_level = KIR_the_silence_minimum_training_level_var
+		attrition = KIR_the_silence_attrition_var
+		global_building_slots_factor = KIR_the_silence_building_slots_var 
+		consumer_goods_factor = KIR_the_silence_consumer_goods_var
+		production_speed_buildings_factor = KIR_the_silence_construction_speed_var 
+		MONTHLY_POPULATION = KIR_the_silence_monthly_pop_var
+		industrial_capacity_factory = KIR_the_silence_factory_output_var
+		army_org_factor = KIR_the_silence_army_org_var
+		political_power_factor = KIR_the_silence_political_power_var
+		
+		custom_modifier_tooltip = KIR_silence_stability_civil_war_tt
+	}
+
+	KIR_plenum_dynamic_modifier = {
+		icon = GFX_idea_KIR_pagoda_1
+		enable = { original_tag = KIR }
+		
+		political_power_factor = KIR_plenum_PP_var
+		democratic_drift = KIR_plenum_democratic_var
+		fascism_drift = KIR_plenum_fascism_var
+		communism_drift = KIR_plenum_communism_var
+		neutrality_drift = KIR_plenum_neutrality_var
+		stability_factor = KIR_plenum_stab_var
+		drift_defence_factor = KIR_plenum_DD_var
+	}
+	
+	KIR_auburn_isle_pirate_modifier = {
+		icon = GFX_modifiers_skull_icon
+		enable = { always = yes }
+		remove_trigger = {
+			OR = {
+				NOT = { is_controlled_by = KIR }
+				KIR = {
+					has_country_flag = KIR_gotten_rid_of_auburn_isle_pirates_flag
+				}
+			}
+		}
+		
+		local_manpower = -1
+		local_supplies = -1
+		local_building_slots_factor = -1
+		local_resources_factor = -1
+		custom_modifier_tooltip = KIR_auburn_isle_pirate_raids_tt
+	}
+
+	KIS_treasury_debt_modifier = {
+		icon = GFX_idea_KIR_debt_chains
+		enable = {
+			original_tag = KIS 
+			OR = {
+				check_variable = { KIS.KIS_treasury_debt_consumer_goods_var > 0 }
+				check_variable = { KIS.KIS_treasury_debt_PP_var < 0 }
+			}
+		}
+		remove_trigger = {
+			check_variable = { KIS.TreasuryDebt < 999 }
+		}
+		
+		political_power_factor = KIS.KIS_treasury_debt_PP_var
+		consumer_goods_factor = KIS.KIS_treasury_debt_consumer_goods_var
 	}
 	
 	klugetown_criminals = { # on State

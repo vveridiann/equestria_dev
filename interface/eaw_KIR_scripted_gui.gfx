@@ -1,0 +1,69 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_KIR_SG_BG"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_SG_BG.tga"
+	}
+	spriteType = {
+		name = "GFX_KIR_SG_ENTRY"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_SG_ENTRY.tga"
+	}
+	spriteType = {
+		name = "GFX_KIR_SG_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_SG_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIR_SG_BUTTON"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_SG_BUTTON.tga"
+	}
+	spriteType = {
+		name = "GFX_KIR_BUTTON_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_BUTTON_TAB.tga"
+	}
+	spriteType = {
+		name = "GFX_KIR_FOCUS_CRUDE_STRIP"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_FOCUS_CRUDE_STRIP.tga"
+	}
+	spriteType = {
+		name = "GFX_KIR_AUTUMN_BLAZE_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_AUTUMN_BLAZE_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIR_FICKLE_CURRENT_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_FICKLE_CURRENT_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIR_WINTER_FROST_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_WINTER_FROST_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIR_ROARING_FIRE_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_ROARING_FIRE_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIR_RISING_SUN_TAB"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIR_RISING_SUN_TAB.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_KIS_progress_bar"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIS_progress_bar.tga"
+	}
+	progressbartype = {
+		name = "GFX_KIS_progress_bar"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		texturefile1 = "gfx/interface/ideas/KIR/SG/KIS_progress_bar.tga"
+		texturefile2 = "gfx/interface/ideas/KIR/SG/KIS_progress_bar_bg.tga"
+		size = { x = 333 y = 33 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
+	spriteType = {
+		name = "GFX_KIS_progress_bar_frame"
+		texturefile = "gfx/interface/ideas/KIR/SG/KIS_progress_bar_frame.tga"
+	}
+}

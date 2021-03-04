@@ -1,0 +1,824 @@
+guiTypes = {
+	containerWindowType = {
+		name = "KIR_diary_SG_trigger_window"
+		position = { x= 480 y = 244	}
+		Orientation = upper_left
+		clipping = no
+		
+		iconType = {
+			name = "TAB"
+			position = { x= -5 y = -8 }
+			spriteType = "GFX_KIR_BUTTON_TAB"
+		}
+		
+		buttonType = {
+			position = { x= 1 y = -4 }
+			name ="KIR_diary_SG_trigger_button"
+			spriteType = "GFX_KIR_SG_BUTTON"
+			
+			pdx_tooltip = "KIR_diary_SG_trigger_button_tt"
+			pdx_tooltip_delayed = "KIR_diary_SG_trigger_button_delayed_tt"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_diary_SG_window"
+		position = { x= 600 y = 200 }
+		size = { width= 550 height= 500 }
+		Orientation = upper_left
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_KIR_SG_BG"
+		}
+
+		buttonType = {
+			name ="KIR_diary_SG_protag_1_button"
+			spriteType = "GFX_KIR_AUTUMN_BLAZE_TAB"
+			frame = 2
+			position = { x=-77 y=18 }
+			
+			pdx_tooltip = "KIR_diary_SG_protag_1_button_tt"
+		}
+		
+		buttonType = {
+			name ="KIR_diary_SG_protag_2_button"
+			spriteType = "GFX_KIR_WINTER_FROST_TAB"
+			frame = 2
+			position = { x=-77 y=104 }
+			
+			pdx_tooltip = "KIR_diary_SG_protag_2_button_tt"
+		}
+		
+		buttonType = {
+			name ="KIR_diary_SG_protag_3_button"
+			spriteType = "GFX_KIR_FICKLE_CURRENT_TAB"
+			frame = 2
+			position = { x=-77 y=190 }
+			
+			pdx_tooltip = "KIR_diary_SG_protag_3_button_tt"
+		}
+		
+		buttonType = {
+			name ="KIR_diary_SG_protag_4_button"
+			spriteType = "GFX_KIR_RISING_SUN_TAB"
+			frame = 2
+			position = { x=-77 y=276 }
+			
+			pdx_tooltip = "KIR_diary_SG_protag_4_button_tt"
+		}
+
+		buttonType = {
+			name ="KIR_diary_SG_popup_toggle_button"
+			spriteType = "GFX_generic_checkbox2"
+			frame = 2
+			position = { x = 28 y=413 }
+		}
+		
+		instantTextboxType = {
+			name = "TOGGLE"
+			position = { x=66 y=411 }
+			font = "hoi_16mbs"
+			text = "KIR_diary_SG_popup_toggle_text"
+			maxWidth = 120
+			maxHeight = 100
+			format = left
+		}
+		
+		containerWindowType = {
+			name = "DIARY TEXT"
+			containerWindowType = {
+				name = "TEXT BOX"
+				verticalScrollbar = "right_vertical_slider"
+				margin = { top = 4 bottom = 4 }
+				smooth_scrolling = yes
+				
+				instantTextboxType = {
+					name = "TEXT"
+					position = { x = 190 y = 22 }
+					font = "hoi_16mbs"
+					text = "[KIR_diary_SG_ENTRY_TEXTS]"
+					maxWidth = 280
+					maxHeight = 420
+					format = left
+					scrollbartype = "standardtext_slider"
+				}
+			}
+		}
+		
+		buttonType = {
+			name = "KIR_diary_SG_ESC"
+			position = { x = 496 y = 12 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_diary_SG_protag_1_window"
+		position = { x = 22 y = 32 }
+		size = { width=165 height=358 }
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_blank"
+		}
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 2 bottom = 2 }
+		smooth_scrolling = yes
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_1_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=0 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_1"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_2_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=50 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_2"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_3_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=100 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_3"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_4_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=150 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_4"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_5_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=200 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_5"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_6_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=250 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_6"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_7_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=300 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_7"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_8_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=350 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_8"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_9_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=400 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_9"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_10_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=450 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_10"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_11_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=500 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_11"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_1_entry_12_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=550 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_12"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_diary_SG_protag_2_window"
+		position = { x = 22 y = 32 }
+		size = { width=165 height=358 }
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_blank"
+		}
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 2 bottom = 2 }
+		smooth_scrolling = yes
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_1_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=0 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_1"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_2_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=50 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_2"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_3_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=100 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_3"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_4_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=150 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_4"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_5_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=200 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_5"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_6_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=250 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_6"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_7_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=300 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_7"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_8_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=350 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_8"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_9_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=400 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_9"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_10_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=450 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_10"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_11_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=500 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_11"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_2_entry_12_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=550 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_12"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_diary_SG_protag_3_window"
+		position = { x = 22 y = 32 }
+		size = { width=165 height=358 }
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_blank"
+		}
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 2 bottom = 2 }
+		smooth_scrolling = yes
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_1_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=0 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_1"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_2_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=50 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_2"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_3_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=100 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_3"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_4_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=150 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_4"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_5_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=200 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_5"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_6_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=250 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_6"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_7_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=300 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_7"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_8_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=350 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_8"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_9_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=400 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_9"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_10_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=450 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_10"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_11_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=500 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_11"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_3_entry_12_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=550 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_12"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_diary_SG_protag_4_window"
+		position = { x = 22 y = 32 }
+		size = { width=165 height=358 }
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_blank"
+		}
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 2 bottom = 2 }
+		smooth_scrolling = yes
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_1_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=0 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_1"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_2_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=50 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_2"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_3_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=100 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_3"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_4_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=150 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_4"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_5_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=200 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_5"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_6_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=250 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_6"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_7_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=300 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_7"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_8_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=350 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_8"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_9_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=400 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_9"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_10_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=450 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_10"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_11_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=500 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_11"
+		}
+
+		buttonType = {
+			name = "KIR_diary_SG_protag_4_entry_12_button"
+			spriteType = "GFX_KIR_SG_ENTRY"
+			position = { x=0 y=550 }
+			
+			buttonFont = "hoi_24header"
+			buttonText = "KIR_diary_SG_ENTRY_12"
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIR_great_leap_decision_window"
+		size = { width=500 height=260 }
+		
+		instantTextboxType = {
+			name = "Image"
+			position = { x=0 y=12 }
+			text = "[KIR_GREAT_LEAP_DECISION_GET_IMAGE]"
+			format = left
+			maxWidth = 200
+			maxHeight = 120
+		}
+		
+		instantTextboxType = {
+			name = "Title"
+			position = { x = 200 y = -18 }
+			font = "hoi_36header"
+			text = "KIR_GREAT_LEAP_DECISION_TITLE"
+			format = left
+			maxWidth = 295
+			maxHeight = 20
+		}
+		
+		instantTextboxType = {
+			name = "Description"
+			position = { x = 200 y = 18 }
+			font = "hoi_16mbs"
+			text = "[KIR_GREAT_LEAP_DECISION_GET_DESCA]"
+			format = left
+			maxWidth = 295
+			maxHeight = 300
+		}
+		
+		instantTextboxType = {
+			name = "Description 2"
+			position = { x = 10 y = 98 }
+			font = "hoi_16mbs"
+			text = "[KIR_GREAT_LEAP_DECISION_GET_DESCB]"
+			format = left
+			maxWidth = 485
+			maxHeight = 400
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIS_nakp_treasury_window"
+		size = { width=500 height=232 }
+		
+		instantTextboxType = {
+			name = "Image"
+			position = { x=0 y=12 }
+			text = "KIS_nakp_treasury_window_image"
+			format = left
+			maxWidth = 200
+			maxHeight = 120
+		}
+		
+		instantTextboxType = {
+			name = "Description"
+			position = { x = 200 y = -15 }
+			font = "hoi_16mbs"
+			text = "KIS_nakp_treasury_window_desc_short"
+			format = left
+			maxWidth = 295
+			maxHeight = 300
+		}
+		
+		instantTextboxType = {
+			name = "Description 2"
+			position = { x = 10 y = 98 }
+			font = "hoi_16mbs"
+			text = "KIS_nakp_treasury_window_desc_long"
+			format = left
+			maxWidth = 485
+			maxHeight = 400
+		}
+		
+		containerWindowType = {
+			name = "KIS_nakp_treasury_current_balance_tab"
+			position = { x= 69 y = 109 }
+			size = { width = 124 height = 26 }
+			iconType = {
+				name = "KIS_nakp_treasury_current_balance_background"
+				spriteType = "GFX_generic_box_125"
+			}
+			iconType = {
+				name = "KIS_nakp_treasury_current_balance_gold_coin"
+				spriteType = "GFX_sycee_text"
+				position = { x= 5 y = 5 }
+			}
+			
+			instantTextBoxType = {
+				name = "KIS_nakp_treasury_current_balance_coins_amount"
+				position = { x = 0 y = 5 }
+				font = "hoi_16mbs"
+				text = "[?KIS.TreasuryWealth|*2Y]"
+				format = right
+				maxWidth = 116
+				maxHeight = 26
+				
+				pdx_tooltip = "KIS_nakp_treasury_balance_explainer_tt"
+			}
+		}
+		
+		containerWindowType = {
+			name = "KIS_nakp_treasury_debt_balance_tab"
+			position = { x= 155 y = 141 }
+			size = { width = 124 height = 26 }
+			iconType = {
+				name = "KIS_nakp_treasury_debt_balance_background"
+				spriteType = "GFX_generic_box_125"
+			}
+			iconType = {
+				name = "KIS_nakp_treasury_debt_balance_gold_coin"
+				spriteType = "GFX_sycee_text"
+				position = { x= 5 y = 5 }
+			}
+			
+			instantTextBoxType = {
+				name = "KIS_nakp_treasury_debt_balance_debt_amount"
+				position = { x = 0 y = 5 }
+				font = "hoi_16mbs"
+				text = "[?KIS.TreasuryDebt|*2Y]"
+				format = right
+				maxWidth = 116
+				maxHeight = 26
+				
+				pdx_tooltip = "KIS_nakp_treasury_debt_explainer_tt"
+			}
+		}
+		
+		containerWindowType = {
+			name = "KIS_nakp_treasury_last_month_income_tab"
+			position = { x= 160 y = 173 }
+			size = { width = 124 height = 26 }
+			iconType ={
+				name ="KIS_nakp_treasury_last_month_income_background"
+				spriteType = "GFX_generic_box_125"
+			}
+			iconType = {
+				name ="KIS_nakp_treasury_last_month_income_coin"
+				spriteType = "GFX_sycee_text"
+				position = { x= 5 y = 5 }
+			}
+			
+			instantTextBoxType = {
+				name ="KIS_nakp_treasury_last_month_income_income_amount"
+				position = { x = 0 y = 5 }
+				font = "hoi_16mbs"
+				text = "[?KIS.KISTreasuryIncomeMonthBefore|*2Y]"
+				format = right
+				maxWidth = 116
+				maxHeight = 26
+				
+				pdx_tooltip = "KIS_nakp_treasury_last_month_income_explainer_tt"
+			}
+		}
+		
+		containerWindowType = {
+			name = "KIS_nakp_treasury_income_change_tab"
+			position = { x= 81 y = 205 }
+			size = { width = 124 height = 26 }
+			iconType = {
+				name ="gold coin"
+				spriteType = "GFX_sycee_text"
+				position = { x= 5 y = 5 }
+			}
+			background ={
+				name ="background"
+				spriteType = "GFX_generic_box_125"
+			}
+			
+			instantTextBoxType = {
+				name ="income change"
+				position = { x = 0 y = 5 }
+				font = "hoi_16mbs"
+				text = "[?KIS.KISTreasuryIncomeChange|*2=+]"
+				format = right
+				maxWidth = 116
+				maxHeight = 26
+				
+				pdx_tooltip = "KIS_nakp_treasury_income_change_explainer_tt"
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "KIS_plebiscite_progress_bar_GUI_window"
+		position = {x = 0 y = 0}
+		size = { width = 500 height = 50 }
+		
+		containerWindowType = {
+			name = "Progress Bar"
+			position = { x = 78 y = 8 }
+			iconType = {
+				name = "KIS_plebiscite_progress_bar"
+				spriteType = "GFX_KIS_progress_bar"
+				position = { x = 0 y = 0 }
+			}
+		}
+		instantTextBoxType = {
+			name = "Progress Percentage"
+			font = "hoi_36header"
+			format = center
+			position = { x = 196 y = 6 }
+			maxWidth = 100
+			text = "[?Root.KIS_plebiscite_average_popular_support|0]%"
+		}
+		iconType = {
+			name = "Progress Bar Frame"
+			spriteType = "GFX_KIS_progress_bar_frame"
+			position = { x = 65 y = 0 }
+			
+			pdx_tooltip = KIS_northern_compact_plebiscite_category_progress_bar_tt
+		}
+	}
+}

@@ -308,6 +308,16 @@ defined_text = { # Country
 		localization_key = EAW_WS_OLV
 	}
 	text = {
+		trigger = { 
+			OR = {
+				original_tag = KIR
+				original_tag = KIC
+				original_tag = KIS
+			}
+		}
+		localization_key = EAW_WS_KIR
+	}
+	text = {
 		trigger = { original_tag = GAZ }
 		localization_key = EAW_WS_GAZ
 	}
@@ -629,6 +639,20 @@ defined_text = {
 		localization_key = EAW_WS_OLV_desc
 	}
 	text = {
+		trigger = { 
+			OR = {
+				original_tag = KIR
+				original_tag = KIC
+				original_tag = KIS
+			}
+		}
+		localization_key = EAW_WS_KIR_desc
+	}
+	text = {
+		trigger = { original_tag = KXN }
+		localization_key = EAW_WS_KXN_desc
+	}
+	text = {
 		trigger = { original_tag = GAZ }
 		localization_key = EAW_WS_GAZ_desc
 	}
@@ -789,6 +813,16 @@ defined_text = {
 	text = {
 		trigger = { original_tag = ELF }
 		localization_key = EAW_WS_header_text_ELF
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = KIR
+				original_tag = KIC
+				original_tag = KIS
+			}
+		}
+		localization_key = EAW_WS_header_text_KIR
 	}
 	text = {
 		localization_key = EAW_WS_standard_header_text

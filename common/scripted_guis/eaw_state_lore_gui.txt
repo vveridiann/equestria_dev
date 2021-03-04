@@ -114,6 +114,20 @@ scripted_gui = {
 
 					### North Zebrica ###
 					state = 875
+
+					### Kiria ###
+					state = 1059
+					state = 1071
+					state = 1073
+					state = 1060
+					state = 1064
+					state = 1069
+					state = 1081
+					state = 1065
+					state = 817
+					
+					state = 1054
+					state = 1058
 				}
 			}
 		}

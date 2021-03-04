@@ -578,4 +578,588 @@ on_actions = {
 			}	
 		}
 	}
+
+	on_monthly_KIR = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_KIR"
+			if = {
+				limit = {
+					NOT = { has_completed_focus = KIR_focus_10b }
+					check_variable = { KIR_pirate_raid_events_var < 7 }
+				}
+				random_list = {
+					1 = {
+						modifier = {
+							factor = 1.1
+							has_stability < 0.5
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 0 }
+							}
+							country_event = { id = kirin_pirate.1 days = 1 random_days = 14 }
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 1 }
+							}
+							country_event = { id = kirin_pirate.2 days = 1 random_days = 14 }
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 2 }
+							}
+							country_event = { id = kirin_pirate.3 days = 1 random_days = 14 }
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 3 }
+							}
+							every_country = {
+								limit = {
+									OR = {
+										is_kiria_country = yes
+										is_southeastern_zebrica_country = yes
+									}
+								}
+								news_event = { id = kirin_pirate.4 days = 1 random_days = 14 }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 4 }
+							}
+							every_country = {
+								limit = {
+									OR = {
+										is_kiria_country = yes
+										is_southeastern_zebrica_country = yes
+									}
+								}
+								news_event = { id = kirin_pirate.5 days = 1 random_days = 14 }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 5 }
+							}
+							every_country = {
+								limit = {
+									OR = {
+										is_kiria_country = yes
+										is_southeastern_zebrica_country = yes
+									}
+								}
+								news_event = { id = kirin_pirate.6 days = 1 random_days = 14 }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { KIR_pirate_raid_events_var = 6 }
+							}
+							country_event = { id = kirin_pirate.7 days = 1 random_days = 14 }
+						}
+						add_to_variable = { KIR_pirate_raid_events_var = 1 }
+					}
+					6 = {
+						modifier = {
+							factor = 1.1
+							has_stability > 0.5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_1_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					count_triggers = {
+						amount = 2
+						has_completed_focus = KIR_focus_8a
+						has_completed_focus = KIR_focus_8g
+						has_completed_focus = KIR_focus_10a
+						has_completed_focus = KIR_focus_11a
+					}
+				}
+				random_list = {
+					1 = {
+						set_country_flag = KIR_crisis_1_flag
+						country_event = { id = kirin_crisis.1 days = 7 random_days = 30 }
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 30 }
+					}
+					5 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_2_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						## is exempted from the monthly crisis quota
+					}
+					OR = { ##between the months of june and september
+						AND = {
+							date > 1007.06.01
+							date < 1007.10.01
+						}
+						AND = {
+							date > 1008.06.01
+							date < 1008.10.01
+						}
+						AND = {
+							date > 1009.06.01
+							date < 1009.10.01
+						}
+						AND = {
+							date > 1010.06.01
+							date < 1010.10.01
+						}
+						AND = {
+							date > 1011.06.01
+							date < 1011.10.01
+						}
+						AND = {
+							date > 1012.06.01
+							date < 1012.10.01
+						}
+						AND = {
+							date > 1013.06.01
+							date < 1013.10.01
+						}
+						AND = {
+							date > 1014.06.01
+							date < 1014.10.01
+						}
+						AND = {
+							date > 1015.06.01
+							date < 1015.10.01
+						}
+						AND = {
+							date > 1016.06.01
+							date < 1016.10.01
+						}
+						AND = {
+							date > 1017.06.01
+							date < 1017.10.01
+						}
+						AND = {
+							date > 1018.06.01
+							date < 1018.10.01
+						}
+						AND = {
+							date > 1019.06.01
+							date < 1019.10.01
+						}
+						AND = {
+							date > 1020.06.01
+							date < 1020.10.01
+						}
+						AND = {
+							date > 1021.06.01
+							date < 1021.10.01
+						}
+						AND = {
+							date > 1022.06.01
+							date < 1022.10.01
+						}
+						AND = {
+							date > 1023.06.01
+							date < 1023.10.01
+						}
+						AND = {
+							date > 1024.06.01
+							date < 1024.10.01
+						}
+						AND = {
+							date > 1025.06.01
+							date < 1025.10.01
+						}
+						AND = {
+							date > 1026.06.01
+							date < 1026.10.01
+						}
+						AND = {
+							date > 1027.06.01
+							date < 1027.10.01
+						}
+						AND = {
+							date > 1028.06.01
+							date < 1028.10.01
+						}
+						AND = {
+							date > 1029.06.01
+							date < 1029.10.01
+						}
+						AND = {
+							date > 1030.06.01
+							date < 1030.10.01
+						}
+					}
+				}
+				random_list = {
+					1 = {
+						country_event = { id = kirin_crisis.3 days = 1 random_days = 14 }
+					}
+					5 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_3_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					OR = {
+						has_country_flag = KIR_focus_6a_risky_choice_flag
+						has_country_flag = KIR_focus_6a_inaction_choice_flag
+					}
+					has_completed_focus = KIR_focus_6a
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 30 }
+						if = {
+							limit = { has_country_flag = KIR_focus_6a_risky_choice_flag }
+							country_event = { id = kirin_crisis.6 days = 7 random_days = 30 }
+						}
+						else_if = {
+							limit = { has_country_flag = KIR_focus_6a_inaction_choice_flag }
+							country_event = { id = kirin_crisis.7 days = 7 random_days = 30 }
+						}
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_4_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_5h
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 30 }
+						country_event = { id = kirin_crisis.8 days = 7 random_days = 30 }
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_7_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_5h
+					has_completed_focus = KIR_focus_6a
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 30 }
+						set_country_flag = KIR_crisis_7_flag
+						country_event = { id = kirin_crisis.10 days = 30 random_days = 180 }
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_15_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3b
+					has_completed_focus = KIR_focus_5a
+					has_completed_focus = KIR_focus_7a
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_15_flag
+						country_event = { id = kirin_crisis.15 days = 14 random_days = 14 }
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_16_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3d
+					has_completed_focus = KIR_focus_6b
+					has_completed_focus = KIR_focus_6h
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_16_flag
+						country_event = { id = kirin_crisis.16 days = 14 random_days = 14 }
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_17_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3d
+					has_completed_focus = KIR_focus_4b
+					has_completed_focus = KIR_focus_5c
+					has_completed_focus = KIR_focus_6b
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_17_flag
+						country_event = { id = kirin_crisis.17 days = 14 random_days = 14 }
+					}
+					4 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						has_country_flag = KIR_crisis_18_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_8f
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_18_flag
+						country_event = { id = kirin_crisis.18 days = 14 random_days = 14 }
+					}
+					3 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = KIR_crisis_19_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_5f
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_19_flag
+						country_event = { id = kirin_crisis.19 days = 14 random_days = 14 }
+					}
+					3 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = KIR_crisis_20_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3d
+					has_completed_focus = KIR_focus_3e
+					OR = {
+						has_completed_focus = KIR_focus_8g
+						has_completed_focus = KIR_focus_9b
+					}
+					OR = {
+						has_completed_focus = KIR_focus_4a
+						has_completed_focus = KIR_focus_5c
+					}
+				}
+				random_list = {
+					1 = {
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						set_country_flag = KIR_crisis_20_flag
+						country_event = { id = kirin_crisis.20 days = 14 random_days = 14 }
+					}
+					3 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = KIR_crisis_21_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3d
+					has_completed_focus = KIR_focus_3e
+				}
+				random_list = {
+					1 = {
+						set_country_flag = KIR_crisis_21_flag
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						country_event = { id = kirin_crisis.21 days = 14 random_days = 14 }
+					}
+					3 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = KIR_crisis_22_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_monthly_crisis_quota_filled
+					}
+					has_completed_focus = KIR_focus_3c
+					has_completed_focus = KIR_focus_3d
+					has_completed_focus = KIR_focus_3e
+					has_country_flag = KIR_crisis_21_flag
+				}
+				random_list = {
+					1 = {
+						set_country_flag = KIR_crisis_22_flag
+						set_country_flag = { flag = KIR_monthly_crisis_quota_filled value = 1 days = 7 }
+						country_event = { id = kirin_crisis.22 days = 14 random_days = 14 }
+					}
+					3 = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = KIR_great_leap_begun
+					NOT = {
+						has_country_flag = KIR_bipartite_war_started_flag
+						has_country_flag = KIR_has_completed_three_and_half_year_plan
+						has_country_flag = KIR_great_leap_timer_countdown
+						has_country_flag = KIR_great_leap_over
+					}
+				}
+				set_country_flag = KIR_great_leap_over
+				country_event = { id = kirin.30 }
+			}
+		}
+	}
+
+	on_weekly_KIR = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_KIR"
+			if = {
+				limit = {
+					has_idea = KIR_modernisation_exclamation_mark2
+				}
+				every_controlled_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_manpower = 300
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = KIR_focus_8e
+					check_variable = { KIR_focus_8e_event_tries_var < 4 } ##4 weeks where it might trigger
+				}
+				add_to_variable = { KIR_focus_8e_event_tries_var = 1 }
+				random_list = {
+					1 = {
+						modifier = {
+							factor = 1.5
+							has_stability < 0.3
+						}
+						country_event = { id = kirin.15 days = 1 random_days = 14 }
+						add_to_variable = { KIR_focus_8e_event_tries_var = 10 }
+					}
+					1 = {
+						modifier = {
+							factor = 1.5
+							has_stability > 0.5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_weekly_KIS = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_KIS"
+			if = {
+				limit = {
+					has_country_flag = KIS_unlocked_treasury
+				}
+				############################
+				## Predict Monthly Income ##
+				############################
+				set_variable = { var = KISTreasuryIncomeFC value = KIS.num_of_civilian_factories }
+				multiply_variable = { var = KISTreasuryIncomeFC value = KISTreasuryIncomePerFC }
+				set_variable = { var = KISTreasuryIncomeFM value = KIS.num_of_military_factories }
+				multiply_variable = { var = KISTreasuryIncomeFM value = KISTreasuryIncomePerFM }
+				set_variable = { var = KISTreasuryIncomeFD value = KIS.num_of_naval_factories }
+				multiply_variable = { var = KISTreasuryIncomeFD value = KISTreasuryIncomePerFD }
+				set_variable = { var = TreasuryIncomePredicted value = 0 }
+				add_to_variable = { var = TreasuryIncomePredicted value = KISTreasuryIncomeFC }
+				add_to_variable = { var = TreasuryIncomePredicted value = KISTreasuryIncomeFM }
+				add_to_variable = { var = TreasuryIncomePredicted value = KISTreasuryIncomeFD }
+				#######################
+				## Figure out Prices ##
+				#######################
+				KIS_treasury_figure_out_prices = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = KIS_unlocked_treasury
+					check_variable = { KIS.TreasuryDebt > 999 }
+				}
+				set_variable = { var = KIS_treasury_debt_PP_var_TEMP value = KIS.TreasuryDebt }
+				divide_variable = { var = KIS_treasury_debt_PP_var_TEMP value = KIS_treasury_debt_PP_RATIO_var }
+				set_variable = { var = KIS_treasury_debt_PP_var value = 0 }
+				subtract_from_variable = { var = KIS_treasury_debt_PP_var value = KIS_treasury_debt_PP_var_TEMP }
+				set_variable = { var = KIS_treasury_debt_consumer_goods_var value = KIS.TreasuryDebt }
+				divide_variable = { var = KIS_treasury_debt_consumer_goods_var value = KIS_treasury_debt_consumer_goods_RATIO_var }
+				add_dynamic_modifier = { modifier = KIS_treasury_debt_modifier }
+			}
+			if = {
+				limit = {
+					has_country_flag = KIS_northern_compact_plebiscite_begun
+				}
+				KIS_plebiscite_calculate_average_popular_support = yes
+			}
+		}
+	}
 }

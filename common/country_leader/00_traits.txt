@@ -2670,8 +2670,6 @@ leader_traits = {
 		drift_defence_factor = 0.15
 	}
 
-	###
-
 	council_of_theorists = {
 		experience_gain_army = 0.02
 		experience_gain_air = 0.02
@@ -2699,7 +2697,6 @@ leader_traits = {
 		}
 	}
 
-	
 	mobile_warfare_expert = {
 		experience_gain_army = 0.05
 		

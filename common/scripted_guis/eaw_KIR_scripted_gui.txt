@@ -1,0 +1,660 @@
+scripted_gui = {
+	
+	KIR_diary_SG_trigger = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+			}
+		}
+		
+		window_name = "KIR_diary_SG_trigger_window"
+		
+		effects = {
+			KIR_diary_SG_trigger_button_click = {
+				set_country_flag = KIR_toggled_diary_SG
+				KIR_diary_SG_RESET_FRAMES = yes
+				set_variable = { protagonist_1_frame = 1 }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_diary_SG = {
+		context_type = player_context
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+				has_country_flag = KIR_toggled_diary_SG
+			}
+		}
+		
+		window_name = "KIR_diary_SG_window"
+		
+		dirty = KIR_diary_SG_DIRTY
+		
+		properties = {
+			KIR_diary_SG_protag_1_button = {
+				frame = protagonist_1_frame
+			}
+			KIR_diary_SG_protag_2_button = {
+				frame = protagonist_2_frame
+			}
+			KIR_diary_SG_protag_3_button = {
+				frame = protagonist_3_frame
+			}
+			KIR_diary_SG_protag_4_button = {
+				frame = protagonist_4_frame
+			}
+			KIR_diary_SG_popup_toggle_button = {
+				frame = KIR_diary_SG_popup_toggle_button_frame
+			}
+		}
+		
+		triggers = {
+			KIR_diary_SG_protag_1_button_visible = {
+				NOT = {
+					has_country_flag = KIR_diary_SG_protag_1_UNAVAILABLE_flag
+				}
+			}
+			KIR_diary_SG_protag_2_button_visible = {
+				NOT = {
+					has_country_flag = KIR_diary_SG_protag_2_UNAVAILABLE_flag
+				}
+			}
+			KIR_diary_SG_protag_3_button_visible = {
+				NOT = {
+					has_country_flag = KIR_diary_SG_protag_3_UNAVAILABLE_flag
+				}
+			}
+			KIR_diary_SG_protag_4_button_visible = {
+				NOT = {
+					has_country_flag = KIR_diary_SG_protag_4_UNAVAILABLE_flag
+				}
+			}
+		}
+		
+		effects = {
+			KIR_diary_SG_protag_1_button_click = {
+				KIR_diary_SG_protag_1_button_click_effect = yes
+			}
+			KIR_diary_SG_protag_2_button_click = {
+				KIR_diary_SG_protag_2_button_click_effect = yes
+			}
+			KIR_diary_SG_protag_3_button_click = {
+				KIR_diary_SG_protag_3_button_click_effect = yes
+			}
+			KIR_diary_SG_protag_4_button_click = {
+				KIR_diary_SG_protag_4_button_click_effect = yes
+			}
+			KIR_diary_SG_popup_toggle_button_click = {
+				if = {
+					limit = {
+						has_country_flag = KIR_diary_SG_popup_toggle_YES
+					}
+					clr_country_flag = KIR_diary_SG_popup_toggle_YES
+					set_variable = { KIR_diary_SG_popup_toggle_button_frame = 1 }
+					add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = KIR_diary_SG_popup_toggle_YES }
+					}
+					set_country_flag = KIR_diary_SG_popup_toggle_YES
+					set_variable = { KIR_diary_SG_popup_toggle_button_frame = 2 }
+					add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+				}
+			}
+			KIR_diary_SG_ESC_click = {
+				KIR_diary_SG_RESET_FRAMES = yes
+				clr_country_flag = KIR_toggled_diary_SG
+				set_variable = { KIR_diary_SG_entry_var = 0 }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_diary_SG_protag_1 = {
+		context_type = player_context
+		parent_window_name = "KIR_diary_SG_window"
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+				has_country_flag = KIR_toggled_diary_SG
+				check_variable = { protagonist_1_frame = 1 }
+			}
+		}
+		
+		window_name = "KIR_diary_SG_protag_1_window"
+		
+		dirty = KIR_diary_SG_DIRTY
+		
+		triggers = {
+			KIR_diary_SG_protag_1_entry_1_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 0 }
+			}
+			KIR_diary_SG_protag_1_entry_2_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 1 }
+			}
+			KIR_diary_SG_protag_1_entry_3_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 2 }
+			}
+			KIR_diary_SG_protag_1_entry_4_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 3 }
+			}
+			KIR_diary_SG_protag_1_entry_5_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 4 }
+			}
+			KIR_diary_SG_protag_1_entry_6_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 5 }
+			}
+			KIR_diary_SG_protag_1_entry_7_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 6 }
+			}
+			KIR_diary_SG_protag_1_entry_8_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 7 }
+			}
+			KIR_diary_SG_protag_1_entry_9_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 8 }
+			}
+			KIR_diary_SG_protag_1_entry_10_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 9 }
+			}
+			KIR_diary_SG_protag_1_entry_11_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 10 }
+			}
+			KIR_diary_SG_protag_1_entry_12_button_visible = {
+				check_variable = { KIR_diary_SG_protag_1_button_var > 11 }
+			}
+		}
+		
+		effects = {
+			KIR_diary_SG_protag_1_entry_1_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_1_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_2_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_2_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_3_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_3_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_4_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_4_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_5_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_5_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_6_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_6_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_7_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_7_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_8_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_8_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_9_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_9_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_10_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_10_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_11_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_11_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_1_entry_12_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_1_entry_12_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_diary_SG_protag_2 = {
+		context_type = player_context
+		parent_window_name = "KIR_diary_SG_window"
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+				has_country_flag = KIR_toggled_diary_SG
+				check_variable = { protagonist_2_frame = 1 }
+			}
+		}
+		
+		window_name = "KIR_diary_SG_protag_2_window"
+		
+		dirty = KIR_diary_SG_DIRTY
+		
+		triggers = {
+			KIR_diary_SG_protag_2_entry_1_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 0 }
+			}
+			KIR_diary_SG_protag_2_entry_2_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 1 }
+			}
+			KIR_diary_SG_protag_2_entry_3_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 2 }
+			}
+			KIR_diary_SG_protag_2_entry_4_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 3 }
+			}
+			KIR_diary_SG_protag_2_entry_5_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 4 }
+			}
+			KIR_diary_SG_protag_2_entry_6_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 5 }
+			}
+			KIR_diary_SG_protag_2_entry_7_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 6 }
+			}
+			KIR_diary_SG_protag_2_entry_8_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 7 }
+			}
+			KIR_diary_SG_protag_2_entry_9_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 8 }
+			}
+			KIR_diary_SG_protag_2_entry_10_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 9 }
+			}
+			KIR_diary_SG_protag_2_entry_11_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 10 }
+			}
+			KIR_diary_SG_protag_2_entry_12_button_visible = {
+				check_variable = { KIR_diary_SG_protag_2_button_var > 11 }
+			}
+		}
+		
+		effects = {
+			KIR_diary_SG_protag_2_entry_1_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_1_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_2_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_2_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_3_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_3_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_4_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_4_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_5_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_5_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_6_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_6_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_7_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_7_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_8_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_8_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_9_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_9_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_10_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_10_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_11_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_11_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_2_entry_12_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_2_entry_12_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_diary_SG_protag_3 = {
+		context_type = player_context
+		parent_window_name = "KIR_diary_SG_window"
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+				has_country_flag = KIR_toggled_diary_SG
+				check_variable = { protagonist_3_frame = 1 }
+			}
+		}
+		
+		window_name = "KIR_diary_SG_protag_3_window"
+		
+		dirty = KIR_diary_SG_DIRTY
+		
+		triggers = {
+			KIR_diary_SG_protag_3_entry_1_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 0 }
+			}
+			KIR_diary_SG_protag_3_entry_2_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 1 }
+			}
+			KIR_diary_SG_protag_3_entry_3_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 2 }
+			}
+			KIR_diary_SG_protag_3_entry_4_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 3 }
+			}
+			KIR_diary_SG_protag_3_entry_5_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 4 }
+			}
+			KIR_diary_SG_protag_3_entry_6_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 5 }
+			}
+			KIR_diary_SG_protag_3_entry_7_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 6 }
+			}
+			KIR_diary_SG_protag_3_entry_8_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 7 }
+			}
+			KIR_diary_SG_protag_3_entry_9_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 8 }
+			}
+			KIR_diary_SG_protag_3_entry_10_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 9 }
+			}
+			KIR_diary_SG_protag_3_entry_11_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 10 }
+			}
+			KIR_diary_SG_protag_3_entry_12_button_visible = {
+				check_variable = { KIR_diary_SG_protag_3_button_var > 11 }
+			}
+		}
+		
+		effects = {
+			KIR_diary_SG_protag_3_entry_1_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_1_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_2_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_2_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_3_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_3_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_4_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_4_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_5_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_5_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_6_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_6_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_7_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_7_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_8_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_8_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_9_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_9_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_10_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_10_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_11_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_11_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_3_entry_12_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_3_entry_12_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_diary_SG_protag_4 = {
+		context_type = player_context
+		parent_window_name = "KIR_diary_SG_window"
+		
+		visible = {
+			ROOT = {
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				}
+				has_country_flag = KIR_toggled_diary_SG
+				check_variable = { protagonist_4_frame = 1 }
+			}
+		}
+		
+		window_name = "KIR_diary_SG_protag_4_window"
+		
+		dirty = KIR_diary_SG_DIRTY
+		
+		triggers = {
+			KIR_diary_SG_protag_4_entry_1_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 0 }
+			}
+			KIR_diary_SG_protag_4_entry_2_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 1 }
+			}
+			KIR_diary_SG_protag_4_entry_3_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 2 }
+			}
+			KIR_diary_SG_protag_4_entry_4_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 3 }
+			}
+			KIR_diary_SG_protag_4_entry_5_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 4 }
+			}
+			KIR_diary_SG_protag_4_entry_6_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 5 }
+			}
+			KIR_diary_SG_protag_4_entry_7_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 6 }
+			}
+			KIR_diary_SG_protag_4_entry_8_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 7 }
+			}
+			KIR_diary_SG_protag_4_entry_9_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 8 }
+			}
+			KIR_diary_SG_protag_4_entry_10_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 9 }
+			}
+			KIR_diary_SG_protag_4_entry_11_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 10 }
+			}
+			KIR_diary_SG_protag_4_entry_12_button_visible = {
+				check_variable = { KIR_diary_SG_protag_4_button_var > 11 }
+			}
+		}
+		
+		effects = {
+			KIR_diary_SG_protag_4_entry_1_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_1_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_2_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_2_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_3_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_3_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_4_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_4_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_5_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_5_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_6_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_6_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_7_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_7_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_8_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_8_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_9_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_9_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_10_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_10_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_11_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_11_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+			KIR_diary_SG_protag_4_entry_12_button_click = {
+				set_variable = { KIR_diary_SG_entry_var = KIR_diary_SG_protag_4_entry_12_var }
+				add_to_variable = { KIR_diary_SG_DIRTY = 1 }
+			}
+		}
+	}
+	
+	KIR_great_leap_decision_image = {
+		context_type = decision_category
+		parent_window_token = decision_tab
+		
+		visible = {
+			ROOT = {
+				original_tag = KIR
+				has_completed_focus = KIR_focus_3b
+			}
+		}
+		
+		window_name = "KIR_great_leap_decision_window"
+	}
+	
+	KIS_nakp_treasury_image = {
+		context_type = decision_category
+		parent_window_token = decision_tab
+		
+		visible = {
+			ROOT = {
+				original_tag = KIS
+				has_country_flag = KIS_unlocked_treasury
+			}
+		}
+		
+		window_name = "KIS_nakp_treasury_window"
+		
+		triggers = {
+			KIS_nakp_treasury_current_balance_gold_coin_visible = {
+				check_variable = { KIS.TreasuryWealth > 0 }
+				NOT = { check_variable = { KIS.TreasuryWealth = 0 } }
+			}
+			KIS_nakp_treasury_current_balance_background_visible = {
+				check_variable = { KIS.TreasuryWealth > 0 }
+				NOT = { check_variable = { KIS.TreasuryWealth = 0 } }
+			}
+			KIS_nakp_treasury_current_balance_coins_amount_visible = {
+				check_variable = { KIS.TreasuryWealth > 0 }
+				NOT = { check_variable = { KIS.TreasuryWealth = 0 } }
+			}
+			
+			KIS_nakp_treasury_debt_balance_gold_coin_visible = {
+				check_variable = { KIS.TreasuryDebt > 0 }
+				NOT = { check_variable = { KIS.TreasuryDebt = 0 } }
+			}
+			KIS_nakp_treasury_debt_balance_background_visible = {
+				check_variable = { KIS.TreasuryDebt > 0 }
+				NOT = { check_variable = { KIS.TreasuryDebt = 0 } }
+			}
+			KIS_nakp_treasury_debt_balance_debt_amount_visible = {
+				check_variable = { KIS.TreasuryDebt > 0 }
+				NOT = { check_variable = { KIS.TreasuryDebt = 0 } }
+			}
+			
+			KIS_nakp_treasury_last_month_income_coin_visible = {
+				check_variable = { KIS.TreasuryIncome > 0 }
+				NOT = { check_variable = { KIS.TreasuryIncome = 0 } }
+			}
+			KIS_nakp_treasury_last_month_income_background_visible = {
+				check_variable = { KIS.TreasuryIncome > 0 }
+				NOT = { check_variable = { KIS.TreasuryIncome = 0 } }
+			}
+			KIS_nakp_treasury_last_month_income_income_amount_visible = {
+				check_variable = { KIS.TreasuryIncome > 0 }
+				NOT = { check_variable = { KIS.TreasuryIncome = 0 } }
+			}
+		}
+	}
+	
+	KIS_plebiscite_progress_bar_GUI = {
+		context_type = decision_category
+		parent_window_token = decision_tab
+		
+		visible = {
+			ROOT = {
+				original_tag = KIS
+				has_country_flag = KIS_northern_compact_plebiscite_begun
+			}
+		}
+		
+		window_name = "KIS_plebiscite_progress_bar_GUI_window"
+
+		properties = {
+			KIS_plebiscite_progress_bar = {
+				frame = KIS.KIS_plebiscite_average_popular_support
+			}
+		}
+	}
+}

@@ -441,6 +441,11 @@ on_actions = {
 					add_ideas = diamond_dog_race
 				}
 				else_if = {
+					limit = { is_kirin_race = yes }
+					add_ideas = kirin_race
+					set_technology = { popup = no tech_kirin_nirik = 1 }
+				}
+				else_if = {
 					limit = { is_donkey_race = yes }
 					add_ideas = donkey_race
 				}
@@ -1013,6 +1018,11 @@ on_actions = {
 					}
 				}
 			}
+			KIR = {
+				remove_ideas = { KIR_the_silence_dummy }
+				add_offsite_building = { type = industrial_complex level = 2 }
+				country_event = { id = kirin.34 days = 365 }
+			}
 			# this extra loop is intentional
 			# adjust_research_modifier needs to be fired again after force_update_dynamic_modifier for the value to work correctly
 			# first loop is above, in every_country
@@ -1023,7 +1033,6 @@ on_actions = {
 			}
 			log = "[GetDateText] Equestria at War main on_startup end"
 		}
-		
 	}
 
 	#FROM is war target
@@ -2518,6 +2527,55 @@ on_actions = {
 					annex_country = { target = ROOT  }
 				}
 			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = NVA }
+				}
+				ROOT = { set_cosmetic_tag = NVA_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = ZOO }
+				}
+				ROOT = { set_cosmetic_tag = ZOO_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = ROA }
+				}
+				ROOT = { set_cosmetic_tag = ROA_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = KXN }
+				}
+				ROOT = { set_cosmetic_tag = KXN_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = YAN }
+				}
+				ROOT = { set_cosmetic_tag = YAN_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = DEL }
+				}
+				ROOT = { set_cosmetic_tag = DEL_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = GFS }
+				}
+				ROOT = { set_cosmetic_tag = GFS_KIR }
+			}
 
 			FROM = { ROOT = { apply_cosmetic_tags_on_puppet_PREV_is_overlord = yes } }
 		}
@@ -2874,6 +2932,64 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = NVA }
+				}
+				ROOT = { set_cosmetic_tag = NVA_KIR }
+				if = {
+					limit = {
+						ROOT = {
+							has_full_control_of_state = 1058
+						}
+					}
+					FROM = { transfer_state = 1058 }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = ZOO }
+				}
+				ROOT = { set_cosmetic_tag = ZOO_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = ROA }
+				}
+				ROOT = { set_cosmetic_tag = ROA_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = KXN }
+				}
+				ROOT = { set_cosmetic_tag = KXN_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = YAN }
+				}
+				ROOT = { set_cosmetic_tag = YAN_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = DEL }
+				}
+				ROOT = { set_cosmetic_tag = DEL_KIR }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = KIR }
+					ROOT = { original_tag = GFS }
+				}
+				ROOT = { set_cosmetic_tag = GFS_KIR }
+			}
+
 
 			FROM = { ROOT = { apply_cosmetic_tags_on_puppet_PREV_is_overlord = yes } }
 

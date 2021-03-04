@@ -1,0 +1,788 @@
+ideas = {
+	hidden_ideas = {
+		KIR_crisis_1_mission_modifier_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		KIR_crisis_2_mission_modifier_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				mobilization_speed = -0.2
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		KIR_crisis_3_mission_modifier_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+		KIR_crisis_4_mission_modifier_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				drift_defence_factor = -0.1
+				communism_drift = 0.05
+			}
+		}
+		KIR_crisis_5_mission_modifier_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly = -0.002
+			}
+		}
+	}
+	
+	country = {
+		KIR_the_silence_dummy = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_silence
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.4 
+				research_speed_factor = -0.2 
+				conscription_factor = -0.4 
+				political_advisor_cost_factor = 0.5 
+				enemy_justify_war_goal_time = 1
+				military_leader_cost_factor = 0.5 
+				training_time_factor = 0.4
+				planning_speed = -0.5 
+				experience_gain_army_factor = -0.5 
+				minimum_training_level = 0.2 
+				industrial_capacity_factory = -0.2
+				attrition = 0.2
+				global_building_slots_factor = -0.4
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				MONTHLY_POPULATION = -0.2 
+				army_org_factor = -0.5
+				political_power_factor = -0.4
+			}
+		}
+		KIR_equestrian_treaty = {
+			allowed = {
+				always = no
+			}
+			picture = equestrian_treaty
+			available = {
+				EQS = {
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = KIR }
+				}
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = EQS
+				trade_cost_for_target_factor = -0.1
+			}
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				custom_modifier_tooltip = KIR_equestrian_treaty_2_offmap_civ_factories
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -2 }
+				}
+			}
+		}
+		KIR_equestrian_treaty1 = {
+			allowed = {
+				always = no
+			}
+			picture = equestrian_treaty
+			name = KIR_equestrian_treaty
+			available = {
+				EQS = {
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = KIR }
+				}
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = EQS
+				trade_cost_for_target_factor = -0.25
+			}
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				custom_modifier_tooltip = KIR_equestrian_treaty_5_offmap_civ_factories
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -5 }
+				}
+			}
+		}
+		KIR_modernisation_exclamation_mark = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_rushing_train
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		KIR_modernisation_exclamation_mark1 = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_rushing_train
+			name = KIR_modernisation_exclamation_mark
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				custom_modifier_tooltip = KIR_modernisation_3_offmap_civ_factories
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -3 }
+				}
+			}
+		}
+		KIR_modernisation_exclamation_mark2 = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_rushing_train
+			name = KIR_modernisation_exclamation_mark
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				custom_modifier_tooltip = KIR_modernisation_3_offmap_civ_factories_AND_fragrance_immigration
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -3 }
+				}
+			}
+		}
+		KIR_modernisation_exclamation_mark3 = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_rushing_train
+			name = KIR_modernisation_exclamation_mark
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				custom_modifier_tooltip = KIR_modernisation_5_offmap_civ_factories_AND_fragrance_immigration
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -5 }
+				}
+			}
+		}
+		KIR_way_of_fire = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.05
+				stability_factor = 0.05
+				defensive_war_stability_factor = 0.25
+				offensive_war_stability_factor = -0.25
+				drift_defence_factor = 0.1
+				justify_war_goal_time = 0.25	
+				research_speed_factor = -0.25
+			}
+		}
+		KIR_way_of_fire1 = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_way_of_fire
+			name = KIR_way_of_fire
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				defensive_war_stability_factor = 0.1
+				offensive_war_stability_factor = -0.1
+				justify_war_goal_time = 0.1
+				research_speed_factor = -0.05
+			}
+		}
+		KIR_way_of_fire2 = {
+			allowed = {
+				always = no
+			}
+			picture = KIR_way_of_fire
+			name = KIR_way_of_fire
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.05
+				stability_factor = 0.05
+				defensive_war_stability_factor = 0.2
+				offensive_war_stability_factor = -0.1
+				research_speed_factor = -0.1
+				communism_drift = 0.05
+			}
+		}
+		KIR_failed_industrialisation_idea = {
+			allowed = {
+				always = no
+			}
+			picture = factories_burning_idea
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.25
+				research_speed_factor = -0.25
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				local_resources_factor = -0.1
+				MONTHLY_POPULATION = -0.4
+				political_power_factor = -0.15
+			}
+		}
+		KIR_civil_war = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 1000
+				MONTHLY_POPULATION = -0.25
+				stability_factor = -0.10
+				industry_repair_factor = -0.1
+				conscription_factor = 0.15
+				army_core_defence_factor = 0.05
+				training_time_factor = -0.25
+			}
+		}
+		KIR_rising_fire = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.05
+				surrender_limit = 0.1
+				communism_drift = 0.1
+				defensive_war_stability_factor = 0.1
+				offensive_war_stability_factor = 0.1
+				research_speed_factor = -0.1
+				land_reinforce_rate = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		KIR_NAKP = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.05
+				fascism_drift = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				political_power_factor = -0.1
+			}
+		}
+		KIR_split_government = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = -0.05
+				political_power_factor = -0.1
+				land_reinforce_rate = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		KIR_sunrise_massacre_memory = { ##should be replaced/upgraded later on in their respective focus trees
+			picture = KIR_conflict
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			targeted_modifier = { tag = KIR attack_bonus_against = 0.05 }
+			modifier = {
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		KIR_right_uprising = {
+			picture = KIR_arty_forwards
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				offensive_war_stability_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+				minimum_training_level = -0.05
+				resistance_growth_on_our_occupied_states = 0.05
+				resistance_decay_on_our_occupied_states = -0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+
+	political_advisor = {
+		KIR_pol_1 = {
+			picture = KIR_idea_autumn_blaze
+			allowed = {
+				original_tag = KIR
+			}
+			available = {
+				has_country_flag = KIR_pol_1_available
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					has_country_flag = KIR_pol_1_removable
+				}
+			}
+			traits = { KIR_optimistic_reformer }
+		}
+		
+		KIR_pol_2 = {
+			picture = KIR_idea_fickle_current
+			allowed = {
+				original_tag = KIR
+			}
+			available = {
+				has_country_flag = KIR_pol_2_available
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					has_country_flag = KIR_pol_2_removable
+				}
+			}
+			traits = { KIR_bourgeois_modernizer }
+		}
+		
+		KIR_pol_3 = {
+			picture = KIR_idea_winter_frost
+			allowed = {
+				original_tag = KIR
+			}
+			available = {
+				has_country_flag = KIR_pol_3_available
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					has_country_flag = KIR_pol_3_removable
+				}
+			}
+			traits = { KIR_traditional_mystic }
+		}
+		
+		KIR_pol_4 = {
+			picture = KIR_idea_rising_sun
+			allowed = {
+				original_tag = KIR
+			}
+			available = {
+				has_country_flag = KIR_pol_4_available
+			}
+			traits = { KIR_spiritual_communalist }
+		}
+		KIR_pol_5 = {
+			picture = KIR_idea_cypress_snow
+			allowed = {
+				original_tag = KIR
+			}
+			available = {
+				has_country_flag = KIR_pol_5_available
+			}
+
+			traits = { KIR_literati_figurehead }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		KIR_pol_6 = {
+			picture = KIR_idea_roaring_fire
+			allowed = {
+				original_tag = KIR
+			}
+			visible = {
+				has_country_flag = KIR_pol_6_available
+			}
+
+			traits = { KIR_pirate_queen }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		KIR_pol_7 = {
+			picture = KIR_idea_ember_wane
+			allowed = {
+				original_tag = KIR
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			visible = {
+				has_country_flag = KIR_pol_7_available
+			}
+
+			traits = { KIR_birdkeeper }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		KIR_pol_7_lar = {
+			picture = KIR_idea_ember_wane
+			name = KIR_pol_7
+			allowed = {
+				original_tag = KIR
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				has_country_flag = KIR_pol_7_available
+			}
+
+			traits = { KIR_birdkeeper_lar }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	army_chief = {
+	
+	}
+
+	air_chief = {
+	
+	}
+
+	navy_chief = {
+	
+	}
+
+	high_command = {
+	
+	}
+
+	theorist = {
+		KIR_collegium = {
+			ledger = army
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_collegium_available
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+
+			traits = { research_center }
+		}
+		KIR_massicot_academy = {
+			ledger = army
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_massicot_academy_available
+			}
+
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+
+			traits = { military_academy }
+		}
+	}
+
+
+	tank_manufacturer = {
+		designer = yes
+		
+		KIR_armour_bureau = {
+			allowed = {
+				original_tag = KIR
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+
+			available = {
+				has_country_flag = KIR_armour_bureau_available
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { fast_tank_manufacturer }
+		}
+		
+		KIR_armour_bureau_LaR = {
+			picture = KIR_armour_bureau
+			allowed = {
+				original_tag = KIR
+				has_dlc = "La Resistance"
+			}
+
+			available = {
+				has_country_flag = KIR_armour_bureau_available
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { armored_car_manufacturer }
+		}
+		
+		KIR_cog_plow_bull_co = {
+			allowed = {
+				original_tag = KIR
+				has_dlc = "La Resistance"
+			}
+
+			available = {
+				has_country_flag = KIR_cog_plow_bull_co_available
+			}
+
+			research_bonus = {
+				armor = 0.1
+			}
+
+			traits = { heavy_tank_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+		
+		KIR_rhapsody_arsenal = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_rhapsody_arsenal_available
+				1060 = { is_controlled_by = ROOT }
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.10
+				artillery = 0.10
+			}
+
+			traits = { infantry_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+		
+		KIR_motor_bureau = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_motor_bureau_available
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.10
+				mot_rockets = 0.50
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+		designer = yes
+		
+		KIR_sycee_trading_house = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_sycee_trading_house_available
+			}
+
+			traits = { KIR_merchant_bank }
+
+			modifier = {
+			}
+		}
+		
+		KIR_artificer_guild = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_artificer_guild_available
+			}
+
+			research_bonus = {
+				electronics = 0.10
+			}
+
+			traits = { electronics_concern }
+
+			modifier = {
+			}
+		}
+		
+		KIR_sorghum_foundry = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				1069 = { is_controlled_by = ROOT }
+			}
+			
+			research_bonus = {
+				industry = 0.10
+			}
+
+			traits = { industrial_concern }
+
+			modifier = {
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+		
+		KIR_crane_heavy_industries = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_crane_heavy_industries_available
+			}
+
+			research_bonus = {
+				air_equipment = 0.10
+			}
+
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		KIR_wingluck_consortium = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_wingluck_consortium_available
+			}
+
+			research_bonus = {
+				air_equipment = 0.10
+			}
+
+			traits = { heavy_aircraft_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+		
+		KIR_fragrance_shipyards = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				1071 = { is_controlled_by = ROOT }
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+
+			traits = { pacific_fleet_naval_manufacturer }
+
+			modifier = {
+			}
+		}
+		
+		KIR_dreamboat = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_dreamboat_available
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+
+			traits = { battlefleet_designer }
+
+			modifier = {
+			}
+		}
+		
+		KIR_scarlet_sails_shipyards = {
+			allowed = {
+				original_tag = KIR
+			}
+
+			available = {
+				has_country_flag = KIR_scarlet_sails_shipyards_available
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+
+			traits = { raiding_fleet_naval_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+}

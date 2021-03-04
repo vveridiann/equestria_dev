@@ -1,0 +1,40 @@
+KIR_great_leap_forward_category = {
+	icon = kiria_category_icon
+	allowed = {
+		original_tag = KIR
+	}
+	visible = {
+		has_completed_focus = KIR_focus_3b
+	}
+	scripted_gui = KIR_great_leap_decision_image
+	priority = {
+		base = 200
+	}
+}
+KIR_nakp_treasury_category = {
+	icon = generic_economy
+	allowed = {
+		original_tag = KIS
+	}
+	visible = {
+		has_country_flag = KIS_unlocked_treasury
+	}
+	visible_when_empty = yes
+	scripted_gui = KIS_nakp_treasury_image
+	priority = {
+		base = 222
+	}
+}
+KIS_northern_compact_plebiscite_category = {
+	icon = eaw_vote
+	allowed = {
+		original_tag = KIS
+	}
+	visible = {
+		has_completed_focus = KIR_council_focus_3a
+	}
+	scripted_gui = KIS_plebiscite_progress_bar_GUI
+	priority = {
+		base = 200
+	}
+}
