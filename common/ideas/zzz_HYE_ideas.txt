@@ -336,6 +336,14 @@ ideas = {
 				conscription_factor = 0.1
 			}
 		}
+		HYE_patriotic_burden2 = {
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_factor = -0.6
+				stability_factor = -0.2
+				conscription_factor = 0.1
+			}
+		}
 		HYE_yeti_laws_a = {
 			picture = anti_soviet_pact
 			modifier = {

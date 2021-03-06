@@ -3095,6 +3095,7 @@ shared_focus = {
 			uses = 1
 			category = land_doctrine
 		}
+		decrease_illiteracy = yes
 	}
 }
 
@@ -4211,10 +4212,18 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		swap_ideas = {
-			remove_idea = zebrica_legacy_of_storm1
-			add_idea = HYE_patriotic_burden
+		if = {
+			limit = {
+				has_idea = zebrica_legacy_of_storm1
+			}
+			swap_ideas = {
+				remove_idea = zebrica_legacy_of_storm1
+				add_idea = HYE_patriotic_burden
+			}
 		}
+		else = {
+			decrease_storm_king = yes
+		}		
 	}
 }
 
@@ -5017,7 +5026,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_sct_lands
 	icon = GFX_goal_artillery
-	x = -4
+	x = -6
 	y = 1
 	cost = 8
 	ai_will_do = {
@@ -5033,6 +5042,198 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		every_owned_state = {
+			limit = {
+				industrial_complex > 0
+				is_core_of = SCT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = industrial_complex_level
+			}
+			remove_building = {
+				type = industrial_complex
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = industrial_complex
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				arms_factory > 0
+				is_core_of = SCT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = arms_factory_level
+			}
+			remove_building = {
+				type = arms_factory
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = arms_factory
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		increase_society_development_gradual = yes
+	}
+}
+
+shared_focus = {
+	id = HYE_cokolwiek
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_sct_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek2
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_cokolwiek
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek3
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_cokolwiek2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek4
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_sct_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry
+			bonus =1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek5
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_cokolwiek4
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek6
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_cokolwiek5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek6
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_sct_lands
+	prerequisite = {
+		focus = HYE_cokolwiek6
+		focus = HYE_cokolwiek3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_poverty = yes
 	}
 }
 
@@ -5057,9 +5258,211 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		every_owned_state = {
+			limit = {
+				industrial_complex > 0
+				is_core_of = CST
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = industrial_complex_level
+			}
+			remove_building = {
+				type = industrial_complex
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = industrial_complex
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				arms_factory > 0
+				is_core_of = CST
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = arms_factory_level
+			}
+			remove_building = {
+				type = arms_factory
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = arms_factory
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		increase_society_development_gradual = yes
 	}
 }
-
+shared_focus = {
+	id = HYE_cokolwiek11
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cst_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek12
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cokolwiek11
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek13
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cokolwiek12
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek14
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cst_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek15
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	available = {
+		owns_state = 1033
+	}
+	prerequisite = {
+		focus = HYE_cokolwiek14
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_resource = {
+			type = steel
+			amount = 17
+			state = 1033
+		}
+		add_resource = {
+			type = tungsten
+			amount = 14
+			state = 1033
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek16
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cokolwiek15
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry
+			bonus =1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek16
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cst_lands
+	prerequisite = {
+		focus = HYE_cokolwiek16
+		focus = HYE_cokolwiek13
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
 shared_focus = {
 	id = HYE_cam_lands
 	icon = GFX_goal_artillery
@@ -5083,13 +5486,215 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		every_owned_state = {
+			limit = {
+				industrial_complex > 0
+				is_core_of = CAM
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = industrial_complex_level
+			}
+			remove_building = {
+				type = industrial_complex
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = industrial_complex
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				arms_factory > 0
+				is_core_of = CAM
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = arms_factory_level
+			}
+			remove_building = {
+				type = arms_factory
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = arms_factory
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		increase_society_development_gradual = yes
 	}
 }
-
+shared_focus = {
+	id = HYE_cokolwiek21
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cam_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek22
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cokolwiek21
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek23
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cokolwiek22
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek24
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cam_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek25
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cokolwiek24
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industry
+			bonus =1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek26
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cokolwiek25
+	}
+	available = {
+		owns_state = 978
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_resource = {
+			type = chromium
+			amount = 14
+			state = 978
+		}
+		add_resource = {
+			type = steel
+			amount = 8
+			state = 978
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek26
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_cam_lands
+	prerequisite = {
+		focus = HYE_cokolwiek26
+		focus = HYE_cokolwiek23
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
 shared_focus = {
 	id = HYE_stm_lands
 	icon = GFX_goal_artillery
-	x = 4
+	x = 6
 	y = 1
 	cost = 8
 	ai_will_do = {
@@ -5107,14 +5712,222 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		every_owned_state = {
+			limit = {
+				industrial_complex > 0
+				is_core_of = STM
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = industrial_complex_level
+			}
+			remove_building = {
+				type = industrial_complex
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = industrial_complex
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				arms_factory > 0
+				is_core_of = STM
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			set_temp_variable = {
+				tmpCiv = arms_factory_level
+			}
+			remove_building = {
+				type = arms_factory
+				level = tmpCiv
+			}
+			ROOT = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HYE
+					}
+					prioritize = { 1040 }
+					add_building_construction = {
+						type = arms_factory
+						level = tmpCiv
+					}
+					add_extra_state_shared_building_slots = tmpCiv
+				}
+			}
+		}
+		increase_society_development_gradual = yes
 	}
 }
-
+shared_focus = {
+	id = HYE_cokolwiek31
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_stm_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek32
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_cokolwiek31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek33
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	available = {
+		owns_state = 983
+		owns_state = 982
+	}
+	prerequisite = {
+		focus = HYE_cokolwiek32
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_resource = {
+			type = oil
+			amount = 13
+			state = 983
+		}
+		add_resource = {
+			type = aluminium
+			amount = 8
+			state = 983
+		}
+		add_resource = {
+			type = tungsten
+			amount = 7
+			state = 982
+		}
+		add_resource = {
+			type = steel
+			amount = 12
+			state = 982
+		}
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek34
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_stm_lands
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek35
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_cokolwiek34
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek36
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_cokolwiek35
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+	}
+}
+shared_focus = {
+	id = HYE_cokolwiek37
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_stm_lands
+	prerequisite = {
+		focus = HYE_cokolwiek36
+		focus = HYE_cokolwiek33
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		HYE_poverty = yes
+	}
+}
 shared_focus = {
 	id = HYE_yeti_laws
 	icon = GFX_goal_artillery
 	x = 0
-	y = 2
+	y = 6
 	cost = 8
 	ai_will_do = {
 		factor = 10

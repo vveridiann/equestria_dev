@@ -65,6 +65,29 @@ ideas = {
 				conscription_factor = 0.15
 			}
 		}
+		HYE_hyenia_of_two_speeds = {
+			cost = -1
+			picture = poverty_generic
+			traits = { poverty_idea }
+			allowed = {
+				original_tag = HYE
+			}
+			visible = {
+				always = no
+			}
+			available = {
+				has_idea = FLO_poverty_virtue
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.04
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.025
+			}
+		}
 
 		poverty5 = {
 			cost = -1

@@ -2339,6 +2339,17 @@ decrease_storm_king = {
 		limit = { has_idea = zebrica_legacy_of_storm3 }
 		remove_ideas = zebrica_legacy_of_storm3
 	}
+	if = {
+		limit = { has_idea = HYE_patriotic_burden }
+		swap_ideas = {
+			remove_idea = HYE_patriotic_burden
+			add_idea = HYE_patriotic_burden2
+		}
+	}
+	else_if = {
+		limit = { has_idea = HYE_patriotic_burden2 }
+		remove_ideas = HYE_patriotic_burden2
+	}
 }
 
 remove_storm_king = {
