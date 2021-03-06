@@ -1,0 +1,22 @@
+HYE_operation_takeover_phase = {
+	name = HYE_operation_takeover_phase
+	desc = HYE_operation_takeover_desc
+	outcome = HYE_operation_takeover_outcome
+	picture = "GFX_phase_infiltration_diplomatic"
+	icon = "GFX_phase_infiltration_diplomatic_small"
+	
+	equipment = {
+
+	}
+}
+HYE_steal_weapons_phase = {
+	name = HYE_operation_takeover_phase
+	desc = HYE_operation_takeover_desc
+	outcome = HYE_operation_takeover_outcome
+	picture = "GFX_phase_infiltration_diplomatic"
+	icon = "GFX_phase_infiltration_diplomatic_small"
+	
+	equipment = {
+
+	}
+}

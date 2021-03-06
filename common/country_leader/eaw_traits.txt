@@ -3334,7 +3334,29 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		political_power_gain = -0.10
-		neutrality_drift = 0.02
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HYE_prodigal_son_resistance  = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = -0.10
+		operative_slot = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HYE_more_spies  = {
+		random = no
+		operative_slot = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HYE_more_spies2  = {
+		random = no
+		operative_slot = 1
 		ai_will_do = {
 			factor = 1
 		}

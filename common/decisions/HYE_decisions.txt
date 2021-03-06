@@ -737,7 +737,21 @@ HEY_massaska_bp_theft_cat = {
 				set_variable = { FROM.defender_state_vs_@ROOT = id }
 				set_temp_variable = { defender_state_temp = id }
 				owner = {
-					ROOT = { HYE_bp_steal_effect = yes }
+					ROOT = {
+						steal_random_tech_bonus = {
+							folder = electronics_folder
+							folder = industry_folder
+							folder = infantry_weapons
+							folder = artillery
+							folder = armor
+							bonus = 3.0
+							name = operation_steal_tech_civilian
+							target = FROM
+							dynamic = yes
+							instant = yes
+							uses = 1
+						}
+					}
 				}
 			}
 			clr_country_flag = stealing_blueprints
