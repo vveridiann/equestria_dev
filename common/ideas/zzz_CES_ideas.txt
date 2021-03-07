@@ -88,7 +88,7 @@ ideas = {
 			traits = { zebrican_mercenary_leader }
 
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 		}
 	}
@@ -111,6 +111,19 @@ ideas = {
 	}
 
 	navy_chief = {
+	
+		CES_navy_chief = {
+		
+			allowed = {
+				original_tag = CES
+			}
+			
+			traits = { navy_submarine_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 
 	}
 
@@ -136,7 +149,7 @@ ideas = {
 			}
 			traits = { military_theorist }
 			ai_will_do = {
-				factor = 2
+				factor = 20
 			}
 		}
 	}
@@ -845,5 +858,30 @@ ideas = {
 				local_resources_factor = 0.10
 			}
 		}
-	}		
+	}
+	country = {
+		CES_consumer_goods_reduction = {
+		picture = generic_disjointed_gov
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		CES_native_equality_idea = {
+		picture = generic_disjointed_gov
+			modifier = {
+				recruitable_population_factor = 0.1
+			}
+		}
+	}
+	country = {
+		CES_min_export_idea = {
+		picture = generic_disjointed_gov
+			modifier = {
+				min_export = 0.15
+			}
+		}
+	}	
+	
 }

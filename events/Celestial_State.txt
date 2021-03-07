@@ -712,12 +712,66 @@ country_event = { #EQS puppet me pls
 		puppet = CES
 		if = {
 			limit = {
-				has_dlc = "Hearts of Iron IV: Man the Guns"
+				has_dlc = "Hearts of Iron IV: Together for Victory"
 			}
 			set_autonomy = {
 				target = CES
 				autonomy_state = dominion 
 			}
 		}
+		else = {
+			event_target:equestria = {
+				puppet = CES
+			}
+		}
+	}
+}
+
+country_event = { #What a party!
+	id = daring_post_cw.7 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.7"}
+	title = daring_post_cw.7.t
+	desc = daring_post_cw.7.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.7.a
+		
+	}
+}
+
+country_event = { #junta or democracy
+	id = daring_post_cw.8 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.8"}
+	title = daring_post_cw.8.t
+	desc = daring_post_cw.8.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.8.a #Democracy
+		
+	}
+	option = {
+		name = daring_post_cw.8.b #Junta
+		
+	}	
+}
+
+country_event = { #Event explaining Equestrian Annexation will lead to game over! - Middle/What a Party! Path.
+	id = daring_post_cw.9 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event daring_post_cw.9"}
+	title = daring_post_cw.9.t
+	desc = daring_post_cw.9.d
+	picture = GFX_event_jungles_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = daring_post_cw.9.a
+		
 	}
 }

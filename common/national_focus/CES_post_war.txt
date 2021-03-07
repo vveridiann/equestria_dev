@@ -397,6 +397,7 @@ focus_tree = {
 					id = daring_post_cw.6
 				}
 			}
+			custom_effect_tooltip = CES_puppeted_by_equestria_tt
 		}
 	}
 	focus = {
@@ -630,7 +631,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CES_prepare_the_parade
 		completion_reward = {
-		
+			country_event = { id = daring_post_cw.7 }
 		}		
 	}
 	focus = {
@@ -644,11 +645,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = CES_what_a_party
 		completion_reward = {
+			add_manpower = 75000
+			add_stability = 0.05
 		
 		}	
 	}
 	focus = {
-		id = CES_demobilize # changes economy law to early mob and conscription law to limited conscription
+		id = CES_demobilize # changes economy law to early mob and conscription law to limited conscription #Probably just swap it back to partial mob + limited conscription with a bypass if both are true SOMEHOW
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
@@ -657,8 +660,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = CES_what_a_party
+		bypass = {
+			has_idea = limited_conscription
+			has_idea = partial_economic_mobilisation	
+		}
 		completion_reward = {
-		
+			add_ideas = partial_economic_mobilisation
+			add_ideas = limited_conscription
 		}	
 	}
 	focus = {
@@ -678,7 +686,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			country_event = { id = daring_post_cw.8 }
 		}	
 	}
 	focus = {
@@ -692,7 +700,8 @@ focus_tree = {
 		y = 3
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			country_event = { id = daring_post_cw.9 }
+			custom_effect_tooltip = CES_decide_fate_of_caballeron_tt
 		}	
 	}
 	focus = {
@@ -706,6 +715,25 @@ focus_tree = {
 		y = 4
 		relative_position_id = CES_what_a_party
 		completion_reward = {
+			15 = {
+				set_state_category = metropolis
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
 		
 		}	
 	}
@@ -720,7 +748,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			add_ideas = CES_native_equality_idea
 		}	
 	}
 	focus = {
@@ -731,10 +759,10 @@ focus_tree = {
 			focus = CES_the_jungle_doctor
 		}
 		x = 0
-		y = 5
+		y = 4
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			add_ideas = { CES_min_export_idea }
 		}	
 	}
 	focus = {
@@ -748,7 +776,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			add_ideas = CES_consumer_goods_reduction
 		}	
 	}
 	focus = {
@@ -762,7 +790,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			add_ideas = { CES_breadbasket_idea }
 		}	
 	}
 	focus = {
@@ -772,11 +800,18 @@ focus_tree = {
 		prerequisite = {
 			focus = CES_stableside_is_open_for_business
 		}
+		prerequisite = {
+			focus = CES_bang_for_buck
+		}
+		prerequisite = {
+			focus = CES_maternity_grants
+		}
 		x = 0
 		y = 6
 		relative_position_id = CES_what_a_party
 		completion_reward = {
-		
+			add_political_power = 100
+			country_event = { id = daring_post_cw.9 }
 		}	
 	}
 	focus = {
