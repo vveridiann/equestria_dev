@@ -110,6 +110,25 @@ focus_tree = {
 	shared_focus = HYE_return_of_dervishes
 	shared_focus = HYE_war_gains
 }
+focus_tree = {
+	id = HYE_hyenian_compromise
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 9999
+	}
+	shared_focus = HYE_history
+	shared_focus = HYE_startup
+	shared_focus = HYE_end_of_the_war
+	shared_focus = HYE_famka_death
+	shared_focus = HYE_hyenia_united_again
+	shared_focus = HYE_hyenia_army
+	shared_focus = HYE_hyenia_economy
+	shared_focus = HYE_hyenia_fleet
+}
 
 #focus_tree = {
 #	id = HYE_furasho_moderate

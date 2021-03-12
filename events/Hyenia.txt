@@ -2031,4 +2031,15 @@ country_event = {
 			create_intelligence_agency = yes
 		}
 	}
+	option = {
+		name = hyenia.2.a
+		hye_start_promises_missions_debug = yes
+		load_focus_tree = HYE_hyenian_compromise
+		create_country_leader = {
+			name = "the prince dude"
+			picture = "tba"
+			expire = "1965.1.1"
+			ideology = harmonic_theocracy
+		}
+	}
 }
