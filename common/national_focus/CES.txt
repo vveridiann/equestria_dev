@@ -45,7 +45,7 @@ focus_tree = {
 	
 	focus = {
 		id = CES_floating_guardians # 2 Dockyards and spawn and create 4 destroyers and 1 Light Cruiser
-		icon = GFX_goal_unknown
+		icon = GFX_goal_dockyard_generic_psody
 		cost = 3
 		prerequisite = {
 			focus = CES_emergency_battalions
@@ -77,7 +77,7 @@ focus_tree = {
 	
 	focus = {
 		id = CES_bonds_for_guns # 2 military factories 
-		icon = GFX_goal_unknown
+		icon = GFX_goal_solar_military_factory
 		cost = 2
 		prerequisite = {
 			focus = CES_floating_guardians
@@ -153,7 +153,7 @@ focus_tree = {
 	
 	focus = {
 		id = CES_willing_hoof # -5% stability as willingly engaging with the tribals is unpopular within the public harmony junta but avoids the civil war
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_dangerous_deal_pony_pony
 		cost = 2
 		prerequisite = {
 			focus = CES_emergency_battalions
@@ -172,7 +172,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_tribal_summit # spawns two 10 width tribal divs with event, also avoids post victory civil war
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_diplomatic_treaty_pony
 		cost = 3
 		prerequisite = {
 			focus = CES_willing_hoof
@@ -188,7 +188,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_manifest_production # 2 civ factories 
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 2
 		prerequisite = {
 			focus = CES_floating_guardians
@@ -206,7 +206,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_southern_accord # Unlocks the Tribal Advisors to be selected in government, not all implemented yet
-		icon = GFX_goal_unknown
+		icon = GFX_goal_conscription_pony
 		cost = 3
 		prerequisite = {
 			focus = CES_tribal_summit
@@ -243,7 +243,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_guns_for_gold # adds 3000 inf equipment producer EQS and 1 military factory
-		icon = CES_guns_for_gold
+		icon = GFX_goal_van_rifles
 		cost = 3
 		prerequisite = {
 			focus = CES_phase_two
@@ -261,7 +261,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_foreign_advisors # idea that gives +4% div org and 10% planning speed
-		icon = GFX_goal_unknown
+		icon = GFX_focus_indy_colonial_focus
 		cost = 3
 		prerequisite = {
 			focus = CES_phase_two
@@ -385,7 +385,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_chimera_offer # Event that unlocks The Chimera Advisor
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_dangerous_deal_pony_griffon
 		cost = 5
 		prerequisite = {
 			focus = CES_phase_two

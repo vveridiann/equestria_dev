@@ -815,6 +815,23 @@ focus_tree = {
 		}	
 	}
 	focus = {
+		id = CES_equestrian_reconquista # reconquer equus from NMM/DB/Non-Celestia Equestria/CHN
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = CES_the_equestrian_question
+		}
+		mutually_exclusive = {
+			focus = CES_loyal_subject
+			focus = CES_loyal_subject
+		}
+		x = 11
+		y = 10
+		completion_reward = {
+		
+		}	
+	}	
+	focus = {
 		id = CES_equal_partners # independent member of the faction
 		icon = GFX_goal_unknown
 		cost = 10
@@ -823,6 +840,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CES_loyal_subject
+			focus = CES_equestrian_reconquista
 		}
 		x = 9
 		y = 10
@@ -839,6 +857,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = CES_equal_partners
+			focus = CES_equestrian_reconquista
 		}
 		x = 2
 		y = 7
