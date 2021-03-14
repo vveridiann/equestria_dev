@@ -2183,10 +2183,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		swap_ideas = {
-			remove_idea = agrarian_society
-			add_idea = pre_industrial_society
-		}
+		increase_society_development = yes
 		add_stability = -0.3
 	}
 }
@@ -5989,7 +5986,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_hyenia_united_again
 	icon = GFX_goal_artillery
-	x = 25
+	x = 20
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -5997,6 +5994,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_political_power = 100
+		add_stability = 0.05
 	}
 }
 shared_focus = {
@@ -6009,6 +6008,15 @@ shared_focus = {
 		factor = 10
 	}
 	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_hyenia_united_again
+	}
+	mutually_exclusive = {
+		focus = HYE_furarura_regency
+	}
+	available = {
+		has_country_flag = hye_spymaster_victory
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		remove_ideas = HYE_divided_nation
@@ -6033,6 +6041,15 @@ shared_focus = {
 		factor = 10
 	}
 	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_hyenia_united_again
+	}
+	mutually_exclusive = {
+		focus = HYE_masasasasaska_regency
+	}
+	available = {
+		has_country_flag = hye_general_victory
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		remove_ideas = HYE_divided_nation
@@ -6048,9 +6065,430 @@ shared_focus = {
 	}
 }
 shared_focus = {
+	id = HYE_regency_3
+	icon = GFX_goal_artillery
+	x = 1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_furarura_regency
+	}
+	completion_reward = {
+		add_political_power = 150
+	}
+}
+shared_focus = {
+	id = HYE_regency_4
+	icon = GFX_goal_artillery
+	x = 3
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_furarura_regency
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_7
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_3
+	}
+	completion_reward = {
+		create_corps_commander = {
+			name = "doggo"
+			picture = "tba"
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "doggo 2"
+			picture = "tba"
+			traits = { infantry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		custom_effect_tooltip = HYE_new_generals_tooltip
+	}
+}
+shared_focus = {
+	id = HYE_regency_8
+	icon = GFX_goal_artillery
+	x = 3
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_4
+	}
+	completion_reward = {
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_9
+	icon = GFX_goal_artillery
+	x = 5
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_4
+	}
+	completion_reward = {
+		one_random_infrastructure = yes
+		one_random_infrastructure = yes
+		one_random_infrastructure = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_13
+	icon = GFX_goal_artillery
+	x = 1
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_7
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = HYE_regency_14
+	icon = GFX_goal_artillery
+	x = 3
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_8
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_15
+	icon = GFX_goal_artillery
+	x = 5
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_9
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_19
+	icon = GFX_goal_artillery
+	x = 1
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_13
+	}
+	completion_reward = {
+		one_random_industrial_complex = yes
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_20
+	icon = GFX_goal_artillery
+	x = 4
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_15
+	}
+	prerequisite = {
+		focus = HYE_regency_14
+	}
+	completion_reward = {
+		add_ideas = HYE_army_of_faithful
+	}
+}
+shared_focus = {
+	id = HYE_regency_1
+	icon = GFX_goal_artillery
+	x = -3
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_masasasasaska_regency
+	}
+	completion_reward = {
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_2
+	icon = GFX_goal_artillery
+	x = -1
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_masasasasaska_regency
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = HYE_spiesLAR
+		}
+		else = {
+			add_ideas = HYE_spies
+		}	
+	}
+}
+shared_focus = {
+	id = HYE_regency_5
+	icon = GFX_goal_artillery
+	x = -3
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_1
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_6
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_2
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_10
+	icon = GFX_goal_artillery
+	x = -5
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_5
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = hospital_research
+			bonus = 1
+			uses = 1
+			category = hospital_tech
+		}
+	}
+}
+shared_focus = {
+	id = HYE_regency_11
+	icon = GFX_goal_artillery
+	x = -3
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_5
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = HYE_regency_12
+	icon = GFX_goal_artillery
+	x = -1
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_6
+	}
+	completion_reward = {
+		one_random_industrial_complex = yes
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_16
+	icon = GFX_goal_artillery
+	x = -5
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_10
+	}
+	completion_reward = {
+		decrease_storm_king = yes
+	}
+}
+shared_focus = {
+	id = HYE_regency_17
+	icon = GFX_goal_artillery
+	x = -3
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_11
+	}
+	completion_reward = {
+		add_ideas = HYE_civilian_military_command
+	}
+}
+shared_focus = {
+	id = HYE_regency_18
+	icon = GFX_goal_artillery
+	x = -1
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_12
+	}
+	completion_reward = {
+		create_corps_commander = {
+			name = "doggo 3"
+			picture = "tba"
+			traits = { trickster }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "doggo 4"
+			picture = "tba"
+			traits = { trait_cautious }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		custom_effect_tooltip = HYE_new_generals_tooltip2
+	}
+}
+shared_focus = {
+	id = HYE_regency_21
+	icon = GFX_goal_artillery
+	x = 0
+	y = 6
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_united_again
+	prerequisite = {
+		focus = HYE_regency_18
+		focus = HYE_regency_19
+	}
+	completion_reward = {
+		add_ideas = HYE_qaylid_dervish
+	}
+	completion_reward = {
+
+	}
+}
+shared_focus = {
 	id = HYE_hyenia_army
 	icon = GFX_goal_artillery
-	x = 30
+	x = 37
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -6058,6 +6496,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		army_experience = 25
 	}
 }
 shared_focus = {
@@ -6075,6 +6514,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+		}
 	}
 }
 shared_focus = {
@@ -6092,6 +6537,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1
+			uses = 1
+			category = artillery
+		}
 	}
 }
 shared_focus = {
@@ -6116,6 +6567,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cat_mobile_warfare
+			bonus = 1
+			uses = 2
+			category = cat_mobile_warfare
+		}
 	}
 }
 shared_focus = {
@@ -6133,6 +6590,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = special_forces_tech
+			bonus = 1
+			uses = 2
+			category = special_forces_tech
+		}
 	}
 }
 shared_focus = {
@@ -6157,6 +6620,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cat_grand_battle_plan
+			bonus = 1
+			uses = 2
+			category = cat_grand_battle_plan
+		}
 	}
 }
 shared_focus = {
@@ -6174,6 +6643,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = support_bonus
+			bonus = 1
+			uses = 2
+			category = engineers_tech
+		}
 	}
 }
 shared_focus = {
@@ -6198,6 +6673,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = cat_superior_firepower
+			bonus = 1
+			uses = 2
+			category = cat_superior_firepower
+		}
 	}
 }
 shared_focus = {
@@ -6215,6 +6696,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1
+			uses = 2
+			category = artillery
+		}
 	}
 }
 shared_focus = {
@@ -6234,6 +6721,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = support_bonus
+			bonus = 1
+			uses = 1
+			category = support_tech
+		}
 	}
 }
 shared_focus = {
@@ -6253,6 +6746,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = mech_bonus
+			bonus = 1
+			uses = 1
+			category = motorized_equipment
+		}
 	}
 }
 shared_focus = {
@@ -6270,6 +6769,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = mech_bonus
+			bonus = 1
+			uses = 1
+			category = cat_light_armor
+		}
 	}
 }
 shared_focus = {
@@ -6288,6 +6793,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1
+			uses = 2
+			category = infantry_weapons
+		}
 	}
 }
 shared_focus = {
@@ -6305,6 +6816,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_spec_ops_training
 	}
 }
 shared_focus = {
@@ -6323,6 +6835,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1
+			uses = 2
+			category = race_tech
+		}
 	}
 }
 shared_focus = {
@@ -6340,12 +6858,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		hidden_effect = {
+			set_technology = {
+				HYE_mounain_tanks = 1
+				popup = no
+			}
+		}
+		custom_effect_tooltip = HYE_mountain_tanks
 	}
 }
 shared_focus = {
 	id = HYE_hyenia_economy
 	icon = GFX_goal_artillery
-	x = 35
+	x = 30
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -6353,19 +6878,440 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_conservative_evolution
+	icon = GFX_goal_artillery
+	x = -1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy
+	}
+	mutually_exclusive = {
+		focus = HYE_hyenia_economy_wind_of_change
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_ideas = HYE_conservative_evolution_idea
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_wind_of_change
+	icon = GFX_goal_artillery
+	x = 1
+	y = 1
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy
+	}
+	mutually_exclusive = {
+		focus = HYE_hyenia_economy_conservative_evolution
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+		one_random_industrial_complex = yes
+		add_political_power = -50
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_1
+	icon = GFX_goal_artillery
+	x = -2
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_conservative_evolution
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_2
+	icon = GFX_goal_artillery
+	x = 0
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_conservative_evolution
+		focus = HYE_hyenia_economy_wind_of_change
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_3
+	icon = GFX_goal_artillery
+	x = 2
+	y = 2
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_wind_of_change
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_industrial_complex = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_4
+	icon = GFX_goal_artillery
+	x = -3
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+		add_resource = {
+			type = steel
+			amount = 4
+			state = 1045 
+		}
+		add_resource = {
+			type = crystals
+			amount = 3
+			state = 1045 
+		}
+		add_resource = {
+			type = aluminium
+			amount = 4
+			state = 1045 
+		}
+		add_resource = {
+			type = tungsten
+			amount = 4
+			state = 1040
+		}
+		add_resource = {
+			type = steel
+			amount = 9
+			state = 1040
+		}
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_5
+	icon = GFX_goal_artillery
+	x = -1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_6
+	icon = GFX_goal_artillery
+	x = 0
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_1
+		focus = HYE_hyenia_economy_3
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_7
+	icon = GFX_goal_artillery
+	x = 3
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_8
+	icon = GFX_goal_artillery
+	x = 1
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 2
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_9
+	icon = GFX_goal_artillery
+	x = 2
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_8
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_7
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+		one_random_arms_factory = yes
+		one_random_aindustrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_10
+	icon = GFX_goal_artillery
+	x = -2
+	y = 4
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_4
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_11
+	icon = GFX_goal_artillery
+	x = 0
+	y = 5
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_10
+		focus = HYE_hyenia_economy_9
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_6
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_12
+	icon = GFX_goal_artillery
+	x = -1
+	y = 6
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_11
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_13
+	icon = GFX_goal_artillery
+	x = 1
+	y = 6
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_11
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_14
+	icon = GFX_goal_artillery
+	x = -2
+	y = 7
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_12
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_13
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_15
+	icon = GFX_goal_artillery
+	x = 0
+	y = 7
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_12
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_13
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		one_random_arms_factory = yes
+		one_random_arms_factory = yes
+	}
+}
+shared_focus = {
+	id = HYE_hyenia_economy_16
+	icon = GFX_goal_artillery
+	x = 2
+	y = 7
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = HYE_hyenia_economy
+	prerequisite = {
+		focus = HYE_hyenia_economy_12
+	}
+	prerequisite = {
+		focus = HYE_hyenia_economy_13
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		increase_society_development_gradual = yes
+		one_random_industrial_complex = yes
 	}
 }
 shared_focus = {
 	id = HYE_hyenia_fleet
 	icon = GFX_goal_artillery
-	x = 40
+	x = 43
 	y = 0
 	cost = 8
 	ai_will_do = {
 		factor = 10
 	}
+	available = {
+		any_controlled_state_is_coastal = yes
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		two_random_dockyards = yes
 	}
 }
 shared_focus = {
@@ -6383,6 +7329,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		two_airfield = yes
 	}
 }
 shared_focus = {
@@ -6400,6 +7347,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = fighter_research
+			bonus = 1
+			uses = 1
+			category = light_fighter
+		}
 	}
 }
 shared_focus = {
@@ -6417,6 +7370,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = bomber_bonus
+			bonus = 1
+			uses = 1
+			category = tactical_bomber
+		}
 	}
 }
 shared_focus = {
@@ -6435,6 +7394,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 1
+			uses = 1
+			category = air_doctrine
+		}
 	}
 }
 shared_focus = {
@@ -6452,6 +7417,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		air_experience = 30
 	}
 }
 shared_focus = {
@@ -6469,6 +7435,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = fighter_research
+			bonus = 1
+			uses = 1
+			category = light_fighter
+		}
 	}
 }
 shared_focus = {
@@ -6486,6 +7458,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = heavy_bomber_bonus
+			bonus = 1
+			uses = 1
+			category = heavy_air
+		}
 	}
 }
 shared_focus = {
@@ -6503,6 +7481,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 1
+			uses = 1
+			category = ss_tech
+		}
 	}
 }
 shared_focus = {
@@ -6520,6 +7504,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 1
+			uses = 1
+			category = dd_tech
+		}
 	}
 }
 shared_focus = {
@@ -6531,6 +7521,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	available = {
+		any_controlled_state_is_coastal = yes
+	}
 	relative_position_id = HYE_hyenia_fleet
 	prerequisite = {
 		focus = HYE_hyenia_fleet_subs
@@ -6538,6 +7531,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		two_random_dockyards = yes
 	}
 }
 shared_focus = {
@@ -6553,8 +7547,17 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_hyenia_fleet_docks
 	}
+	mutually_exclusive = {
+		focus =  HYE_hyenia_fleet_fleet_in_being
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navdoctrine_bonus
+			bonus = 1
+			uses = 2
+			category = cat_trade_interdiction
+		}
 	}
 }
 shared_focus = {
@@ -6570,8 +7573,17 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_hyenia_fleet_docks
 	}
+	mutually_exclusive = {
+		focus =  HYE_hyenia_fleet_trade_interception
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navdoctrine_bonus
+			bonus = 1
+			uses = 2
+			category = cat_fleet_in_being
+		}
 	}
 }
 shared_focus = {
@@ -6589,6 +7601,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 1
+			uses = 1
+			category = bb_tech
+		}
 	}
 }
 shared_focus = {
@@ -6606,6 +7624,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 1
+			uses = 1
+			category = ss_tech
+		}
 	}
 }
 shared_focus = {
@@ -6624,5 +7648,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 1
+			uses = 2
+			category = cl_tech
+		}
 	}
 }

@@ -1039,6 +1039,48 @@ ideas = {
 				monthly_population = -0.15
 			}
 		}
+		HYE_spec_ops_training = {
+			picture = anti_soviet_pact
+			modifier = {
+				special_forces_cap = 0.15
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+				special_forces_training_time_factor = 0.3
+			}
+		}
+		HYE_conservative_evolution_idea = {
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_factor = 0.2
+				conscription= 0.2
+			}
+		}
+		HYE_army_of_faithful = {
+			picture = anti_soviet_pact
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.025
+			}
+		}
+		HYE_spies = {
+			picture = anti_soviet_pact
+			modifier = {
+				encryption = 0.5
+				decryption = 0.5
+			}
+		}
+		HYE_spiesLAR = {
+			picture = anti_soviet_pact
+			modifier = {
+				operative_slot = 1
+			}
+		}
+		HYE_civilian_military_command = {
+			picture = anti_soviet_pact
+			modifier = {
+				land_reinforce_rate = 0.03
+			}
+		}
 	}
 	#Political Advisors
 	political_advisor = {

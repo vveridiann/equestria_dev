@@ -122,7 +122,6 @@ focus_tree = {
 	}
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
-	shared_focus = HYE_end_of_the_war
 	shared_focus = HYE_famka_death
 	shared_focus = HYE_hyenia_united_again
 	shared_focus = HYE_hyenia_army

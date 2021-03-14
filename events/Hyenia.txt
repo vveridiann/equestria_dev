@@ -874,10 +874,10 @@ country_event = {
 	#picture = 
 	is_triggered_only = yes
 	option = {
-		#spy wins by slight margin
+		#lady inquistor wins by slight margin
 		trigger = {
 			check_variable = {
-				HYE_spymaster_score = 4
+				HYE_general_score = 4
 			}
 		}
 		set_country_flag = hye_spymaster_victory
@@ -911,10 +911,10 @@ country_event = {
 		name = hyenia_troubles.15.a
 	}
 	option = {
-		#lady inquistor wins by slight margin
+		#spy wins by slight margin
 		trigger = {
 			check_variable = {
-				HYE_general_score = 4
+				HYE_spymaster_score = 4
 			}
 		}
 		set_country_flag = hye_general_victory
@@ -952,6 +952,7 @@ country_event = {
 		}
 		set_country_flag = hye_spymaster_victory
 		hye_start_promises_missions = yes
+		load_focus_tree = HYE_hyenian_compromise
 		name = hyenia_troubles.15.c
 	}
 	option = {
@@ -968,6 +969,7 @@ country_event = {
 		}
 		set_country_flag = hye_general_victory
 		hye_start_promises_missions = yes
+		load_focus_tree = HYE_hyenian_compromise
 		name = hyenia_troubles.15.e
 	}
 }

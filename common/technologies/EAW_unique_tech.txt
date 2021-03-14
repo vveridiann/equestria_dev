@@ -1782,4 +1782,21 @@ technologies = {
 			}
 		}
 	}
+	HYE_mounain_tanks = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		light_armor = {
+			mountain = {
+				movement = 0.2
+				attack = 0.2
+			}
+			hills = {
+				movement = 0.2
+				attack = 0.2
+			}
+			reliability = 0.1
+		}
+	}
 }
