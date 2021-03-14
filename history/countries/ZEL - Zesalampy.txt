@@ -6,6 +6,7 @@ set_research_slots = 2
 
 # Starting tech
 set_technology = {
+	zebra_race = 1
        melee_weapons = 1
     melee_weapons1 = 1
     pre_gw_artillery = 1
@@ -46,6 +47,7 @@ set_politics = {
 	elections_allowed = no
 }
 create_country_leader = {
+	#Note: Mai is a title, not a name
 	name = "Mai Gounama"
 	desc = ""
 	#picture = "Portrait_Ethiopia_Haile_Selassie.dds"

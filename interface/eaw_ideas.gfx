@@ -2515,6 +2515,10 @@ spriteTypes = {
 		name = "GFX_idea_diamond_dog_race"
 		texturefile = "gfx/interface/ideas/diamond_dog_race.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_kirin_race"
+		texturefile = "gfx/interface/ideas/KIR/kirin_race.dds"
+	}
 	SpriteType = {
 		name = "GFX_idea_idol_of_boreas_lost"
 		texturefile = "gfx/interface/ideas/idol_of_boreas_lost.dds"
@@ -3659,11 +3663,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_idea_LCT_gfc"
-		texturefile = "gfx/interface/ideas/LCT_gfc.dds"
+		texturefile = "gfx/interface/ideas/LCT_gfc.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_LCT_maresubishi"
-		texturefile = "gfx/interface/ideas/LCT_maresubishi.dds"
+		texturefile = "gfx/interface/ideas/LCT_maresubishi.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_LCT_pony_corp"
@@ -4299,7 +4303,7 @@ SpriteType = {
 	}
 	SpriteType = {
 		name = "GFX_idea_DMT_Var_Alsas_Forge"
-		texturefile = "gfx/interface/ideas/DMT_Var_Alsas_Forge.dds"
+		texturefile = "gfx/interface/ideas/DMT_Var_Alsas_Forge.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MNC_advisor_20"
@@ -4517,8 +4521,8 @@ SpriteType = {
 		texturefile = "gfx/interface/ideas/PAP_Legionary_Spirit.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_ROM_senate_divide"
-		texturefile = "gfx/interface/ideas/ROM_senate_divide.dds"
+		name = "GFX_idea_ROA_senate_divide"
+		texturefile = "gfx/interface/ideas/ROA_senate_divide.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_slavery"
@@ -6660,5 +6664,70 @@ SpriteType = {
 	SpriteType = {
 		name = "GFX_idea_colt_ice_advisor"
 		texturefile = "gfx/interface/ideas/colt_ice_advisor.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_ZES_advisor_heart"
+		texturefile = "gfx/interface/ideas/ZES_advisor_heart.tga"
     }
+	SpriteType = {
+		name = "GFX_idea_GRW_medium_tank_manufacturer"
+		texturefile = "gfx/interface/ideas/GRW_medium_tank_manufacturer.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_GRW_naval_manufacturer"
+		texturefile = "gfx/interface/ideas/GRW_naval_manufacturer.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_GRW_naval_manufacturer2"
+		texturefile = "gfx/interface/ideas/GRW_naval_manufacturer2.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_GRW_naval_manufacturer3"
+		texturefile = "gfx/interface/ideas/GRW_naval_manufacturer3.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_ZES_tank_manufacturer"
+		texturefile = "gfx/interface/ideas/Kasa_tank.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_FLO_loan_idea"
+		texturefile = "gfx/interface/ideas/FLO_loan_icon.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WNG_fwan"
+		texturefile = "gfx/interface/ideas/FWAN.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_DMT_Dalmation"
+		texturefile = "gfx/interface/ideas/DMT_Dalmation.dds"
+    }
+	SpriteType = {
+		name = "GFX_idea_DMT_Poodle"
+		texturefile = "gfx/interface/ideas/Podelia.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_DMT_Cerberus"
+		texturefile = "gfx/interface/ideas/Cerberus.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WIT_generic_naval_manufacturer"
+		texturefile = "gfx/interface/ideas/State_Naval_Comission.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WIT_Magic_Tank_Concern"
+		texturefile = "gfx/interface/ideas/WIttenburgh_Armour_Artificers.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WIT_Magic_Tank_Concern"
+		texturefile = "gfx/interface/ideas/WIttenburgh_Armour_Artificers.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_GRW_arty_manufacturer"
+		texturefile = "gfx/interface/ideas/Cast_Iron_Cannons.tga"
+    }
+	SpriteType = {
+		name = "GFX_idea_WIT_trade_post_idea"
+		texturefile = "gfx/interface/ideas/Wittenlandic_Trade_Post.tga"
+    }
+	
 }

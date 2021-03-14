@@ -474,6 +474,7 @@ is_griffon_continent_country = {
 		original_tag = ZES
 		original_tag = OLV
 		original_tag = DED
+		original_tag = EWI
 		original_tag = NCH
 		original_tag = HLR
 		original_tag = FAW
@@ -690,13 +691,12 @@ is_zebrican_continent_country = {
 		original_tag = HIP
 		original_tag = MGY
 		original_tag = BAT
-		original_tag = PCB
 		original_tag = MDL
 		original_tag = TBK
 		original_tag = WAR
 		original_tag = ZAR
 		original_tag = TSV
-		original_tag = ROM
+		original_tag = ROA
 		original_tag = GFS
 		original_tag = ZAI
 		original_tag = ZWA
@@ -705,7 +705,7 @@ is_zebrican_continent_country = {
 		original_tag = TIM
 		original_tag = SON
 		original_tag = HAY
-		original_tag = CAM
+		original_tag = SLC
 		original_tag = CZR
 		original_tag = SDL
 		original_tag = EMR
@@ -714,11 +714,11 @@ is_zebrican_continent_country = {
 		original_tag = SDC
 		original_tag = ALO
 		original_tag = MSH
-		original_tag = STI
+		original_tag = ASS
 		original_tag = MSP
 		original_tag = STM
-		original_tag = SCT
-		original_tag = CST
+		original_tag = THU
+		original_tag = GYZ
 		original_tag = KIR
 		original_tag = NVA
 		original_tag = YMN
@@ -726,19 +726,21 @@ is_zebrican_continent_country = {
 		original_tag = REE
 		original_tag = MSS
 		original_tag = HMR
-		original_tag = MHR
+		original_tag = OSQ
 		original_tag = KAR
 		original_tag = MTO
-		original_tag = KUR
+		original_tag = AES
+		original_tag = IDT
 		original_tag = ZLU
 		original_tag = HYE
 		original_tag = GIF
 		original_tag = CTH
 		original_tag = CDR
 		original_tag = CVA
+		original_tag = MCW
 		original_tag = BKH
 		original_tag = CGI
-		original_tag = MKA
+		original_tag = BLT
 		original_tag = KXN
 		original_tag = KHM
 		original_tag = GAZ
@@ -747,7 +749,7 @@ is_zebrican_continent_country = {
 		original_tag = HIN
 		original_tag = CTL
 		original_tag = BRS
-		original_tag = SRI
+		original_tag = HRV
 		original_tag = CME
 		original_tag = ZOO
 		original_tag = TAI
@@ -771,7 +773,7 @@ is_zebrican_zebra_country = {
 	OR = {
 		original_tag = WAR
 		original_tag = ZAR
-		original_tag = ROM
+		original_tag = ROA
 		original_tag = ZAI
 		original_tag = ZWA
 		original_tag = ZUG
@@ -816,10 +818,10 @@ is_zebrican_pony_country = {
 		original_tag = YMN
 		original_tag = MTA
 		original_tag = HMR
-		original_tag = MHR
+		original_tag = OSQ
 		original_tag = KAR
 		original_tag = MTO
-		original_tag = KUR
+		original_tag = AES
 		original_tag = REE
 	}
 }
@@ -834,10 +836,10 @@ is_saddle_arabian_country = {
 }
 is_storm_king_country = {
 	OR = {
-		original_tag = CAM
+		original_tag = SLC
 		original_tag = STM
-		original_tag = SCT
-		original_tag = CST
+		original_tag = THU
+		original_tag = GYZ
 	}
 }
 
@@ -918,6 +920,10 @@ is_on_griffon_continent = {
 		capital_scope = { is_on_continent = asia }
 		is_griffon_continent_country = yes
 	}
+}
+
+is_capital_on_griffon_continent = {
+	capital_scope = { is_on_continent = asia }
 }
 
 #ROOT is country
@@ -1235,6 +1241,7 @@ country_with_custom_spymaster = {
 		original_tag = ABY
 		original_tag = STW
 		original_tag = BAR
+		original_tag = ELF
 	}
 }
 owns_major_griffon_city = {

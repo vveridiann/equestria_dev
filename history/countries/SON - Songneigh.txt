@@ -6,6 +6,7 @@ set_research_slots = 2
 
 # Starting tech
 set_technology = {
+	zebra_race = 1
        melee_weapons = 1
     melee_weapons1 = 1
     pre_gw_artillery = 1
@@ -48,9 +49,9 @@ set_politics = {
 create_country_leader = {
 	name = "Zonni Zolon"
 	desc = ""
-	#picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	picture = "Sonni.tga"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = stratocracy
 	traits = {
 		#
 	}
