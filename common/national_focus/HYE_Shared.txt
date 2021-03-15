@@ -3998,7 +3998,7 @@ shared_focus = {
 				has_dlc = "La Resistance"
 			}
 			create_country_leader = {
-				name = "Furasho"
+				name = "Massaska"
 				picture = "tba"
 				expire = "1965.1.1"
 				ideology = despotism
@@ -4009,7 +4009,7 @@ shared_focus = {
 		}
 		else = {
 			create_country_leader = {
-				name = "Furasho"
+				name = "Massaska"
 				picture = "tba"
 				expire = "1965.1.1"
 				ideology = despotism

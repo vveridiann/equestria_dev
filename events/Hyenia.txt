@@ -892,7 +892,7 @@ country_event = {
 			ruling_party = fascism
 		}
 		create_country_leader = {
-			name = "Massaska"
+			name = "Furasho"
 			picture = "tba"
 			expire = "1965.1.1"
 			ideology = religious_fundamentalism
@@ -929,7 +929,7 @@ country_event = {
 			ruling_party = communism
 		}
 		create_country_leader = {
-			name = "Furasho"
+			name = "Massaska"
 			picture = "tba"
 			expire = "1965.1.1"
 			ideology = communal_isolationism
