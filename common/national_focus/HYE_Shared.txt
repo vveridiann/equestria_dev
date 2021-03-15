@@ -3884,6 +3884,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
+		hidden_effect = {
+			country_event = { id = hyenia_hero.1 days = 8}
+		}
+		add_political_power = 50
 	}
 }
 
