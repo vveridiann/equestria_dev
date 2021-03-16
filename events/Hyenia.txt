@@ -1,4 +1,5 @@
 add_namespace = hyenia
+add_namespace = hyenia_harmonic
 add_namespace = hyenia_troubles
 add_namespace = hyenia_flavour
 add_namespace = hyenia_hero
@@ -974,6 +975,40 @@ country_event = {
 	}
 }
 
+country_event = { #hyenia offers nonagression pact
+	id = hyenia_harmonic.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.1"
+	}
+	title = hyenia_harmonic.1.t
+	desc = hyenia_harmonic.1.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_harmonic.1.a
+		diplomatic_relation = {
+			country = HYE
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+	option = { #no
+		name = hyenia_harmonic.1.b
+	}
+}
+country_event = {
+	id = hyenia_harmonic.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hyenia_flavour.1"
+	}
+	title = hyenia_harmonic.1.t
+	desc = hyenia_harmonic.1.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_harmonic.1.a
+	}
+}
 country_event = {
 	id = hyenia_flavour.1
 	immediate = {

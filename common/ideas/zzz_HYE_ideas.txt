@@ -1081,6 +1081,37 @@ ideas = {
 				land_reinforce_rate = 0.03
 			}
 		}
+		HYE_international_affairs_idea_spy_lar = {
+			picture = anti_soviet_pact
+			modifier = {
+				intel_network_gain_factor = 0.25
+				own_operative_capture_chance_factor = -0.1
+				send_volunteer_size = 2
+				send_volunteers_tension = -0.25
+			}
+		}
+		HYE_international_affairs_idea_spy = {
+			picture = anti_soviet_pact
+			modifier = {
+				decryption = 0.5
+				send_volunteer_size = 2
+				send_volunteers_tension = -0.25
+			}
+		}
+		HYE_international_affairs_idea_general = {
+			picture = anti_soviet_pact
+			modifier = {
+				send_volunteer_size = 4
+				send_volunteers_tension = -1
+			}
+		}
+		HYE_yeti_guiding_pawn_idea = {
+			picture = anti_soviet_pact
+			modifier = {
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
 	}
 	#Political Advisors
 	political_advisor = {

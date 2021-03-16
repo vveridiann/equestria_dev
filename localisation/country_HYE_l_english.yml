@@ -1016,7 +1016,7 @@ HYE_jihad_to_the_sea:0 "HYE_jihad_to_the_sea"
  ### custom conditions ###
   hye_had_industrialised:0 "Had industrialised"
   HYE_nation_was_reunited:0 "Nation is reunited"
-
+  hye_has_start_industrializastion:0 "Has begin industrialising"
   ### tooltips
   HYE_enable_forced_assmilation:0 "everyone bad, dog good"
   HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
@@ -1110,8 +1110,10 @@ HYE_army_of_faithful:0 ""
 HYE_spies:0 ""
 HYE_spiesLAR:0 ""
 HYE_civilian_military_command:0 ""
-
-
+HYE_international_affairs_idea_spy_lar:0 "Active foreign Affairs"
+HYE_international_affairs_idea_spy:0 "Active foreign Affairs"
+HYE_international_affairs_idea_general:0 "Active foreign Affairs"
+HYE_yeti_guiding_pawn_idea:0 ""
 
   ######### spy operations
  HYE_operation_takeover:0 "Install Puppet Regime desc"
@@ -1121,3 +1123,16 @@ HYE_civilian_military_command:0 ""
  HYE_steal_weapons:0 "Steal Wepons"
  HYE_steal_weapons_desc:0 "Steal Wepons desc"
 
+#### hyenia united with yetis ####
+HYE_new_kingdom_fascism:0 "Qaylidi Dervishes"
+ HYE_new_kingdom_fascism_DEF:0 "The Qaylidi Dervishes"
+ HYE_new_kingdom_democratic:0 "super cool state"
+ HYE_new_kingdom_democratic_DEF:0 "super cool state"
+ HYE_new_kingdom_neutrality:0 "Qaylidi Dervishes"
+ HYE_new_kingdom_neutrality_DEF:0 "Qaylidi Dervishes"
+ HYE_new_kingdom_communism:0 "Qaylidi Dervishes"
+ HYE_new_kingdom_communism_DEF:0 "Qaylidi Dervishes"
+ HYE_new_kingdom_fascism_ADJ:0 "Hyena"
+ HYE_new_kingdom_democratic_ADJ:0 "Hyena"
+ HYE_new_kingdom_neutrality_ADJ:0 "Hyena"
+ HYE_new_kingdom_communism_ADJ:0 "Hyena"

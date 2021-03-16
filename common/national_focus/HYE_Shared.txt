@@ -310,7 +310,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HYE_scavenge_equipment
-	icon = GFX_HOL_papua_camps
+	icon = GFX_HOL_papua_SLCps
 	x = 1
 	y = 1
 	relative_position_id = HYE_startup
@@ -335,12 +335,12 @@ shared_focus = {
 		add_equipment_to_stockpile = {
 			type = melee_equipment_1
 			amount = 1000
-			producer = SCT
+			producer = THU
 		}
 		add_equipment_to_stockpile = {
 			type = melee_equipment_1
 			amount = 500
-			producer = CST
+			producer = GYZ
 		}
 	}
 }
@@ -390,7 +390,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	will_lead_to_war_with = SCT
+	will_lead_to_war_with = THU
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_the_yeti"
 		add_timed_idea = {
@@ -398,13 +398,13 @@ shared_focus = {
 			days = 150
 		}
 		declare_war_on = {
-			target = SCT
+			target = THU
 			type = annex_everything
 		}
 		hidden_effect = {
 			create_wargoal = {
 				type = annex_everything
-				target = SCT
+				target = THU
 			}
 		}
 	}
@@ -726,9 +726,9 @@ shared_focus = {
 		}
 		OR = {
 			NOT = {
-				country_exists = SCT
+				country_exists = THU
 			}
-			SCT = {
+			THU = {
 				is_subject = yes
 			}
 		}
@@ -1441,7 +1441,7 @@ shared_focus = {
 	relative_position_id = HYE_famka_death
 	available = {
 		NOT = {
-			country_exists = SCT
+			country_exists = THU
 		}
 		owns_state = 1050
 		owns_state = 1036
@@ -1502,7 +1502,7 @@ shared_focus = {
 	relative_position_id = HYE_famka_death
 	available = {
 		NOT = {
-			country_exists = SCT
+			country_exists = THU
 		}
 		owns_state = 1050
 		owns_state = 1036
@@ -1615,7 +1615,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HYE_penance_work_camps
+	id = HYE_penance_work_SLCps
 	icon = GFX_goal_artillery
 	x = -1
 	y = 2
@@ -1634,7 +1634,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HYE_rebuild_propaganda_campaign
+	id = HYE_rebuild_propaganda_SLCpaign
 	icon = GFX_goal_artillery
 	x = 1
 	y = 2
@@ -1660,7 +1660,7 @@ shared_focus = {
 	cost = 6
 	relative_position_id = HYE_the_path_is_dark
 	prerequisite = {
-		focus = HYE_penance_work_camps
+		focus = HYE_penance_work_SLCps
 	}
 	ai_will_do = {
 		factor = 10
@@ -1680,10 +1680,10 @@ shared_focus = {
 	cost = 6
 	relative_position_id = HYE_the_path_is_dark
 	prerequisite = {
-		focus = HYE_penance_work_camps
+		focus = HYE_penance_work_SLCps
 	}
 	prerequisite = {
-		focus = HYE_rebuild_propaganda_campaign
+		focus = HYE_rebuild_propaganda_SLCpaign
 	}
 	ai_will_do = {
 		factor = 10
@@ -1703,7 +1703,7 @@ shared_focus = {
 	cost = 6
 	relative_position_id = HYE_the_path_is_dark
 	prerequisite = {
-		focus = HYE_rebuild_propaganda_campaign
+		focus = HYE_rebuild_propaganda_SLCpaign
 	}
 	ai_will_do = {
 		factor = 10
@@ -3593,20 +3593,20 @@ shared_focus = {
 	}
 	bypass = {
 		NOT = {
-			country_exists = SCT
+			country_exists = THU
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		create_wargoal = {
 			type = annex_everything
-			target = SCT
+			target = THU
 		}
 	}
 }
 
 shared_focus = {
-	id = HYE_jihad_cst
+	id = HYE_jihad_GYZ
 	icon = GFX_goal_artillery
 	x = 0
 	y = 2
@@ -3623,20 +3623,20 @@ shared_focus = {
 	}
 	bypass = {
 		NOT = {
-			country_exists = CST
+			country_exists = GYZ
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		create_wargoal = {
 			type = annex_everything
-			target = CST
+			target = GYZ
 		}
 	}
 }
 
 shared_focus = {
-	id = HYE_jihad_cam
+	id = HYE_jihad_SLC
 	icon = GFX_goal_artillery
 	x = 2
 	y = 2
@@ -3653,14 +3653,14 @@ shared_focus = {
 	}
 	bypass = {
 		NOT = {
-			country_exists = CAM
+			country_exists = SLC
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		create_wargoal = {
 			type = annex_everything
-			target = CAM
+			target = SLC
 		}
 	}
 }
@@ -3676,10 +3676,10 @@ shared_focus = {
 	}
 	relative_position_id = HYE_fanatical_revanchism
 	prerequisite = {
-		focus = HYE_jihad_cam
+		focus = HYE_jihad_SLC
 	}
 	prerequisite = {
-		focus = HYE_jihad_cst
+		focus = HYE_jihad_GYZ
 	}
 	bypass = {
 		NOT = {
@@ -4501,15 +4501,15 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		create_wargoal = {
 			type = annex_everything
-			target = SCT
+			target = THU
 		}
 		create_wargoal = {
 			type = annex_everything
-			target = CST
+			target = GYZ
 		}
 		create_wargoal = {
 			type = annex_everything
-			target = CAM
+			target = SLC
 		}
 		create_wargoal = {
 			type = annex_everything
@@ -5067,7 +5067,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HYE_sct_lands
+	id = HYE_THU_lands
 	icon = GFX_goal_artillery
 	x = -6
 	y = 1
@@ -5088,7 +5088,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				industrial_complex > 0
-				is_core_of = SCT
+				is_core_of = THU
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5117,7 +5117,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				arms_factory > 0
-				is_core_of = SCT
+				is_core_of = THU
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5156,9 +5156,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
-		focus = HYE_sct_lands
+		focus = HYE_THU_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5174,7 +5174,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
 		focus = HYE_cokolwiek
 	}
@@ -5192,7 +5192,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
 		focus = HYE_cokolwiek2
 	}
@@ -5210,9 +5210,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
-		focus = HYE_sct_lands
+		focus = HYE_THU_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5233,7 +5233,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
 		focus = HYE_cokolwiek4
 	}
@@ -5251,7 +5251,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
 		focus = HYE_cokolwiek5
 	}
@@ -5269,7 +5269,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_sct_lands
+	relative_position_id = HYE_THU_lands
 	prerequisite = {
 		focus = HYE_cokolwiek6
 		focus = HYE_cokolwiek3
@@ -5281,7 +5281,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = HYE_cst_lands
+	id = HYE_GYZ_lands
 	icon = GFX_goal_artillery
 	x = -2
 	y = 1
@@ -5304,7 +5304,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				industrial_complex > 0
-				is_core_of = CST
+				is_core_of = GYZ
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5333,7 +5333,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				arms_factory > 0
-				is_core_of = CST
+				is_core_of = GYZ
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5371,9 +5371,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
-		focus = HYE_cst_lands
+		focus = HYE_GYZ_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5389,7 +5389,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
 		focus = HYE_cokolwiek11
 	}
@@ -5407,7 +5407,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
 		focus = HYE_cokolwiek12
 	}
@@ -5425,9 +5425,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
-		focus = HYE_cst_lands
+		focus = HYE_GYZ_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5443,7 +5443,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	available = {
 		owns_state = 1033
 	}
@@ -5473,7 +5473,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
 		focus = HYE_cokolwiek15
 	}
@@ -5496,7 +5496,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cst_lands
+	relative_position_id = HYE_GYZ_lands
 	prerequisite = {
 		focus = HYE_cokolwiek16
 		focus = HYE_cokolwiek13
@@ -5507,7 +5507,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = HYE_cam_lands
+	id = HYE_SLC_lands
 	icon = GFX_goal_artillery
 	x = 2
 	y = 1
@@ -5532,7 +5532,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				industrial_complex > 0
-				is_core_of = CAM
+				is_core_of = SLC
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5561,7 +5561,7 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				arms_factory > 0
-				is_core_of = CAM
+				is_core_of = SLC
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -5599,9 +5599,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
-		focus = HYE_cam_lands
+		focus = HYE_SLC_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5617,7 +5617,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
 		focus = HYE_cokolwiek21
 	}
@@ -5635,7 +5635,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
 		focus = HYE_cokolwiek22
 	}
@@ -5653,9 +5653,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
-		focus = HYE_cam_lands
+		focus = HYE_SLC_lands
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
@@ -5671,7 +5671,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
 		focus = HYE_cokolwiek24
 	}
@@ -5694,7 +5694,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
 		focus = HYE_cokolwiek25
 	}
@@ -5724,7 +5724,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
-	relative_position_id = HYE_cam_lands
+	relative_position_id = HYE_SLC_lands
 	prerequisite = {
 		focus = HYE_cokolwiek26
 		focus = HYE_cokolwiek23
@@ -5977,9 +5977,9 @@ shared_focus = {
 	}
 	relative_position_id = HYE_war_gains
 	prerequisite = {
-		focus = HYE_sct_lands
-		focus = HYE_cst_lands
-		focus = HYE_cam_lands
+		focus = HYE_THU_lands
+		focus = HYE_GYZ_lands
+		focus = HYE_SLC_lands
 		focus = HYE_stm_lands
 	}
 	completion_reward = {
@@ -6487,6 +6487,319 @@ shared_focus = {
 	}
 	completion_reward = {
 
+	}
+}
+shared_focus = {
+	id = HYE_international_affairs
+	icon = GFX_goal_artillery
+	x = 0
+	y = 7
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_regency_21
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		if = {
+			limit = {
+				has_country_flag = hye_general_victory
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_ideas = HYE_international_affairs_idea_spy_lar
+			}
+			else = {
+				add_ideas = HYE_international_affairs_idea_spy
+			}
+		}
+		else = {
+			add_ideas = HYE_international_affairs_idea_general
+		}
+	}
+}
+shared_focus = {
+	id = HYE_estern_pacts
+	icon = GFX_goal_artillery
+	x = 2
+	y = 8
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_international_affairs
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		GAR = {
+			country_event = { id = hyenia_harmonic.1 days = 3}
+		}
+		CNT = {
+			country_event = { id = hyenia_harmonic.1 days = 3}
+		}
+	}
+}
+shared_focus = {
+	id = HYE_yeti_problem
+	icon = GFX_goal_artillery
+	x = 0
+	y = 8
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_international_affairs
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = THU
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = GYZ
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = STM
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SLC
+		}
+	}
+}
+shared_focus = {
+	id = HYE_yeti_integration_concept
+	icon = GFX_goal_artillery
+	x = 0
+	y = 9
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_problem
+	}
+	available = {
+		any_owned_state = {
+			is_core_of = THU
+		}
+		any_owned_state = {
+			is_core_of = GYZ
+		}
+		any_owned_state = {
+			is_core_of = STM
+		}
+		any_owned_state = {
+			is_core_of = SLC
+		}
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		THU = { add_to_ROOT_potential_original_cores = yes }
+		GYZ = { add_to_ROOT_potential_original_cores = yes }
+		STM = { add_to_ROOT_potential_original_cores = yes }
+		SLC = { add_to_ROOT_potential_original_cores = yes }
+	}
+}
+shared_focus = {
+	id = HYE_yeti_schools
+	icon = GFX_goal_artillery
+	x = 2
+	y = 10
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_integration_concept
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		increase_science_base = yes
+	}
+}
+shared_focus = {
+	id = HYE_yeti_politic_of_equal_chance
+	icon = GFX_goal_artillery
+	x = 3
+	y = 11
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_schools
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		if = {
+			limit = {
+				not = { has_idea = outdated_industry }
+			}
+			increase_society_development_gradual= yes
+		}
+		else = {
+			add_political_power = 100
+		}
+		one_random_industrial_complex = yes
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = HYE_yeti_factories
+	icon = GFX_goal_artillery
+	x = -2
+	y = 10
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_integration_concept
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		if = {
+			limit = {
+				not = { has_idea = outdated_industry }
+			}
+			increase_society_development_gradual= yes
+		}
+		one_random_industrial_complex = yes
+	}
+}
+shared_focus = {
+	id = HYE_yeti_redistribution_for_poor
+	icon = GFX_goal_artillery
+	x = -3
+	y = 11
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_factories
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		decrease_poverty = yes
+	}
+}
+shared_focus = {
+	id = HYE_yeti_trials
+	icon = GFX_goal_artillery
+	x = 0
+	y = 10
+	cost = 12
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_integration_concept
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		country_event = { id= hyenia_harmonic.2 days = 2 }
+	}
+}
+shared_focus = {
+	id = HYE_yeti_proclaim_new_state
+	icon = GFX_goal_artillery
+	x = -1
+	y = 11
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_trials
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_political_power = 50
+		set_cosmetic_tag = HYE_new_kingdom
+	}
+}
+shared_focus = {
+	id = HYE_yeti_guiding_pawn
+	icon = GFX_goal_artillery
+	x = 1
+	y = 11
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_trials
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		increase_science_base = yes
+	}
+}
+shared_focus = {
+	id = HYE_yeti_diversity_is_strenght
+	icon = GFX_goal_artillery
+	x = 0
+	y = 12
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_yeti_politic_of_equal_chance
+	}
+	prerequisite = {
+		focus = HYE_yeti_redistribution_for_poor
+	}
+	prerequisite = {
+		focus = HYE_yeti_guiding_pawn
+	}
+	prerequisite = {
+		focus = HYE_yeti_proclaim_new_state
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		add_ideas = HYE_yeti_guiding_pawn_idea
+	}
+}
+shared_focus = {
+	id = HYE_western_focus
+	icon = GFX_goal_artillery
+	x = -2
+	y = 8
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_international_affairs
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+		GAR = {
+			country_event = { id = hyenia_harmonic.1 days = 3}
+		}
+		CNT = {
+			country_event = { id = hyenia_harmonic.1 days = 3}
+		}
 	}
 }
 shared_focus = {
@@ -7147,7 +7460,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
 		one_random_arms_factory = yes
 		one_random_arms_factory = yes
-		one_random_aindustrial_complex = yes
+		one_random_industrial_complex = yes
 	}
 }
 shared_focus = {
@@ -7326,6 +7639,20 @@ shared_focus = {
 	cost = 8
 	ai_will_do = {
 		factor = 10
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = hye_has_start_industrializastion
+			OR = {
+				has_idea = pre_industrial_society
+				has_idea = pre_industrial_society1
+				has_idea = pre_industrial_society2
+				has_idea = pre_industrial_society3
+				has_idea = outdated_industry
+				has_idea = outdated_industry2
+				has_idea = modern_society
+			}
+		}
 	}
 	relative_position_id = HYE_hyenia_fleet
 	prerequisite = {
