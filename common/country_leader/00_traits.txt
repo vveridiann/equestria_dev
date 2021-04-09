@@ -4689,8 +4689,7 @@ leader_traits = {
 	HYE_healer = {
 		random = no
 		monthly_population = 0.1
-		casualty_trickleback = 0.03
-		experience_loss_factor = -0.05
+		experience_loss_factor = -0.1
 		ai_will_do = {
 			factor = 6
 		}

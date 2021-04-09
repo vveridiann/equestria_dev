@@ -5990,7 +5990,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_hyenia_united_again
 	icon = GFX_goal_artillery
-	x = 20
+	x = 21
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -6545,6 +6545,54 @@ shared_focus = {
 	}
 }
 shared_focus = {
+	id = HYE_chuj
+	icon = GFX_goal_artillery
+	x = 2
+	y = 9
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_estern_pacts
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = HYE_mnie
+	icon = GFX_goal_artillery
+	x = 4
+	y = 9
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_estern_pacts
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = HYE_to
+	icon = GFX_goal_artillery
+	x = 4
+	y = 10
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_mnie
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+	}
+}
+shared_focus = {
 	id = HYE_yeti_problem
 	icon = GFX_goal_artillery
 	x = 0
@@ -6794,18 +6842,138 @@ shared_focus = {
 	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
-		GAR = {
-			country_event = { id = hyenia_harmonic.1 days = 3}
+		if = {
+			limit = {
+				HAY = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			HAY = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
 		}
-		CNT = {
-			country_event = { id = hyenia_harmonic.1 days = 3}
+		if = {
+			limit = {
+				ZEL = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			ZEL = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
 		}
+		if = {
+			limit = {
+				ZUG = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			ZUG = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
+		}
+		if = {
+			limit = {
+				ZWA = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			ZWA = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
+		}
+		if = {
+			limit = {
+				MSH = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			MSH = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
+		}
+		if = {
+			limit = {
+				SON = {
+					has_government = ROOT
+					NOT = {
+						is_subject = yes
+					}
+				}
+			}
+			SON = {
+				country_event = { id = hyenia_harmonic.1 days = 3}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HYE_kurwy
+	icon = GFX_goal_artillery
+	x = -4
+	y = 9
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_western_focus
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = HYE_chuje
+	icon = GFX_goal_artillery
+	x = -2
+	y = 9
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_western_focus
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = HYE_jebane
+	icon = GFX_goal_artillery
+	x = -4
+	y = 10
+	cost = 8
+	ai_will_do = {
+		factor = 10
+	}
+	prerequisite = {
+		focus = HYE_kurwy
+	}
+	relative_position_id = HYE_hyenia_united_again
+	completion_reward = {
 	}
 }
 shared_focus = {
 	id = HYE_hyenia_army
 	icon = GFX_goal_artillery
-	x = 37
+	x = 38
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -7187,7 +7355,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_hyenia_economy
 	icon = GFX_goal_artillery
-	x = 30
+	x = 31
 	y = 0
 	cost = 8
 	ai_will_do = {
@@ -7617,7 +7785,7 @@ shared_focus = {
 shared_focus = {
 	id = HYE_hyenia_fleet
 	icon = GFX_goal_artillery
-	x = 43
+	x = 44
 	y = 0
 	cost = 8
 	ai_will_do = {
