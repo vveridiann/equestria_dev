@@ -8,7 +8,7 @@ HYE_sneaky_plan_decisions = {
 			has_completed_focus = HYE_infiltrators
 		}
 		available = {
-			HYE = { has_war_with = SCT }
+			HYE = { has_war_with = THU }
 		}
 
 		fire_only_once = yes
@@ -25,13 +25,13 @@ HYE_sneaky_plan_decisions = {
 			has_completed_focus = HYE_saboteurs
 		}
 		available = {
-			HYE = { has_war_with = SCT }
+			HYE = { has_war_with = THU }
 		}
 		fire_only_once = yes
 		complete_effect = { 
-			SCT = { add_timed_idea = { idea = HYE_sabotaged_SCT days = 150 } }
+			THU = { add_timed_idea = { idea = HYE_sabotaged_SCT days = 150 } }
 			hidden_effect = {
-				SCT = {
+				THU = {
 					country_event = { 
 						id = hyenia.3
 					}
@@ -57,7 +57,7 @@ HYE_thunder_war_decisions = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			SCT = { country_event = { id = hyenia.4 } }
+			THU = { country_event = { id = hyenia.4 } }
 		}
 	}
 	ultimatum_for_thunderbowl = {
@@ -65,7 +65,7 @@ HYE_thunder_war_decisions = {
 		ai_will_do = { factor = 100 }
 		cost = 50
 		visible = {
-			NOT = { country_exists = SCT }
+			NOT = { country_exists = THU }
 			any_country = {
 				NOT = { original_tag = HYE }
 				owns_state = 1036
@@ -414,7 +414,7 @@ HEY_promises_missions = {
 		}
 		available = {
 			NOT = {
-				country_exists = SCT
+				country_exists = THU
 			}
 		}
 		timeout_effect = {
@@ -757,9 +757,10 @@ HEY_massaska_bp_theft_cat = {
 						steal_random_tech_bonus = {
 							folder = electronics_folder
 							folder = industry_folder
-							folder = infantry_weapons
-							folder = artillery
-							folder = armor
+							folder = infantry_folder
+							folder = support_folder
+							folder = armour_folder
+							folder = artillery_folder
 							bonus = 3.0
 							name = operation_steal_tech_civilian
 							target = FROM

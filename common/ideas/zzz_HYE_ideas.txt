@@ -61,7 +61,7 @@ ideas = {
 				always = yes
 			}
 			targeted_modifier = {
-				tag = SCT
+				tag = THU
 				attack_bonus_against = 0.15
 			}
 			modifier = {
@@ -280,17 +280,17 @@ ideas = {
 		HYE_fanatical_revanchism = {
 			picture = anti_soviet_pact
 			targeted_modifier = {
-				tag = SCT
+				tag = THU
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = CST
+				tag = GYZ
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = CAM
+				tag = SLC
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
@@ -306,17 +306,17 @@ ideas = {
 				conscription = 0.02
 			}
 			targeted_modifier = {
-				tag = SCS
+				tag = THU
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = CST
+				tag = GYZ
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = CAM
+				tag = SLC
 				attack_bonus_against = 0.1
 				breakthrough_bonus_against = 0.1
 			}
@@ -712,21 +712,19 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 			}
 		}
 		HYE_yeti_laws_bdf = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 			}
 		}
 		HYE_yeti_laws_bceg = {
@@ -754,10 +752,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -765,11 +762,10 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -798,10 +794,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				local_resources_factor = 0.1
 			}
 		}
@@ -809,11 +804,10 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				local_resources_factor = 0.1
 			}
 		}
@@ -844,10 +838,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.02
 			}
@@ -856,11 +849,10 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.02
 			}
@@ -892,10 +884,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				local_resources_factor = 0.1
 				consumer_goods_factor = -0.02
 			}
@@ -940,10 +931,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
@@ -953,11 +943,10 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
@@ -992,10 +981,9 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.02
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				local_resources_factor = 0.1
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
@@ -1005,11 +993,10 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				stability_factor = 0.1
-				political_power_factor = -0.1
 				resistance_growth = -0.05
 				industrial_capacity_factory = -0.05
 				non_core_manpower = 0.04
-				political_power_factor = -0.2
+				political_power_factor = -0.3
 				local_resources_factor = 0.1
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
@@ -1052,7 +1039,7 @@ ideas = {
 			picture = anti_soviet_pact
 			modifier = {
 				political_power_factor = 0.2
-				conscription= 0.2
+				conscription= 0.02
 			}
 		}
 		HYE_army_of_faithful = {
