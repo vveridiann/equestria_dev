@@ -1032,8 +1032,25 @@ HYE_jihad_to_the_sea:0 "HYE_jihad_to_the_sea"
  HYE_hyenia_fleet_bb:0 "HYE_hyenia_fleet_bb"
  HYE_hyenia_fleet_subs2:0 "HYE_hyenia_fleet_subs2"
  HYE_hyenia_fleet_cl:0 "HYE_hyenia_fleet_cl"
-
-
+HYE_international_affairs:0 "HYE_international_affairs"
+HYE_estern_pacts:0 "HYE_estern_pacts"
+HYE_chuj:0 "HYE_chuj"
+HYE_mnie:0 "HYE_mnie"
+HYE_to:0 "HYE_to"
+HYE_yeti_problem:0 "HYE_yeti_problem"
+HYE_yeti_integration_concept:0 "HYE_yeti_integration_concept"
+HYE_yeti_schools:0 "HYE_yeti_schools"
+HYE_yeti_politic_of_equal_chance:0 "HYE_yeti_politic_of_equal_chance"
+HYE_yeti_factories:0 "HYE_yeti_factories"
+HYE_yeti_redistribution_for_poor:0 "HYE_yeti_redistribution_for_poor"
+HYE_yeti_trials:0 "HYE_yeti_trials"
+HYE_yeti_proclaim_new_state:0 "HYE_yeti_proclaim_new_state"
+HYE_yeti_guiding_pawn:0 "HYE_yeti_guiding_pawn"
+HYE_yeti_diversity_is_strenght:0 "HYE_yeti_diversity_is_strenght"
+HYE_western_focus:0 "HYE_western_focus"
+HYE_kurwy:0 "HYE_kurwy"
+HYE_chuje:0 "HYE_chuje"
+HYE_jebane:0 "HYE_jebane"
  ### custom conditions ###
   hye_had_industrialised:0 "Had industrialised"
   HYE_nation_was_reunited:0 "Nation is reunited"
@@ -1041,7 +1058,7 @@ HYE_jihad_to_the_sea:0 "HYE_jihad_to_the_sea"
   ### tooltips
   HYE_enable_forced_assmilation:0 "everyone bad, dog good"
   HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
-
+HYE_benefits_countries_with_nap:0 "Also benefits countries with non agression pact"
   ### leader traits ###
   HYE_prodigal_son:0 "Prodigal Son"
 
@@ -1135,6 +1152,10 @@ HYE_international_affairs_idea_spy_lar:0 "Active foreign Affairs"
 HYE_international_affairs_idea_spy:0 "Active foreign Affairs"
 HYE_international_affairs_idea_general:0 "Active foreign Affairs"
 HYE_yeti_guiding_pawn_idea:0 ""
+
+
+
+
 
   ######### spy operations
  HYE_operation_takeover:0 "Install Puppet Regime desc"
