@@ -6485,9 +6485,6 @@ shared_focus = {
 	completion_reward = {
 		add_ideas = HYE_qaylid_dervish
 	}
-	completion_reward = {
-
-	}
 }
 shared_focus = {
 	id = HYE_international_affairs
@@ -6556,8 +6553,43 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_estern_pacts
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = GAR
+			has_non_aggression_pact_with = CNT
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = GAR
+			}
+			add_tech_bonus = { 
+				name = infantry_weapons_bonus
+				bonus = 1
+				uses = 1 
+				category = infantry_weapons 
+			}
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = CNT
+			}
+			add_tech_bonus = { 
+				name = infantry_weapons_bonus
+				bonus = 1
+				uses = 1 
+				category = infantry_weapons 
+			}
+		}
+		add_tech_bonus = { 
+			name = infantry_weapons_bonus
+			bonus = 2
+			uses = 1 
+			category = infantry_weapons 
+		}
 	}
 }
 shared_focus = {
@@ -6572,8 +6604,28 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_estern_pacts
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = GAR
+			has_non_aggression_pact_with = CNT
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = GAR
+			}
+			add_political_power = 75
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = CNT
+			}
+			add_political_power = 75
+		}
+		add_political_power = 150
 	}
 }
 shared_focus = {
@@ -6588,8 +6640,29 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_mnie
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = GAR
+			has_non_aggression_pact_with = CNT
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = GAR
+			}
+			one_random_industrial_complex = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = CNT
+			}
+			one_random_industrial_complex = yes
+		}
+		one_random_industrial_complex = yes
+		one_random_arms_factory = yes
 	}
 }
 shared_focus = {
@@ -6934,8 +7007,56 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_western_focus
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = SON
+			has_non_aggression_pact_with = MSH
+			has_non_aggression_pact_with = ZWA
+			has_non_aggression_pact_with = ZUG
+			has_non_aggression_pact_with = ZEL
+			has_non_aggression_pact_with = HAY
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = SON
+			}
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = MSH
+			}
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZWA
+			}
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZUG
+			}
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZEL
+			}
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = HAY
+			}
+			add_stability = 0.05
+		}
+		add_stability = 0.1
 	}
 }
 shared_focus = {
@@ -6950,8 +7071,57 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_western_focus
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = SON
+			has_non_aggression_pact_with = MSH
+			has_non_aggression_pact_with = ZWA
+			has_non_aggression_pact_with = ZUG
+			has_non_aggression_pact_with = ZEL
+			has_non_aggression_pact_with = HAY
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = SON
+			}
+			one_random_arms_factory = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = MSH
+			}
+			one_random_arms_factory = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZWA
+			}
+			one_random_arms_factory = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZUG
+			}
+			one_random_arms_factory = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZEL
+			}
+			one_random_arms_factory = yes
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = HAY
+			}
+			one_random_arms_factory = yes
+		}
+		one_random_arms_factory = yes
+		one_random_industrial_complex = yes
 	}
 }
 shared_focus = {
@@ -6966,8 +7136,56 @@ shared_focus = {
 	prerequisite = {
 		focus = HYE_kurwy
 	}
+	available = {
+		OR = {
+			has_non_aggression_pact_with = SON
+			has_non_aggression_pact_with = MSH
+			has_non_aggression_pact_with = ZWA
+			has_non_aggression_pact_with = ZUG
+			has_non_aggression_pact_with = ZEL
+			has_non_aggression_pact_with = HAY
+		}
+	}
 	relative_position_id = HYE_hyenia_united_again
 	completion_reward = {
+		custom_effect_tooltip = HYE_benefits_countries_with_nap
+		if = {
+			limit = {
+				has_non_aggression_pact_with = SON
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = MSH
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZWA
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZUG
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = ZEL
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		if = {
+			limit = {
+				has_non_aggression_pact_with = HAY
+			}
+			add_ideas = HYE_allies_bonus
+		}
+		add_ideas = HYE_allies_bonus
 	}
 }
 shared_focus = {
