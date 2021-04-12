@@ -349,15 +349,19 @@ hyenia.23.a:0 "Hyenia will live again."
 hyenia.9901.t:0 "Unity and Hope"
 hyenia.9901.d:0 "lol why are you here?"
 hyenia.9901.a:0 "please leave"
+
 hyenia.9902.t:0 "The Open Paw or the Bared Claw"
 hyenia.9902.d:0 "definitely not supposed to see this"
 hyenia.9902.a:0 "go away"
+
 hyenia.9903.t:0 "To Grasp the Reins of Power"
 hyenia.9903.d:0 "how much do I have to say this? go away"
 hyenia.9903.a:0 "you have nothing to do here"
+
 hyenia.9904.t:0 "Hope at the End of an Era"
 hyenia.9904.d:0 "Still no idea what you're doing here..."
 hyenia.9904.a:0 "ffs..."
+
 hyenia.9905.t:0 "The Great Tree Stands Tall"
 hyenia.9905.d:0 "Aaaaaaaaarrrrrgghhhh!"
 hyenia.9905.a:0 "wharrgarbl"
@@ -517,21 +521,21 @@ HYE_massaska_radical2:0 "The Path Of Stability"
  hyenia_troubles.2.a:0 "Make returning easy, and be patient" 
  hyenia_troubles.2.b:0 "Go all out, and bring our people home speedily."
  hyenia_troubles.3.t:0 "Rebuilding the Broken Cities" #focus on cities
- hyenia_troubles.3.d:0 "Hyenia's cities were splendid, once. Say what one will about the monarchy, but it did greatly value the architecture of its strongholds. These mighty cities, carved out of the cliffsides and equal parts tunnels and buildings, were devasted in the last decade, and though the yeti occupiers did attempt to restore them for their own use, they are a shadow of what they were.\n\nYet, as we restore them, we are left to ask ourselves where to focus. Furasho thinks that maybe this is the best chance we have to think big, and to remake the cities from the ground up? If we are to transform Hyenian society, it would make sense to start with the cities. In due time, we could build away many of the worldly sins that have plagued our kin. Masaska asks whether that is our role  This should be a time of healing, and if we are to change anything, we should look to rebuilding and giving peace, not uprooting what little the people still have. If we should do anything, it should be to rebuild the poor quarters and make sure even the poorest can live well."
+ hyenia_troubles.3.d:0 "Hyenia's cities were splendid, once. Say what one will about the monarchy, but it did greatly value the architecture of its strongholds. These mighty cities, carved out of the cliffsides and equal parts tunnels and buildings, were devasted in the last decade, and though the yeti occupiers did attempt to restore them for their own use, they are a shadow of what they were.\n\nYet, as we restore them, we are left to ask ourselves where to focus. Furasho thinks that maybe this is the best chance we have to think big, and to remake the cities from the ground up? If we are to transform Hyenian society, it would make sense to start with the cities. In due time, we could build away many of the worldly sins that have plagued our kin. Masaska asks whether that is our role. This should be a time of healing, and if we are to change anything, we should look to rebuilding and giving peace, not uprooting what little the people still have. If we should do anything, it should be to rebuild the poor quarters and make sure even the poorest can live well."
  hyenia_troubles.3.a:0 "Restore what was destroyed, and give the poor good shelter."
  hyenia_troubles.3.b:0 "Start rebuilding the cities into something greater."
  hyenia_troubles.4.t:0 "The Blossoming Countryside"
- hyenia_troubles.4.d:0 ""
- hyenia_troubles.4.a:0 "" #Small farms M
- hyenia_troubles.4.b:0 "" #Big farms F
+ hyenia_troubles.4.d:0 "The Hyenian countryside was devastated during the invasion, and large swathes of land now lie fallow, or was claimed by the yetis for their own estates. Much of the land is still fertile, however, and has historically served to feed our people well.  The question is how exactly to distribute the land now that countless of its owners have been killed or had their properties seized. The question is what to do about it, and how to distribute the land.\n\nMasaska has urged that we do everything we can to restore the land to its proper owners, and that the land that is not settled should be spread among the destitute with the skill and willingness to work it. If they do not wish for it, it can be bought off them for a good price, and if they do, we have people to work the land. Thus, we can alleviate the poverty of many of our people, ensure that the land is well tended to and bring stability back to the region.\n\nFurasho, along with many others, have denounced these ideas. Rather, they say, we should aim to to emulate the system established in Ciidacirood, where Fahamka found many disciples who gave up their farms to be consolidated under the stewardship of the dervishes. Instead of seeking personal self-enrichment, these farms can provide honest work for the people who are destitute along with good education in the dervish way of life."
+ hyenia_troubles.4.a:0 "Give the land to those who can use it the best."  
+ hyenia_troubles.4.b:0 "We will be the stewards of the land."
  hyenia_troubles.5.t:0 "The Others who Fought" #other rebel groups
- hyenia_troubles.5.d:0 ""
- hyenia_troubles.5.a:0 "" # Learn from them, and let them prosper M
- hyenia_troubles.5.b:0 "" # Offer them tutelage and training to dervishhood F
+ hyenia_troubles.5.d:0 "The Dervishes were not alone in the struggle. Even though we were the single greatest force opposing the yetis, there were countless others fighting the oppressors in whatever way they could. Ranging from workers organizing civil disobedience to smaller rebel groups engaging in everything from thefts to outright terrorist attacks, these groups are still around, and we must decide how to approach them.\n\nOne one paw, we have a plethora of lessons to be learned from these various movements, and their part in saving our homeland was small, but still important. We are not so glory-hungry that we cannot acknowledge their efforts. We are part of Hyenia, not Hyenia in its entirety, and if others have found a better way to something, we should learn from them, acknowledge them and allow them to prosper.\n\nOn the other, we have the fact that we are the single greatest power in Hyenia now, and that whether we learn or not from them, we will still be the ones to set the agenda. These other factions might have lessons to teach us, but they can share these lessons are part of the dervishes. Let us reward them by opening our arms to them and let them into the fold, but if they should refuse this blessing, they've chosen to not be part of the new Hyenia."
+ hyenia_troubles.5.a:0 "Learn from them, and let them prosper"
+ hyenia_troubles.5.b:0 "Offer them tutelage and training to dervishhood"
  hyenia_troubles.6.t:0 "A Friend in the Darkest Hour" #queen of hayzeb
- hyenia_troubles.6.d:0 ""
- hyenia_troubles.6.a:0 "" 
- hyenia_troubles.6.b:0 "" 
+ hyenia_troubles.6.d:0 "Before the Weerar Weyn, we were isolated in the desert, with few ways to gain the tools we needed to carry on the fight. It is quite possible that if it wasn't for the aid given to us by queen Baminazpus, we never could have reached this far. She allowed our agents to acquire supplies and weapons in her lands even when she could have denied us, and though she had her own trials to face, she even gave shelter to many refugees who fled the chaos.\n\nYet, those same challenges are coming to a head for her, and the Great Lakes region is burning with the fires of war. Of all Zebras, she is the one who has earned the dervishes' as well as all hyenas' respect, and there are few beyond the truly selfish who argue anything other than that we should give her aid. Were we stronger or more stable, we would rally to her side fully, but for now, our aid must be more modest, and we must hope that it is enough."
+ hyenia_troubles.6.a:0 "Send a division of volunteer dervishes to fight by her side." 
+ hyenia_troubles.6.b:0 "Send back what weapons we can spare for her to use." 
  hyenia_troubles.7.t:0 "The Last Prince" #the little princeling
  hyenia_troubles.7.d:0 "With the return of the nobles came a surprise indeed; the youngest child of the dead queen, prince Jawharad. Merely an infant when Hyenia fell, he was presumed dead much like the rest of his family. It turns out he was spirited away to safety and has grown up in exile. The boy is now the figurehead of the royalists, and has already made appearances among the dogs along the coast. The average Hyena relishes the idea of the return of the old monarchy, but a sober assessment of the situation must be made. Do we believe a ten year old child truly is in charge of this attempted monarchist revival?\n\nMasaska's agents have infiltrated the camp, and they have listened to the scheming that goes on behind the boy's back. As suspected, the boy is being 'advised' by the surviving members of the old royal council, and they seem determined to reassert their old positions of privilege. More, even, as the prince seems to have been pushed to promise them rich rewards for their service to the nation.\n\nSeeing how they, even as Hyenia suffered under occupation, protected and expanded their own power before anything else is nauseating. Something must be done to block them from achieving their goals, we did not fight for a decade just to let the old order reassert itself and drive us back into the desert. The prince cannot be held responsible, he is but a puppet to these old schemers, but they must be dealt with."
  hyenia_troubles.7.a:0 "Let us contact the little one." 
