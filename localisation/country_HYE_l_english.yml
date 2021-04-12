@@ -1179,3 +1179,15 @@ HYE_new_kingdom_fascism:0 "Qaylidi Dervishes"
  HYE_new_kingdom_democratic_ADJ:0 "Hyena"
  HYE_new_kingdom_neutrality_ADJ:0 "Hyena"
  HYE_new_kingdom_communism_ADJ:0 "Hyena"
+
+
+### tech ###
+tech_hye_scavenge2:0 "tech_hye_scavenge2"
+tech_hye_exp:0 "tech_hye_exp"
+tech_hye_repair:0 "tech_hye_repair"
+tech_hye_reinforce:0 "tech_hye_reinforce"
+tech_hye_scavenge:0 "tech_hye_scavenge"
+tech_hye_attrition:0 "tech_hye_attrition"
+tech_hye_start:0 "tech_hye_start"
+hye_folder:0 "Hyena Tech"
+title_hye_dervishes_subtitle:0 "hyenas stuff idk"

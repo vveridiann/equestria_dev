@@ -153,6 +153,10 @@ has_barrad_race_tech = {
 	original_tag = BAR
 }
 
+has_hye_race_tech = {
+	original_tag = HYE
+}
+
 is_same_race_as_PREV = {
 	OR = {
 		AND = {
