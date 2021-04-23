@@ -64,19 +64,45 @@ HYE_thunder_war_decisions = {
 		icon = decision_border_war
 		ai_will_do = { factor = 100 }
 		cost = 50
+		target_trigger = {
+			FROM = {
+				NOT = { original_tag = HYE }
+				exist = yes
+				OR = {
+					owns_state = 1036
+					owns_state = 1050
+					owns_state = 1052
+					owns_state = 1112
+				}
+			}
+		}
 		visible = {
 			NOT = { country_exists = THU }
-			any_country = {
-				NOT = { original_tag = HYE }
-				owns_state = 1036
+			FROM = {
+				OR = {
+					owns_state = 1036
+					owns_state = 1050
+					owns_state = 1052
+					owns_state = 1112
+				}
 			}
 		}
 		available = {
-			HYE = { NOT = { owns_state = 1036 } }
+			HYE = { 
+				NOT = { has_war = yes }
+			}
+			FROM = {
+				OR = {
+					owns_state = 1036
+					owns_state = 1050
+					owns_state = 1052
+					owns_state = 1112
+				}
+			}
 		}
 		complete_effect = {
-			1036 = {
-				owner = { country_event = { id = hyenia.7 } }
+			FROM = {
+				country_event = { id = hyenia.7 }
 			}
 		}
 	}

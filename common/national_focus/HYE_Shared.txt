@@ -401,12 +401,6 @@ shared_focus = {
 			target = THU
 			type = annex_everything
 		}
-		hidden_effect = {
-			create_wargoal = {
-				type = annex_everything
-				target = THU
-			}
-		}
 	}
 }
 
@@ -719,7 +713,7 @@ shared_focus = {
 	icon = GFX_goal_artillery
 	x = 16
 	y = 0
-	cost = 1
+	cost = 3
 	available = {
 		HYE = {
 			owns_state = 1036
@@ -732,19 +726,25 @@ shared_focus = {
 				is_subject = yes
 			}
 		}
-	}
-	bypass = {
+		hidden_trigger = {
+			has_country_leader = {
+				name = "Fahamka 'The Bark'"
+				ruling_only = yes
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HYE_end_of_the_war"
-		hidden_effect = {
-			country_event = {
-				id = hyenia.22
-				days = 90
-			}
+		
+		1036 = {
+			set_state_name = "Buur Dhurwaa"
+		}
+		set_province_name = {
+		id = 15255
+			name = "Qalbi Weyn"
 		}
 		decrease_storm_king = yes
 	}

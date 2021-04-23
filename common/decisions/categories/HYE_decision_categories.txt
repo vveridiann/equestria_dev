@@ -24,6 +24,9 @@ HYE_thunder_war_decisions = {
 	}
 	visible = {
 		has_completed_focus = HYE_end_the_yeti
+		NOT = {
+			has_country_flag = HYE_cores_reclaimed_flag
+		}
 	}
 }
 
