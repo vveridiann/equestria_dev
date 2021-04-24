@@ -89,7 +89,9 @@ is_polar_race = {
 is_zebra_race = {
 	has_tech = zebra_race
 }
-
+is_hyena_race = {
+	has_tech = hyena_race
+}
 is_generic_race = {
 	NOT = {
 		is_pony_race = yes
@@ -154,7 +156,8 @@ has_barrad_race_tech = {
 }
 
 has_hye_race_tech = {
-	original_tag = HYE
+	is_hyena_race = yes
+	has_special_race_tech = no
 }
 
 is_same_race_as_PREV = {

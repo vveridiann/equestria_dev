@@ -76,7 +76,7 @@ technology_folders = {
 		}
 		ledger = civilian
 	}
-	hye_folder = {
+	hyena_folder = {
 		available = {
 			has_hye_race_tech = yes
 		}

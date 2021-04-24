@@ -1181,12 +1181,75 @@ HYE_new_kingdom_fascism:0 "Qaylidi Dervishes"
 
 
 ### tech ###
-tech_hye_scavenge2:0 "tech_hye_scavenge2"
-tech_hye_exp:0 "tech_hye_exp"
-tech_hye_repair:0 "tech_hye_repair"
-tech_hye_reinforce:0 "tech_hye_reinforce"
-tech_hye_scavenge:0 "tech_hye_scavenge"
-tech_hye_attrition:0 "tech_hye_attrition"
-tech_hye_start:0 "tech_hye_start"
-hye_folder:0 "Hyena Tech"
-title_hye_dervishes_subtitle:0 "hyenas stuff idk"
+
+hyena_folder:0 "Hyena Tech"
+TITLE_HYENA_DERVISHES_SUBTITLE:0 "DERVISHES"
+TITLE_HYENA_SUBTITLE:0 "HYENAS"
+
+
+dervishes:0 "Dervishes"
+dervishes_desc:0 "" #TODO Desc of the Hyen bois
+
+#If we want to give them a unique research category for the future, this is how Ironpaws did it:
+#ironpaws_tech:0 "Ironpaws Technology"
+
+#TODO
+#Need some descriptions/names for the unique hyena techs and the improvement of Dervish divisions
+
+tech_hye_start:0 ""
+tech_hye_start_desc:0 ""
+tech_hye_scavenge:0 ""
+tech_hye_scavenge_desc:0 ""
+tech_hye_reinforcement:0 ""
+tech_hye_reinforcement_desc:0 ""
+tech_hye_repair:0 ""
+tech_hye_repair_desc:0 ""
+tech_hye_exp:0 ""
+tech_hye_exp_desc:0 ""
+tech_hye_scavenge2:0 ""
+tech_hye_scavenge2_desc:0 ""
+
+
+tech_dervishes:0 "Dervish Division"
+tech_dervishes_desc:0 ""
+tech_dervishes2:0 "Dervish Division II"
+tech_dervishes2_desc:0 ""
+tech_dervishes3:0 "Dervish Division III"
+tech_dervishes3_desc:0 ""
+tech_dervishes_a:0 "Dervish Division IV"
+tech_dervishes_a_desc:0 ""
+tech_dervishes_b:0 "Dervish Division V"
+tech_dervishes_b_desc:0 ""
+tech_dervishes_c:0 "Dervish Division VI"
+tech_dervishes_c_desc:0 ""
+
+
+tech_hyena_misc:0 "Extractive Metallurgy"
+tech_hyena_misc_desc:0 "Few species can claim to be as proficient and skilled in digging and burrowing tunnels as the Diamond Dogs. From an early age, pups are known to bore their own tunnels, searching for the mineral goods hidden beneath the ground. Although industrial mining is not done with bare paws, it remains a priority to improve our equipment and improve safety standards, so that dogs may continue to profit from the riches of the earth."
+tech_hyena_misc2:0 "Underground Construction"
+tech_hyena_misc2_desc:0 "Most dogs prefer living under the ground, and few venture to the surface by choice. Subterranean environment breeds a hardy species, and the need for safety and protection of our riches makes it necessary to construct vast cities and vaults beneath the surface."
+tech_hyena_misc3:0 "Underground Construction II"
+tech_hyena_misc3_desc:0 "Improved architecture and design are making it more feasible to expand our underground cities, while ensuring they are not in danger from collapses. Our foes will find it particularly difficult to disrupt our industrial output, with almost all factories located safely in the deeper reaches."
+tech_hyena_misc_a:0 "Heavy Machinery In Mining"
+tech_hyena_misc_a_desc:0 "It is not enough to rely on strength to excavate ore - heavy machinery must be imported, built and utilised to expand our mining operations, while the unrefined ore is processed and turned into a useful material much quicker than before."
+tech_hyena_misc_b:0 "Industrial Growth"
+tech_hyena_misc_b_desc:0 "Few things make the dogs happier than a long day at the forge, creating both consumer goods and military equipment for their nation. It is vital to modernise our production centres, so that the state as a whole may benefit and progress further."
+tech_hyena_misc_c:0 "Modern Mining Industry"
+tech_hyena_misc_c_desc:0 "Unparalleled in both our resource output and technologies utilised in the process, the Diamond Dogs are at the forefront of any major excavation project in the world."
+tech_hyena_army:0 "Mountain Home"
+tech_hyena_army_desc:0 "The dog biology makes them particularly adapt in crossing rough environment, such as hills and mountains. Training our soldiers how to be better handle the terrain while carrying heavy equipment would improve the speed of our operations."
+ME_MOUNTAIN_HOME_TOOLTIP:0 "    §YMountain§!: Movement: §G+10%§!\n    §YHill§!: Movement: §G+5%§!\n"
+tech_hyena_army2:0 "Mountain Training"
+tech_hyena_army2_desc:0 "Specialised tactics and strategies are required to perform optimally in the rough terrain dogs call home."
+tech_hyena_army2_tt:0 "    §YMountain§!:\n     Attack: §G+15%§!\n     Defence: §G+5%§!\n§Y    Hill§!:\n     Attack: §G+7%§!\n     Defence: §G+3%§!\n"
+tech_hyena_army_atk3:0 "Offensive Tunneling"
+tech_hyena_army_atk3_desc:0 "Few species read the ground as well as the dogs. Trained sappers will bypass enemy fortifications with multiple tunnels from which our forces can attack, trapping the defenders from both sides."
+tech_hyena_army_def3:0 "Defensive Tunneling"
+tech_hyena_army_def3_desc:0 "There is no firmer trench than one located underground. Our foes' numbers and airplanes will matter little once they are forced to attack us in our underground fortifications."
+tech_hyena_army4:0 "Advanced Fortifications"
+tech_hyena_army4_desc:0 "The sheer amount of resources dogs possess makes it particularly easy for them to establish defences wherever they are needed, in a short amount of time."
+tech_hyena_army5:0 "Mountain Training II"
+tech_hyena_army5_desc:0 "Further improvements in our mountain fighting tehniques will make dogs the unmatched force when it comes to battles on our terrain of choice."
+tech_hyena_army5_tt:0 "    §YMountain§!:\n     Attack: §G+5%§!\n     Defence: §G+5%§!\n§Y    Hill§!:\n     Attack: §G+3%§!\n     Defence: §G+2%§!\n"
+tech_hyena_army6:0 "Advanced Tunneling"
+tech_hyena_army6_desc:0 "A Diamond Dog tunnel is perhaps the safest place one can be during an air raid. It is simply very wasteful to destroy the very ground itself, even with modern explosives."

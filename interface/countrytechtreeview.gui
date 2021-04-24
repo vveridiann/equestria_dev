@@ -5085,7 +5085,7 @@ guiTypes = {
 			}
 		}
 		containerWindowType = {
-			name = "hye_folder"
+			name = "hyena_folder"
 			position = { x=0 y=47 }
 			size = { width = 100%% height = 100%% }
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
@@ -5121,19 +5121,80 @@ guiTypes = {
 
 			}
 			instantTextBoxType = {
-				name = "hye_dervishes_subtitle"
-				position = { x = 100 y = 50 }
+				name = "hyena_subtitle"
+				position = { x = 100 y = 248 }
 				font = "hoi_33"
 				borderSize = {x = 0 y = 4}
-				text = "title_hye_dervishes_subtitle"
+				text = "TITLE_HYENA_SUBTITLE"
 				maxWidth = 600
 				maxHeight = 62
 				format = left
 				Orientation = "UPPER_LEFT"
 			}
+
+			instantTextBoxType = {
+				name = "hyena_dervishes_subtitle"
+				position = { x = 100 y = 108 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_HYENA_DERVISHES_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "diamond_dog_industry_subtitle"
+				position = { x = 100 y = 388 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_DIAMOND_DOG_INDUSTRY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "hyena_army_subtitle"
+				position = { x = 100 y = 808 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_DIAMOND_DOG_ARMY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_hyena_misc_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
 			gridboxtype = {
 				name = "tech_hye_start_tree"
-				position = { x = 100 y = 150 }
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_dervishes_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_hyena_army_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
@@ -5350,8 +5411,8 @@ guiTypes = {
 				clicksound = click_default
 			}
 			buttonType = {
-				position = { x = 1210 y = 0 }
-				name = "hye_folder_tab"
+				position = { x = 1121 y = 0 }
+				name = "hyena_folder_tab"
 				quadTextureSprite = "GFX_generic_folder_tab"
 				frame = 1
 				clicksound = click_default
@@ -7602,7 +7663,7 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
-		name = "techtree_hye_folder_item"
+		name = "techtree_hyena_folder_item"
 		position = { x=0 y=5 }
 		size = { width = 72 height = 72 }
 		clipping = no
