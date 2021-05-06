@@ -405,6 +405,7 @@ country_event = {
 			}
 		}
 		load_focus_tree = HYE_house_divided
+		complete_national_focus = HYE_famka_death
 		remove_ideas = {
 			HYE_regency
 		}
@@ -809,7 +810,7 @@ country_event = {
 	#picture = 
 	is_triggered_only = yes
 	option = {
-		name = hyenia_troubles.10.b
+		name = hyenia_troubles.10.a
 		add_to_variable = {
 			HYE_general_score = 1
 		}
