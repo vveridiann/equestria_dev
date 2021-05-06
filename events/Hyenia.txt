@@ -525,6 +525,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_citizens_spy
+		custom_effect_tooltip = hyenia_troubles.1.a_tt
 	}
 	option = {
 		name = hyenia_troubles.1.b
@@ -532,6 +533,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_citizens_warrior
+		custom_effect_tooltip = hyenia_troubles.1.b_tt
 	}
 }
 
@@ -551,6 +553,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_refugees_spy
+		custom_effect_tooltip = hyenia_troubles.2.a_tt
 	}
 	option = {
 		name = hyenia_troubles.2.b
@@ -558,6 +561,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_refugees_warrior
+		custom_effect_tooltip = hyenia_troubles.2.b_tt
 	}
 }
 
@@ -577,6 +581,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_enlarge_cities_spy
+		custom_effect_tooltip = hyenia_troubles.3.a_tt
 	}
 	option = {
 		name = hyenia_troubles.3.b
@@ -584,6 +589,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_enlarge_cities_warrior
+		custom_effect_tooltip = hyenia_troubles.3.b_tt
 	}
 }
 
@@ -603,6 +609,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_relocation_spy
+		custom_effect_tooltip = hyenia_troubles.4.a_tt
 	}
 	option = {
 		name = hyenia_troubles.4.b
@@ -610,6 +617,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_relocation_warrior
+		custom_effect_tooltip = hyenia_troubles.4.b_tt
 	}
 }
 
@@ -629,6 +637,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_sand_people_spy
+		custom_effect_tooltip = hyenia_troubles.5.a_tt
 	}
 	option = {
 		name = hyenia_troubles.5.b
@@ -636,6 +645,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_sand_people_warrior
+		custom_effect_tooltip = hyenia_troubles.5.b_tt
 	}
 }
 
@@ -655,6 +665,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_smugglers_spy
+		custom_effect_tooltip = hyenia_troubles.6.a_tt
 	}
 	option = {
 		name = hyenia_troubles.6.b
@@ -662,6 +673,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_smugglers_warrior
+		custom_effect_tooltip = hyenia_troubles.6.b_tt
 	}
 }
 
@@ -731,6 +743,7 @@ country_event = {
 			complete_national_focus = HYE_monarchy_support
 			set_country_flag = hye_promise_monarchy_general
 		}
+		custom_effect_tooltip = hyenia_troubles.72.a_tt
 	}
 }
 
@@ -753,6 +766,7 @@ country_event = {
 			complete_national_focus = HYE_monarchy_support
 			set_country_flag = hye_promise_monarchy_spy
 		}
+		custom_effect_tooltip = hyenia_troubles.73.a_tt
 	}
 }
 
@@ -789,6 +803,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_reclaimed_lands_spy
+		custom_effect_tooltip = hyenia_troubles.9.a_tt
 	}
 	option = {
 		name = hyenia_troubles.9.b
@@ -796,6 +811,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_reclaimed_lands_warrior
+		custom_effect_tooltip = hyenia_troubles.9.b_tt
 	}
 }
 
@@ -815,6 +831,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_army_size
+		custom_effect_tooltip = hyenia_troubles.10.a_tt
 	}
 }
 
@@ -851,6 +868,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_rebuilding
+		custom_effect_tooltip = hyenia_troubles.12.a_tt
 	}
 }
 
@@ -888,6 +906,7 @@ country_event = {
 			HYE_spymaster_score = 1
 		}
 		set_country_flag = hye_promise_partisans_spy
+		custom_effect_tooltip = hyenia_troubles.14.a_tt
 	}
 	option = {
 		name = hyenia_troubles.14.b
@@ -895,6 +914,7 @@ country_event = {
 			HYE_general_score = 1
 		}
 		set_country_flag = hye_promise_partisans_warrior
+		custom_effect_tooltip = hyenia_troubles.14.b_tt
 	}
 }
 
@@ -989,6 +1009,7 @@ country_event = {
 		hye_start_promises_missions = yes
 		load_focus_tree = HYE_hyenian_compromise
 		name = hyenia_troubles.15.c
+		custom_effect_tooltip = hyenia_troubles.15.c_tt
 	}
 	option = {
 		#lady inquistor wins by a lot
@@ -1006,6 +1027,7 @@ country_event = {
 		hye_start_promises_missions = yes
 		load_focus_tree = HYE_hyenian_compromise
 		name = hyenia_troubles.15.e
+		custom_effect_tooltip = hyenia_troubles.15.e_tt
 	}
 }
 
