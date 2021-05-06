@@ -107,6 +107,8 @@ HYE_thunder_war_decisions = {
 		}
 	}
 }
+
+
 HEY_promises_missions = {
 	hye_promise_citizens = {
 		icon = decision_eng_trade_unions_support
@@ -136,7 +138,22 @@ HEY_promises_missions = {
 			add_war_support = -0.1
 		}
 		complete_effect = {
-			add_war_support = 0.05
+			if = {
+				limit = {
+					has_country_flag = hye_promise_citizens_spy
+				}
+				add_ideas = {
+					HYE_promise_citizen_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_citizens_warrior
+				}
+				add_ideas = {
+					HYE_promise_citizen_furasho
+				}
+			}
 		}
 	}
 	hye_promise_refugees = {
@@ -171,8 +188,23 @@ HEY_promises_missions = {
 			add_political_power = -75
 		}
 		complete_effect = {
-			add_stability = 0.05
-			add_political_power = 100
+			if = {
+				limit = {
+					has_country_flag = hye_promise_refugees_spy
+				}
+				add_ideas = {
+					HYE_promise_refugee_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_refugees_warrior
+				}
+				add_timed_idea = {
+					HYE_promise_refugee_furasho
+					days = 90
+				}
+			}
 		}
 	}
 	hye_promise_enlarge_cities = {
@@ -197,19 +229,26 @@ HEY_promises_missions = {
 			always = no
 		}
 		available = {
-			1045 = {
-				industrial_complex > 3
-			}
-			1040 = {
-				industrial_complex > 3
-			}
+			has_tech = concentrated_industry2
 		}
 		timeout_effect = {
 			add_stability = -0.15
 		}
 		complete_effect = {
-			one_random_industrial_complex = yes
-			one_random_industrial_complex = yes
+			if = {
+				limit = {
+					has_country_flag = hye_promise_enlarge_cities_spy
+				}
+				one_random_industrial_complex = yes
+				one_random_industrial_complex = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_enlarge_cities_warrior
+				}
+				one_random_arms_factory = yes
+				one_random_arms_factory = yes
+			}
 		}
 	}
 	hye_promise_relocation = {
@@ -234,17 +273,28 @@ HEY_promises_missions = {
 			always = no
 		}
 		available = {
-			all_controlled_state = {
-				is_core_of = ROOT
-				infrastructure > 2
-			}
+			has_tech = dispersed_industry2
 		}
 		timeout_effect = {
 			add_stability = -0.15
 		}
 		complete_effect = {
-			one_random_arms_factory = yes
-			one_random_industrial_complex = yes
+			if = {
+				limit = {
+					has_country_flag = hye_promise_refugees_spy
+				}
+				add_ideas = {
+					HYE_promise_relocation_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_refugees_warrior
+				}
+				add_ideas = {
+					HYE_promise_relocation_furasho
+				}
+			}
 		}
 	}
 	hye_promise_sand_people = {
@@ -276,26 +326,44 @@ HEY_promises_missions = {
 			add_war_support = -0.05
 		}
 		complete_effect = {
-			division_template = {
-				name = "Desert Hyenas"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
+			if = {
+				limit = {
+					has_country_flag = hye_promise_sand_people_spy
+				}
+				add_ideas = {
+					HYE_promise_relocation_masaska
 				}
 			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Desert Hyenas\" division_template = \"Desert Hyenas\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-					owner = BAR
+			if = {
+				limit = {
+					has_country_flag = hye_promise_sand_people_warrior
 				}
-				create_unit = {
-					division = "name = \"Desert Hyenas\" division_template = \"Desert Hyenas\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
-					owner = BAR
+				add_ideas = {
+					HYE_promise_relocation_furasho
 				}
-			}	
+				division_template = {
+					name = "Desert Hyenas"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Desert Hyenas\" division_template = \"Desert Hyenas\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+						owner = HYE
+					}
+					create_unit = {
+						division = "name = \"Desert Hyenas\" division_template = \"Desert Hyenas\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+						owner = HYE
+					}
+				}
+			}
+
+			
 		}
 	}
 	hye_promise_smugglers = {
@@ -331,7 +399,22 @@ HEY_promises_missions = {
 			add_political_power = -100
 		}
 		complete_effect = {
-			one_random_arms_factory = yes
+			if = {
+				limit = {
+					has_country_flag = hye_promise_smugglers_spy
+				}
+				add_ideas = {
+					HYE_promise_smugglers_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_smugglers_warrior
+				}
+				add_ideas = {
+					HYE_promise_smugglers_furasho
+				}
+			}
 		}
 	}
 	hye_promise_monarchy = {
@@ -375,7 +458,20 @@ HEY_promises_missions = {
 			add_political_power = -75
 		}
 		complete_effect = {
-			add_political_power = 150
+			if = {
+				limit = {
+					has_country_flag = hye_promise_monarchy_spy
+				}
+				add_ideas = {
+					HYE_promise_monarchy_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = hye_promise_monarchy_general
+				}
+				add_stability = 0.1
+			}
 		}
 	}
 	hye_promise_reclaimed_lands = {
@@ -414,167 +510,22 @@ HEY_promises_missions = {
 			add_stability = -0.1
 		}
 		complete_effect = {
-			one_random_industrial_complex = yes
-		}
-	}
-	hye_promise_partisans_1 = {
-		icon = decision_eng_trade_unions_support
-		ai_will_do = { factor = 100 }
-		is_good = yes
-		selectable_mission = yes
-		days_mission_timeout = 790   
-		visible = {
-			OR = {
-				AND = {
-					has_country_flag = hye_general_victory
-					has_country_flag = hye_promise_partisans_warrior
+			if = {
+				limit = {
+					has_country_flag = hye_promise_reclaimed_lands_spy
 				}
-				AND = {
-					has_country_flag = hye_spymaster_victory
-					has_country_flag = hye_promise_partisans_spy
+				add_ideas = {
+					HYE_promise_reclaim_masaska
 				}
-			}	
-		}
-		allowed = { 
-			always = no
-		}
-		available = {
-			NOT = {
-				country_exists = THU
 			}
-		}
-		timeout_effect = {
-			add_stability = -0.05
-			add_political_power = -50
-		}
-		complete_effect = {
-			add_stability = 0.05
-		}
-	}
-	hye_promise_partisans_2 = {
-		icon = decision_eng_trade_unions_support
-		ai_will_do = { factor = 100 }
-		is_good = yes
-		selectable_mission = yes
-		days_mission_timeout = 790   
-		visible = {
-			OR = {
-				AND = {
-					has_country_flag = hye_general_victory
-					has_country_flag = hye_promise_partisans_warrior
+			if = {
+				limit = {
+					has_country_flag = hye_promise_reclaimed_lands_warrior
 				}
-				AND = {
-					has_country_flag = hye_spymaster_victory
-					has_country_flag = hye_promise_partisans_spy
+				add_ideas = {
+					HYE_promise_reclaim_furasho
 				}
-			}	
-		}
-		allowed = { 
-			always = no
-		}
-		available = {
-			NOT = {
-				country_exists = CST
 			}
-		}
-		timeout_effect = {
-			add_stability = -0.05
-			add_political_power = -50
-		}
-		complete_effect = {
-			add_stability = 0.05
-		}
-	}
-	hye_promise_partisans_3 = {
-		icon = decision_eng_trade_unions_support
-		ai_will_do = { factor = 100 }
-		is_good = yes
-		selectable_mission = yes
-		days_mission_timeout = 790   
-		visible = {
-			OR = {
-				AND = {
-					has_country_flag = hye_general_victory
-					has_country_flag = hye_promise_partisans_warrior
-				}
-				AND = {
-					has_country_flag = hye_spymaster_victory
-					has_country_flag = hye_promise_partisans_spy
-				}
-			}	
-		}
-		allowed = { 
-			always = no
-		}
-		available = {
-			NOT = {
-				country_exists = CAM
-			}
-		}
-		timeout_effect = {
-			add_stability = -0.05
-			add_political_power = -50
-		}
-		complete_effect = {
-			add_stability = 0.05
-		}
-	}
-	hye_promise_partisans_4 = {
-		icon = decision_eng_trade_unions_support
-		ai_will_do = { factor = 100 }
-		is_good = yes
-		selectable_mission = yes
-		days_mission_timeout = 790   
-		visible = {
-			OR = {
-				AND = {
-					has_country_flag = hye_general_victory
-					has_country_flag = hye_promise_partisans_warrior
-				}
-				AND = {
-					has_country_flag = hye_spymaster_victory
-					has_country_flag = hye_promise_partisans_spy
-				}
-			}	
-		}
-		allowed = { 
-			always = no
-		}
-		available = {
-			NOT = {
-				country_exists = STM
-			}
-		}
-		timeout_effect = {
-			add_stability = -0.05
-			add_political_power = -50
-		}
-		complete_effect = {
-			add_stability = 0.05
-		}
-	}
-	hye_promise_army_size_mission = {
-		icon = decision_eng_trade_unions_support
-		ai_will_do = { factor = 100 }
-		is_good = yes
-		selectable_mission = yes
-		days_mission_timeout = 790   
-		visible = {
-			OR = {
-				has_country_flag = hye_promise_army_size
-			}	
-		}
-		allowed = { 
-			always = no
-		}
-		available = {
-			has_army_manpower = { size > 200000 }
-		}
-		timeout_effect = {
-			add_stability = -0.1
-		}
-		complete_effect = {
-			add_war_support = 0.1
 		}
 	}
 	hye_promise_rebuilding_mission = {
@@ -607,10 +558,128 @@ HEY_promises_missions = {
 			add_war_support = -0.05
 		}
 		complete_effect = {
-			add_stability = 0.1
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Massaska"
+					    ruling_only = yes
+					}
+				}
+				add_country_leader_trait = HYE_masaska_rebuild
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Furasho"
+					    ruling_only = yes
+					}
+				}
+				add_country_leader_trait = HYE_furasho_rebuild
+			}
+		}
+	}
+	hye_promise_partisans = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = hye_general_victory
+					has_country_flag = hye_promise_partisans_warrior
+				}
+				AND = {
+					has_country_flag = hye_spymaster_victory
+					has_country_flag = hye_promise_partisans_spy
+				}
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = THU
+				country_exists = CST
+				country_exists = CAM
+				country_exists = STM
+			}
+		}
+		timeout_effect = {
+			add_stability = -0.1
+			add_political_power = -50
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Massaska"
+					    ruling_only = yes
+					}
+				}
+				add_country_leader_trait = HYE_masaska_victorious
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Furasho"
+					    ruling_only = yes
+					}
+				}
+				add_country_leader_trait = HYE_furasho_victorious
+			}
+		}
+	}
+	hye_promise_army_size_mission = {
+		icon = decision_eng_trade_unions_support
+		ai_will_do = { factor = 100 }
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 790   
+		visible = {
+			OR = {
+				has_country_flag = hye_promise_army_size
+			}	
+		}
+		allowed = { 
+			always = no
+		}
+		available = {
+			has_army_manpower = { size > 200000 }
+		}
+		timeout_effect = {
+			add_stability = -0.05
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Massaska"
+					    ruling_only = yes
+					}
+				}
+				add_ideas = {	
+					HYE_promise_army_masaska
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+					    name = "Furasho"
+					    ruling_only = yes
+					}
+				}
+				add_ideas = {
+					HYE_promise_army_furasho
+				}
+			}
 		}
 	}
 }
+
+
 HEY_massaska_radical = {
 	HYE_assasin_spree_1 = {
 		icon =  generic_decision

@@ -1786,4 +1786,55 @@ leader_traits = {
 			planning_speed = -0.50
 		}
 	}
+
+
+	HYE_furasho_rebuild = {
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+			always = no
+		}
+		modifier = {
+			war_support_factor = 0.1
+		}
+	}
+
+	HYE_masaska_rebuild = {
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+			always = no
+		}
+		modifier = {
+			stability_factor = 0.1
+		}
+	}
+	HYE_furasho_victorious = {
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+			always = no
+		}
+		modifier = {
+			war_support_factor = 0.1
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+		}
+	}
+
+	HYE_masaska_victorious = {
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+			always = no
+		}
+		modifier = {
+			surrender_limit = 0.1
+			resistance_damage_to_garrison_on_our_occupied_states = -0.2
+		}
+	}
 }

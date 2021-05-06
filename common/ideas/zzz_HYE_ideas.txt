@@ -141,6 +141,112 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.025
 			}
 		}
+
+		### IDEAS FOR PROMISES
+		HYE_promise_citizen_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		HYE_promise_citizen_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				materiel_manufacturer_cost_factor = -0.3
+			}
+		}
+		HYE_promise_refugee_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.5
+			}
+		}
+		HYE_promise_refugee_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		HYE_promise_relocation_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				supply_consumption_factor = -0.2
+			}
+		}
+		HYE_promise_relocation_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		HYE_promise_relocation_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				special_forces_cap = 0.1
+			}
+		}
+		HYE_promise_relocation_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			infantry_equipment = {
+				instant = yes
+				build_cost_ic = -0.1
+			}
+			research_bonus = {
+				land_doctrine = -0.1
+			}
+		}
+		HYE_promise_smugglers_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				experience_gain_army = 0.05
+			}
+		}
+		HYE_promise_smugglers_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		HYE_promise_monarchy_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				political_advisor_cost_factor  = -0.3
+			}
+		}
+		HYE_promise_reclaim_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.1
+			}
+		}
+		HYE_promise_reclaim_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		HYE_promise_army_furasho = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				army_org = 0.05
+				training_time_factor = -0.1
+			}
+		}
+		HYE_promise_army_masaska = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				army_org_regain = 0.05
+			}
+		}
+
+
+
+
+
+
+
 		HYE_construction_buff = {
 			picture = anti_soviet_pact			#placeholder
 			modifier = {

@@ -2108,3 +2108,16 @@ country_event = {
 		}
 	}
 }
+
+
+#Just a Test Event
+country_event = {
+	id = hyenia.99999
+	title = hyenia.2.t
+	desc = hyenia.2.d
+	is_triggered_only = yes
+
+	option = {
+		add_ideas = {HYE_promise_citizen_masaska}
+	}
+}
