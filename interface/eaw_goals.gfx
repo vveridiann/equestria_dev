@@ -6726,4 +6726,20 @@ spriteTypes = {
 		name = "GFX_goal_zebra_hammer"
 		texturefile = "gfx/interface/goals/zebra_hammer.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_anyoneleft"
+		texturefile = "gfx/interface/goals/anyoneleft.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_thundariatrollh"
+		texturefile = "gfx/interface/goals/thundariatrollh.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_hyenadefend"
+		texturefile = "gfx/interface/goals/hyenadefend.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_hyenaexile"
+		texturefile = "gfx/interface/goals/hyenaexile.tga"
+	}
 }
