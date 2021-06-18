@@ -1,3 +1,7 @@
+############################
+####	History Tree 	####
+############################
+
 shared_focus = {
 	id = HYE_history
 	icon = GFX_goal_thundariatrollh
@@ -255,6 +259,10 @@ shared_focus = {
 		custom_effect_tooltip = HYE_the_long_night1
 	}
 }
+
+############################
+####	Startup Tree 	####
+############################
 
 shared_focus = {
 	id = HYE_startup
@@ -707,6 +715,10 @@ shared_focus = {
 		}
 	}
 }
+
+####################################
+####	(Fake) Post-War Tree 	####
+####################################
 
 shared_focus = {
 	id = HYE_end_of_the_war
