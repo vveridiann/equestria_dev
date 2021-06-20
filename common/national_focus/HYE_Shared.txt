@@ -8412,7 +8412,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_qaylid_rebirth"
-		add_political_power 50
+		country_event = {
+ 		   id = hyenia_qaylid.1
+    	}
+		
 	}
 }
 
@@ -8431,7 +8434,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_dilligence_and_dedication"
-		add_political_power = 50
+		country_event = {
+ 		   id = hyenia_qaylid.2
+    	}
 	}
 }
 
@@ -8450,7 +8455,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_transience_and_change"
-		add_political_power = 50
+		country_event = {
+ 		   id = hyenia_qaylid.3
+    	}
 	}
 }
 
@@ -8459,7 +8466,7 @@ shared_focus = {
 	icon = GFX_goal_thundariatrollh
 	relative_position_id = HYE_dilligence_and_dedication 
 	x = 1
-	y = 2
+	y = 1
 	prerequisite = {
 		focus = HYE_dilligence_and_dedication 
 	}
@@ -8478,7 +8485,7 @@ shared_focus = {
 	icon = GFX_goal_thundariatrollh
 	relative_position_id = HYE_dilligence_and_dedication 
 	x = -1
-	y = 2
+	y = 1
 	prerequisite = {
 		focus = HYE_dilligence_and_dedication 
 	}
@@ -8497,7 +8504,7 @@ shared_focus = {
 	icon = GFX_goal_thundariatrollh
 	relative_position_id = HYE_transience_and_change
 	x = 1
-	y = 2
+	y = 1
 	prerequisite = {
 		focus = HYE_transience_and_change
 	}
@@ -8516,7 +8523,7 @@ shared_focus = {
 	icon = GFX_goal_thundariatrollh
 	relative_position_id = HYE_transience_and_change
 	x = -1
-	y = 2
+	y = 1
 	prerequisite = {
 		focus = HYE_transience_and_change
 	}
@@ -8530,17 +8537,50 @@ shared_focus = {
 	}
 }
 
+
 shared_focus = {
-	id =  HYE_the_inward_qaylid  #check later, thunder
+	id =  HYE_the_formulated_qaylid
 	icon = GFX_goal_thundariatrollh
 	relative_position_id = HYE_qaylid_rebirth
-	x = 1
-	y = 4
-	prerequisite = {	
-		focus = HYE_virtuous_future
+	x = 0
+	y = 3
+	prerequisite = {
 		focus = HYE_trap_of_the_past
-	mutually_exclusive = { focus = HYE_the_worldly_qaylid }		
+	}
+	prerequisite = {
+		focus = HYE_virtuous_future
+	}
+	prerequisite = {
+		focus = HYE_value_skills_not_items
+	}
+	prerequisite = {
+		focus = HYE_action_reflection
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_the_formulated_qaylid"
+		add_political_power = 50
+	}
+}
 
+
+shared_focus = {
+	id =  HYE_the_inward_qaylid 
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_transience_and_change
+	x = 0
+	y = 3
+	prerequisite = {	
+		focus = HYE_the_formulated_qaylid
+	}
+	available = {
+ 		has_country_flag = hye_spymaster_victory
+	}
+	mutually_exclusive = { 
+		focus = HYE_the_worldly_qaylid 
 	}
 	cost = 3
 	ai_will_do = {
@@ -8548,21 +8588,23 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_the_inward_qaylid"
-		add_political_power = 50
 	}
 }
 
 shared_focus = { 
-	id =  HYE_the_worldly_qaylid  #check later, thunder
+	id =  HYE_the_worldly_qaylid  
 	icon = GFX_goal_thundariatrollh
-	relative_position_id = HYE_qaylid_rebirth
-	x = -1
-	y = 4
+	relative_position_id = HYE_dilligence_and_dedication
+	x = 0
+	y = 3
 	prerequisite = {
-		focus = HYE_action_reflection
-		focus = HYE_value_skills_not_items
-	mutually_exclusive = { focus = HYE_the_inward_qaylid }
-
+		focus = HYE_the_formulated_qaylid
+	}
+	available = {
+		has_country_flag = hye_general_victory
+	}
+	mutually_exclusive = { 
+		focus = HYE_the_inward_qaylid 
 	}
 	cost = 3
 	ai_will_do = {
@@ -8574,24 +8616,3 @@ shared_focus = {
 	}
 }
 
-
-
-shared_focus = {
-	id =  HYE_the_formulated_qaylid
-	icon = GFX_goal_thundariatrollh
-	relative_position_id = HYE_qaylid_rebirth
-	x = 0
-	y = 5
-	prerequisite = {
-		focus = HYE_the_worldly_qaylid
-		focus = HYE_the_inward_qaylid
-	
-	cost = 3
-	ai_will_do = {
-		factor = 100
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: HYE_the_formulated_qaylid"
-		add_political_power = 50
-	}
-}

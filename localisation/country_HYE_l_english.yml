@@ -700,6 +700,17 @@ HYE_massaska_radical2:0 "The Path Of Stability"
  hyenia_masaska.8.d:0 ""
  hyenia_masaska.8.a:0 ""
 
+ hyenia_qaylid.1.t:0 "Codifying the Qaylid"
+ hyenia_qaylid.1.d:0 "books are nice, let's make qaylid book"
+ hyenia_qaylid.2.a:0 "yay, learning"
+ hyenia_qaylid.2.t:0 "Honing the Body, Spirit and Mind"
+ hyenia_qaylid.2.d:0 "to decay is to die"
+ hyenia_qaylid.1.a:0 "yay, learning"
+ hyenia_qaylid.3.t:0 "Being is not a State, but a Process"
+ hyenia_qaylid.3.d:0 "philosophy happens here"
+ hyenia_qaylid.3.a:0 "yay, learning"
+
+
 
 HYE_history:0 "The Darkest of Days"
 HYE_history_desc:0 "Our front lines laid broken, our capitol was being devoured by the flames and our queen had been slain. The Queendom of Hyenia was no more, and as the last, scattered remnants of the once mighty armies retreated in desperation, darkness fell above us all. The war was over. We lost."
@@ -1131,17 +1142,20 @@ HYE_jebane:0 "HYE_jebane"
   hye_had_industrialised:0 "Had industrialised"
   HYE_nation_was_reunited:0 "Nation is reunited"
   hye_has_start_industrializastion:0 "Has begin industrialising"
+  hye_general_victory:0 "Furasho is ascendant"
+  hye_spymaster_victory:0 "Masaska is ascendant"
+
   ### tooltips
   HYE_enable_forced_assmilation:0 "everyone bad, dog good"
   HYE_total_mob_till_industrialised:0 "HYE_total_mob_till_industrialised"
-HYE_benefits_countries_with_nap:0 "Also benefits countries with non agression pact"
+  HYE_benefits_countries_with_nap:0 "Also benefits countries with non agression pact"
   ### leader traits ###
   HYE_prodigal_son:0 "Prodigal Son"
 
 
   HYE_centaur_alliance:0 "Ancient Pact"
-HYE_patriotic_burden:0 "Patriotic Burden"
-HYE_patriotic_burden2:0 "Eased Burden"
+  HYE_patriotic_burden:0 "Patriotic Burden"
+  HYE_patriotic_burden2:0 "Eased Burden"
 
 
 ############################################################################################################
@@ -1228,9 +1242,6 @@ HYE_international_affairs_idea_spy_lar:0 "Active foreign Affairs"
 HYE_international_affairs_idea_spy:0 "Active foreign Affairs"
 HYE_international_affairs_idea_general:0 "Active foreign Affairs"
 HYE_yeti_guiding_pawn_idea:0 ""
-
-
-
 
 
   ######### spy operations

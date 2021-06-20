@@ -4,6 +4,8 @@ add_namespace = hyenia_troubles
 add_namespace = hyenia_flavour
 add_namespace = hyenia_hero
 add_namespace = hyenia_masaska
+add_namespace = hyenia_qaylid
+
 country_event = {
 	#War council, triggered via event on focus tree. The War to Come
 	id = hyenia.1
@@ -2106,6 +2108,52 @@ country_event = { #debug event for loading trees
 			expire = "1965.1.1"
 			ideology = harmonic_theocracy
 		}
+	}
+}
+
+
+
+# Qaylid events #
+
+country_event = {
+	id = hyenia_qaylid.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hyenia_qaylid.1"
+	}
+	title = hyenia_qaylid.1.t
+	desc = hyenia_qaylid.1.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_qaylid.1.a
+	}
+}
+
+country_event = {
+	id = hyenia_qaylid.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hyenia_qaylid.2"
+	}
+	title = hyenia_qaylid.2.t
+	desc = hyenia_qaylid.2.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_qaylid.2.a
+	}
+}
+
+country_event = {
+	id = hyenia_qaylid.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hyenia_qaylid.3"
+	}
+	title = hyenia_qaylid.3.t
+	desc = hyenia_qaylid.3.d
+	#picture =
+	is_triggered_only = yes
+	option = {
+		name = hyenia_qaylid.3.a
 	}
 }
 
