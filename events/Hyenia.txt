@@ -918,7 +918,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #Note, this event seems to be WIP, as not all the trees are done yet. If both are equal or scores are close, then it seems that a "Hyenian Compromise" tree in HYE_hyenian_compromise is loaded.
 	#end event
 	id = hyenia_troubles.15
 	immediate = {
@@ -929,16 +929,16 @@ country_event = {
 	#picture = 
 	is_triggered_only = yes
 	option = {
-		#lady inquistor wins by slight margin
+		#Furasho wins by Large margin
 		trigger = {
 			check_variable = {
 				HYE_general_score = 4
 			}
 		}
-		set_country_flag = hye_spymaster_victory
+		set_country_flag = hye_general_victory
 		clr_country_flag = hye_promise_monarchy_spy
 		hye_start_promises_missions = yes
-		load_focus_tree = HYE_massaska_radical
+		load_focus_tree = HYE_furasho_radical
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.1
@@ -966,23 +966,23 @@ country_event = {
 		name = hyenia_troubles.15.a
 	}
 	option = {
-		#spy wins by slight margin
+		#Massaska wins by Large margin
 		trigger = {
 			check_variable = {
 				HYE_spymaster_score = 4
 			}
 		}
-		set_country_flag = hye_general_victory
+		set_country_flag = hye_spymaster_victory
 		clr_country_flag = hye_promise_monarchy_general
 		hye_start_promises_missions = yes
-		load_focus_tree = HYE_furasho_radical
-		add_popularity = {
-			ideology = communism
-			popularity = 0.2
-		}
-		set_politics = {
-			ruling_party = communism
-		}
+		load_focus_tree = HYE_massaska_radical
+		#add_popularity = {
+		#	ideology = communism
+		#	popularity = 0.2
+		#}
+		#set_politics = {
+		#	ruling_party = communism
+		#}
 		create_country_leader = {
 			name = "Massaska"
 			picture = "tba"
@@ -994,7 +994,7 @@ country_event = {
 		name = hyenia_troubles.15.b
 	}
 	option = {
-		#spy wins by a lot
+		#Masaska wins by a bit
 		trigger = {
 			check_variable = {
 				var = HYE_spymaster_score
@@ -1012,7 +1012,7 @@ country_event = {
 		custom_effect_tooltip = hyenia_troubles.15.c_tt
 	}
 	option = {
-		#lady inquistor wins by a lot
+		#Furasho wins by a bit
 		trigger = {
 			check_variable = {
 				var = HYE_general_score
@@ -2016,7 +2016,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #debug event for loading trees
 	id = hyenia.112997
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event hyenia.2"
