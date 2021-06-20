@@ -710,7 +710,7 @@ HYE_collapse_the_tunnels_desc:0 "Though the throne lay broken and the queen slai
 HYE_collapse_the_tunnels1:0 "Every Hyena who gets the chance will flee north, desperate to escape the ravages of the Yetis."
 
 HYE_fighting_retreat:0 "One Final Stand"
-HYE_fighting_retreat_desc:0 ""Our duty is to Qalbi Weyn and the Queen. Such it has been, such it will remain. There are no questions to be answered here. I ask you this, my fellow Ironpaws: do you believe, or are you as low as any rat?! In this moment, will you stand and fight not for victory, but because it is your duty?! Will you laugh in the face of death, and show the mettle of the royal guard to the very end?!""  
+HYE_fighting_retreat_desc:0 ""Our duty is to Qalbi Weyn and the Queen. Such it has been, such it will remain, and there is no room for doubt in this. I ask you this, my fellow Ironpaws: do you believe, or are you as low as any rat?! In this moment, will you stand and fight not for victory, but because it is your duty?! Will you laugh in the face of death, and show the mettle of the royal guard to the very end?!""  
 HYE_fighting_retreat1:0 "The Yeti forces will be held at bay by Warmaster Ciddiyo and the last members of the royal guard, buying time - however little - for the refugees."
 
 HYE_whatever_aid_we_can_find:0 "Is Anyone Left...?"
@@ -1106,6 +1106,27 @@ HYE_western_focus:0 "HYE_western_focus"
 HYE_kurwy:0 "HYE_kurwy"
 HYE_chuje:0 "HYE_chuje"
 HYE_jebane:0 "HYE_jebane"
+
+ ### Qaylid Tree ###
+
+ HYE_qaylid_rebirth:0 "The Qaylid Reborn"
+ HYE_qaylid_rebirth_desc:0 "The death of Fahamka shook our belief system to its very core"
+ HYE_dilligence_and_dedication:0 "Dilligence and Dedication"
+ HYE_dilligence_and_dedication_desc:0 "GARB"
+ HYE_trap_of_the_past:0 "The Trap of the Past"
+ HYE_trap_of_the_past_desc:0 "BRÖTHER"
+ HYE_value_skills_not_items:0 "Value in Skills, not Items"
+ HYE_value_skills_not_items_desc:0 "LÖOP"
+ HYE_virtuous_future:0 "The Virtuous Future"
+ HYE_virtuous_future_desc:0 "ÖPÖ"
+ HYE_action_reflection:0 "Action and Reflection"
+ HYE_action_reflection_desc:0  "ROOOG"
+ HYE_transience_and_change:0 "Transience and Change"
+ HYE_transience_and_change_desc:0 "GHUR"
+ HYE_the_formulated_qaylid:0 "The United Qaylid"
+ HYE_the_formulated_qaylid_desc:0 ""
+ 
+
  ### custom conditions ###
   hye_had_industrialised:0 "Had industrialised"
   HYE_nation_was_reunited:0 "Nation is reunited"

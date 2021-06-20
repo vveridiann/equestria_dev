@@ -8391,3 +8391,207 @@ shared_focus = {
 		}
 	}
 }
+
+
+
+############################
+#### Qaylid Tree (test)	####
+############################
+
+
+shared_focus = {
+	id = HYE_qaylid_rebirth
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_the_long_night
+	x = 4
+	y = 2
+
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_qaylid_rebirth"
+		add_political_power 50
+	}
+}
+
+shared_focus = {
+	id = HYE_dilligence_and_dedication
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_qaylid_rebirth
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = HYE_qaylid_rebirth 
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_dilligence_and_dedication"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = HYE_transience_and_change
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_qaylid_rebirth
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = HYE_qaylid_rebirth 
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_transience_and_change"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = HYE_value_skills_not_items
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_dilligence_and_dedication 
+	x = 1
+	y = 2
+	prerequisite = {
+		focus = HYE_dilligence_and_dedication 
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_value_skills_not_items"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = HYE_action_reflection
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_dilligence_and_dedication 
+	x = -1
+	y = 2
+	prerequisite = {
+		focus = HYE_dilligence_and_dedication 
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_action_reflection"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = HYE_virtuous_future
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_transience_and_change
+	x = 1
+	y = 2
+	prerequisite = {
+		focus = HYE_transience_and_change
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_virtuous_future"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id =  HYE_trap_of_the_past
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_transience_and_change
+	x = -1
+	y = 2
+	prerequisite = {
+		focus = HYE_transience_and_change
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_trap_of_the_past"
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id =  HYE_the_inward_qaylid  #check later, thunder
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_qaylid_rebirth
+	x = 1
+	y = 4
+	prerequisite = {	
+		focus = HYE_virtuous_future
+		focus = HYE_trap_of_the_past
+	mutually_exclusive = { focus = HYE_the_worldly_qaylid }		
+
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_the_inward_qaylid"
+		add_political_power = 50
+	}
+}
+
+shared_focus = { 
+	id =  HYE_the_worldly_qaylid  #check later, thunder
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_qaylid_rebirth
+	x = -1
+	y = 4
+	prerequisite = {
+		focus = HYE_action_reflection
+		focus = HYE_value_skills_not_items
+	mutually_exclusive = { focus = HYE_the_inward_qaylid }
+
+	}
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_the_worldly_qaylid"
+		add_political_power = 50
+	}
+}
+
+
+
+shared_focus = {
+	id =  HYE_the_formulated_qaylid
+	icon = GFX_goal_thundariatrollh
+	relative_position_id = HYE_qaylid_rebirth
+	x = 0
+	y = 5
+	prerequisite = {
+		focus = HYE_the_worldly_qaylid
+		focus = HYE_the_inward_qaylid
+	
+	cost = 3
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: HYE_the_formulated_qaylid"
+		add_political_power = 50
+	}
+}

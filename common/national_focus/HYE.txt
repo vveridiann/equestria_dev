@@ -15,6 +15,7 @@ focus_tree = {
 	shared_focus = HYE_history
 	shared_focus = HYE_startup
 	shared_focus = HYE_end_of_the_war
+	shared_focus = HYE_qaylid_rebirth
 }
 
 focus_tree = {
