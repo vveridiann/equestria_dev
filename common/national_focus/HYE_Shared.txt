@@ -8476,7 +8476,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_value_skills_not_items"
-		add_political_power = 50
+				add_ideas = {
+			HYE_skill_no_items
+		}
 	}
 }
 
@@ -8496,6 +8498,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_action_reflection"
 		add_political_power = 50
+		add_ideas = {
+			HYE_act_reflect
+		}
 	}
 }
 
@@ -8515,6 +8520,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_virtuous_future"
 		add_political_power = 50
+		add_ideas = {
+			HYE_virtue_future
+		}
 	}
 }
 
@@ -8534,6 +8542,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_trap_of_the_past"
 		add_political_power = 50
+		add_ideas = {
+			HYE_trap_past
+		}
 	}
 }
 
@@ -8562,25 +8573,36 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_the_formulated_qaylid"
-		add_political_power = 50
+		custom_effect_tooltip = HYE_the_formulated_qaylid1
+		hidden_effect = {
+			remove_ideas = {
+				HYE_trap_past
+				HYE_virtue_future
+				HYE_act_reflect
+				HYE_skill_no_items
+				}
+			add_ideas = { 
+				HYE_new_qaylid
+			 	
+			}
+		}
 	}
 }
-
 
 shared_focus = {
 	id =  HYE_the_inward_qaylid 
 	icon = GFX_goal_thundariatrollh
-	relative_position_id = HYE_transience_and_change
+	relative_position_id = HYE_the_formulated_qaylid
 	x = 0
-	y = 3
+	y = 2
 	prerequisite = {	
 		focus = HYE_the_formulated_qaylid
 	}
 	available = {
  		has_country_flag = hye_spymaster_victory
 	}
-	mutually_exclusive = { 
-		focus = HYE_the_worldly_qaylid 
+	allow_branch = {
+ 		has_country_flag = hye_spymaster_victory
 	}
 	cost = 3
 	ai_will_do = {
@@ -8588,23 +8610,27 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_the_inward_qaylid"
+			swap_ideas = { 
+  			remove_idea = HYE_new_qaylid 
+  			add_idea = HYE_inside_qaylid
+		}	
 	}
 }
 
 shared_focus = { 
 	id =  HYE_the_worldly_qaylid  
 	icon = GFX_goal_thundariatrollh
-	relative_position_id = HYE_dilligence_and_dedication
+	relative_position_id = HYE_the_formulated_qaylid
 	x = 0
-	y = 3
+	y = 2
 	prerequisite = {
 		focus = HYE_the_formulated_qaylid
 	}
 	available = {
 		has_country_flag = hye_general_victory
 	}
-	mutually_exclusive = { 
-		focus = HYE_the_inward_qaylid 
+	allow_branch = {
+		has_country_flag = hye_general_victory
 	}
 	cost = 3
 	ai_will_do = {
@@ -8612,7 +8638,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: HYE_the_worldly_qaylid"
-		add_political_power = 50
+			swap_ideas = { 
+  			remove_idea = HYE_new_qaylid 
+  			add_idea = HYE_world_qaylid
+		}
 	}
 }
-

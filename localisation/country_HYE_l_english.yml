@@ -243,6 +243,8 @@ HYE_eberweyn:0 "Eberweyn"
 HYE_dareere:0 "Dareere"
 HYE_masaska_chief:0 "Masaska"
 HYE_furasho_chief:0 "Furasho"
+HYE_masaska_advisor:0 "Masaska"
+HYE_masaska_advisorlar:0 "Masaska"
 #Military Advisors
 
 ##Events##
@@ -328,7 +330,7 @@ hyenia.13.a:0 "Are we really going to tear each other apart now?"
 #hyenia.18.b:0 "Masaska's wisdom and respect for traditions brings the Hyenas to him."
 
 #hyenia.19.t:0 "The Boiling Point" 
-#hyenia.19.d:0 "Stepping into the building, Furasho seethed with rage as she looked around herself, her paw on her sword.\n\n"Masaska!" she snarled, "I know you are here, you rat! Come out, right now! Or are you going to remain hiding and cowering as you tear the dervishes apart!?"\n\n"All I’ve done is to stand by Fahamka’s teachings, oh would-be-queen," Masaska’s voice echoed from the shadows. "Rip and tear at them as much as you please, I will not stand idly by as you forge yourself a crown with them." \n\n“Fool! Mad mutt! Hyenia is broken, it broke when the Storm King tore us apart! Would you leave it all to remain broken, all because you fear the burden of leadership!?"\n\n"That burden was never ours to shoulder!" Masaska snapped. "We are not a conquering army and never were! You never understood that, being so trapped in the martial world that you couldn’t ever comprehend anything beyond the battlefield. We guide the individual who seeks wisdom! We do not twist Fahamka’s teachings to suit our power hunger!"\n\n"And instead we leave all of Hyenia to rot!?" Furasho snarled as she looked around, searching the giant chamber for Masaska. "Who would you place in charge?! Village elders and single surviving nobles?! Call it wisdom, I call it cowardice! A cowardice that would destroy all we worked for." \n\n"Then stand down!" Masaska’s voice pleaded with her. "Seek another path, guide instead of rule! We can still shape Hyenia for the better. We do not have to let it go to this point." \n\n"I will not be bullied into submission," Furasho growled as she drew her sword. "Face me. If you have any courage left in you, let us settle this here and now. Neither will yield, so one must die, lest the dervishes fall apart." \n\n"Damn you Furasho," Masaska growled as he appeared behind her in the shadows, his own sword drawn."
+#hyenia.19.d:0 "Stepping into the building, Furasho seethed with rage as she looked around herself, her paw on her sword.\n\n"Masaska!" she snarled, "I know you are here, you rat! Come out, right now! Or are you going to remain hiding and cowering as you tear the dervishes apart!?"\n\n"All I’ve done is to stand by Fahamka’s teachings, oh would-be-queen," Masaska’s voice echoed from the shadows. "Rip and tear at them as much as you please, I will not stand idly by as you forge yourself a crown with them." \n\n"Fool! Mad mutt! Hyenia is broken, it broke when the Storm King tore us apart! Would you leave it all to remain broken, all because you fear the burden of leadership!?"\n\n"That burden was never ours to shoulder!" Masaska snapped. "We are not a conquering army and never were! You never understood that, being so trapped in the martial world that you couldn’t ever comprehend anything beyond the battlefield. We guide the individual who seeks wisdom! We do not twist Fahamka’s teachings to suit our power hunger!"\n\n"And instead we leave all of Hyenia to rot!?" Furasho snarled as she looked around, searching the giant chamber for Masaska. "Who would you place in charge?! Village elders and single surviving nobles?! Call it wisdom, I call it cowardice! A cowardice that would destroy all we worked for." \n\n"Then stand down!" Masaska’s voice pleaded with her. "Seek another path, guide instead of rule! We can still shape Hyenia for the better. We do not have to let it go to this point." \n\n"I will not be bullied into submission," Furasho growled as she drew her sword. "Face me. If you have any courage left in you, let us settle this here and now. Neither will yield, so one must die, lest the dervishes fall apart." \n\n"Damn you Furasho," Masaska growled as he appeared behind her in the shadows, his own sword drawn."
 #hyenia.19.a:0 "This ends now"
 
 #hyenia.20.t:0 "Unquenchable Fire"
@@ -1121,21 +1123,28 @@ HYE_jebane:0 "HYE_jebane"
  ### Qaylid Tree ###
 
  HYE_qaylid_rebirth:0 "The Qaylid Reborn"
- HYE_qaylid_rebirth_desc:0 "The death of Fahamka shook our belief system to its very core"
+ HYE_qaylid_rebirth_desc:0 "Fahamka's teachings has led us to victory, now it will lead us to wisdom. We pledge ourselves to reject the old ways, the greed and the selfish pride that drove us. We will no longer be slaves to our desires but instead transcend them. We rise above what was, and Hyenia will blossom under the guiding principles of the Qaylid."
  HYE_dilligence_and_dedication:0 "Dilligence and Dedication"
- HYE_dilligence_and_dedication_desc:0 "GARB"
+ HYE_dilligence_and_dedication_desc:0 "As each being meets every day facing new choices that never will come again, it behooves the virtuous to make sure they are as capable as they can be when facing them. Laziness wastes the greatest gift of all, while learning and training makes good use of it."
  HYE_trap_of_the_past:0 "The Trap of the Past"
- HYE_trap_of_the_past_desc:0 "BRÖTHER"
+ HYE_trap_of_the_past_desc:0 "Old Enmities and triumphs, your regrets and shames, your old experiences. They all explain who you are, but they justify nothing. To wallow in what was is the mark of the unenlightened, for she who is controlled by the past is doomed to never grow."
  HYE_value_skills_not_items:0 "Value in Skills, not Items"
- HYE_value_skills_not_items_desc:0 "LÖOP"
+ HYE_value_skills_not_items_desc:0 "A good life is not built on items or possessions, but deeds and wisdom. Owning gold means nothing, but knowing how to produce gold coins is knowledge, creating them is to shape the future and using them well is to show virtue."
  HYE_virtuous_future:0 "The Virtuous Future"
- HYE_virtuous_future_desc:0 "ÖPÖ"
+ HYE_virtuous_future_desc:0 "The future holds limitless potential, and to make good use of this potential is the most fundamental of all virtues. Improvement is everything, and it matters not where you were, only what you did with that time. Therefore, she who ever keeps the future in mind when she acts is the one with the potential to better the world."
  HYE_action_reflection:0 "Action and Reflection"
- HYE_action_reflection_desc:0  "ROOOG"
+ HYE_action_reflection_desc:0  "Though the potential of any sentinent creature is limitless, its strength is not. She who seeks to master everything will master nothing, and unplanned zeal is blind. Activity must be followed by rest, and results by evaluation. Failure is not shameful, but failing to learn from said failure is."
  HYE_transience_and_change:0 "Transience and Change"
- HYE_transience_and_change_desc:0 "GHUR"
+ HYE_transience_and_change_desc:0 ""To be" is not a state, but a process. You are not who you were yesterday, and tomorrow you will become a new person. There is no fixed "you", only a work in progress. This is the most important and the hardest lesson to learn: everything changes, and change is existence itself."
  HYE_the_formulated_qaylid:0 "The United Qaylid"
  HYE_the_formulated_qaylid_desc:0 ""
+ HYE_the_formulated_qaylid1:0 "Previously gained Qaylid spirits will be merged into a stronger, unified spirit"
+ HYE_the_worldly_qaylid:0 "The Worldly Qaylid"
+ HYE_the_worldly_qaylid_desc:0 "The worldly aspects of the Qaylid will become central to our understanding of it. The world, like each creature, is a thing to be forged and strengthened, and we are the smiths."
+ HYE_the_inward_qaylid:0 "The Inward Qaylid"
+ HYE_the_inward_qaylid_desc:0 "The internal aspects of the Qaylid will become central to our understanding of it. It is not a dervish's place to seek political power, and true growth is personal."
+
+
  
 
  ### custom conditions ###
@@ -1266,6 +1275,14 @@ HYE_new_kingdom_fascism:0 "Qaylidi Dervishes"
  HYE_new_kingdom_neutrality_ADJ:0 "Hyena"
  HYE_new_kingdom_communism_ADJ:0 "Hyena"
 
+#### qaylid ideas ####
+  HYE_act_reflect:0 "Action and Reflection"
+  HYE_skill_no_items:0 "Value in Skills, not Items"
+  HYE_virtue_future:0 "The Virtuous Future"
+  HYE_trap_past:0 "The Trap of the Past"
+  HYE_new_qaylid:0 "The Qaylid Reborn"
+  HYE_world_qaylid:0 "The Worldly Qaylid"
+  HYE_inside_qaylid:0 "The Inward Qaylid"
 
 ### tech ###
 

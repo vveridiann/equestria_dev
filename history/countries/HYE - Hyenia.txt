@@ -94,7 +94,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Fahamka 'The Bark'"
+	name = "Fahamka the Great Teacher"
 	desc = ""
 	picture = "Fahamka.tga"
 	expire = "1965.1.1"
@@ -105,7 +105,7 @@ create_country_leader = {
 }
 
 create_field_marshal = {
-	name = "Fahamka 'The Bark'"
+	name = "Fahamka the Great Teacher"
 	picture = "Fahamka.tga"
 	traits = { diamond_dog_race_trait logistics_wizard inspirational_leader infantry_leader hill_fighter desert_fox }
 	skill = 5

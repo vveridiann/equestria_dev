@@ -241,10 +241,78 @@ ideas = {
 			}
 		}
 
+	### QAYLID IDEAS
 
+		HYE_act_reflect = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				political_power_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
 
+		HYE_skill_no_items = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.025
+				consumer_goods_factor = -0.05				
+			}
+		}
 
+		HYE_virtue_future = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				conscription_factor = 0.05
+				research_speed_factor = 0.025
+			}
+		}
 
+		HYE_trap_past = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				army_org_regain = 0.025
+			
+			}
+		}
+
+		HYE_new_qaylid = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				political_power_factor = 0.10
+				experience_gain_army = 0.10
+				conscription_factor 0.05
+				consumer_goods_factor = -0.05	
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.05
+				army_org_regain = 0.05
+			}
+		}
+
+		HYE_world_qaylid = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				political_power_factor = 0.10
+				experience_gain_army = 0.15
+				conscription_factor 0.10
+				consumer_goods_factor = -0.05	
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.05
+				army_org_regain = 0.10
+			}
+		}
+
+		HYE_inside_qaylid = {
+			picture = anti_soviet_pact			#placeholder
+			modifier = {
+				political_power_factor = 0.15
+				experience_gain_army = 0.10
+				conscription_factor 0.5
+				consumer_goods_factor = -0.075	
+				production_factory_efficiency_gain_factor = 0.10
+				research_speed_factor = 0.075
+				army_org_regain = 0.05
+			}
+		}
 
 
 		HYE_construction_buff = {
@@ -1213,7 +1281,40 @@ ideas = {
 		}
 	}
 	#Political Advisors
+
 	political_advisor = {
+		HYE_masaska_advisorlar = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			visible = { 
+				has_dlc = "La Resistance" 
+			} 
+			traits = {
+				HYE_shadow_dervish_lar
+			}
+		}
+
+		HYE_masaska_advisor = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			visible = { 
+  			    NOT = { 
+            	has_dlc = "La Resistance" 
+            	}
+			} 
+			traits = {
+				HYE_shadow_dervish
+			}
+		}
+
 		HYE_nafaqo = {
 			picture = unknown_advisor_dog
 			allowed = {
@@ -1582,3 +1683,41 @@ ideas = {
 		}
 	}
 }
+
+
+
+	political_advisor = {
+		HYE_masaska_advisor = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = {
+				HYE_shadow_dervish
+			}
+		}
+
+
+			political_advisor = {
+		HYE_masaska_advisor = {
+			picture = unknown_advisor_dog
+			allowed = {
+				original_tag = HYE
+			}
+			available = {
+			}
+			traits = {
+					if = {
+					limit = {
+					has_dlc = "La Resistance"
+				}
+					HYE_shadow_dervishLaR
+				else = {
+					HYE_shadow_dervish
+				}
+			}
+		}
+	}
+}	
