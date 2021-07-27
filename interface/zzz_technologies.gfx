@@ -2983,7 +2983,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_gwtank_medium"
-		texturefile = "gfx/interface/technologies/gwtank.dds"
+		texturefile = "gfx/interface/technologies/gwtank.dds" ### Doesn't Exisit
 	}
 
 	SpriteType = {
@@ -3547,7 +3547,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_gwtank_medium" 
-		texturefile = "gfx/interface/technologies/tanks/light_tank_00.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_basic_light_tank_medium"
@@ -4297,7 +4297,7 @@ spriteTypes = {
 	############################# SOLAR EMPIRE TANKS ###################
 	SpriteType = {
 		name = "GFX_SOL_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 
 	SpriteType = {
@@ -4528,27 +4528,27 @@ spriteTypes = {
 	############################# EQUESTRIA TANKS ###################
 	SpriteType = {
 		name = "GFX_EQS_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank2.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank2.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_amphibious_tank_3_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_amphibious_tank_4_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_amphibious_tank_5_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQS_improved_medium_tank_medium"
@@ -4816,7 +4816,7 @@ spriteTypes = {
 	############################# EQUESTRIA AREA TANKS ###################
 	SpriteType = {
 		name = "GFX_commonwealth_2d_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_2d_improved_medium_tank_medium"
@@ -4905,23 +4905,23 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank2.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank2.dds"
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_amphibious_tank_3_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_amphibious_tank_4_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_commonwealth_amphibious_tank_5_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 
 	############################# EQUESTRIA AREA ARMORED CARS ###################
@@ -5107,27 +5107,27 @@ spriteTypes = {
 	############################# NLR TANKS ###################
 	SpriteType = {
 		name = "GFX_NLR_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank2.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank2.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_amphibious_tank_3_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_amphibious_tank_4_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_amphibious_tank_5_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_NLR_improved_medium_tank_medium"
@@ -5366,7 +5366,7 @@ spriteTypes = {
 	############################# NMS TANKS ###################
 	SpriteType = {
 		name = "GFX_NMS_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 
 
@@ -5749,7 +5749,7 @@ spriteTypes = {
 	############################# STALLIONGRAD TANKS ################### STGTANKS
 	SpriteType = {
 		name = "GFX_STG_gwtank_medium"
-		texturefile = "gfx/interface/technologies/STG_T18.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/STG_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_STG_basic_light_tank_medium"
@@ -6138,7 +6138,7 @@ SpriteType = {
 	######## NCH TANKS #######
 	SpriteType = {
 		name = "GFX_NCH_gwtank_medium"
-		texturefile = "gfx/interface/technologies/NCH_motarcanoin.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/NCH_gw_tank.dds"
 	}
     
 	SpriteType = {
@@ -6185,23 +6185,23 @@ SpriteType = {
   
 	SpriteType = {
     name = "GFX_NCH_amphibious_tank_medium"
-    texturefile = "gfx/interface/technologies/NCH_taf1.dds"
+    texturefile = "gfx/interface/technologies/tanks/amphibious/NCH_amphibious_tank_1.dds"
   }
  	SpriteType = {
     name = "GFX_NCH_amphibious_tank_2_medium"
-    texturefile = "gfx/interface/technologies/NCH_dobharchu.dds"
+    texturefile = "gfx/interface/technologies/tanks/amphibious/NCH_amphibious_tank_2.dds"
   }
  	SpriteType = {
     name = "GFX_NCH_amphibious_tank_3_medium"
-    texturefile = "gfx/interface/technologies/NCH_platapas.dds"
+    texturefile = "gfx/interface/technologies/tanks/amphibious/NCH_amphibious_tank_3.dds"
   }
  	SpriteType = {
     name = "GFX_NCH_amphibious_tank_4_medium"
-    texturefile = "gfx/interface/technologies/NCH_platapas2.dds"
+    texturefile = "gfx/interface/technologies/tanks/amphibious/NCH_amphibious_tank_4.dds"
   }
  	SpriteType = {
     name = "GFX_NCH_amphibious_tank_5_medium"
-    texturefile = "gfx/interface/technologies/NCH_ge.dds"
+    texturefile = "gfx/interface/technologies/tanks/amphibious/NCH_amphibious_tank_5.dds"
   }
     
  	SpriteType = {
@@ -6623,7 +6623,7 @@ SpriteType = {
 
 	SpriteType = {
 		name = "GFX_CHN_gwtank_medium"
-		texturefile = "gfx/interface/technologies/CHN_A7V.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/CHN_gw_tank.dds"
 	}
 
 
@@ -6633,12 +6633,12 @@ SpriteType = {
 	}
 	SpriteType = {
 		name = "GFX_CHN_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/CHN_amphib_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/CHN_amphib_tank.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_CHN_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/CHN_amphib_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/CHN_amphib_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_CHN_advanced_light_tank_b_medium"
@@ -6951,12 +6951,12 @@ SpriteType = {
 	}
 	SpriteType = {
 		name = "GFX_CCN_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/CHN_amphib_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/CHN_amphib_tank.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_CCN_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/CHN_amphib_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/CHN_amphib_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_CCN_advanced_light_tank_b_medium"
@@ -7253,27 +7253,27 @@ SpriteType = {
 	### CRYSTAL EMPIRE ###
 	SpriteType = {
 		name = "GFX_CRY_amphibious_tank_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_amphibious_tank_2_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank2.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank2.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_amphibious_tank_3_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_amphibious_tank_4_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_amphibious_tank_5_medium"
-		texturefile = "gfx/interface/technologies/EQS_amphibious_tank3.dds"
+		texturefile = "gfx/interface/technologies/tanks/amphibious/EQS_amphibious_tank3.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_gwtank_medium"
-		texturefile = "gfx/interface/technologies/EQS_armoured_tractor.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/EQS_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_CRY_improved_medium_tank_medium"
@@ -7521,7 +7521,7 @@ SpriteType = {
 
 	SpriteType = {
 		name = "GFX_OLE_gwtank_medium"
-		texturefile = "gfx/interface/technologies/OLE_gwtank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/OLE_gwtank.dds"
 	}
 	SpriteType = {
 		name = "GFX_OLE_basic_light_tank_medium"
@@ -7761,7 +7761,7 @@ SpriteType = {
 	#######################################################################################
 	SpriteType = {
 		name = "GFX_EQC_gwtank_medium"
-		texturefile = "gfx/interface/technologies/GRW_basic_light_tank.dds"
+		texturefile = "gfx/interface/technologies/GRW_light_tank_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_EQC_basic_light_tank_medium"
@@ -7868,7 +7868,7 @@ SpriteType = {
 	###############################################################
 	SpriteType = {
 		name = "GFX_GRW_gwtank_medium"
-		texturefile = "gfx/interface/technologies/GRW_gwtank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/GRW_gwtank.dds"
 	}
 	SpriteType = {
 		name = "GFX_GRW_basic_light_tank_medium"
@@ -7942,7 +7942,7 @@ SpriteType = {
 	###############################################################
 	SpriteType = {
 		name = "GFX_BRF_gwtank_medium"
-		texturefile = "gfx/interface/technologies/GRW_gwtank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/GRW_gwtank.dds"
 	}
 	SpriteType = {
 		name = "GFX_BRF_basic_light_tank_medium"
@@ -8100,7 +8100,7 @@ SpriteType = {
 	## YAKYAKISTAN ##
 	SpriteType = {
 		name = "GFX_YAK_gwtank_medium"
-		texturefile = "gfx/interface/technologies/YAK_gw_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/YAK_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_YAK_basic_light_tank_medium"
@@ -8316,7 +8316,7 @@ SpriteType = {
 	#Jakistan
 	SpriteType = {
 		name = "GFX_JAK_gwtank_medium"
-		texturefile = "gfx/interface/technologies/YAK_gw_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/YAK_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_JAK_basic_light_tank_medium"
@@ -8532,7 +8532,7 @@ SpriteType = {
 	#Polar bears
 	SpriteType = {
 		name = "GFX_PLB_gwtank_medium"
-		texturefile = "gfx/interface/technologies/YAK_gw_tank.dds"
+		texturefile = "gfx/interface/technologies/tanks/great_war/YAK_gw_tank.dds"
 	}
 	SpriteType = {
 		name = "GFX_PLB_basic_light_tank_medium"
