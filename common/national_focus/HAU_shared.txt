@@ -349,12 +349,12 @@
 			if = {
 	            limit = {
 		            has_dlc = "Man the Guns"
-	            }
-	                load_oob = "HAU_pirate_fleet_3"
+				}
+					load_oob = "HAU_pirate_fleet_3"
+			}
 	            else = {
 		            load_oob = "HAU_pirate_fleet_4"
 				    }
-	            } 
 		    }
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -3308,7 +3308,7 @@
 		desc = emerich_hau_desc
 		picture = "FAT_Emerich.tga"
 		expire = "1965.1.1"
-		ideology = centrism
+		ideology = liberalism
 		traits = { }
 		}
 		hidden_effect = { event_target:FAT_Emerich = { set_nationality = ROOT } }
@@ -3458,5 +3458,6 @@
 			log = "[GetDateText]: [Root.GetName]: Focus HAU_meyers_wild_ride"
 			add_stability = 0.1
 			add_war_support = 0.1
+			every_state = { limit = { is_core_of = GRI } add_core_of = ROOT }
 		}
 	}

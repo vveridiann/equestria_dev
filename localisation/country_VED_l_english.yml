@@ -96,7 +96,7 @@
  VED_Big_Guns:0 "Big Guns"  
  VED_Big_Guns_desc:0 "One of the modern staples of warfare is artillery. Massive shells of destruction that can break armies through an endless barrage of carefully aimed shots. While a rifle may be able to shoot soldiers a shell will pulverize entire squads. It might not be honourable, but none can deny it's effective."
  VED_Building_War_Economy:0 "Building A War Economy"
- VED_Building_War_Economy_desc:0 "We can have as much knowledge about arms and artillery as we like, but without production it will just be blueprints scattered in the wind. Our arms production must increase to arm our men, and have us be ready for war if it comes."
+ VED_Building_War_Economy_desc:0 "We can have as much knowledge about arms and artillery as we like, but without production it will just be blueprints scattered in the wind. Our arms production must increase to arm our griffons, and have us be ready for war if it comes."
  VED_First_Railway:0 "First Railway"
  VED_First_Railway_desc:0 "Engineers have started work on a national railway that connects to Turhamn. A new nerve system to connect our nation and its regions together, it is truly an admirable, albeit expensive, project."
  VED_Rebuild_New_Age:0 "A New Age For Transportation"
@@ -244,7 +244,7 @@
  VED_War_Preperations:0 "Preparing For War"
  VED_War_Preperations_desc:0 "Should Vedina find itself pulled into war on the continent, we make sure we are prepared. Our industry is not yet ready for a complete and total conversation to war-time production and for the absolute mobilization of the available workforce. If Vedina hopes to survive, it must make sure its people are ready to pour everything they have into pure, undeniable victory - not necessarily on the battlefield, but on the production front, in the fields and farms, in the laboratories, in the skies and on the seas. Vedina must prepare for the storm, or else be swept away."
  VED_Socialist_Border:0 "The Red Line"
- VED_Socialist_Border_desc:0 "To defend ourselves properly we must not allow ourselves to stand still and do nothing as the socialists pool and collect at our border, preparing to destroy the Vedinian way of life. If we do not fortify against them, then they will invade us. They will commit unspeakable crimes to the grifonesses, kill the griffons and who even knows what they will do to the chicks."
+ VED_Socialist_Border_desc:0 "To defend ourselves properly we must not allow ourselves to stand still and do nothing as the socialists pool and collect at our border, preparing to destroy the Vedinian way of life. If we do not fortify against them, then they will invade us. They will commit unspeakable crimes to the griffonesses, kill the griffons and who even knows what they will do to the chicks."
  VED_Coast_Forts:0 "The Coastal Wall"
  VED_Coast_Forts_desc:0 "Vedina's coasts have always been blessed in a way that they've never been attacked. Not in all of our wars has the enemy thought to land on our beaches. But that is no reason to grow content - comfort breeds weakness, and a sufficiently cunning enemy will see the soft underbelly of our coastline and think to attack. Therefore, we must begin creating proper defenses along the sea, a coastal wall will protect Vedina from seafaring invaders."
  VED_War_Changes_Evil:0 "A Dark Change"
@@ -484,7 +484,7 @@
  VED_democratic_party:0 "Wingstrom Dynasty"
  VED_fascism_party:0 "Council of Nobles"
 
- VED_fascism_faction:0 "League of The Strong"
+ VED_fascism_faction:0 "League of the Strong"
  
  # Events
  vedina.1.t:0 "The Succession Crisis"

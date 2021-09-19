@@ -465,7 +465,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 59
+				has_full_control_of_state = 59
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -521,7 +521,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 73
+				has_full_control_of_state = 73
 				NOT = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -581,7 +581,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 172
+				has_full_control_of_state = 172
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -619,7 +619,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_fairflanks target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_fairflanks
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -639,7 +639,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 46
+				has_full_control_of_state = 46
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -677,7 +677,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_Calfronia target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_coltfoalnia
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -696,7 +696,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 60 
+				has_full_control_of_state = 60 
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -734,7 +734,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_tallwoods target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_tallwoods
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -753,7 +753,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 61
+				has_full_control_of_state = 61
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -791,7 +791,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_unicornrange target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_unicorn
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -810,7 +810,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 133
+				has_full_control_of_state = 133
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -848,7 +848,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_pinecreek target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_pinecreek
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -867,7 +867,7 @@ VAN_expansion_category = {
 				has_country_flag = VAN_defeat_in_border_war
 			}
 			FROM = {
-				owns_state = 173
+				has_full_control_of_state = 173
 				can_have_border_war_with_ROOT = yes
 			}
 		}
@@ -905,7 +905,7 @@ VAN_expansion_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VAN_attack_yeachcon target: [From.GetName]"
-			set_country_flag = VAN_raiding_mountains
+			set_country_flag = VAN_raiding_yeahcon
 			FROM = { country_event = vanhoover.37 }
 		}
 	}
@@ -1053,7 +1053,7 @@ VAN_party_congress_category = {
 					name = "Winter Turnip"
 					expire = "1965.1.1"
 					ideology = leninism
-					picture = "unknown.tga"
+					picture = "Winter_Turnip.tga"
 					traits = {
 					veteran_communist
 					}

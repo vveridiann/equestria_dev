@@ -274,7 +274,7 @@ country_event = { #Best Mages Proving Event
 			traits = { pony_race_trait adaptable determined_innovator }
 			skill = 2
 			attack_skill = 2
-			defense_skill = 3
+			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
 			female = no
@@ -283,7 +283,7 @@ country_event = { #Best Mages Proving Event
 			name = "Mysteria"
 			portrait_path = "gfx/leaders/Pony/portrait_pony_generic_land_12.dds"
 			traits = { pony_race_trait ranger }
-			skill = 1
+			skill = 2
 			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
@@ -295,8 +295,8 @@ country_event = { #Best Mages Proving Event
 			picture = "Spirit_Fire.tga"
 			traits = { pony_race_trait trait_mountaineer trait_unpredictable }
 			skill = 2
-			attack_skill = 1
-			defense_skill = 3
+			attack_skill = 2
+			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 2
 			female = yes
@@ -903,7 +903,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			base = 35
+			base = 40
 			modifier = {
 				OR = {
 					has_country_flag = WIT_AI_HONORIA
@@ -1017,7 +1017,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			base = 35
+			base = 40
 			modifier = {
 				OR = {
 					has_country_flag = WIT_AI_HONORIA
@@ -1131,7 +1131,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			base = 35
+			base = 40
 			modifier = {
 				OR = {
 					has_country_flag = WIT_AI_HONORIA
@@ -1186,7 +1186,7 @@ country_event = { #Who wins?
 			check_variable = {white_star_points_var > honoria_points_var}
 		}
 		ai_chance = {
-			factor = 35
+			factor = 40
 			modifier = {
 				factor = 10
 				AND = {
@@ -1662,9 +1662,16 @@ country_event = { #Voliare's short reign as king
 		drop_cosmetic_tag = yes
 		if = {
 			limit = {
-				is_in_faction_with = RIV
+				is_river_fed_member = yes
 			}
 			set_cosmetic_tag = WIT_republic_tag_RIV
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+			set_cosmetic_tag = WIT_republic_tag
 		}
 		else = {
 			set_cosmetic_tag = WIT_republic_tag
@@ -2194,6 +2201,7 @@ country_event = { #Referendum result
 		}
 		682 = {
 			remove_core_of = WIT
+			remove_claim_by = WIT
 		}
 		add_political_power = -25
 		add_stability = -0.025
@@ -2766,7 +2774,12 @@ country_event = { #Two stars
 
 	option = {
 		name = wittenland.67.a
-		
+		hidden_effect = {
+			country_event = {
+				id = wittenland.152
+				days = 180
+			}
+		}
 	}
 }
 country_event = { #White Star's speech
@@ -3308,9 +3321,16 @@ country_event = { #Hostage crisis
 		drop_cosmetic_tag = yes
 		if = {
 			limit = {
-				is_in_faction_with = RIV
+				is_river_fed_member = yes
 			}
 			set_cosmetic_tag = WIT_republic_tag_RIV
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+			set_cosmetic_tag = WIT_republic_tag
 		}
 		else = {
 			set_cosmetic_tag = WIT_republic_tag
@@ -3371,15 +3391,19 @@ country_event = { #Insurgency begins
 		add_stability = -0.15
 		614 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		616 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		627 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		629 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 	}
 }
@@ -3402,6 +3426,7 @@ country_event = { #First attempt to crush northern rebels
 		}
 		616 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3426,6 +3451,7 @@ country_event = { #First attempt to crush northern rebels
 		}
 		615 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		set_country_flag = WIT_insurgency_north_lose
 		ai_chance = {
@@ -3453,7 +3479,7 @@ country_event = { #Northern insurgency crushed
 	is_triggered_only = yes
 
 	option = {
-		name = wittenland.95.a
+		name = wittenland.96.a
 		add_stability = 0.025
 		add_manpower = -2500
 		add_popularity = {
@@ -3462,6 +3488,7 @@ country_event = { #Northern insurgency crushed
 		}
 		614 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3503,6 +3530,7 @@ country_event = { #Second attempt to crush northern rebels
 		}
 		614 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3514,9 +3542,11 @@ country_event = { #Second attempt to crush northern rebels
 		}
 		615 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 		}
 		616 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3551,6 +3581,7 @@ country_event = { #Second attempt to crush northern rebels
 		}
 		617 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		country_event = {
 			id = wittenland.101
@@ -3577,6 +3608,7 @@ country_event = { #First attempt to crush southern rebels
 		}
 		627 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3605,6 +3637,7 @@ country_event = { #First attempt to crush southern rebels
 		}
 		628 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		set_country_flag = WIT_insurgency_south_lose
 		ai_chance = {
@@ -3641,6 +3674,7 @@ country_event = { #Southern insurgency crushed
 		}
 		629 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3682,6 +3716,7 @@ country_event = { #Second attempt to crush southern rebels
 		}
 		627 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3693,9 +3728,11 @@ country_event = { #Second attempt to crush southern rebels
 		}
 		628 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 		}
 		629 = {
 			set_demilitarized_zone = no
+			clr_state_flag = WIT_rebel_state
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -3730,6 +3767,7 @@ country_event = { #Second attempt to crush southern rebels
 		}
 		617 = {
 			set_demilitarized_zone = yes
+			set_state_flag = WIT_rebel_state
 		}
 		country_event = {
 			id = wittenland.101
@@ -3769,9 +3807,16 @@ country_event = { #"Communists" win!
 		drop_cosmetic_tag = yes
 		if = {
 			limit = {
-				is_in_faction_with = RIV
+				is_river_fed_member = yes
 			}
 			set_cosmetic_tag = WIT_republic_tag_RIV
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+			set_cosmetic_tag = WIT_republic_tag
 		}
 		else = {
 			set_cosmetic_tag = WIT_republic_tag
@@ -3787,6 +3832,7 @@ country_event = { #"Communists" win!
 		hidden_effect = {
 			every_owned_state = {
 				set_demilitarized_zone = no
+				clr_state_flag = WIT_rebel_state
 			}
 		}
 		load_focus_tree = {
@@ -3826,12 +3872,14 @@ country_event = { #"Communists" are crushed
 		hidden_effect = {
 			every_owned_state = {
 				set_demilitarized_zone = no
+				clr_state_flag = WIT_rebel_state
 			}
 		}
 		if = {
 			limit = { has_unit_leader = 1722 }
 			remove_unit_leader = 1722
 		}
+		kill_ideology_leader = democratic
 	}
 }
 country_event = { #Wittenland requests NIM for attache
@@ -3912,6 +3960,9 @@ country_event = { #Wit reminds Ponaidhean of their oaths
 		effect_tooltip = {
 			FROM = { puppet = ROOT }
 		}
+		ai_chance = {
+			factor = 5
+		}
 	}
 	option = {
 		name = wittenland.105.b
@@ -3920,6 +3971,9 @@ country_event = { #Wit reminds Ponaidhean of their oaths
 				id = wittenland.107
 				days = 1
 			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 }
@@ -4147,6 +4201,9 @@ country_event = { #Wit demands deet obedience
 				days = 1
 			}
 		}
+		ai_chance = {
+			factor = 5
+		}
 	}
 	option = {
 		name = wittenland.110.b
@@ -4154,6 +4211,13 @@ country_event = { #Wit demands deet obedience
 			country_event = {
 				id = wittenland.114
 				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				has_war = yes
 			}
 		}
 	}
@@ -4200,7 +4264,7 @@ country_event = { #Get puppeted or leave
 		}
 	}
 	option = {
-		name = wittenland.111.a
+		name = wittenland.111.b
 		if = {
 			limit = { is_river_fed_member = yes }
 			RIV_leave_fed = yes
@@ -4395,6 +4459,24 @@ country_event = { #wulfric ded
 			traits = {
 				deranged
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = WIT_proving_day
+				}
+			}
+			create_corps_commander = {
+				name = "Spirit Fire"
+				picture = "Spirit_Fire.tga"
+				traits = { pony_race_trait trait_mountaineer trait_unpredictable }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+				female = yes
+			} custom_effect_tooltip = spirit_fire_stats_tp
 		}
 	}
 }
@@ -4867,6 +4949,33 @@ country_event = { #Commies win
 		name = wittenland.128.a
 		add_political_power = 25
 		add_stability = 0.1
+		hidden_effect = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				create_country_leader = {
+					name = "Violet Plough"
+					desc = "POLITICS_VIOLENT_DESC"
+					picture = "Violent_Plough.tga"
+					expire = "1965.1.1"
+					ideology = marxism
+					female = yes
+					traits = {
+
+					}
+				}
+				if = {
+					limit = {
+						is_river_fed_member = yes
+					}
+					set_cosmetic_tag = WIT_republic_tag_RIV
+				}
+				else = {
+					set_cosmetic_tag = WIT_republic_tag
+				}
+			}
+		}
 	}
 }
 country_event = { #socdems win
@@ -4882,6 +4991,32 @@ country_event = { #socdems win
 		name = wittenland.129.a
 		add_political_power = 50
 		add_stability = 0.05
+		hidden_effect = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				create_country_leader = {
+					name = "Sigeweard Spellshield"
+					desc = "POLITICS_SIGEWEARD_DESC"
+					picture = "Mage_general.tga"
+					expire = "1965.1.1"
+					ideology = liberalism
+					traits = {
+						FBK_anti_extremist
+					}
+				}
+				if = {
+					limit = {
+						is_river_fed_member = yes
+					}
+					set_cosmetic_tag = WIT_republic_tag_RIV
+				}
+				else = {
+					set_cosmetic_tag = WIT_republic_tag
+				}
+			}
+		}
 	}
 }
 country_event = { #libtards win
@@ -4896,6 +5031,32 @@ country_event = { #libtards win
 	option = {
 		name = wittenland.130.a
 		add_political_power = 75
+		hidden_effect = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				create_country_leader = {
+					name = "Eadberhta Featherwing"
+					desc = "POLITICS_EADBERHT_DESC"
+					picture = "STOP_SEXUALIZING_THEM.tga"
+					expire = "1965.1.1"
+					ideology = libertarianism
+					traits = {
+						smooth_talking_charmer
+					}
+				}
+				if = {
+					limit = {
+						is_river_fed_member = yes
+					}
+					set_cosmetic_tag = WIT_republic_tag_RIV
+				}
+				else = {
+					set_cosmetic_tag = WIT_republic_tag
+				}
+			}
+		}
 	}
 }
 country_event = { #lynchings
@@ -5478,5 +5639,27 @@ country_event = { #nuke spell funny event
 		name = wittenland.151.a
 		add_stability = -0.1
 		set_country_flag = WIT_meteor_strike
+	}
+}
+country_event = { #silver star redemption event
+	id = wittenland.152
+	immediate = {log = "[GetDateText]: [Root.GetName]: event wittenland.152"}
+	title = wittenland.152.t
+	desc = wittenland.152.d
+	picture = GFX_event_palace_hall
+	is_triggered_only = yes
+
+	option = {
+		name = wittenland.152.a
+		BAR = {
+		    if = {
+			    limit = { 
+			        has_unit_leader = 9997 
+			    }
+			    event_target:BAR_silver_star_general = { 
+				    set_nationality = ROOT
+				}
+		    }
+		}
 	}
 }
