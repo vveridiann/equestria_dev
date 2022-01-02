@@ -154,7 +154,6 @@ ideas = {
 		}
 	}
 	naval_manufacturer = {
-
 		designer = yes
 
 		stableside_naval_company = {
@@ -172,13 +171,11 @@ ideas = {
 			}
 		}
 	}
-	tank_manufacturer = {
 
+	tank_manufacturer = {
 		designer = yes
 
 		saltlickingham_ground = {
-
-
 			allowed = {
 				OR = {
 					original_tag = CES
@@ -200,11 +197,11 @@ ideas = {
 			traits = { fast_tank_manufacturer }
 		}
 	}
+
 	aircraft_manufacturer = {
-
 		designer = yes
-		heavy_wings = {
 
+		heavy_wings = {
 			allowed = {
 				OR = {
 					original_tag = CES
@@ -224,12 +221,9 @@ ideas = {
 			}
 
 			traits = { medium_aircraft_manufacturer }
-
-			modifier = {
-			}
 		}
-		vanilla_wings = {
 
+		vanilla_wings = {
 			allowed = {
 				OR = {
 					original_tag = CES
@@ -249,13 +243,10 @@ ideas = {
 			}
 
 			traits = { light_aircraft_manufacturer }
-
-			modifier = {
-			}
 		}
 	}
-	materiel_manufacturer = {
 
+	materiel_manufacturer = {
 		designer = yes
 
 		sturdy_stable_factory = {
@@ -277,6 +268,7 @@ ideas = {
 
 			traits = { infantry_equipment_manufacturer }
 		}
+
 		astimare_concern = {
 			allowed = {
 				OR = {
@@ -296,6 +288,7 @@ ideas = {
 
 			traits = { artillery_manufacturer }
 		}
+
 		blue_mare_motors = {
 			allowed = {
 				OR = {
@@ -315,8 +308,8 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 		}
 	}
-	industrial_concern = {
 
+	industrial_concern = {
 		baltimare_united = {
 			allowed = {
 				OR = {
@@ -336,10 +329,8 @@ ideas = {
 			}
 
 			traits = { industrial_concern }
-
-			modifier = {
-			}
 		}
+
 		phantom_factory = {
 			allowed = {
 				OR = {
@@ -362,8 +353,8 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.08
 			}
-
 		}
+
 		sierra_caballo_mining_company = {
 			allowed = {
 				OR = {
@@ -388,6 +379,7 @@ ideas = {
 				local_resources_factor = 0.1
 			}
 		}
+
 		tenochtitlan_university = {
 			allowed = {
 				OR = {
@@ -413,6 +405,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+
 		shooting_horn_labs = {
 			allowed = {
 				OR = {
@@ -436,51 +429,6 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.05
-			}
-		}
-	}
-
-
-
-	high_command = {
-
-		quibblepants = {
-			ledger = army
-
-			allowed = {
-				original_tag = CES
-			}
-
-			traits = { army_infantry_1 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		dicaprio = {
-			ledger = army
-
-			allowed = {
-				original_tag = CES
-			}
-
-			traits = { jungle_warfare_expert }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		CES_celery = {
-			ledger = army
-
-			allowed = {
-				original_tag = CES
-			}
-
-			traits = { army_regrouping_3 }
-
-			ai_will_do = {
-				factor = 1
 			}
 		}
 	}

@@ -6,15 +6,31 @@ set_research_slots = 2
 
 set_technology = {
 	pony_race = 1
-	gwtank = 1
 	infantry_weapons = 1
 	gw_artillery = 1
 	melee_weapons = 1
 	melee_weapons1 = 1
 	pre_gw_artillery = 1
 	electronic_mechanical_engineering = 1
+	basic_train = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {	
@@ -68,13 +84,11 @@ set_popularities = {
 	neutrality = 24
 }
 set_politics = {
-
 	ruling_party = democratic
 	last_election = "1000.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
-
 
 add_ideas = {
 	pony_race
@@ -199,6 +213,29 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
+}
+recruit_character = CES_king_dust
+recruit_character = CES_furher_seaterror
+recruit_character = CES_daring_do
+recruit_character = CES_addie_hoover
+recruit_character = CES_quibble_pants
+recruit_character = CES_di_caprio
+recruit_character = CES_lauriel_craft
+recruit_character = CES_dian_diamonds
+recruit_character = CES_henry_diamonds
+recruit_character = CES_van_drake
+recruit_character = CES_mister_whooves
+recruit_character = CES_tiger_eyes
+recruit_character = CES_swift_justice
+recruit_character = CES_lesa_flare
+recruit_character = CES_henry
+recruit_character = CES_permittivity
+recruit_character = CES_itzcoatl
+recruit_character = CES_celery
+
+random_character = {
+    limit = { is_character = CES_daring_do }
+    save_global_event_target_as = CES_daring_do_target
 }
 create_corps_commander = {
 	name = "Grave Soles"
