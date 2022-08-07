@@ -40,6 +40,11 @@ spriteTypes = {
 	}
 	
 	spritetype = {
+		name = "GFX_smol_question"
+		texturefile = "gfx/interface/smol_question.tga"
+	}
+	
+	spritetype = {
 		name = "GFX_icon_HIE_flag"
 		texturefile = "gfx/flags/medium/HIE_CTH_the_ascendancy_fascism.tga"
 	}

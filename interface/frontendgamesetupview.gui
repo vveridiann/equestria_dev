@@ -647,18 +647,54 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 			shortcut = "RETURN"
-		}			
+		}		
+		
+		instantTextBoxType = {
+			name = "EQUESTRIANAME"
+			position = { x = 26 y = 52 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "CSS_EquestriaName"
+			maxWidth = 380
+			maxHeight = 30	
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "GRIFFONIANAME"
+			position = { x = 420 y = 52 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "CSS_GriffoniaName"
+			maxWidth = 380
+			maxHeight = 30	
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "ZEBRICANAME"
+			position = { x = 820 y = 52 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "CSS_ZebricaName"
+			maxWidth = 380
+			maxHeight = 30	
+			format = centre
+		}
 
 		containerWindowType = {
 			name ="countries"
-			position = { x = 15 y = 40 }
+			position = { x = 15 y = 75 }
 			size = { width = -15 height = 120}
 			
 			gridboxType = {
 				name ="countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 200 height = 93 } # 2 vertical
+				slotsize = { width = 200 height = 100 } # 2 vertical
 				max_slots_vertical = 3
 				max_slots_horizontal = 6
 				format = "UPPER_LEFT"
@@ -684,14 +720,14 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_mini"
-			position = { x = 20 y = 388 }
+			position = { x = 15 y = 350 }
 			size = { width = -15 height = 120}
 			
 			gridboxType = {
 				name ="countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 62 height = 50 }
+				slotsize = { width = 63 height = 64 }
 				add_horizontal = yes
 				max_slots_vertical = 3
 				max_slots_horizontal = 19
@@ -1035,8 +1071,28 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
+			name = "FirstContinentDivider"
+			position = { x = 405 y = 44 }
+
+			iconType = {
+				name = "Background"
+				spriteType ="GFX_long_divider"
+			}
+		}
+		
+		containerWindowType = {
+			name = "SecondContinentDivider"
+			position = { x = 805 y = 44 }
+
+			iconType = {
+				name = "Background"
+				spriteType ="GFX_long_divider"
+			}
+		}
+		
+		containerWindowType = {
 			name = "Update0Box"
-			position = { x = 23 y = 333 }
+			position = { x = 18 y = 295 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1058,29 +1114,9 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
-			name = "FirstContinentDivider"
-			position = { x = 405 y = 44 }
-
-			iconType = {
-				name = "Background"
-				spriteType ="GFX_long_divider"
-			}
-		}
-		
-		containerWindowType = {
-			name = "SecondContinentDivider"
-			position = { x = 805 y = 44 }
-
-			iconType = {
-				name = "Background"
-				spriteType ="GFX_long_divider"
-			}
-		}
-		
-		containerWindowType = {
 			name = "Update0Divider"
-			position = { x = 25 y = 327 }
-			size = { width=358 height=9 }
+			position = { x = 20 y = 289 }
+			size = { width=364 height=9 }
 
 			background = {
 				name = "Background"
@@ -1093,7 +1129,7 @@ guiTypes = {
 		iconType = {
 			name = "CVAStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 188 y = 331 }
+			position = { x = 311 y = 293 }
 			
 			pdx_tooltip = "CVAStar_tt"
 		}
@@ -1101,80 +1137,80 @@ guiTypes = {
 		iconType = {
 			name = "WINStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 250 y = 331 }
+			position = { x = 374 y = 293 }
 			
 			pdx_tooltip = "WINStar_tt"
 		}
 		
-		containerWindowType = {
-			name = "TRO_entry_mini"
-			position = { x = 268 y = 329 }
-			
-			iconType = {
-				name = "TRO_FLAG"
-				spriteType ="GFX_icon_TRO_flag"
-				position = { x = 9 y = 9 }
-			}
+		#containerWindowType = {
+		#	name = "TRO_entry_mini"
+		#	position = { x = 268 y = 329 }
+		#	
+		#	iconType = {
+		#		name = "TRO_FLAG"
+		#		spriteType ="GFX_icon_TRO_flag"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#
+		#	iconType = {
+		#		name = "Overlay"
+		#		spriteType ="GFX_flag_small2"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#	
+		#	iconType = {
+		#		name = "TRO_FRAME"
+		#		spriteType ="GFX_mini_country_selector"
+		#		
+		#		pdx_tooltip = "TROText_tt"
+		#		pdx_tooltip_delayed = "TROText_tt_delayed"
+		#	}
+		#	
+		#	iconType = {
+		#		name = "TROStar"
+		#		spriteType ="GFX_icon_gold_star"
+		#		position = { x = 44 y = 2 }
+		#		
+		#		pdx_tooltip = "TROStar_tt"
+		#	}
+		#}
 		
-			iconType = {
-				name = "Overlay"
-				spriteType ="GFX_flag_small2"
-				position = { x = 9 y = 9 }
-			}
-			
-			iconType = {
-				name = "TRO_FRAME"
-				spriteType ="GFX_mini_country_selector"
-				
-				pdx_tooltip = "TROText_tt"
-				pdx_tooltip_delayed = "TROText_tt_delayed"
-			}
-			
-			iconType = {
-				name = "TROStar"
-				spriteType ="GFX_icon_gold_star"
-				position = { x = 44 y = 2 }
-				
-				pdx_tooltip = "TROStar_tt"
-			}
-		}
-		
-		containerWindowType = {
-			name = "HIE_entry_mini"
-			position = { x = 330 y = 329 }
-			
-			iconType = {
-				name = "HIE_FLAG"
-				spriteType ="GFX_icon_HIE_flag"
-				position = { x = 9 y = 9 }
-			}
-		
-			iconType = {
-				name = "Overlay"
-				spriteType ="GFX_flag_small2"
-				position = { x = 9 y = 9 }
-			}
-			
-			iconType = {
-				name = "HIE_FRAME"
-				spriteType ="GFX_mini_country_selector"
-				
-				pdx_tooltip = "HIEText_tt"
-				pdx_tooltip_delayed = "HIEText_tt_delayed"
-			}
-			
-			iconType = {
-				name = "HIEStar"
-				spriteType ="GFX_icon_gold_star"
-				position = { x = 44 y = 2 }
-				
-				pdx_tooltip = "HIEStar_tt"
-			}
-		}
+		#containerWindowType = {
+		#	name = "HIE_entry_mini"
+		#	position = { x = 330 y = 329 }
+		#	
+		#	iconType = {
+		#		name = "HIE_FLAG"
+		#		spriteType ="GFX_icon_HIE_flag"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#
+		#	iconType = {
+		#		name = "Overlay"
+		#		spriteType ="GFX_flag_small2"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#	
+		#	iconType = {
+		#		name = "HIE_FRAME"
+		#		spriteType ="GFX_mini_country_selector"
+		#		
+		#		pdx_tooltip = "HIEText_tt"
+		#		pdx_tooltip_delayed = "HIEText_tt_delayed"
+		#	}
+		#	
+		#	iconType = {
+		#		name = "HIEStar"
+		#		spriteType ="GFX_icon_gold_star"
+		#		position = { x = 44 y = 2 }
+		#		
+		#		pdx_tooltip = "HIEStar_tt"
+		#	}
+		#}
 		
 		containerWindowType = {
 			name = "Update1Box"
-			position = { x = 395 y = 333 }
+			position = { x = 396 y = 295 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1197,8 +1233,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update1Divider"
-			position = { x = 397 y = 327 }
-			size = { width=234 height=9 }
+			position = { x = 398 y = 289 }
+			size = { width=237 height=9 }
 
 			background = {
 				name = "Background"
@@ -1211,14 +1247,14 @@ guiTypes = {
 		iconType = {
 			name = "JESStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 622 y = 331 }
+			position = { x = 626 y = 293 }
 			
 			pdx_tooltip = "JESStar_tt"
 		}
 		
 		containerWindowType = {
 			name = "Update2Box"
-			position = { x = 643 y = 333 }
+			position = { x = 648 y = 295 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1241,8 +1277,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update2Divider"
-			position = { x = 642 y = 327 }
-			size = { width=116 height=9 }
+			position = { x = 643 y = 289 }
+			size = { width=189 height=9 }
 
 			background = {
 				name = "Background"
@@ -1255,14 +1291,14 @@ guiTypes = {
 		iconType = {
 			name = "NLRStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 746 y = 331 }
+			position = { x = 815 y = 293 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
 		
 		containerWindowType = {
 			name = "Update3Box"
-			position = { x = 767 y = 333 }
+			position = { x = 837 y = 295 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1285,8 +1321,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update3Divider"
-			position = { x = 769 y = 327 }
-			size = { width=420 height=9 }
+			position = { x = 839 y = 289 }
+			size = { width=363 height=9 }
 
 			background = {
 				name = "Background"
@@ -1298,8 +1334,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update3ContDivider"
-			position = { x = 25 y = 377 }
-			size = { width=49 height=9 }
+			position = { x = 16 y = 353 }
+			size = { width=120 height=9 }
 
 			background = {
 				name = "Background"
@@ -1311,7 +1347,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update4Box"
-			position = { x = 85 y = 383 }
+			position = { x = 144 y = 359 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1334,8 +1370,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update4Divider"
-			position = { x = 87 y = 377 }
-			size = { width=172 height=9 }
+			position = { x = 146 y = 353 }
+			size = { width=174 height=9 }
 
 			background = {
 				name = "Background"
@@ -1348,7 +1384,7 @@ guiTypes = {
 		iconType = {
 			name = "Update4Star1"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 188 y = 381 }
+			position = { x = 248 y = 357 }
 			
 			pdx_tooltip = "Update4Star1_tt"
 		}
@@ -1356,14 +1392,14 @@ guiTypes = {
 		iconType = {
 			name = "Update4Star2"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 250 y = 381 }
+			position = { x = 311 y = 357 }
 			
 			pdx_tooltip = "Update4Star2_tt"
 		}
 		
 		containerWindowType = {
 			name = "Update5Box"
-			position = { x = 271 y = 383 }
+			position = { x = 333 y = 359 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1386,8 +1422,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update5Divider"
-			position = { x = 273 y = 377 }
-			size = { width=172 height=9 }
+			position = { x = 335 y = 353 }
+			size = { width=174 height=9 }
 
 			background = {
 				name = "Background"
@@ -1399,7 +1435,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update6Box"
-			position = { x = 457 y = 383 }
+			position = { x = 522 y = 359 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1422,8 +1458,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update6Divider"
-			position = { x = 459 y = 377 }
-			size = { width=730 height=9 }
+			position = { x = 522 y = 353 }
+			size = { width=682 height=9 }
 
 			background = {
 				name = "Background"
@@ -1435,8 +1471,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update6ContDivider"
-			position = { x = 26 y = 427 }
-			size = { width=171 height=9 }
+			position = { x = 21 y = 417 }
+			size = { width=236 height=9 }
 
 			background = {
 				name = "Background"
@@ -1448,7 +1484,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update7Box"
-			position = { x = 209 y = 432 }
+			position = { x = 270 y = 423 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1471,8 +1507,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update7Divider"
-			position = { x = 211 y = 427 }
-			size = { width=420 height=9 }
+			position = { x = 272 y = 417 }
+			size = { width=364 height=9 }
 
 			background = {
 				name = "Background"
@@ -1485,7 +1521,7 @@ guiTypes = {
 		iconType = {
 			name = "LSPStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 312 y = 431 }
+			position = { x = 374 y = 421 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
@@ -1493,7 +1529,7 @@ guiTypes = {
 		iconType = {
 			name = "SCSStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 374 y = 431 }
+			position = { x = 438 y = 421 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
@@ -1501,7 +1537,7 @@ guiTypes = {
 		iconType = {
 			name = "BALStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 436 y = 431 }
+			position = { x = 500 y = 421 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
@@ -1509,7 +1545,7 @@ guiTypes = {
 		iconType = {
 			name = "JUNStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 498 y = 431 }
+			position = { x = 563 y = 421 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
@@ -1517,47 +1553,47 @@ guiTypes = {
 		iconType = {
 			name = "NMSStar"
 			spriteType ="GFX_icon_silver_star"
-			position = { x = 560 y = 431 }
+			position = { x = 626 y = 421 }
 			
 			pdx_tooltip = "EquestriaFormableStar"
 		}
 		
-		containerWindowType = {
-			name = "CRY_NLR_entry_mini"
-			position = { x = 578 y = 429 }
-			
-			iconType = {
-				name = "CRY_NLR_FLAG"
-				spriteType ="GFX_icon_CRY_NLR_flag"
-				position = { x = 9 y = 9 }
-			}
-		
-			iconType = {
-				name = "Overlay"
-				spriteType ="GFX_flag_small2"
-				position = { x = 9 y = 9 }
-			}
-			
-			iconType = {
-				name = "CRY_NLR_FRAME"
-				spriteType ="GFX_mini_country_selector"
-				
-				pdx_tooltip = "CRY_NLRText_tt"
-				pdx_tooltip_delayed = "CRY_NLRText_tt_delayed"
-			}
-			
-			iconType = {
-				name = "CRY_NLR_Star"
-				spriteType ="GFX_icon_gold_star"
-				position = { x = 44 y = 2 }
-				
-				pdx_tooltip = "CRY_NLRStar"
-			}
-		}
+		#containerWindowType = {
+		#	name = "CRY_NLR_entry_mini"
+		#	position = { x = 578 y = 429 }
+		#	
+		#	iconType = {
+		#		name = "CRY_NLR_FLAG"
+		#		spriteType ="GFX_icon_CRY_NLR_flag"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#
+		#	iconType = {
+		#		name = "Overlay"
+		#		spriteType ="GFX_flag_small2"
+		#		position = { x = 9 y = 9 }
+		#	}
+		#	
+		#	iconType = {
+		#		name = "CRY_NLR_FRAME"
+		#		spriteType ="GFX_mini_country_selector"
+		#		
+		#		pdx_tooltip = "CRY_NLRText_tt"
+		#		pdx_tooltip_delayed = "CRY_NLRText_tt_delayed"
+		#	}
+		#	
+		#	iconType = {
+		#		name = "CRY_NLR_Star"
+		#		spriteType ="GFX_icon_gold_star"
+		#		position = { x = 44 y = 2 }
+		#		
+		#		pdx_tooltip = "CRY_NLRStar"
+		#	}
+		#}
 		
 		containerWindowType = {
 			name = "Update8Box"
-			position = { x = 643 y = 432 }
+			position = { x = 648 y = 423 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1580,8 +1616,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update8Divider"
-			position = { x = 645 y = 427 }
-			size = { width=296 height=9 }
+			position = { x = 650 y = 417 }
+			size = { width=300 height=9 }
 
 			background = {
 				name = "Background"
@@ -1593,7 +1629,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update9Box"
-			position = { x = 953 y = 432 }
+			position = { x = 963 y = 423 }
 			size = { width=67 height=36 }
 
 			background = {
@@ -1616,8 +1652,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "Update9Divider"
-			position = { x = 949 y = 427 }
-			size = { width=184 height=9 }
+			position = { x = 958 y = 417 }
+			size = { width=188 height=9 }
 
 			background = {
 				name = "Background"
@@ -1629,8 +1665,8 @@ guiTypes = {
 			
 		iconType = {
 			name = "QuestionMark"
-			spriteType ="GFX_smol_discord"
-			position = { x = 1145 y = 440 }
+			spriteType ="GFX_smol_question"
+			position = { x = 1158 y = 426 }
 			
 			alwaystransparent = yes
 		}

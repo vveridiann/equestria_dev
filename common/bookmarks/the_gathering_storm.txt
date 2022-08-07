@@ -25,20 +25,35 @@ bookmarks = {
 				unicorn_academy_f
 			}
 		}
-		"CRY"={
-			history = "CRY_GATHERING_STORM_DESC"
-			ideology = democratic
+		
+		"STG"={
+			history = "STG_GATHERING_STORM_DESC"
+			ideology = communism
 			ideas = {
-				crystal_heart
-				royal_family
-				sombra_threat
+				severe_famine
+				incomplete_industrialization
 			}
 			focuses = {
-				CRY_oldorder
-				CRY_comrevolution
-				CRY_oldking
+				vasya_2
+				the_palace
+				manifesto_of_materialism
 			}
 		}
+		
+		#"CRY"={
+		#	history = "CRY_GATHERING_STORM_DESC"
+		#	ideology = democratic
+		#	ideas = {
+		#		crystal_heart
+		#		royal_family
+		#		sombra_threat
+		#	}
+		#	focuses = {
+		#		CRY_oldorder
+		#		CRY_comrevolution
+		#		CRY_oldking
+		#	}
+		#}
 		
 		## GRIFFONIA
 		"GRI"={
@@ -55,18 +70,18 @@ bookmarks = {
 				GRI_eagleclaw
 			}
 		}
-		"FAT"={
-			history = "FAT_GATHERING_STORM_DESC"
+		
+		"JER"={
+			history = "JER_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				FAT_republican_struggle
-				FAT_The_Cloudburian_Minority_idea
-				FAT_unruly_army_idea
-		    }
+				JER_memories 
+				JER_legacy_of_coltbert
+			}
 			focuses = {
-				FST_new_dawn_for_the_republic
-			    FAT_radicalize_the_party
-				FAT_the_iron_marshal
+				JER_state_of_aquileia
+				JER_fight_for_freedom
+				JER_liberal_industry
 			}
 		}
 		
@@ -84,17 +99,19 @@ bookmarks = {
 				HIP_the_triumphant_revolution
 			}
 		}
-		"CTH"={
-			history = "CTH_GATHERING_STORM_DESC"
+		
+		"BAT"={
+			history = "BAT_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				CTH_political_instability
-				CTH_army_of_merceneries
+				BAT_bitter_remnants
+				BAT_army_with_a_state
+				BAT_slavery
 			}
 			focuses = {
-				CTH_one_sufrit_above_all
-				CTH_battlecry_of_freedom
-				CTH_form_the_junta
+				BAT_the_hour_is_upon_us
+				BAT_intensify_efforts
+				BAT_final_preperations
 			}
 		}
 		
@@ -118,17 +135,18 @@ bookmarks = {
 			}
 		}
 		
-		"STG"={
-			history = "STG_GATHERING_STORM_DESC"
-			ideology = communism
+		"GRF"={
+			history = "GRF_GATHERING_STORM_DESC"
+			ideology = neutrality
 			ideas = {
-				severe_famine
-				incomplete_industrialization
+				GRF_colonial_economy
+				GRF_falcons_of_griffinstone
+				GRF_militias
 			}
 			focuses = {
-				vasya_2
-				the_palace
-				manifesto_of_materialism
+				GRF_new_economy
+				GRF_highhill_junta
+				GRF_free_elections
 			}
 		}
 		
@@ -148,33 +166,34 @@ bookmarks = {
 				WNG_meet_with_beakolini
 			}
 		}
-		"JER"={
-			history = "JER_GATHERING_STORM_DESC"
-			ideology = neutrality
+		
+		"RCT"={
+			history = "RCT_GATHERING_STORM_DESC"
+			ideology = democratic
 			ideas = {
-				JER_memories 
-				JER_legacy_of_coltbert
+				RCT_city_of_three_rivers
+				RCT_unstable_government
+				RIV_member_state
 			}
 			focuses = {
-				JER_state_of_aquileia
-				JER_fight_for_freedom
-				JER_liberal_industry
+				RCT_equestria_of_the_east
+				RCT_phoenix_programme
+				RCT_fabian_strategy
 			}
 		}
 		
 		## ZEBRICA
-		"BAT"={
-			history = "BAT_GATHERING_STORM_DESC"
+		"CTH"={
+			history = "CTH_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				BAT_bitter_remnants
-				BAT_army_with_a_state
-				BAT_slavery
+				CTH_political_instability
+				CTH_army_of_merceneries
 			}
 			focuses = {
-				BAT_the_hour_is_upon_us
-				BAT_intensify_efforts
-				BAT_final_preperations
+				CTH_one_sufrit_above_all
+				CTH_battlecry_of_freedom
+				CTH_form_the_junta
 			}
 		}
 		
@@ -199,89 +218,31 @@ bookmarks = {
 		
 		## EQUUS
 		
-		"OLE"={
-			history = "OLE_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				OLE_currupt_government
-				OLE_raising_dissent
-			}
-			focuses = {
-				OLE_proclaim_deers_republic
-				OLE_squash_the_bugs
-				OLE_new_vikings
-			}
-		}
-		"YAK"={
-			history = "YAK_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				YAK_resilience
-			}
-			focuses = {
-				YAK_elder_council
-				YAK_reintegrate_jakiclan
-				YAK_harmony_win
-			}
-		}
-		
-		"RCT"={
-			history = "RCT_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				RCT_city_of_three_rivers
-				RCT_unstable_government
-				RIV_member_state
-			}
-			focuses = {
-				RCT_equestria_of_the_east
-				RCT_phoenix_programme
-				RCT_fabian_strategy
-			}
-		}
-		"EQC"={
-			history = "EQC_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				EQC_great_depression_1
-				EQC_griffon_minorities1
-				equestrian_overlord
-			}
-			focuses = {
-				EQC_royal_visit
-				EQC_the_election
-				EQC_nmac_spirit
-			}
-		}
-		
-		"TBK" = {
-			history = "TBK_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				TBK_fake_republic
-				TBK_warlord_reliance
-				TBK_zarantian_loyalism
-			}
-			focuses = {
-				TBK_art_of_the_deal
-				TBK_vasile_start
-				TBK_new_tobuck
-			}
-		}
-		"ZAR" = {
-			history = "ZAR_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				ZAR_the_desert_tribes
-				ZAR_great_confederacy
-				ZAR_trans_zebharan_caravans
-			}
-			focuses = {
-				ZAR_i_am_mekiouzza
-				ZAR_the_tribe_of_tribes
-				ZAR_the_city_regained
-			}
-		}
+		#"OLE"={
+		#	history = "OLE_GATHERING_STORM_DESC"
+		#	ideology = neutrality
+		#	ideas = {
+		#		OLE_currupt_government
+		#		OLE_raising_dissent
+		#	}
+		#	focuses = {
+		#		OLE_proclaim_deers_republic
+		#		OLE_squash_the_bugs
+		#		OLE_new_vikings
+		#	}
+		#}
+		#"YAK"={
+		#	history = "YAK_GATHERING_STORM_DESC"
+		#	ideology = democratic
+		#	ideas = {
+		#		YAK_resilience
+		#	}
+		#	focuses = {
+		#		YAK_elder_council
+		#		YAK_reintegrate_jakiclan
+		#		YAK_harmony_win
+		#	}
+		#}
 		
 		### MINORS ####
 		#Path to Zebrica
@@ -305,6 +266,36 @@ bookmarks = {
 				WAR_warzena_is_not_yet_lost
 			}
 		}
+		"TBK" = {
+			minor = yes
+			history = "TBK_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				TBK_fake_republic
+				TBK_warlord_reliance
+				TBK_zarantian_loyalism
+			}
+			focuses = {
+				TBK_art_of_the_deal
+				TBK_vasile_start
+				TBK_new_tobuck
+			}
+		}
+		"ZAR" = {
+			minor = yes
+			history = "ZAR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				ZAR_the_desert_tribes
+				ZAR_great_confederacy
+				ZAR_trans_zebharan_caravans
+			}
+			focuses = {
+				ZAR_i_am_mekiouzza
+				ZAR_the_tribe_of_tribes
+				ZAR_the_city_regained
+			}
+		}
 		"CVA" = {
 			minor = yes
 			history = ""
@@ -322,16 +313,6 @@ bookmarks = {
 			}
 			focuses = {
 			}
-		}
-		"SOL"={ #TRO
-			minor = yes
-			history = "RANDOM_GATHERING_STORM_DESC"
-			ideology = neutrality
-		}
-		"SOL"={ #HIE
-			minor = yes
-			history = "RANDOM_GATHERING_STORM_DESC"
-			ideology = neutrality
 		}
 		
 		#Two Eagles
@@ -385,6 +366,21 @@ bookmarks = {
 			minor = yes
 			history = "RANDOM_GATHERING_STORM_DESC"
 			ideology = neutrality
+		}
+		"EQC"={
+			minor = yes
+			history = "EQC_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				EQC_great_depression_1
+				EQC_griffon_minorities1
+				equestrian_overlord
+			}
+			focuses = {
+				EQC_royal_visit
+				EQC_the_election
+				EQC_nmac_spirit
+			}
 		}
 		"NLR"={
 			minor = yes
@@ -533,19 +529,19 @@ bookmarks = {
 			history = "RANDOM_GATHERING_STORM_DESC"
 			ideology = neutrality
 		}
-		"GRF"={
+		"FAT"={
 			minor = yes
-			history = "GRF_GATHERING_STORM_DESC"
+			history = "FAT_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				GRF_colonial_economy
-				GRF_falcons_of_griffinstone
-				GRF_militias
-			}
+				FAT_republican_struggle
+				FAT_The_Cloudburian_Minority_idea
+				FAT_unruly_army_idea
+		    }
 			focuses = {
-				GRF_new_economy
-				GRF_highhill_junta
-				GRF_free_elections
+				FST_new_dawn_for_the_republic
+			    FAT_radicalize_the_party
+				FAT_the_iron_marshal
 			}
 		}
 		"FAL"={
@@ -822,11 +818,6 @@ bookmarks = {
 			}
 			focuses = {
 			}
-		}
-		"SOL"={ #CRY NLR
-			minor = yes
-			history = "RANDOM_GATHERING_STORM_DESC"
-			ideology = neutrality
 		}
 		 
 		#Burning Sea
