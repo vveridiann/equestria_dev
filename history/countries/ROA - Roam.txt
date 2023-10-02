@@ -7,7 +7,7 @@ set_war_support = 0.65
 
 set_technology = {
 	zebra_race = 1
-	tech_knights = 1
+	tech_spirit_warriors = 1
 	melee_weapons = 1
 	pre_gw_artillery = 1
 	melee_weapons1 = 1
@@ -35,16 +35,17 @@ add_ideas = {
 	slavery_economy
 	lack_of_scientists1
 	pre_industrial_society
+	better_science_base
 }
 
 set_popularities = {
 	democratic = 13
-	fascism = 67
+	fascism = 17
 	communism = 3
-	neutrality = 17
+	neutrality = 67
 }
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1001.1.1"
 	election_frequency = 48
 	elections_allowed = no

@@ -30,6 +30,7 @@ actually_fix_weapon_techs = yes
 add_ideas = {
 	agrarian_society
 	lack_of_scientists
+	poor_science_base
 	limited_conscription
 	partial_economic_mobilisation
 }
