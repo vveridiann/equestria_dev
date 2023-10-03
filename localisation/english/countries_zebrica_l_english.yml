@@ -149,9 +149,9 @@
 
  TSV:0 "Amagquma"
  TSV_DEF:0 "Amagquma"
- TSV_ADJ:0 "Amagquma"
+ TSV_ADJ:0 "Amagquman"
  TSV_fascism:0 "Amagquma Slave Revolt"
- TSV_fascism_DEF:0 "the Amagquma Republic"
+ TSV_fascism_DEF:0 "Amagquma Slave Revolt"
  TSV_democratic:0 "Amagquma Republic"
  TSV_democratic_DEF:0 "the Amagquma Republic"
  TSV_neutrality:0 "Amagquma Republic"
@@ -165,7 +165,7 @@
 
  GFS:0 "Ilitye"
  GFS_DEF:0 "Ilitye"
- GFS_ADJ:0 "Ilitye"
+ GFS_ADJ:0 "Ilityean"
  GFS_fascism:0 "Ilitye Federation"
  GFS_fascism_DEF:0 "the Ilitye Federation"
  GFS_democratic:0 "Ilitye Federation"
@@ -181,7 +181,7 @@
 
  ROA:0 "Ziyahamba"
  ROA_DEF:0 "Ziyahamba"
- ROA_ADJ:0 "Ziyahamba"
+ ROA_ADJ:0 "Ziyahamban"
  ROA_fascism:0 "Ziyahamban Empire"
  ROA_fascism_DEF:0 "the Ziyahamban Empire"
  ROA_democratic:0 "Ziyahamban Empire"
