@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Militia Afdeling"
+	name = "Local Levy"
 	priority = 0
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -8,7 +8,7 @@
 	}
 }
 division_template = {
-	name = "Afdeling Infanterie"
+	name = "Warriors"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -23,61 +23,43 @@ division_template = {
 	}
 }
 
-
-
 units = {
     division = {
-		name = "1e Afdeling Infanterie"
+		name = "Warriors"
 		location = 16940
-		division_template = "Afdeling Infanterie"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0 
 	}
 	
 	division = {
-		name = "2e Afdeling Infanterie"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+		name = "Warriors"
 		location = 16979
-		division_template = "Afdeling Infanterie"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0 
 	}
 	
 	division = {
-		name = "3e Afdeling Infanterie"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+		name = "Warriors"
 		location = 16970
-		division_template = "Afdeling Infanterie"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0 
 	}
 	
 	division = {
-		name = "4e Afdeling Infanterie"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+		name = "Warriors"
 		location = 16910
-		division_template = "Afdeling Infanterie"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0 
 	}
 	
 	division = {
-		name = "5e Afdeling Infanterie"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+		name = "Warriors"
 		location = 17008
-		division_template = "Afdeling Infanterie"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0 
 	}
@@ -86,7 +68,7 @@ units = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = melee_equipment_1
 			creator = "GFS"
 		}
 		requested_factories = 2

@@ -1,5 +1,14 @@
 ﻿division_template = {
-	name = "Legio"		
+	name = "Local Levy"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Warriors"		
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -12,7 +21,7 @@
 }
 
 division_template = {
-	name = "Cohortes Praetorianae"
+	name = "Imperial Guard"
 
 	regiments = {
 		spirit_warriors = { x = 0 y = 0 }
@@ -30,58 +39,58 @@ division_template = {
 
 units = {
 	division = { 
-		name = "Cohortes Praetorianae"
+		name = "Imperial Guard"
 		location = 18723
-		division_template = "Cohortes Praetorianae"
+		division_template = "Imperial Guard"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio I Aboyisa"
+		name = "Aboyisa"
 		location = 19979
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio II Maqhawe"
+		name = "Maqhawe"
 		location = 19976
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio III Ukunyaniseka"
+		name = "Ukunyaniseka"
 		location = 19981
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio IV Abathembekileyo"
+		name = "Abathembekileyo"
 		location = 17125
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio V Abakhethiweyo"
+		name = "Abakhethiweyo"
 		location = 17147
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio VI"
+		name = "Warriors"
 		location = 17148
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = { 
-		name = "Legio VII"
+		name = "Warriors"
 		location = 17134
-		division_template = "Legio"
+		division_template = "Warriors"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
